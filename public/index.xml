@@ -1,33 +1,106 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> Open Plant Pathology</title>
+    <title></title>
     <link>/</link>
-    <description>Recent content on  Open Plant Pathology</description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (PDE)</managingEditor>
-    <webMaster>youremail@domain.com (PDE)</webMaster>
-    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 14 Oct 2017 23:00:00 -0300</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Are you a modeler or computational plant pathologist? Then let&#39;s connect and code together!</title>
-      <link>/post/2018-01-06-first-post/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (PDE)</author>
-      <guid>/post/2018-01-06-first-post/</guid>
-      <description>Since the early times, plant pathologists faced the need to deal with data and and quantitative analysis using mathematics and, more recently, computational tools. The leaders in the field were a relatively small international group of scientists with various backgrounds related to plant pathology that felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago.</description>
+      <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
+      <link>/post/2018-01-08-first-post-community-call/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/post/2018-01-08-first-post-community-call/</guid>
+      <description>&lt;p&gt;Since the early times, plant pathologists faced the need to deal with data and and quantitative analysis using mathematics and, more recently, computational tools. The leaders in the field were a relatively small international group of scientists with various backgrounds related to plant pathology that felt the need to connect and then &lt;strong&gt;Plant Disease Epidemiology&lt;/strong&gt; was formally recognized as a discipline more than 50 years ago.  Since then, plant epidemiologists have met several times around the world to network, brainstorm and learn from each other to advance the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.&lt;/p&gt;
+
+&lt;p&gt;The international workshop has been central for ensuring the exchange of ideas and information in our field and helps to identify/strengthen new/established links with other fields. The strong connections with mathematics/statistics, genetics and computer science have led to a sort of &lt;em&gt;speciation&lt;/em&gt; over the years: computational, theoretical, spatial, molecular, landscape, and digital (big data) epidemiology have popped up in the epidemiology literature.&lt;/p&gt;
+
+&lt;p&gt;The evolution is natural and such links provide the field with opportunities to bring new expertise and advance our understanding and ability to predict and prevent economically damaging plant disease epidemics and crop losses at various scales. On the other hand, specialization may pose challenges for plant pathologists in general and the scientists need to stay more tightly connected and up to date with the advances on all these fronts.&lt;/p&gt;
+
+&lt;p&gt;The recent and rapid  advances in technology have led to new opportunities as well as challenges. In particular, the increasing ability to collect large amounts of data from various scales (from genomes to landscapes).&lt;/p&gt;
+
+&lt;p&gt;Such scenarios require even more diverse skills from plant pathologists to stay alert and connected. The ease with which plant disease-related data (e.g., sequencing and phenotyping) can be obtained and treated with out-of-the-box algorithms by research groups (that lack epidemiologists) can lead to false promises and disastrous consequences for the discipline.&lt;/p&gt;
+
+&lt;p&gt;Plant disease epidemiologists has always been a leader in using quantitative, statistical and computational approaches, which distinguished us from other plant pathologists. Early on, computers have been one of the main tools in the plant epidemiologist&amp;rsquo;s tool-box - until recently these computer based tools were very specialized field and relied on expensive,  proprietary software.&lt;/p&gt;
+
+&lt;p&gt;A plethora of computer software  was developed by leading epidemiologists over the decades and used for research and teaching purposes. However, problems related to technology life-time, portability, compatibility and reproducibility have affected rate of adoption and sustainability. It is thus imperative that more &lt;strong&gt;sustainable, transparent and reproducible research&lt;/strong&gt; methods are developed and deployed for the community with the purpose of formal training and research support.&lt;/p&gt;
+
+&lt;p&gt;We feel that it is more important than ever that plant disease epidemiologists &lt;strong&gt;stay connected&lt;/strong&gt; and propose that web-based networking tools should be used for effective networking and continued collaboration to promote the field beyond the actual workshops.&lt;/p&gt;
+
+&lt;p&gt;In light of these issues, we propose to develop a &lt;strong&gt;community&lt;/strong&gt; that values the &lt;strong&gt;sharing&lt;/strong&gt; of knowledge, ideas and data; building capacity; and promotes open and &lt;strong&gt;reproducible&lt;/strong&gt; research to benefit plant epidemiologists. To foster this community, we propose to develop:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A community-maintained &lt;strong&gt;website&lt;/strong&gt; to promote open science and connect plant pathologists: people/lab directory, workshop history, blog posts (new articles, tutorials, view-points, etc.).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An open &lt;strong&gt;chatting workspace&lt;/strong&gt; using Slack to enable effective, year-round communication and collaborative work via specific channels, i.e., a Slack workspace open to any interested party (plantepidem.slack.com).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;More broadly, a community that stimulates and supports efforts from individuals or groups to develop and deliver next-generation databases and reproducible research &lt;strong&gt;tools&lt;/strong&gt; for PDE-related subjects and applications (teaching or research) using open source software (e.g., R, Python), open data (e.g., Dryad, Figshare, OSF, Genbank, etc.), and open software repositories (e.g., GitHub).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We welcome your participation in this community and hope that you will join us. To join the Slack workgroup, please send a request to XXXX. Our repositories are available at &lt;a href=&#34;https://www.github.com/XXXXX&#34; target=&#34;_blank&#34;&gt;https://www.github.com/XXXXX&lt;/a&gt;, to request to join them please send a message to Adam Sparks or Emerson Del Ponte after you have joined the Slack workgroup.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Open Plant Pathology</title>
-      <link>/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (PDE)</author>
-      <guid>/page/about/</guid>
-      <description>The Open Plant Pathology is community of computational scientists who values the sharing of knowledge, ideas and data; building capacity; and promotes open and reproducible research to benefit plant epidemiologists. To foster this community, we propose to develop:</description>
+      <title>Example Talk</title>
+      <link>/talk/example-talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0200</pubDate>
+      
+      <guid>/talk/example-talk/</guid>
+      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/project/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/deep-learning/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/example-external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/example-external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>/publication/person-re-identification/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/person-re-identification/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/clothing-search/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
