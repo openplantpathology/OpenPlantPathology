@@ -1,6 +1,6 @@
 ---
 title: Are you a modeler or computational plant pathologist? Then let's connect and code together!
-subtitle: Community call for sharing knowledge ideas and promote open and transparent science 
+subtitle: Community call to promote open and transparent science in plant epidemiology and population biology and ecology
 date: 2018-01-06
 --- 
 
