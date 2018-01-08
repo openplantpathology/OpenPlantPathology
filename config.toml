@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 pygmentCodeFences = true
 #disqusShortname = "XXX"
 #googleAnalytics = "XXX"
-summaryLength = 35
+summaryLength = 30
 
 [Params]
 
