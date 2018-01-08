@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Plant Disease Epidemiology</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Plant Disease Epidemiology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (PDE)</managingEditor>
+    <webMaster>youremail@domain.com (PDE)</webMaster>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

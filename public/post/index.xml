@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Plant Disease Epidemiology</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Plant Disease Epidemiology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (PDE)</managingEditor>
+    <webMaster>youremail@domain.com (PDE)</webMaster>
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Are you a modeler or computational plant pathologist? Then let&#39;s connect and code together!</title>
+      <link>/post/2018-01-06-first-post/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (PDE)</author>
+      <guid>/post/2018-01-06-first-post/</guid>
+      <description>Since the early times, plant pathologists faced the need to deal with data and and quantitative analysis using mathematics and, more recently, computational tools. The leaders in the field were a relatively small international group of scientists with various backgrounds related to plant pathology that felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago.</description>
+    </item>
+    
+  </channel>
+</rss>
