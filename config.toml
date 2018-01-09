@@ -59,7 +59,7 @@ defaultContentLanguageInSubdir = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = ""  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "openplantpathology@gmail.com"
+  email = ""
   address = ""
   office_hours = ""
   phone = ""
@@ -273,6 +273,14 @@ defaultContentLanguageInSubdir = false
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology"
   weight = 6
+  
+
+[[menu.main]]
+  name = "Twitter"
+  pre = "<i class='fa fa-twitter-square'></i>"
+  url = "https://twitter.com/OpenPlantPath"
+  weight = 6  
+
 
 
 
