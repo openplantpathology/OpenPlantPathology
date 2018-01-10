@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Sarah Pethybridge"
 
 # Member summary info
-summary = "Plant disease epidemiology. Cornell University, USA"
+summary = "Plant disease epidemiologist. Cornell University, USA"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/pethybridge.jpg"

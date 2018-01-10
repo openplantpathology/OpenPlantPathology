@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Nik Cunniffe"
 
 # Member summary info
-summary = "Mathematical modeling. University of Cambridge, UK"
+summary = "Mathematical modeller. University of Cambridge, UK"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/cunniffe.jpg"

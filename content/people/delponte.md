@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Emerson Del Ponte"
 
 # People summary
-summary = "Founder. Plant disease epidemiology. Universidade Federal de Viçosa, Brazil "
+summary = "Founder. Plant disease epidemiologist. Universidade Federal de Viçosa, Brazil "
 
 # photo image name (relative to `static/img/` folder).
 image_preview = "members/delponte.jpg"
@@ -25,4 +25,3 @@ external_link = ""
 #caption = "My caption :smile:"
 
 +++
-

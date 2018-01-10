@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Neil McRoberts"
 
 # Member summary info
-summary = "Plant disease epidemiology and modeling. University of California - Davis, USA"
+summary = "Plant disease epidemiologist and modeller. University of California - Davis, USA"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/mcroberts.jpg"

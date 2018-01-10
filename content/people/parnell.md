@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Stephen Parnell"
 
 # Member summary info
-summary = "Mathematical modeling and spatial epidemiology. University of Salford, UK"
+summary = "Mathematical modeller and spatial epidemiologist. University of Salford, UK"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/parnell.jpg"

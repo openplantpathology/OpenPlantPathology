@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Sydney Everhart"
 
 # Member summary info
-summary = "Epidemiology and Population biology. University of Nebraska USA"
+summary = "Plant disease epidemiologist and population biologist. University of Nebraska USA"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/everhart.jpg"

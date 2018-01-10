@@ -8,7 +8,7 @@ title = "Nik Grunwald"
 # Member summary
 summary = "Plant pathologist. USDA, Oregon, USA "
 
-# Image 
+# Image
 image_preview = "members/grunwald.jpg"
 
 # Tags: can be used for filtering people
@@ -23,5 +23,3 @@ tags = ["Population_Biology"]
 #caption = "My caption :smile:"
 
 +++
-
-

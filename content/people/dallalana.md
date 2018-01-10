@@ -6,7 +6,7 @@ date = "2018-01-09"
 title = "Felipe Dalla Lana"
 
 # Member summary info
-summary = "PhD Student in plant disease epidemiology. The Ohio State University, USA"
+summary = "PhD Student in plant disease epidemiologist. The Ohio State University, USA"
 
 # photo membeer (relative to `static/img/` folder).
 image_preview = "members/dallalana.jpg"
