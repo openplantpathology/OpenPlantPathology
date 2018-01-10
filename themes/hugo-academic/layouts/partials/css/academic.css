@@ -287,7 +287,7 @@ small,
   clear: both;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left top;
   animation: intro 0.3s both;
   animation-delay: 0s;
   animation-delay: 0.25s;
@@ -1067,13 +1067,13 @@ nav#navbar-main li {
 .navbar-brand,
 .navbar-nav li a {
   height: inherit;
-  line-height: 50px;
+  line-height: 55px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 55px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -1131,7 +1131,7 @@ nav#navbar-main li {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 960px) {
   .navbar {
     min-height: 50px !important;
   }
@@ -1492,27 +1492,3 @@ body.dark {
         width: 100%;
     }
 }
-
-.editor {
-    border-radius: 50%;
-    width: 180px;
-    border: 5px solid #ffffff;
-    max-width: 100%;
-   display: inline-block;
-}
-
-.colecao {
-    
-    width: 200px;
-    
-    max-width: 100%;
-  
-}
-
-
-div.small{font-size:0.75rem; 
-  line-height: 20px;
-
-}
-
-svg {width: 50%; height: auto; border:0;}
