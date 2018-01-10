@@ -6,7 +6,7 @@ active = true
 date = "2016-04-20T00:00:00"
 
 title = "Recent Posts"
-subtitle = "Updates on our recent work, projets, tutorials and viepoints "
+subtitle = "Updates on our recent work, projects, tutorials and viewpoints "
 
 # Order that this section will appear in.
 weight = 40
@@ -21,4 +21,3 @@ tags_exclude = []
 count = 5
 
 +++
-
