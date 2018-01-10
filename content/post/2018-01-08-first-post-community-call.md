@@ -33,15 +33,15 @@ Development of new tools for data analysis help to expedite the analysis process
 
 We feel that it is more important than ever that scientists acting in the field of plant pathology stay connected and propose that web-based networking tools should be used for effective networking and continued collaboration to promote the field. In light of these issues, we propose to develop a community that values the sharing of knowledge, ideas and data; building capacity; and promotes open and reproducible research to benefit plant epidemiologists. To foster this community, we propose to develop:
 
-- A community-maintained website to promote this workgroup: people/lab directory, projects and blog posts (new articles, tutorials, view-points, etc.).
+- A community-maintained website to promote this workgroup: people, projects and blog posts (new articles, tutorials, view-points, etc.).
 
-- An open chatting workspace using Slack to enable effective, year-round communication and collaborative work via specific channels, i.e., a Slack workspace open to any interested party (plantepidem.slack.com).
+- An open chatting workspace using Slack to enable effective, year-round communication and collaborative work via specific channels, i.e., a Slack workspace open to any interested party (https://openplantpathology.slack.com).
 
 - More broadly, a community that stimulates and supports efforts from individuals or groups to develop and deliver next-generation databases and reproducible research tools for plant pathology-related subjects and applications (teaching or research) using open source software (e.g., R, Python), open data (e.g., Dryad, Figshare, OSF, Genbank, etc.), and open software repositories (e.g., GitHub).
 
-We welcome your participation in this community and hope that you will join us!
+We welcome your participation in this community and hope that you will join us! To join the Slack workgroup, please send a request to openplantpathology@gmail.com. 
 
-To join the Slack workgroup, please send a request to openplantpathology@gmail.com. Our repositories are available at https://www.github.com/openplantpathology, to request to join them please send a message to Adam Sparks (adam.sparks@usq.edu.au) or Emerson Del Ponte (delponte@ufv.br) after you have joined the Slack workgroup.
+Our repositories are available at https://www.github.com/openplantpathology, to request to join them please send a message to Adam Sparks (adam.sparks@usq.edu.au) or Emerson Del Ponte (delponte@ufv.br) after you have joined the Slack workgroup.
 
 <br>
 <h4>Community Founders</h4>
