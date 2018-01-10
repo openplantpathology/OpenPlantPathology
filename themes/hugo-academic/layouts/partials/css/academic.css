@@ -117,6 +117,10 @@ video {
 .img-responsive {
   /* Extend Bootstrap declaration with centering. */
   margin: 0 auto;
+  border:8px solid #f1f1f1;
+  border-radius: 50%;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 figcaption:before {
@@ -753,8 +757,8 @@ article {
   margin-bottom: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  background: transparent;
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);
   transition: all 0.2s ease-out;
 }
 
@@ -765,10 +769,10 @@ article {
 }
 
 .card h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 1.5;
-  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .card h4 a {
@@ -788,7 +792,10 @@ article {
 
 .card .card-text p {
   color: #999999;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  min-height: 90px;
+
+  text-align:center
 }
 
 .card p:last-child {
@@ -825,15 +832,15 @@ article {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);
 }
 
 .card:hover .card-image.hover-overlay:before {
-  opacity: 0.8;
+  opacity: 0;
 }
 
 .card:hover .card-image.hover-overlay:after {
-  opacity: 0.6;
+  opacity: 0;
 }
 
 /*************************************************

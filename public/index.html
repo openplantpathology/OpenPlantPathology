@@ -54,6 +54,19 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-112255011-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Open Plant Pathology">
@@ -139,23 +152,6 @@
           <a href="/#people" data-target="#people">
             
             <span>People</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-          
-        
-
-        <li class="nav-item">
-          <a href="/#projects" data-target="#projects">
-            
-            <span>Projects</span>
             
           </a>
         </li>
@@ -281,8 +277,10 @@ url('/img/headers/opp-header.svg');
 <div class="row">
   
   <div class="col-md-12">
-    <p><img src = "/img/opp-logo.svg" width=400 align = left><h2> What is Open Plant Pathology?</h2>
-A <strong>community</strong> of modelers and computational researchers involved in plant pathological work (plant disease <strong>epidemiology</strong> and pathogen population <strong>biology</strong> and <strong>ecology</strong>) that believes that science should be as open, transparent and reproducible as possible. More broadly, the goal of this commmunity is to support effort from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications (teaching or research) using open source software, data and repositories.</p>
+    <p><img src = "/img/opp-logo.svg" width=400 align = left>
+<h2> What is Open Plant Pathology?</h2></p>
+
+<p>A community of modelers and computational researchers involved in plant pathological work (plant disease epidemiology and pathogen population biology and ecology) that believes that science should be as open, transparent and reproducible as possible. More broadly, the goal of this community is to support effort from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications (teaching or research) using open source software, data and repositories.</p>
 
   </div>
   
@@ -361,6 +359,9 @@ A <strong>community</strong> of modelers and computational researchers involved 
 
   
   
+  <span class="middot-divider"></span>
+  <a href="/post/2018-01-08-first-post-community-call/#disqus_thread"></a>
+  
 
   
 
@@ -395,53 +396,336 @@ A <strong>community</strong> of modelers and computational researchers involved 
   
   
   
-  <section id="tags" class="home-section">
+  <section id="people" class="home-section">
     <div class="container">
       
 
 
+
 <div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Tags</h1>
+  
+  <div class="col-xs-12 col-md-12">
+    <p><h1 id="community-members">Community members</h1>
+
+<p>Filter by specialization</p>
+
     
-  </div>
-  <div class="col-xs-12 col-md-8">
+    
+    <span class="hidden default-project-filter">*</span>
     
 
     
-      
-      
-
-      
-      
-      
-      
-      
-
-      <div id="tag-cloud">
-        
-          
-          
-          
-          
-          
-          <a href="/tags/" style="font-size:1.8725805810714777rem"></a>
-        
-          
-          
-          
-          
-          
-          <a href="/tags/community" style="font-size:0.8rem">Community</a>
-        
-          
-          
-          
-          
-          
-          <a href="/tags/epidemiology" style="font-size:0.8rem">Epidemiology</a>
-        
+    
+    <div class="project-toolbar">
+      <div class="project-filters">
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            
+              <a href="#" data-filter="*" class="btn btn-primary btn-large active">All members</a>
+            
+              <a href="#" data-filter=".Founder" class="btn btn-primary btn-large">Founders</a>
+            
+              <a href="#" data-filter=".Epidemiology" class="btn btn-primary btn-large">Epidemiology</a>
+            
+              <a href="#" data-filter=".Population_Biology" class="btn btn-primary btn-large">Population Biology</a>
+            
+              <a href="#" data-filter=".Mathematical_Modeling" class="btn btn-primary btn-large">Mathematical Modeling</a>
+            
+          </div>
+        </div>
       </div>
+    </div>
+    
+    
+
+    
+
+    <div class="row isotope projects-container js-layout-masonry">
+
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Mathematical_Modeling">
+        <div class="card">
+          
+          <a href="/people/kleczowski/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/kleckzowski.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/kleczowski/" >Adam Kleckzowski</a></h4>
+            <div class="card-desription">
+              <p>Mathematical modeling. University of Stirling, UK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Founder Epidemiology">
+        <div class="card">
+          
+          <a href="/people/delponte/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/delponte.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/delponte/" >Emerson Del Ponte</a></h4>
+            <div class="card-desription">
+              <p>Founder. Plant disease epidemiology. Universidade Federal de Viçosa, Brazil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Epidemiology">
+        <div class="card">
+          
+          <a href="/people/dallalana/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/dallalana.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/dallalana/" >Felipe Dalla Lana</a></h4>
+            <div class="card-desription">
+              <p>PhD Student in plant disease epidemiology. The Ohio State University, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Epidemiology Mathematical_Modeling">
+        <div class="card">
+          
+          <a href="/people/mcroberts/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/mcroberts.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/mcroberts/" >Neil McRoberts</a></h4>
+            <div class="card-desription">
+              <p>Plant disease epidemiology and modeling. University of California - Davis, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Mathematical_Modeling">
+        <div class="card">
+          
+          <a href="/people/cunniffe/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/cunniffe.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/cunniffe/" >Nik Cunniffe</a></h4>
+            <div class="card-desription">
+              <p>Mathematical modeling. University of Cambridge, UK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Epidemiology">
+        <div class="card">
+          
+          <a href="/people/esker/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/esker.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/esker/" >Paul Esker</a></h4>
+            <div class="card-desription">
+              <p>Plant pathologist and epidemiologist. Pennsylvania State University, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Epidemiology Phytopathometry">
+        <div class="card">
+          
+          <a href="/people/pethybridge/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/pethybridge.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/pethybridge/" >Sarah Pethybridge</a></h4>
+            <div class="card-desription">
+              <p>Plant disease epidemiology. Cornell University, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Mathematical_Modeling">
+        <div class="card">
+          
+          <a href="/people/parnell/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/parnell.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/parnell/" >Stephen Parnell</a></h4>
+            <div class="card-desription">
+              <p>Mathematical modeling and spatial epidemiology. University of Salford, UK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Population_Biology">
+        <div class="card">
+          
+          <a href="/people/everhart/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/everhart.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/everhart/" >Sydney Everhart</a></h4>
+            <div class="card-desription">
+              <p>Epidemiology and Population biology. University of Nebraska USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Population_Biology">
+        <div class="card">
+          
+          <a href="/people/kamvar/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/kamvar.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/kamvar/" >Zhian Kamvar</a></h4>
+            <div class="card-desription">
+              <p>Population biology. University of Nebraska, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Population_Biology">
+        <div class="card">
+          
+          <a href="/people/grunwald/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/grunwald.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/grunwald/" >Nik Grunwald</a></h4>
+            <div class="card-desription">
+              <p>Plant pathologist. USDA, Oregon, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Epidemiology">
+        <div class="card">
+          
+          <a href="/people/choudhury/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/choudhury.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/choudhury/" >Robin Choudhury</a></h4>
+            <div class="card-desription">
+              <p>Plant Disease Epidemiology. University of Florida, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Founder Epidemiology">
+        <div class="card">
+          
+          <a href="/people/sparks/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/sparks.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/sparks/" >Adam Sparks</a></h4>
+            <div class="card-desription">
+              <p>Founder. Plant epidemiologist. University of Southern Queensland, Australia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 project-item isotope-item Population_Biology">
+        <div class="card">
+          
+          <a href="/people/foster/" title="" class="card-image hover-overlay"
+             >
+            <img src="/img/members/foster.jpg" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/people/foster/" >Zachary Foster</a></h4>
+            <div class="card-desription">
+              <p>PhD student. Oregon State University, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+
     
 
   </div>
@@ -463,7 +747,7 @@ A <strong>community</strong> of modelers and computational researchers involved 
 
 <div class="row">
   <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Contact us</h1>
+    <h1>Contact Us</h1>
     <p>You can reach us by several means</p>
   </div>
   <div class="col-xs-12 col-md-8">
@@ -554,6 +838,8 @@ A <strong>community</strong> of modelers and computational researchers involved 
     
 
     
+    
+    <script id="dsq-count-scr" src="//openplantpathology.disqus.com/count.js" async></script>
     
 
     
