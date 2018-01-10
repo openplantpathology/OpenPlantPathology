@@ -119,8 +119,8 @@ video {
   margin: 0 auto;
   border:8px solid #f1f1f1;
   border-radius: 50%;
-  max-width: 200px;
-  min-width: 200px;
+
+ 
 }
 
 figcaption:before {
