@@ -15,7 +15,6 @@ image_preview = "members/grunwald.jpg"
 # Example: `tags = ["Epidemiology", "Population biology"]`
 tags = ["Population_Biology"]
 
-
 # Optional featured image for the personal page (relative to `static/img/` folder).
 [header]
 

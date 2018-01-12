@@ -18,9 +18,6 @@ tags = ["Founder", "Epidemiology", "Geophytopathology"]
 # Optional external URL for project (replaces project detail page).
 external_link = "https://adamhsparks.github.io/"
 
-# Does the project detail page use math formatting?
-math = false
-
 # Optional featured image (relative to `static/img/` folder).
 [header]
 #image = "headers/bubbles-wide.jpg"
