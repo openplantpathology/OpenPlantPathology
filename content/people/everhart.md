@@ -15,7 +15,7 @@ image_preview = "members/everhart.jpg"
 tags = ["Population_Biology", "Epidemiology"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = https://everhart.unl.edu/sydney-everhart.html
+external_link = "https://everhart.unl.edu/sydney-everhart.html"
 
 
 # Optional featured image (relative to `static/img/` folder).
