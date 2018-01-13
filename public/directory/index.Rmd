@@ -1,16 +1,17 @@
 ---
-title: "Member Directory"
+title: "Open Plant Pathology - member directory"
 output: 
   flexdashboard::flex_dashboard:
     theme: yeti
     logo: opp-logo.png
     social: [ "twitter", "facebook", "menu" ]
     navbar:
-      - { title: "OPP Homepage", href: "./index.html", align: left }
+      - { title: "Home", href: "http://openplantpathology.netlify.com", align: right }
     
 ---
 
 
+<link rel="stylesheet" href="fontawesome.min.css">
 
 ```{r include=FALSE}
 library(flexdashboard)
@@ -39,9 +40,8 @@ members <- write_csv(members, "members.csv")
 ```{r}
 members1 <- read_csv("members.csv")
 members1 <- members1 %>%
-  unite(geo, institution, location, state, country, remove = F, sep = ", ")
+  unite(geo,  location, state, country, remove = F, sep = ", ")
 ```
-
 
 
 ```{r include=FALSE}
@@ -66,7 +66,23 @@ members5 <- read_csv("members1.csv")
 library(crosstalk)
 library(leaflet)
 library(DT)
-members6 <- members5 %>% select(name, domain, institution, country, lon, lat)
+
+members6 <- members5 %>% 
+  unite(link1, link_pre, homepage, remove = F, sep = "") %>% 
+  unite (link2, link1, link_pos, remove = F, sep = "") %>%
+    unite(link3, link2, homepage_icon, remove = F, sep = "") %>%   
+  unite(homepage2, link3, close_link, remove = F, sep= "") %>% 
+    unite(linkg, link_pre, github, remove = F, sep = "") %>% 
+  unite (linkg2, linkg, link_pos, remove = F, sep = "") %>%
+    unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%   
+  unite(github2, linkg3, close_link, remove = F, sep= "") %>% 
+
+  select(name, homepage2, github2, domain, institution, country, lon, lat) %>% 
+  mutate (lon = round(lon, 4),
+          lat = round(lat, 4))
+
+
+
 sd <- SharedData$new(members6)
 ```
 
@@ -78,12 +94,17 @@ Column {data-width=200px}
 ### <i aria-hidden="true"></i> Filters
 
 <br>
-**Open Plant Pathology** is community of modelers and computational researchers involved in plant disease epidemiology, pathogen population biology/ecology and genomics, that believes that science should be as open, transparent and reproducible as possible. 
+Search and visualize the member directory of the [**Open Plant Pathology**](./index.html), a community of modellers and computational researchers involved in plant pathological research. Apply the filters below to summarize the information by country and specialization.
+
+
 <br>
+
+
+
 ```{r}
 
 filter_select("Name", "Person name", sd, ~name)
-filter_select("Domain", "Field domain(s))", sd, ~domain)
+filter_select("Domain", "Field domain(s)", sd, ~domain)
 filter_select("Country", "Country", sd, ~country)
 ```
 
@@ -96,14 +117,44 @@ Column {.tabset}
 ----------------------------------
 
 
-### <i aria-hidden="true"></i> Membership directory
+###  <i class="fa fa-map" aria-hidden="true"></i> Global map
+
+```{r echo=FALSE}
+library(leaflet)
+icons <- awesomeIcons(
+  icon = 'user-o',
+  iconColor = 'black',
+  library = 'fa',
+  markerColor = 'white'
+)
+
+pal <- colorFactor("viridis", domain = c("epidemiology/modeling", "epidemiology/population biology", "population biology/genomics"))
+library(magrittr)
+map <- leaflet(sd) %>%
+  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
+
+   addAwesomeMarkers(~lon, ~lat,  icon=icons, label=~as.character(name)) %>%  
+  #addLegend("bottomleft", pal = pal, values = ~domain, title = "Domain(s)", opacity = 1) %>%
+  addEasyButton(easyButton(
+    icon = "fa-globe", title = "Back to initial view",
+    onClick = JS("function(btn, map){ map.setZoom(2); }")
+  ))
+map
+```
+
+
+
+
+
+
+### <i class="fa fa-table" aria-hidden="true"></i> Detailed member information
 
 ```{r echo=FALSE}
 datatable(
   sd,
-  escape = TRUE,
+  escape = FALSE,
   rownames = FALSE,
-  colnames = c("Name", "Domain", "Institution", "Country", "lon", "lat"),
+  colnames = c("Name", "Home", "GitHub", "Domain", "Institution", "Country",  "lon", "lat"),
 
   class = "cell-border stripe",
   options = list(
@@ -120,35 +171,15 @@ datatable(
   )
 ) %>%
   formatStyle(
-    c("name", "domain", "institution", "country", "lon", "lat"),
+    c("name", "homepage2", "domain", "institution", "country",  "lon", "lat"),
     fontSize = "120%"
   )
 ```
 
 
 
-###  <i class="fa fa-map" aria-hidden="true"></i> Geographic map
 
-```{r echo=FALSE}
-
-library(leaflet)
-
-pal <- colorFactor("viridis", domain = c("epidemiology/modeling", "epidemiology/population biology", "population biology/genomics"))
-library(magrittr)
-map <- leaflet(sd) %>%
-  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
-  addCircleMarkers(radius = 5, fillOpacity = 0.9, label = ~name, color = NA, fillColor = ~pal(domain)) %>%
-  addLegend("bottomleft", pal = pal, values = ~domain, title = "Domain(s)", opacity = 1) %>%
-  addEasyButton(easyButton(
-    icon = "fa-globe", title = "Back to initial view",
-    onClick = JS("function(btn, map){ map.setZoom(1); }")
-  ))
-map
-```
-
-
-
-### <i class="fa fa-bar-chart" aria-hidden="true"></i> Graphs
+### <i class="fa fa-bar-chart" aria-hidden="true"></i> Summary graphs
 
 
 ```{r echo=FALSE}
