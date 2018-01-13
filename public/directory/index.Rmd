@@ -1,0 +1,182 @@
+---
+title: "Open Plant Pathology Member Directory"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: cerulean
+    social: menu
+    logo: opp-logo.png
+    url: /index.html
+---
+
+
+
+```{r include=FALSE}
+library(flexdashboard)
+library(readxl)
+library(tidyverse)
+library(crosstalk)
+library(plotly)
+
+```
+
+
+```{r include=FALSE}
+Sys.setlocale("LC_ALL", 'pt_BR.UTF-8')
+```
+
+
+```{r eval=FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
+library(gsheet)
+library(tidyverse)
+members <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing')
+
+members <- write_csv(members, "members.csv")
+```
+
+```{r}
+members1 <- read_csv("members.csv")
+members1 <- members1 %>% 
+   unite(geo, institution, location, state, country, remove = F,  sep = ", ")
+
+```
+
+
+
+```{r include=FALSE}
+members2 <- as_tibble(members1)
+
+members3 <- members2 %>% 
+  replace_na(list(domain1 = "", domain2 = "")) %>% 
+  unite(domain,  domain1, domain2, remove = T, sep = "/") %>% 
+  unite(name, first_name, middle_name, last_name, sep = " ")
+```
+
+```{r eval=FALSE, include=FALSE}
+library(ggmap)
+members4 <- geocode(members3$geo)
+members5 <- bind_cols(members3, members4)
+members5 <- write_csv(members5, "members1.csv")
+
+  
+```
+
+
+```{r all table, echo=FALSE}
+members5 <- read_csv("members1.csv")
+library(crosstalk)
+library(leaflet)
+library(DT)
+members6 <- members5 %>% select(name, domain, institution, country, lon, lat) 
+sd <- SharedData$new(members6)
+
+```
+
+<i class="fa fa-home" aria-hidden="true"></i> Main dashboard
+==================
+
+
+Column {data-width=200px}
+----------------------------------
+
+
+### <i aria-hidden="true"></i> Filters
+
+<br>
+**Open Plant Pathology** is community of modelers and computational researchers involved in plant disease epidemiology, pathogen population biology/ecology and genomics, that believes that science should be as open, transparent and reproducible as possible. 
+<br>
+```{r}
+
+filter_select("Name", "Person name", sd, ~name)
+filter_select("Domain", "Field domain(s))", sd, ~domain)
+filter_select("Country", "Country", sd, ~country)
+```
+
+
+
+
+
+
+Column {.tabset}
+----------------------------------
+
+
+### <i aria-hidden="true"></i> Membership directory
+
+```{r echo=FALSE}
+datatable(sd, 
+                    escape = TRUE,
+          rownames = FALSE, 
+          colnames = c('Name', 'Domain', 'Institution', 'Country',  'lon', 'lat'), 
+          
+         class = 'cell-border stripe',
+                      options=list(dom = 'Bfrtip',
+                                   buttons = c( 'excel', 'pdf'), deferRender=TRUE, 
+                         scrollY='520px', 
+                         scroller=TRUE,
+                          colReorder = F,
+                         
+                         
+  pageLength = 50,
+    fontSize = 12,
+  lengthMenu = c(100, 250, 500))) %>% 
+ formatStyle(
+  c('name', 'domain', 'institution', 'country',  'lon', 'lat'),
+  fontSize = '100%')
+```
+
+
+
+###  <i class="fa fa-map" aria-hidden="true"></i> Geographic map
+
+```{r echo=FALSE}
+
+library(leaflet)
+
+pal <- colorFactor("viridis", domain = c("epidemiology/modeling", "epidemiology/population biology", "population biology/genomics"))
+library(magrittr)
+map <- leaflet(sd) %>% 
+  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = 'Google') %>% 
+    addCircleMarkers(radius = 5, fillOpacity = 0.9, label = ~name, color = NA, fillColor = ~pal(domain)) %>%  
+  addLegend("bottomleft", pal = pal, values = ~domain, title = "Domain(s)",  opacity = 1 ) %>%     
+  
+addEasyButton(easyButton(
+    icon="fa-globe", title="Back to initial view",
+    onClick=JS("function(btn, map){ map.setZoom(1); }"))) 
+map
+```
+
+
+
+### <i class="fa fa-bar-chart" aria-hidden="true"></i> Graphs
+
+
+```{r echo=FALSE}
+
+#fgsc$FGSC2 <- with(fgsc, reorder(FGSC, FGSC, function(x) length(x)))
+#p<-sd %>% 
+# ggplot(aes(FGSC))+
+# geom_bar(aes(fill = Tri_genotype)) +
+# theme_grey() +
+# scale_fill_viridis(discrete = TRUE)+
+# coord_flip()+
+# theme(legend.position = "bottom", panel.background = element_rect(fill = "grey97"))+
+# labs(fill = "Tri genotype", y = "Frequency", x = "", title = "")
+#(gg <- ggplotly(p))
+
+library(viridis)
+sd %>% 
+  plot_ly(x = ~country, 
+         color=~domain,
+        colors = viridis_pal(option = "D")(3)) %>% 
+  layout(barmode = 'stack',
+         margin=list(l=40,r=40,t=40,b=120)) %>% 
+  highlight(off = "plotly_deselect")    
+
+ #add_trace(x = ~FGSC)
+
+
+```
+
+
