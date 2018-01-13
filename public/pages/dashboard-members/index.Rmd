@@ -1,0 +1,187 @@
+---
+title: "Global Fusarium graminearum Database"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: united
+    social: menu
+---
+
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(readxl)
+library(tidyverse)
+library(crosstalk)
+library(plotly)
+library(viridis)
+```
+
+
+```{r load data, include=FALSE}
+Sys.setlocale("LC_ALL", 'pt_BR.UTF-8')
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
+library(gsheet)
+library(tidyverse)
+members <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing')
+
+members1 <- members %>% 
+   unite(geo, institution, location, state, country, remove = F,  sep = ", ")
+
+```
+
+
+## OPP membership list
+
+```{r}
+members2 <- as_tibble(members1)
+
+members3 <- members2 %>% 
+  replace_na(list(domain1 = "", domain2 = "", domain3 = "")) %>% 
+  unite(domain,  domain1, domain2, domain3, remove = T, sep = " ") %>% 
+  unite(name, first_name, middle_name, last_name, sep = " ")
+
+members3
+library(ggmap)
+members4 <- geocode(members3$geo)
+members5 <- bind_cols(members3, members4)
+  
+```
+
+
+```{r all table, echo=FALSE}
+library(crosstalk)
+library(leaflet)
+library(DT)
+members6 <- members5 %>% select(name, domain, institution, country, homepage, lon, lat )
+sd <- SharedData$new(members6)
+
+```
+
+<i class="fa fa-home" aria-hidden="true"></i> Main dashboard
+==================
+
+
+Column {}
+----------------------------------
+
+
+### Filters
+<table class= "table">
+<tr>
+<td width=35%>
+The Open Plant Pathology directory
+<br><br>
+
+
+</td><td>
+```{r}
+filter_select("Domain", "Select domain(s)", sd, ~domain)
+filter_select("Country", "Select Country", sd, ~country)
+
+```
+</td></tr></table>
+
+
+
+
+
+### <i aria-hidden="true"></i> Table
+
+
+
+
+```{r}
+datatable(sd, 
+                    escape = TRUE,
+          rownames = FALSE, 
+          colnames = c('Name', 'Domain', 'Institution', 'Country', 'Homepage', 'lon', 'lat'), 
+         class = 'cell-border stripe',
+                      options=list(dom = 'Bfrtip',
+                                   buttons = c( 'excel', 'pdf'), deferRender=TRUE, 
+                         scrollY='520px', 
+                         scroller=TRUE,
+                          colReorder = F,
+                         
+                         
+  pageLength = 50,
+    fontSize = 8,
+  lengthMenu = c(100, 250, 500))) %>% 
+ formatStyle(
+  c('name', 'domain', 'institution', 'country', 'homepage', 'lon', 'lat'),
+  fontSize = '90%')
+```
+
+datatable(employee, rownames = FALSE, options = list(
+  ajax = list(
+    serverSide = TRUE, processing = TRUE,
+    url = 'http://datatables.net/examples/server_side/scripts/jsonp.php',
+    dataType = 'jsonp'
+  )
+
+
+Column {}
+----------------------------------
+
+###  <i class="fa fa-map" aria-hidden="true"></i> Geographic map
+
+```{r}
+library(viridis)
+library(leaflet)
+
+
+library(magrittr)
+leaflet(sd) %>% 
+  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = 'Google') %>% 
+    addCircleMarkers(radius = 5, fillOpacity = 0.9, label = ~name) %>%  
+  
+addEasyButton(easyButton(
+    icon="fa-globe", title="Back to initial view",
+    onClick=JS("function(btn, map){ map.setZoom(1); }"))) 
+
+```
+
+
+
+
+### <i class="fa fa-bar-chart" aria-hidden="true"></i> Trichothecene genotype by species frequency plot
+
+
+```{r}
+
+#fgsc$FGSC2 <- with(fgsc, reorder(FGSC, FGSC, function(x) length(x)))
+#p<-sd %>% 
+# ggplot(aes(FGSC))+
+# geom_bar(aes(fill = Tri_genotype)) +
+# theme_grey() +
+# scale_fill_viridis(discrete = TRUE)+
+# coord_flip()+
+# theme(legend.position = "bottom", panel.background = element_rect(fill = "grey97"))+
+# labs(fill = "Tri genotype", y = "Frequency", x = "", title = "")
+#(gg <- ggplotly(p))
+
+
+sd %>% 
+  plot_ly(x = ~country, 
+         color=~name,
+      
+          colors = viridis_pal(option = "D")(3)) %>% 
+  layout(barmode = 'stack',
+         margin=list(l=40,r=40,t=40,b=120)) %>% 
+  highlight(off = "plotly_deselect")    
+
+ #add_trace(x = ~FGSC)
+
+
+```
+
+
+
+
+
+

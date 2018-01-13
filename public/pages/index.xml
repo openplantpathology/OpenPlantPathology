@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Open Plant Pathology</title>
+    <link>/pages/</link>
+    <description>Recent content in Pages on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 12 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/pages/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Open Plant Pathology Members</title>
+      <link>/pages/members/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/members/</guid>
+      <description>&lt;section id=&#34;opp-membership-list&#34; class=&#34;level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.1&lt;/span&gt; OPP membership list&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;members &amp;lt;- as_tibble(members)
+
+members1 &amp;lt;- members %&amp;gt;% 
+  replace_na(list(domain1 = &amp;quot;&amp;quot;, domain2 = &amp;quot;&amp;quot;, domain3 = &amp;quot;&amp;quot;)) %&amp;gt;% 
+  unite(domain,  domain1, domain2, domain3, remove = T, sep = &amp;quot; &amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(knitr)
+kable(members1)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;first_name&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;middle_name&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;last_name&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;role&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;domain&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;institution&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;location&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;state&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;country&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;homepage&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;twitter&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;github&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;orcid&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Sydney&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;E&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Everhart&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;editor&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;epidemiology population biology&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;University of Nebraska&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Lincoln&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Nebraska&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;USA&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://everhart.unl.edu/sydney-everhart.html&#34; class=&#34;uri&#34;&gt;https://everhart.unl.edu/sydney-everhart.html&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://twitter.com/SydneyEverhart&#34; class=&#34;uri&#34;&gt;https://twitter.com/SydneyEverhart&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://github.com/sporangia&#34; class=&#34;uri&#34;&gt;https://github.com/sporangia&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;http://orcid.org/0000-0002-5773-1280&#34; class=&#34;uri&#34;&gt;http://orcid.org/0000-0002-5773-1280&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Emerson&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;M&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Del Ponte&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;admin&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;epidemiology&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Universidade Federal de Viçosa&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Viçosa&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Minas Gerais&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Brazil&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://delpontelab.netlify.com/pages/emerson-delponte/&#34; class=&#34;uri&#34;&gt;https://delpontelab.netlify.com/pages/emerson-delponte/&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://twitter.com/edelponte&#34; class=&#34;uri&#34;&gt;https://twitter.com/edelponte&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://github.com/emdelponte&#34; class=&#34;uri&#34;&gt;https://github.com/emdelponte&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://orcid.org/0000-0003-4398-409X&#34; class=&#34;uri&#34;&gt;https://orcid.org/0000-0003-4398-409X&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Adam&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;H&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Sparks&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;admin&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;epidemiology&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;University of Southern Queensland&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Towoomba&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;NA&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Australia&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://adamhsparks.github.io&#34; class=&#34;uri&#34;&gt;https://adamhsparks.github.io&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://twitter.com/adamhsparks&#34; class=&#34;uri&#34;&gt;https://twitter.com/adamhsparks&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://github.com/adamhsparks&#34; class=&#34;uri&#34;&gt;https://github.com/adamhsparks&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;http://orcid.org/0000-0002-0061-8359&#34; class=&#34;uri&#34;&gt;http://orcid.org/0000-0002-0061-8359&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Niklaus&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;J&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Grünwald&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;editor&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;population biology evolution genomics&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;USDA ARS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Corvallis&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Oregon&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;USA&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;http://grunwaldlab.cgrb.oregonstate.edu/&#34; class=&#34;uri&#34;&gt;http://grunwaldlab.cgrb.oregonstate.edu/&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://twitter.com/PhytophthoraLab&#34; class=&#34;uri&#34;&gt;https://twitter.com/PhytophthoraLab&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://github.com/grunwald/&#34; class=&#34;uri&#34;&gt;https://github.com/grunwald/&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;a href=&#34;https://orcid.org/0000-0003-1656-7602&#34; class=&#34;uri&#34;&gt;https://orcid.org/0000-0003-1656-7602&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
