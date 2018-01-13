@@ -17,5 +17,6 @@ autolink = true
 
 
 > <i class="fa fa-2x fa-envelope"></i> [openplantpathology@gmail.com](openplantpathology@gmail.com)  
-<i class="fa fa-2x fa-slack"></i> [Email-us](openplantpathology@gmail.com) to join our Slack workspace      
-<i class="fa fa-2x fa-twitter-square"></i>  [Follow us!](https://twitter.com/OpenPlantPath)
+<i class="fa fa-2x fa-slack"></i> [Email-us](openplantpathology@gmail.com) to join our Slack workspace  
+<i class="fa fa-2x fa-twitter-square"></i> [Follow us!](https://twitter.com/OpenPlantPath)  
+<i class="fa fa-2x fa-github"></i> [Follow us!](https://github.com/openplantpathology)  
