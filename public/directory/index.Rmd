@@ -27,46 +27,38 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 ```
 
 
-```{r eval=FALSE, include=FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
-library(gsheet)
+#library(gsheet)
 library(tidyverse)
-members <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing")
-
-members <- write_csv(members, "members.csv")
-```
-
-```{r}
-members1 <- read_csv("members.csv")
+library(readxl)
+members1 <- read_excel("members.xlsx")
 members1 <- members1 %>%
   unite(geo,  location, state, country, remove = F, sep = ", ")
 ```
 
 
 ```{r include=FALSE}
-members2 <- as_tibble(members1)
 
-members3 <- members2 %>%
+members5 <- members1 %>%
   replace_na(list(domain1 = "", domain2 = "")) %>%
   unite(domain, domain1, domain2, remove = T, sep = "/") %>%
   unite(name, first_name, middle_name, last_name, sep = " ")
 ```
 
 ```{r eval=FALSE, include=FALSE}
-library(ggmap)
-members4 <- geocode(members3$geo)
-members5 <- bind_cols(members3, members4)
-members5 <- write_csv(members5, "members1.csv")
+#library(ggmap)
+#members4 <- geocode(members3$geo)
+#members5 <- bind_cols(members3, members4)
+#members5 <- write_csv(members5, "members1.csv")
 ```
 
 
 ```{r all table, echo=FALSE}
-members5 <- read_csv("members1.csv")
 library(crosstalk)
 library(leaflet)
 library(DT)
-
 members6 <- members5 %>% 
   unite(link1, link_pre, homepage, remove = F, sep = "") %>% 
   unite (link2, link1, link_pos, remove = F, sep = "") %>%
@@ -76,11 +68,9 @@ members6 <- members5 %>%
   unite (linkg2, linkg, link_pos, remove = F, sep = "") %>%
     unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%   
   unite(github2, linkg3, close_link, remove = F, sep= "") %>% 
-
-  select(name, homepage2, github2, domain, institution, country, lon, lat) %>% 
-  mutate (lon = round(lon, 4),
-          lat = round(lat, 4))
-
+  select(name, role, homepage2, github2, domain, institution, country, lon, lat) 
+members6$lat <- round(jitter(members6$lat, factor = 0.1),5)
+members6$lon <- round(jitter(members6$lon, factor = 0.1),5)
 
 
 sd <- SharedData$new(members6)
@@ -101,15 +91,11 @@ Search and visualize the member directory of the [**Open Plant Pathology**](./in
 
 
 
-```{r}
-
+```{r echo=FALSE}
 filter_select("Name", "Person name", sd, ~name)
 filter_select("Domain", "Field domain(s)", sd, ~domain)
 filter_select("Country", "Country", sd, ~country)
 ```
-
-
-
 
 
 
@@ -121,19 +107,29 @@ Column {.tabset}
 
 ```{r echo=FALSE}
 library(leaflet)
+getColor <- function(members6) {
+  lapply(members6$role, function(role) {
+  if(role == "Editor") {
+    "green"
+  } else if(role == "Reviewer") {
+    "blue"
+  } else {
+    "organge"
+  } })
+}
 icons <- awesomeIcons(
   icon = 'user-o',
   iconColor = 'black',
   library = 'fa',
-  markerColor = 'white'
+  squareMarker = TRUE,
+  markerColor = getColor(members6)
 )
-
-pal <- colorFactor("viridis", domain = c("epidemiology/modeling", "epidemiology/population biology", "population biology/genomics"))
 library(magrittr)
 map <- leaflet(sd) %>%
   addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
 
-   addAwesomeMarkers(~lon, ~lat,  icon=icons, label=~as.character(name)) %>%  
+   addAwesomeMarkers(~lon, ~lat, icon = icons, label=~as.character(name), options = markerOptions(opacity = 0.1)) %>% 
+  
   #addLegend("bottomleft", pal = pal, values = ~domain, title = "Domain(s)", opacity = 1) %>%
   addEasyButton(easyButton(
     icon = "fa-globe", title = "Back to initial view",
