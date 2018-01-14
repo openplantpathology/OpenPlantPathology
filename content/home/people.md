@@ -52,6 +52,7 @@ filter_default = 0
 
 +++
 <a href = "/directory/"><img src="img/headers/member-header.png"></a>
+<br><br><br>
 
 # Our Editorial Board
 Filter by domain knowledge
