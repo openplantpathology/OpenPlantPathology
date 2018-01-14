@@ -1,0 +1,192 @@
+---
+title: "Member directory and map"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: yeti
+    logo: opp-logo.png
+    social: [ "twitter" ]
+    navbar:
+      - { title: "Open Plant Pathology", href: "http://openplantpathology.netlify.com", align: right }
+    
+---
+
+
+<link rel="stylesheet" href="fontawesome.min.css">
+
+```{r include=FALSE}
+library(flexdashboard)
+library(readxl)
+library(tidyverse)
+library(crosstalk)
+library(plotly)
+```
+
+
+```{r include=FALSE}
+Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
+```
+
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# library(gsheet)
+library(tidyverse)
+library(readxl)
+members1 <- read_excel("members2.xlsx")
+members1 <- members1 %>%
+  unite(geo, location, state, country, remove = F, sep = ", ")
+```
+
+
+```{r include=FALSE}
+
+members5 <- members1 %>%
+  replace_na(list(domain1 = "", domain2 = "")) %>%
+  unite(domain, domain1, domain2, remove = T, sep = "/ ") %>%
+  unite(name, first_name, middle_name, last_name, sep = " ")
+```
+
+```{r eval=FALSE, include=FALSE}
+# library(ggmap)
+# members4 <- geocode(members3$geo)
+# members5 <- bind_cols(members3, members4)
+# members5 <- write_csv(members5, "members1.csv")
+```
+
+
+```{r all table, echo=FALSE}
+library(crosstalk)
+library(leaflet)
+library(DT)
+members6 <- members5 %>%
+  unite(link1, link_pre, homepage, remove = F, sep = "") %>%
+  unite(link2, link1, link_pos, remove = F, sep = "") %>%
+  unite(link3, link2, homepage_icon, remove = F, sep = "") %>%
+  unite(homepage2, link3, close_link, remove = F, sep = "") %>%
+  unite(linkg, link_pre, github, remove = F, sep = "") %>%
+  unite(linkg2, linkg, link_pos, remove = F, sep = "") %>%
+  unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%
+  unite(github2, linkg3, close_link, remove = F, sep = "") %>%
+  select(name, role, homepage2, github2, domain, institution, country, lon, lat) %>% 
+  unite(links, homepage2, github2, sep = " | ", remove = TRUE)
+members6$lat <- round(members6$lat, 5)
+members6$lon <- round(members6$lon, 5)
+
+
+
+```
+
+
+Column {data-width=650px}
+----------------------------------
+
+
+
+### <i class="fa fa-table" aria-hidden="true"></i> Member information
+
+```{r echo=FALSE}
+members66 <- members6 %>% 
+  select(name, role, links, domain, institution, country)
+
+datatable(
+  members66,
+  escape = FALSE,
+  rownames = FALSE,
+  colnames = c("Name", "Role", "Links", "Domain", "Institution", "Country"),
+
+  class = "cell-border stripe",
+  options = list(
+    order = list(list(2, 'asc')),
+    autoWidth = TRUE,
+    dom = "Bfrtip",
+    buttons = c("excel", "pdf"), deferRender = TRUE,
+    scrollY = "520px",
+    scroller = TRUE,
+    colReorder = F,
+
+
+    pageLength = 50,
+    fontSize = 12,
+    lengthMenu = c(100, 250, 500)
+  )
+) %>%
+  formatStyle(
+    c("name", "role", "links", "domain", "institution", "country"),
+    fontSize = "100%"
+  )
+```
+
+
+
+
+
+
+Column {}
+----------------------------------
+
+
+###  <i class="fa fa-map" aria-hidden="true"></i> Global map
+
+```{r echo=FALSE}
+library(leaflet)
+
+
+pal <- colorFactor(c("#339933", "steelblue", "#e68a00"), domain = c("Editor", "Reviewer", "Member"))
+
+getColor <- function(members6) {
+  lapply(members6$role, function(role) {
+    if (role == "Editor") {
+      "green"
+    } else if (role == "Member") {
+      "blue"
+    } else {
+      "orange"
+    }
+  })
+}
+icons <- awesomeIcons(
+  icon = "user-o",
+  iconColor = "black",
+  library = "fa",
+  squareMarker = TRUE,
+  markerColor = getColor(members6)
+)
+library(magrittr)
+map <- leaflet(members6) %>%
+  setView(lng = 0, lat = 5, zoom = 1) %>%
+  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
+  addAwesomeMarkers(~lon, ~lat, icon = icons, label = ~as.character(name), clusterOptions = markerClusterOptions()) %>%
+  addLegend("bottomleft", pal = pal, values = ~role, title = "Role", opacity = 1) %>%
+  addEasyButton(easyButton(
+    icon = "fa-globe", title = "Back to initial view",
+    onClick = JS("function(btn, map){ map.setZoom(1); }")
+  ))
+map
+```
+
+
+
+
+
+
+
+### <i class="fa fa-bar-chart" aria-hidden="true"></i> Summary graphs
+
+
+```{r echo=FALSE}
+
+library(ggthemes)
+p <- members1 %>%
+  select(domain1, domain2) %>% 
+  gather(domain) %>% 
+  select(value) %>% 
+  na.omit() %>% 
+  ggplot(aes(value, fill = value)) +
+  geom_bar() +
+  theme_minimal() +
+  theme(legend.position = "right", axis.text.x=element_blank()) +
+  labs(fill = "Domain", y = "Frequency", x = "", title = "")
+(gg <- ggplotly(p))
+```
+
+

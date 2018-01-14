@@ -1,12 +1,12 @@
 ---
-title: "Open Plant Pathology - member directory"
+title: "Member directory and map"
 output: 
   flexdashboard::flex_dashboard:
     theme: yeti
     logo: opp-logo.png
-    social: [ "twitter", "facebook", "menu" ]
+    social: [ "twitter" ]
     navbar:
-      - { title: "Home", href: "http://openplantpathology.netlify.com", align: right }
+      - { title: "Open Plant Pathology", href: "http://openplantpathology.netlify.com", align: right }
     
 ---
 
@@ -29,13 +29,12 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
-#library(gsheet)
+# library(gsheet)
 library(tidyverse)
 library(readxl)
-members1 <- read_excel("members.xlsx")
+members1 <- read_excel("members2.xlsx")
 members1 <- members1 %>%
-  unite(geo,  location, state, country, remove = F, sep = ", ")
+  unite(geo, location, state, country, remove = F, sep = ", ")
 ```
 
 
@@ -43,15 +42,15 @@ members1 <- members1 %>%
 
 members5 <- members1 %>%
   replace_na(list(domain1 = "", domain2 = "")) %>%
-  unite(domain, domain1, domain2, remove = T, sep = "/") %>%
+  unite(domain, domain1, domain2, remove = T, sep = "/ ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ")
 ```
 
 ```{r eval=FALSE, include=FALSE}
-#library(ggmap)
-#members4 <- geocode(members3$geo)
-#members5 <- bind_cols(members3, members4)
-#members5 <- write_csv(members5, "members1.csv")
+# library(ggmap)
+# members4 <- geocode(members3$geo)
+# members5 <- bind_cols(members3, members4)
+# members5 <- write_csv(members5, "members1.csv")
 ```
 
 
@@ -59,101 +58,46 @@ members5 <- members1 %>%
 library(crosstalk)
 library(leaflet)
 library(DT)
-members6 <- members5 %>% 
-  unite(link1, link_pre, homepage, remove = F, sep = "") %>% 
-  unite (link2, link1, link_pos, remove = F, sep = "") %>%
-    unite(link3, link2, homepage_icon, remove = F, sep = "") %>%   
-  unite(homepage2, link3, close_link, remove = F, sep= "") %>% 
-    unite(linkg, link_pre, github, remove = F, sep = "") %>% 
-  unite (linkg2, linkg, link_pos, remove = F, sep = "") %>%
-    unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%   
-  unite(github2, linkg3, close_link, remove = F, sep= "") %>% 
-  select(name, role, homepage2, github2, domain, institution, country, lon, lat) 
-members6$lat <- round(jitter(members6$lat, factor = 0.1),5)
-members6$lon <- round(jitter(members6$lon, factor = 0.1),5)
+members6 <- members5 %>%
+  unite(link1, link_pre, homepage, remove = F, sep = "") %>%
+  unite(link2, link1, link_pos, remove = F, sep = "") %>%
+  unite(link3, link2, homepage_icon, remove = F, sep = "") %>%
+  unite(homepage2, link3, close_link, remove = F, sep = "") %>%
+  unite(linkg, link_pre, github, remove = F, sep = "") %>%
+  unite(linkg2, linkg, link_pos, remove = F, sep = "") %>%
+  unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%
+  unite(github2, linkg3, close_link, remove = F, sep = "") %>%
+  select(name, role, homepage2, github2, domain, institution, country, lon, lat) %>% 
+  unite(links, homepage2, github2, sep = " | ", remove = TRUE)
+members6$lat <- round(members6$lat, 5)
+members6$lon <- round(members6$lon, 5)
 
 
-sd <- SharedData$new(members6)
+
 ```
 
 
-Column {data-width=200px}
+Column {data-width=650px}
 ----------------------------------
 
 
-### <i aria-hidden="true"></i> Filters
 
-<br>
-Search and visualize the member directory of the [**Open Plant Pathology**](./index.html), a community of modellers and computational researchers involved in plant pathological research. Apply the filters below to summarize the information by country and specialization.
-
-
-<br>
-
-
+### <i class="fa fa-table" aria-hidden="true"></i> Member information
 
 ```{r echo=FALSE}
-filter_select("Name", "Person name", sd, ~name)
-filter_select("Domain", "Field domain(s)", sd, ~domain)
-filter_select("Country", "Country", sd, ~country)
-```
+members66 <- members6 %>% 
+  select(name, role, links, domain, institution, country)
 
-
-
-Column {.tabset}
-----------------------------------
-
-
-###  <i class="fa fa-map" aria-hidden="true"></i> Global map
-
-```{r echo=FALSE}
-library(leaflet)
-getColor <- function(members6) {
-  lapply(members6$role, function(role) {
-  if(role == "Editor") {
-    "green"
-  } else if(role == "Reviewer") {
-    "blue"
-  } else {
-    "organge"
-  } })
-}
-icons <- awesomeIcons(
-  icon = 'user-o',
-  iconColor = 'black',
-  library = 'fa',
-  squareMarker = TRUE,
-  markerColor = getColor(members6)
-)
-library(magrittr)
-map <- leaflet(sd) %>%
-  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
-
-   addAwesomeMarkers(~lon, ~lat, icon = icons, label=~as.character(name), options = markerOptions(opacity = 0.1)) %>% 
-  
-  #addLegend("bottomleft", pal = pal, values = ~domain, title = "Domain(s)", opacity = 1) %>%
-  addEasyButton(easyButton(
-    icon = "fa-globe", title = "Back to initial view",
-    onClick = JS("function(btn, map){ map.setZoom(2); }")
-  ))
-map
-```
-
-
-
-
-
-
-### <i class="fa fa-table" aria-hidden="true"></i> Detailed member information
-
-```{r echo=FALSE}
 datatable(
-  sd,
+  members66,
   escape = FALSE,
   rownames = FALSE,
-  colnames = c("Name", "Home", "GitHub", "Domain", "Institution", "Country",  "lon", "lat"),
+  colnames = c("Name", "Role", "Links", "Domain", "Institution", "Country"),
 
   class = "cell-border stripe",
   options = list(
+    order = list(list(2, 'asc')),
+    autoWidth = TRUE,
     dom = "Bfrtip",
     buttons = c("excel", "pdf"), deferRender = TRUE,
     scrollY = "520px",
@@ -167,10 +111,61 @@ datatable(
   )
 ) %>%
   formatStyle(
-    c("name", "homepage2", "domain", "institution", "country",  "lon", "lat"),
-    fontSize = "120%"
+    c("name", "role", "links", "domain", "institution", "country"),
+    fontSize = "100%"
   )
 ```
+
+
+
+
+
+
+Column {}
+----------------------------------
+
+
+###  <i class="fa fa-map" aria-hidden="true"></i> Global map
+
+```{r echo=FALSE}
+library(leaflet)
+
+
+pal <- colorFactor(c("#339933", "steelblue", "#e68a00"), domain = c("Editor", "Reviewer", "Member"))
+
+getColor <- function(members6) {
+  lapply(members6$role, function(role) {
+    if (role == "Editor") {
+      "green"
+    } else if (role == "Member") {
+      "blue"
+    } else {
+      "orange"
+    }
+  })
+}
+icons <- awesomeIcons(
+  icon = "user-o",
+  iconColor = "black",
+  library = "fa",
+  squareMarker = TRUE,
+  markerColor = getColor(members6)
+)
+library(magrittr)
+map <- leaflet(members6) %>%
+  setView(lng = 0, lat = 5, zoom = 1) %>%
+  addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
+  addAwesomeMarkers(~lon, ~lat, icon = icons, label = ~as.character(name), clusterOptions = markerClusterOptions()) %>%
+  addLegend("bottomleft", pal = pal, values = ~role, title = "Role", opacity = 1) %>%
+  addEasyButton(easyButton(
+    icon = "fa-globe", title = "Back to initial view",
+    onClick = JS("function(btn, map){ map.setZoom(1); }")
+  ))
+map
+```
+
+
+
 
 
 
@@ -180,31 +175,18 @@ datatable(
 
 ```{r echo=FALSE}
 
-# fgsc$FGSC2 <- with(fgsc, reorder(FGSC, FGSC, function(x) length(x)))
-# p<-sd %>%
-# ggplot(aes(FGSC))+
-# geom_bar(aes(fill = Tri_genotype)) +
-# theme_grey() +
-# scale_fill_viridis(discrete = TRUE)+
-# coord_flip()+
-# theme(legend.position = "bottom", panel.background = element_rect(fill = "grey97"))+
-# labs(fill = "Tri genotype", y = "Frequency", x = "", title = "")
-# (gg <- ggplotly(p))
-
-library(viridis)
-sd %>%
-  plot_ly(
-    x = ~country,
-    color = ~domain,
-    colors = viridis_pal(option = "D")(3)
-  ) %>%
-  layout(
-    barmode = "stack",
-    margin = list(l = 40, r = 40, t = 40, b = 120)
-  ) %>%
-  highlight(off = "plotly_deselect")
-
-# add_trace(x = ~FGSC)
+library(ggthemes)
+p <- members1 %>%
+  select(domain1, domain2) %>% 
+  gather(domain) %>% 
+  select(value) %>% 
+  na.omit() %>% 
+  ggplot(aes(value, fill = value)) +
+  geom_bar() +
+  theme_minimal() +
+  theme(legend.position = "right", axis.text.x=element_blank()) +
+  labs(fill = "Domain", y = "Frequency", x = "", title = "")
+(gg <- ggplotly(p))
 ```
 
 
