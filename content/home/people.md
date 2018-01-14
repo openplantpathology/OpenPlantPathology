@@ -31,7 +31,7 @@ filter_default = 0
 
 
 [[filter]]
-  name = "All members"
+  name = "All Editors"
   tag = "*"
   
 [[filter]]
@@ -51,6 +51,8 @@ filter_default = 0
   tag = ".Mathematical_Modeling"
 
 +++
-# Community members
-Filter by specialization
+<a href = "/directory/"><img src="img/headers/member-header.png"></a>
+
+# Our Editorial Board
+Filter by domain knowledge
 

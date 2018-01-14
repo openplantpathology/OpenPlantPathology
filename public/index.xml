@@ -7,17 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Oct 2017 23:00:00 -0300</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Adam Kleckzowski</title>
-      <link>/people/kleczowski/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/kleczowski/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Emerson Del Ponte</title>
@@ -25,15 +16,6 @@
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/people/delponte/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Felipe Dalla Lana</title>
-      <link>/people/dallalana/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/dallalana/</guid>
       <description></description>
     </item>
     
@@ -56,47 +38,11 @@
     </item>
     
     <item>
-      <title>Paul Esker</title>
-      <link>/people/esker/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/esker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sarah Pethybridge</title>
-      <link>/people/pethybridge/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/pethybridge/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stephen Parnell</title>
-      <link>/people/parnell/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/parnell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Sydney Everhart</title>
       <link>/people/everhart/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/people/everhart/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zhian Kamvar</title>
-      <link>/people/kamvar/</link>
-      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/kamvar/</guid>
       <description></description>
     </item>
     
@@ -110,18 +56,9 @@
     </item>
     
     <item>
-      <title>Robin Choudhury</title>
-      <link>/people/choudhury/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/people/choudhury/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
       <link>/post/2018-01-08-first-post-community-call/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
       <guid>/post/2018-01-08-first-post-community-call/</guid>
       <description>&lt;p&gt;Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.&lt;/p&gt;
@@ -181,7 +118,7 @@ Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
     <item>
       <title>Example Talk</title>
       <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1000</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0200</pubDate>
       
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
@@ -195,6 +132,26 @@ Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
       
       <guid>/people/sparks/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>/publication/person-re-identification/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/person-re-identification/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/clothing-search/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

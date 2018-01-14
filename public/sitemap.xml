@@ -5,25 +5,7 @@
     
     <url>
     
-      <loc>/people/kleczowski/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/people/delponte/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/people/dallalana/</loc>
       <lastmod>2018-01-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -50,43 +32,7 @@
     
     <url>
     
-      <loc>/people/esker/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/people/pethybridge/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/people/parnell/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/people/everhart/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/people/kamvar/</loc>
       <lastmod>2018-01-09T00:00:00+00:00</lastmod>
     </url>
     
@@ -104,8 +50,8 @@
     
     <url>
     
-      <loc>/people/choudhury/</loc>
-      <lastmod>2018-01-08T00:00:00+00:00</lastmod>
+      <loc>/post/2018-01-08-first-post-community-call/</loc>
+      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
     </url>
     
   
@@ -113,8 +59,17 @@
     
     <url>
     
-      <loc>/post/2018-01-08-first-post-community-call/</loc>
-      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
+      <loc>/talk/example-talk/</loc>
+      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
   
@@ -149,34 +104,7 @@
     
     <url>
     
-      <loc>/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/people/sparks/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/people/foster/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -233,7 +161,7 @@
     <url>
     
       <loc>/tags/community/</loc>
-      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
+      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -283,7 +211,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00+10:00</lastmod>
+      <lastmod>2017-10-14T23:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -293,16 +221,6 @@
     <url>
     
       <loc>/people/</loc>
-      <lastmod>2018-01-09T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/phytopathometry/</loc>
       <lastmod>2018-01-09T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
