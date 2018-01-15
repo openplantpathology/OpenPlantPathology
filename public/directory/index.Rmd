@@ -25,6 +25,13 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 # read data from google sheets
 
 library(gsheet)
+library(ggmap)
+
+`%notin%` <-  Negate("%in%")
+
+# use API for ggmap
+register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
+
 members <-
   gsheet2tbl(
     "https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing"
@@ -49,6 +56,27 @@ members6 <- members %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
   
   select(name, role, domain, institution, country, lon, lat)
+
+## geocode locations using ggmap
+
+old_locations <- load("./data/lonlat.Rds")
+
+update_location <-
+  paste(members$institution,
+  members$location,
+  members$state,
+  members$country,
+  sep = ", ")
+
+new_locations <- update_location %notin% location
+
+location <- rbind(members$lon, members$lat, geocode(new_locations))
+
+members <- data.frame(members, location)
+
+# save the location data to check against for next run
+save(members, file = "./data/member_lonlat.Rds")
+
 ```
 
 
