@@ -42,12 +42,6 @@ defaultContentLanguageInSubdir = false
   fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
   smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
-[twitter]
-  card = "summary"
-  site = "@openplantpath"
-  title = "Open Plant Pathology"
-  description = ""
-  image = "img/opp-logo.png"
 
 [params]
   # Color theme.
