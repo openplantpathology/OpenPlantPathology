@@ -32,7 +32,10 @@ knitr::opts_chunk$set(echo = TRUE)
 # library(gsheet)
 library(tidyverse)
 library(readxl)
-members1 <- read_excel("members2.xlsx")
+
+library(gsheet)
+members1 <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing')
+#members1 <- read_excel("members2.xlsx")
 members1 <- members1 %>%
   unite(geo, location, state, country, remove = F, sep = ", ")
 ```
@@ -67,8 +70,8 @@ members6 <- members5 %>%
   unite(linkg2, linkg, link_pos, remove = F, sep = "") %>%
   unite(linkg3, linkg2, github_icon, remove = F, sep = "") %>%
   unite(github2, linkg3, close_link, remove = F, sep = "") %>%
-  select(name, role, homepage2, github2, domain, institution, country, lon, lat) %>% 
-  unite(links, homepage2, github2, sep = " | ", remove = TRUE)
+  select(name, role,  domain, institution, country, lon, lat) 
+  
 members6$lat <- round(members6$lat, 5)
 members6$lon <- round(members6$lon, 5)
 
@@ -86,32 +89,29 @@ Column {data-width=650px}
 
 ```{r echo=FALSE}
 members66 <- members6 %>% 
-  select(name, role, links, domain, institution, country)
+  select(name, role, domain, institution, country)
 
 datatable(
   members66,
   escape = FALSE,
   rownames = FALSE,
-  colnames = c("Name", "Role", "Links", "Domain", "Institution", "Country"),
-
+  colnames = c("Name", "Role", "Domain", "Institution", "Country"),
   class = "cell-border stripe",
   options = list(
-    order = list(list(2, 'asc')),
+    order = list(list(1, 'asc')),
     autoWidth = TRUE,
     dom = "Bfrtip",
     buttons = c("excel", "pdf"), deferRender = TRUE,
-    scrollY = "520px",
+   # scrollY = "520px",
     scroller = TRUE,
     colReorder = F,
-
-
     pageLength = 50,
-    fontSize = 12,
-    lengthMenu = c(100, 250, 500)
+    fontSize = 14,
+    lengthMenu = c(50, 100)
   )
 ) %>%
   formatStyle(
-    c("name", "role", "links", "domain", "institution", "country"),
+    c("name", "role", "domain", "institution", "country"),
     fontSize = "100%"
   )
 ```
