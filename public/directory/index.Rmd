@@ -19,6 +19,7 @@ library(readxl)
 library(tidyverse)
 library(crosstalk)
 library(plotly)
+library(googlesheets)
 ```
 
 
@@ -28,13 +29,46 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 
 
 ```{r include=FALSE}
+# Give googlesheets permission to access spreadsheets and Google Drive
+# Only do this once
+#gs_auth()
+
+OPP_members <- gs_title("OPP-members")
 knitr::opts_chunk$set(echo = TRUE)
-# library(gsheet)
 library(tidyverse)
-library(readxl)
-members1 <- read_excel("members2.xlsx")
+members1 <-  gs_read(OPP_members)
+
+# Check if the webpage URLs start with http or https and prepend as necessary
+members1$homepage <- ifelse(
+  substr(members1$homepage, 1, 4) == "http",
+  members1$homepage,
+  members1$homepage <- paste0("https://", members1$homepage)
+)
+
+members1$twitter <- ifelse(
+  substr(members1$twitter, 1, 4) == "http",
+  members1$twitter,
+  members1$twitter <- paste0("https://", members1$twitter)
+)
+
+members1$github <- github <- ifelse(
+  substr(members1$github, 1, 4) == "http",
+  members1$github,
+  members1$github <- paste0("https://", members1$github)
+)
+
+members1$orcid <- ifelse(
+  substr(members1$orcid, 1, 4) == "http",
+  members1$orcid,
+  members1$orcid <- paste0("https://", members1$orcid)
+)
+
 members1 <- members1 %>%
   unite(geo, location, state, country, remove = F, sep = ", ")
+
+# Remove NA from middle name column and replace with blank
+members1$middle_name[is.na(members1$middle_name)] <- ""
+
 ```
 
 
@@ -71,8 +105,6 @@ members6 <- members5 %>%
   unite(links, homepage2, github2, sep = " | ", remove = TRUE)
 members6$lat <- round(members6$lat, 5)
 members6$lon <- round(members6$lon, 5)
-
-
 
 ```
 
