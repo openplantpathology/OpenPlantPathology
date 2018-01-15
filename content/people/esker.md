@@ -3,16 +3,16 @@
 date = "2018-01-09"
 
 # Member's name
-title = "Nik Cunniffe"
+title = "Paul Esker"
 
 # Member summary info
-summary = "Mathematical modeller. University of Cambridge, UK"
+summary = "Plant disease epidemiologist and modeller. Pennsylvania State University, USA"
 
 # photo membeer (relative to `static/img/` folder).
-image_preview = "members/cunniffe.jpg"
+image_preview = "members/esker.jpg"
 
 # Tags: can be used for filtering members
-tags = ["Modeling"]
+tags = ["Epidemiology", "Modeling"]
 
 # Optional featured image (relative to `static/img/` folder).
 [header]

@@ -12,7 +12,7 @@ summary = "Plant disease epidemiologist and modeller. University of California -
 image_preview = "members/mcroberts.jpg"
 
 # Tags: can be used for filtering members
-tags = ["Epidemiology", "Mathematical_Modeling"]
+tags = ["Epidemiology", "Modeling"]
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
