@@ -15,7 +15,7 @@ weight = 30
 
 +++
 
-<img src = "/img/opp-logo.png" width=460 align = left>
+<img src = "/img/opp-logo.svg" width=460 align = left>
 <h2> What is Open Plant Pathology?</h2>
 
 <p>A community of modelers and computational researchers involved in plant disease epidemiology, pathogen population biology/ecology and genomics, that believes that science should be as open, transparent and reproducible as possible. We support effort from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
