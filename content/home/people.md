@@ -51,8 +51,7 @@ filter_default = 0
   tag = ".Mathematical_Modeling"
 
 +++
-<a href = "/directory/"><img src="img/headers/member-header.png"></a>
-<br><br><br>
+
 
 # Our Editorial Board
 Filter by domain knowledge

@@ -265,8 +265,13 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Members"
-  url = "#people"
+  url = "#members"
   weight = 4
+
+[[menu.main]]
+  name = "Editorial Board"
+  url = "#people"
+  weight = 5
 
 [[menu.main]]
   name = "Contact"
