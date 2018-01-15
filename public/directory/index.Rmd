@@ -31,9 +31,10 @@ members <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUoz
 library(tidyverse)
 members6 <- members %>%
   unite(geo, location, state, country, remove = F, sep = ", ") %>%
-  replace_na(list(domain1 = "", domain2 = "")) %>%
+  replace_na(list(domain1 = "", domain2 = "", middle_name = "")) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
+   
   select(name, role, domain, institution, country, lon, lat)
 ```
 
