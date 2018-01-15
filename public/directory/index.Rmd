@@ -21,20 +21,33 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 
 ```{r include=FALSE}
 
+
 # read data from google sheets
 
 library(gsheet)
-members <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing")
+members <-
+  gsheet2tbl(
+    "https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing"
+  )
 
 # prepare the dataset for table, plot and map
 
 library(tidyverse)
 members6 <- members %>%
-  unite(geo, location, state, country, remove = F, sep = ", ") %>%
-  replace_na(list(domain1 = "", domain2 = "", middle_name = "")) %>%
+  unite(geo,
+        location,
+        state,
+        country,
+        remove = F,
+        sep = ", ") %>%
+  replace_na(list(
+    domain1 = "",
+    domain2 = "",
+    middle_name = ""
+  )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
-   
+  
   select(name, role, domain, institution, country, lon, lat)
 ```
 
@@ -60,7 +73,8 @@ datatable(
   colnames = c("Name", "Role", "Domain(s)", "Institution", "Country"),
   class = "cell-border stripe",
   options = list(
-    order = list(list(0, "asc")), # order by first variable
+    order = list(list(0, "asc")),
+    # order by first variable
     autoWidth = TRUE,
     columnDefs = list(list(width = "120px", targets = c(0))),
     scroller = TRUE,
@@ -69,10 +83,8 @@ datatable(
     lengthMenu = c(25, 50, 100)
   )
 ) %>%
-  formatStyle(
-    c("name", "role", "domain", "institution", "country"),
-    fontSize = "90%"
-  )
+  formatStyle(c("name", "role", "domain", "institution", "country"),
+              fontSize = "90%")
 ```
 
 
@@ -81,6 +93,7 @@ Column {}
 ----------------------------------
 
 ###  <i class="fa fa-map" aria-hidden="true"></i> Global map
+
 
 ```{r echo=FALSE}
 library(leaflet)
@@ -119,10 +132,6 @@ map
 ```
 
 
-
-
-
-
 ### <i class="fa fa-bar-chart" aria-hidden="true"></i> Members by knowledge domain
 
 
@@ -141,5 +150,4 @@ p <- members %>% # we use the original dataframe here
   labs(fill = "Domain", y = "Number of Members", x = "", title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
 ```
-
 
