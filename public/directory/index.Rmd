@@ -66,11 +66,13 @@ register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
 
 # create a vector of locations to geocode
 update_locations <-
-  paste(new_members$institution,
-  new_members$location,
-  new_members$state,
-  new_members$country,
-  sep = ", ")
+  paste(
+    new_members$institution,
+    new_members$location,
+    new_members$state,
+    new_members$country,
+    sep = ", "
+  )
 
 # geocode locations using ggmap
 new_locations <- geocode(update_locations)
@@ -92,6 +94,7 @@ Column {data-width=700px}
 ### <i class="fa fa-table" aria-hidden="true"></i> Member information
 
 ```{r echo=FALSE}
+
 
 # dynamic table using DT package
 
@@ -134,10 +137,12 @@ library(leaflet)
 
 members6 <- na.omit(members6)
 
-pal <- colorFactor(c("#339933", "steelblue", "#e68a00"), domain = c("Editor", "Reviewer", "Member"))
+pal <-
+  colorFactor(c("#339933", "steelblue", "#e68a00"),
+              domain = c("Editor", "Reviewer", "Member"))
 
 getColor <- function(members6) {
-  lapply(members$role, function(role) {
+  lapply(members6$role, function(role) {
     if (role == "Editor") {
       "green"
     } else if (role == "Member") {
@@ -159,10 +164,23 @@ library(magrittr)
 map <- leaflet(members6) %>%
   setView(lng = 0, lat = 5, zoom = 1) %>%
   addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
-  addAwesomeMarkers(~lon, ~lat, icon = icons, label = ~as.character(name), clusterOptions = markerClusterOptions()) %>%
-  addLegend("bottomleft", pal = pal, values = ~role, title = "Role", opacity = 1) %>%
+  addAwesomeMarkers(
+    ~lon,
+    ~lat,
+    icon = icons,
+    label = ~as.character(name),
+    clusterOptions = markerClusterOptions()
+  ) %>%
+  addLegend(
+    "bottomleft",
+    pal = pal,
+    values = ~role,
+    title = "Role",
+    opacity = 1
+  ) %>%
   addEasyButton(easyButton(
-    icon = "fa-globe", title = "Back to initial view",
+    icon = "fa-globe",
+    title = "Back to initial view",
     onClick = JS("function(btn, map){ map.setZoom(1); }")
   ))
 map
@@ -175,7 +193,7 @@ map
 ```{r echo=FALSE}
 library(plotly)
 
-p <- members %>% # we use the original dataframe here
+p <- members %>% # we use the original dataframe from Google here
   select(domain1, domain2) %>%
   gather(domain) %>%
   select(value) %>%
@@ -184,6 +202,9 @@ p <- members %>% # we use the original dataframe here
   geom_bar() +
   theme_minimal() +
   theme(legend.position = "right", axis.text.x = element_blank()) +
-  labs(fill = "Domain", y = "Number of Members", x = "", title = "Members acting in up to two domains")
+  labs(fill = "Domain",
+       y = "Number of Members",
+       x = "",
+       title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
 ```
