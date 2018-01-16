@@ -157,7 +157,7 @@ icons <- awesomeIcons(
   iconColor = "black",
   library = "fa",
   squareMarker = TRUE,
-  markerColor = getColor(members)
+  markerColor = getColor(members6)
 )
 library(magrittr)
 
