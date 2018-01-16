@@ -20,17 +20,12 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 
 
 ```{r include=FALSE}
-
+# load existing member and location data
+load("./data/existing_members.Rds")
+load("./data/existing_locations.Rds")
 
 # read data from google sheets
-
 library(gsheet)
-library(ggmap)
-
-`%notin%` <-  Negate("%in%")
-
-# use API for ggmap
-register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
 
 members <-
   gsheet2tbl(
@@ -38,7 +33,6 @@ members <-
   )
 
 # prepare the dataset for table, plot and map
-
 library(tidyverse)
 members6 <- members %>%
   unite(geo,
@@ -54,29 +48,41 @@ members6 <- members %>%
   )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
-  
-  select(name, role, domain, institution, country, lon, lat)
+  select(name, role, domain, institution, location, state, country)
 
-## geocode locations using ggmap
+# select new items to geocode
+new_members <- setdiff(members6, existing_members)
 
-old_locations <- load("./data/lonlat.Rds")
+# if there are no new members, stop kniting
+if (nrow(new_members) == 0) {
+  stop("There are no new members to add to the dashboard")
+}
 
-update_location <-
-  paste(members$institution,
-  members$location,
-  members$state,
-  members$country,
+# geocode
+library(ggmap)
+
+# use API for ggmap
+register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
+
+# create a vector of locations to geocode
+update_locations <-
+  paste(new_members$institution,
+  new_members$location,
+  new_members$state,
+  new_members$country,
   sep = ", ")
 
-new_locations <- update_location %notin% location
+# geocode locations using ggmap
+new_locations <- geocode(update_locations)
 
-location <- rbind(members$lon, members$lat, geocode(new_locations))
+existing_members <- rbind(existing_members, new_members)
+existing_locations <- rbind(existing_locations, new_locations)
 
-members <- data.frame(members, location)
+members6 <- data.frame(existing_members, existing_locations)
 
 # save the location data to check against for next run
-save(members, file = "./data/member_lonlat.Rds")
-
+save(existing_members, file = "./data/existing_members.Rds")
+save(existing_locations, file = "./data/existing_locations.Rds")
 ```
 
 
@@ -126,10 +132,12 @@ Column {}
 ```{r echo=FALSE}
 library(leaflet)
 
+members6 <- na.omit(members6)
+
 pal <- colorFactor(c("#339933", "steelblue", "#e68a00"), domain = c("Editor", "Reviewer", "Member"))
 
 getColor <- function(members6) {
-  lapply(members6$role, function(role) {
+  lapply(members$role, function(role) {
     if (role == "Editor") {
       "green"
     } else if (role == "Member") {
@@ -144,9 +152,10 @@ icons <- awesomeIcons(
   iconColor = "black",
   library = "fa",
   squareMarker = TRUE,
-  markerColor = getColor(members6)
+  markerColor = getColor(members)
 )
 library(magrittr)
+
 map <- leaflet(members6) %>%
   setView(lng = 0, lat = 5, zoom = 1) %>%
   addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
@@ -178,4 +187,3 @@ p <- members %>% # we use the original dataframe here
   labs(fill = "Domain", y = "Number of Members", x = "", title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
 ```
-
