@@ -203,7 +203,7 @@ p <- members %>% # we use the original dataframe from Google here
   theme_minimal() +
   theme(legend.position = "right", axis.text.x = element_blank()) +
   labs(fill = "Domain",
-       y = "Number of Members",
+       y = "Count",
        x = "",
        title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
