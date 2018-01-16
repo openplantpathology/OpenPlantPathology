@@ -20,22 +20,71 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 
 
 ```{r include=FALSE}
+# load existing member and location data
+load("./data/existing_members.Rds")
+load("./data/existing_locations.Rds")
 
 # read data from google sheets
-
 library(gsheet)
-members <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing")
+
+members <-
+  gsheet2tbl(
+    "https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing"
+  )
 
 # prepare the dataset for table, plot and map
-
 library(tidyverse)
 members6 <- members %>%
-  unite(geo, location, state, country, remove = F, sep = ", ") %>%
-  replace_na(list(domain1 = "", domain2 = "", middle_name = "")) %>%
+  unite(geo,
+        location,
+        state,
+        country,
+        remove = F,
+        sep = ", ") %>%
+  replace_na(list(
+    domain1 = "",
+    domain2 = "",
+    middle_name = ""
+  )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
-   
-  select(name, role, domain, institution, country, lon, lat)
+  select(name, role, domain, institution, location, state, country)
+
+# select new items to geocode
+new_members <- setdiff(members6, existing_members)
+
+# if there are no new members, stop kniting
+if (nrow(new_members) == 0) {
+  stop("There are no new members to add to the dashboard")
+}
+
+# geocode
+library(ggmap)
+
+# use API for ggmap
+register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
+
+# create a vector of locations to geocode
+update_locations <-
+  paste(
+    new_members$institution,
+    new_members$location,
+    new_members$state,
+    new_members$country,
+    sep = ", "
+  )
+
+# geocode locations using ggmap
+new_locations <- geocode(update_locations)
+
+existing_members <- rbind(existing_members, new_members)
+existing_locations <- rbind(existing_locations, new_locations)
+
+members6 <- data.frame(existing_members, existing_locations)
+
+# save the location data to check against for next run
+save(existing_members, file = "./data/existing_members.Rds")
+save(existing_locations, file = "./data/existing_locations.Rds")
 ```
 
 
@@ -45,6 +94,7 @@ Column {data-width=700px}
 ### <i class="fa fa-table" aria-hidden="true"></i> Member information
 
 ```{r echo=FALSE}
+
 
 # dynamic table using DT package
 
@@ -60,7 +110,8 @@ datatable(
   colnames = c("Name", "Role", "Domain(s)", "Institution", "Country"),
   class = "cell-border stripe",
   options = list(
-    order = list(list(0, "asc")), # order by first variable
+    order = list(list(0, "asc")),
+    # order by first variable
     autoWidth = TRUE,
     columnDefs = list(list(width = "120px", targets = c(0))),
     scroller = TRUE,
@@ -69,10 +120,8 @@ datatable(
     lengthMenu = c(25, 50, 100)
   )
 ) %>%
-  formatStyle(
-    c("name", "role", "domain", "institution", "country"),
-    fontSize = "90%"
-  )
+  formatStyle(c("name", "role", "domain", "institution", "country"),
+              fontSize = "90%")
 ```
 
 
@@ -82,10 +131,15 @@ Column {}
 
 ###  <i class="fa fa-map" aria-hidden="true"></i> Global map
 
+
 ```{r echo=FALSE}
 library(leaflet)
 
-pal <- colorFactor(c("#339933", "steelblue", "#e68a00"), domain = c("Editor", "Reviewer", "Member"))
+members6 <- na.omit(members6)
+
+pal <-
+  colorFactor(c("#339933", "steelblue", "#e68a00"),
+              domain = c("Editor", "Reviewer", "Member"))
 
 getColor <- function(members6) {
   lapply(members6$role, function(role) {
@@ -106,21 +160,31 @@ icons <- awesomeIcons(
   markerColor = getColor(members6)
 )
 library(magrittr)
+
 map <- leaflet(members6) %>%
   setView(lng = 0, lat = 5, zoom = 1) %>%
   addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=r&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = "Google") %>%
-  addAwesomeMarkers(~lon, ~lat, icon = icons, label = ~as.character(name), clusterOptions = markerClusterOptions()) %>%
-  addLegend("bottomleft", pal = pal, values = ~role, title = "Role", opacity = 1) %>%
+  addAwesomeMarkers(
+    ~lon,
+    ~lat,
+    icon = icons,
+    label = ~as.character(name),
+    clusterOptions = markerClusterOptions()
+  ) %>%
+  addLegend(
+    "bottomleft",
+    pal = pal,
+    values = ~role,
+    title = "Role",
+    opacity = 1
+  ) %>%
   addEasyButton(easyButton(
-    icon = "fa-globe", title = "Back to initial view",
+    icon = "fa-globe",
+    title = "Back to initial view",
     onClick = JS("function(btn, map){ map.setZoom(1); }")
   ))
 map
 ```
-
-
-
-
 
 
 ### <i class="fa fa-bar-chart" aria-hidden="true"></i> Members by knowledge domain
@@ -129,7 +193,7 @@ map
 ```{r echo=FALSE}
 library(plotly)
 
-p <- members %>% # we use the original dataframe here
+p <- members %>% # we use the original dataframe from Google here
   select(domain1, domain2) %>%
   gather(domain) %>%
   select(value) %>%
@@ -138,8 +202,9 @@ p <- members %>% # we use the original dataframe here
   geom_bar() +
   theme_minimal() +
   theme(legend.position = "right", axis.text.x = element_blank()) +
-  labs(fill = "Domain", y = "Number of Members", x = "", title = "Members acting in up to two domains")
+  labs(fill = "Domain",
+       y = "Number of Members",
+       x = "",
+       title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
 ```
-
-
