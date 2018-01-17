@@ -166,7 +166,7 @@ map <- leaflet(members6) %>%
     ~lon,
     ~lat,
     icon = icons,
-    label = paste("Click for details"),
+    label = paste(members6$name, "- click for details"),
     popup = paste("<b>", members6$name, "</b><br>",
                   members6$institution, "<br>",
                   members6$domain, "<br>"),
