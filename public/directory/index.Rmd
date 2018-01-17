@@ -48,7 +48,19 @@ members6 <- members %>%
   )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
-  select(name, role, domain, institution, location, state, country)
+  select(
+    name,
+    role,
+    domain,
+    institution,
+    location,
+    state,
+    country,
+    homepage,
+    twitter,
+    github,
+    orcid
+  )
 
 # select new items to geocode
 new_members <- setdiff(members6, existing_members)
@@ -106,21 +118,31 @@ datatable(
   members66,
   escape = FALSE,
   rownames = FALSE,
-  colnames = c("Name", "Role", "Domain(s)", "Institution", "Country"),
+  colnames = c(
+  "Name",
+  "Role",
+  "Domain(s)",
+  "Institution",
+  "Country",
+  "Homepage",
+  "Twitter",
+  "GitHub",
+  "orcid"
+  ),
   class = "cell-border stripe",
   options = list(
-    order = list(list(0, "asc")),
-    # order by first variable
-    autoWidth = TRUE,
-    columnDefs = list(list(width = "120px", targets = c(0))),
-    scroller = TRUE,
-    pageLength = 25,
-    fontSize = 12,
-    lengthMenu = c(25, 50, 100)
+  order = list(list(0, "asc")),
+  # order by first variable
+  autoWidth = TRUE,
+  columnDefs = list(list(width = "120px", targets = c(0))),
+  scroller = TRUE,
+  pageLength = 25,
+  fontSize = 12,
+  lengthMenu = c(25, 50, 100)
   )
-) %>%
+  ) %>%
   formatStyle(c("name", "role", "domain", "institution", "country"),
-              fontSize = "90%")
+  fontSize = "90%")
 ```
 
 
@@ -167,14 +189,9 @@ map <- leaflet(members6) %>%
     ~lon,
     ~lat,
     icon = icons,
-    #label = ~as.character(name),
-    #label = ~as.character(name),
-     popup = paste("<b>", members6$name, "</b><br>",
-                  members6$institution, "<br>",
-                  members6$domain, "<br>"),
-    clusterOptions = markerClusterOptions(),
+    label = ~as.character(name),
+    clusterOptions = markerClusterOptions()
   ) %>%
-  
   addLegend(
     "bottomleft",
     pal = pal,
