@@ -24,8 +24,6 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 load("./data/existing_members.Rds")
 load("./data/existing_locations.Rds")
 
-
-
 # read data from google sheets
 library(gsheet)
 
