@@ -1,5 +1,5 @@
 ---
-title: "OPen Plant Pathology - Member directory"
+title: "Open Plant Pathology - Member directory"
 output: 
   flexdashboard::flex_dashboard:
     theme: bootstrap
@@ -166,9 +166,14 @@ map <- leaflet(members6) %>%
     ~lon,
     ~lat,
     icon = icons,
-    label = ~as.character(name),
-    clusterOptions = markerClusterOptions()
+    #label = ~as.character(name),
+    #label = ~as.character(name),
+     popup = paste("<b>", members6$name, "</b><br>",
+                  members6$institution, "<br>",
+                  members6$domain, "<br>"),
+    clusterOptions = markerClusterOptions(),
   ) %>%
+  
   addLegend(
     "bottomleft",
     pal = pal,
