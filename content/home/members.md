@@ -17,9 +17,9 @@ weight = 45
 <a href="directory/"><img src = "/img/headers/opp-screen.png" width = 500px  align = right></a>
 <h1>A growing Global Community!</h3>
 
-<p>Check detailed information about the members and their institution, knowledge domains and the global map of Open Plant Pathology </p>
+<p>Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology </p>
 
 <h2> Knowledge domains</h2>
->Modeling, Population Biology, Epidemiology, Programming, Genomics and Microbial Ecology
+Modeling, Population Biology, Epidemiology, Programming, Genomics and Microbial Ecology
 
-<p><a href="directory/" class="btn btn-primary btn-outline">Check the directory</a> </p>
+<p><a href="directory/" class="btn btn-primary btn-outline">CLICK HERE TO ACCESS THE DIRECTORY</a> </p>
