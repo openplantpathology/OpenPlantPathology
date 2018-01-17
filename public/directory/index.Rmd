@@ -1,5 +1,5 @@
 ---
-title: "Open Plant Pathology - Member directory"
+title: "OPen Plant Pathology - Member directory"
 output: 
   flexdashboard::flex_dashboard:
     theme: bootstrap
@@ -53,32 +53,30 @@ members6 <- members %>%
 # select new items to geocode
 new_members <- setdiff(members6, existing_members)
 
-# if there are no new members, stop kniting
-if (nrow(new_members) == 0) {
-  stop("There are no new members to add to the dashboard")
+# if there are new members, geocode them, else no reason to
+if (nrow(new_members) > 0) {
+  
+  # geocode
+  library(ggmap)
+  
+  # use API for ggmap
+  register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
+  
+  # create a vector of locations to geocode
+  update_locations <-
+    paste(
+      new_members$institution,
+      new_members$location,
+      new_members$state,
+      new_members$country,
+      sep = ", "
+    )
+  
+  # geocode locations using ggmap
+  new_locations <- geocode(update_locations)
+  existing_members <- rbind(existing_members, new_members)
+  existing_locations <- rbind(existing_locations, new_locations)
 }
-
-# geocode
-library(ggmap)
-
-# use API for ggmap
-register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
-
-# create a vector of locations to geocode
-update_locations <-
-  paste(
-    new_members$institution,
-    new_members$location,
-    new_members$state,
-    new_members$country,
-    sep = ", "
-  )
-
-# geocode locations using ggmap
-new_locations <- geocode(update_locations)
-
-existing_members <- rbind(existing_members, new_members)
-existing_locations <- rbind(existing_locations, new_locations)
 
 members6 <- data.frame(existing_members, existing_locations)
 
@@ -203,7 +201,7 @@ p <- members %>% # we use the original dataframe from Google here
   theme_minimal() +
   theme(legend.position = "right", axis.text.x = element_blank()) +
   labs(fill = "Domain",
-       y = "Count",
+       y = "Number of Members",
        x = "",
        title = "Members acting in up to two domains")
 (gg <- ggplotly(p))
