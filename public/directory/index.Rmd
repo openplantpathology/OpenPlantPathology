@@ -44,7 +44,11 @@ members6 <- members %>%
   replace_na(list(
     domain1 = "",
     domain2 = "",
-    middle_name = ""
+    middle_name = "",
+    homepage = "",
+    twitter = "",
+    github = "",
+    orcid = ""
   )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
@@ -106,12 +110,19 @@ Column {data-width=700px}
 
 ```{r echo=FALSE}
 
-
 # dynamic table using DT package
 
 library(DT)
 members66 <- members6 %>%
-  select(name, role, domain, institution, country)
+  select(name,
+         role,
+         domain,
+         institution,
+         country,
+         homepage,
+         twitter,
+         github,
+         orcid)
 # we do not need to show lat and long here
 
 datatable(
@@ -141,7 +152,18 @@ datatable(
   lengthMenu = c(25, 50, 100)
   )
   ) %>%
-  formatStyle(c("name", "role", "domain", "institution", "country"),
+  formatStyle(
+    c(
+      "name",
+      "role",
+      "domain",
+      "institution",
+      "country",
+      "homepage",
+      "twitter",
+      "github",
+      "orcid"
+    ),
   fontSize = "90%")
 ```
 
