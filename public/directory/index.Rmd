@@ -82,15 +82,44 @@ if (nrow(new_members) > 0) {
   # create a vector of locations to geocode
   update_locations <-
     paste(
-      new_members$institution,
-      new_members$location,
-      new_members$state,
-      new_members$country,
+      members$institution,
+      members$location,
+      members$state,
+      members$country,
       sep = ", "
     )
 
-  # geocode locations using ggmap
+  # geocode locations using ggmap using all location vars
   new_locations <- geocode(update_locations)
+
+  # if there are NAs, try fallback and map only location, state, country, etc...
+  if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        members$location,
+        members$state,
+        members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  } else if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        new_members$state,
+        new_members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    na_locations$ID <-  seq.int(nrow(na_locations))
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  } else if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        new_members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  }
+
   existing_members <- rbind(existing_members, new_members)
   existing_locations <- rbind(existing_locations, new_locations)
 }
