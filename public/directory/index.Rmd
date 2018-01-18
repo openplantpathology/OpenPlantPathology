@@ -82,10 +82,10 @@ if (nrow(new_members) > 0) {
   # create a vector of locations to geocode
   update_locations <-
     paste(
-      members$institution,
-      members$location,
-      members$state,
-      members$country,
+      new_members$institution,
+      new_members$location,
+      new_members$state,
+      new_members$country,
       sep = ", "
     )
 
@@ -96,9 +96,9 @@ if (nrow(new_members) > 0) {
   if (any(is.na(new_locations))) {
     na_locations <-
       paste(
-        members$location,
-        members$state,
-        members$country,
+        new_members$location,
+        new_members$state,
+        new_members$country,
         sep = ", ")
     na_locations <- geocode(na_locations)
     new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
