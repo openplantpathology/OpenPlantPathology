@@ -212,11 +212,11 @@ members6 <- na.omit(members6)
 
 pal <-
   colorFactor(c("#339933", "steelblue", "#e68a00"),
-              domain = c("Editor", "Reviewer", "Member"))
+              domain = c("Leadership", "Reviewer", "Member"))
 
 getColor <- function(members6) {
   lapply(members6$role, function(role) {
-    if (role == "Editor") {
+    if (role == "Leadership") {
       "green"
     } else if (role == "Member") {
       "blue"
