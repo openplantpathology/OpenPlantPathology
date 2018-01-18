@@ -1,6 +1,6 @@
 ---
 title: "Open Plant Pathology - Member directory"
-output: 
+output:
   flexdashboard::flex_dashboard:
     theme: bootstrap
     logo: opp-logo.png
@@ -8,7 +8,7 @@ output:
     navbar:
       - { title: "<i class='fa fa-arrow-circle-left' aria-hidden='true'></i> Back to Open Plant Pathology", href: "http://openplantpathology.netlify.com", align: left }
       - { title: "<i class='fa fa-github' aria-hidden='true'></i> GitHub", href: "https://github.com/openplantpathology/OpenPlantPathology/tree/master/public/directory", align: left }
-    
+
 ---
 
 <link rel="stylesheet" href="fontawesome.min.css">
@@ -23,8 +23,6 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 # load existing member and location data
 load("./data/existing_members.Rds")
 load("./data/existing_locations.Rds")
-
-
 
 # read data from google sheets
 library(gsheet)
@@ -46,24 +44,41 @@ members6 <- members %>%
   replace_na(list(
     domain1 = "",
     domain2 = "",
-    middle_name = ""
+    middle_name = "",
+    homepage = "",
+    twitter = "",
+    github = "",
+    orcid = ""
   )) %>%
   unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
-  select(name, role, domain, institution, location, state, country)
+  select(
+    name,
+    role,
+    domain,
+    institution,
+    location,
+    state,
+    country,
+    homepage,
+    twitter,
+    github,
+    orcid
+  )
 
 # select new items to geocode
 new_members <- setdiff(members6, existing_members)
 
-# if there are new members, geocode them, else no reason to
+# if there are new members, geocode them, else don't try because it will choke
+# and this page won't render at all
 if (nrow(new_members) > 0) {
-  
+
   # geocode
   library(ggmap)
-  
+
   # use API for ggmap
   register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
-  
+
   # create a vector of locations to geocode
   update_locations <-
     paste(
@@ -73,9 +88,38 @@ if (nrow(new_members) > 0) {
       new_members$country,
       sep = ", "
     )
-  
-  # geocode locations using ggmap
+
+  # geocode locations using ggmap using all location vars
   new_locations <- geocode(update_locations)
+
+  # if there are NAs, try fallback and map only location, state, country, etc...
+  if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        new_members$location,
+        new_members$state,
+        new_members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  } else if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        new_members$state,
+        new_members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    na_locations$ID <-  seq.int(nrow(na_locations))
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  } else if (any(is.na(new_locations))) {
+    na_locations <-
+      paste(
+        new_members$country,
+        sep = ", ")
+    na_locations <- geocode(na_locations)
+    new_locations[is.na(new_locations)] <- na_locations[is.na(new_locations)]
+  }
+
   existing_members <- rbind(existing_members, new_members)
   existing_locations <- rbind(existing_locations, new_locations)
 }
@@ -96,19 +140,36 @@ Column {data-width=700px}
 
 ```{r echo=FALSE}
 
-
 # dynamic table using DT package
 
 library(DT)
 members66 <- members6 %>%
-  select(name, role, domain, institution, country)
+  select(name,
+         role,
+         domain,
+         institution,
+         country,
+         homepage,
+         twitter,
+         github,
+         orcid)
 # we do not need to show lat and long here
 
 datatable(
   members66,
   escape = FALSE,
   rownames = FALSE,
-  colnames = c("Name", "Role", "Domain(s)", "Institution", "Country"),
+  colnames = c(
+  "Name",
+  "Role",
+  "Domain(s)",
+  "Institution",
+  "Country",
+  "Homepage",
+  "Twitter",
+  "GitHub",
+  "orcid"
+  ),
   class = "cell-border stripe",
   options = list(
     order = list(list(0, "asc")),
@@ -120,9 +181,20 @@ datatable(
     fontSize = 12,
     lengthMenu = c(50, 100, 200)
   )
-) %>%
-  formatStyle(c("name", "role", "domain", "institution", "country"),
-              fontSize = "90%")
+  ) %>%
+  formatStyle(
+    c(
+      "name",
+      "role",
+      "domain",
+      "institution",
+      "country",
+      "homepage",
+      "twitter",
+      "github",
+      "orcid"
+    ),
+  fontSize = "90%")
 ```
 
 
@@ -175,7 +247,6 @@ map <- leaflet(members6) %>%
                   members6$domain, "<br>"),
     clusterOptions = markerClusterOptions(),
   ) %>%
-  
   addLegend(
     "bottomleft",
     pal = pal,
