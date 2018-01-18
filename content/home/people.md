@@ -31,7 +31,7 @@ filter_default = 0
 
 
 [[filter]]
-  name = "All Editors"
+  name = "All leadership"
   tag = "*"
   
 [[filter]]
@@ -53,6 +53,6 @@ filter_default = 0
 +++
 
 
-# Our Editorial Board
-Filter by domain knowledge
+# Leadership
+Filter by knowledge domain
 

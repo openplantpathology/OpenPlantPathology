@@ -263,7 +263,7 @@ defaultContentLanguageInSubdir = false
   weight = 4
 
 [[menu.main]]
-  name = "Editorial Board"
+  name = "Leadership"
   url = "#people"
   weight = 5
 
