@@ -148,11 +148,12 @@ members66 <- members6 %>%
          role,
          domain,
          institution,
-         country,
-         homepage,
-         twitter,
-         github,
-         orcid)
+         country
+         # homepage,
+         # twitter,
+         # github,
+         # orcid
+         )
 # we do not need to show lat and long here
 
 datatable(
@@ -164,11 +165,11 @@ datatable(
   "Role",
   "Domain(s)",
   "Institution",
-  "Country",
-  "Homepage",
-  "Twitter",
-  "GitHub",
-  "orcid"
+  "Country"
+  # "Homepage",
+  # "Twitter",
+  # "GitHub",
+  # "orcid"
   ),
   class = "cell-border stripe",
   options = list(
@@ -188,11 +189,11 @@ datatable(
       "role",
       "domain",
       "institution",
-      "country",
-      "homepage",
-      "twitter",
-      "github",
-      "orcid"
+      "country"
+      # "homepage",
+      # "twitter",
+      # "github",
+      # "orcid"
     ),
   fontSize = "90%")
 ```
