@@ -212,8 +212,8 @@ library(leaflet)
 members6 <- na.omit(members6)
 
 pal <-
-  colorFactor(c("#339933", "steelblue", "#e68a00"),
-              domain = c("Leadership", "Reviewer", "Member"))
+  colorFactor(c("#339933", "steelblue"),
+              domain = c("Leadership", "Member"))
 
 getColor <- function(members6) {
   lapply(members6$role, function(role) {
@@ -221,8 +221,6 @@ getColor <- function(members6) {
       "green"
     } else if (role == "Member") {
       "blue"
-    } else {
-      "orange"
     }
   })
 }
