@@ -243,7 +243,8 @@ map <- leaflet(members6) %>%
     label = paste(members6$name, "- click for details"),
     popup = paste("<b>", members6$name, "</b><br>",
                   members6$institution, "<br>",
-                  members6$domain, "<br>"),
+                  members6$location, ",", members6$country, "<br>",
+                  "Domain(s):", members6$domain, "<br>"),
     clusterOptions = markerClusterOptions(),
   ) %>%
   addLegend(
