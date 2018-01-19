@@ -1,5 +1,5 @@
 ---
-title: "Open Plant Pathology - Member directory"
+title: "Open Plant Pathology - Member Directory"
 output:
   flexdashboard::flex_dashboard:
     theme: bootstrap
