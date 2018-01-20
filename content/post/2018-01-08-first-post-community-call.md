@@ -10,7 +10,7 @@ A community call for plant epidemiologists, pathogen population biologists, mole
 """
 
 [header]
-image = ""
+image = "headers/opp-screen.png"
 caption = ""
 
 +++
