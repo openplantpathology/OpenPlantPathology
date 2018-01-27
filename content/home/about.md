@@ -1,5 +1,5 @@
 +++
-# About widget.
+# Custom widget.
 widget = "about"
 active = true
 date = "2018-01-20T00:00:00"
