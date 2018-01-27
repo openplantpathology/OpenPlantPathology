@@ -256,38 +256,37 @@ defaultContentLanguageInSubdir = false
   name = "Blog Posts"
   url = "#posts"
   weight = 3
-  
-[[menu.main]]
-  name = "About"
-  url = "#about"
-  weight = 4
 
 [[menu.main]]
   name = "Members"
   url = "#members"
-  weight = 5
+  weight = 4
 
 [[menu.main]]
   name = "Leadership"
   url = "#people"
-  weight = 6
+  weight = 5
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 7  
+  weight = 6
 
 [[menu.main]]
   name = "GitHub"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology"
-  weight = 8
-  
+  weight = 7
 
 [[menu.main]]
   name = "Twitter"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath"
+  weight = 8
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
   weight = 9
 
 # Taxonomies.
