@@ -8,7 +8,7 @@ title = "About"
 subtitle = "About Open Plant Pathology"
 
 # Order that this section will appear in.
-weight = 20
+weight = 60
 
 # Automatically link email and phone?
 autolink = true
