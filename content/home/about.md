@@ -15,32 +15,34 @@ autolink = true
 
 +++
 
-# Our Vision and Mission
+<h2>Our Vision and Mission</h2>
 
-OpenPlantPathology (OPP) fosters a culture that values open, transparent and
-reproducible research using shared data and reusable software.
+<p>OpenPlantPathology (OPP) fosters a culture that values open, transparent and
+reproducible research using shared data and reusable software.</p>
 
-We do this by:
+<p>We do this by:</p>
 
-- Creating technical **infrastructure** in the form of selecting well-
+<p>
+<ul>
+<li>Creating technical **infrastructure** in the form of selecting well-
 recognised leaders from computational plant pathology to help direct and
 engage the community, and create community-contributed open source software
 tools that provide scientific data sources and instructional materials for
-self-instruction or classroom settings.
+self-instruction or classroom settings.</li>
 
-- Creating social infrastructure through a welcoming and diverse **community**
-([openplantpathology.slack.com](https://openplantpathology.slack.com)).
+<li>Creating social infrastructure through a welcoming and diverse **community**
+([openplantpathology.slack.com](https://openplantpathology.slack.com)).</li>
 
-- Building **capacity** of computational plant pathologists and fostering a
-sense of pride in their work.
+<li>Building **capacity** of computational plant pathologists and fostering a
+sense of pride in their work.</li>
 
-- Promoting **advocacy** for a culture of data sharing, reusable software and
-instructional materials in the field of plant pathology.
+<li>Promoting **advocacy** for a culture of data sharing, reusable software and
+instructional materials in the field of plant pathology.</li>
+</ul>
+</p>
 
-OpenPlantPathology is a community founded in 2018 by Emerson Del Ponte and
+<p>OpenPlantPathology is a community founded in 2018 by Emerson Del Ponte and
 Adam Sparks to facilitate communication among computational plant pathologists
 and promote open science and reproducible research practices in plant
-pathology.
-
-
+pathology.</p>
 
