@@ -287,6 +287,12 @@ defaultContentLanguageInSubdir = false
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
   weight = 9
+  
+[[menu.main]]
+  name = "Slack"
+  pre = "<i class='fa fa-slack'></i>"
+  url = "https://openplantpathology.slack.com/"
+  weight = 10
 
 # Taxonomies.
 [taxonomies]
