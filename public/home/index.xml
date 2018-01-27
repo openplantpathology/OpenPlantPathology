@@ -96,7 +96,7 @@ CLICK HERE TO ACCESS THE DIRECTORY </description>
       <guid>https://www.openplantpathology.org/home/about/</guid>
       <description>Our Vision and Mission OpenPlantPathology (OPP) fosters a culture that values open, transparent and reproducible research using shared data and reusable software.
 We do this by:
-  Creating technical infrastructure in the form of selecting well-recognised leaders from computational plant pathology to help direct and engage the community, and create community-contributed open source software tools that provide scientific data sources and instructional materials for self-instruction or classroom settings. Creating social infrastructure through a welcoming and diverse community (https://openplantpathology.</description>
+ Creating technical infrastructure in the form of selecting well-recognised leaders from computational plant pathology to help direct and engage the community, and create community-contributed open source software tools that provide scientific data sources and instructional materials for self-instruction or classroom settings. Creating social infrastructure through a welcoming and diverse community (https://openplantpathology.</description>
     </item>
     
     <item>
@@ -117,19 +117,6 @@ I am a teaching instructor for the following courses at University X:
       
       <guid>https://www.openplantpathology.org/home/tags/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Contact Us</title>
-      <link>https://www.openplantpathology.org/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.openplantpathology.org/home/contact/</guid>
-      <description>  openplantpathology@gmail.com
- Email-us to join our Slack workspace
- Follow us!
- See what we&amp;rsquo;re up to!
- </description>
     </item>
     
   </channel>
