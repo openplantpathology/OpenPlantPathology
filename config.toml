@@ -274,6 +274,12 @@ defaultContentLanguageInSubdir = false
   weight = 7
 
 [[menu.main]]
+  name = "Twitter"
+  pre = "<i class='fa fa-twitter-square'></i>"
+  url = "https://twitter.com/OpenPlantPath/"
+  weight = 8
+
+[[menu.main]]
   name = "About"
   url = "#about"
   weight = 9
