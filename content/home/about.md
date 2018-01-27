@@ -24,20 +24,21 @@ reproducible research using shared data and reusable software.</p>
 
 <p>
 <ul>
-<li>Creating technical **infrastructure** in the form of selecting well-
-recognised leaders from computational plant pathology to help direct and
+<li>Creating technical <strong>infrastructure</strong> in the form of selecting
+well-recognised leaders from computational plant pathology to help direct and
 engage the community, and create community-contributed open source software
 tools that provide scientific data sources and instructional materials for
 self-instruction or classroom settings.</li>
 
-<li>Creating social infrastructure through a welcoming and diverse **community**
-([openplantpathology.slack.com](https://openplantpathology.slack.com)).</li>
+<li>Creating social infrastructure through a welcoming and diverse
+<strong>community</strong>
+(<a href = https://openplantpathology.slack.com">https://openplantpathology.slack.com</a>).</li>
 
-<li>Building **capacity** of computational plant pathologists and fostering a
-sense of pride in their work.</li>
+<li>Building <strong>capacity</strong> of computational plant pathologists and
+fostering a sense of pride in their work.</li>
 
-<li>Promoting **advocacy** for a culture of data sharing, reusable software and
-instructional materials in the field of plant pathology.</li>
+<li>Promoting <strong>advocacy</strong> for a culture of data sharing, reusable
+software and instructional materials in the field of plant pathology.</li>
 </ul>
 </p>
 

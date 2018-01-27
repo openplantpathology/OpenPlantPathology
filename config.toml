@@ -231,7 +231,11 @@ defaultContentLanguageInSubdir = false
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/openplantpathology"
-
+    
+  [[params.social]]
+    icon = "slack"
+    icon_pack = "fa"
+    link = "//openplantpathology.slack.com"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -264,24 +268,24 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Contact"
-  url = "#contact"
+  url = "#about"
   weight = 6
+  
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 7
 
 [[menu.main]]
   name = "GitHub"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
-  weight = 7
+  weight = 8
 
 [[menu.main]]
   name = "Twitter"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
-  weight = 8
-
-[[menu.main]]
-  name = "About"
-  url = "#about"
   weight = 9
 
 # Taxonomies.
