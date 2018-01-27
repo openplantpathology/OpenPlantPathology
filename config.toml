@@ -62,7 +62,7 @@ defaultContentLanguageInSubdir = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = ""  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = ""
+  email = "openplantpathology@gmail.com"
   address = ""
   office_hours = ""
   phone = ""
@@ -256,40 +256,39 @@ defaultContentLanguageInSubdir = false
   name = "Blog Posts"
   url = "#posts"
   weight = 3
+  
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 4
 
 [[menu.main]]
   name = "Members"
   url = "#members"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Leadership"
   url = "#people"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6  
+  weight = 7  
 
 [[menu.main]]
   name = "GitHub"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology"
-  weight = 7
+  weight = 8
   
 
 [[menu.main]]
   name = "Twitter"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath"
-  weight = 8  
-
-
-
-
-
-
+  weight = 9
 
 # Taxonomies.
 [taxonomies]
