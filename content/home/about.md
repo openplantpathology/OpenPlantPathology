@@ -1,5 +1,5 @@
 +++
-# About widget.
+# Custom widget.
 widget = "about"
 active = true
 date = "2018-01-20T00:00:00"
@@ -15,32 +15,36 @@ autolink = true
 
 +++
 
-# Our Vision and Mission
+<h2>Our Vision and Mission</h2>
 
-OpenPlantPathology (OPP) fosters a culture that values open, transparent and
-reproducible research using shared data and reusable software.
+<p>OpenPlantPathology (OPP) fosters a culture that values open, transparent and
+reproducible research using shared data and reusable software.</p>
 
-We do this by:
+<p>We do this by:</p>
 
-- Creating technical **infrastructure** in the form of selecting well-
-recognised leaders from computational plant pathology to help direct and
+
+<ul>
+<li><p>Creating technical <strong>infrastructure</strong> in the form of selecting
+well-recognised leaders from computational plant pathology to help direct and
 engage the community, and create community-contributed open source software
 tools that provide scientific data sources and instructional materials for
-self-instruction or classroom settings.
+self-instruction or classroom settings.></p</li>
 
-- Creating social infrastructure through a welcoming and diverse **community**
-([openplantpathology.slack.com](https://openplantpathology.slack.com)).
+<li><p>Creating social infrastructure through a welcoming and diverse
+<strong>community</strong>
+(<a href = https://openplantpathology.slack.com">https://openplantpathology.slack.com</a>).
+Drop us an <a href = "mailto:openplantpathology@gmail.com" subject= "Interested
+to join your Slack Workgroup">e-mail</a> if you are interested to join our
+workgroup.</p></li>
 
-- Building **capacity** of computational plant pathologists and fostering a
-sense of pride in their work.
+<li><p>Building <strong>capacity</strong> of computational plant pathologists and
+fostering a sense of pride in their work.</p></li>
 
-- Promoting **advocacy** for a culture of data sharing, reusable software and
-instructional materials in the field of plant pathology.
+<li><p>Promoting <strong>advocacy</strong> for a culture of data sharing, reusable
+software and instructional materials in the field of plant pathology.</p></li>
+</ul>
 
-OpenPlantPathology is a community founded in 2018 by Emerson Del Ponte and
+<p>OpenPlantPathology is a community founded in 2018 by Emerson Del Ponte and
 Adam Sparks to facilitate communication among computational plant pathologists
 and promote open science and reproducible research practices in plant
-pathology.
-
-
-
+pathology.</p>
