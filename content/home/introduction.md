@@ -48,9 +48,8 @@ software tools that provide scientific data sources and instructional materials
 for self-instruction or classroom settings.></p</li>
 
 <li><p>Creating social infrastructure through a welcoming and diverse
-<strong>community</strong>
-(<a href = https://openplantpathology.slack.com">
-https://openplantpathology.slack.com</a>).
+<strong>community</strong> 
+<a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathlogy Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">https://openplantpathology.slack.com</a>.
 Drop us an <a href = "mailto:openplantpathology@gmail.com" subject= "Interested
 to join your Slack Workgroup">e-mail</a> if you are interested to join our
 workgroup.</p></li>
