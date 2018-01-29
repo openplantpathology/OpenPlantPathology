@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Open Plant Pathology</title>
-    <link>https://www.openplantpathology.org/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Open Plant Pathology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1000</lastBuildDate>
     
-	<atom:link href="https://www.openplantpathology.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
-      <link>https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/</link>
+      <link>/post/2018-01-08-first-post-community-call/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/</guid>
+      <guid>/post/2018-01-08-first-post-community-call/</guid>
       <description>Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.
 This group felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago. Since then plant epidemiologists/pathologists have met around the world to network, brainstorm and learn from each other to advance the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.</description>
     </item>

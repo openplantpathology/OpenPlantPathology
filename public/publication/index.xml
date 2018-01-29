@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Open Plant Pathology</title>
-    <link>https://www.openplantpathology.org/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Open Plant Pathology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.openplantpathology.org/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>https://www.openplantpathology.org/publication/person-re-identification/</link>
+      <link>/publication/person-re-identification/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/publication/person-re-identification/</guid>
+      <guid>/publication/person-re-identification/</guid>
       <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
     </item>
     
     <item>
       <title>Mobile visual clothing search</title>
-      <link>https://www.openplantpathology.org/publication/clothing-search/</link>
+      <link>/publication/clothing-search/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/publication/clothing-search/</guid>
+      <guid>/publication/clothing-search/</guid>
       <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
     </item>
     
