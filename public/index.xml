@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Plant Pathology on Open Plant Pathology</title>
-    <link>https://www.openplantpathology.org/</link>
+    <link>/</link>
     <description>Recent content in Open Plant Pathology on Open Plant Pathology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,64 +12,64 @@
     
     <item>
       <title>Emerson Del Ponte</title>
-      <link>https://www.openplantpathology.org/people/delponte/</link>
+      <link>/people/delponte/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/delponte/</guid>
+      <guid>/people/delponte/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Neil McRoberts</title>
-      <link>https://www.openplantpathology.org/people/mcroberts/</link>
+      <link>/people/mcroberts/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/mcroberts/</guid>
+      <guid>/people/mcroberts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nik Cunniffe</title>
-      <link>https://www.openplantpathology.org/people/cunniffe/</link>
+      <link>/people/cunniffe/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/cunniffe/</guid>
+      <guid>/people/cunniffe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paul Esker</title>
-      <link>https://www.openplantpathology.org/people/esker/</link>
+      <link>/people/esker/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/esker/</guid>
+      <guid>/people/esker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sydney Everhart</title>
-      <link>https://www.openplantpathology.org/people/everhart/</link>
+      <link>/people/everhart/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/everhart/</guid>
+      <guid>/people/everhart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nik Grunwald</title>
-      <link>https://www.openplantpathology.org/people/grunwald/</link>
+      <link>/people/grunwald/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/grunwald/</guid>
+      <guid>/people/grunwald/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
-      <link>https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/</link>
+      <link>/post/2018-01-08-first-post-community-call/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/</guid>
+      <guid>/post/2018-01-08-first-post-community-call/</guid>
       <description>&lt;p&gt;Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.&lt;/p&gt;
 
 &lt;p&gt;This group felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago. Since then plant epidemiologists/pathologists have met around the world to network, brainstorm and learn from each other to advance  the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.&lt;/p&gt;
@@ -126,39 +126,39 @@ Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
     
     <item>
       <title>Example Talk</title>
-      <link>https://www.openplantpathology.org/talk/example-talk/</link>
+      <link>/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1000</pubDate>
       
-      <guid>https://www.openplantpathology.org/talk/example-talk/</guid>
+      <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Adam Sparks</title>
-      <link>https://www.openplantpathology.org/people/sparks/</link>
+      <link>/people/sparks/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/people/sparks/</guid>
+      <guid>/people/sparks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>https://www.openplantpathology.org/publication/person-re-identification/</link>
+      <link>/publication/person-re-identification/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/publication/person-re-identification/</guid>
+      <guid>/publication/person-re-identification/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Mobile visual clothing search</title>
-      <link>https://www.openplantpathology.org/publication/clothing-search/</link>
+      <link>/publication/clothing-search/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.openplantpathology.org/publication/clothing-search/</guid>
+      <guid>/publication/clothing-search/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
