@@ -15,9 +15,13 @@ autolink = true
 
 +++
 
-<i class="fa fa-2x fa-slack"></i> <a href = "mailto:openplantpathology@gmail.com"
-subject = "I'd like to join your Slack workspace"> Email us to join our Slack workspace!</a>
+<i class="fa fa-2x fa-slack" style = "margin:0 15px 5px 0;"></i>
+<a href = "mailto:openplantpathology@gmail.com"
+subject = "I'd like to join your Slack workspace"> Email us to join our Slack
+workspace!</a>
 
-<i class="fa fa-2x fa-twitter-square"></i> [ Follow us!](https://twitter.com/OpenPlantPath)  
+<i class="fa fa-2x fa-twitter-square" style = "margin:0 15px 5px 0"></i>
+[Follow us!](https://twitter.com/OpenPlantPath)  
 
-<i class="fa fa-2x fa-github"></i> [ See what we're up to!](https://github.com/openplantpathology)  
+<i class="fa fa-2x fa-github" style = "margin:0 15px 5px 0"></i>
+[See what we're up to!](https://github.com/openplantpathology)  
