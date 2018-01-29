@@ -49,7 +49,7 @@ for self-instruction or classroom settings.></p</li>
 
 <li><p>Creating social infrastructure through a welcoming and diverse
 <strong>community</strong> 
-<a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathlogy Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">openplantpathology.slack.com</a>.
+(<a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathlogy Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">openplantpathology.slack.com</a>).
 Drop us an <a href = "mailto:openplantpathology@gmail.com" subject= "Interested
 to join your Slack Workgroup">e-mail</a> if you are interested to join our
 workgroup.</p></li>
