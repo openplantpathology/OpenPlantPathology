@@ -1,0 +1,23 @@
++++
+# Contact widget.
+widget = "contact"
+active = true
+date = "2016-04-20T00:00:00"
+
+title = "Contact Us"
+subtitle = "You can reach us by several means"
+
+# Order that this section will appear in.
+weight = 70
+
+# Automatically link email and phone?
+autolink = true
+
++++
+
+<i class="fa fa-2x fa-slack"></i> <a href = "mailto:openplantpathology@gmail.com"
+subject = "I'd like to join your Slack workspace"> Email us to join our Slack workspace!</a>
+
+<i class="fa fa-2x fa-twitter-square"></i> [ Follow us!](https://twitter.com/OpenPlantPath)  
+
+<i class="fa fa-2x fa-github"></i> [ See what we're up to!](https://github.com/openplantpathology)  

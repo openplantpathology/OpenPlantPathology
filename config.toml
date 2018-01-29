@@ -22,8 +22,6 @@ paginate = 10
 # Enable comments by entering your Disqus shortname
 disqusShortname = "openplantpathology"
 
-
-
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-112255011-1"
 
@@ -61,7 +59,7 @@ defaultContentLanguageInSubdir = false
   organizations = [ { name = "", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = ""  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "opp-logo.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "openplantpathology@gmail.com"
   address = ""
   office_hours = ""
@@ -217,25 +215,25 @@ defaultContentLanguageInSubdir = false
   #
   #   Full list: https://jpswalsh.github.io/academicons/
 
-#  [[params.social]]
-#    icon = "envelope"
-#    icon_pack = "fa"
-#    link = "mailto:openplantpathology@gmail.com"
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "mailto:openplantpathology@gmail.com"
 
-#  [[params.social]]
-#    icon = "twitter"
-#    icon_pack = "fa"
-#    link = "//twitter.com/OpenPlantPath"
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/OpenPlantPath"
 
-#  [[params.social]]
-#    icon = "github"
-#    icon_pack = "fa"
-#    link = "//github.com/openplantpathology"
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/openplantpathology"
 
-#  [[params.social]]
-#    icon = "slack"
-#    icon_pack = "fa"
-#    link = "//openplantpathology.slack.com"
+  [[params.social]]
+    icon = "slack"
+    icon_pack = "fa"
+    link = "//openplantpathology.slack.com"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -267,7 +265,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Contact"
-  url = "#about"
+  url = "#contact"
   weight = 5
 
 [[menu.main]]
