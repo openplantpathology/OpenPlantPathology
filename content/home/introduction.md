@@ -45,7 +45,7 @@ reproducible research using shared data and reusable software.</p>
 selecting well-recognised leaders from computational plant pathology to help
 direct and engage the community, and create community-contributed open source
 software tools that provide scientific data sources and instructional materials
-for self-instruction or classroom settings.></p</li>
+for self-instruction or classroom settings.</p></li>
 
 <li><p>Creating social infrastructure through a welcoming and diverse
 <strong>community</strong> 
