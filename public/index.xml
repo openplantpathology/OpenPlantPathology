@@ -7,8 +7,369 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Oct 2017 23:00:00 -0300</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fitting Linear and Quadratic Models of Nematode Population Responses to time and Temperature</title>
+      <link>/post/linear-models-nematode-time-temperature-response/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/linear-models-nematode-time-temperature-response/</guid>
+      <description>&lt;section id=&#34;introduction&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Pratylenchus thornei&lt;/em&gt;, the root-lesion nematode is widely distributed in wheat (&lt;em&gt;Triticum aestivum&lt;/em&gt;) growing areas of many countries and is of particular concern in sub-tropical environments (Thompson 2015). These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress (Thompson 2015).&lt;/p&gt;
+&lt;p&gt;In the original paper the population of &lt;em&gt;P. thornei&lt;/em&gt; in wheat in Queensland, Australia is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of &lt;em&gt;P. thornei&lt;/em&gt; as described in &lt;em&gt;Modelling population densities of root-lesion nematode&lt;/em&gt; (P. thornei) &lt;em&gt;from soil profile temperatures to choose an optimum sowing date for wheat&lt;/em&gt; (Thompson 2015).&lt;/p&gt;
+&lt;p&gt;There are two types of models described in the paper, the first model is a linear model used to describe the unplanted control and two quadratic models fit Gatcher (Susceptible) and GS50a (Moderately Resistant) wheat cultivars.&lt;/p&gt;
+&lt;section id=&#34;session-setup&#34; class=&#34;level2&#34;&gt;
+&lt;h2&gt;Session Setup&lt;/h2&gt;
+&lt;p&gt;Using the &lt;em&gt;tidyverse&lt;/em&gt; package simplifies the libraries. It loads, &lt;em&gt;readr&lt;/em&gt;, used to import the data, &lt;em&gt;tidyr&lt;/em&gt; used to format the data and &lt;em&gt;ggplot2&lt;/em&gt; used for visualising the data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We will use the &lt;code&gt;set.seed&lt;/code&gt; function for reproducibility.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(52)&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id=&#34;data-import-and-inspection&#34; class=&#34;level2&#34;&gt;
+&lt;h2&gt;Data Import and Inspection&lt;/h2&gt;
+&lt;p&gt;Import the data using &lt;code&gt;read.csv&lt;/code&gt; from &lt;em&gt;readr&lt;/em&gt;, which is a part of the &lt;em&gt;tidyverse&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nema &amp;lt;- read_csv(&amp;quot;data/Degree Days Relationships.csv&amp;quot;)
+
+nema&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 36 x 9
+##    Weeks  Days Temperature Degree_days Unplanted Gatcher GS50a  Potam
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;       &amp;lt;dbl&amp;gt;       &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1     8    56        15.0         280     5.748   6.773 6.691  7.613
+##  2     8    56        20.0         560     5.915   9.513 7.420  9.285
+##  3     8    56        22.5         700     6.381   9.956 8.214  9.024
+##  4     8    56        25.0         840     6.510   9.354 8.254  9.732
+##  5     8    56        27.5         980     6.056   8.196 8.003  8.822
+##  6     8    56        30.0        1120     6.326   6.515 6.757  6.957
+##  7    10    70        15.0         350     5.847   7.435 6.043  5.972
+##  8    10    70        20.0         700     6.157  10.338 8.915 10.284
+##  9    10    70        22.5         875     6.191  10.423 9.183 10.691
+## 10    10    70        25.0        1050     6.364  10.580 9.045 10.487
+## # ... with 26 more rows, and 1 more variables: Suneca &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see that each of the varieties have their own column in the original data format (wide). Using &lt;code&gt;gather()&lt;/code&gt; from the &lt;em&gt;tidyr&lt;/em&gt; package (part of the &lt;em&gt;tidyverse&lt;/em&gt;), convert from to long format where the varieties are all listed in a single column, “Variety”. The &lt;code&gt;data&lt;/code&gt; paramter tells R which data frame to gather. The &lt;code&gt;key&lt;/code&gt; parameter is the name of the new column to be created called “Variety”, &lt;code&gt;value&lt;/code&gt; specifies the column that will contain the values that go with the varieties, “Population”. The last portion tells &lt;code&gt;gather()&lt;/code&gt; which columns are to be gathered. Using the “:” means take the columns from “Unplanted” to “Suneca” and gather them without needing to type all the column names.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nema_long &amp;lt;-
+  gather(data = nema,
+         key = Variety,
+         value = Population,
+         Unplanted:Suneca)
+
+nema_long&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 180 x 6
+##    Weeks  Days Temperature Degree_days   Variety Population
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;       &amp;lt;dbl&amp;gt;       &amp;lt;int&amp;gt;     &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1     8    56        15.0         280 Unplanted      5.748
+##  2     8    56        20.0         560 Unplanted      5.915
+##  3     8    56        22.5         700 Unplanted      6.381
+##  4     8    56        25.0         840 Unplanted      6.510
+##  5     8    56        27.5         980 Unplanted      6.056
+##  6     8    56        30.0        1120 Unplanted      6.326
+##  7    10    70        15.0         350 Unplanted      5.847
+##  8    10    70        20.0         700 Unplanted      6.157
+##  9    10    70        22.5         875 Unplanted      6.191
+## 10    10    70        25.0        1050 Unplanted      6.364
+## # ... with 170 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that the data are in the format that &lt;em&gt;ggplot2&lt;/em&gt; prefers, take a look at the data first to see what it looks like. Fit a smoothed line for each Variety to the raw data. The individual temperatures are shown here by shape, the variety by colour.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(
+  nema_long,
+  aes(
+    x = Degree_days,
+    y = Population,
+    colour = Variety,
+    group = Variety
+  )
+) +
+  geom_point(aes(shape = as.factor(Temperature))) +
+  geom_smooth() +
+  ylab(expression(paste(&amp;quot;ln(&amp;quot;,
+                        italic(&amp;quot;P. thornei&amp;quot;),
+                        &amp;quot;/kg soil) + 1&amp;quot;),
+                  sep = &amp;quot;&amp;quot;)) +
+  xlab(&amp;quot;Thermal Time (˚C Days Above 10˚C)&amp;quot;) +
+  theme_minimal() +
+  scale_shape_discrete(&amp;quot;Temperature&amp;quot;) +
+  theme(axis.text.x  = element_text(angle = 90,
+                                    vjust = 0.5))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/raw_data_scatterplots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id=&#34;model-fitting&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Model Fitting&lt;/h1&gt;
+&lt;section id=&#34;unplanted-model&#34; class=&#34;level2&#34;&gt;
+&lt;h2&gt;Unplanted Model&lt;/h2&gt;
+&lt;p&gt;The paper uses a linear model for the unplanted control. Here write a function to use in modelling the unplanted population data.&lt;/p&gt;
+&lt;section id=&#34;linear-model&#34; class=&#34;level3&#34;&gt;
+&lt;h3&gt;Linear Model&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;linear_model &amp;lt;- function(df) {
+  lm(Population ~ Degree_days,
+     data = df)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now check the model fit, using &lt;code&gt;filter()&lt;/code&gt; from &lt;em&gt;dplyr&lt;/em&gt; to select only Unplanted data from the data set for the model and fit the linear model to the data.&lt;/p&gt;
+&lt;p&gt;Lastly we can show the unplanted data alone as a scatterplot with the model line fitted using &lt;code&gt;geom_smooth()&lt;/code&gt; from &lt;em&gt;ggplot2&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unplanted_model &amp;lt;- nema_long %&amp;gt;%
+  filter(Variety == &amp;quot;Unplanted&amp;quot;) %&amp;gt;%
+  linear_model()
+
+par(mfrow = c(2, 2))
+plot(unplanted_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/check_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(unplanted_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Population ~ Degree_days, data = df)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -0.8955 -0.2629 -0.1162  0.2622  0.9889 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) 5.6508299  0.1878225  30.086  &amp;lt; 2e-16 ***
+## Degree_days 0.0009147  0.0001404   6.514 1.87e-07 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.4742 on 34 degrees of freedom
+## Multiple R-squared:  0.5551, Adjusted R-squared:  0.542 
+## F-statistic: 42.43 on 1 and 34 DF,  p-value: 1.869e-07&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nema_long %&amp;gt;%
+  group_by(Variety) %&amp;gt;%
+  filter(Variety == &amp;quot;Unplanted&amp;quot;) %&amp;gt;%
+  ggplot(aes(
+    x = Degree_days,
+    y = Population,
+    colour = Variety,
+    group = Variety
+  )) +
+  geom_point(aes(shape = as.factor(Temperature))) +
+  geom_smooth(method = &amp;quot;lm&amp;quot;,
+              formula = y ~ x,
+              size = 1) +
+  ylab(expression(paste(&amp;quot;ln(&amp;quot;,
+                        italic(&amp;quot;P. thornei&amp;quot;),
+                        &amp;quot;/kg soil) + 1&amp;quot;),
+                  sep = &amp;quot;&amp;quot;)) +
+  xlab(&amp;quot;Thermal Time (˚C Days Above 10˚C)&amp;quot;) +
+  theme_minimal() +
+  scale_shape_discrete(&amp;quot;Temperature&amp;quot;) +
+  scale_colour_discrete(&amp;quot;Variety&amp;quot;) +
+  theme(axis.text.x  = element_text(angle = 90,
+                                    vjust = 0.5)) +
+  ggtitle(&amp;quot;Unplanted Linear Model&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/check_model-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id=&#34;quadratic-models&#34; class=&#34;level2&#34;&gt;
+&lt;h2&gt;Quadratic Models&lt;/h2&gt;
+&lt;p&gt;In the original paper, Gatcher and GS50a best fit quadratic models, which are fit here.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quadratic_model &amp;lt;- function(df) {
+  lm(Population ~ Degree_days + I(Degree_days^2),
+      data = df)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;section id=&#34;susceptible-varieties&#34; class=&#34;level3&#34;&gt;
+&lt;h3&gt;Susceptible Varieties&lt;/h3&gt;
+&lt;p&gt;Gatcher, Potam and Suneca all have very similar curves, here Gatcher is used to fit a quadratic model as in the original paper following the same methods as above for the linear model.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;s_model &amp;lt;- nema_long %&amp;gt;%
+  filter(Variety == &amp;quot;Gatcher&amp;quot;) %&amp;gt;% 
+  quadratic_model()
+
+par(mfrow = c(2, 2))
+plot(s_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/susceptible_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(s_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Population ~ Degree_days + I(Degree_days^2), data = df)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.6400 -1.1890  0.4089  1.3579  2.1952 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       6.315e+00  1.484e+00   4.256 0.000162 ***
+## Degree_days       7.218e-03  2.450e-03   2.947 0.005854 ** 
+## I(Degree_days^2) -2.587e-06  9.056e-07  -2.856 0.007357 ** 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 1.94 on 33 degrees of freedom
+## Multiple R-squared:  0.2083, Adjusted R-squared:  0.1604 
+## F-statistic: 4.342 on 2 and 33 DF,  p-value: 0.02118&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nema_long %&amp;gt;%
+  group_by(Variety) %&amp;gt;%
+  filter(Variety == &amp;quot;Gatcher&amp;quot;) %&amp;gt;%
+  ggplot(aes(
+    x = Degree_days,
+    y = Population,
+    colour = Variety,
+    group = Variety
+  )) +
+  geom_point(aes(shape = as.factor(Temperature))) +
+  geom_smooth(method = &amp;quot;lm&amp;quot;,
+              formula = y ~ x + I(x^2),
+              size = 1) +
+  ylab(expression(paste(&amp;quot;ln(&amp;quot;,
+                        italic(&amp;quot;P. thornei&amp;quot;),
+                        &amp;quot;/kg soil) + 1&amp;quot;),
+                  sep = &amp;quot;&amp;quot;)) +
+  xlab(&amp;quot;Thermal Time (˚C Days Above 10˚C)&amp;quot;) +
+  theme_minimal() +
+  scale_shape_discrete(&amp;quot;Temperature&amp;quot;) +
+  scale_colour_discrete(&amp;quot;Variety&amp;quot;) +
+  theme(axis.text.x  = element_text(angle = 90,
+                                    vjust = 0.5)) +
+  ggtitle(&amp;quot;Gatcher Quadratic Model&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/susceptible_model-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id=&#34;moderately-resistant-cultiver&#34; class=&#34;level3&#34;&gt;
+&lt;h3&gt;Moderately Resistant Cultiver&lt;/h3&gt;
+&lt;p&gt;GS50a, moderately resistant to &lt;em&gt;P. thornei&lt;/em&gt; also fit a quadratic model but the coefficients were slightly different due to different responses to the variety and temperature.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mr_model &amp;lt;- nema_long %&amp;gt;%
+  filter(Variety == &amp;quot;GS50a&amp;quot;) %&amp;gt;%
+  quadratic_model()
+
+par(mfrow = c(2, 2))
+plot(mr_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/moderately_resistant_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(mr_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Population ~ Degree_days + I(Degree_days^2), data = df)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.7265 -0.6842  0.3433  0.9217  2.0028 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       5.492e+00  1.050e+00   5.231 9.33e-06 ***
+## Degree_days       5.689e-03  1.733e-03   3.282  0.00244 ** 
+## I(Degree_days^2) -1.854e-06  6.407e-07  -2.894  0.00669 ** 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 1.373 on 33 degrees of freedom
+## Multiple R-squared:  0.2726, Adjusted R-squared:  0.2285 
+## F-statistic: 6.184 on 2 and 33 DF,  p-value: 0.005238&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nema_long %&amp;gt;%
+  group_by(Variety) %&amp;gt;%
+  filter(Variety == &amp;quot;GS50a&amp;quot;) %&amp;gt;%
+  ggplot(aes(
+    x = Degree_days,
+    y = Population,
+    colour = Variety,
+    group = Variety
+  )) +
+  geom_point(aes(shape = as.factor(Temperature))) +
+  geom_smooth(method = &amp;quot;lm&amp;quot;,
+              formula = y ~ x + I(x^2),
+              size = 1) +
+  ylab(expression(paste(&amp;quot;ln(&amp;quot;,
+                        italic(&amp;quot;P. thornei&amp;quot;),
+                        &amp;quot;/kg soil) + 1&amp;quot;),
+                  sep = &amp;quot;&amp;quot;)) +
+  xlab(&amp;quot;Thermal Time (˚C Days Above 10˚C)&amp;quot;) +
+  theme_minimal() +
+  scale_shape_discrete(&amp;quot;Temperature&amp;quot;) +
+  scale_colour_discrete(&amp;quot;Variety&amp;quot;) +
+  theme(axis.text.x  = element_text(angle = 90,
+                                    vjust = 0.5)) +
+  ggtitle(&amp;quot;GS50a Quadratic Model&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/linear-models-nematode-time-temp-response_files/figure-html/moderately_resistant_model-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As in the original paper, the model equations can be derived from these models as well.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id=&#34;reproducibility&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Reproducibility&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;## Session info -------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  C                           
+##  tz       America/Sao_Paulo           
+##  date     2018-01-29&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages -----------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package    * version    date       source                           
+##  assertthat   0.2.0      2017-04-11 CRAN (R 3.4.0)                   
+##  backports    1.1.1      2017-09-25 CRAN (R 3.4.2)                   
+##  base       * 3.4.3      2017-12-07 local                            
+##  bindr        0.1        2016-11-13 CRAN (R 3.4.0)                   
+##  bindrcpp   * 0.2        2017-06-17 CRAN (R 3.4.0)                   
+##  blogdown     0.4        2017-12-22 Github (rstudio/blogdown@e4c6ed9)
+##  bookdown     0.5        2017-08-20 cran (@0.5)                      
+##  broom        0.4.3      2017-11-20 CRAN (R 3.4.2)                   
+##  cellranger   1.1.0      2016-07-27 CRAN (R 3.4.0)                   
+##  cli          1.0.0      2017-11-05 CRAN (R 3.4.2)                   
+##  colorspace   1.3-2      2016-12-14 CRAN (R 3.4.0)                   
+##  compiler     3.4.3      2017-12-07 local                            
+##  crayon       1.3.4      2017-09-16 CRAN (R 3.4.1)                   
+##  datasets   * 3.4.3      2017-12-07 local                            
+##  devtools     1.13.4     2017-11-09 CRAN (R 3.4.2)                   
+##  digest       0.6.14     2018-01-14 cran (@0.6.14)                   
+##  dplyr      * 0.7.4      2017-09-28 CRAN (R 3.4.2)                   
+##  evaluate     0.10.1     2017-06-24 CRAN (R 3.4.1)                   
+##  forcats    * 0.2.0      2017-01-23 CRAN (R 3.4.0)                   
+##  foreign      0.8-69     2017-06-22 CRAN (R 3.4.3)                   
+##  ggplot2    * 2.2.1.9000 2018-01-14 Github (hadley/ggplot2@bf9255e)  
+##  glue         1.2.0      2017-10-29 CRAN (R 3.4.2)                   
+##  graphics   * 3.4.3      2017-12-07 local                            
+##  grDevices  * 3.4.3      2017-12-07 local                            
+##  grid         3.4.3      2017-12-07 local                            
+##  gtable       0.2.0      2016-02-26 CRAN (R 3.4.0)                   
+##  haven        1.1.0      2017-07-09 CRAN (R 3.4.1)                   
+##  hms          0.4.0      2017-11-23 CRAN (R 3.4.3)                   
+##  htmltools    0.3.6      2017-04-28 CRAN (R 3.4.0)                   
+##  httr         1.3.1      2017-08-20 CRAN (R 3.4.1)                   
+##  jsonlite     1.5        2017-06-01 CRAN (R 3.4.0)                   
+##  knitr        1.18       2017-12-27 CRAN (R 3.4.3)                   
+##  labeling     0.3        2014-08-23 CRAN (R 3.4.0)                   
+##  lattice      0.20-35    2017-03-25 CRAN (R 3.4.3)                   
+##  lazyeval     0.2.1      2017-10-29 CRAN (R 3.4.2)                   
+##  lubridate    1.7.1      2017-11-03 CRAN (R 3.4.2)                   
+##  magrittr     1.5        2014-11-22 CRAN (R 3.4.0)                   
+##  memoise      1.1.0      2017-04-21 CRAN (R 3.4.0)                   
+##  methods    * 3.4.3      2017-12-07 local                            
+##  mnormt       1.5-5      2016-10-15 CRAN (R 3.4.0)                   
+##  modelr       0.1.1      2017-07-24 CRAN (R 3.4.1)                   
+##  munsell      0.4.3      2016-02-13 CRAN (R 3.4.0)                   
+##  nlme         3.1-131    2017-02-06 CRAN (R 3.4.3)                   
+##  parallel     3.4.3      2017-12-07 local                            
+##  pkgconfig    2.0.1      2017-03-21 CRAN (R 3.4.0)                   
+##  plyr         1.8.4      2016-06-08 CRAN (R 3.4.0)                   
+##  psych        1.7.8      2017-09-09 CRAN (R 3.4.2)                   
+##  purrr      * 0.2.4      2017-10-18 CRAN (R 3.4.2)                   
+##  R6           2.2.2      2017-06-17 CRAN (R 3.4.0)                   
+##  Rcpp         0.12.14    2017-11-23 CRAN (R 3.4.3)                   
+##  readr      * 1.1.1      2017-05-16 CRAN (R 3.4.0)                   
+##  readxl       1.0.0      2017-04-18 CRAN (R 3.4.0)                   
+##  reshape2     1.4.3      2017-12-11 cran (@1.4.3)                    
+##  rlang        0.1.6.9003 2018-01-14 Github (tidyverse/rlang@6a4365b) 
+##  rmarkdown    1.8        2017-11-17 CRAN (R 3.4.2)                   
+##  rprojroot    1.2        2017-01-16 CRAN (R 3.4.0)                   
+##  rstudioapi   0.7        2017-09-07 CRAN (R 3.4.1)                   
+##  rvest        0.3.2      2016-06-17 CRAN (R 3.4.0)                   
+##  scales       0.5.0.9000 2018-01-14 Github (hadley/scales@d767915)   
+##  stats      * 3.4.3      2017-12-07 local                            
+##  stringi      1.1.6      2017-11-17 CRAN (R 3.4.2)                   
+##  stringr    * 1.2.0      2017-02-18 CRAN (R 3.4.0)                   
+##  tibble     * 1.3.4      2017-08-22 CRAN (R 3.4.1)                   
+##  tidyr      * 0.7.2      2017-10-16 CRAN (R 3.4.2)                   
+##  tidyselect   0.2.3      2017-11-06 CRAN (R 3.4.2)                   
+##  tidyverse  * 1.2.1      2017-11-14 CRAN (R 3.4.2)                   
+##  tools        3.4.3      2017-12-07 local                            
+##  utils      * 3.4.3      2017-12-07 local                            
+##  withr        2.1.1.9000 2018-01-14 Github (jimhester/withr@df18523) 
+##  xml2         1.1.1      2017-01-24 CRAN (R 3.4.0)                   
+##  yaml         2.1.16     2017-12-12 cran (@2.1.16)&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>Emerson Del Ponte</title>
@@ -67,7 +428,7 @@
     <item>
       <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
       <link>/post/2018-01-08-first-post-community-call/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
       <guid>/post/2018-01-08-first-post-community-call/</guid>
       <description>&lt;p&gt;Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.&lt;/p&gt;
@@ -127,7 +488,7 @@ Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
     <item>
       <title>Example Talk</title>
       <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1000</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0200</pubDate>
       
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
