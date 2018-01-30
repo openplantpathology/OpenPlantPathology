@@ -5,15 +5,6 @@
     
     <url>
     
-      <loc>/post/linear-models-nematode-time-temperature-response/</loc>
-      <lastmod>2018-01-29T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/people/delponte/</loc>
       <lastmod>2018-01-09T00:00:00+00:00</lastmod>
     </url>
@@ -69,25 +60,7 @@
     <url>
     
       <loc>/post/2018-01-08-first-post-community-call/</loc>
-      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
+      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
     </url>
     
   
@@ -115,6 +88,24 @@
     
       <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talk/example-talk/</loc>
+      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
     </url>
     
   
@@ -179,7 +170,7 @@
     <url>
     
       <loc>/tags/community/</loc>
-      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
+      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -228,18 +219,8 @@
     
     <url>
     
-      <loc>/categories/modeling/</loc>
-      <lastmod>2018-01-29T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/</loc>
-      <lastmod>2017-10-14T23:00:00-03:00</lastmod>
+      <lastmod>2017-10-15T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -280,16 +261,6 @@
     
       <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/teaching-nematodes-linear-modeling/</loc>
-      <lastmod>2018-01-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
