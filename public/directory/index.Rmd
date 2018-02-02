@@ -6,7 +6,7 @@ output:
     logo: opp-logo.png
     social: [ "twitter", "facebook" ]
     navbar:
-      - { title: "<i class='fa fa-arrow-circle-left' aria-hidden='true'></i> Back to Open Plant Pathology", href: "http://openplantpathology.netlify.com", align: left }
+      - { title: "<i class='fa fa-arrow-circle-left' aria-hidden='true'></i> Back to Open Plant Pathology", href: "https://www.openplantpathology.org/", align: left }
       - { title: "<i class='fa fa-github' aria-hidden='true'></i> GitHub", href: "https://github.com/openplantpathology/OpenPlantPathology/tree/master/public/directory", align: left }
 
 ---
