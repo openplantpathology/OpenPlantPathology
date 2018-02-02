@@ -15,7 +15,7 @@ weight = 45
 
 +++
 <a href="directory/"><img src = "/img/headers/opp-screen.png" width = 500px  align = right></a>
-<h1>A growing Global Community!</h3>
+<h1>A Growing Global Community!</h3>
 
 <p>Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology </p>
 
