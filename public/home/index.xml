@@ -7,8 +7,116 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 14 Oct 2017 23:00:00 -0300</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1000</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/hero/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +1000</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
+      
+      <guid>/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/introduction/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/introduction/</guid>
+      <description>What is Open Plant Pathology? A community of modelers and computational researchers involved in plant pathology, plant disease epidemiology, pathogen population biology, microbial ecology and genomics, that supports the several forms of Open Science practices in Plant Pathology. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology- related subjects and applications using open source software, data and repositories.
+Read more Request to join our Slack workspace</description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/members/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/members/</guid>
+      <description> A Growing Global Community!
+Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology  Knowledge domains Modeling, Population Biology, Epidemiology, Programming, Genomics and Microbial Ecology
+CLICK HERE TO ACCESS THE DIRECTORY </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/people/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/people/</guid>
+      <description>Leadership Filter by knowledge domain</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/teaching/</guid>
+      <description>This is an example of using the custom widget to create your own homepage section.
+I am a teaching instructor for the following courses at University X:
+ CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +1000</pubDate>
+      
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact Us</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description>Email us to join our Slack workspace!
+ Follow us!
+ See what we&amp;rsquo;re up to!</description>
+    </item>
     
   </channel>
 </rss>
