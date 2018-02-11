@@ -248,6 +248,12 @@ defaultContentLanguageInSubdir = false
 #  url = "#publications_selected"
 #  weight = 2
 
+
+[[menu.main]]
+  name = "Vision and Mission"
+  url = "pages/mission"
+  weight = 1
+
 [[menu.main]]
   name = "Blog Posts"
   url = "#posts"
