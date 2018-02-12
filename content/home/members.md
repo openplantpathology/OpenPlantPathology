@@ -20,6 +20,6 @@ weight = 45
 <p>Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology </p>
 
 <h2> Knowledge domains</h2>
-General Plant Pathology, Epidemiology, Geophytopathology, Modeling, Population Biology, Genomics, Microbial Ecology, Programming, Embedded systems.
+General Plant Pathology, Epidemiology, Geophytopathology, Modeling, Population Biology, Genomics, Microbial Ecology, Programming, Embedded Systems.
 
 <p><a href="directory/" class="btn btn-primary btn-outline">CLICK HERE TO ACCESS THE DIRECTORY</a> </p>
