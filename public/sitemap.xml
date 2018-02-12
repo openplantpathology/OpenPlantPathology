@@ -60,7 +60,7 @@
     <url>
     
       <loc>/post/2018-01-08-first-post-community-call/</loc>
-      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
+      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
     </url>
     
   
@@ -69,25 +69,7 @@
     <url>
     
       <loc>/pages/mission/</loc>
-      <lastmod>2018-02-10T00:00:00-02:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
+      <lastmod>2018-02-10T00:00:00+10:00</lastmod>
     </url>
     
   
@@ -115,6 +97,24 @@
     
       <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/talk/example-talk/</loc>
+      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2017-01-01T00:00:00+10:00</lastmod>
     </url>
     
   
@@ -179,7 +179,7 @@
     <url>
     
       <loc>/tags/community/</loc>
-      <lastmod>2018-01-01T00:00:00-02:00</lastmod>
+      <lastmod>2018-01-01T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -229,7 +229,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2017-10-14T23:00:00-03:00</lastmod>
+      <lastmod>2017-10-15T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -239,7 +239,7 @@
     <url>
     
       <loc>/pages/</loc>
-      <lastmod>2018-02-10T00:00:00-02:00</lastmod>
+      <lastmod>2018-02-10T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
