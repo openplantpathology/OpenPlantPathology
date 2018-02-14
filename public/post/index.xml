@@ -7,19 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0200</lastBuildDate>
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
       <link>/post/2018-01-08-first-post-community-call/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
       <guid>/post/2018-01-08-first-post-community-call/</guid>
-      <description>Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.
-This group felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago. Since then plant epidemiologists/pathologists have met around the world to network, brainstorm and learn from each other to advance the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.</description>
+      <description>&lt;p&gt;Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.&lt;/p&gt;
+
+&lt;p&gt;This group felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago. Since then plant epidemiologists/pathologists have met around the world to network, brainstorm and learn from each other to advance  the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.&lt;/p&gt;
+
+&lt;p&gt;The International Epidemiology Workshop, which occurred eleven times since then, has been central for ensuring the exchange of ideas and information in our field and helps to identify/strengthen new/established links with other fields. The strong connections with mathematics/statistics, genetics and computer science have led to a sort of speciation over the years: computational, theoretical, spatial, molecular, landscape, and digital (big data) epidemiology have popped up in the epidemiology literature.&lt;/p&gt;
+
+&lt;p&gt;The evolution is natural and such links provide the field with opportunities to bring new expertise and advance our understanding and ability to predict and prevent economically damaging plant disease epidemics and crop losses at various scales. On the other hand, specialization may pose challenges for the identity of a discipline and the scientists need to stay more tightly connected and up to date with the advances on all these fronts. This type of intense specialization can result in a myopic view that may overlook the obvious.&lt;/p&gt;
+
+&lt;p&gt;The recent and rapid  advances in technology have led to new opportunities as well as challenges. In particular, the increasing ability to collect large amounts of data at various scales (from genomes to landscapes). Such scenarios require even more diverse skills from plant pathologists in general to stay alert and connected. The ease with which plant disease-related data (e.g., sequencing and phenotyping) can be obtained and treated with out-of-the-box algorithms by research groups (that lack epidemiologists) can lead to false promises and disastrous consequences for the discipline.&lt;/p&gt;
+
+&lt;p&gt;Plant disease epidemiologists have always been leaders in using quantitative, statistical and computational approaches, which distinguished them from other plant pathologists. Early on, computers have been one of the main tools in the plant epidemiologist&amp;rsquo;s tool-box - until recently these computer-based tools were specialized and relied on proprietary software.&lt;/p&gt;
+
+&lt;p&gt;A plethora of computer software were developed by leading epidemiologists over the decades and used for research and teaching purposes. However, this software can quickly become deprecated and problems related to technology life-time, portability, compatibility and reproducibility have affected rate of adoption and long-term sustainability.&lt;/p&gt;
+
+&lt;p&gt;Development of new tools for data analysis help to expedite the analysis process. However, increased automation often increases the frequency of incorrect application and/or interpretation, largely because those conducting the analyses often lack access to training by someone who is an expert in these tools and will necessarily rely on vignettes or tutorials shared by others, some of which may not be experts on the subject. It is thus imperative that more sustainable, transparent and reproducible research methods are developed and deployed for the community with the purpose of formal training and research support.&lt;/p&gt;
+
+&lt;p&gt;We feel that it is more important than ever that scientists acting in the field of plant pathology stay connected and propose that web-based networking tools should be used for effective networking and continued collaboration to promote the field. In light of these issues, we propose to develop a community that values the sharing of knowledge, ideas and data; building capacity; and promotes open and reproducible research to benefit plant epidemiologists. To foster this community, we propose to develop:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A community-maintained website to promote this workgroup: people, projects and blog posts (new articles, tutorials, view-points, etc.).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;An open chatting workspace using Slack to enable effective, year-round communication and collaborative work via specific channels, i.e., a Slack workspace open to any interested party (&lt;a href=&#34;https://openplantpathology.slack.com&#34; target=&#34;_blank&#34;&gt;https://openplantpathology.slack.com&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;More broadly, a community that stimulates and supports efforts from individuals or groups to develop and deliver next-generation databases and reproducible research tools for plant pathology-related subjects and applications (teaching or research) using open source software (e.g., R, Python), open data (e.g., Dryad, Figshare, OSF, Genbank, etc.), and open software repositories (e.g., GitHub).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We welcome your participation in this community and hope that you will join us! To join the Slack workgroup, please send a request to openplantpathology@gmail.com.&lt;/p&gt;
+
+&lt;p&gt;Our repositories are available at &lt;a href=&#34;https://www.github.com/openplantpathology&#34; target=&#34;_blank&#34;&gt;https://www.github.com/openplantpathology&lt;/a&gt;, to request to join them please send a message to Adam Sparks (adam.sparks@usq.edu.au) or Emerson Del Ponte (delponte@ufv.br) after you have joined the Slack workgroup.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;h4&gt;Community Founders&lt;/h4&gt;&lt;/p&gt;
+
+&lt;p&gt;Emerson M. Del Ponte - &lt;em&gt;Universidade Federal de Viçosa, Brazil&lt;/em&gt;&lt;br /&gt;
+Adam H. Sparks - &lt;em&gt;University of Southern Queensland, Australia&lt;/em&gt;&lt;br /&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h4&gt;Primary Members &lt;/h4&gt;
+
+&lt;p&gt;Robin Choudhury  - &lt;em&gt;University of Florida, USA&lt;/em&gt;&lt;br /&gt;
+Nik Cunniffe - &lt;em&gt;University of Cambridge, UK&lt;/em&gt;&lt;br /&gt;
+Felipe Dalla Lana - &lt;em&gt;Ohio State University&lt;/em&gt;&lt;br /&gt;
+Paul Esker - &lt;em&gt;Pennsylvania State University, USA&lt;/em&gt;&lt;br /&gt;
+Sydney Everhart - &lt;em&gt;University of Nebraska, USA&lt;/em&gt;&lt;br /&gt;
+Zachary Foster - &lt;em&gt;Oregon State University, USA&lt;/em&gt;&lt;br /&gt;
+Niklaus Grünwald - &lt;em&gt;USDA Agricultural Research Service, USA&lt;/em&gt;&lt;br /&gt;
+Zhian Kamvar - &lt;em&gt;University of Nebraska, USA&lt;/em&gt;&lt;br /&gt;
+Adam Kleczkowski  - &lt;em&gt;University of Stirling, UK&lt;/em&gt;&lt;br /&gt;
+Neil McRoberts - &lt;em&gt;University of California, Davis, USA&lt;/em&gt;&lt;br /&gt;
+Stephen Parnell - &lt;em&gt;University of Salford&lt;/em&gt;&lt;br /&gt;
+Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

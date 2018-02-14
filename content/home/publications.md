@@ -2,14 +2,14 @@
 # Recent Publications widget.
 # This widget displays recent publications from `content/publication/`.
 widget = "publications"
-active = false
-date = 2016-04-20
+active = true
+date = 2018-01-01
 
-title = "Recent Publications"
-subtitle = ""
+title = "OPP Notes"
+subtitle = "Teaching notes peer-reviewed by community members.<br/><br/> [>Contribute an OPP Note](https://github.com/openplantpathology/contributions)<br/>[>All Notes](/publication/)"
 
 # Order that this section will appear in.
-weight = 20
+weight = 45
 
 # Number of publications to list.
 count = 10
@@ -19,7 +19,7 @@ count = 10
 #   1 = Detailed
 #   2 = APA
 #   3 = MLA
-list_format = 3
+list_format = 1
 
 # Filter by publication type.
 # -1: Any

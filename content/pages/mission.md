@@ -18,20 +18,20 @@ OpenPlantPathology (OPP) fosters a culture that values <strong>open, transparent
 
 <ol><li>Creating social infrastructure through a welcoming, engaged and diverse community in a <a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathology Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">Slack chatting workspace</a>  and on <a href = "https://twitter.com/OpenPlantPath/"> Twitter</a>. </li>
 
-<img src ="/img/vision1.png">
+<img src ="/img/mission1.png">
 
 
 <h3>How to join and what to do?</h3>
 
 <font size = 2>(click on the image to send email)</font>
 
-<a href = "mailto:openplantpathology@gmail.com" subject= "Interested to join your Slack Workgroup"><img src ="/img/vision2.png">
+<a href = "mailto:openplantpathology@gmail.com" subject= "Interested to join your Slack Workgroup"><img src ="/img/join.png">
 </a>
 
 <li>Creating technical infrastructure by selecting well-recognised leaders from computational plant pathology to help direct and engage the community, and create community-contributed web-based (website and GitHub) open source software tools that provide scientific data sources and instructional materials for self-instruction or classroom settings.</li>
 
 
-<img src ="/img/vision3.png">
+<img src ="/img/mission2.png">
 
 
 <li><p>Building <strong>capacity</strong> of computational plant pathologists and fostering a sense of pride in their work.</p></li>

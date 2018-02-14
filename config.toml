@@ -48,7 +48,7 @@ defaultContentLanguageInSubdir = false
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "classic"
+  font = "default"
 
   # Your details.
   name = "Open Plant Pathology"
@@ -101,7 +101,7 @@ defaultContentLanguageInSubdir = false
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "January 2, 2006"
+  date_format = ""
   #   Examples: "3:04 pm" or "15:04"
   time_format = "3:04 PM"
 
@@ -166,7 +166,7 @@ defaultContentLanguageInSubdir = false
   #   translated.
   publication_types = [
     'Uncategorized',  # 0
-    'Conference paper',  # 1
+    'Teaching article',  # 1
     'Journal article',  # 2
     'Manuscript',  # 3
     'Report',  # 4
@@ -183,7 +183,7 @@ defaultContentLanguageInSubdir = false
   [params.publications]
     # Date format (refer to Go's date format: http://fuckinggodateformat.com )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "January, 2006"
+    date_format = "Jan 2, 2006"
 
   # Configuration of project pages.
   [params.projects]
@@ -249,48 +249,57 @@ defaultContentLanguageInSubdir = false
 #  weight = 2
 
 
-[[menu.main]]
-  name = "Vision and Mission"
-  url = "pages/mission"
-  weight = 1
+
 
 [[menu.main]]
   name = "Blog Posts"
   url = "#posts"
-  weight = 2
+  weight = 4
+  
+  
+[[menu.main]]
+  name = "OPP Notes"
+  pre = "<i class='fa fa-bookmark'></i>"
+  url = "#publications"
+  weight = 6
+  
+[[menu.main]]
+  name = "Vision and Mission"
+  url = "pages/mission"
+  weight = 7
 
 [[menu.main]]
   name = "Members"
   url = "#members"
-  weight = 3
+  weight = 8
 
-[[menu.main]]
-  name = "Leadership"
-  url = "#people"
-  weight = 4
+#[[menu.main]]
+#  name = "Leadership"
+#  url = "#people"
+#  weight = 10
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 5
+  weight = 12
 
 [[menu.main]]
-  name = "GitHub"
+  name = "GH"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
-  weight = 6
+  weight = 14
 
 [[menu.main]]
-  name = "Twitter"
+  name = "T"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
-  weight = 7
+  weight = 16
 
 [[menu.main]]
-  name = "Slack"
+  name = "S"
   pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
-  weight = 8
+  weight = 18
 
 # Taxonomies.
 [taxonomies]

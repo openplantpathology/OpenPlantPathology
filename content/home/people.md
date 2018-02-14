@@ -29,15 +29,14 @@ filter_default = 0
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
 
-
 [[filter]]
-  name = "All leadership"
+  name = "All domains"
   tag = "*"
   
 [[filter]]
   name = "Founders"
   tag = ".Founder"  
-  
+
 [[filter]]
   name = "Epidemiology"
   tag = ".Epidemiology"

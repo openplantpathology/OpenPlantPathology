@@ -25,8 +25,8 @@
 }
 
 html {
-  font-family: 'Merriweather', sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
 }
@@ -66,7 +66,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -74,7 +74,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -82,11 +82,11 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.15rem;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 h3 {
   font-weight: 700;
@@ -103,6 +103,7 @@ a,
 h3.article-title a:hover {
   color: #0095eb;
   text-decoration: none;
+  font-weight: normal;
   transition: color 0.6s ease;
 }
 
@@ -139,7 +140,7 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   counter-increment: captions;
 }
 
@@ -153,7 +154,7 @@ figcaption h4 {
 pre,
 code {
   font-family: 'Roboto Mono', monospace;
-  color: #c7254e;
+  
   background-color: #f9f2f4;
 }
 
@@ -502,7 +503,7 @@ article {
 }
 
 .article-container {
-  max-width: 860px;
+  max-width: 960px;
   padding: 1rem 20px 0 20px;
   margin: 0 auto 0 auto;
 }
@@ -592,11 +593,20 @@ article {
 
 .article-style img,
 .article-style video {
-  box-shadow: 1px 1px 0px #edefed, -1px -1px 0px #edefed, 1px -1px 0px #edefed, -1px 1px 0px #edefed;
+ 
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
   margin-bottom: 60px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img.doi {
+
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -662,7 +672,7 @@ article {
 }
 
 .pub .pub-row-heading {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .pub-list-item {
@@ -670,14 +680,16 @@ article {
 }
 
 .pub-list-item .pub-abstract {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .pub-list-item .pub-authors {
   line-height: normal;
-  font-style: normal;
+  font-style: italic;
   font-size: 1rem;
-  color: #3170A5;
+  color: #000000;
 }
 
 .pub-list-item .pub-publication {
@@ -1037,7 +1049,7 @@ footer a#back_to_top i {
 }
 
 nav#navbar-main li {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .navbar-default .navbar-nav>li>a,

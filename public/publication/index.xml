@@ -8,26 +8,16 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
+      <link>/publication/sparks_fitting_nematode_models/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/person-re-identification/</guid>
-      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
-    </item>
-    
-    <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
-      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+      <guid>/publication/sparks_fitting_nematode_models/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://zenodo.org/badge/latestdoi/119438897&#34;&gt;&lt;img src = &#34;https://zenodo.org/badge/119438897.svg&#34; class = doi&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

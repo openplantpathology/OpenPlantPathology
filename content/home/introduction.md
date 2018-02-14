@@ -18,8 +18,6 @@ weight = 30
 
 <h2> What is Open Plant Pathology?</h2>
 
-<p>A community of modelers and computational researchers involved in plant
-pathology, plant disease epidemiology, pathogen population biology, microbial ecology and genomics, that supports the several forms of Open Science practices in Plant Pathology. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
+<p>A community of modelers and computational researchers involved in plant pathology, plant disease epidemiology, pathogen population biology, microbial ecology and genomics, that supports the several forms of Open Science practices in Plant Pathology. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
 
-<p><a href="pages/mission" class="btn btn-primary  btn-outline">Our vision and mission</a> <a href="mailto:openplantpathology@gmail.com" class="btn btn-primary btn-outline" subject= "Interested to join your Slack
-Workgroup">Request to join our Slack workspace</a></p>
+<p><a href="pages/mission" class="btn btn-primary  btn-outline">Know our Vision and Mission and request to join</a> </p>
