@@ -18,7 +18,7 @@ publication = "In *Open Plant Pathology Notes* "
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "This teaching note recreates the fit of linear and quadratic models using R for the population response of *Pratylenchus thornei* in Queensland, Australia wheat to temperature as described in the original paper. [Read the full article](/notes/sparks/1)"
+abstract = "This teaching note recreates the fit of linear and quadratic models using R for the population response of *Pratylenchus thornei* in Queensland, Australia wheat to temperature as described in the original paper.<br/> <a href ='/notes/sparks/1' style='margin-top:12px' class='btn btn-primary btn-outline'>READ FULL ARTICLE</a>"
  
 # Featured image thumbnail (optional)
 image_preview = ""
