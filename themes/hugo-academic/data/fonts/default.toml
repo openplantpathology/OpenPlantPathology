@@ -2,11 +2,11 @@
 name = "Default"
 
 # Optional Google font URL
-google_fonts = "Montserrat:400,700|Roboto:400,500italic,700|Roboto+Mono"
+google_fonts = "Roboto:400,700|Roboto Slab:400,500italic,700|Roboto+Mono"
 
 # Font families
-heading_font = "Montserrat"
-body_font = "Roboto"
+heading_font = "Roboto"
+body_font = "Roboto Slab"
 nav_font = "Roboto"
 mono_font = "Roboto Mono"
 
