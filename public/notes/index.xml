@@ -76,8 +76,16 @@ code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Infor
 Adam H Sparks and John P Thompson
 &lt;/h3&gt;
 &lt;p&gt;University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenodo.org/badge/latestdoi/119438897&#34;&gt;&lt;img src = &#34;https://zenodo.org/badge/119438897.svg&#34; class = doi&gt;&lt;/a&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;div class=&#34;col-sm-3&#34;&gt;
+&lt;a href = &#34;https://zenodo.org/badge/latestdoi/119438897&#34;&gt;&lt;img src =&#34; https://zenodo.org/badge/119438897.svg&#34; class=doi&gt;
+&lt;/div&gt;
+&lt;div class=&#34;col-sm-12&#34;&gt;
+&lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34;&gt;
+&lt;img src = &#34;https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg&#34; class = doi&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Pratylenchus thornei&lt;/em&gt;, the root-lesion nematode, is widely distributed in wheat (&lt;em&gt;Triticum aestivum&lt;/em&gt;) growing areas of many countries and is of particular concern in sub-tropical environments &lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt;. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress &lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt;.&lt;/p&gt;
@@ -771,7 +779,7 @@ commonly used for cartography but also useful for graphs.&lt;/p&gt;
 ##  language (EN)                        
 ##  collate  pt_BR.UTF-8                 
 ##  tz       America/Sao_Paulo           
-##  date     2018-02-14&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-02-15&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages -----------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package     * version    date       source                           
 ##  assertthat    0.2.0      2017-04-11 CRAN (R 3.4.0)                   

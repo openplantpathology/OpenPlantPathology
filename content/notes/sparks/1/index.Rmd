@@ -25,7 +25,15 @@ Sys.setlocale("LC_ALL", 'pt_BR.UTF-8')
 <h3>Adam H Sparks and John P Thompson</h3>
 University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
 
-<a href="https://zenodo.org/badge/latestdoi/119438897"><img src = "https://zenodo.org/badge/119438897.svg" class = doi></a>
+<div class="row">
+  <div class="col-sm-3"><a href = "https://zenodo.org/badge/latestdoi/119438897"><img src =" https://zenodo.org/badge/119438897.svg" class=doi></div>
+  
+  <div class="col-sm-12">
+<a href="https://github.com/openplantpathology/contributions/issues/1">
+<img src = "https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg" class = doi></a></div>
+
+
+</div>
 <br>
 
 
