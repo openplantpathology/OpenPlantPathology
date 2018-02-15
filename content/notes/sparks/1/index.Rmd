@@ -29,7 +29,7 @@ Sys.setlocale("LC_ALL", 'pt_BR.UTF-8')
 <h3>Adam H Sparks and John P Thompson</h3>
 University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
 
-<a href = "https://zenodo.org/record/1163793#.WoT3t5M-f6A"><img src =" https://zenodo.org/badge/119438897.svg" class=doi> <a href="https://github.com/openplantpathology/contributions/issues/1">
+<a href="https://doi.org/10.5281/zenodo.1173391"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.1173391.svg" alt="DOI" class = doi></a> <a href="https://github.com/openplantpathology/contributions/issues/1">
 <img src = "https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg" class = doi></a> <a href="https://github.com/adamhsparks/Modelling_Nematode_Populations"><img src = "https://img.shields.io/github/release/adamhsparks/Modelling_Nematode_Populations.svg" class = doi></a>
 <br>
 

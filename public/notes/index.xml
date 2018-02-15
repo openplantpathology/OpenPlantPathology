@@ -76,7 +76,7 @@ code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Infor
 Adam H Sparks and John P Thompson
 &lt;/h3&gt;
 &lt;p&gt;University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU&lt;/p&gt;
-&lt;p&gt;&lt;a href = &#34;https://zenodo.org/record/1163793#.WoT3t5M-f6A&#34;&gt;&lt;img src =&#34; https://zenodo.org/badge/119438897.svg&#34; class=doi&gt; &lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.1173391&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.1173391.svg&#34; alt=&#34;DOI&#34; class = doi&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34;&gt;
 &lt;img src = &#34;https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg&#34; class = doi&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/adamhsparks/Modelling_Nematode_Populations&#34;&gt;&lt;img src = &#34;https://img.shields.io/github/release/adamhsparks/Modelling_Nematode_Populations.svg&#34; class = doi&gt;&lt;/a&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
