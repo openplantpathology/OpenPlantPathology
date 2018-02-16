@@ -157,6 +157,10 @@ code {
   font-size: 16px;
   color:black;
   background-color: #f9f2f4;
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
 }
 
 pre {

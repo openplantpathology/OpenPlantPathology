@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 -0200</lastBuildDate>
-    <atom:link href="/pages/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Our Vision and Mission</title>
@@ -16,41 +18,11 @@
       <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
       <guid>/pages/mission/</guid>
-      <description>&lt;p&gt;&lt;br&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;OpenPlantPathology (OPP) fosters a culture that values &lt;strong&gt;open, transparent and reproducible&lt;/strong&gt; research using shared data and reusable software.&lt;/p&gt;
+      <description>OpenPlantPathology (OPP) fosters a culture that values open, transparent and reproducible research using shared data and reusable software.
+ We do this by:
+Creating social infrastructure through a welcoming, engaged and diverse community in a Slack chatting workspace and on Twitter.  How to join and what to do? (click on the image to send email)
 
-&lt;/div&gt;
-&lt;/p&gt;
-
-&lt;h3&gt;We do this by:&lt;/h3&gt;&lt;br&gt;
-
-
-&lt;ol&gt;&lt;li&gt;Creating social infrastructure through a welcoming, engaged and diverse community in a &lt;a href = &#34;https://openplantpathology.slack.com&#34; alt = &#34;Open Plant Pathology Slack Workgroup&#34; title = &#34;Open Plant Pathology Slack Workgroup&#34;&gt;Slack chatting workspace&lt;/a&gt;  and on &lt;a href = &#34;https://twitter.com/OpenPlantPath/&#34;&gt; Twitter&lt;/a&gt;. &lt;/li&gt;
-
-&lt;img src =&#34;/img/mission1.png&#34;&gt;
-
-
-&lt;h3&gt;How to join and what to do?&lt;/h3&gt;
-
-&lt;p&gt;&lt;font size = 2&gt;(click on the image to send email)&lt;/font&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href = &#34;mailto:openplantpathology@gmail.com&#34; subject= &#34;Interested to join your Slack Workgroup&#34;&gt;&lt;img src =&#34;/img/join.png&#34;&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;Creating technical infrastructure by selecting well-recognised leaders from computational plant pathology to help direct and engage the community, and create community-contributed web-based (website and GitHub) open source software tools that provide scientific data sources and instructional materials for self-instruction or classroom settings.&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src =&#34;/img/mission2.png&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;&lt;p&gt;Building &lt;strong&gt;capacity&lt;/strong&gt; of computational plant pathologists and fostering a sense of pride in their work.&lt;/p&gt;&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;&lt;p&gt;Promoting &lt;strong&gt;advocacy&lt;/strong&gt; for a culture of data sharing, reusable software and instructional materials in the field of plant pathology.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
-
-&lt;h3&gt;Founders&lt;/h3&gt;
-
-&lt;p&gt;OpenPlantPathology is a community founded in 2018 by &lt;a href = &#34;https://delpontelab.netlify.com/pages/emerson-delponte/&#34;&gt; Emerson Del Ponte&lt;/a&gt; and &lt;a href= &#34;https://adamhsparks.github.io/&#34;&gt;Adam Sparks&lt;/a&gt; to facilitate communication among computational plant pathologists and promote open science and reproducible research practices in plant pathology.&lt;/p&gt;&lt;/p&gt;
-</description>
+Creating technical infrastructure by selecting well-recognised leaders from computational plant pathology to help direct and engage the community, and create community-contributed web-based (website and GitHub) open source software tools that provide scientific data sources and instructional materials for self-instruction or classroom settings.</description>
     </item>
     
   </channel>
