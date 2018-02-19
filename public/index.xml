@@ -204,6 +204,10 @@ Sarah Pethybridge  - &lt;em&gt;Cornell University, USA&lt;/em&gt;&lt;/p&gt;
       <guid>/notes/sparks/1/</guid>
       <description>&lt;link href=&#34;/rmarkdown-libs/pagedtable/css/pagedtable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/pagedtable/js/pagedtable.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/clipboard/clipboard.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/primer-tooltips/build.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/klippy/css/klippy.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/klippy/js/klippy.min.js&#34;&gt;&lt;/script&gt;
 &lt;style type=&#34;text/css&#34;&gt;
 div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
@@ -259,6 +263,10 @@ code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Infor
 &lt;/style&gt;
 
 
+&lt;script&gt;
+  addClassKlippyTo(&#34;pre.r, pre.markdown&#34;);
+  addKlippy();
+&lt;/script&gt;
 &lt;h3&gt;
 Adam H Sparks and John P Thompson
 &lt;/h3&gt;
@@ -347,7 +355,7 @@ Number of days after wheat sowing
 Temperature
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Temperature (&lt;u&gt;C) treatment &lt;/u&gt;
+Temperature(&lt;u&gt;C) treatment &lt;/u&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -355,8 +363,8 @@ Temperature (&lt;u&gt;C) treatment &lt;/u&gt;
 Degree_Days
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Average thermal time degree days above 10 °C for four soil depths
-(8, 15, 30 and 60 cm)
+Average thermal time degree days above 10 &lt;u&gt;C for four soil depths
+(8, 15, 30 and 60 cm) &lt;/u&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -458,7 +466,7 @@ treatments are shown here by shape, the variety by colour.&lt;/p&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-21&#34; data-line-number=&#34;21&#34;&gt;    ),&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-22&#34; data-line-number=&#34;22&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-23&#34; data-line-number=&#34;23&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-24&#34; data-line-number=&#34;24&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (°C Days Above 10°C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-24&#34; data-line-number=&#34;24&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-25&#34; data-line-number=&#34;25&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb8-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety, &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -549,7 +557,7 @@ data.&lt;/p&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time °C Days Above 10 °C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time &amp;lt;U+00B0&amp;gt;C Days Above 10 &amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb14-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Unplanted Linear Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -631,7 +639,7 @@ temperatures.&lt;/p&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (°C Days Above 10°C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb19-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Gatcher Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -701,7 +709,7 @@ original paper, &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; &amp;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (°C Days Above 10°C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb23-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;GS50a Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -892,7 +900,7 @@ Using the same code from above it is easy to visualise the new model’s fit usi
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (°C Days Above 10 °C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10 &amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&#34;sourceLine&#34; id=&#34;cb31-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Unplanted Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;

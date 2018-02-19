@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    
-	<atom:link href="/notes/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/notes/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
@@ -17,7 +15,889 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/notes/sparks/1/</guid>
-      <description></description>
+      <description>&lt;link href=&#34;/rmarkdown-libs/pagedtable/css/pagedtable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/pagedtable/js/pagedtable.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/clipboard/clipboard.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/primer-tooltips/build.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/klippy/css/klippy.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/klippy/js/klippy.min.js&#34;&gt;&lt;/script&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; }
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+div.sourceLine, a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource div.sourceLine, .numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource div.sourceLine::before, .numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; color: #aaaaaa;  padding-left: 4px; }
+pre, code { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; color: initial; }
+}
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.fl { color: #0000cf; } /* Float */
+code span.ch { color: #4e9a06; } /* Char */
+code span.st { color: #4e9a06; } /* String */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.ot { color: #8f5902; } /* Other */
+code span.al { color: #ef2929; } /* Alert */
+code span.fu { color: #000000; } /* Function */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code span.cn { color: #000000; } /* Constant */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.im { } /* Import */
+code span.va { color: #000000; } /* Variable */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.ex { } /* Extension */
+code span.at { color: #c4a000; } /* Attribute */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+&lt;/style&gt;
+
+
+&lt;script&gt;
+  addClassKlippyTo(&#34;pre.r, pre.markdown&#34;);
+  addKlippy();
+&lt;/script&gt;
+&lt;h3&gt;
+Adam H Sparks and John P Thompson
+&lt;/h3&gt;
+&lt;p&gt;University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.1173391&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.1173391.svg&#34; alt=&#34;DOI&#34; class = doi&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34;&gt;
+&lt;img src = &#34;https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg&#34; class = doi&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/adamhsparks/Modelling_Nematode_Populations&#34;&gt;&lt;img src = &#34;https://img.shields.io/github/release/adamhsparks/Modelling_Nematode_Populations.svg&#34; class = doi&gt;&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Pratylenchus thornei&lt;/em&gt;, the root-lesion nematode, is widely distributed in wheat (&lt;em&gt;Triticum aestivum&lt;/em&gt;) growing areas of many countries and is of particular concern in sub-tropical environments &lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt;. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress &lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In the original paper the population response of &lt;em&gt;P. thornei&lt;/em&gt; in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of &lt;em&gt;P. thornei&lt;/em&gt; as described in the original paper.&lt;/p&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objectives&lt;/h2&gt;
+&lt;p&gt;There are two types of models described in the paper, the first model is a linear model used to describe the unplanted control and two quadratic models fit Gatcher (Susceptible) and GS50a (Moderately Resistant) wheat cultivars. For a more detailed discussion on fitting plant disease models in R, please see the “&lt;a href=&#34;http://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/LinearRegression.aspx&#34;&gt;Linear Regression&lt;/a&gt;” module in the “Ecology and Epidemiology in R” documents available in the American Phytopathological Society’s (APS) Education Center. For an even more in-depth discussion on linear models in R, how to fit and how to interpret the diagnostics that R provides the reader should refer to Faraway &lt;span class=&#34;citation&#34;&gt;(2002)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This post will illustrate how to fit the original linear and quadratic models using the original data in R &lt;span class=&#34;citation&#34;&gt;(R Core Team 2017)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Packages&lt;/h1&gt;
+&lt;p&gt;Using the &lt;strong&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/strong&gt;, &lt;span class=&#34;citation&#34;&gt;(2017)&lt;/span&gt; package simplifies the libraries used in this work. It is a collection of packages designed to work together for data science, &lt;a href=&#34;https://www.tidyverse.org/&#34; class=&#34;uri&#34;&gt;https://www.tidyverse.org/&lt;/a&gt;. The &lt;strong&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/strong&gt; includes, &lt;strong&gt;&lt;code&gt;readr&lt;/code&gt;&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(2017)&lt;/span&gt;, used to import the data; &lt;strong&gt;&lt;code&gt;tidyr&lt;/code&gt;&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(2018)&lt;/span&gt;, used to format the data; &lt;strong&gt;&lt;code&gt;dplyr&lt;/code&gt;&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(2017)&lt;/span&gt;, used to subset the data; and &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(2016)&lt;/span&gt;, used for visualising the data and model fits. &lt;strong&gt;&lt;code&gt;viridis&lt;/code&gt;&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(2018)&lt;/span&gt; is a selection of colour pallets that are widely accessible for people with colour-blindness and printing
+in black and white.&lt;/p&gt;
+&lt;p&gt;The following code chunk checks first to see if you have &lt;strong&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;viridis&lt;/code&gt;&lt;/strong&gt; installed, if not, it will automatically install them and then load them.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb1&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;cf&#34;&gt;if&lt;/span&gt; (&lt;span class=&#34;op&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;require&lt;/span&gt;(tidyverse)) {&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-2&#34; data-line-number=&#34;2&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;install.packages&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-3&#34; data-line-number=&#34;3&#34;&gt;    &lt;span class=&#34;st&#34;&gt;&amp;quot;tidyverse&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;repos =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;CRAN =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;https://cloud.r-project.org/&amp;quot;&lt;/span&gt;)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-5&#34; data-line-number=&#34;5&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-6&#34; data-line-number=&#34;6&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(tidyverse)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-7&#34; data-line-number=&#34;7&#34;&gt;}&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-8&#34; data-line-number=&#34;8&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-9&#34; data-line-number=&#34;9&#34;&gt;&lt;span class=&#34;cf&#34;&gt;if&lt;/span&gt; (&lt;span class=&#34;op&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;require&lt;/span&gt;(viridis)) {&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-10&#34; data-line-number=&#34;10&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;install.packages&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;st&#34;&gt;&amp;quot;viridis&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;repos =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;CRAN =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;https://cloud.r-project.org/&amp;quot;&lt;/span&gt;)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-13&#34; data-line-number=&#34;13&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-14&#34; data-line-number=&#34;14&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(viridis)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb1-15&#34; data-line-number=&#34;15&#34;&gt;}&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Wrangling&lt;/h1&gt;
+&lt;p&gt;The data are located in the &lt;code&gt;data&lt;/code&gt; sub-folder. Import the data using
+&lt;code&gt;read_csv()&lt;/code&gt; function from &lt;strong&gt;&lt;code&gt;readr&lt;/code&gt;&lt;/strong&gt; and view them.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb2&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb2-1&#34; data-line-number=&#34;1&#34;&gt;nema &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;read_csv&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;data/Nematode_Data.csv&amp;quot;&lt;/span&gt;)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb2-2&#34; data-line-number=&#34;2&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb2-3&#34; data-line-number=&#34;3&#34;&gt;nema&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+&lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;Weeks&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Days&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Temperature&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Degree_days&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Unplanted&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Gatcher&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;GS50a&#34;],&#34;name&#34;:[7],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Potam&#34;],&#34;name&#34;:[8],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Suneca&#34;],&#34;name&#34;:[9],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;5.748&#34;,&#34;6&#34;:&#34;6.773&#34;,&#34;7&#34;:&#34;6.691&#34;,&#34;8&#34;:&#34;7.613&#34;,&#34;9&#34;:&#34;6.703&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;5.915&#34;,&#34;6&#34;:&#34;9.513&#34;,&#34;7&#34;:&#34;7.420&#34;,&#34;8&#34;:&#34;9.285&#34;,&#34;9&#34;:&#34;9.121&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;6.381&#34;,&#34;6&#34;:&#34;9.956&#34;,&#34;7&#34;:&#34;8.214&#34;,&#34;8&#34;:&#34;9.024&#34;,&#34;9&#34;:&#34;10.012&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;6.510&#34;,&#34;6&#34;:&#34;9.354&#34;,&#34;7&#34;:&#34;8.254&#34;,&#34;8&#34;:&#34;9.732&#34;,&#34;9&#34;:&#34;9.202&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;5.847&#34;,&#34;6&#34;:&#34;7.435&#34;,&#34;7&#34;:&#34;6.043&#34;,&#34;8&#34;:&#34;5.972&#34;,&#34;9&#34;:&#34;6.846&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;6.157&#34;,&#34;6&#34;:&#34;10.338&#34;,&#34;7&#34;:&#34;8.915&#34;,&#34;8&#34;:&#34;10.284&#34;,&#34;9&#34;:&#34;10.175&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;6.191&#34;,&#34;6&#34;:&#34;10.423&#34;,&#34;7&#34;:&#34;9.183&#34;,&#34;8&#34;:&#34;10.691&#34;,&#34;9&#34;:&#34;10.075&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;6.364&#34;,&#34;6&#34;:&#34;10.580&#34;,&#34;7&#34;:&#34;9.045&#34;,&#34;8&#34;:&#34;10.487&#34;,&#34;9&#34;:&#34;10.344&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;5.755&#34;,&#34;6&#34;:&#34;9.926&#34;,&#34;7&#34;:&#34;8.187&#34;,&#34;8&#34;:&#34;8.745&#34;,&#34;9&#34;:&#34;9.573&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;6.978&#34;,&#34;6&#34;:&#34;11.723&#34;,&#34;7&#34;:&#34;9.852&#34;,&#34;8&#34;:&#34;11.334&#34;,&#34;9&#34;:&#34;11.684&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;6.382&#34;,&#34;6&#34;:&#34;12.272&#34;,&#34;7&#34;:&#34;10.297&#34;,&#34;8&#34;:&#34;12.118&#34;,&#34;9&#34;:&#34;11.359&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;6.759&#34;,&#34;6&#34;:&#34;11.803&#34;,&#34;7&#34;:&#34;10.115&#34;,&#34;8&#34;:&#34;12.065&#34;,&#34;9&#34;:&#34;11.487&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;5.754&#34;,&#34;6&#34;:&#34;10.269&#34;,&#34;7&#34;:&#34;8.232&#34;,&#34;8&#34;:&#34;10.014&#34;,&#34;9&#34;:&#34;9.775&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;6.958&#34;,&#34;6&#34;:&#34;11.840&#34;,&#34;7&#34;:&#34;10.141&#34;,&#34;8&#34;:&#34;11.882&#34;,&#34;9&#34;:&#34;11.633&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;7.305&#34;,&#34;6&#34;:&#34;13.101&#34;,&#34;7&#34;:&#34;10.015&#34;,&#34;8&#34;:&#34;12.440&#34;,&#34;9&#34;:&#34;12.731&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;7.509&#34;,&#34;6&#34;:&#34;13.192&#34;,&#34;7&#34;:&#34;11.075&#34;,&#34;8&#34;:&#34;12.453&#34;,&#34;9&#34;:&#34;12.514&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;5.892&#34;,&#34;6&#34;:&#34;10.824&#34;,&#34;7&#34;:&#34;9.352&#34;,&#34;8&#34;:&#34;10.271&#34;,&#34;9&#34;:&#34;10.279&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;7.454&#34;,&#34;6&#34;:&#34;12.591&#34;,&#34;7&#34;:&#34;10.004&#34;,&#34;8&#34;:&#34;13.006&#34;,&#34;9&#34;:&#34;13.128&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;7.144&#34;,&#34;6&#34;:&#34;13.532&#34;,&#34;7&#34;:&#34;11.350&#34;,&#34;8&#34;:&#34;13.009&#34;,&#34;9&#34;:&#34;13.250&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;8.084&#34;,&#34;6&#34;:&#34;13.032&#34;,&#34;7&#34;:&#34;11.598&#34;,&#34;8&#34;:&#34;12.653&#34;,&#34;9&#34;:&#34;12.995&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;7.216&#34;,&#34;6&#34;:&#34;11.168&#34;,&#34;7&#34;:&#34;9.357&#34;,&#34;8&#34;:&#34;10.892&#34;,&#34;9&#34;:&#34;10.534&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;6.957&#34;,&#34;6&#34;:&#34;13.417&#34;,&#34;7&#34;:&#34;11.005&#34;,&#34;8&#34;:&#34;12.209&#34;,&#34;9&#34;:&#34;12.998&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;7.549&#34;,&#34;6&#34;:&#34;13.167&#34;,&#34;7&#34;:&#34;10.687&#34;,&#34;8&#34;:&#34;12.640&#34;,&#34;9&#34;:&#34;13.610&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;7.202&#34;,&#34;6&#34;:&#34;12.913&#34;,&#34;7&#34;:&#34;11.068&#34;,&#34;8&#34;:&#34;12.458&#34;,&#34;9&#34;:&#34;13.472&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb3&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb3-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;nrow&lt;/span&gt;(nema)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 24&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;description-of-fields-in-the-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Description of Fields in the Data&lt;/h3&gt;
+&lt;p&gt;There are nine columns in the &lt;code&gt;nema&lt;/code&gt; data described here in the following table.&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Field
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Data Description
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Weeks
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Number of weeks after wheat sowing
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Days
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Number of days after wheat sowing
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Temperature
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Temperature(&lt;u&gt;C) treatment &lt;/u&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Degree_Days
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Average thermal time degree days above 10 &lt;u&gt;C for four soil depths
+(8, 15, 30 and 60 cm) &lt;/u&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Unplanted
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Log&lt;sup&gt;*&lt;/sup&gt;, &lt;code&gt;log()&lt;/code&gt;, nematode population in the control treatment with no wheat planted
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Gatcher
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Log&lt;sup&gt;*&lt;/sup&gt;, &lt;code&gt;log()&lt;/code&gt;, nematode population in a susceptible wheat cultivar
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+GS50a
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Log&lt;sup&gt;*&lt;/sup&gt;, &lt;code&gt;log()&lt;/code&gt;, nematode population in a moderately resistant wheat cultivar
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Potam
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Log&lt;sup&gt;*&lt;/sup&gt;, &lt;code&gt;log()&lt;/code&gt;, nematode population in a susceptible wheat cultivar
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Suneca
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Log&lt;sup&gt;*&lt;/sup&gt;, &lt;code&gt;log()&lt;/code&gt;, nematode population in a susceptible wheat cultivar
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;td style=&#34;padding: 0; border: 0;&#34; colspan=&#34;100%&#34;&gt;
+&lt;sup&gt;*&lt;/sup&gt; For an exploration into the reasons why the data were transformed using the natural log &lt;code&gt;log()&lt;/code&gt;, see the &lt;a href=&#34;#exploring-why-the-data-were-log-transformed&#34;&gt;Exploring Why the Data Were Log Transformed&lt;/a&gt; in the &lt;a href=&#34;#bonus-material&#34;&gt;Bonus Material&lt;/a&gt; section
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wide-to-long-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wide to Long Data&lt;/h3&gt;
+&lt;p&gt;You can see that each of the varieties have their own column in the original data format, this is commonly called wide data. Wide data are commonly found in spreadsheets but do not lend themselves easily to data analysis, modelling and visualisation. To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R. The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column,
+each observation is a row, and each type of observational unit is a table
+&lt;span class=&#34;citation&#34;&gt;(Wickham 2014)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In order to use &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; for visualising the data, they need to be converted from wide to long. Using &lt;code&gt;gather()&lt;/code&gt; from the &lt;strong&gt;&lt;code&gt;tidyr&lt;/code&gt;&lt;/strong&gt; package to convert from wide to long format where the varieties are all listed in a single column, &lt;code&gt;Variety&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb5&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb5-1&#34; data-line-number=&#34;1&#34;&gt;nema_long &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;nema &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;gather&lt;/span&gt;(Variety, Log_pop, Unplanted&lt;span class=&#34;op&#34;&gt;:&lt;/span&gt;Suneca)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb5-2&#34; data-line-number=&#34;2&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb5-3&#34; data-line-number=&#34;3&#34;&gt;nema_long&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+&lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;Weeks&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Days&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Temperature&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Degree_days&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;int&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Variety&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;Log_pop&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.748&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.915&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.381&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.510&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.847&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.157&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.191&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.364&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.755&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.978&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.382&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.759&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.754&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.958&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.305&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.509&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;5.892&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.454&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.144&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;8.084&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.216&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;6.957&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.549&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;Unplanted&#34;,&#34;6&#34;:&#34;7.202&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;6.773&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;9.513&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;9.956&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;9.354&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;7.435&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;10.338&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;10.423&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;10.580&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;9.926&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;11.723&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;12.272&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;11.803&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;10.269&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;11.840&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.101&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.192&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;10.824&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;12.591&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.532&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.032&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;11.168&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.417&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;13.167&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;Gatcher&#34;,&#34;6&#34;:&#34;12.913&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;6.691&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;7.420&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;8.214&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;8.254&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;6.043&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;8.915&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;9.183&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;9.045&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;8.187&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;9.852&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.297&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.115&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;8.232&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.141&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.015&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;11.075&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;9.352&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.004&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;11.350&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;11.598&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;9.357&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;11.005&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;10.687&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;GS50a&#34;,&#34;6&#34;:&#34;11.068&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;7.613&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;9.285&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;9.024&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;9.732&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;5.972&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.284&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.691&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.487&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;8.745&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;11.334&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.118&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.065&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.014&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;11.882&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.440&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.453&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.271&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;13.006&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;13.009&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.653&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;10.892&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.209&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.640&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;Potam&#34;,&#34;6&#34;:&#34;12.458&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;280&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;6.703&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;9.121&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.012&#34;},{&#34;1&#34;:&#34;8&#34;,&#34;2&#34;:&#34;56&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;9.202&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;350&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;6.846&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;700&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.175&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;875&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.075&#34;},{&#34;1&#34;:&#34;10&#34;,&#34;2&#34;:&#34;70&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.344&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;420&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;9.573&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;840&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;11.684&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1050&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;11.359&#34;},{&#34;1&#34;:&#34;12&#34;,&#34;2&#34;:&#34;84&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;11.487&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;490&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;9.775&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;980&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;11.633&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1225&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;12.731&#34;},{&#34;1&#34;:&#34;14&#34;,&#34;2&#34;:&#34;98&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1470&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;12.514&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;560&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.279&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1120&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;13.128&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1400&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;13.250&#34;},{&#34;1&#34;:&#34;16&#34;,&#34;2&#34;:&#34;112&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1680&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;12.995&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;15.0&#34;,&#34;4&#34;:&#34;630&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;10.534&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;20.0&#34;,&#34;4&#34;:&#34;1260&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;12.998&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;22.5&#34;,&#34;4&#34;:&#34;1575&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;13.610&#34;},{&#34;1&#34;:&#34;18&#34;,&#34;2&#34;:&#34;126&#34;,&#34;3&#34;:&#34;25.0&#34;,&#34;4&#34;:&#34;1890&#34;,&#34;5&#34;:&#34;Suneca&#34;,&#34;6&#34;:&#34;13.472&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb6&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb6-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;nrow&lt;/span&gt;(nema_long)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 120&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we see, the original &lt;code&gt;nema&lt;/code&gt; data had only 24 rows and the long
+format of the data have 120 rows now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-visualisation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Visualisation&lt;/h1&gt;
+&lt;p&gt;Now that the data are in the format that &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt; uses, take a look at
+the data first to see what it looks like. Here we fit a smoothed line for each
+variety’s nematode population to the raw data. The individual temperature
+treatments are shown here by shape, the variety by colour.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb8&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-2&#34; data-line-number=&#34;2&#34;&gt;  nema_long,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-3&#34; data-line-number=&#34;3&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; Variety&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-8&#34; data-line-number=&#34;8&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-9&#34; data-line-number=&#34;9&#34;&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-11&#34; data-line-number=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_smooth&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-13&#34; data-line-number=&#34;13&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;se =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-14&#34; data-line-number=&#34;14&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-15&#34; data-line-number=&#34;15&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-16&#34; data-line-number=&#34;16&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-17&#34; data-line-number=&#34;17&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-18&#34; data-line-number=&#34;18&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-19&#34; data-line-number=&#34;19&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-21&#34; data-line-number=&#34;21&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-22&#34; data-line-number=&#34;22&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-23&#34; data-line-number=&#34;23&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-24&#34; data-line-number=&#34;24&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-25&#34; data-line-number=&#34;25&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb8-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety, &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/raw_data_scatterplots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelling&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Modelling&lt;/h1&gt;
+&lt;div id=&#34;unplanted-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Unplanted Model&lt;/h2&gt;
+&lt;p&gt;The paper uses a linear model for the unplanted control. Here we will write a
+function to use in modelling the unplanted population data. I have wrapped the
+model in a function which makes it pipe-able, &lt;code&gt;%&amp;gt;%&lt;/code&gt; and has other advantages
+when it comes to fitting the same model to several sets of data.&lt;/p&gt;
+&lt;p&gt;In the linear equation for the Unplanted control treatment, the rate of
+population increase can be expressed as:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y = y_0 + rt\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(y_0\)&lt;/span&gt; is the initial population, &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; is the rate of change and &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;
+equal time.&lt;/p&gt;
+&lt;div id=&#34;fitting-a-linear-model&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fitting a Linear Model&lt;/h3&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb9&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-1&#34; data-line-number=&#34;1&#34;&gt;linear_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cf&#34;&gt;function&lt;/span&gt;(df) {&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-2&#34; data-line-number=&#34;2&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;lm&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-3&#34; data-line-number=&#34;3&#34;&gt;    Log_pop &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; df&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-5&#34; data-line-number=&#34;5&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb9-6&#34; data-line-number=&#34;6&#34;&gt;}&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now check the model fit, using &lt;code&gt;filter()&lt;/code&gt; from &lt;strong&gt;&lt;code&gt;dplyr&lt;/code&gt;&lt;/strong&gt; to select only
+Unplanted data from the data set for the model and fit the linear model to the
+data.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb10&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb10-1&#34; data-line-number=&#34;1&#34;&gt;unplanted_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb10-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Unplanted&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb10-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;linear_model&lt;/span&gt;()&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;code&gt;par(mfrow = c(2, 2))&lt;/code&gt; creates a four-panel graph rather than four individual graphs, which the next function will create by default.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;plot()&lt;/code&gt; function with any &lt;code&gt;lm()&lt;/code&gt; object will create four diagnostic plots for your inspection.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb11&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb11-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;par&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mfrow =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb11-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;plot&lt;/span&gt;(unplanted_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/plot_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;These plots do not appear to indicate anything amiss as one would hope for from the models that have already been published. If you are unfamiliar with how to interpret these diagnostic plots see &lt;a href=&#34;#interpreting-linear-models-in-r&#34;&gt;Interpreting Linear Models in R&lt;/a&gt; in the &lt;a href=&#34;#further-reading&#34;&gt;Further Reading&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;summary()&lt;/code&gt; function displays information about the model fit. If you are unfamiliar with how to read and interpret the output of &lt;code&gt;summary()&lt;/code&gt; for a linear model, please refer to &lt;a href=&#34;#interpreting-linear-models-in-r&#34;&gt;Interpreting Linear Models in R&lt;/a&gt; in the
+&lt;a href=&#34;#further-reading&#34;&gt;Further Reading&lt;/a&gt; section for references that go into more detail on this matter.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb12&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb12-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(unplanted_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Log_pop ~ Degree_days, data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.66053 -0.25811 -0.05683  0.21123  0.98511 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) 5.4150643  0.1929731  28.061  &amp;lt; 2e-16 ***
+## Degree_days 0.0012950  0.0001823   7.103 4.01e-07 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.3847 on 22 degrees of freedom
+## Multiple R-squared:  0.6964, Adjusted R-squared:  0.6826 
+## F-statistic: 50.45 on 1 and 22 DF,  p-value: 4.006e-07&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the original paper, the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value of the unplanted linear model was 0.7, we can see here that agrees:
+0.7. In the original paper, &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; &amp;lt; 0.001, R reports &lt;span class=&#34;math inline&#34;&gt;\(p-value:\)&lt;/span&gt;
+4.006382710^{-7}, which also agrees.&lt;/p&gt;
+&lt;div id=&#34;visualising-the-model-fit-to-the-data&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Visualising the Model Fit to the Data&lt;/h4&gt;
+&lt;p&gt;Using &lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt;’s &lt;code&gt;geom_smooth()&lt;/code&gt; we can fit the same model above and graph the resulting line.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb14&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-1&#34; data-line-number=&#34;1&#34;&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(Variety) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Unplanted&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-4&#34; data-line-number=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-8&#34; data-line-number=&#34;8&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-9&#34; data-line-number=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_smooth&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lm&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;formula =&lt;/span&gt; y &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;x,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-13&#34; data-line-number=&#34;13&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-14&#34; data-line-number=&#34;14&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;se =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time &amp;lt;U+00B0&amp;gt;C Days Above 10 &amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb14-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Unplanted Linear Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/visualise_linear-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;quadratic-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Quadratic Models&lt;/h2&gt;
+&lt;p&gt;In the original paper, the quadratic model best described Gatcher and GS50a
+data, which are fit here.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb15&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-1&#34; data-line-number=&#34;1&#34;&gt;quadratic_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cf&#34;&gt;function&lt;/span&gt;(df) {&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-2&#34; data-line-number=&#34;2&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;lm&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-3&#34; data-line-number=&#34;3&#34;&gt;    Log_pop &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Degree_days &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;I&lt;/span&gt;(Degree_days &lt;span class=&#34;op&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; df&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-5&#34; data-line-number=&#34;5&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb15-6&#34; data-line-number=&#34;6&#34;&gt;}&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;susceptible-varieties&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Susceptible Varieties&lt;/h3&gt;
+&lt;p&gt;Gatcher, Potam and Suneca all have very similar curves, here Gatcher is used to fit a quadratic model as in the original paper following the same methods as above for the linear model.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb16&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-1&#34; data-line-number=&#34;1&#34;&gt;s_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Gatcher&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;quadratic_model&lt;/span&gt;()&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-4&#34; data-line-number=&#34;4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-5&#34; data-line-number=&#34;5&#34;&gt;&lt;span class=&#34;kw&#34;&gt;par&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mfrow =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb16-6&#34; data-line-number=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;plot&lt;/span&gt;(s_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/susceptible_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb17&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb17-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(s_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.80668 -0.58936  0.07297  0.58228  1.14866 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       5.476e+00  9.043e-01   6.055 5.21e-06 ***
+## Degree_days       8.961e-03  1.909e-03   4.693 0.000124 ***
+## I(Degree_days^2) -2.612e-06  9.008e-07  -2.899 0.008579 ** 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.8631 on 21 degrees of freedom
+## Multiple R-squared:  0.7998, Adjusted R-squared:  0.7808 
+## F-statistic: 41.96 on 2 and 21 DF,  p-value: 4.621e-08&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the original paper, the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value of Gatcher’s quadratic model was 0.80,
+we can see here that agrees: 0.8. In the
+original paper, &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; &amp;lt; 0.001, R reports &lt;span class=&#34;math inline&#34;&gt;\(p-value:\)&lt;/span&gt;
+1.240363510^{-4}, which also agrees.&lt;/p&gt;
+&lt;div id=&#34;visualise-susceptible-variety-model&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Visualise Susceptible Variety Model&lt;/h4&gt;
+&lt;p&gt;The model visualisation is the same for the quadratic models as the linear
+model, however you will note that the line has a downward curve at higher
+temperatures.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb19&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-1&#34; data-line-number=&#34;1&#34;&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(Variety) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Gatcher&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-4&#34; data-line-number=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-8&#34; data-line-number=&#34;8&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-9&#34; data-line-number=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_smooth&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lm&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;formula =&lt;/span&gt; y &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;x &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;I&lt;/span&gt;(x &lt;span class=&#34;op&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-13&#34; data-line-number=&#34;13&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-14&#34; data-line-number=&#34;14&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;se =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb19-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Gatcher Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/visualise_s_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;moderately-resistant-cultivar&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Moderately Resistant Cultivar&lt;/h3&gt;
+&lt;p&gt;GS50a, moderately resistant to &lt;em&gt;P. thornei&lt;/em&gt;, also fits a quadratic model but the
+coefficients are slightly different due to different responses to the variety
+and temperature.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb20&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-1&#34; data-line-number=&#34;1&#34;&gt;mr_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;GS50a&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;quadratic_model&lt;/span&gt;()&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-4&#34; data-line-number=&#34;4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-5&#34; data-line-number=&#34;5&#34;&gt;&lt;span class=&#34;kw&#34;&gt;par&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mfrow =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb20-6&#34; data-line-number=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;plot&lt;/span&gt;(mr_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/moderately_resistant_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb21&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb21-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(mr_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.11285 -0.39845  0.02889  0.45494  1.18598 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       5.157e+00  6.779e-01   7.607 1.83e-07 ***
+## Degree_days       6.274e-03  1.431e-03   4.384  0.00026 ***
+## I(Degree_days^2) -1.609e-06  6.753e-07  -2.383  0.02672 *  
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.647 on 21 degrees of freedom
+## Multiple R-squared:  0.8233, Adjusted R-squared:  0.8065 
+## F-statistic: 48.92 on 2 and 21 DF,  p-value: 1.248e-08&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the original paper, the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value of GS50a’s quadratic model was 0.82,
+we can see here that agrees: 0.82. In the
+original paper, &lt;span class=&#34;math inline&#34;&gt;\(P\)&lt;/span&gt; &amp;lt; 0.001, R reports &lt;span class=&#34;math inline&#34;&gt;\(p-value:\)&lt;/span&gt;
+2.596147310^{-4}, which also agrees.&lt;/p&gt;
+&lt;div id=&#34;visualising-the-model-fit-to-the-data-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Visualising the Model Fit to the Data&lt;/h4&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb23&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-1&#34; data-line-number=&#34;1&#34;&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(Variety) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;GS50a&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-4&#34; data-line-number=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-8&#34; data-line-number=&#34;8&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-9&#34; data-line-number=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_smooth&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lm&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;formula =&lt;/span&gt; y &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;x &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;I&lt;/span&gt;(x &lt;span class=&#34;op&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-13&#34; data-line-number=&#34;13&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-14&#34; data-line-number=&#34;14&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;se =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10&amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb23-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;GS50a Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/visualise_mr_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;discussion-and-conclusions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Discussion and Conclusions&lt;/h1&gt;
+&lt;p&gt;As in the original paper, the model equations can be derived from these models as well. The derived regression equations are:&lt;/p&gt;
+&lt;p&gt;Gatcher (Susceptible):
+&lt;span class=&#34;math display&#34;&gt;\[ln(P. thornei + 1) = -0.000003(0.0000009)T^2 + 0.009(0.0019)T + 5.4671(0.904)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;GS50a (Moderately Resistant):
+&lt;span class=&#34;math display&#34;&gt;\[ln(P. thornei + 1) = -0.000002(0.0000007)T^2 + 0.0063(0.0014)T + 5.1559(0.678)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Unplanted Control:
+&lt;span class=&#34;math display&#34;&gt;\[ln(P. thornei + 1) = 0.0013(0.00018)T + 5.4151(0.193)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Refer back to the &lt;code&gt;summary()&lt;/code&gt; outputs for each of the models for the coefficient values and &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; values, which match those reported in the original paper where the models were fit with Genstat.&lt;/p&gt;
+&lt;p&gt;Gatcher and GS50a have similar phenologies, but differ in resistance to root lesion nematodes, making the model comparisons a reasonable objective. The original paper goes on to test the effect of sowing date based on degree days. &lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt; reported a 61% increase in yield on average from sowing the susceptible, intolerant cultivar Gatcher at the end of May than sowing it in the third week of June. By June the soil temperatures and nematode populations were both greater, leading to lower wheat yield. The effects were less pronounced in the moderately resistant cultivar, GS50a, but were similar with a reduction in nematode population densities occurring due to earlier
+planting.&lt;/p&gt;
+&lt;p&gt;The models illustrated here for Gatcher and GS50a were able to accurately reflect the changes in nematode population as a result of degree days, which affected the nematodes’ ability to damage the crop and reduce yield
+&lt;span class=&#34;citation&#34;&gt;(Thompson 2015)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bonus-material&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bonus Material&lt;/h1&gt;
+&lt;div id=&#34;exploring-why-the-data-were-log-transformed&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exploring Why the Data Were Log Transformed&lt;/h2&gt;
+&lt;p&gt;In the paper the the natural log, &lt;code&gt;ln() +1&lt;/code&gt;, of the nematode population counts were used to fit the models. Here we will explore a bit further why this was
+necessary.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;A note about using &lt;code&gt;log() + 1&lt;/code&gt; rather than just &lt;code&gt;log()&lt;/code&gt;. This is necessary with these data to avoid taking &lt;code&gt;log(0)&lt;/code&gt;. Try it in R to see what happens if you are
+not familiar.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;First, plot the data for each of the four temperatures and the four varieties, plus the unplanted control converting from the natural log value back to the original actual count values to see what the population numbers look like. Note the use of &lt;code&gt;exp() - 1&lt;/code&gt; in the &lt;code&gt;y&lt;/code&gt; aesthetic, to transform the values from the &lt;code&gt;ln() + 1&lt;/code&gt; values. Doing this shows us the original data’s values and helps demonstrate why the data were log transformed for analysis. To examine the data, first we will use boxplots and then quantile-quantile (qq) plots.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb24&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-2&#34; data-line-number=&#34;2&#34;&gt;  nema_long,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-3&#34; data-line-number=&#34;3&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;exp&lt;/span&gt;(Log_pop) &lt;span class=&#34;op&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-8&#34; data-line-number=&#34;8&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-9&#34; data-line-number=&#34;9&#34;&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_boxplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;outlier.color =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;NA&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-13&#34; data-line-number=&#34;13&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-14&#34; data-line-number=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_jitter&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.6&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;exp(ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1)&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-27&#34; data-line-number=&#34;27&#34;&gt;    &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-28&#34; data-line-number=&#34;28&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-29&#34; data-line-number=&#34;29&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-30&#34; data-line-number=&#34;30&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-31&#34; data-line-number=&#34;31&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Untransformed Data&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb24-32&#34; data-line-number=&#34;32&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;()&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/boxplots_original-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb25&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-2&#34; data-line-number=&#34;2&#34;&gt;  nema_long,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-3&#34; data-line-number=&#34;3&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;sample =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;exp&lt;/span&gt;(Log_pop) &lt;span class=&#34;op&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-4&#34; data-line-number=&#34;4&#34;&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-5&#34; data-line-number=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_qq&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-6&#34; data-line-number=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-8&#34; data-line-number=&#34;8&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-9&#34; data-line-number=&#34;9&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb25-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;()&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/qq_original-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The boxplots show that there is a wide range of values with the 25 ˚C temperature populations close to zero with others having quite large ranges, this could indicate heteroscedasticity.&lt;/p&gt;
+&lt;p&gt;Also, looking at the qq-plots it is apparent that the original data do not meet the assumptions of normally distributed errors for a linear model. See the
+&lt;a href=&#34;#further-reading&#34;&gt;Further Reading&lt;/a&gt; section for suggested reading on interpreting qq-plots.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb26&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-2&#34; data-line-number=&#34;2&#34;&gt;  nema_long,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-3&#34; data-line-number=&#34;3&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-4&#34; data-line-number=&#34;4&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-8&#34; data-line-number=&#34;8&#34;&gt;  )&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-9&#34; data-line-number=&#34;9&#34;&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_boxplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;outlier.color =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;NA&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-13&#34; data-line-number=&#34;13&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-14&#34; data-line-number=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_jitter&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.6&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;exp(ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1)&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-27&#34; data-line-number=&#34;27&#34;&gt;    &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-28&#34; data-line-number=&#34;28&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-29&#34; data-line-number=&#34;29&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-30&#34; data-line-number=&#34;30&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-31&#34; data-line-number=&#34;31&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Log Transformed Data&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb26-32&#34; data-line-number=&#34;32&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;()&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/boxplots_ln-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb27&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-2&#34; data-line-number=&#34;2&#34;&gt;  nema_long,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-3&#34; data-line-number=&#34;3&#34;&gt;  &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;sample =&lt;/span&gt; Log_pop)&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-4&#34; data-line-number=&#34;4&#34;&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-5&#34; data-line-number=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;stat_qq&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-6&#34; data-line-number=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;facet_wrap&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;Variety,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-8&#34; data-line-number=&#34;8&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;ncol =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-9&#34; data-line-number=&#34;9&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb27-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;()&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/qq_ln-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here we see that the &lt;code&gt;log()&lt;/code&gt; transformed data’s boxplots show fewer outliers and tighter range of values. The qq-plots also indicate that it is possible to
+conduct a linear regression with these data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-aic-to-compare-model-quality&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using AIC to Compare Model Quality&lt;/h2&gt;
+&lt;p&gt;Even though the original paper used a linear model for the unplanted data, a polynomial model also fits these data quite well. We can compare the original linear model from the paper with a polynomial model quite easily in R to see how the models compare using AIC (Akaike information criterion). AIC is used to measure the models’ relative quality to each other.&lt;/p&gt;
+&lt;p&gt;Since the &lt;code&gt;unplanted_model&lt;/code&gt; object already exists as a product of the linear model, we simply need to use the polynomial model with the unplanted data to create a new object to compare them.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb28&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-1&#34; data-line-number=&#34;1&#34;&gt;unplanted_poly_model &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Unplanted&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;quadratic_model&lt;/span&gt;()&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-4&#34; data-line-number=&#34;4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-5&#34; data-line-number=&#34;5&#34;&gt;&lt;span class=&#34;kw&#34;&gt;par&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mfrow =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;c&lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb28-6&#34; data-line-number=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;plot&lt;/span&gt;(unplanted_poly_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/unplanted_poly-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb29&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb29-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(unplanted_poly_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.48697 -0.23865 -0.08038  0.19211  0.97466 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       5.062e+00  4.031e-01  12.556 3.14e-11 ***
+## Degree_days       2.125e-03  8.511e-04   2.497   0.0209 *  
+## I(Degree_days^2) -4.010e-07  4.016e-07  -0.999   0.3293    
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.3848 on 21 degrees of freedom
+## Multiple R-squared:  0.7101, Adjusted R-squared:  0.6825 
+## F-statistic: 25.72 on 2 and 21 DF,  p-value: 2.255e-06&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By this information, the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value is a bit better from the &lt;code&gt;unplanted_poly_model&lt;/code&gt;, 0.7101253, than
+the original &lt;code&gt;unplanted_model&lt;/code&gt;’s, 0.6963592.
+Using the same code from above it is easy to visualise the new model’s fit using
+&lt;strong&gt;&lt;code&gt;ggplot2&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb31&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-1&#34; data-line-number=&#34;1&#34;&gt;nema_long &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-2&#34; data-line-number=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(Variety) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-3&#34; data-line-number=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(Variety &lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &amp;quot;Unplanted&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-4&#34; data-line-number=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-5&#34; data-line-number=&#34;5&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; Degree_days,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-6&#34; data-line-number=&#34;6&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; Log_pop,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-7&#34; data-line-number=&#34;7&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; Temperature,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-8&#34; data-line-number=&#34;8&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-9&#34; data-line-number=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-10&#34; data-line-number=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_smooth&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-11&#34; data-line-number=&#34;11&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;lm&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-12&#34; data-line-number=&#34;12&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;formula =&lt;/span&gt; y &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;x &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;I&lt;/span&gt;(x &lt;span class=&#34;op&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-13&#34; data-line-number=&#34;13&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-14&#34; data-line-number=&#34;14&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;se =&lt;/span&gt; &lt;span class=&#34;ot&#34;&gt;FALSE&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-15&#34; data-line-number=&#34;15&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;colour =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;grey&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-16&#34; data-line-number=&#34;16&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;alpha =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;0.5&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-17&#34; data-line-number=&#34;17&#34;&gt;  ) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-18&#34; data-line-number=&#34;18&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;expression&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-19&#34; data-line-number=&#34;19&#34;&gt;    &lt;span class=&#34;kw&#34;&gt;paste&lt;/span&gt;(&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-20&#34; data-line-number=&#34;20&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;ln(&amp;quot;&lt;/span&gt;,&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-21&#34; data-line-number=&#34;21&#34;&gt;      &lt;span class=&#34;kw&#34;&gt;italic&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;P. thornei&amp;quot;&lt;/span&gt;),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-22&#34; data-line-number=&#34;22&#34;&gt;      &lt;span class=&#34;st&#34;&gt;&amp;quot;/kg soil) + 1&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-23&#34; data-line-number=&#34;23&#34;&gt;    ),&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-24&#34; data-line-number=&#34;24&#34;&gt;    &lt;span class=&#34;dt&#34;&gt;sep =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-25&#34; data-line-number=&#34;25&#34;&gt;  )) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-26&#34; data-line-number=&#34;26&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Thermal Time (&amp;lt;U+00B0&amp;gt;C Days Above 10 &amp;lt;U+00B0&amp;gt;C)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-27&#34; data-line-number=&#34;27&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme_minimal&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-28&#34; data-line-number=&#34;28&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;scale_colour_viridis&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Temperature&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceLine&#34; id=&#34;cb31-29&#34; data-line-number=&#34;29&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Unplanted Quadratic Model&amp;quot;&lt;/span&gt;)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/rmarkdown-libs/figure-html4/visualise_unplanted_poly_model-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Checking the model fit visually, we can see that it fits the data nicely. To get a better feel for how these models compare, AIC can be used to determine the relative quality of a model for a &lt;em&gt;given set of data&lt;/em&gt;. That is, you cannot
+compare models for other data using AIC.&lt;/p&gt;
+&lt;p&gt;Checking the AIC is quite simple in R, just &lt;code&gt;AIC()&lt;/code&gt;. Here we check the AIC of the original linear &lt;code&gt;unplanted_model&lt;/code&gt; and the new &lt;code&gt;unplanted_poly_model&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb32&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb32-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;AIC&lt;/span&gt;(unplanted_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 26.17149&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;sourceCode r&#34; id=&#34;cb34&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;div class=&#34;sourceLine&#34; id=&#34;cb34-1&#34; data-line-number=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;AIC&lt;/span&gt;(unplanted_poly_model)&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 27.05797&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ideally when fitting models, you look for the least complex model that provides the best explanation of the variation in the data. In this case the original linear model has a lower AIC, 26.1714857, than that of the polynomial model, 27.0579669, but they are extremely close and the &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value of the polynomial model, 0.7101253, is a bit better than the linear model’s &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt;, 0.6963592, as well.
+Therefore, without more data to distinguish the models it appears that either model suffices for the data provided.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;further-reading&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Further Reading&lt;/h1&gt;
+&lt;div id=&#34;tidy-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tidy Data&lt;/h2&gt;
+&lt;p&gt;Wickham &lt;span class=&#34;citation&#34;&gt;(2014)&lt;/span&gt; introduced the idea of tidy data for analysis. As you work with raw data from many sources, it is useful to understand what this means and why it is useful. In this example, &lt;strong&gt;&lt;code&gt;tidyr&lt;/code&gt;&lt;/strong&gt; was used to convert the data from wide to long format. For a more in-depth look at using &lt;strong&gt;&lt;code&gt;tidyr&lt;/code&gt;&lt;/strong&gt; see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://blog.rstudio.com/2014/07/22/introducing-tidyr/&#34;&gt;Introducing tidyr&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://tidyr.tidyverse.org/reference/gather.html&#34;&gt;Gather columns into key-value pairs&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpreting-linear-models-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interpreting Linear Models in R&lt;/h2&gt;
+&lt;p&gt;The University of Georgia has a nice, easy to understand set of materials that demonstrate how to interpret diagnostic plot outputs from &lt;code&gt;plot(lm.object)&lt;/code&gt;,
+&lt;a href=&#34;http://strata.uga.edu/8370/rtips/regressionPlots.html&#34;&gt;Regression diagnostic plots&lt;/a&gt;
+on their Data Analysis in the Geosciences page. For even more, this
+Cross Validated question has an excellent discussion on
+&lt;a href=&#34;https://stats.stackexchange.com/questions/58141/interpreting-plot-lm&#34;&gt;Interpreting plot.lm()&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The University of Montana provides an on-line text, “&lt;em&gt;Statistics With R&lt;/em&gt;”, that includes a section on &lt;a href=&#34;https://arc.lib.montana.edu/book/statistics-with-r-textbook/item/57&#34;&gt;ANOVA model diagnostics including QQ-plots&lt;/a&gt;. Since ANOVA uses &lt;code&gt;lm()&lt;/code&gt; in R, the tools and descriptions here are applicable to the qq-plots we have generated here in this illustration.&lt;/p&gt;
+&lt;p&gt;For a detailed look at how to interpret the output from &lt;code&gt;summary()&lt;/code&gt; for linear models, see The YHAT Blog post,
+&lt;a href=&#34;http://blog.yhat.com/posts/r-lm-summary.html&#34;&gt;Fitting &amp;amp; Interpreting Linear Models in R&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Faraway &lt;span class=&#34;citation&#34;&gt;(2002)&lt;/span&gt;,
+“&lt;a href=&#34;https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf&#34;&gt;&lt;em&gt;Practical Regression and Anova using R&lt;/em&gt;&lt;/a&gt;”
+is an excellent free resource that goes into detail about fitting linear models
+using R and how to interpret the diagnostics. Prof. Faraway has more recent
+books on the subject as well that you might wish to borrow from your library or
+purchase, see
+&lt;a href=&#34;http://www.maths.bath.ac.uk/~jjf23/LMR/&#34; class=&#34;uri&#34;&gt;http://www.maths.bath.ac.uk/~jjf23/LMR/&lt;/a&gt;
+for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selecting-the-right-colour-scheme&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Selecting the Right Colour Scheme&lt;/h2&gt;
+&lt;p&gt;Selecting good colour schemes is essential for communicating your message.
+The &lt;strong&gt;&lt;code&gt;viridis&lt;/code&gt;&lt;/strong&gt; package makes this much easier to do. Bob Rudis has a nice
+blog post when the package was first introduced that demonstrates why it is
+useful to use a package like this for your colour palettes,
+&lt;a href=&#34;https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/&#34;&gt;Using the new ‘viridis’ colormap in R (thanks to Simon Garnier)&lt;/a&gt;. Other colour palettes for R exist as well. Notably the
+&lt;strong&gt;&lt;code&gt;RColorBrewer&lt;/code&gt;&lt;/strong&gt; package provides an easy-to-use interface for the fantastic
+Colour Brewer palettes &lt;a href=&#34;http://colorbrewer2.org/&#34; class=&#34;uri&#34;&gt;http://colorbrewer2.org/&lt;/a&gt;
+commonly used for cartography but also useful for graphs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Reproducibility&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;## Session info -------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  pt_BR.UTF-8                 
+##  tz       America/Sao_Paulo           
+##  date     2018-02-15&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages -----------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package     * version    date       source                           
+##  assertthat    0.2.0      2017-04-11 CRAN (R 3.4.0)                   
+##  backports     1.1.1      2017-09-25 CRAN (R 3.4.2)                   
+##  base        * 3.4.3      2017-12-07 local                            
+##  bindr         0.1        2016-11-13 CRAN (R 3.4.0)                   
+##  bindrcpp    * 0.2        2017-06-17 CRAN (R 3.4.0)                   
+##  blogdown      0.5.1      2018-02-10 Github (rstudio/blogdown@558b3f5)
+##  bookdown      0.6        2018-01-25 cran (@0.6)                      
+##  broom         0.4.3      2017-11-20 CRAN (R 3.4.2)                   
+##  cellranger    1.1.0      2016-07-27 CRAN (R 3.4.0)                   
+##  cli           1.0.0      2017-11-05 CRAN (R 3.4.2)                   
+##  codetools     0.2-15     2016-10-05 CRAN (R 3.4.3)                   
+##  colorspace    1.3-2      2016-12-14 CRAN (R 3.4.0)                   
+##  compiler      3.4.3      2017-12-07 local                            
+##  crayon        1.3.4      2017-09-16 CRAN (R 3.4.1)                   
+##  datasets    * 3.4.3      2017-12-07 local                            
+##  devtools      1.13.4     2017-11-09 CRAN (R 3.4.2)                   
+##  digest        0.6.15     2018-01-28 cran (@0.6.15)                   
+##  dplyr       * 0.7.4      2017-09-28 CRAN (R 3.4.2)                   
+##  evaluate      0.10.1     2017-06-24 CRAN (R 3.4.1)                   
+##  forcats     * 0.2.0      2017-01-23 CRAN (R 3.4.0)                   
+##  foreign       0.8-69     2017-06-22 CRAN (R 3.4.3)                   
+##  ggplot2     * 2.2.1.9000 2018-02-11 Github (hadley/ggplot2@2b5b88d)  
+##  glue          1.2.0      2017-10-29 CRAN (R 3.4.2)                   
+##  graphics    * 3.4.3      2017-12-07 local                            
+##  grDevices   * 3.4.3      2017-12-07 local                            
+##  grid          3.4.3      2017-12-07 local                            
+##  gridExtra     2.3        2017-09-09 CRAN (R 3.4.1)                   
+##  gtable        0.2.0      2016-02-26 CRAN (R 3.4.0)                   
+##  haven         1.1.0      2017-07-09 CRAN (R 3.4.1)                   
+##  hms           0.4.0      2017-11-23 CRAN (R 3.4.3)                   
+##  htmltools     0.3.6      2017-04-28 CRAN (R 3.4.0)                   
+##  httr          1.3.1      2017-08-20 CRAN (R 3.4.1)                   
+##  jsonlite      1.5        2017-06-01 CRAN (R 3.4.0)                   
+##  kableExtra  * 0.7.0      2018-01-15 CRAN (R 3.4.3)                   
+##  knitr         1.19       2018-01-29 cran (@1.19)                     
+##  labeling      0.3        2014-08-23 CRAN (R 3.4.0)                   
+##  lattice       0.20-35    2017-03-25 CRAN (R 3.4.3)                   
+##  lazyeval      0.2.1      2017-10-29 CRAN (R 3.4.2)                   
+##  lubridate     1.7.1      2017-11-03 CRAN (R 3.4.2)                   
+##  magrittr      1.5        2014-11-22 CRAN (R 3.4.0)                   
+##  memoise       1.1.0      2017-04-21 CRAN (R 3.4.0)                   
+##  methods     * 3.4.3      2017-12-07 local                            
+##  mnormt        1.5-5      2016-10-15 CRAN (R 3.4.0)                   
+##  modelr        0.1.1      2017-07-24 CRAN (R 3.4.1)                   
+##  munsell       0.4.3      2016-02-13 CRAN (R 3.4.0)                   
+##  nlme          3.1-131    2017-02-06 CRAN (R 3.4.3)                   
+##  parallel      3.4.3      2017-12-07 local                            
+##  pillar        1.1.0      2018-01-14 cran (@1.1.0)                    
+##  pkgconfig     2.0.1      2017-03-21 CRAN (R 3.4.0)                   
+##  plyr          1.8.4      2016-06-08 CRAN (R 3.4.0)                   
+##  psych         1.7.8      2017-09-09 CRAN (R 3.4.2)                   
+##  purrr       * 0.2.4      2017-10-18 CRAN (R 3.4.2)                   
+##  R6            2.2.2      2017-06-17 CRAN (R 3.4.0)                   
+##  Rcpp          0.12.15    2018-01-20 cran (@0.12.15)                  
+##  readr       * 1.1.1      2017-05-16 CRAN (R 3.4.0)                   
+##  readxl        1.0.0      2017-04-18 CRAN (R 3.4.0)                   
+##  reshape2      1.4.3      2017-12-11 cran (@1.4.3)                    
+##  rlang         0.1.6.9003 2018-02-11 Github (tidyverse/rlang@616fd4d) 
+##  rmarkdown     1.8        2017-11-17 CRAN (R 3.4.2)                   
+##  rprojroot     1.2        2017-01-16 CRAN (R 3.4.0)                   
+##  rstudioapi    0.7        2017-09-07 CRAN (R 3.4.1)                   
+##  rvest         0.3.2      2016-06-17 CRAN (R 3.4.0)                   
+##  scales        0.5.0.9000 2018-01-14 Github (hadley/scales@d767915)   
+##  stats       * 3.4.3      2017-12-07 local                            
+##  stringi       1.1.6      2017-11-17 CRAN (R 3.4.2)                   
+##  stringr     * 1.2.0      2017-02-18 CRAN (R 3.4.0)                   
+##  tibble      * 1.4.2      2018-01-22 cran (@1.4.2)                    
+##  tidyr       * 0.8.0      2018-01-29 cran (@0.8.0)                    
+##  tidyselect    0.2.3      2017-11-06 CRAN (R 3.4.2)                   
+##  tidyverse   * 1.2.1      2017-11-14 CRAN (R 3.4.2)                   
+##  tools         3.4.3      2017-12-07 local                            
+##  utils       * 3.4.3      2017-12-07 local                            
+##  viridis     * 0.4.0      2017-03-27 CRAN (R 3.4.0)                   
+##  viridisLite * 0.3.0      2018-02-01 cran (@0.3.0)                    
+##  withr         2.1.1.9000 2018-01-14 Github (jimhester/withr@df18523) 
+##  xfun          0.1        2018-01-22 cran (@0.1)                      
+##  xml2          1.1.1      2017-01-24 CRAN (R 3.4.0)                   
+##  yaml          2.1.16     2017-12-12 cran (@2.1.16)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-FARAWAY2002&#34;&gt;
+&lt;p&gt;Faraway, J. J. 2002. &lt;em&gt;Practical Regression and Anova using R&lt;/em&gt;. [University of Bath]. Available at: &lt;a href=&#34;https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-VIRIDIS2018&#34;&gt;
+&lt;p&gt;Garnier, S. 2018. &lt;em&gt;Viridis: Default color maps from ’matplotlib’&lt;/em&gt;. Available at: &lt;a href=&#34;https://CRAN.R-project.org/package=viridis&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=viridis&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-R2017&#34;&gt;
+&lt;p&gt;R Core Team. 2017. &lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;. Vienna, Austria: R Foundation for Statistical Computing. Available at: &lt;a href=&#34;https://www.R-project.org/&#34; class=&#34;uri&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-THOMPSON2015&#34;&gt;
+&lt;p&gt;Thompson, J. 2015. Modelling population densities of root-lesion nematode (&lt;em&gt;Pratylenchus thornei&lt;/em&gt;) from soil profile temperatures to choose an optimum sowing date for wheat in a subtropical region. Field Crops Research. 183:50–55 Available at: &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0378429015300083&#34; class=&#34;uri&#34;&gt;http://www.sciencedirect.com/science/article/pii/S0378429015300083&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-GGPLOT22009&#34;&gt;
+&lt;p&gt;Wickham, H. 2016. &lt;em&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt;. Springer-Verlag New York. Available at: &lt;a href=&#34;http://ggplot2.org&#34; class=&#34;uri&#34;&gt;http://ggplot2.org&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-TIDY-DATA2014&#34;&gt;
+&lt;p&gt;Wickham, H. 2014. Tidy data. The Journal of Statistical Software. 59 Available at: &lt;a href=&#34;http://www.jstatsoft.org/v59/i10/&#34; class=&#34;uri&#34;&gt;http://www.jstatsoft.org/v59/i10/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-TIDYVERSE2017&#34;&gt;
+&lt;p&gt;Wickham, H. 2017. &lt;em&gt;tidyverse: Easily Install and Load the ’Tidyverse’&lt;/em&gt;. Available at: &lt;a href=&#34;https://CRAN.R-project.org/package=tidyverse&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=tidyverse&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-TIDYR2018&#34;&gt;
+&lt;p&gt;Wickham, H., and Henry, L. 2018. &lt;em&gt;tidyr: Easily Tidy Data with ’spread()’ and ’gather()’ Functions&lt;/em&gt;. Available at: &lt;a href=&#34;https://CRAN.R-project.org/package=tidyr&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=tidyr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-DPLYR2017&#34;&gt;
+&lt;p&gt;Wickham, H., Francois, R., Henry, L., and Müller, K. 2017. &lt;em&gt;dplyr: A Grammar of Data Manipulation&lt;/em&gt;. Available at: &lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-READR2017&#34;&gt;
+&lt;p&gt;Wickham, H., Hester, J., and Francois, R. 2017. &lt;em&gt;readr: Read Rectangular Text Data&lt;/em&gt;. Available at: &lt;a href=&#34;https://CRAN.R-project.org/package=readr&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=readr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

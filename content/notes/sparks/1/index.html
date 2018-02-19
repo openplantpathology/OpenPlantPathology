@@ -15,6 +15,10 @@ csl: phytopathology.csl
 
 <link href="/rmarkdown-libs/pagedtable/css/pagedtable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/pagedtable/js/pagedtable.js"></script>
+<script src="/rmarkdown-libs/clipboard/clipboard.min.js"></script>
+<link href="/rmarkdown-libs/primer-tooltips/build.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/klippy/css/klippy.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/klippy/js/klippy.min.js"></script>
 <style type="text/css">
 div.sourceLine, a.sourceLine { display: inline-block; min-height: 1.25em; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
@@ -70,6 +74,10 @@ code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Infor
 </style>
 
 
+<script>
+  addClassKlippyTo("pre.r, pre.markdown");
+  addKlippy();
+</script>
 <h3>
 Adam H Sparks and John P Thompson
 </h3>
@@ -158,7 +166,7 @@ Number of days after wheat sowing
 Temperature
 </td>
 <td style="text-align:left;">
-Temperature (<u>C) treatment </u>
+Temperature(<u>C) treatment </u>
 </td>
 </tr>
 <tr>
@@ -166,8 +174,8 @@ Temperature (<u>C) treatment </u>
 Degree_Days
 </td>
 <td style="text-align:left;">
-Average thermal time degree days above 10 °C for four soil depths
-(8, 15, 30 and 60 cm)
+Average thermal time degree days above 10 <u>C for four soil depths
+(8, 15, 30 and 60 cm) </u>
 </td>
 </tr>
 <tr>
@@ -269,7 +277,7 @@ treatments are shown here by shape, the variety by colour.</p>
 <div class="sourceLine" id="cb8-21" data-line-number="21">    ),</div>
 <div class="sourceLine" id="cb8-22" data-line-number="22">    <span class="dt">sep =</span> <span class="st">&quot;&quot;</span></div>
 <div class="sourceLine" id="cb8-23" data-line-number="23">  )) <span class="op">+</span></div>
-<div class="sourceLine" id="cb8-24" data-line-number="24"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (°C Days Above 10°C)&quot;</span>) <span class="op">+</span></div>
+<div class="sourceLine" id="cb8-24" data-line-number="24"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (&lt;U+00B0&gt;C Days Above 10&lt;U+00B0&gt;C)&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb8-25" data-line-number="25"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></div>
 <div class="sourceLine" id="cb8-26" data-line-number="26"><span class="st">  </span><span class="kw">scale_colour_viridis</span>(<span class="st">&quot;Temperature&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb8-27" data-line-number="27"><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>Variety, <span class="dt">ncol =</span> <span class="dv">2</span>)</div></code></pre>
@@ -360,7 +368,7 @@ data.</p>
 <div class="sourceLine" id="cb14-23" data-line-number="23">    ),</div>
 <div class="sourceLine" id="cb14-24" data-line-number="24">    <span class="dt">sep =</span> <span class="st">&quot;&quot;</span></div>
 <div class="sourceLine" id="cb14-25" data-line-number="25">  )) <span class="op">+</span></div>
-<div class="sourceLine" id="cb14-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time °C Days Above 10 °C)&quot;</span>) <span class="op">+</span></div>
+<div class="sourceLine" id="cb14-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time &lt;U+00B0&gt;C Days Above 10 &lt;U+00B0&gt;C)&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb14-27" data-line-number="27"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></div>
 <div class="sourceLine" id="cb14-28" data-line-number="28"><span class="st">  </span><span class="kw">scale_colour_viridis</span>(<span class="st">&quot;Temperature&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb14-29" data-line-number="29"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Unplanted Linear Model&quot;</span>)</div></code></pre>
@@ -442,7 +450,7 @@ temperatures.</p>
 <div class="sourceLine" id="cb19-23" data-line-number="23">    ),</div>
 <div class="sourceLine" id="cb19-24" data-line-number="24">    <span class="dt">sep =</span> <span class="st">&quot;&quot;</span></div>
 <div class="sourceLine" id="cb19-25" data-line-number="25">  )) <span class="op">+</span></div>
-<div class="sourceLine" id="cb19-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (°C Days Above 10°C)&quot;</span>) <span class="op">+</span></div>
+<div class="sourceLine" id="cb19-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (&lt;U+00B0&gt;C Days Above 10&lt;U+00B0&gt;C)&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb19-27" data-line-number="27"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></div>
 <div class="sourceLine" id="cb19-28" data-line-number="28"><span class="st">  </span><span class="kw">scale_colour_viridis</span>(<span class="st">&quot;Temperature&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb19-29" data-line-number="29"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Gatcher Quadratic Model&quot;</span>)</div></code></pre>
@@ -512,7 +520,7 @@ original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <sp
 <div class="sourceLine" id="cb23-23" data-line-number="23">    ),</div>
 <div class="sourceLine" id="cb23-24" data-line-number="24">    <span class="dt">sep =</span> <span class="st">&quot;&quot;</span></div>
 <div class="sourceLine" id="cb23-25" data-line-number="25">  )) <span class="op">+</span></div>
-<div class="sourceLine" id="cb23-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (°C Days Above 10°C)&quot;</span>) <span class="op">+</span></div>
+<div class="sourceLine" id="cb23-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (&lt;U+00B0&gt;C Days Above 10&lt;U+00B0&gt;C)&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb23-27" data-line-number="27"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></div>
 <div class="sourceLine" id="cb23-28" data-line-number="28"><span class="st">  </span><span class="kw">scale_colour_viridis</span>(<span class="st">&quot;Temperature&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb23-29" data-line-number="29"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;GS50a Quadratic Model&quot;</span>)</div></code></pre>
@@ -701,7 +709,7 @@ Using the same code from above it is easy to visualise the new model’s fit usi
 <div class="sourceLine" id="cb31-23" data-line-number="23">    ),</div>
 <div class="sourceLine" id="cb31-24" data-line-number="24">    <span class="dt">sep =</span> <span class="st">&quot;&quot;</span></div>
 <div class="sourceLine" id="cb31-25" data-line-number="25">  )) <span class="op">+</span></div>
-<div class="sourceLine" id="cb31-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (°C Days Above 10 °C)&quot;</span>) <span class="op">+</span></div>
+<div class="sourceLine" id="cb31-26" data-line-number="26"><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Thermal Time (&lt;U+00B0&gt;C Days Above 10 &lt;U+00B0&gt;C)&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb31-27" data-line-number="27"><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></div>
 <div class="sourceLine" id="cb31-28" data-line-number="28"><span class="st">  </span><span class="kw">scale_colour_viridis</span>(<span class="st">&quot;Temperature&quot;</span>) <span class="op">+</span></div>
 <div class="sourceLine" id="cb31-29" data-line-number="29"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Unplanted Quadratic Model&quot;</span>)</div></code></pre>
