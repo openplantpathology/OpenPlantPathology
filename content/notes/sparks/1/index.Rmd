@@ -28,8 +28,8 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 ```{r klippy, echo=FALSE, include=TRUE}
 klippy::klippy()
 ```
-
-
+ 
+ 
 <h3>Adam H Sparks and John P Thompson</h3>
 University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
  
