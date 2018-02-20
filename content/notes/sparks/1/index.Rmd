@@ -26,7 +26,7 @@ Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
 ```
 
 ```{r klippy, echo=FALSE, include=TRUE}
-klippy::klippy()
+klippy::klippy(position = c('bottom', 'left'))   
 ```
  
  

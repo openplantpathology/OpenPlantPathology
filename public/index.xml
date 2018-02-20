@@ -249,7 +249,7 @@ code &gt; span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* 
 
 &lt;script&gt;
   addClassKlippyTo(&#34;pre.r, pre.markdown&#34;);
-  addKlippy();
+  addKlippy(&#39;left&#39;, &#39;bottom&#39;);
 &lt;/script&gt;
 &lt;h3&gt;
 Adam H Sparks and John P Thompson
