@@ -21,14 +21,18 @@ knitr::opts_chunk$set(cache = TRUE)
 
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
-Sys.setlocale("LC_ALL", 'pt_BR.UTF-8')
+Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
+#devtools::install_github("RLesur/klippy")
 ```
 
-
-
+```{r klippy, echo=FALSE, include=TRUE}
+klippy::klippy(position = c('bottom', 'left'))   
+```
+ 
+ 
 <h3>Adam H Sparks and John P Thompson</h3>
 University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
-
+ 
 <a href="https://doi.org/10.5281/zenodo.1173391"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.1173391.svg" alt="DOI" class = doi></a> <a href="https://github.com/openplantpathology/contributions/issues/1">
 <img src = "https://img.shields.io/badge/OPP-Peer%20Reviewed-brightgreen.svg" class = doi></a> <a href="https://github.com/adamhsparks/Modelling_Nematode_Populations"><img src = "https://img.shields.io/github/release/adamhsparks/Modelling_Nematode_Populations.svg" class = doi></a>
 <br>
@@ -112,8 +116,8 @@ fields <- data.frame(
   c(
     "Number of weeks after wheat sowing",
     "Number of days after wheat sowing",
-    "Temperature (<U+02DA>C) treatment",
-    "Average thermal time degree days above 10 °C for four soil depths
+    "Temperature(<U+00B0>C) treatment",
+    "Average thermal time degree days above 10 <U+00B0>C for four soil depths
     (8, 15, 30 and 60 cm)",
     paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in the control treatment with no wheat planted"),
     paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in a susceptible wheat cultivar"),
@@ -188,7 +192,7 @@ ggplot(
     ),
     sep = ""
   )) +
-  xlab("Thermal Time (°C Days Above 10°C)") +
+  xlab("Thermal Time (<U+00B0>C Days Above 10<U+00B0>C)") +
   theme_minimal() +
   scale_colour_viridis("Temperature") +
   facet_wrap(~ Variety, ncol = 2)
@@ -284,7 +288,7 @@ nema_long %>%
     ),
     sep = ""
   )) +
-  xlab("Thermal Time °C Days Above 10 °C)") +
+  xlab("Thermal Time <U+00B0>C Days Above 10 <U+00B0>C)") +
   theme_minimal() +
   scale_colour_viridis("Temperature") +
   ggtitle("Unplanted Linear Model")
@@ -356,7 +360,7 @@ nema_long %>%
     ),
     sep = ""
   )) +
-  xlab("Thermal Time (°C Days Above 10°C)") +
+  xlab("Thermal Time (<U+00B0>C Days Above 10<U+00B0>C)") +
   theme_minimal() +
   scale_colour_viridis("Temperature") +
   ggtitle("Gatcher Quadratic Model")
@@ -412,7 +416,7 @@ nema_long %>%
     ),
     sep = ""
   )) +
-  xlab("Thermal Time (°C Days Above 10°C)") +
+  xlab("Thermal Time (<U+00B0>C Days Above 10<U+00B0>C)") +
   theme_minimal() +
   scale_colour_viridis("Temperature") +
   ggtitle("GS50a Quadratic Model")
@@ -605,7 +609,7 @@ nema_long %>%
     ),
     sep = ""
   )) +
-  xlab("Thermal Time (°C Days Above 10 °C)") +
+  xlab("Thermal Time (<U+00B0>C Days Above 10 <U+00B0>C)") +
   theme_minimal() +
   scale_colour_viridis("Temperature") +
   ggtitle("Unplanted Quadratic Model")
