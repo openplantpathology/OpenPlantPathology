@@ -50,7 +50,7 @@ members6 <- members %>%
     github = "",
     orcid = ""
   )) %>%
-  unite(domain, domain1, domain2, remove = T, sep = "  ") %>%
+  unite(domain, domain1, domain2, remove = T, sep = ", ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
   select(
     name,
@@ -65,6 +65,8 @@ members6 <- members %>%
     github,
     orcid
   )
+
+members6$domain <- str_replace_all(members6$domain, pattern = ", $", "")
 
 # select new items to geocode
 new_members <- setdiff(members6, existing_members)
