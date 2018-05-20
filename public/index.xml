@@ -11,6 +11,65 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>What is going on in OPP? quick summary of the first five months</title>
+      <link>/post/2018-05-20-second-post-five-month-summary/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 -0300</pubDate>
+      
+      <guid>/post/2018-05-20-second-post-five-month-summary/</guid>
+      <description>
+
+&lt;p&gt;We founded OPP in early January this year without too much ambition and zero funding. We envisioned the need to have place to &lt;a href=&#34;https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/&#34; target=&#34;_blank&#34;&gt;connect more easily with other  researchers&lt;/a&gt; who, like us, are willing to embrace and promote open science and reproducible practices in plant pathology, mainly focusing on computational aspects of the analysis.&lt;/p&gt;
+
+&lt;p&gt;To achieve this goal, OPP evolved to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a core group (leadership) and members who participate in our &lt;a href=&#34;https://openplantpathology.slack.com&#34; target=&#34;_blank&#34;&gt;Slack workspace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the OPP website with members directory, blog and OPP Notes&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://twitter.com/openplantpath&#34; target=&#34;_blank&#34;&gt;Twitter account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://github.com/openplantpathology&#34; target=&#34;_blank&#34;&gt;GitHub organisation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We had no idea how OPP would be received and whether it would catch interest and be sustainable. After the announcement post and a few tweets, we were able to bring together 76 members who signed up to our Slack channels. Of these, 42 members from eight countries (four continents) registered to our &lt;a href=&#34;https://www.openplantpathology.org/directory/&#34; target=&#34;_blank&#34;&gt;member directory&lt;/a&gt;. The most represented groups are epidemiologists, modelers, population biologists and programmers, indicated as primary field domain.  The traffic in the OPP website was more intense during the first two months (6K page views) with peaks after inclusion of original content (OPP Note).&lt;/p&gt;
+
+&lt;p&gt;We were surprised by a quick  reaction and initial engagement in our Slack workspace where several channels were created to accommodate smaller groups with a specific interest including #epidemictheory, #phytopathometry, #reproducibility, #teaching and #r-pkg-dev, as among the more active. There have been a lot of interactions and collaborations are on the rise. It is hard to fairly summarize achievements and ideas that have been materialized but here are a few selected ones from the channels:&lt;/p&gt;
+
+&lt;h2 id=&#34;r-package-development&#34;&gt;R package development&lt;/h2&gt;
+
+&lt;p&gt;In #r-pkg-dev channel, we discovered the existence of a the first general plant pathology unofficial R package for conducting epidemiological analysis of spatial disease data, &lt;a href=&#34;https://github.com/chgigot/epiphy&#34; target=&#34;_blank&#34;&gt;epiphy&lt;/a&gt;, developed and maintained by &lt;a href=&#34;https://www.researchgate.net/profile/Christophe_Gigot&#34; target=&#34;_blank&#34;&gt;Christophe Gigot&lt;/a&gt;. A dedicated channel was created for #epiphy for a more focused discussion on package functionalities and suggestions of improvements. To know more about &lt;em&gt;epiphy&lt;/em&gt;, check its &lt;a href=&#34;https://chgigot.github.io/epiphy/articles/epiphy.html&#34; target=&#34;_blank&#34;&gt;primer&lt;/a&gt;. We brainstormed about other useful packages, and some of us suggested a curated collection of documented data sets from plant pathology articles and other sources to support teaching activities and demonstration of analyses. We recently found a similar idea already implemented, the  &lt;a href=&#34;https://github.com/kwstat/agridat&#34; target=&#34;_blank&#34;&gt;Agridat&lt;/a&gt; package with 263 documented data sets of agricultural experiments accompanied by R scripts (for graphs and analyses) for almost every data set - including some plant disease experiments.&lt;/p&gt;
+
+&lt;h2 id=&#34;teaching-approaches&#34;&gt;Teaching approaches&lt;/h2&gt;
+
+&lt;p&gt;A preliminary list of &amp;ldquo;Essential Topics for an Epidemiology Course&amp;rdquo; has been initially proposed by Neil McRoberts in the #teaching channel and was extended with suggestions by other members. If that will ever materialize into an actual book is unknown, but definitely very good ideas are out there. We would love to see a &lt;a href=&#34;https://bookdown.org/yihui/bookdown/&#34; target=&#34;_blank&#34;&gt;bookdown&lt;/a&gt; botanical epidemiology book!&lt;/p&gt;
+
+&lt;h2 id=&#34;peer-reviewed-materials&#34;&gt;Peer-reviewed materials&lt;/h2&gt;
+
+&lt;p&gt;A peer-reviewed section, following an open peer-review process, called &lt;a href=&#34;https://www.openplantpathology.org/publication/&#34; target=&#34;_blank&#34;&gt;OPP Notes&lt;/a&gt; was created in our website for the publication of teaching notes, tutorials and reproduction of analysis from previously published work using open source code. It was based on a previous efforts to popularize R among plant pathologists about 10 years ago, the series of teaching articles on &lt;a href=&#34;https://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/Pages/default.aspx&#34; target=&#34;_blank&#34;&gt;Ecology and Epidemiology in R&lt;/a&gt;. A &lt;a href=&#34;https://github.com/openplantpathology/contributions&#34; target=&#34;_blank&#34;&gt;repository with a template&lt;/a&gt; was created for contributors to fork and use with instruction for contributing content. Contributions are reviewed by volunteer OPP members. Our first note, &lt;a href=&#34;https://www.openplantpathology.org/notes/sparks/1/&#34; target=&#34;_blank&#34;&gt;Linear modelling of soil temperature effects on root lesion nematode population densities in R&lt;/a&gt;, was written by Adam Sparks and John Thompson and &lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34; target=&#34;_blank&#34;&gt;reviewed&lt;/a&gt; by Emerson Del Ponte and Mladen Čučak. We hope to have contributions from students as well as more established members of the community with plans for more notes coming this  year. The first Note reached more than eight hundred pageviews! Anyone is welcome to contribute Notes or suggestions of other kinds of contents such as documented analysis accompaining original papers, new analysis of published papers, tutorials, etc. The published Notes are stored permanently at &lt;a href=&#34;https://zenodo.org/record/1173391#.WwGsaFMvzu4&#34; target=&#34;_blank&#34;&gt;Zenodo and assigned a DOI for citation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fostering-collaboration&#34;&gt;Fostering collaboration&lt;/h2&gt;
+
+&lt;p&gt;OPP is definitely promoting encounter of scientists with mutual interests or complementary skills that are materializing in actual collaborations including planned visits and collaborative research, at least from our end. A question made on the use of a data assimilation technique materialized in a collaborative work between one of our students (Del Ponte Lab) and Dr. &lt;a href=&#34;https://www.chch.ox.ac.uk/staff/dr-robin-thompson&#34; target=&#34;_blank&#34;&gt;Robin Thomas&lt;/a&gt; (Oxford). The mutual interest in late blight modeling will bring one of us (Adam) to visit Ireland to interact with Mladen and others at the &lt;a href=&#34;https://www.maynoothuniversity.ie/&#34; target=&#34;_blank&#34;&gt;University of Maynooth&lt;/a&gt; and &lt;a href=&#34;https://www.teagasc.ie/&#34; target=&#34;_blank&#34;&gt;TEGASC&lt;/a&gt;. We are thankful to Rene Heim who volunteered to improve our &lt;a href=&#34;https://github.com/openplantpathology/OpenPlantPathology/blob/master/public/img/OPP-hex.png&#34; target=&#34;_blank&#34;&gt;logo&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&#34;q-a-environment&#34;&gt;Q&amp;amp;A environment&lt;/h2&gt;
+
+&lt;p&gt;The #general channel is where we expect members posting technical questions, which has happened but very modestly compared to more general short comments, announcements, etc.  anything else here??&lt;/p&gt;
+
+&lt;h2 id=&#34;reproducible-research-practices&#34;&gt;Reproducible research practices&lt;/h2&gt;
+
+&lt;p&gt;In #reproducibility, there has been interesting discussion and viewpoints on the most suitable way of making research project data and codes available, also known as research compendium. Should it be organized as an &lt;a href=&#34;https://github.com/openplantpathology/rice_awd_pests&#34; target=&#34;_blank&#34;&gt;R package&lt;/a&gt; or as an &lt;a href=&#34;https://github.com/emdelponte/research-compendium-website&#34; target=&#34;_blank&#34;&gt;Rstudio project&lt;/a&gt; for download and adaptation by the end-user? Is Docker useful when working with packages or research compendiums? The pros and cons have been discussed and defended by diverging views depending on the researcher skills, desired level of automation and objectives. Either way is more than welcome and these very specific technical discussions have little implication for a field where reproducible research practices, even more simple steps such as data and code sharing, are virtually non-existent according to our recent survey across articles published in plant pathology journals in the last five years (Sparks et al. unpublished). We expect that as journals of the field start to require data and code deposit, these practices gain more interest by the researcher - guidelines of best practices are definitely needed, which were are on our todo list.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-next&#34;&gt;What is next?&lt;/h2&gt;
+
+&lt;p&gt;Our experiences over the past four months have been positive and the feedback and reaction from others has made our experience such. As leaders, we are facing great challenges such as balance voluntarily maintaining a community like this with our everyday work loads. It is understandable that after the initial boom, the declining or lack of participation by members are due to similar reasons. However, we also wonder whether this could be related to the use a platform developed for team collaboration tool such as Slack. Anyway, it is being a great learning and the current and potential benefits that may arise from this community, such as those highlighted above, make it worthwhile.&lt;/p&gt;
+
+&lt;p&gt;Interested in know more and join OPP? &lt;a href=&#34;https://www.openplantpathology.org/pages/mission/&#34; target=&#34;_blank&#34;&gt;clicke here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Emerson Del Ponte&lt;br /&gt;
+Adam Sparks&lt;br /&gt;
+OPP founders&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
       <link>/publication/sparks_fitting_nematode_models/</link>
       <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
