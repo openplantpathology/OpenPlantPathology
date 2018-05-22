@@ -16,7 +16,7 @@ OpenPlantPathology (OPP) fosters a culture that values <strong>open, transparent
 <h3>We do this by:</h3><br>
 
 
-<ol><li>Creating social infrastructure through a welcoming, engaged and diverse community in a <a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathology Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">Slack chatting workspace</a>  and on <a href = "https://twitter.com/OpenPlantPath/"> Twitter</a>. </li>
+<ol><li>Creating social infrastructure through a welcoming, engaged and diverse community in a <a href = "https://openplantpathology.slack.com" alt = "Open Plant Pathology Slack Workgroup" title = "Open Plant Pathology Slack Workgroup">Slack chatting workspace</a> and on <a href = "https://twitter.com/OpenPlantPath/"> Twitter</a>. </li>
 
 <img src ="/img/mission1.png">
 
