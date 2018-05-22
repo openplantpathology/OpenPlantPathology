@@ -65,7 +65,7 @@ Either way is more than welcome and these very specific technical discussions ha
 
 Our experiences over the past four months have been positive and the feedback and reaction from others has made our experience such. As leaders, we are facing great challenges such as balancing voluntarily maintaining a community like this with our everyday work loads. It is understandable that after the initial boom, the declining or lack of participation by members are due to similar reasons. Anyway, it is being a great learning and the current and potential benefits that may arise from this community, such as those highlighted above, make it worthwhile and we plan to continue our efforts to help make plant pathology more open and accessible!
 
-Interested in know more and join OPP? Find out how on our [mission webpage](https://www.openplantpathology.org/pages/mission/).
+Interested in know more and join OPP? Find out more on our [mission webpage](https://www.openplantpathology.org/pages/mission/). Convinced you want to join and don't need more backround? <a href = "mailto:openplantpathology@gmail.com" subject= "Interested to join your Slack Workgroup">Send us an e-mail and ask to join our Slack workgroup.</a>
 
 Emerson [Del Ponte](https://twitter.com/edelponte) 
 Adam [Sparks](https://twitter.com/adamhsparks)  
