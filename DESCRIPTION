@@ -10,6 +10,7 @@ Authors@R: c(person("Emerson M", "Del Ponte",
 Description: The source code for the the official webpage of Open Plant Pathology
 Depends: R (>= 3.3.2),
   blogdown,
+  devtools,
   rmarkdown,
   tidyverse,
   viridis

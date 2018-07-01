@@ -14,11 +14,10 @@ cache:
 
 before_script:
   - "Rscript -e 'blogdown::install_hugo()'"
-  - "Rscript -e 'devtools::install_github(repo = 'klippy', username = 'RLesur')'"
+  - "Rscript -e 'devtools::install_github('RLesur/klippy')'"
 
 script:
   - "Rscript -e 'blogdown::build_site()'"
 
 after_success:
 - ./deploy.sh
-
