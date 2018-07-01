@@ -7,6 +7,9 @@ cache:
   directories:
   - $HOME/.npm
 
+r_packages:
+- blogdown
+
 before_install:
 - npm install netlify-cli -g
 - Rscript -e 'blogdown::install_hugo()'
