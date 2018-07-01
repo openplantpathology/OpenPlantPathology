@@ -7,12 +7,16 @@ cache:
   directories:
   - $HOME/.npm
 
-before_install:
-- npm install netlify-cli -g
-- Rscript -e 'blogdown::install_hugo()'
+cache:
+  packages: yes
+  directories:
+    - $HOME/bin
+
+before_script:
+  - "Rscript -e 'blogdown::install_hugo()'"
 
 script:
-- Rscript -e 'blogdown::build_site()'
+  - "Rscript -e 'blogdown::build_site()'"
 
 after_success:
 - ./deploy.sh
