@@ -9,9 +9,7 @@ Authors@R: c(person("Emerson M", "Del Ponte",
                     role = "aut"))
 Description: The source code for the the official webpage of Open Plant Pathology
 Depends: R (>= 3.3.2)
-License: CC
-Encoding: UTF-8
-LazyData: true
+License: CC-BY-4.0
 Imports:
   blogdown,
   rmarkdown,
