@@ -5,15 +5,9 @@ sudo: false
 cache:
   packages: true
   directories:
-  - $HOME/.npm
-
-cache:
-  packages: yes
-  directories:
     - $HOME/bin
 
 before_script:
-  - ./install_netlifyctl.sh
   - Rscript -e 'blogdown::install_hugo()'
 
 script:
