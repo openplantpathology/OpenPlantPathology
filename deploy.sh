@@ -7,7 +7,7 @@ wget https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-l
 tar xvf netlifyctl-linux-amd64-0.4.0.tar.gz -C $HOME/bin
 
 # chmod
-chmod u+x $HOME/bin/netlifyctl/netlifyctl
+chmod u+x $HOME/bin/netlifyctl
 
 echo "Your PATH is $PATH"
 echo "You are on branch $TRAVIS_BRANCH"
