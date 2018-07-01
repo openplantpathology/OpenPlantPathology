@@ -8,11 +8,10 @@ Authors@R: c(person("Emerson M", "Del Ponte",
                     email = "adamhsparks@gmail.com",
                     role = "aut"))
 Description: The source code for the the official webpage of Open Plant Pathology
-Depends: R (>= 3.3.2)
-License: CC-BY-4.0
-URL: https://github.com/openplantpathology/OpenPlantPathology
-Depends:
+Depends: R (>= 3.3.2),
   blogdown,
   rmarkdown,
   tidyverse,
   viridis
+License: CC-BY-4.0
+URL: https://github.com/openplantpathology/OpenPlantPathology
