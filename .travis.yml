@@ -1,37 +1,18 @@
-# Build our Docker container and R pkg on Travis
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-env:
-  global:
-  - REPO=$DOCKER_USER/adamhsparks
-  - USER="adamhsparks"
-  - EMAIL="adamhsparks@gmail.com"
-  - REPO=""
-  - FILES="README.md foo.txt bar.txt"
-  - GH_REPO="github.com/${USER}/${REPO}.git"
-- secure: "put travis gem output here => http://docs.travis-ci.com/user/encryption-keys/"
-
-sudo: required
-
-warnings_are_errors: false
-
-language: generic
-
-services:
-  - docker
+language: R
+sudo: false
+cache:
+  packages: true
+  directories:
+  - $HOME/.npm
 
 before_install:
-    # create & run container using our dockerfile, i.e. compile pkg and render Rmd to HTML
-  - docker build -t $REPO .
+- npm install netlify-cli -g
+- Rscript -e 'blogdown::install_hugo()'
+
+script:
+- Rscript -e 'blogdown::build_site()'
 
 after_success:
-# push git commit to GitHub with knitted Rmd files
-  - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
-  - git clone git://${GH_REPO}
-  - mv -f ${FILES} ${REPO}
-  - cd ${REPO}
-  - git remote
-  - git config user.email ${EMAIL}
-  - git config user.name ${USER}
-  - git add ${FILES}
-  - git commit -m ${MESSAGE}
-- git push "https://${TRAVIS_SECURE_TOKEN_NAME}@${GH_REPO}" master > /dev/null 2>&1
+- ./deploy.sh
