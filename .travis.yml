@@ -14,7 +14,6 @@ cache:
 
 before_script:
   - "Rscript -e 'blogdown::install_hugo()'"
-  - "Rscript -e 'devtools::install_github('RLesur/klippy')'"
 
 script:
   - "Rscript -e 'blogdown::build_site()'"
