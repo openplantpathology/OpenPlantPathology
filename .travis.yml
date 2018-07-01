@@ -13,13 +13,11 @@ cache:
     - $HOME/bin
 
 before_script:
- - "chmod ugo+x ./deploy.sh"
-
-before_script:
-  - "Rscript -e 'blogdown::install_hugo()'"
+  - ./install_netlifyctl.sh
+  - Rscript -e 'blogdown::install_hugo()'
 
 script:
   - "Rscript -e 'blogdown::build_site()'"
 
 after_success:
-- ./deploy.sh
+  - ./deploy.sh
