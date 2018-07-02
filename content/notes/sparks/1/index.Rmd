@@ -16,7 +16,6 @@ csl: phytopathology.csl
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(cache = TRUE)
-ggplot2::theme_set(hrbrthemes::theme_ipsum_rc())
 ```
 
 
@@ -50,9 +49,9 @@ This post will illustrate how to fit the original linear and quadratic models us
 Using the **`tidyverse`**, [-@TIDYVERSE2017] package simplifies the libraries used in this work. It is a collection of packages designed to work together for data science, <https://www.tidyverse.org/>. The **`tidyverse`** includes, **`readr`** [-@READR2017], used to import the data; **`tidyr`** [-@TIDYR2018], used to format the data; **`dplyr`** [-@DPLYR2017], used to subset the data; and **`ggplot2`** [-@GGPLOT22009], used for visualising the data and model fits. **`viridis`** [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing
 in black and white.
 
-The following code chunk checks first to see if you have **`tidyverse`** and **`viridis`** installed, if not, it will automatically install them and then load them.
+The following code chunk checks first to see if you have **`tidyverse`**, **`viridis`** and **`hrbrthemes`** installed, if not, it will automatically install them and then load them. Then set the default theme for all graphs to `theme_ipsum_rc`.
 
-```{r libraries_and_seed, message=FALSE}
+```{r libraries, message=FALSE}
 if (!require(tidyverse)) {
   install.packages(
     "tidyverse",
@@ -68,6 +67,16 @@ if (!require(viridis)) {
   )
   library(viridis)
 }
+
+if (!require(hrbrthemes)) {
+  install.packages(
+    "hrbrthemes",
+    repos = c(CRAN = "https://cloud.r-project.org/")
+  )
+  library(hrbrthemes)
+}
+
+ggplot2::theme_set(hrbrthemes::theme_ipsum_rc())
 ```
 
 # Data Wrangling
