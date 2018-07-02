@@ -21,7 +21,7 @@
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <title
-     id="title6318">OpenPlantPathology</title>
+     id="title6318">Open Plant Pathology Logo</title>
   <defs
      id="defs4">
     <linearGradient
@@ -65,8 +65,8 @@
      showgrid="false"
      borderopacity="1.0"
      inkscape:current-layer="layer2"
-     inkscape:cx="40.335268"
-     inkscape:cy="83.896238"
+     inkscape:cx="63.832663"
+     inkscape:cy="29.068984"
      inkscape:window-width="1680"
      inkscape:pageopacity="0.0"
      inkscape:document-units="px"
@@ -123,10 +123,9 @@
      style="display:inline"
      transform="translate(-19.453134,-21.060528)">
     <g
-       id="g1475"
-       inkscape:export-filename="/Users/adamsparks/Development/OPP.at.IEW12/man/figures/logo.png"
-       inkscape:export-xdpi="155.88"
-       inkscape:export-ydpi="155.88">
+       id="g1101"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <path
          transform="matrix(0.20541542,-1.4864925,1.4864925,0.20541542,340.67957,-2449.266)"
          d="m -1741.2986,26.072918 53.3152,-7.491753 33.1456,42.426403 -20.1695,49.918152 -53.3152,7.49176 -33.1456,-42.426406 z"
@@ -144,32 +143,31 @@
          style="display:inline;opacity:1;fill:#0b5394;fill-opacity:1;stroke:url(#linearGradient977);stroke-width:2.81134081;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:type="star" />
       <g
-         id="g1452">
+         id="g1081">
         <g
-           id="g871"
-           transform="rotate(-1.03191,863.90841,-100105.05)">
+           id="g1063">
           <text
              xml:space="preserve"
-             style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             x="-1543.2321"
-             y="-734.59668"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10.25px;line-height:0%;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold Condensed';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             x="-15.822566"
+             y="197.08235"
              id="text3482"
-             transform="rotate(-30.035424)"><tspan
+             transform="rotate(-30.141559)"><tspan
                sodipodi:role="line"
                id="tspan3484"
-               x="-1543.2321"
-               y="-734.59668"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.99999952px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:none;stroke-width:1px;stroke-opacity:1">Open Plant Pathology</tspan></text>
+               x="-15.822566"
+               y="197.08235"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:9.12506294px;line-height:1.25;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:none;stroke-width:1px;stroke-opacity:1">openplantpathology.org</tspan></text>
           <text
-             transform="rotate(-29.980226)"
+             transform="rotate(-29.875278)"
              id="text849"
-             y="-739.53882"
-             x="-1546.9741"
+             y="188.0939"
+             x="3.7334466"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.49999619px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.93749994"
              xml:space="preserve"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.49999809px;font-family:'Franklin Gothic Heavy';-inkscape-font-specification:'Franklin Gothic Heavy, ';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.93749994"
-               y="-739.53882"
-               x="-1546.9741"
+               style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:27.49999809px;font-family:Roboto;-inkscape-font-specification:'Roboto Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.93749994"
+               y="188.0939"
+               x="3.7334466"
                id="tspan847"
                sodipodi:role="line">OPP</tspan></text>
         </g>
@@ -264,16 +262,16 @@
         <dc:publisher>
           <cc:Agent
              rdf:about="http://openclipart.org/">
-            <dc:title />
+            <dc:title>Open Plant Pathology</dc:title>
           </cc:Agent>
         </dc:publisher>
-        <dc:title>OpenPlantPathology</dc:title>
+        <dc:title>Open Plant Pathology Logo</dc:title>
         <dc:date>2018-01-15</dc:date>
-        <dc:description>Open Plant Pathology Hex Sticker, https://openplantpathology.org</dc:description>
+        <dc:description>Open Plant Pathology Hex Logo, https://openplantpathology.org</dc:description>
         <dc:source>https://openplantpathology.github.io/OpenPlantPathology/public/img/logo.svg</dc:source>
         <dc:creator>
           <cc:Agent>
-            <dc:title>rene hiem, adamhsparks</dc:title>
+            <dc:title>Emerson Del Ponte, Rene Hiem, Ina Geedicke, Adam H Sparks</dc:title>
           </cc:Agent>
         </dc:creator>
         <dc:subject>
