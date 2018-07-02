@@ -13,3 +13,4 @@ script:
 
 after_success:
   - ./deploy.sh
+  - cat netlifyctl-debug.log
