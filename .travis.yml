@@ -8,7 +8,7 @@ cache:
     - $HOME/bin
 
 before_script:
-  - Rscript -e 'blogdown::install_hugo()'
+  - "Rscript -e 'blogdown::install_hugo()'"
 
 script:
   - "Rscript -e 'blogdown::build_site()'"

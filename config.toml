@@ -3,7 +3,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "https://openplantpathology.org/"
  
 # Title of your site
 title = "Open Plant Pathology"
@@ -248,15 +248,11 @@ defaultContentLanguageInSubdir = false
 #  url = "#publications_selected"
 #  weight = 2
 
-
-
-
 [[menu.main]]
   name = "Blog Posts"
   url = "#posts"
   weight = 4
-  
-  
+
 [[menu.main]]
   name = "OPP Notes"
   pre = "<i class='fa fa-bookmark'></i>"
