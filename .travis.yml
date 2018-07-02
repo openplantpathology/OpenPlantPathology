@@ -12,6 +12,7 @@ before_script:
 
 script:
   - "Rscript -e 'blogdown::build_site()'"
+  - "Rscript -e 'blogdown::hugo_build()'"
 
 after_success:
   - ./deploy.sh
