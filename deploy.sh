@@ -17,5 +17,5 @@ then
 	  netlifyctl deploy -y -A $NETLIFYKEY
 else 
     echo "you are not on master, deploying preview."
-    netlifyctl deploy -y -A $NETLIFYKEY --draft
+    netlifyctl deploy -y -A $NETLIFYKEY
 fi
