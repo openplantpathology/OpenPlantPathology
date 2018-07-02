@@ -3,4 +3,4 @@
   Path = "public"
 
 [Build]
-Publish = "master"
+Publish = ""
