@@ -9,6 +9,11 @@ cache:
 
 script:
   - "Rscript -e 'blogdown::install_hugo()'"
+  
+  # knit member directory before building site
+  - "Rscript -e 'knitr::knit('./directory/index.Rmd')'"
+  
+  # build site
   - "Rscript -e 'blogdown::build_site()'"
 
 after_success:
