@@ -14,8 +14,8 @@ echo "You are on branch $TRAVIS_BRANCH"
 if [[ "$TRAVIS_BRANCH" = "master" ]]
 then
 	  echo "you are on master, deploying production."
-	  netlifyctl deploy -y $NETLIFYKEY
+	  netlifyctl deploy -y -A $NETLIFYKEY
 else 
     echo "you are not on master, deploying preview."
-    netlifyctl deploy -y $NETLIFYKEY --draft
+    netlifyctl deploy -y -A $NETLIFYKEY --draft
 fi
