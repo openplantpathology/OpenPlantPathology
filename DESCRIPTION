@@ -11,8 +11,11 @@ Description: The source code for the the official webpage of Open Plant Patholog
 Depends: R (>= 3.3.2),
   blogdown,
   devtools,
+  hrbrthemes,
+  kableExtra,
   klippy,
   rmarkdown,
+  sessioninfo,
   tidyverse,
   viridis
 Remotes: RLesur/klippy
