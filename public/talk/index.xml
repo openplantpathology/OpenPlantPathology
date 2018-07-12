@@ -15,19 +15,22 @@
     <item>
       <title>Introduction to Multivariate Statistics Using R</title>
       <link>/talk/icpp2018-neil-multivariate/</link>
-      <pubDate>Fri, 01 Jan 2010 00:00:00 -0200</pubDate>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 -0300</pubDate>
       
       <guid>/talk/icpp2018-neil-multivariate/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Introduction to Multivariate Statistics Using R</title>
+      <title>Open ideas, data and code sharing: epidemiologists should be in front!</title>
       <link>/talk/iew12-emerson-opp/</link>
-      <pubDate>Fri, 01 Jan 2010 00:00:00 -0200</pubDate>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 -0300</pubDate>
       
       <guid>/talk/iew12-emerson-opp/</guid>
-      <description></description>
+      <description>References
+Bond-Lamberty, B., Smith, A.P., &amp;amp; Bailey, V. 2016: Running an open experiment: transparency and reproducibility in soil and ecosystem science. Environ. Res. Lett., 11:084004.
+Del Ponte, E.M.: Reproducible report: Meta-analysis of relationships between white mold and soybean yield. [WWW document] URL https://emdelponte.github.io/paper-white-mold-meta-analysis. Cited 22 May. 2018.
+Del Ponte E.M. &amp;amp; Sparks A.H.: Open Plant Pathology: a Community to Promote Open Science Practices Including Data, Code and Research Outcomes in Plant Pathology.</description>
     </item>
     
   </channel>

@@ -1,5 +1,5 @@
 +++
-date = 2010-01-01T00:00:00  # Schedule page publish date.
+date = 2018-07-12T00:00:00   # Schedule page publish date.
 title = "Introduction to Multivariate Statistics Using R"
 authors = ["Neil McRoberts"]
 time_start = 2018-07-28T13:00:00
