@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Open Plant Pathology</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0200</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is going on in OPP? a quick summary of the first five months</title>
+      <link>/post/2018-05-20-second-post-five-month-summary/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 -0300</pubDate>
+      
+      <guid>/post/2018-05-20-second-post-five-month-summary/</guid>
+      <description>We founded OPP in early January this year without too much ambition and zero funding. We envisioned a place to connect more easily with other researchers who, like us, are willing to embrace and promote open science and reproducible practices in plant pathology, mainly focusing on computational aspects of the analysis.
+To achieve this goal, OPP evolved to:
+ a core group (leadership) and members who participate in our Slack workspace the OPP website with members&amp;rsquo; directory, blog and OPP Notes a Twitter account a GitHub organisation.</description>
+    </item>
+    
+    <item>
+      <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
+      <link>/post/2018-01-08-first-post-community-call/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/post/2018-01-08-first-post-community-call/</guid>
+      <description>Since the early times, plant pathologists faced the need to deal with quantitative data and analysis using mathematics and, more recently, computational tools. The primary leaders in quantitative methods in plant pathology were a relatively small international group of scientists with various backgrounds related to plant pathology.
+This group felt the need to connect and then Plant Disease Epidemiology was formally recognized as a discipline more than 50 years ago. Since then plant epidemiologists/pathologists have met around the world to network, brainstorm and learn from each other to advance the discipline by sharing ideas, experiences, knowledge and philosophical viewpoints.</description>
+    </item>
+    
+  </channel>
+</rss>

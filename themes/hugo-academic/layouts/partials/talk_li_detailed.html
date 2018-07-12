@@ -29,7 +29,18 @@
       <h3 class="article-title" itemprop="name">
         <a href="{{ .Permalink }}" itemprop="url">{{ .Title }}</a>
       </h3>
-
+       <div class="pub-authors" itemprop="author">
+        {{ with .Params.authors }}
+        {{ delimit . ", " | markdownify }}
+        {{ end }}
+      </div><BR>  <div class="talk-metadata">
+        {{ if .Params.event }}
+        {{ .Params.event | markdownify }}
+        {{ else if .Params.event_short }}
+        {{ .Params.event_short | markdownify }}
+        {{ end }}
+      </div>
+      
       <div class="talk-metadata" itemprop="startDate">
         {{ $date := .Params.time_start | default .Date }}
         {{ (time $date).Format $.Site.Params.date_format }}
@@ -41,13 +52,7 @@
         {{ end }}
       </div>
 
-      <div class="talk-metadata">
-        {{ if .Params.event }}
-        {{ .Params.event | markdownify }}
-        {{ else if .Params.event_short }}
-        {{ .Params.event_short | markdownify }}
-        {{ end }}
-      </div>
+    
 
       <div class="talk-abstract" itemprop="text">
         {{ if .Params.abstract_short }}

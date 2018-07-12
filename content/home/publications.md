@@ -9,7 +9,7 @@ title = "OPP Notes"
 subtitle = "Teaching notes peer-reviewed by community members.<br/><br/> [>Contribute an OPP Note](https://github.com/openplantpathology/contributions)<br/>[>All Notes](/publication/)"
 
 # Order that this section will appear in.
-weight = 45
+weight = 41
 
 # Number of publications to list.
 count = 10
