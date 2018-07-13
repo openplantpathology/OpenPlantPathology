@@ -8,7 +8,7 @@ abstract = "<img src = '/img/learning/talk_opp1.png' width=400 align=right> Bota
 abstract_short = "<img style = 'margin: 10px' src = '/img/learning/talk_opp2.png' align=right>Talk presented at the 12th International Epidemiology Workshop stimulate discussion on the need for reproducible research practices in the field of Plant Pathology. The Open Plant Pathology initiative was presented as a way to foster relationships between plant pathologists and promote open, transparent and reproducible research using shared data and reusable software. [Slides here](https://speakerdeck.com/emdelponte/open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front)"
 event = "IEW12 June 12"
 event_url = ""
-location = "Lilihammer, Norway"
+location = "Lillehammer, Norway"
 
 # Is this a selected talk? (true/false)
 selected = false
