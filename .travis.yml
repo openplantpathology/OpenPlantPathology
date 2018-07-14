@@ -13,8 +13,7 @@ before_install:
 
 script:
   - Rscript -e 'blogdown::install_hugo()'
-  - Rscript -e 'getwd()'
-  - Rscript -e 'knitr::knit("OpenPlantPathology/static/directory/index.Rmd")'
+  - Rscript -e 'knitr::knit("static/directory/index.Rmd")'
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
   - Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'
 
