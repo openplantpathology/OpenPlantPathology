@@ -4,8 +4,10 @@ language: R
 sudo: false
 cache:
   packages: true
-  directories:
-    - $HOME/bin
+  - $HOME/.npm
+branches:
+  only: 
+- master
     
 before_install:
   - npm install netlify-cli -g
