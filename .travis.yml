@@ -13,9 +13,9 @@ before_install:
 
 script:
   - Rscript -e 'blogdown::install_hugo()'
+  - Rscript -e 'hrbrthemes::import_roboto_condensed()'
   - Rscript -e 'knitr::knit("content/notes/sparks/1/index.Rmd")'
   - Rscript -e 'knitr::knit("static/directory/index.Rmd")'
-  - Rscript -e 'hrbrthemes::import_roboto_condensed()'
   - Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'
 
 after_success:
