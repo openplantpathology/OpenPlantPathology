@@ -5,17 +5,14 @@ sudo: false
 cache:
   packages: true
   - $HOME/.npm
-branches:
-  only: 
-- master
-    
+
 before_install:
   - npm install netlify-cli -g
-  - Rscript -e 'blogdown::install_hugo()'
+  - "Rscript -e 'blogdown::install_hugo()'"
   
 script:
   # knit member directory before building site
-  - Rscript -e 'knitr::knit('/adamhsparks/OpenPlantPathology/static/directory/index.Rmd')'
+  - "Rscript -e 'knitr::knit('/adamhsparks/OpenPlantPathology/static/directory/index.Rmd')'"
   
   # import Roboto condensed
 - "Rscript -e 'hrbrthemes::import_roboto_condensed()'"
