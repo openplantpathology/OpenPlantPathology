@@ -1,6 +1,8 @@
-.Rproj.user
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 public/
 blogdown/
+content/posts/*.html
+content/posts/*.markdown
