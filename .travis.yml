@@ -8,8 +8,9 @@ cache:
 
 before_install:
   - npm install netlify-cli -g
-  - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev hugo
+  - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
   - fc-cache -fv
+  - Rscript -e 'blogdown::install_hugo()'
 
 script:
   - Rscript -e 'knitr::knit("openplantpathology/OpenPlantPathology/static/directory/index.Rmd")'
