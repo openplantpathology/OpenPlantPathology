@@ -6,11 +6,20 @@ cache:
   packages: true
   directories:
     - $HOME/bin
-
+    
+before_install:
+  - npm install netlify-cli -g
+  - Rscript -e 'blogdown::install_hugo()'
+  
 script:
-  - "Rscript -e 'blogdown::install_hugo()'"
-  - "Rscript -e 'blogdown::build_site()'"
+  # knit member directory before building site
+  - Rscript -e 'knitr::knit('/adamhsparks/OpenPlantPathology/static/directory/index.Rmd')'
+  
+  # import Roboto condensed
+- "Rscript -e 'hrbrthemes::import_roboto_condensed()'"
+
+  # build the website
+  - Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'
 
 after_success:
   - ./deploy.sh
-  - cat netlifyctl-debug.log
