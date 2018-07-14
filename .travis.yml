@@ -1,5 +1,5 @@
 
-language: r
+language: R
 sudo: false
 cache:
   directories:
@@ -7,14 +7,14 @@ cache:
 
 before_install:
   - npm install netlify-cli -g
-  - "Rscript -e 'blogdown::install_hugo()'"
+  - Rscript -e 'blogdown::install_hugo()'
   - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
   - fc-cache -fv
 
 script:
-  - "Rscript -e 'knitr::knit("openplantpathology/OpenPlantPathology/static/directory/index.Rmd")'"
-  - "Rscript -e 'hrbrthemes::import_roboto_condensed()'"
-  - "Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'"
+  - Rscript -e 'knitr::knit("openplantpathology/OpenPlantPathology/static/directory/index.Rmd")'
+  - Rscript -e 'hrbrthemes::import_roboto_condensed()'
+  - Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'
 
 after_success:
   - ./deploy.sh
