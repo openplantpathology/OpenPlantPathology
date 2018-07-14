@@ -1,8 +1,10 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: r
 sudo: false
 cache:
   packages: true
+  directories:
   - $HOME/.npm
 
 before_install:
@@ -10,11 +12,11 @@ before_install:
   - Rscript -e 'blogdown::install_hugo()'
   - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
   - fc-cache -fv
-  
+
 script:
   # knit member directory before building site
   - Rscript -e 'knitr::knit("openplantpathology/OpenPlantPathology/static/directory/index.Rmd")'
-  
+
   # import Roboto condensed
 - Rscript -e 'hrbrthemes::import_roboto_condensed()'
 
