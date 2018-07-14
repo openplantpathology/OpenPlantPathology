@@ -1,9 +1,8 @@
 #!/bin/bash
 
-go get -d github.com/netlify/netlifyctl
-cd $GOPATH/src/github.com/netlify/netlifyctl
-make deps build
-go install
+wget https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz
+tar xvf netlifyctl-linux-amd64-0.4.0.tar.gz -C $HOME/bin
+chmod u+x $HOME/bin/netlifyctl
 
 echo "Your PATH is $PATH"
 echo "You are on branch $TRAVIS_BRANCH"
