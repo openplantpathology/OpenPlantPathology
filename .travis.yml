@@ -14,7 +14,8 @@ script:
   - Rscript -e 'blogdown::install_hugo()'
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
   - Rscript -e 'blogdown::build_site()'
-  - Rscript -e 'knitr::knit("./static/directory/index.Rmd")'
+  - cd ./static/directory
+  - Rscript -e 'knitr::knit(input = "./static/directory/index.Rmd", output = "./static/directory/index.md")'
 
 after_success:
   - ./deploy.sh
