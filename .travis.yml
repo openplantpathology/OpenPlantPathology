@@ -17,4 +17,5 @@ script:
   - Rscript -e 'knitr::knit(input = "./static/directory/index.Rmd", output = "./static/directory/index.md")'
 
 after_success:
-  - ./deploy.sh
+  - ls ./static/directory
+  - ls ./static/notes/sparks/1
