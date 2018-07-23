@@ -1,6 +1,20 @@
-[Settings]
-  ID = "0aa6ef23-9faf-4b84-9525-e2a4769aeb73"
+# Global settings applied to the whole site.
+[build]
+  command = "hugo"
+  publish = "public"
 
-[Build]
-  Publish = "public"
-  Functions = ""
+# Build a preview of the site (Drafts and Future dates also)
+#   Un-comment next two lines.
+#[context.deploy-preview]
+#  command = "hugo --buildFuture"
+
+[context.production.environment]
+  HUGO_VERSION = "0.41"
+
+# you can lock a version of hugo for a deploy preview
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.41"
+
+# you can lock a version of hugo for a branch-deploy (other than previews)
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.41"
