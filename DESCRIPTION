@@ -24,6 +24,7 @@ Depends: R (>= 3.3.2),
   sessioninfo,
   tidyverse,
   viridis
-Remotes: RLesur/klippy
+Remotes: RLesur/klippy,
+  dkahle/ggmap
 License: CC-BY-4.0
 URL: https://github.com/openplantpathology/OpenPlantPathology
