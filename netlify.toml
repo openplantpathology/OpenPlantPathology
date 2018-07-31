@@ -2,7 +2,7 @@
   ID = "0aa6ef23-9faf-4b84-9525-e2a4769aeb73"
 
 [Build]
-  Command = "hugo"
+  Command = "Hugo"
   HUGO_VERSION = "0.45.1"
   Publish = "public"
   Functions = ""
