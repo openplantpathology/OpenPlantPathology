@@ -3,15 +3,17 @@ language: r
 sudo: true
 cache:
   packages: true
-  directories:
-    - $HOME/.npm
 
 before_install:
-  - npm install netlify-cli -g
   - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
   - fc-cache -fv
 
 script:
+  - wget https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz
+  - tar xvf netlifyctl-linux-amd64-0.4.0.tar.gz -C $HOME/bin
+
+# chmod
+chmod u+x $HOME/bin/netlifyctl
   - Rscript -e 'blogdown::install_hugo()'
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
   - Rscript -e 'knitr::knit("static/directory/index.Rmd")'
