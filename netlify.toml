@@ -3,5 +3,6 @@
 
 [Build]
   Command = "hugo"
+  HUGO_VERSION = "0.45.1"
   Publish = "public"
   Functions = ""
