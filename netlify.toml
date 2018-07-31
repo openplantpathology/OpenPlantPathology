@@ -3,6 +3,9 @@
 
 [Build]
   Command = "hugo"
-  HUGO_VERSION = "0.40"
   Publish = "public"
   Functions = ""
+
+
+[context.production.environment]
+  HUGO_VERSION = "0.35"
