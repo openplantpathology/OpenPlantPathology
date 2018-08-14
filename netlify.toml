@@ -1,5 +1,7 @@
-[Settings]
-  ID = "0aa6ef23-9faf-4b84-9525-e2a4769aeb73"
+# Global settings applied to the whole site.
+[build]
+  command = "hugo"
+  publish = "public"
 
 [Build]
   Command = "hugo"
