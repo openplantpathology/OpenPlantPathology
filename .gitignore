@@ -10,3 +10,4 @@ static/directory/*.html
 static/directory/*.md
 static/notes/
 
+.Rproj.user

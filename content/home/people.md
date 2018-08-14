@@ -38,6 +38,14 @@ filter_default = 0
   tag = ".Founder"  
 
 [[filter]]
+  name = "Leadership"
+  tag = ".Leadership"  
+  
+[[filter]]
+  name = "Junior Leadership"
+  tag = ".Junior"
+
+[[filter]]
   name = "Epidemiology"
   tag = ".Epidemiology"
 
@@ -49,9 +57,18 @@ filter_default = 0
   name = "Mathematical Modeling"
   tag = ".Modeling"
 
+[[filter]]
+  name = "Remote sensing"
+  tag = ".Remote_sensing"  
+  
+  
+[[filter]]
+  name = "Decision Support Systems"
+  tag = ".DSS" 
+  
 +++
 
 
 # Leadership
-Filter by knowledge domain
+Filter by knowledge domain or Leadership
 
