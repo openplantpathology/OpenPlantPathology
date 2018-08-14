@@ -19,7 +19,7 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = "https://speakerd.s3.amazonaws.com/presentations/173f5616f13645dfb9e5625ccc9d6235/useR_2018_Talk.pdf"
+url_pdf = ""
 url_slides = "https://speakerdeck.com/adamhsparks/establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r"
 url_video = ""
 url_code = ""

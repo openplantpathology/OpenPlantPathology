@@ -19,7 +19,7 @@ selected = false
 #projects = ["deep-learning"]
 
 # Links (optional).
-url_pdf = "https://speakerd.s3.amazonaws.com/presentations/0a9a6164e847433998efb3c404d35f5d/IEW12-talk.pdf"
+url_pdf = ""
 url_slides = "https://speakerdeck.com/emdelponte/open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front"
 url_video = ""
 url_code = "https://openplantpathology.github.io/OPP.at.IEW12/"
