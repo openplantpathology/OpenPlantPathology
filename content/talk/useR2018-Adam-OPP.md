@@ -6,7 +6,7 @@ time_start = 2018-07-13T14:00:00
 time_end = 2018-07-13T14:20:00
 abstract = "<img src = '/img/learning/talk_opp1.png' width=400 align=right> Botanical epidemiologists have long been leaders in adopting new and novel mathematical, statistical and computational approaches to address theoretical and applied research problems. As the availability of data increases at scales from genomes to landscapes, our approaches now require even more diverse skills to collaborate and advance the field. Reproducible research and open science practices are chief among these, however, relatively few examples in plant pathology exist. To support the adoption of these practices, we founded the Open Plant Pathology community (https://openplantpathology.org), which aims to foster relationships between researchers and promote open, transparent and reproducible research using shared data and reusable software, using R. I will discuss our methods of community building and what has worked and what has not for others that may wish to pursue similar efforts."
 abstract_short = "<img style = 'margin: 10px' src = '/img/learning/talk_opp2.png' align=right>Lighning talk presented at useR!2018 in Brisbane, Queensland, Australia. [Slides here](https://speakerdeck.com/adamhsparks/establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r)"
-event = "useR!2018"
+event = "useR!2018 July 13, 2018"
 event_url = "https://user2018.r-project.org/"
 location = "Bribane, Australia"
 
