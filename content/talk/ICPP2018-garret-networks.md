@@ -6,7 +6,7 @@ time_start = 2018-07-29T13:00:00
 time_end = 2018-07-29T17:00:00
 abstract = "<img src = '/img/learning/networks1.png' align=right> Networks are a key component of plant pathology, and understanding them supports genetics, microbiome science, and epidemiology. This [Workshop](https://kelseyandersen.github.io/NetworksPlantPathology/index.html) will prepare participants to interpret network analyses, and will provide participants with experience in network analysis for several representative data sets. The learning goals for this workshop are for participants to (1) understand basic ideas in network science, and (2) gain practice in network analysis with examples including microbiome networks, epidemic networks, and networks of the spread of technologies. The workshop will use the R programming environment, and will provide a brief introduction to R."
 abstract_short = "<img style = 'margin: 10px' src ='/img/learning/networks2.png'>  This [Workshop](https://kelseyandersen.github.io/NetworksPlantPathology/index.html) will prepare participants to interpret network analyses, and will provide participants with experience in network analysis for several representative data sets. The workshop will use the R programming environment, and will provide a brief introduction to R."
-event = "ICPP2018 July 28"
+event = "ICPP2018 July 28, 2018"
 event_url = "https://apsnet.confex.com/apsnet/ICPP2018/meetingapp.cgi/Session/2111"
 location = "Boston, United States"
 
