@@ -1,6 +1,6 @@
 +++
 date = 2018-07-10T00:00:00  # Schedule page publish date.
-title = "Open ideas, data and code sharing: epidemiologists should be in front!"
+title = "Talk: Open ideas, data and code sharing: epidemiologists should be in front!"
 authors = ["Emerson Del Ponte", "Adam Sparks"]
 time_start = 2018-06-12T14:00:00
 time_end = 2018-06-12T14:20:00

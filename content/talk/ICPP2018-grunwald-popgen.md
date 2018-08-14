@@ -1,6 +1,6 @@
 +++
 date = 2018-08-06T00:00:00   # Schedule page publish date.
-title = "Population Genomics in R"
+title = "Workshop: Population Genomics in R"
 authors = ["Nik Grünwald", "Brian Knaus", "Zachary Foster"]
 time_start = 2018-07-28T13:00:00
 time_end = 2018-07-28T17:00:00

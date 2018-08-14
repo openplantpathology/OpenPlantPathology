@@ -1,6 +1,6 @@
 +++
 date = 2018-07-12T00:00:00   # Schedule page publish date.
-title = "Introduction to Multivariate Statistics Using R"
+title = "Workshop: Introduction to Multivariate Statistics Using R"
 authors = ["Neil McRoberts"]
 time_start = 2018-07-28T13:00:00
 time_end = 2018-07-28T17:00:00

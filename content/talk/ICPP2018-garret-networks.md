@@ -1,6 +1,6 @@
 +++
 date = 2018-08-07T00:00:00   # Schedule page publish date.
-title = "Network Analysis in Plant Pathology"
+title = "Workshop: Network Analysis in Plant Pathology"
 authors = ["Karen Garret", "Ravin Poudel", "Kelsey F. Andersen", "James Fulton"]
 time_start = 2018-07-29T13:00:00
 time_end = 2018-07-29T17:00:00

@@ -1,6 +1,6 @@
 +++
 date = 2018-07-13T00:00:00  # Schedule page publish date.
-title = "Establishing a community for supporting and fostering adoption of reproducible research using R"
+title = "Talk: Establishing a community for supporting and fostering adoption of reproducible research using R"
 authors = ["Adam H. Sparks", "Emerson Del Ponte"]
 time_start = 2018-07-13T14:00:00
 time_end = 2018-07-13T14:20:00
