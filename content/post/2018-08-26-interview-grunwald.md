@@ -2,8 +2,8 @@
 date = 2018-08-26
 lastmod = 2018-08-26
 draft = false
-tags = ["Community", "Population Biology", "Interview"]
-title = "OPP Interviews: Niklaus J. Grünwald "
+tags = ['Community', 'Population Biology', 'Interview']
+title = 'OPP Interviews: Niklaus J. Grünwald'
 math = true
 summary = """
 <img src = "/img/members/grunwald.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right"> Our first OPP Interview features Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of *Phytophthora infestans* worldwide. His lab has developed R packages which have contributed considerably to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution, beyond the field of plant pathology.
@@ -14,12 +14,10 @@ image = ""
 caption = ""
 
 +++
- 
-
 <div class=body style = "background-color: #f6f6f6; padding: 15px; margin-bottom:40px; margin-top: 30px">In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. </div>
 
 
-<img width = 320px src = "/img/posts/post3-nik-interview.png" style = " margin: 30px; float: right">  Our first OPP interview features Dr. Niklaus Grünwald ([@PhytophthoraLab on Twitter](https://twitter.com/PhytophthoraLab)), a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik is well recognized by his [research](http://grunwaldlab.cgrb.oregonstate.edu/lab-biblio#overlay-context=lab-biblio) on population genetics and genomics of plant pathogens - mainly on oomycetes of major importance to global agriculture. The [Grünwald Lab](http://grunwaldlab.cgrb.oregonstate.edu/) has made significant scientific contributions to the understanding of the population biology and evolution of *Phytophthora infestans* worldwide. More recently, his students have developed R packages which have contributed considerably to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution, beyond the field of plant pathology. Members of the Grünwald Lab has offered workshops on reproducible research and the analysis of genomic data during the APS meetings using those packages. It is our great pleasure to have Nik answering six questions that we prepared for him.
+<img width = 320px src = "/img/posts/post3-nik-interview.png" style = " margin: 30px; float: right">  Our first OPP interview features Dr. Niklaus Grünwald [@PhytophthoraLab on Twitter](https://twitter.com/PhytophthoraLab), a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik is well recognized by his [research](http://grunwaldlab.cgrb.oregonstate.edu/lab-biblio#overlay-context=lab-biblio) on population genetics and genomics of plant pathogens - mainly on oomycetes of major importance to global agriculture. The [Grünwald Lab](http://grunwaldlab.cgrb.oregonstate.edu/) has made significant scientific contributions to the understanding of the population biology and evolution of *Phytophthora infestans* worldwide. More recently, his students have developed R packages which have contributed considerably to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution, beyond the field of plant pathology. Members of the Grünwald Lab has offered workshops on reproducible research and the analysis of genomic data during the APS meetings using those packages. It is our great pleasure to have Nik answering six questions that we prepared for him.
 <br><br>
 
 
