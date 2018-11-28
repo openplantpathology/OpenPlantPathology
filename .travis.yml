@@ -16,7 +16,7 @@ before_install:
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
 
 script:
-  - Rscript -e 'knitr::knit("static/directory/index.Rmd")'
+  - Rscript -e 'knitr::render_markdown("static/directory/index.Rmd")'
   - Rscript -e 'blogdown::build_site()'
 
 deploy:
