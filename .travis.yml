@@ -1,6 +1,8 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
 language: r
-sudo: true
+dist: xenial
+sudo: false
 cache:
   packages: true
   directories:
