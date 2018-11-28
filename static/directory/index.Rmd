@@ -15,11 +15,6 @@ output:
 
 
 ```{r include=FALSE}
-Sys.setlocale("LC_ALL", "pt_BR.UTF-8")
-```
-
-
-```{r include=FALSE}
 # load existing member and location data
 load("./data/existing_members.Rds")
 load("./data/existing_locations.Rds")
