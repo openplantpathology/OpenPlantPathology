@@ -1,8 +1,10 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: r
-dist: xenial
 sudo: false
+language: node_js
+node_js:
+  - "node" #use latest version of node_js
 cache:
   packages: true
   directories:
