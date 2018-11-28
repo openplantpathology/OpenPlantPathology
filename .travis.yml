@@ -1,22 +1,22 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: r
-sudo: true
+sudo: false
 cache:
   packages: true
-#  directories:
-#  - $HOME/.npm
+  directories:
+  - $HOME/.npm
 
 before_install:
   - npm install netlify-cli -g
-  - sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
-  - fc-cache -fv
+  #- sudo apt-get install -y fonts-roboto libgeos-dev libgdal-dev libudunits2-dev
+  #- fc-cache -fv
   - Rscript -e 'blogdown::install_hugo()'
-  - Rscript -e 'hrbrthemes::import_roboto_condensed()'
+  #- Rscript -e 'hrbrthemes::import_roboto_condensed()'
 
 script:
-  - Rscript -e 'knitr::knit("static/directory/index.Rmd")'
-  - Rscript -e 'blogdown::build_site(local = Sys.getenv("TRAVIS_PULL_REQUEST_BRANCH") != "")'
+  #- Rscript -e 'knitr::knit("static/directory/index.Rmd")'
+  - Rscript -e 'blogdown::build_site()'
 
 deploy:
   provider: script
