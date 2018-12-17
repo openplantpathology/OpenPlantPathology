@@ -1,0 +1,3 @@
+[submodule "static/directory"]
+	path = static/directory
+	url = https://github.com/openplantpathology/opp_members_directory
