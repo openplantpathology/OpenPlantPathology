@@ -20,5 +20,5 @@ script:
 
 deploy:
   provider: script
-  script: netlify deploy -a $NETLIFY_KEY
+  script: netlify deploy -a $NETLIFY_KEY --prod --dir=public
   skip_cleanup: true
