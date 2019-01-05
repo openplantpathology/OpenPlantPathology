@@ -17,6 +17,7 @@ before_install:
 
 script:
   - Rscript -e 'blogdown::build_site(method = "html")'
+  - Rscript -e 'rmarkdown::render("static/directory/index.Rmd")'
 
 deploy:
   provider: script
