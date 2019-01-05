@@ -17,7 +17,6 @@ before_install:
 
 script:
   - Rscript -e 'blogdown::build_site(method = "html")'
-  - ls public/notes/sparks/1/index_files/figure-html
 
 deploy:
   provider: script
