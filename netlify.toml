@@ -2,10 +2,8 @@
   ID = "0aa6ef23-9faf-4b84-9525-e2a4769aeb73"
 
 [Build]
+  Publish = "public/"
   Command = "hugo"
-  Publish = "public"
-  Functions = ""
-
 
 [context.production.environment]
   HUGO_VERSION = "0.50"

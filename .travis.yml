@@ -11,7 +11,7 @@ before_install:
   - nvm install 8
   - npm install netlify-cli -g
   - Rscript -e 'blogdown::install_hugo()'
-  - sudo apt-get install -y fonts-roboto pandoc-citeproc
+  - sudo apt-get install -y fonts-roboto
   - fc-cache -fv
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
 
