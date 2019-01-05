@@ -1,3 +1,6 @@
 [submodule "static/directory"]
 	path = static/directory
 	url = https://github.com/openplantpathology/opp_members_directory
+[submodule "content/notes"]
+	path = content/notes
+	url = https://github.com/openplantpathology/opp_notes
