@@ -6,7 +6,7 @@ active = true
 date = 2018-01-01
 
 title = "OPP Notes"
-subtitle = "Teaching notes peer-reviewed by community members.<br/><br/> [>Contribute an OPP Note](https://github.com/openplantpathology/contributions)<br/>[>All Notes](/publication/)"
+subtitle = "Teaching notes peer-reviewed by community members.<br/><br/> [>Contribute an OPP Note](https://github.com/openplantpathology/opp_notes)<br/>[>All Notes](/publication/)"
 
 # Order that this section will appear in.
 weight = 41
