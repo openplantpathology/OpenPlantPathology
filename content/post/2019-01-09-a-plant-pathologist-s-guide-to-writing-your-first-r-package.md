@@ -23,6 +23,8 @@ citations! Yes, if you write a nice R package that people like and use and you
 have provided the proper information, it can (and should) lead to citations for
 you.
 
+## Resources
+
 Rather than writing another lengthy blog post about how to create an R
 package, I'll just point to some of the resources that are available
 to get you started and fill in what I see as some gaps.
@@ -90,6 +92,8 @@ a few guidelines that you need to follow.
 
 Also note, that the use of an underscore, "\_", is not allowed in package names.
 
+It is best to keep it short and informative.
+
 Once you have picked a good name, check that it is available and does not
 have any connotations you might want to convey using **available**,
 `available::available("spiffypkgname")`.
@@ -102,19 +106,18 @@ spiffy new package name) or use `usethis::create_package("spiffypkgname")`,
 which will set up the directories you need go get started and add the
 skeleton of an R package for you to start filling in.
 
-
 ### What Goes Where?
 
 If you check inside your working directory, you'll see a file structure like
 this:
 
-`
+```
 spiffypkgname
   | - DESCRIPTION
   | - NAMESPACE
   | - R/
   | - man/
-`
+```
 
 There, you've created an R package!
 
@@ -137,6 +140,7 @@ The man directory is where the help files are stored. Once you start documenting
 the scripts in R, this will populate.
 
 ### Documenting
+
 A properly documented package will make it much easier for the end user, which
 means it is more likely to be used. 
 
@@ -173,6 +177,15 @@ illustration. You can set up a vignette that's written using
 `usethis::use_vignette("spiffypkgname")`, which creates a vignette
 simply named "spiffypkgname", corresponding to your package name and sets up
 a template for you to edit with your examples.
+
+### Example Data
+
+If you have example data that you wish to include in your package, you may do
+so. Most of the time you will want to use `inst/exdata` to include example files
+to show how to parse data using the package. See Hadley's
+[book section on data](http://r-pkgs.had.co.nz/data.html) for a
+thorough discussion on the different ways data can be incorporated and when you
+might wish to use them.
 
 ### Citation
 
@@ -242,7 +255,13 @@ academic that might be writing an R package for sharing with others and
 to highlight some of the newer tools that are now available for getting
 started.
 
+Of course you are free to join our
+[Slack workgroup](http://r-pkgs.had.co.nz/data.html) as well and ask questions. A
+few of us have experience with different types of R packages and are happy to
+offer support. If you wish to join, flick us an e-mail at
+<openplantpathology@gmail.com> and we will send you an invite link. 
+
 If anything is not clear or you think I have left something important out,
-please leave a comment below and let me know.
+please leave a comment below or join our Slack group and let me know.
 
 
