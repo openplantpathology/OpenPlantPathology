@@ -10,7 +10,25 @@ cache:
 before_install:
   - nvm install 8
   - npm install netlify-cli -g
-  - Rscript -e 'install.packages("blogdown", dependencies = TRUE)'
+  - Rscript -e 'install.packages(c(
+                        "blogdown",
+                        "hrbrthemes", 
+                        "DT",
+                        "devtools",
+                        "flexdashboard",
+                        "googleway",
+                        "gsheet",
+                        "kableExtra",
+                        "leaflet",
+                        "rmarkdown",
+                        "magrittr",
+                        "remotes",
+                        "plotly",
+                        "sessioninfo",
+                        "tidyverse",
+                        "viridis"),
+        dependencies = TRUE)'
+  - Rscript -e 'remotes::install_github("RLesur/klippy")'
   - Rscript -e 'blogdown::install_hugo()'
   - sudo apt-get install -y fonts-roboto libjq-dev
   - fc-cache -fv
