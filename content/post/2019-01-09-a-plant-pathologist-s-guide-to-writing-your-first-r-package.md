@@ -222,9 +222,9 @@ GitHub has teamed up with Zenodo to offer DOIs to help make your package more
 citeable. Head over to the GitHub Guides and have a read over the
 [Making Your Code Citeable](https://guides.github.com/activities/citable-code/).
 
-Using OSF (Open Science Framework) is also an option but this does not offer
-DOIs for individual releases like Zenodo does, which will offer a project DOI
-and a newly minted DOI for each release, e.g. v1.0.0, v1.0.2, etc.
+Using [OSF (Open Science Framework)](https://osf.io) is also an option but this
+does not offer DOIs for individual releases like Zenodo does, which will offer a
+project DOI and a newly minted DOI for each release, e.g. v1.0.0, v1.0.2, etc.
 
 ### Website
 
