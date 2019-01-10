@@ -194,8 +194,8 @@ to cite when your users type `citation("spiffypkgname")` they'll get
 a nicely formatted example of how to cite your package. To do this you need
 to create a CITATION file with no file extension in the `inst` subdirectory
 of your package. The contents of the CITATION file should look something like
-what follows here. You don't need to change "year" or "note"", these are
-autofilled with the values taken from the first two lines. The bibtype will
+what follows here. You don't need to change `year` or `note`, these are
+autofilled with the values taken from the first two lines. The `bibtype` will
 always be "Manual" as well.
 
 ```
