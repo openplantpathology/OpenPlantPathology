@@ -220,7 +220,7 @@ easily create a website for your package that tells users about it.
 
 GitHub has teamed up with Zenodo to offer DOIs to help make your package more
 citeable. Head over to the GitHub Guides and have a read over the
-[Making Your Code Citeable](http://guides.github.com/activities/citeable-code).
+[Making Your Code Citeable](https://guides.github.com/activities/citable-code/).
 
 Using OSF (Open Science Framework) is also an option but this does not offer
 DOIs for individual releases like Zenodo does, which will offer a project DOI
