@@ -192,10 +192,11 @@ might wish to use them.
 I did mention citations at the beginning. Ideally your package should be easy
 to cite when your users type `citation("spiffypkgname")` they'll get
 a nicely formatted example of how to cite your package. To do this you need
-to create a CITATION file in a new subdirectory, inst, of your package. The
-contents of the CITATION file should look something like this. You don't need
-to change year or note, these are autofilled with the values taken from the
-first two lines. The bibtype will always be "Manual" as well.
+to create a CITATION file with no file extension in the `inst` subdirectory
+of your package. The contents of the CITATION file should look something like
+what follows here. You don't need to change "year" or "note"", these are
+autofilled with the values taken from the first two lines. The bibtype will
+always be "Manual" as well.
 
 ```
 year <- sub("-.*", "", meta$Date)
