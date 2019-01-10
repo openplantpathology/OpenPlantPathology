@@ -23,6 +23,18 @@ citations! Yes, if you write a nice R package that people like and use and you
 have provided the proper information, it can (and should) lead to citations for
 you.
 
+Before we proceed. I have made some basic assumptions here.
+
+1. You are familiar enough with R to write your own functions.
+
+2. You are using or are interested in using [GitHub](https://www.github.com/) to
+share your code with others.
+
+3. You have [RStudio](https://www.rstudio.org) installed.
+
+4. You have read at least one of the aforementioned resources or intend to use
+them in addition to this brief blog post.
+
 ## Resources
 
 Rather than writing another lengthy blog post about how to create an R
@@ -48,18 +60,6 @@ I will spend some time covering areas that I have found useful, but that they
 do not cover like CITATION files (and why you need one), setting up a
 [**pkgdown**](https://pkgdown.r-lib.org) website or how to get a DOI for the
 package.
-
-Before we proceed. I have made some basic assumptions here.
-
-1. You are familiar enough with R to write your own functions.
-
-2. You are using or are interested in using [GitHub](https://www.github.com/) to
-share your code with others.
-
-3. You have [RStudio](https://www.rstudio.org) installed.
-
-4. You have read at least one of the aforementioned resources or intend to use
-them in addition to this brief blog post.
 
 ### Getting Started
 
