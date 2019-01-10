@@ -25,7 +25,7 @@ you.
 
 Before we proceed. I have made some basic assumptions here.
 
-1. You are familiar enough with R to write your own functions.
+1. You are familiar enough with R to write your own [functions](http://adv-r.had.co.nz/Functions.html).
 
 2. You are using or are interested in using [GitHub](https://www.github.com/) to
 share your code with others.
