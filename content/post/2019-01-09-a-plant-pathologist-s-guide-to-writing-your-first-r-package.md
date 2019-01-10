@@ -32,7 +32,7 @@ share your code with others.
 
 3. You have [RStudio](https://www.rstudio.org) installed.
 
-4. You have read at least one of the aforementioned resources or intend to use
+4. You have read at least one of the next resources mentioned and/or intend to use
 them in addition to this brief blog post.
 
 ## Resources
