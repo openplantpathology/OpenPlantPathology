@@ -77,7 +77,7 @@ If you have not already installed these packages, install them now. They
 can be installed as follows.
 
 ```{r install-packages, eval=FALSE}
-install.packages(c("devtools", "usethis", "available", "pkgdown"),
+install.packages(c("devtools", "usethis", "available", "pkgdown", "goodpractice"),
 		 dependencies = TRUE)
 ```
 
@@ -245,8 +245,8 @@ on the main page of your repository to fill this field in).
 Insert the GitHub links for the repository and for users to file Issues into
 the DESCRIPTION file, `usethis::use_github_links()`.
 
-Use **goodpractice** to help you find issues with your package's code,
-`goodpractice::gp()`.
+Use [**goodpractice**](http://mangothecat.github.io/goodpractice/) to help you
+find issues with your package's code, `goodpractice::gp()`.
 
 # Wrapping Up
 
