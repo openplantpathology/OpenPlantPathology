@@ -5,7 +5,6 @@ date: '2019-01-09'
 slug: a-plant-pathologist-s-guide-to-writing-your-first-r-package
 categories: ["R"]
 tags: ["R"]
-draft: yes
 header:
   caption: ''
   image: ''
@@ -25,15 +24,13 @@ you.
 
 Before we proceed. I have made some basic assumptions here.
 
-1. You are familiar enough with R to write your own [functions](http://adv-r.had.co.nz/Functions.html).
+1. You are familiar enough with R to write your own
+[functions](http://adv-r.had.co.nz/Functions.html).
 
-2. You are using or are interested in using [GitHub](https://www.github.com/) to
-share your code with others.
+2. You have [RStudio](https://www.rstudio.org) installed.
 
-3. You have [RStudio](https://www.rstudio.org) installed.
-
-4. You have read at least one of the next resources mentioned and/or intend to use
-them in addition to this brief blog post.
+3. You have read at least one of the next resources mentioned and/or intend to
+use them in addition to this brief blog post.
 
 ## Resources
 
@@ -48,7 +45,8 @@ That book has everything you need to get started with writing an R package.
 
 Second, I used [Hilary Parker's](https://hilaryparker.com/) tutorial,
 "[Writing an R package from scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)''
-when I wrote [my first R package](https://adamhsparks.github.io/EddyCleanR/).
+when I wrote [my first R package](https://adamhsparks.github.io/EddyCleanR/). I
+can recommend this one for getting started.
 
 But if that's not enough, Karl Broman has put together a
 [fantastic primer](https://kbroman.org/pkg_primer) where he even states that
@@ -247,7 +245,7 @@ the DESCRIPTION file, `usethis::use_github_links()`.
 Use **goodpractice** to help you find issues with your package's code,
 `goodpractice::gp()`.
 
-## Wrapping Up
+# Wrapping Up
 
 This post was not meant to be all-inclusive. There are plenty of other great
 resources for getting started with making your own R package. My intention
@@ -257,12 +255,16 @@ to highlight some of the newer tools that are now available for getting
 started.
 
 Of course you are free to join our
-[Slack workgroup](http://r-pkgs.had.co.nz/data.html) as well and ask questions. A
-few of us have experience with different types of R packages and are happy to
-offer support. If you wish to join, flick us an e-mail at
+[Slack workgroup](https://openplantpathology.slack.com/) as well and ask
+questions. A few of us have experience with different types of R packages and
+are happy to offer support. If you wish to join, flick us an e-mail at
 <openplantpathology@gmail.com> and we will send you an invite link. 
 
 If anything is not clear or you think I have left something important out,
 please leave a comment below or join our Slack group and let me know.
 
+# Acknowledgements
+
+Thanks to [@mladencucak](https://twitter.com/mladencucak) for his thoughtful
+comments and suggestions on this article.
 
