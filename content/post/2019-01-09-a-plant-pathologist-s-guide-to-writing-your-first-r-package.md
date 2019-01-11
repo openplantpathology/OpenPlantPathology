@@ -32,7 +32,9 @@ Before we proceed. I have made some basic assumptions here.
 3. You have read at least one of the next resources mentioned and/or intend to
 use them in addition to this brief blog post.
 
-4. You intend to use GitHub to host your package's code.
+4. You intend to use [GitHub](https://www.github.com/) to host your package's
+code.
+
 ## Resources
 
 Rather than writing another lengthy blog post about how to create an R
