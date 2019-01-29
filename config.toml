@@ -286,20 +286,20 @@ defaultContentLanguageInSubdir = false
 #  weight = 12
 
 [[menu.main]]
-  #name = "GH"
+  name = "GH"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
   weight = 14
 
 [[menu.main]]
-  #name = "T"
+  name = "T"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
   weight = 16
 
 [[menu.main]]
-  #name = "S"
-  pre = "<i class='fab fa-slack'></i>"
+  name = "S"
+  pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
   weight = 18
 
