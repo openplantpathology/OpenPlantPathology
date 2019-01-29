@@ -38,4 +38,4 @@ script:
   - Rscript -e 'rmarkdown::render("static/directory/index.Rmd")'
 
 after_success:
-- ./deploy.sh
+-  sh deploy.sh
