@@ -4,5 +4,5 @@
 	ignore = dirty
 [submodule "content/notes"]
 	path = content/notes
-	url = https://github.com/openplantpathology/opp_notes
+	url = https://github.com/openplantpathology/opp_notes/
 	ignore = dirty
