@@ -2,6 +2,7 @@
 date = 2018-08-26
 lastmod = 2018-08-26
 draft = false
+categories = ["Interview", "Community"]
 tags = ['Community', 'Population Biology', 'Interview']
 title = 'OPP Interviews: Niklaus J. Grünwald'
 math = true

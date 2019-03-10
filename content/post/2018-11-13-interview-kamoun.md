@@ -2,6 +2,7 @@
 date = 2018-11-13
 lastmod = 2018-11-13
 draft = false
+categories = ["Interview", "Community"]
 tags = ['Community', 'Wheat blast', 'Effectors', 'Genomics', 'Evolution', 'Interview']
 title = 'OPP Interviews: Sophien Kamoun'
 math = true
