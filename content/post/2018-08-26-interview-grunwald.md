@@ -6,7 +6,7 @@ tags = ['Community', 'Population Biology', 'Interview']
 title = 'OPP Interviews: Niklaus J. Grünwald'
 math = true
 summary = """
-<img src = "/img/members/grunwald.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right"> Our first OPP Interview features Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of *Phytophthora infestans* worldwide. His lab has developed R packages which have contributed considerably to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution, beyond the field of plant pathology.
+<img src = "/img/members/grunwald.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right"> Get to know one of our leaders, Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of *Phytophthora infestans* worldwide and developed R packages to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution.
 """
  
 [header]
