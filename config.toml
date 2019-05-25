@@ -233,7 +233,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "slack"
     icon_pack = "fa"
-    link = "//openplantpathology.slack.com"
+    link = "//communityinviter.com/apps/openplantpathology/open-plant-pathology"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
