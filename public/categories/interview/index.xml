@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Open Plant Pathology</title>
+    <link>https://openplantpathology.org/categories/interview/</link>
+    <description>Recent content in Interview on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +1000</lastBuildDate>
+    
+	<atom:link href="https://openplantpathology.org/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OPP Interviews: Sophien Kamoun</title>
+      <link>https://openplantpathology.org/post/2018-11-13-interview-kamoun/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/2018-11-13-interview-kamoun/</guid>
+      <description>&lt;img src = &#34;/img/members/kamoun.jpg&#34; style = &#34;border-radius: 50%; border-color: white 1px; margin: 30px; float: right&#34;&gt;
+We talked with Prof. Sophien Kamoun, a biology scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting and advocacy for Open Science but, also importantly, for his work with oomycetes (#notafungus), effectors and evolution and, more recently, wheat blast.</description>
+    </item>
+    
+    <item>
+      <title>OPP Interviews: Niklaus J. Grünwald</title>
+      <link>https://openplantpathology.org/post/2018-08-26-interview-grunwald/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/2018-08-26-interview-grunwald/</guid>
+      <description>&lt;img src = &#34;/img/members/grunwald.jpg&#34; style = &#34;border-radius: 50%; border-color: white 1px; margin: 30px; float: right&#34;&gt; Get to know one of our leaders, Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of &lt;em&gt;Phytophthora infestans&lt;/em&gt; worldwide and developed R packages to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution.</description>
+    </item>
+    
+  </channel>
+</rss>

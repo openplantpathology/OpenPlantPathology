@@ -1,0 +1,635 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Plant Pathology on Open Plant Pathology</title>
+    <link>https://openplantpathology.org/</link>
+    <description>Recent content in Open Plant Pathology on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Plant Pathologist&#39;s Guide to Writing Your First R Package</title>
+      <link>https://openplantpathology.org/post/a-plant-pathologist-s-guide-to-writing-your-first-r-package/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/a-plant-pathologist-s-guide-to-writing-your-first-r-package/</guid>
+      <description>
+
+&lt;h2 id=&#34;so-you-want-to-write-an-r-package&#34;&gt;So You Want to Write an R Package?&lt;/h2&gt;
+
+&lt;p&gt;So you want to write your first R package, but you don&amp;rsquo;t know where to
+start? We can help with that! Writing an R package is not difficult &lt;em&gt;per
+se&lt;/em&gt;, but it can be intimidating for a first timer.
+Why would you want to write an R package? Well, as
+&lt;a href=&#34;https://twitter.com/phytophthoralab&#34; target=&#34;_blank&#34;&gt;@PhytophthoraLab&lt;/a&gt; says, if you have
+more than two functions, you have a package, plus it means you can get
+citations! Yes, if you write a nice R package that people like and use and you
+have provided the proper information, it can (and should) lead to citations for
+you.&lt;/p&gt;
+
+&lt;p&gt;Before we proceed. I have made some basic assumptions here.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;You are familiar enough with R to write your own
+&lt;a href=&#34;http://adv-r.had.co.nz/Functions.html&#34; target=&#34;_blank&#34;&gt;functions&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have &lt;a href=&#34;https://www.rstudio.org&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; installed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have read at least one of the next resources mentioned and/or intend to
+use them in addition to this brief blog post.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You intend to use &lt;a href=&#34;https://www.github.com/&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt; to host your package&amp;rsquo;s
+code.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;Rather than writing another lengthy blog post about how to create an R
+package, I&amp;rsquo;ll just point to some of the resources that are available
+to get you started and fill in what I see as some gaps.&lt;/p&gt;
+
+&lt;p&gt;First, &lt;a href=&#34;https://hadley.nz&#34; target=&#34;_blank&#34;&gt;Hadley Wickham&lt;/a&gt; has written a book on this topic,
+&amp;ldquo;&lt;a href=&#34;https://r-pkgs.had.co.nz&#34; target=&#34;_blank&#34;&gt;R Packages&lt;/a&gt;&amp;rdquo;, which is free from his website or available from
+&lt;a href=&#34;https://www.amazon.com/R-Packages-Hadley-Wickham-2015-04-13/dp/B017YC91HO/&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt;.
+That book has everything you need to get started with writing an R package.&lt;/p&gt;
+
+&lt;p&gt;Second, I used &lt;a href=&#34;https://hilaryparker.com/&#34; target=&#34;_blank&#34;&gt;Hilary Parker&amp;rsquo;s&lt;/a&gt; tutorial,
+&amp;ldquo;&lt;a href=&#34;https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/&#34; target=&#34;_blank&#34;&gt;Writing an R package from scratch&lt;/a&gt;&amp;ldquo;
+when I wrote &lt;a href=&#34;https://adamhsparks.github.io/EddyCleanR/&#34; target=&#34;_blank&#34;&gt;my first R package&lt;/a&gt;. I
+can recommend this one for getting started.&lt;/p&gt;
+
+&lt;p&gt;But if that&amp;rsquo;s not enough, Karl Broman has put together a
+&lt;a href=&#34;https://kbroman.org/pkg_primer&#34; target=&#34;_blank&#34;&gt;fantastic primer&lt;/a&gt; where he even states that
+there is value in a diversity of resources, hence this blog post.&lt;/p&gt;
+
+&lt;p&gt;The aforementioned resources will help you get your package set up and working.
+I will not spend too much time covering the ground they cover already. Rather,
+I will spend some time covering areas that I have found useful, but that they
+do not cover like CITATION files (and why you need one), setting up a
+&lt;a href=&#34;https://pkgdown.r-lib.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;pkgdown&lt;/strong&gt;&lt;/a&gt; website or how to get a DOI for the
+package.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;The easiest way to get started is with RStudio and the
+&lt;a href=&#34;https://usethis.r-lib.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;usethis&lt;/strong&gt;&lt;/a&gt; and
+&lt;a href=&#34;https://devtools.r-lib.org&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;devtools&lt;/strong&gt;&lt;/a&gt; packages.&lt;/p&gt;
+
+&lt;p&gt;Two other packages that you will want to use are
+&lt;a href=&#34;https://github.com/ropenscilabs/available&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;available&lt;/strong&gt;&lt;/a&gt;, which you can
+use to check the availability of your package name and &lt;strong&gt;pkgdown&lt;/strong&gt; for
+building a documentation website for your package.&lt;/p&gt;
+
+&lt;p&gt;If you have not already installed these packages, install them now. They
+can be installed as follows.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(c(&amp;quot;devtools&amp;quot;, &amp;quot;usethis&amp;quot;, &amp;quot;available&amp;quot;, &amp;quot;pkgdown&amp;quot;, &amp;quot;goodpractice&amp;quot;),
+		 dependencies = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;naming&#34;&gt;Naming&lt;/h3&gt;
+
+&lt;p&gt;Once you are set up and going, first things first. You need a good name for
+your new package. Hadley offers his advice here:
+&lt;a href=&#34;http://r-pkgs.had.co.nz/package.html#naming&#34; target=&#34;_blank&#34;&gt;http://r-pkgs.had.co.nz/package.html#naming&lt;/a&gt;
+While there is no real consensus on naming R packages CRAN does offer
+a few guidelines that you need to follow.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The mandatory ‘Package’ field gives the name of the package. This should contain only (ASCII) letters, numbers and dot, have at least two characters and start with a letter and not end in a dot.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also note, that the use of an underscore, &amp;ldquo;_&amp;rdquo;, is not allowed in package names.&lt;/p&gt;
+
+&lt;p&gt;It is best to keep it short and informative.&lt;/p&gt;
+
+&lt;p&gt;Once you have picked a good name, check that it is available and does not
+have any connotations you might want to convey using &lt;strong&gt;available&lt;/strong&gt;,
+&lt;code&gt;available::available(&amp;quot;spiffypkgname&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;package-structure&#34;&gt;Package Structure&lt;/h3&gt;
+
+&lt;p&gt;The easiest way to set up your package structure is to either use RStudio&amp;rsquo;s
+capability to make an R package when creating a new project (with your
+spiffy new package name) or use &lt;code&gt;usethis::create_package(&amp;quot;spiffypkgname&amp;quot;)&lt;/code&gt;,
+which will set up the directories you need go get started and add the
+skeleton of an R package for you to start filling in.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-goes-where&#34;&gt;What Goes Where?&lt;/h3&gt;
+
+&lt;p&gt;If you check inside your working directory, you&amp;rsquo;ll see a file structure like
+this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;spiffypkgname
+  | - DESCRIPTION
+  | - NAMESPACE
+  | - R/
+  | - man/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There, you&amp;rsquo;ve created an R package!&lt;/p&gt;
+
+&lt;p&gt;The DESCRIPTION holds the author information, a description of the package
+itself, and other information on what packages are necessary for yours to
+work (Imports). There are specific rules about formatting in the DESCRIPTION
+file that must be followed. Hadley gives a good overview,
+&lt;a href=&#34;http://r-pkgs.had.co.nz/description.html&#34; target=&#34;_blank&#34;&gt;http://r-pkgs.had.co.nz/description.html&lt;/a&gt;, but I suggested that you see
+&lt;a href=&#34;https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file&#34; target=&#34;_blank&#34;&gt;https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file&lt;/a&gt; for
+a much more in-depth guide as well.&lt;/p&gt;
+
+&lt;p&gt;Most of the time you will not need to edit the NAMESPACE file directly.
+The &lt;strong&gt;devtools&lt;/strong&gt; package provides tools that will help maintain that for you.
+This file ensures that your package plays nice with the others in R.&lt;/p&gt;
+
+&lt;p&gt;The R subdirectory is where you put your R scripts. Typically these would be
+scripts of functions that you wish to share with others.&lt;/p&gt;
+
+&lt;p&gt;The man directory is where the help files are stored. Once you start documenting
+the scripts in R, this will populate.&lt;/p&gt;
+
+&lt;h3 id=&#34;documenting&#34;&gt;Documenting&lt;/h3&gt;
+
+&lt;p&gt;A properly documented package will make it much easier for the end user, which
+means it is more likely to be used.&lt;/p&gt;
+
+&lt;p&gt;Documenting your package is easiest done using
+&lt;a href=&#34;https://github.com/klutometis/roxygen&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Roxygen2&lt;/strong&gt;&lt;/a&gt;. For each function
+or dataset that the end user can use you must document it. See
+&lt;a href=&#34;http://r-pkgs.had.co.nz/man.html&#34; target=&#34;_blank&#34;&gt;http://r-pkgs.had.co.nz/man.html&lt;/a&gt; and
+&lt;a href=&#34;https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html&#34; target=&#34;_blank&#34;&gt;https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html&lt;/a&gt; for
+how to write the documentation. As you start getting more advanced in your
+package development I would refer you to the official &amp;ldquo;Writing R Extensions&amp;rdquo;
+section on documenting your package,
+&lt;a href=&#34;https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files&#34; target=&#34;_blank&#34;&gt;https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;licensing&#34;&gt;Licensing&lt;/h3&gt;
+
+&lt;p&gt;There are several resources available for helping you pick a license. For my
+packages I default to the MIT license, but you may chose to use the GPL 2 or 3
+or some other license depending on your specific needs and goals.&lt;/p&gt;
+
+&lt;p&gt;To generate a license file, again use &lt;strong&gt;usethis&lt;/strong&gt;. &lt;code&gt;?usethis::use_mit_license()&lt;/code&gt;
+describes both how to use the function, but also gives a quick description
+of four popular licenses and when they might be used. To generate your
+LICENSE file type &lt;code&gt;usethis::use_mit_license(&amp;quot;Your Name Here&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;vignettes&#34;&gt;Vignettes&lt;/h3&gt;
+
+&lt;p&gt;Of course you will want to give detailed information on how users can use your
+spiffy new package, right? That&amp;rsquo;s where a vignette comes in. Vignettes are long-
+form documentation that describe how to use the functions in the package in
+greater detail than the help files or perhaps contain a use case for
+illustration. You can set up a vignette that&amp;rsquo;s written using
+&lt;a href=&#34;https://rmarkdown.rstudio.com&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;RMarkdown&lt;/strong&gt;&lt;/a&gt; by typing
+&lt;code&gt;usethis::use_vignette(&amp;quot;spiffypkgname&amp;quot;)&lt;/code&gt;, which creates a vignette
+simply named &amp;ldquo;spiffypkgname&amp;rdquo;, corresponding to your package name and sets up
+a template for you to edit with your examples.&lt;/p&gt;
+
+&lt;h3 id=&#34;example-data&#34;&gt;Example Data&lt;/h3&gt;
+
+&lt;p&gt;If you have example data that you wish to include in your package, you may do
+so. Most of the time you will want to use &lt;code&gt;inst/exdata&lt;/code&gt; to include example files
+to show how to parse data using the package. See Hadley&amp;rsquo;s
+&lt;a href=&#34;http://r-pkgs.had.co.nz/data.html&#34; target=&#34;_blank&#34;&gt;book section on data&lt;/a&gt; for a
+thorough discussion on the different ways data can be incorporated and when you
+might wish to use them.&lt;/p&gt;
+
+&lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
+
+&lt;p&gt;I did mention citations at the beginning. Ideally your package should be easy
+to cite when your users type &lt;code&gt;citation(&amp;quot;spiffypkgname&amp;quot;)&lt;/code&gt; they&amp;rsquo;ll get
+a nicely formatted example of how to cite your package. To do this you need
+to create a CITATION file with no file extension in the &lt;code&gt;inst&lt;/code&gt; subdirectory
+of your package. The contents of the CITATION file should look something like
+what follows here. You don&amp;rsquo;t need to change &lt;code&gt;year&lt;/code&gt; or &lt;code&gt;note&lt;/code&gt;, these are
+autofilled with the values taken from the first two lines. The &lt;code&gt;bibtype&lt;/code&gt; will
+always be &amp;ldquo;Manual&amp;rdquo; as well.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;year &amp;lt;- sub(&amp;quot;-.*&amp;quot;, &amp;quot;&amp;quot;, meta$Date)
+note &amp;lt;- sprintf(&amp;quot;R package version %s&amp;quot;, meta$Version)
+
+bibentry(bibtype = &amp;quot;Manual&amp;quot;,
+         title = &amp;quot;{spiffypkgname}: Spiffy Functions for Spiffy Scientists&amp;quot;,
+         author = c(person(&amp;quot;Your&amp;quot;, &amp;quot;Name&amp;quot;)),
+         year = year,
+         note = note,
+         DOI = &amp;quot;DOI goes here&amp;quot;,
+         url = &amp;quot;spiffypkgname website address goes here&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wait you say! I don&amp;rsquo;t have a DOI and I don&amp;rsquo;t know how to make a website! Fear
+not, for if you are using GitHub you can easily get a DOI to put in that DOI
+field in your CITATION file. And by using the &lt;strong&gt;pkgdown&lt;/strong&gt; package you can
+easily create a website for your package that tells users about it.&lt;/p&gt;
+
+&lt;h3 id=&#34;doi&#34;&gt;DOI&lt;/h3&gt;
+
+&lt;p&gt;GitHub has teamed up with Zenodo to offer DOIs to help make your package more
+citeable. Head over to the GitHub Guides and have a read over the
+&lt;a href=&#34;https://guides.github.com/activities/citable-code/&#34; target=&#34;_blank&#34;&gt;Making Your Code Citeable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://osf.io&#34; target=&#34;_blank&#34;&gt;OSF (Open Science Framework)&lt;/a&gt; is also an option but this
+does not offer DOIs for individual releases like Zenodo does, which will offer a
+project DOI and a newly minted DOI for each release, e.g. v1.0.0, v1.0.2, etc.&lt;/p&gt;
+
+&lt;h3 id=&#34;website&#34;&gt;Website&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;pkgdown&lt;/strong&gt; makes deploying a website a very simple exercise. It takes your
+README file and your documentation (including your vignette) and creates a
+nicely organised website for users to browse and learn all about
+&lt;strong&gt;spiffypkgname&lt;/strong&gt;. Simply use &lt;code&gt;usethis::use_pkgdown()&lt;/code&gt; once you commit your
+changes to GitHub, in the repository settings, set the webpage to
+&amp;ldquo;master branch/docs folder&amp;rdquo; in the GitHub Pages section of the Settings.&lt;/p&gt;
+
+&lt;p&gt;The link will appear once it is set. Copy and paste that in the repository
+webpage field next to the title for your repository (use the &amp;ldquo;Edit&amp;rdquo; button
+on the main page of your repository to fill this field in).&lt;/p&gt;
+
+&lt;h3 id=&#34;other-miscellaneous-items&#34;&gt;Other Miscellaneous Items&lt;/h3&gt;
+
+&lt;p&gt;Insert the GitHub links for the repository and for users to file Issues into
+the DESCRIPTION file, &lt;code&gt;usethis::use_github_links()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&#34;http://mangothecat.github.io/goodpractice/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;goodpractice&lt;/strong&gt;&lt;/a&gt; to help you
+find issues with your package&amp;rsquo;s code, &lt;code&gt;goodpractice::gp()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;wrapping-up&#34;&gt;Wrapping Up&lt;/h1&gt;
+
+&lt;p&gt;This post was not meant to be all-inclusive. There are plenty of other great
+resources for getting started with making your own R package. My intention
+here was to specifically point out items that I think are useful for an
+academic that might be writing an R package for sharing with others and
+to highlight some of the newer tools that are now available for getting
+started.&lt;/p&gt;
+
+&lt;p&gt;Of course you are free to join our
+&lt;a href=&#34;https://openplantpathology.slack.com/&#34; target=&#34;_blank&#34;&gt;Slack workgroup&lt;/a&gt; as well and ask
+questions. A few of us have experience with different types of R packages and
+are happy to offer support. If you wish to join, flick us an e-mail at
+&lt;a href=&#34;mailto:openplantpathology@gmail.com&#34; target=&#34;_blank&#34;&gt;openplantpathology@gmail.com&lt;/a&gt; and we will send you an invite link.&lt;/p&gt;
+
+&lt;p&gt;If anything is not clear or you think I have left something important out,
+please leave a comment below or join our Slack group and let me know.&lt;/p&gt;
+
+&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://twitter.com/mladencucak&#34; target=&#34;_blank&#34;&gt;@mladencucak&lt;/a&gt; for his thoughtful
+comments and suggestions on this article.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OPP Interviews: Sophien Kamoun</title>
+      <link>https://openplantpathology.org/post/2018-11-13-interview-kamoun/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/2018-11-13-interview-kamoun/</guid>
+      <description>&lt;p&gt;&lt;div class=body style = &#34;background-color: #f6f6f6; padding: 15px; margin-bottom:40px; margin-top: 30px&#34;&gt;In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img width = 360px src = &#34;/img/posts/post4-kamoun-interview.jpg&#34; style = &#34; margin: 10px; float: right&#34;&gt;We talked with Prof. &lt;a href=&#34;http://www.tsl.ac.uk/staff/sophien-kamoun/&#34; target=&#34;_blank&#34;&gt;Sophien Kamoun&lt;/a&gt;, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific &lt;a href=&#34;https://twitter.com/kamounlab?lang=en&#34; target=&#34;_blank&#34;&gt;Tweeting&lt;/a&gt; but, also importantly, for his work with oomycetes &lt;a href=&#34;https://twitter.com/hashtag/notafungus&#34; target=&#34;_blank&#34;&gt;#notafungus&lt;/a&gt;, &lt;a href=&#34;http://kamounlab.tumblr.com/&#34; target=&#34;_blank&#34;&gt;effectors, genomics and evolution&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Prof. Kamoun is well recognized for his efforts to champion data sharing and other open science practices. Recently he was one of the leading scientists who founded &lt;a href=&#34;http://s620715531.websitehome.co.uk/owb/&#34; target=&#34;_blank&#34;&gt;Open Wheat Blast&lt;/a&gt;, an initiative with the main goal of providing genomic data and analysis related to wheat blast with open access. The collaborative efforts by several teams allowed to rapidly confirm the source of wheat blast in Bangladesh in early 2016. It is a great pleasure to have Prof. Kamoun as an OPP member and answering a few questions about open science.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;You have a strong presence in social media, together with other prominent plant pathologists, advocating for more open and transparent science and data sharing. Tell us a bit about your background and when you realized that open science and data sharing were important to furthering science.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: I think I have always been tuned to new technologies and tools. I&amp;rsquo;m also aware of the importance of science communication and networking. Therefore, it&amp;rsquo;s perhaps no surprise that I quickly became hooked to Twitter and related social media tools such as&lt;a href=&#34;https://www.scoop.it/t/mpmi&#34; target=&#34;_blank&#34;&gt; Scoop.it&lt;/a&gt;. Twitter has become an integral part of my daily routine. I use it primarily&lt;a href=&#34;https://www.slideshare.net/SophienKamoun/sophien-twitter-2014&#34; target=&#34;_blank&#34;&gt; to broadcast, gather new information and interact with a wide range of people beyond my immediate colleagues&lt;/a&gt;. I love that incessant flow of information we get through Twitter. In some ways, I&amp;rsquo;m addicted to knowledge and social interactions, and Twitter is my drug.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Q: What inspires you about your job? A: Knowledge and people. &lt;a href=&#34;https://t.co/G9ztJsw8Jx&#34;&gt;https://t.co/G9ztJsw8Jx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sophien Kamoun (@KamounLab) &lt;a href=&#34;https://twitter.com/KamounLab/status/888474137081118721?ref_src=twsrc%5Etfw&#34;&gt;July 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I think I first became aware of the open science movement with the first open access journals. It must have been the PLOS journals around year 2000. The rationale for open science, notably transparency and accountability, seemed evident given that our objective as scientists is to produce robust reproducible science and share it with others. Later, I became interested in open science as applied to genome sequencing of emerging plant pathogens. I still feel that the plant pathology community is too slow in applying the tools of genomics to new plant disease outbreaks.&lt;a href=&#34;http://kamounlab.dreamhosters.com/pdfs/MicrobiologyToday_2012.pdf&#34; target=&#34;_blank&#34;&gt; Too little, too late&lt;/a&gt;.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;How do you compare the overall field of plant pathology to others in relation to the level of adoption of open science practices? Is there any kind of formal education and training that graduate schools/advisors should be more proactive to educate the new generation of scientists, or is this a matter of individual efforts?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: I want to start by saying that &lt;a href=&#34;http://www.openplantpathology.org&#34; target=&#34;_blank&#34;&gt;OPP&lt;/a&gt; is an absolutely amazing initiative that stands out from the conservative stance of many of our plant pathologist colleagues. My experience is that plant pathologists tend to be too slow in embracing the cultural changes that are sweeping the biological sciences. For example, a few months ago I participated in a &lt;a href=&#34;http://kamounlab.dreamhosters.com/storify/RFBellagio_storify.html&#34; target=&#34;_blank&#34;&gt;workshop&lt;/a&gt; on response to new plant disease outbreaks and some participants argued against open science approaches. There was even opposition to the simple concept of sharing data and biomaterial with experts. Remarkably, our biomedical colleagues manage to do just fine.
+&lt;br&gt;&lt;br&gt;
+&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/RFBellagio?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RFBellagio&lt;/a&gt; Why can&amp;#39;t plant pathologists do this? 20K strains sequenced and in genbank per year. Hugely useful. Always excuses, global trade, socioeconomics bla bla. As  if FDA/foodborne diseases don&amp;#39;t have these issues&amp;hellip; &lt;a href=&#34;https://t.co/TMj4BJedM0&#34;&gt;https://t.co/TMj4BJedM0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sophien Kamoun (@KamounLab) &lt;a href=&#34;https://twitter.com/KamounLab/status/964124849944842240?ref_src=twsrc%5Etfw&#34;&gt;February 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Another aspect that is directly relevant to the acceptance of open science is the issue of research evaluation. Many seem reluctant to &lt;a href=&#34;http://kamounlab.tumblr.com/post/163409024195/whats-up-with-preprints-and-why-im-bothering&#34; target=&#34;_blank&#34;&gt;embrace preprints&lt;/a&gt; because they think that this would not count towards their career progression. Thus, I would encourage everyone to look at the San Francisco Declaration on Research Assessment &lt;a href=&#34;https://sfdora.org/&#34; target=&#34;_blank&#34;&gt;(DORA)&lt;/a&gt;, urge their institution to sign up and hold their colleagues to these standards of research evaluation. To sum up, yes, we need more education about open science in plant pathology. OPP fills a critical niche.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;You are among several scientists who strongly voice against the current scholarly publishing practices. You have even refused to review and submit articles for some journals because of the publisher. What is your advice for young scientists who expect recognition publishing in Nature/Cell/Science (NCS)  journals?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: Indeed, it&amp;rsquo;s well established that scientific publishing is broken at several levels. But the onus shouldn&amp;rsquo;t be on early career scientists to fix the system, although they can create momentum and enable cultural changes by lobbying for DORA principles, embracing preprints and various other open science initiatives. My advice to early career scientists is to be fully aware that &lt;a href=&#34;http://kamounlab.tumblr.com/post/121748816600/what-are-world-class-science-outputs&#34; target=&#34;_blank&#34;&gt;publishing is important&lt;/a&gt;. This is our main currency in science. I&amp;rsquo;m not arguing against that. But to be a successful scientist, it is critical to have a full set of skills.&lt;/p&gt;
+
+&lt;p&gt;I highly recommend checking the &lt;a href=&#34;https://www.nationalpostdoc.org/page/CoreCompetencies&#34; target=&#34;_blank&#34;&gt;list of competencies&lt;/a&gt; developed by the National Postdoc Association. If you have some weakness, such as writing, speaking, networking etc., you will struggle to have a fulfilling career unless you address them. Focusing on improving weaknesses is more important than strengths. Even in a great orchestra, you only &lt;a href=&#34;https://twitter.com/GeneticsGSA/status/578654502254993408&#34; target=&#34;_blank&#34;&gt;hear the bad player&lt;/a&gt;. What saddens me the most is to see early career scientists become obsessed with publishing in glam mags, such as Science and Nature. It&amp;rsquo;s a total fallacy to believe that all you need is a paper in these journals for your career to be made.
+&lt;br&gt;&lt;br&gt;
+&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The mentality that if I get a CNS paper my career is set is a false narrative these days for most progressive institutions&lt;/p&gt;&amp;mdash; Sophien Kamoun (@KamounLab) &lt;a href=&#34;https://twitter.com/KamounLab/status/985817138794565632?ref_src=twsrc%5Etfw&#34;&gt;April 16, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, a solid publication record &lt;a href=&#34;https://twitter.com/KamounLab/status/985816557170364421&#34; target=&#34;_blank&#34;&gt;is important&lt;/a&gt; but I have seen many prospective faculty candidates falter despite a publication list that includes these glamorous journals. I recall an interviewee for a faculty position who first-authored three (Yes. Three!) Science papers but couldn&amp;rsquo;t articulate a reasonable response to valid questions from the committee. Needless to say, that interviewee didn&amp;rsquo;t get the job.&lt;/p&gt;
+
+&lt;p&gt;My advice is spelled out &lt;a href=&#34;http://kamounlab.tumblr.com/post/121748816600/what-are-world-class-science-outputs&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Aim high. But be reasonable. Also, don&amp;rsquo;t lose the plot. Your job is to produce solid science that stands the test of time, not to squeeze through a wishy-washy paper through reviewers and editors. Trust me, the community knows. Flawed papers get scorned even on &lt;a href=&#34;https://twitter.com/search?q=%23arseniclife&amp;amp;src=typd&#34; target=&#34;_blank&#34;&gt;Twitter&lt;/a&gt;. Personally, I&amp;rsquo;m proud that I got my job as Senior Scientist at The Sainsbury Lab without any Science or Nature papers.  At that time, I thought it said a lot about the institution and how they value their scientists. Finally, the current publishing ethos of my lab is described &lt;a href=&#34;https://twitter.com/KamounLab/status/1020600779424567296&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+&lt;br&gt;
+&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I was hired &lt;a href=&#34;https://twitter.com/TheSainsburyLab?ref_src=twsrc%5Etfw&#34;&gt;@TheSainsburyLab&lt;/a&gt; 10 yrs ago without CNS papers. I&amp;#39;ve been on many committees that turned down CNS authors&amp;hellip;&lt;/p&gt;&amp;mdash; Sophien Kamoun (@KamounLab) &lt;a href=&#34;https://twitter.com/KamounLab/status/882602251084115969?ref_src=twsrc%5Etfw&#34;&gt;July 5, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;As a part of your objections to the current publishing practices you strongly support preprints. What advice do you give for getting started with using preprints ?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: Preprints are central to the open science philosophy. I really wish to see more preprints in&lt;a href=&#34;https://www.biorxiv.org/&#34; target=&#34;_blank&#34;&gt; bioRxiv&lt;/a&gt; from the plant path community. This is a tremendous way to get your work out there and share it with others much earlier than is traditionally the case &lt;a href=&#34;http://asapbio.org/preprint-info/preprint-faq&#34; target=&#34;_blank&#34;&gt;See ASAPBIO Preprint FAQ&lt;/a&gt;. It also relieves the stress associated with waiting for reviews and the tedious revision process. After all, the paper is already out there, so what if the final version takes a few more weeks. It&amp;rsquo;s liberating to &lt;a href=&#34;http://kamounlab.tumblr.com/post/163409024195/whats-up-with-preprints-and-why-im-bothering&#34; target=&#34;_blank&#34;&gt;post a preprint just when you finish writing up the paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My main advice is to treat the preprint like a regular paper and not to post premature, unpolished drafts. Some may think that it doesn&amp;rsquo;t matter but you will be judged, even subconsciously, by readers who are the colleagues who will formally review your papers and grants. You wouldn&amp;rsquo;t want to display a scrappy poster or give a messy talk at a conference.
+&lt;br&gt;&lt;br&gt;
+&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My take is that it depends on the discovery. The way to see it is that preprints are part of a continuum from poster to talks to formal papers evaluated by peers. One could also ask whether a poster or talk would constitute priority&amp;hellip;&lt;/p&gt;&amp;mdash; Sophien Kamoun (@KamounLab) &lt;a href=&#34;https://twitter.com/KamounLab/status/1057547861376860160?ref_src=twsrc%5Etfw&#34;&gt;October 31, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;To early career scientists, who may not feel confident to post a preprint, do seek input from your mentors, colleagues or even use scientific writing services to improve the draft. My sense is that the younger generation is puzzled by the traditional protracted process of science publishing and &lt;a href=&#34;https://twitter.com/KamounLab/status/1009718491832872960&#34; target=&#34;_blank&#34;&gt;the costs&lt;/a&gt; associated with it. Preprints are becoming routine in the biological sciences and &lt;a href=&#34;http://www.prepubmed.org/monthly_stats/&#34; target=&#34;_blank&#34;&gt;the growth of bioRxiv&lt;/a&gt; has been phenomenal. More concrete actions, such as accepting preprints in promotion packages, grant and fellowship applications are accelerating the process. All it would take now is for funding bodies to mandate preprints, which they really should if they truly believe in their open science manifesto.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;What do you see as the most significant outcome from your work as a result of using open science practices?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: One amazing anecdote is that when we went public with the &lt;a href=&#34;http://wheatblast.net/&#34; target=&#34;_blank&#34;&gt;sequences from the wheat blast&lt;/a&gt; outbreak in Bangladesh], there was only one (ONE!) genome sequence available of a wheat blast isolate. Obviously, we couldn&amp;rsquo;t do much in interpreting the Bangladeshi sequences based on a single genome. However, it turned out that several labs had unpublished genome sequences of wheat blast isolates sitting in their computers. Within days, there was over 20 genome sequences available. That goes to show the importance of sharing data and also coming up with processes where depositing datasets is recognized as a scholarly contribution just like any other activity.&lt;/p&gt;
+
+&lt;p&gt;Another aspect that I found enlightening was the poorly appreciated process of live peer-review. This is what happens when you crowdsource analyses, and more than one group gets involved. You get instant validation! In the case of the wheat blast outbreak, we had two independent analyses performed by &lt;a href=&#34;https://github.com/crolllab/wheat-blast&#34; target=&#34;_blank&#34;&gt;Daniel Croll&lt;/a&gt; in Zurich and &lt;a href=&#34;http://s620715531.websitehome.co.uk/owb/phylogenomic-analyses-reveal-that-the-2016-outbreak-of-wheat-blast-in-bangladesh-is-caused-by-a-south-american-wheat-infecting-lineage-of-magnaporthe-oryzae/&#34; target=&#34;_blank&#34;&gt;Pierre Gladieux&lt;/a&gt; in Montpellier. They both reached the exact same conclusion that the Bangladeshi strains originated from South America. A great example especially given discussions about the &lt;a href=&#34;https://en.wikipedia.org/wiki/Replication_crisis&#34; target=&#34;_blank&#34;&gt;reproducibility crisis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;OPP&lt;/strong&gt;: &lt;em&gt;Finally, the Open Plant Pathology community welcomes not only pathologists, but anyone who works in the field and wish to stay connected with other researchers to learn and share knowledge and contribute to promote open science and reproducible research. Surely, it does not fit everyone&amp;rsquo;s needs given the focus of OPP on more computational aspects and use of free open source software (FOSS). What are the areas and target audience that you think might benefit most from participating and taking leadership in this community?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SK&lt;/strong&gt;: Open science can impact several areas of plant pathology beyond computational biology. One example would be the reporting of new disease outbreaks and the first response to these outbreaks. Think of how basic the &lt;a href=&#34;https://www.promedmail.org/&#34; target=&#34;_blank&#34;&gt;ProMED-mail platform is&lt;/a&gt;. I think this is the only centralized online platform that rapidly reports new plant disease outbreaks. We should have something akin to a global extension platform with plant pathologists openly contributing advice and analyses on how to respond to these outbreaks. It&amp;rsquo;s shocking to me that the most common word on ProMED-mail is &amp;ldquo;undiagnosed&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+&lt;blockquote align=center class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Wordcloud summary of Global Plant Diseases registered in Promed.  &lt;a href=&#34;https://twitter.com/KamounLab?ref_src=twsrc%5Etfw&#34;&gt;@KamounLab&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RFBellagio?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RFBellagio&lt;/a&gt; &lt;a href=&#34;https://t.co/bJvtddhJtM&#34;&gt;pic.twitter.com/bJvtddhJtM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ksenia Krasileva (@kseniakrasileva) &lt;a href=&#34;https://twitter.com/kseniakrasileva/status/963526493128347648?ref_src=twsrc%5Etfw&#34;&gt;February 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;I also hope we can reach out more to developing countries and educate scientists about the value of open science. I recommend you interview my colleague&lt;a href=&#34;https://twitter.com/tofazzalislam&#34; target=&#34;_blank&#34;&gt; Tofazzal Islam&lt;/a&gt;, who became a champion of open science following our collaboration on the Bangladeshi wheat blast outbreak. That experience was &lt;a href=&#34;https://plantae.org/taproot-episode-1-season-1-extreme-open-science-and-the-meaning-of-scientific-impact-with-sophien-kamoun/&#34; target=&#34;_blank&#34;&gt;revealing to me too&lt;/a&gt;. It showed the power of open science to help build wide-reaching connections and networks that wouldn&amp;rsquo;t otherwise readily happen.&lt;/p&gt;
+
+&lt;p&gt;On a related topic, one of the challenges for scientists in developing countries is to produce full-length publications. Open science tools allow intermediate reports to be published for example through platforms like figshare, zenodo etc. These can be viewed as &lt;a href=&#34;http://s620715531.websitehome.co.uk/owb/data-analysis/&#34; target=&#34;_blank&#34;&gt;credited mini-publications&lt;/a&gt;. It&amp;rsquo;s a great opportunity for students and scientists in developing countries to communicate their science in increments without the challenge of producing a typical scientific paper.&lt;/p&gt;
+
+&lt;p&gt;At the end, the main challenge is education. The standard system of publication and incentives is so ingrained in the current culture that it is challenging to deliver the necessary changes. We should embrace any opportunity to educate plant pathologists about open science no matter the audience, and no matter the platform.&lt;/p&gt;
+
+&lt;p&gt;Other relevant links:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kamounlab.tumblr.com/post/176385835530/the-edge-of-tomorrow-plant-health-in-the-21st&#34; target=&#34;_blank&#34;&gt;http://kamounlab.tumblr.com/post/176385835530/the-edge-of-tomorrow-plant-health-in-the-21st&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kamounlab.tumblr.com/post/178573217080/point-of-view-wither-pre-publication-peer-review&#34; target=&#34;_blank&#34;&gt;http://kamounlab.tumblr.com/post/178573217080/point-of-view-wither-pre-publication-peer-review&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OPP Interviews: Niklaus J. Grünwald</title>
+      <link>https://openplantpathology.org/post/2018-08-26-interview-grunwald/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/2018-08-26-interview-grunwald/</guid>
+      <description>&lt;div class=body style = &#34;background-color: #f6f6f6; padding: 15px; margin-bottom:40px; margin-top: 30px&#34;&gt;In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. &lt;/div&gt;
+
+&lt;p&gt;&lt;img width = 320px src = &#34;/img/posts/post3-nik-interview.png&#34; style = &#34; margin: 30px; float: right&#34;&gt;  Our first OPP interview features Dr. Niklaus Grünwald &lt;a href=&#34;https://twitter.com/PhytophthoraLab&#34; target=&#34;_blank&#34;&gt;@PhytophthoraLab on Twitter&lt;/a&gt;, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik is well recognized by his &lt;a href=&#34;http://grunwaldlab.cgrb.oregonstate.edu/lab-biblio#overlay-context=lab-biblio&#34; target=&#34;_blank&#34;&gt;research&lt;/a&gt; on population genetics and genomics of plant pathogens - mainly on oomycetes of major importance to global agriculture. The &lt;a href=&#34;http://grunwaldlab.cgrb.oregonstate.edu/&#34; target=&#34;_blank&#34;&gt;Grünwald Lab&lt;/a&gt; has made significant scientific contributions to the understanding of the population biology and evolution of &lt;em&gt;Phytophthora infestans&lt;/em&gt; worldwide. More recently, his students have developed R packages which have contributed considerably to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution, beyond the field of plant pathology. Members of the Grünwald Lab has offered workshops on reproducible research and the analysis of genomic data during the APS meetings using those packages. It is our great pleasure to have Nik answering six questions that we prepared for him.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;Tell us about your background, especially when you realized that programming skills were important and which were the languages/software used at that time and for what purpose?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: I have used programming as a tool on and off since my undergraduate days. In fact I used to earn pocket money as a programmer. As an econ undergrad major I learned Pascal as my first language. During my PhD I programmed extensively in SAS. As a postdoc I wanted to calculate genotypic diversity indices and could not do it in SAS so I programmed some routines in C to enable calculation of rarefaction as well as for speed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;When and why did you decide to stop using commercial software and embrace open source software for the development of tools to analyse molecular data in the context of population biology of plant pathogens?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: About 8 years ago my lab switched from SAS to using &lt;a href=&#34;https://www.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;. I am absolutely loving R because of the open source (and free) nature, the ability to produce publication ready graphs, tools for reproducibility, and the fact that many members of the R community contribute &lt;a href=&#34;https://cloud.r-project.org/web/packages/available_packages_by_name.html&#34; target=&#34;_blank&#34;&gt;packages&lt;/a&gt;. The fact that R is open is important because you can actually see the raw code and find mistakes and contribute new functions. SAS procedures are closed. We switched once we could do everything in R that I used to do in SAS. I also love R because it is free. When you have several postdocs and graduate students in the lab, subscriptions to software become very expensive. Another reason I love R is that we can create electronic lab notebooks using &lt;a href=&#34;https://rmarkdown.rstudio.com/&#34; target=&#34;_blank&#34;&gt;R Markdown&lt;/a&gt; that allow for better, albeit not perfect, reproducibility.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;Students are mainly driven by scientific publications in top journals as main, mostly only, outcome of their research. Students of the Grünwald Lab are developing new tools that help to process, analyze and visualize genetic/genomic data as part of the dissertation. This is quite unconventional, in the field of plant pathology at least. Is there a reason for this change? What are the benefits and challenges, for both student and advisor, from investing in the development of tools and not keeping up only with the more conventional hypothesis-driven graduate research?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: My way of approaching this is that graduate students should be trained in hypothesis-driven biological research. Interviewing for a faculty position or promotion and tenure rely on the perceived impact of their fundamental biological research. However, while conducting this research we often find ourselves developing custom scripts in ecology, genetics or genomics. If these scripts can be used by other colleagues we release these as a package in R (Fig. 1). We have done this so far with the R packages &lt;a href=&#34;https://grunwaldlab.github.io/poppr/&#34; target=&#34;_blank&#34;&gt;poppr&lt;/a&gt;, &lt;a href=&#34;https://github.com/grunwaldlab/vcfR&#34; target=&#34;_blank&#34;&gt;vcfR&lt;/a&gt;, &lt;a href=&#34;https://grunwaldlab.github.io/metacoder_documentation/&#34; target=&#34;_blank&#34;&gt;metacodeR&lt;/a&gt;, &lt;a href=&#34;https://f1000research.com/articles/7-272/v1&#34; target=&#34;_blank&#34;&gt;taxa&lt;/a&gt;, &lt;a href=&#34;https://github.com/grunwaldlab/effectR&#34; target=&#34;_blank&#34;&gt;effectr&lt;/a&gt;, and &lt;a href=&#34;https://github.com/grunwaldlab/popprxl&#34; target=&#34;_blank&#34;&gt;popprxl&lt;/a&gt;. This sometimes results in an extra publication (eg:  &lt;a href=&#34;http://grunwaldlab.cgrb.oregonstate.edu/metacoder-r-package-visualization-and-manipulation-community-taxonomic-diversity-data&#34; target=&#34;_blank&#34;&gt;MetacodeR&lt;/a&gt; and &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12549&#34; target=&#34;_blank&#34;&gt;vcfR&lt;/a&gt;) with a modest amount of additional effort. Methods papers releasing R packages are highly cited; thus, computational biology resources contribute significantly to the citations and the impact of a scientist. But I caution students and postdocs not to rely solely on computational papers since biology papers will remain the bread and butter for recognition and impact of our work.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/img/posts/post3-nik-interview2.png&#34; width=80%&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fig 1. Graphical outputs of analysis conducted using some R packages developed by the Grünwald Lab team&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;You have been quite active on social media advocating for more open and transparent science and data and code sharing. As leader of the publication board of the American Phytopathological Society (APS) journals, a new article type that fits any of the APS journals called &lt;a href=&#34;https://apsjournals.apsnet.org/page/authorinformation?mobileUi=0#resourceannouncements&#34; target=&#34;_blank&#34;&gt;Resource Announcement&lt;/a&gt;, have been created. I wonder how you came up with this idea and what are the expectations for this kind of publication.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: Large data sets, like genome sequences, microbiome or imaging data, are wonderful resources for all of us if they are available with the proper metadata and copyright. The &lt;a href=&#34;https://apsjournals.apsnet.org/page/authorinformation?mobileUi=0#resourceannouncements&#34; target=&#34;_blank&#34;&gt;Resource Announcement&lt;/a&gt; we created for APS journals as a new category provides a venue for getting citations and credit for these types of efforts. We want to incentivize release of data, code and related resources so that it can be reused. Several journals are doing this now including mBio and Molecular Ecology Resources. With the new category of Resource Announcement (Fig. 2), we are keeping plant pathology resources within the ecosystem of APS journals.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/img/posts/post3-nik-interview3.png&#34; width=80%&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fig 2. Screenshot of a Resource Announcement &lt;a href=&#34;https://apsjournals.apsnet.org/doi/abs/10.1094/PBIOMES-04-17-0017-A&#34; target=&#34;_blank&#34;&gt;paper in Phytobiomes&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;As you know, OPP is for everyone who wants to 1) stay connected with other researchers with interest/developments in the field of plant pathology and 2) contribute to promote open science and reproducible research. It may not fit everyone&amp;rsquo;s needs given the focus of #OPP on more computational aspects using open source software. What are the areas and target audience that you think shall benefit most from participating and taking leadership in this new community?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: I think every plant pathologist benefits from following the #OPP philosophy of sharing data, code and resources openly and following principles of reproducible research. In the US, the federal government requires open access to publications, data, code and related resources from federally funded grants. Major donors like the Welcome Trust or the Bill and Melinda Gates Foundation similarly require open approaches. #OPP provides a network and resources for training that benefit all of us in doing open research. I think the fundamental role that #OPP is playing is to incentivize open, transparent and reproducible research. Not everybody needs to be a hardcore coder, but basic coding including reproducible lab notebooks help reproducibility and benefits all of us. Given organizations like Retraction Watch, PubPeer, and others that monitor reproducibility and rigor in science, it is incumbent upon all of to us to keep good records so that we can correct mistakes in the literature when they are identified. #OPP facilitates this process and helps all of us learn from each other to become better open scientists.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;For the prospective students who want to join the Grünwald Lab, what is the word of encouragement and necessary skills for those willing to pursue a PhD in the exciting field of population genetics and genomics?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NG&lt;/strong&gt;: You do not need to be a programmer if you want to work in my lab. However, you should not be afraid of using computational tools to ask biological questions. Today&amp;rsquo;s biology is highly quantitative and I do not see this changing anytime soon. Molecular biology when I went to grad school was not quantitative. In the era of high throughput sequencing the fields of genetics and genomics have adopted highly sophisticated computational and statistical approaches.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;OPP&lt;/em&gt;&lt;/strong&gt;: &lt;em&gt;Thanks Nik! Keep up with the good work and thanks for your time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr style=&#34;margin-top:10px;&#34;&gt;
+
+&lt;p&gt;The tweet below highlights members of the Grünwald Lab teaching a workshop during ICPP 2018, Boston, USA.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;pt&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;.⁦&lt;a href=&#34;https://twitter.com/zacharyfoster19?ref_src=twsrc%5Etfw&#34;&gt;@zacharyfoster19&lt;/a&gt;⁩ ⁦&lt;a href=&#34;https://twitter.com/knaus_brian?ref_src=twsrc%5Etfw&#34;&gt;@knaus_brian&lt;/a&gt;⁩ ⁦&lt;a href=&#34;https://twitter.com/ncarleson?ref_src=twsrc%5Etfw&#34;&gt;@ncarleson&lt;/a&gt;⁩ teaching microbiome analysis workshop at &lt;a href=&#34;https://twitter.com/hashtag/icpp2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#icpp2018&lt;/a&gt; &lt;a href=&#34;https://t.co/9pC4IlZoxZ&#34;&gt;pic.twitter.com/9pC4IlZoxZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Niklaus Grünwald (@PhytophthoraLab) &lt;a href=&#34;https://twitter.com/PhytophthoraLab/status/1023623571413905410?ref_src=twsrc%5Etfw&#34;&gt;29 de julho de 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop: Applications of Information Theory in Plant Disease Management: Theory and Practice</title>
+      <link>https://openplantpathology.org/talk/icpp2018-neil-information-theory/</link>
+      <pubDate>Thu, 16 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/icpp2018-neil-information-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop: Network Analysis in Plant Pathology</title>
+      <link>https://openplantpathology.org/talk/icpp2018-garret-networks/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/icpp2018-garret-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop: Population Genomics in R</title>
+      <link>https://openplantpathology.org/talk/icpp2018-grunwald-popgen/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/icpp2018-grunwald-popgen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk: Establishing a community for supporting and fostering adoption of reproducible research using R</title>
+      <link>https://openplantpathology.org/talk/user2018-adam-opp/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/user2018-adam-opp/</guid>
+      <description>&lt;p&gt;References&lt;/p&gt;
+
+&lt;p&gt;JJ Allaire, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng and Winston Chang (2018). rmarkdown: Dynamic Documents for R. R package version 1.10. &lt;a href=&#34;https://CRAN.R-project.org/package=rmarkdown&#34; target=&#34;_blank&#34;&gt;https://CRAN.R-project.org/package=rmarkdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ben Marwick (2018). rrtools: Creates a reproducible research compendium. R package version 0.1.0. &lt;a href=&#34;https://github.com/benmarwick/rrtools&#34; target=&#34;_blank&#34;&gt;https://github.com/benmarwick/rrtools&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RStudio Team (2016). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA. &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;http://www.rstudio.com/&lt;/a&gt;
+Yihui Xie (2018). blogdown: Create Blogs and Websites with R Markdown. R package version 0.6.&lt;/p&gt;
+
+&lt;p&gt;Yihui Xie, Alison Presmanes Hill, and Amber Thomas (2017). blogdown: Creating Websites with R Markdown. Chapman and Hall/CRC. ISBN 978-0815363729&lt;/p&gt;
+
+&lt;p&gt;Hadley Wickham and Jay Hesselberth (2018). pkgdown: Make Static HTML Documentation for a Package. R package version 1.1.0. &lt;a href=&#34;https://CRAN.R-project.org/package=pkgdown&#34; target=&#34;_blank&#34;&gt;https://CRAN.R-project.org/package=pkgdown&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop: Introduction to Multivariate Statistics Using R</title>
+      <link>https://openplantpathology.org/talk/icpp2018-neil-multivariate/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/icpp2018-neil-multivariate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Talk: Open ideas, data and code sharing: epidemiologists should be in front!</title>
+      <link>https://openplantpathology.org/talk/iew12-emerson-opp/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/talk/iew12-emerson-opp/</guid>
+      <description>&lt;p&gt;References&lt;/p&gt;
+
+&lt;p&gt;Bond-Lamberty, B., Smith, A.P., &amp;amp; Bailey, V. 2016: Running an open experiment: transparency and reproducibility in soil and ecosystem science. Environ. Res. Lett., 11:084004.&lt;/p&gt;
+
+&lt;p&gt;Del Ponte, E.M.: Reproducible report: Meta-analysis of relationships between white mold and soybean yield. [WWW document] URL &lt;a href=&#34;https://emdelponte.github.io/paper-white-mold-meta-analysis&#34; target=&#34;_blank&#34;&gt;https://emdelponte.github.io/paper-white-mold-meta-analysis&lt;/a&gt;. Cited 22 May. 2018.&lt;/p&gt;
+
+&lt;p&gt;Del Ponte E.M. &amp;amp; Sparks A.H.: Open Plant Pathology: a Community to Promote Open Science Practices Including Data, Code and Research Outcomes in Plant Pathology. [WWW document] URL &lt;a href=&#34;https://www.openplantpathology.org/&#34; target=&#34;_blank&#34;&gt;https://www.openplantpathology.org/&lt;/a&gt;. Cited 22 May. 2018.&lt;/p&gt;
+
+&lt;p&gt;Duku, C., Sparks, A.H. &amp;amp; Zwart, S.J. 2016: Spatial modelling of rice yield losses in Tanzania due to bacterial leaf blight and leaf blast in a changing climate. Clim. Change., 135:569-583.&lt;/p&gt;
+
+&lt;p&gt;Shah, D.A., and Madden, L.V. 2004: Nonparametric analysis of ordinal data in designed factorial experiments. Phytopathology., 94:33-43.&lt;/p&gt;
+
+&lt;p&gt;Sparks, A.H., Del Ponte, E.M., Everhart, S., Foster, Z.S.L., Grünwald, N., (2018). Compendium of R code and data for ‘Status and Best Practices for Reproducible Research In Plant Pathology’. DOI: 10.5281/zenodo.1250665. Cited 22 May. 2018.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is going on in OPP? a quick summary of the first five months</title>
+      <link>https://openplantpathology.org/post/2018-05-20-second-post-five-month-summary/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://openplantpathology.org/post/2018-05-20-second-post-five-month-summary/</guid>
+      <description>
+
+&lt;p&gt;We founded OPP in early January this year without too much ambition and zero funding. We envisioned a place to &lt;a href=&#34;https://www.openplantpathology.org/post/2018-01-08-first-post-community-call/&#34; target=&#34;_blank&#34;&gt;connect more easily with other  researchers&lt;/a&gt; who, like us, are willing to embrace and promote open science and reproducible practices in plant pathology, mainly focusing on computational aspects of the analysis.&lt;/p&gt;
+
+&lt;p&gt;To achieve this goal, OPP evolved to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a core group (leadership) and members who participate in our &lt;a href=&#34;https://openplantpathology.slack.com&#34; target=&#34;_blank&#34;&gt;Slack workspace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the OPP website with members&amp;rsquo; directory, blog and OPP Notes&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://twitter.com/openplantpath&#34; target=&#34;_blank&#34;&gt;Twitter account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://github.com/openplantpathology&#34; target=&#34;_blank&#34;&gt;GitHub organisation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We had no idea how OPP would be received and whether it would catch interest and be sustainable. After the announcement post and a few tweets, we were able to bring together 76 members who signed up to our Slack channels. Of these, 42 members from eight countries (four continents) registered to our &lt;a href=&#34;https://www.openplantpathology.org/directory/&#34; target=&#34;_blank&#34;&gt;member directory&lt;/a&gt;. The most represented groups are epidemiologists, modelers, population biologists and programmers, indicated as primary field domain. The traffic in the OPP website was most intense during the first two months (6K page views) with peaks after the first inclusion of original content, an OPP Note, &lt;a href=&#34;https://www.openplantpathology.org/notes/sparks/1/&#34; target=&#34;_blank&#34;&gt;Linear modelling of soil temperature effects on root lesion nematode population densities in R&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We were surprised by a quick reaction and initial engagement in our Slack workspace where several channels were created to accommodate smaller groups with a specific interest including #epidemictheory, #phytopathometry, #reproducibility, #teaching and #r-pkg-dev, as among the more active. There have been a lot of interactions and collaborations are on the rise. It is hard to fairly summarize achievements and ideas that have materialized but here are a few selected ones from the channels:&lt;/p&gt;
+
+&lt;h2 id=&#34;r-package-development&#34;&gt;R package development&lt;/h2&gt;
+
+&lt;p&gt;In #r-pkg-dev channel, we discovered the existence of a the first general plant pathology R package (that any of us were aware of) for conducting epidemiological analysis of spatial disease data, &lt;a href=&#34;https://github.com/chgigot/epiphy&#34; target=&#34;_blank&#34;&gt;epiphy&lt;/a&gt;, developed and maintained by &lt;a href=&#34;https://www.researchgate.net/profile/Christophe_Gigot&#34; target=&#34;_blank&#34;&gt;Christophe Gigot&lt;/a&gt;. A channel was created for #epiphy for a more focused discussion on package functionalities and suggestions of improvements. To know more about &lt;em&gt;epiphy&lt;/em&gt;, check its &lt;a href=&#34;https://chgigot.github.io/epiphy/articles/epiphy.html&#34; target=&#34;_blank&#34;&gt;primer&lt;/a&gt;. We brainstormed about other useful packages, and some of us suggested a curated collection of documented data sets from plant pathology articles and other sources to support teaching activities and demonstration of analyses. We recently found a similar idea already implemented, the excellent &lt;a href=&#34;https://github.com/kwstat/agridat&#34; target=&#34;_blank&#34;&gt;Agridat&lt;/a&gt; package with 263 documented data sets of agricultural experiments accompanied by R scripts (for graphs and analyses) for almost every data set - including some plant disease experiments.&lt;/p&gt;
+
+&lt;h2 id=&#34;teaching-approaches&#34;&gt;Teaching approaches&lt;/h2&gt;
+
+&lt;p&gt;A preliminary list of &amp;ldquo;Essential Topics for an Epidemiology Course&amp;rdquo; has been initially proposed by &lt;a href=&#34;https://qbelab.plantpathology.ucdavis.edu/&#34; target=&#34;_blank&#34;&gt;Neil McRoberts&lt;/a&gt; in the #teaching channel and was extended with suggestions by other members. If that will ever materialize into an actual book is unknown, but definitely very good ideas are out there. We would love to see a &lt;a href=&#34;https://bookdown.org/yihui/bookdown/&#34; target=&#34;_blank&#34;&gt;bookdown&lt;/a&gt; botanical epidemiology book!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/img/posts/post2-fig1.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;peer-reviewed-materials&#34;&gt;Peer-reviewed materials&lt;/h2&gt;
+
+&lt;p&gt;A peer-reviewed section, following an open peer-review process pioneered by &lt;a href=&#34;https://github.com/ropensci/onboarding&#34; target=&#34;_blank&#34;&gt;rOpenSci&lt;/a&gt;, called &lt;a href=&#34;https://www.openplantpathology.org/publication/&#34; target=&#34;_blank&#34;&gt;OPP Notes&lt;/a&gt; was created for the publication of teaching notes, tutorials and reproduction of analysis from previously published work using open source code. It was based on a previous effort to popularize R among plant pathologists about 10 years ago, the series of teaching articles on &lt;a href=&#34;https://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/Pages/default.aspx&#34; target=&#34;_blank&#34;&gt;Ecology and Epidemiology in R&lt;/a&gt; by OPP members Paul Esker and Adam Sparks with others. A &lt;a href=&#34;https://github.com/openplantpathology/contributions&#34; target=&#34;_blank&#34;&gt;repository with a template&lt;/a&gt; was created for contributors to fork and use with instruction when contributing content. Contributions are reviewed by volunteer OPP members. Our first note, &lt;a href=&#34;https://www.openplantpathology.org/notes/sparks/1/&#34; target=&#34;_blank&#34;&gt;Linear modelling of soil temperature effects on root lesion nematode population densities in R&lt;/a&gt;, was written by Adam Sparks and John Thompson and &lt;a href=&#34;https://github.com/openplantpathology/contributions/issues/1&#34; target=&#34;_blank&#34;&gt;reviewed&lt;/a&gt; by Emerson Del Ponte and Mladen Čučak. We hope to have contributions from students as well as more established members of the community with plans for more notes coming this  year. The first Note reached more than eight hundred pageviews! Anyone is welcome to contribute Notes or suggestions of other kinds of contents such as documented analysis accompaining original papers, new analysis of published papers, tutorials, etc. The published Notes are archived at &lt;a href=&#34;https://zenodo.org/record/1173391#.WwGsaFMvzu4&#34; target=&#34;_blank&#34;&gt;Zenodo and assigned a DOI for use when citing them citation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fostering-collaboration&#34;&gt;Fostering collaboration&lt;/h2&gt;
+
+&lt;p&gt;OPP is definitely promoting encounters of scientists with mutual interests or complementary skills that are materializing in actual collaborations including planned visits and collaborative research. A question made on the use of a data assimilation technique materialized in a collaborative work between one of our students (Del Ponte Lab) and Dr. &lt;a href=&#34;https://www.chch.ox.ac.uk/staff/dr-robin-thompson&#34; target=&#34;_blank&#34;&gt;Robin Thomas&lt;/a&gt; (Oxford). The mutual interest in late blight modeling and the use of R will bring one of us (Adam) to visit Ireland to interact with Mladen and others at the &lt;a href=&#34;https://www.maynoothuniversity.ie/&#34; target=&#34;_blank&#34;&gt;University of Maynooth&lt;/a&gt; and &lt;a href=&#34;https://www.teagasc.ie/&#34; target=&#34;_blank&#34;&gt;TEGASC&lt;/a&gt;. Of course it&amp;rsquo;s not just all about science, we are also thankful to Rene Heim and his wife Ina who volunteered to improve our &lt;a href=&#34;https://github.com/openplantpathology/OpenPlantPathology/blob/master/public/img/OPP-hex.png&#34; target=&#34;_blank&#34;&gt;logo&lt;/a&gt; using their talents in graphic design!&lt;/p&gt;
+
+&lt;h2 id=&#34;q-a-environment&#34;&gt;Q&amp;amp;A environment&lt;/h2&gt;
+
+&lt;p&gt;The #general channel is where we expect members posting technical questions of all sorts of plant-pathology related subjects, similar to a discussion mailing list. This has happened but very modestly compared to more general short comments, job announcements, news and discussion of general interest to the group. However, whenever a question is posted, there is always good feedback - see examples below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/img/posts/post2-fig2.png&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reproducible-research-practices&#34;&gt;Reproducible research practices&lt;/h2&gt;
+
+&lt;p&gt;In #reproducibility, there have been interesting discussions and viewpoints shared on the most suitable way of making research project data and code available, also known as a research compendium. Should it be organized as an &lt;a href=&#34;https://github.com/openplantpathology/rice_awd_pests&#34; target=&#34;_blank&#34;&gt;R package&lt;/a&gt; or as an &lt;a href=&#34;https://github.com/emdelponte/research-compendium-website&#34; target=&#34;_blank&#34;&gt;Rstudio project&lt;/a&gt; for download and adaptation by the end-user? Is Docker useful when working with packages or research compendiums? The pros and cons have been discussed and defended by diverging views depending on the researcher skills, desired level of automation and objectives.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src = &#34;/img/posts/post2-fig3.png&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Either way is more than welcome and these very specific technical discussions have little implication for a field where reproducible research practices, even more simple steps such as data and code sharing, are virtually non-existent according to our recent survey across articles published in plant pathology journals in the last five years (Sparks et al. unpublished). We expect that as journals of the field start to require data and code deposit, these practices gain more interest by the researcher - guidelines of best practices are definitely needed, which were are on our todo list with a focus on particularities of our field.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-next&#34;&gt;What is next?&lt;/h2&gt;
+
+&lt;p&gt;Our experiences over the past four months have been positive and the feedback and reaction from others has made our experience such. As leaders, we are facing great challenges such as balancing voluntarily maintaining a community like this with our everyday work loads. It is understandable that after the initial boom, the declining or lack of participation by members are due to similar reasons. Anyway, it is being a great learning and the current and potential benefits that may arise from this community, such as those highlighted above, make it worthwhile and we plan to continue our efforts to help make plant pathology more open and accessible!&lt;/p&gt;
+
+&lt;p&gt;Interested in know more and join OPP? Find out more on our &lt;a href=&#34;https://www.openplantpathology.org/pages/mission/&#34; target=&#34;_blank&#34;&gt;mission webpage&lt;/a&gt;. Convinced you want to join and don&amp;rsquo;t need more backround? &lt;a href = &#34;mailto:openplantpathology@gmail.com&#34; subject= &#34;Interested to join your Slack Workgroup&#34;&gt;Send us an e-mail and ask to join our Slack workgroup.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Emerson &lt;a href=&#34;https://twitter.com/edelponte&#34; target=&#34;_blank&#34;&gt;Del Ponte&lt;/a&gt;
+Adam &lt;a href=&#34;https://twitter.com/adamhsparks&#34; target=&#34;_blank&#34;&gt;Sparks&lt;/a&gt;&lt;br /&gt;
+OPP Founders&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
+      <link>https://openplantpathology.org/publication/sparks_fitting_nematode_models/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/publication/sparks_fitting_nematode_models/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://zenodo.org/badge/latestdoi/119438897&#34;&gt;&lt;img src = &#34;https://zenodo.org/badge/119438897.svg&#34; class = doi&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adam Sparks</title>
+      <link>https://openplantpathology.org/people/sparks/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/sparks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emerson Del Ponte</title>
+      <link>https://openplantpathology.org/people/delponte/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/delponte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neil McRoberts</title>
+      <link>https://openplantpathology.org/people/mcroberts/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/mcroberts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nik Cunniffe</title>
+      <link>https://openplantpathology.org/people/cunniffe/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/cunniffe/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

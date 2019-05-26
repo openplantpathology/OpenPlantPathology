@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication_types on Open Plant Pathology</title>
+    <link>https://openplantpathology.org/publication_types/</link>
+    <description>Recent content in Publication_types on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Wed, 14 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://openplantpathology.org/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1</title>
+      <link>https://openplantpathology.org/publication_types/1/</link>
+      <pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/publication_types/1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

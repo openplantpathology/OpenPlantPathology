@@ -2,6 +2,3 @@
 .Rhistory
 .RData
 .Ruserdata
-blogdown/
-public/*
-!public/.gitkeep 

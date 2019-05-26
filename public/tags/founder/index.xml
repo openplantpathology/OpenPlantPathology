@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Founder on Open Plant Pathology</title>
+    <link>https://openplantpathology.org/tags/founder/</link>
+    <description>Recent content in Founder on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 09 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://openplantpathology.org/tags/founder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adam Sparks</title>
+      <link>https://openplantpathology.org/people/sparks/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/sparks/</guid>
+      <description>Founder. Plant pathologist and epidemiologist. University of Southern Queensland, Australia</description>
+    </item>
+    
+    <item>
+      <title>Emerson Del Ponte</title>
+      <link>https://openplantpathology.org/people/delponte/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://openplantpathology.org/people/delponte/</guid>
+      <description>Founder. Plant disease epidemiologist. Universidade Federal de Viçosa, Brazil</description>
+    </item>
+    
+  </channel>
+</rss>
