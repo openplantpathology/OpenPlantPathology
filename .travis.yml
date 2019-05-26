@@ -1,6 +1,6 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-language: R
+language: r
 sudo: false
 cache:
   packages: true
@@ -32,6 +32,7 @@ before_install:
   - sudo apt-get install -y fonts-roboto libjq-dev
   - fc-cache -fv
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
+  - mkdir public
 
 script:
   - Rscript -e 'blogdown::build_site(method = "html")'
