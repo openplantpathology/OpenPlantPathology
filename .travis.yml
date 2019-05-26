@@ -1,6 +1,6 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-language: r
+language: R
 sudo: false
 cache:
   packages: true
@@ -9,7 +9,7 @@ cache:
 
 before_install:
   - nvm install 8
-  - npm install netlify-cli -g
+  - npm install netlify-cli@next -g
   - Rscript -e 'install.packages(c(
                         "blogdown",
                         "hrbrthemes", 
