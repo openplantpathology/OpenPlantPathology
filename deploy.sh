@@ -7,7 +7,7 @@ ls content/post
 echo "The contents of contents/notes are"
 ls content/notes
 
-if [ "$TRAVIS_PULL_REQUEST_BRANCH" = "master" ]
-	  echo "you are on master, deploying production."
-	  netlify deploy -a $NETLIFY_KEY --prod --dir=public
+if [ "$TRAVIS_PULL_REQUEST_BRANCH" = "master" ]; then
+  echo "you are on master, deploying production."
+  netlify deploy -a $NETLIFY_KEY --prod --dir=public
 fi
