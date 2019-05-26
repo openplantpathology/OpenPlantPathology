@@ -13,7 +13,7 @@ before_install:
   - cd $GOPATH/src/github.com/netlify/netlifyctl
   - make deps build
   - go install
-  - cd ~/
+  - cd /home/travis/build/openplantpathology/OpenPlantPathology
   - sudo apt-get install -y fonts-roboto libjq-dev
   - Rscript -e 'install.packages(c(
                         "blogdown",
