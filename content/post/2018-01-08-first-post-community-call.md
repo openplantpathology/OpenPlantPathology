@@ -2,6 +2,7 @@
 date = 2018-01-01
 lastmod = 2018-01-01
 draft = false
+categories = ["Community"]
 tags = ["Community", "Epidemiology"]
 title = "Are you a scientist dealing with computational plant pathology? Then let's connect and code together!"
 math = true

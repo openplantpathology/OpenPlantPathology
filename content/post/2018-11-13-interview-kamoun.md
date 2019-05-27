@@ -2,12 +2,13 @@
 date = 2018-11-13
 lastmod = 2018-11-13
 draft = false
+categories = ["Interview", "Community"]
 tags = ['Community', 'Wheat blast', 'Effectors', 'Genomics', 'Evolution', 'Interview']
 title = 'OPP Interviews: Sophien Kamoun'
 math = true
 summary = """
 <img src = "/img/members/kamoun.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right"> 
-Our second OPP interview features Professor Sophien Kamoun, a senior scientist and professor of biology with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but more importantly for his work with oomycetes (#notafungus), effectors and evolution. Prof. Kamoun is well recognized for his efforts to champion data sharing and other open science practices. It is a great pleasure to have Prof. Kamoun answering six questions about open science.
+We talked with Prof. Sophien Kamoun, a biology scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting and advocacy for Open Science but, also importantly, for his work with oomycetes (#notafungus), effectors and evolution and, more recently, wheat blast. 
 """
  
 [header]
@@ -18,8 +19,8 @@ caption = ""
  <div class=body style = "background-color: #f6f6f6; padding: 15px; margin-bottom:40px; margin-top: 30px">In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. </div>
 
 
-<img width = 360px src = "/img/posts/post4-kamoun-interview.jpg" style = " margin: 10px; float: right">Our second OPP interview features Professor [Sophien Kamoun](
-http://www.tsl.ac.uk/staff/sophien-kamoun/), a senior scientist and professor of biology with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific [Tweeting](https://twitter.com/kamounlab?lang=en) but, more importantly, for his work with oomycetes [#notafungus](https://twitter.com/hashtag/notafungus), [effectors, genomics and evolution](http://kamounlab.tumblr.com/). 
+<img width = 360px src = "/img/posts/post4-kamoun-interview.jpg" style = " margin: 10px; float: right">We talked with Prof. [Sophien Kamoun](
+http://www.tsl.ac.uk/staff/sophien-kamoun/), a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific [Tweeting](https://twitter.com/kamounlab?lang=en) but, also importantly, for his work with oomycetes [#notafungus](https://twitter.com/hashtag/notafungus), [effectors, genomics and evolution](http://kamounlab.tumblr.com/). 
 
 Prof. Kamoun is well recognized for his efforts to champion data sharing and other open science practices. Recently he was one of the leading scientists who founded [Open Wheat Blast](http://s620715531.websitehome.co.uk/owb/), an initiative with the main goal of providing genomic data and analysis related to wheat blast with open access. The collaborative efforts by several teams allowed to rapidly confirm the source of wheat blast in Bangladesh in early 2016. It is a great pleasure to have Prof. Kamoun as an OPP member and answering a few questions about open science.
 <br><br> 

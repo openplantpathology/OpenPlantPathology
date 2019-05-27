@@ -2,6 +2,7 @@
 date = 2018-05-20
 lastmod = 2018-05-20
 draft = false
+categories = ["Community"]
 tags = ["Community", "Epidemiology"]
 title = "What is going on in OPP? a quick summary of the first five months"
 math = true

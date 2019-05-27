@@ -2,11 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-public/
 blogdown/
 content/posts/*.html
 content/posts/*.markdown
 static/directory/*.html
 static/directory/*.md
 static/notes/
-

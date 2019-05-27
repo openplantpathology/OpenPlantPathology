@@ -1,11 +1,17 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
-language: R
+dist: xenial 
+language: r
 sudo: false
 cache:
   packages: true
   directories:
   - $HOME/.npm
+  
+addons:
+  apt:
+    packages:
+      - fonts-roboto
+      - libjq-dev
 
 before_install:
   - nvm install 8
@@ -29,9 +35,9 @@ before_install:
                         "viridis"))'
   - Rscript -e 'remotes::install_github("RLesur/klippy")'
   - Rscript -e 'blogdown::install_hugo()'
-  - sudo apt-get install -y fonts-roboto libjq-dev
   - fc-cache -fv
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
+  - mkdir public
 
 script:
   - Rscript -e 'blogdown::install_hugo()'

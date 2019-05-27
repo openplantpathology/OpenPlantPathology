@@ -14,10 +14,10 @@ date = "2016-04-20T00:00:00"
 weight = 30
 
 +++
-<img src = "/img/headers/opp-about.svg" width=520 align = left style = "margin: 30px">
+<img src = "/img/headers/opp-about.svg" width=540 align = right style = "margin: 20px">
 
 <h2> What is Open Plant Pathology?</h2>
 
-<p>A community of modelers and computational researchers involved in plant pathology, plant disease epidemiology, pathogen population biology, microbial ecology and genomics, that supports the several forms of Open Science practices in Plant Pathology. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
+<p>We are a community of plant pathologists, mostly computationally-oriented, that supports the several forms of <strong>Open Science</strong> practices. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
 
 <p><a href="pages/mission" class="btn btn-primary  btn-outline">Know our Vision and Mission and request to join</a> </p>

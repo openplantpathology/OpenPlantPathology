@@ -3,8 +3,8 @@ title: A Plant Pathologist's Guide to Writing Your First R Package
 author: Adam H. Sparks
 date: '2019-01-09'
 slug: a-plant-pathologist-s-guide-to-writing-your-first-r-package
-categories: ["R"]
-tags: ["R"]
+categories: ["R", "Tutorial", "Programming"]
+tags: [""]
 header:
   caption: ''
   image: ''
