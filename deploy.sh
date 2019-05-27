@@ -9,5 +9,5 @@ ls content/notes
 
 if [ "$TRAVIS_BRANCH" = "master" ]; then
   echo "you are on master, deploying production."
-  netlifyctl deploy -A $NETLIFY_KEY
+  netlify deploy -a $NETLIFY_KEY
 fi

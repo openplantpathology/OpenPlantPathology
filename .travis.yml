@@ -14,11 +14,8 @@ addons:
       - libjq-dev
 
 before_install:
-  - go get -d github.com/netlify/netlifyctl
-  - cd $GOPATH/src/github.com/netlify/netlifyctl
-  - make deps build
-  - go install
-  - cd /home/travis/build/openplantpathology/OpenPlantPathology
+  - nvm install 8
+  - npm install netlify-cli -g
   - Rscript -e 'install.packages(c(
                         "blogdown",
                         "hrbrthemes", 
