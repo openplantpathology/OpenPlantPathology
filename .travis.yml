@@ -12,7 +12,7 @@ before_install:
   - npm install netlify-cli -g
   - Rscript -e 'install.packages(c(
                         "blogdown",
-                        "hrbrthemes", 
+                        "hrbrthemes",
                         "DT",
                         "devtools",
                         "flexdashboard",
@@ -34,8 +34,9 @@ before_install:
   - Rscript -e 'hrbrthemes::import_roboto_condensed()'
 
 script:
-  - Rscript -e 'blogdown::build_site(method = "html")'
-  - Rscript -e 'rmarkdown::render("static/directory/index.Rmd")'
+  - Rscript -e 'blogdown::install_hugo()'
+  - Rscript -e 'hrbrthemes::import_roboto_condensed()'
+  - Rscript -e 'blogdown::build_site()'
 
 after_success:
 -  sh deploy.sh
