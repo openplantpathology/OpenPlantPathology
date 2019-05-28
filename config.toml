@@ -300,7 +300,7 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "S"
   pre = "<i class='fa fa-slack'></i>"
-  url = "https://openplantpathology.slack.com/"
+  url = "https:////communityinviter.com/apps/openplantpathology/open-plant-pathology"
   weight = 18
 
 # Taxonomies.
