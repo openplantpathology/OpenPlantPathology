@@ -20,7 +20,7 @@ The Asian rust is the most damaging disease of soybean in Brazil since it was di
 
 The data used here are from a more complete set obtained from a meta-regression study where the effect of year was tested as moderator variable ([Dalla Lana et al. 2018](https://apsjournals.apsnet.org/doi/abs/10.1094/PDIS-03-17-0408-RE)). The data of that study have been made available ([Del Ponte et al. 2017](https://osf.io/7d3ch/)), which makes it possible to reuse them!
 
-We will start by importing, inspecting and preparing the data for visualization. I like the tidyverse tools and programming style, so this package is essentially the first to load. The data are available in one of my [OSF project](https://osf.io/7d3ch/) as an `csv` file. In the files panel, look for the `sev_data.csv` file within the data subfolder. Let's import the web-hosted file into R  using `read_csv` function. You need internet connection, but you may want to save the dataframe locally. 
+We will start by importing, inspecting and preparing the data for visualization. I like the tidyverse tools and programming style, so this package is essentially the first to load. The data are available in one of my [OSF project](https://osf.io/7d3ch/) as an `csv` file. In the files panel, look for the `sev_data.csv` file within the data subfolder. Let's import the web-hosted file into R  using `read_csv` function. You need Internet connection, but you may want to save the data frame locally. 
 
 
 ```{r message=FALSE, warning=FALSE}
@@ -32,7 +32,7 @@ fungicide <- read_csv("https://osf.io/rp7nb/download")
 ## Data inspection
 
 
-Let's see how many treatments and the number of entries per treatment. These are the different levels of the `active_ingredient` column, including the nontreated check. I like to use the `tabyl` function of the *janitor* package as substitute for `table()`, so you can do the same using the latter base function if you prefer.
+Let's see how many treatments and the number of entries per treatment. These are the different levels of the `active_ingredient` column, including the non-treated check. I like to use the `tabyl` function of the *janitor* package as substitute for `table()`, so you can do the same using the latter base function if you prefer.
 
 
 
@@ -52,7 +52,7 @@ fungicide %>%
   arrange(active_ingredient)
 ```
 
-Besides the nontreaed check with the largest sample size (250 independent experiments), the fungicides evaluated in most years were __tebu__ and __azox+cypro__, or eight years (2007 to 2014). We will need the check treatment as well. I like to subset the data using the `filter()` function so we keep only te relevant data to work further.
+Besides the non-treated check with the largest sample size (250 independent experiments), the fungicides evaluated in most years were __tebu__ and __azox+cypro__, or eight years (2007 to 2014). We will need the check treatment as well. I like to subset the data using the `filter()` function so we keep only the relevant data to work further.
 
 
 ## Data preparation
@@ -85,7 +85,7 @@ tebu_mix1 <- tebu_mix %>%
 
 
 
-Now we need to create our variable of interest, or the percent reduction in disease severity relative to the non-treated check, commonly reffered to control efficacy. This can be done by first reshaping data to the wide format using the `spread()` function. Then, with the three response variables in separate columns, we can create the new variable of interest using the `mutate()` function. The efficacy is obtained from the ratio of fungicide-treated and nontreated subtracted from 1. Hence, the larger the efficacy (zero to 100%), the better is the fungicide. Note that `selection()` was used to preserve only the columns that are relevant. Note: negative values can be calculated in rare situations where disease severity in the fungicide-treated plot is higher than in the non-treated check of the same experiment.
+Now we need to create our variable of interest, or the percent reduction in disease severity relative to the non-treated check, commonly referred to control efficacy. This can be done by first reshaping data to the wide format using the `spread()` function. Then, with the three response variables in separate columns, we can create the new variable of interest using the `mutate()` function. The efficacy is obtained from the ratio of fungicide-treated and non-treated subtracted from 1. Hence, the larger the efficacy (zero to 100%), the better is the fungicide. Note that `selection()` was used to preserve only the columns that are relevant. Note: negative values can be calculated in rare situations where disease severity in the fungicide-treated plot is higher than in the non-treated check of the same experiment.
 
 
 ```{r}
@@ -154,7 +154,7 @@ tebu_anima <- tebu_decline %>%
     title = "Efficacy ot fungicides for soybean rust control",
     subtitle = "Each dot is one experiment. Year: {frame_time}",
     x = "Harvest year",
-    y = "Disease reduction relative to nontreated (%)",
+    y = "Disease reduction relative to non-treated (%)",
     caption = "Source: Dalla Lana (2018)",
     color = "States"
   ) +
