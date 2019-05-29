@@ -15,6 +15,9 @@ autolink = true
 
 +++
 
+<i class="fa fa-2x fa-slack" style = "margin:0 15px 5px 0;"></i>
+[Join our Slack!](https:////communityinviter.com/apps/openplantpathology/open-plant-pathology)  
+
 <i class="fa fa-2x fa-twitter-square" style = "margin:0 15px 5px 0"></i>
 [Follow us!](https://twitter.com/OpenPlantPath)  
 
