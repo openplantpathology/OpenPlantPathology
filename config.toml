@@ -250,7 +250,6 @@ defaultContentLanguageInSubdir = false
  
 [[menu.main]]
   name = "Blog Posts"
-  pre = "<i class='fas fa-newspaper'></i>""
   url = "#posts"
   weight = 4
   
@@ -268,13 +267,11 @@ defaultContentLanguageInSubdir = false
   
 [[menu.main]]
   name = "Vision and Mission"
-  pre = "<i class='fas fa-fancy-pen'></i>"
   url = "pages/mission"
   weight = 7
 
 [[menu.main]]
   name = "Members"
-  pre = "<i class='fas fa-users'></i>"
   url = "#members"
   weight = 8
 
@@ -289,20 +286,20 @@ defaultContentLanguageInSubdir = false
 #  weight = 12
 
 [[menu.main]]
-  name = " "
+  name = "GH"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
   weight = 14
 
 [[menu.main]]
-  name = " "
+  name = "T"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
   weight = 16
 
 [[menu.main]]
-  name = " "
-  pre = "<i class='fab fa-slack'></i>"
+  name = "S"
+  pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
   weight = 18
 
