@@ -16,9 +16,7 @@ autolink = true
 +++
 
 <i class="fa fa-2x fa-slack" style = "margin:0 15px 5px 0;"></i>
-<a href = "mailto:openplantpathology@gmail.com"
-subject = "I'd like to join your Slack workspace"> Email us to join our Slack
-workspace!</a>
+[Join our Slack!](https:////communityinviter.com/apps/openplantpathology/open-plant-pathology)  
 
 <i class="fa fa-2x fa-twitter-square" style = "margin:0 15px 5px 0"></i>
 [Follow us!](https://twitter.com/OpenPlantPath)  
