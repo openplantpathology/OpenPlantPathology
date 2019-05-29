@@ -23,6 +23,7 @@ before_install:
                         "devtools",
                         "flexdashboard",
                         "gganimate",
+                        "ggmap",
                         "gifski",
                         "googleway",
                         "gsheet",
