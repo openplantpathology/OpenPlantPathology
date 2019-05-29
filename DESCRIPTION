@@ -21,7 +21,7 @@ Depends: R (>= 3.3.2),
     gsheet,
     janitor,
     kableExtra,
-    klippy
+    klippy,
     leaflet,
     rmarkdown,
     magrittr,
