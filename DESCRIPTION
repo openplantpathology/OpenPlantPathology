@@ -8,6 +8,29 @@ Authors@R: c(person("Emerson M", "Del Ponte",
                     email = "adamhsparks@gmail.com",
                     role = "aut"))
 Description: The source code for the the official webpage of Open Plant Pathology
-Depends: R (>= 3.3.2)
+Depends: R (>= 3.3.2),
+    blogdown, 
+    hrbrthemes,
+    DT,
+    devtools,
+    flexdashboard,
+    gganimate,
+    ggmap,
+    gifski,
+    googleway,
+    gsheet,
+    janitor,
+    kableExtra,
+    klippy
+    leaflet,
+    rmarkdown,
+    magrittr,
+    remotes,
+    plotly,
+    sessioninfo,
+    tidyverse,
+    viridis
+Remotes:
+    RLesur/klippy
 License: CC-BY-4.0
 URL: https://github.com/openplantpathology/OpenPlantPathology
