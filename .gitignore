@@ -2,7 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-blogdown/
-content/posts/*.html
-content/posts/*.markdown
-public/
+blogdown
+public
