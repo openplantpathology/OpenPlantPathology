@@ -20,19 +20,6 @@ knitr::asis_output(htmltools::htmlPreserve("
   # Same as !(x %in% table)
   match(x, table, nomatch = 0L) == 0L
 }
-
-domains <- c("Embedded Systems",
-             "Epidemiology",
-             "Fungal Biology",
-             "Genomics",
-             "Microbial Ecology",
-             "Modeling",
-             "Plant Ecology",
-             "Plant Pathology",
-             "Population Biology",
-             "Programming",
-             "Remote Sensing")
-
 ```
 
 
@@ -86,11 +73,6 @@ members <-
     researchgate,
     googlescholar
   )
-
-# check if someone didn't use the dropdown and replace with blank
-if ("members$domain" %notin% domains) {
-  members$domain <- str_replace_all(members$domain, pattern = ", $", "")
-}
 
 members$institution[is.na(members$institution)] <- ""
 
