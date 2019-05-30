@@ -7,7 +7,7 @@ tags = ['R', 'Programming', 'Tutorial', 'Visualization']
 title = 'The Fall of an Empire'
 math = true
 summary = """
-Emerson describes how he made use of the *gganimate* package to help visualize the yearly variation in the efficacy of a fungicide used to control soybean rust in Brazil.
+Emerson describes how he made use of the *gganimate* package to help visualize the yearly variation in the efficacy of a fungicide used to control soybean rust in Brazil. 
 """
  
 [header]
