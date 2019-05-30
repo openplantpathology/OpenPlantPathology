@@ -90,7 +90,8 @@ I’ve personally placed my data online prior to publication in venues that are 
 
 
 <div class=body style = "background-color: #f6f6f6; padding: 15px; margin-bottom:40px; margin-top: 30px">
-<b>OPP</b>: <i>OPP: Marcia McNutt, president of the National Academy of Sciences stated: “We have to change the culture within the research community so open science becomes the easy, accepted, and default path of least resistance.” In an envisioned future when we all have adopted an open science approach, what instances are evaluating if our open data is sound and our analysis valid? Open peer-reviews?_
+<b>OPP</b>: Marcia McNutt, president of the National Academy of Sciences stated:
+<i>“We have to change the culture within the research community so open science becomes the easy, accepted, and default path of least resistance.” In an envisioned future when we all have adopted an open science approach, what instances are evaluating if our open data is sound and our analysis valid? Open peer-reviews?
 <br><br></i></div>
 **Jade**: I think that open peer review is important because it would encourage fair and transparent peer review. Ideally, reviewers would try reproduce each study and be able to evaluate problems. I can see however,  how open peer review (or by this I mean having your name attached to a review) can be tricky for early career scholars who might be worried about retaliation if peer review is not anonymous. 
 <br><br>
