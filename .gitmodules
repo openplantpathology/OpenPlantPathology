@@ -1,8 +1,4 @@
-[submodule "static/directory"]
-	path = static/directory
-	url = https://github.com/openplantpathology/opp_members_directory
-	ignore = dirty
 [submodule "content/notes"]
-	path = content/notes
+	path = static/notes
 	url = https://github.com/openplantpathology/opp_notes/
 	ignore = dirty
