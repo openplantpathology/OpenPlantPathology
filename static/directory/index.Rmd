@@ -43,7 +43,7 @@ members <-
         location,
         state,
         country,
-        remove = F,
+        remove = FALSE,
         sep = ", ") %>%
   replace_na(list(
     domain1 = "",
@@ -56,7 +56,7 @@ members <-
     researchgate = "",
     googlescholar = ""
   )) %>%
-  unite(domain, domain1, domain2, remove = T, sep = ", ") %>%
+  unite(domain, domain1, domain2, remove = TRUE, sep = ", ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
   select(
     name,
