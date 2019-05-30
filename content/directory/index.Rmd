@@ -26,7 +26,6 @@ load("./data/existing_locations.Rds")
 
 # read data from google sheets
 library(gsheet)
-library(ggmap)
 members <-
   gsheet2tbl(
     "https://docs.google.com/spreadsheets/d/1VHGz8oWia5qvleUozznCIgd9bD85XoXm1NWmE6t8nzo/edit?usp=sharing"
@@ -76,8 +75,6 @@ new_members <- setdiff(members6, existing_members)
 if (nrow(new_members) > 0) {
 
   # geocode
-  library(ggmap)
-
   # use API for ggmap
   register_google("AIzaSyAs2MMMRAKxvnAhQ2fFwPuREDz2xrq-UwM")
 
