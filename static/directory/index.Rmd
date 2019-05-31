@@ -20,19 +20,6 @@ knitr::asis_output(htmltools::htmlPreserve("
   # Same as !(x %in% table)
   match(x, table, nomatch = 0L) == 0L
 }
-
-domains <- c("Embedded Systems",
-             "Epidemiology",
-             "Fungal Biology",
-             "Genomics",
-             "Microbial Ecology",
-             "Modeling",
-             "Plant Ecology",
-             "Plant Pathology",
-             "Population Biology",
-             "Programming",
-             "Remote Sensing")
-
 ```
 
 
@@ -50,26 +37,28 @@ members <-
 
 # prepare the dataset for table, plot and map
 library(tidyverse)
-members <- 
+members <-
   members %>%
   unite(geo,
         location,
         state,
         country,
-        remove = F,
+        remove = FALSE,
         sep = ", ") %>%
-  replace_na(list(
-    domain1 = "",
-    domain2 = "",
-    middle_name = "",
-    homepage = "",
-    twitter = "",
-    github = "",
-    orcid = "",
-    researchgate = "",
-    googlescholar = ""
-  )) %>%
-  unite(domain, domain1, domain2, remove = T, sep = ", ") %>%
+  replace_na(
+    list(
+      domain1 = "",
+      domain2 = "",
+      middle_name = "",
+      homepage = "",
+      twitter = "",
+      github = "",
+      orcid = "",
+      researchgate = "",
+      googlescholar = ""
+    )
+  ) %>%
+  unite(domain, domain1, domain2, remove = TRUE, sep = ", ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
   select(
     name,
@@ -86,11 +75,6 @@ members <-
     researchgate,
     googlescholar
   )
-
-# check if someone didn't use the dropdown and replace with blank
-if ("members$domain" %notin% domains) {
-  members$domain <- str_replace_all(members$domain, pattern = ", $", "")
-}
 
 members$institution[is.na(members$institution)] <- ""
 
@@ -118,10 +102,13 @@ locations <- lapply(locations, google_geocode, key = GOOGLE_API_KEY)
 # some return more than set of coordinates, take only first row of each
 x <- vector("list", length = length(locations))
 for (i in 1:length(locations)) {
-  x[[i]] <- locations[[i]]$results$geometry$location[1, ]
+  if (is.null(locations[[i]]$results$geometry$location[1,])) {
+    x[[i]] <- data.frame(lat = NA, lng = NA)
+  } else
+    x[[i]] <- locations[[i]]$results$geometry$location[1,]
 }
-# create a dataframe of lat/lng values
-x <- dplyr::bind_rows(x)
+
+x <- bind_rows(x)
 
 # join locations with members list
 members <- data.frame(members, x)
