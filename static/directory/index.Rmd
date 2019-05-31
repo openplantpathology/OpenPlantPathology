@@ -102,10 +102,13 @@ locations <- lapply(locations, google_geocode, key = GOOGLE_API_KEY)
 # some return more than set of coordinates, take only first row of each
 x <- vector("list", length = length(locations))
 for (i in 1:length(locations)) {
-  x[[i]] <- locations[[i]]$results$geometry$location[1, ]
+  if (is.null(locations[[i]]$results$geometry$location[1,])) {
+    x[[i]] <- data.frame(lat = NA, lng = NA)
+  } else
+    x[[i]] <- locations[[i]]$results$geometry$location[1,]
 }
-# create a dataframe of lat/lng values
-x <- dplyr::bind_rows(x)
+
+x <- bind_rows(x)
 
 # join locations with members list
 members <- data.frame(members, x)
