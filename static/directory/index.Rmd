@@ -37,7 +37,7 @@ members <-
 
 # prepare the dataset for table, plot and map
 library(tidyverse)
-members <- 
+members <-
   members %>%
   unite(geo,
         location,
@@ -45,17 +45,19 @@ members <-
         country,
         remove = FALSE,
         sep = ", ") %>%
-  replace_na(list(
-    domain1 = "",
-    domain2 = "",
-    middle_name = "",
-    homepage = "",
-    twitter = "",
-    github = "",
-    orcid = "",
-    researchgate = "",
-    googlescholar = ""
-  )) %>%
+  replace_na(
+    list(
+      domain1 = "",
+      domain2 = "",
+      middle_name = "",
+      homepage = "",
+      twitter = "",
+      github = "",
+      orcid = "",
+      researchgate = "",
+      googlescholar = ""
+    )
+  ) %>%
   unite(domain, domain1, domain2, remove = TRUE, sep = ", ") %>%
   unite(name, first_name, middle_name, last_name, sep = " ") %>%
   select(
