@@ -36,7 +36,7 @@ find five files:
     <https://rmarkdown.rstudio.com> and the cheatsheet
     <http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>
   
-    - [*LICENSE*](new_contribution/1/LICENSE) - License file, should be changed.
+    - [*LICENSE*](new_contribution/1/LICENSE) - License file, should not be changed.
   
     - [*phytopathology.csl*](new_contribution/1/phytopathology.csl) - Citation
     style used to style the citations and references in the Phytopathology
