@@ -10,8 +10,8 @@ ls content/notes
 if [ "$TRAVIS_BRANCH" = "master" ]
 then
 	  echo "you are on master, deploying production."
-	  netlify deploy -A $NETLIFY_KEY --prod --dir=public
+	  netlify deploy -a $NETLIFY_KEY --prod --dir=public
 else 
     echo "you are not on master, deploying preview."
-    netlify deploy -A $NETLIFY_KEY--dir=public
+    netlify deploy -a $NETLIFY_KEY --dir=public
 fi
