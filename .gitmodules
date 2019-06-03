@@ -1,4 +1,4 @@
 [submodule "content/notes"]
-	path = static/notes
-	url = https://github.com/openplantpathology/opp_notes/
+	path = content/notes
+	url = git@github.com:openplantpathology/opp_notes
 	ignore = dirty
