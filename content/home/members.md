@@ -15,6 +15,6 @@ weight = 45
 
 +++
 <a href="directory/"><img src = "/img/headers/opp-screen.png" width = 380px  align = right></a>
-Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology. Current domains include general Plant Pathology, Plant disease Management, Epidemiology, Geophytopathology, Modeling, Machine Learning, Remote Sensing, Population Biology, Genomics, Microbial Ecology, Programming and Embedded Systems with more being added.
+Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology. Current domains include general Plant Pathology, Plant Disease Management, Epidemiology, Geophytopathology, Modeling, Machine Learning, Remote Sensing, Population Biology, Genomics, Microbial Ecology, Programming and Embedded Systems with more being added.
 
 <a href="directory/" class="btn btn-primary btn-outline">MEMBER DIRECTORY</a> 
