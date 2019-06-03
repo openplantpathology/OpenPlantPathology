@@ -336,7 +336,7 @@ defaultContentLanguageInSubdir = false
   weight = 14
 
 [[menu.main]]
-  name = "Check our GitHub repos"
+  name = "Follow us on GitHub"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
   weight = 1
@@ -357,7 +357,7 @@ defaultContentLanguageInSubdir = false
   parent = "Social"
   
 [[menu.main]]
-  name = "Not in our Slack? sign up here!"
+  name = "Not part of our Slack? Sign up Here!"
   pre = "<i class='fa fa-rocket'></i>"
   url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
   weight = 4
