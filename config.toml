@@ -271,7 +271,7 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
 [[menu.main]]
-  name = "Member directory"
+  name = "Member Directory"
   url = "#members"
   parent = "About OPP"
   weight = 2
@@ -279,7 +279,7 @@ defaultContentLanguageInSubdir = false
 
  
 [[menu.main]]
-  name = "Blog posts & Interviews"
+  name = "Blog Posts & Interviews"
   pre = "<i class='fa fa-pencil'></i>"
   url = "#posts"
   weight = 4
@@ -292,13 +292,13 @@ defaultContentLanguageInSubdir = false
   
   
 [[menu.main]]
-  name = "Recent & upcoming talks"
+  name = "Recent & Upcoming Talks"
   url = "#talks"
   weight = 1
   parent = "Talks & Workshops"
 
 [[menu.main]]
-  name = "Chronological list of events"
+  name = "Chronological List of Events"
   url = "/talk"
   weight = 2
   parent = "Talks & Workshops"
