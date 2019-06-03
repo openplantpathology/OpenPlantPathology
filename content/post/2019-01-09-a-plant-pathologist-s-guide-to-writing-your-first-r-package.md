@@ -8,6 +8,7 @@ tags: [""]
 header:
   caption: ''
   image: ''
+summary: "So you want to write your first R package, but you don't know where to start? We can help with that! Writing an R package is not difficult, but it can be intimidating for a first timer. Why would you want to write an R package? Read more to find out!"
 ---
 
 ## So You Want to Write an R Package?

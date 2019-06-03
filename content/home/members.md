@@ -7,19 +7,14 @@ active = true
 date = "2016-04-20T00:00:00"
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-#title = "Teaching"
-#subtitle = ""
+title = "A growing global community"
+subtitle = "Check our list of members"
 
 # Order that this section will appear in.
 weight = 45
 
 +++
-<a href="directory/"><img src = "/img/headers/opp-screen.png" width = 500px  align = right></a>
-<h1>A Growing Global Community!</h3>
+<a href="directory/"><img src = "/img/headers/opp-screen.png" width = 380px  align = right></a>
+Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology. Current domains include general Plant Pathology, Plant disease Management, Epidemiology, Geophytopathology, Modeling, Machine Learning, Remote Sensing,Population Biology, Genomics, Microbial Ecology, Programming, Embedded Systems.
 
-<p>Check detailed information about the members, institutions, knowledge domains and the global map of Open Plant Pathology </p>
-
-<h2> Knowledge domains</h2>
-General Plant Pathology, Epidemiology, Geophytopathology, Modeling, Population Biology, Genomics, Microbial Ecology, Programming, Embedded Systems.
-
-<p><a href="directory/" class="btn btn-primary btn-outline">CLICK HERE TO ACCESS THE DIRECTORY</a> </p>
+<a href="directory/" class="btn btn-primary btn-outline">CLICK HERE TO ACCESS THE DIRECTORY</a> 

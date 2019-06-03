@@ -2,7 +2,7 @@
 title: "Open Plant Pathology - Member Directory"
 output:
   flexdashboard::flex_dashboard:
-    theme: flatly
+    theme: cosmo
     logo: opp-logo.png
     social: [ "twitter", "facebook" ]
     navbar:

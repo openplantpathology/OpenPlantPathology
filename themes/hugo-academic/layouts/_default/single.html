@@ -6,7 +6,8 @@
   {{ partial "header_image.html" . }}
 
   <div class="article-container">
-    <div class="article-inner">
+    <div class="article-inner" style = "padding-top: 20px">
+      
       <h1 itemprop="name">{{ .Title }}</h1>
 
       {{ partial "article_metadata" (dict "content" . "is_list" 0) }}
