@@ -30,7 +30,7 @@ filter_default = 0
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
 
 [[filter]]
-  name = "All domains"
+  name = "Everyone"
   tag = "*"
   
 [[filter]]
@@ -49,9 +49,9 @@ filter_default = 0
   name = "Epidemiology"
   tag = ".Epidemiology"
 
-[[filter]]
-  name = "Population Biology"
-  tag = ".Population_Biology"
+#[[filter]]
+#  name = "Population Biology"
+#  tag = ".Population_Biology"
 
 [[filter]]
   name = "Mathematical Modeling"
@@ -62,13 +62,12 @@ filter_default = 0
   tag = ".Remote_sensing"  
   
   
-[[filter]]
-  name = "Decision Support Systems"
-  tag = ".DSS" 
+#[[filter]]
+# name = "Decision Support Systems"
+# tag = ".DSS" 
   
 +++
+# Our leadership
 
-
-# Leadership
-Filter by knowledge domain or Leadership
+Meet those who are taking the lead in different fronts within our community including individuals who are established scientists, early career scientists or students. Filter by knowledge domain or Leadership type.
 

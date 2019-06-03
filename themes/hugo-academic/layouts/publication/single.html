@@ -4,9 +4,9 @@
 
   {{ partial "header_image.html" . }}
 
-  <div class="container pub-title"><br><br>
+  <div class="container pub-title">
   
-    <h2 itemprop="name">{{ .Title }}</h2>
+    <h2> itemprop="name">{{ .Title }}</h2>
     <span class="pub-authors" itemprop="author">
       {{ with .Params.authors }}
       {{ delimit . ", " | markdownify }}
@@ -16,6 +16,7 @@
   </div>
 
   <div class="container pub-title">
+    
 
     {{ if .Params.image }}
     <img src="{{ "/img/" | relURL }}{{ .Params.image }}" class="pub-banner" itemprop="image">

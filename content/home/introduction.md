@@ -5,19 +5,19 @@
 widget = "custom"
 active = true
 date = "2016-04-20T00:00:00"
-
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-#title = "Teaching"
-#subtitle = ""
+title = "What is OPP about?"
+subtitle = "Who we are and what we do"
 
 # Order that this section will appear in.
 weight = 30
 
 +++
-<img src = "/img/headers/opp-about.svg" width=540 align = right style = "margin: 20px">
+<img src = "/img/headers/opp-about.svg" width = 350px align=right>
+We are a <a href="pages/mission">community of multidisciplinary scientists who support</a> all forms of <strong>Open Science</strong> practices by developing and delivering next-generation databases and tools using open source software, data and repositories. We advocate for a culture of sharing data and computational codes that leads to more transparency and reproducibility of methods. The three main sections in our website are <a href = "#posts">Blog posts & Interviews</a>, 
+ <a href ="#publications">OPP Notes</a> and  <a href = "#talks">Workshops & Talks</a>.
 
-<h2> What is Open Plant Pathology?</h2>
 
-<p>We are a community of plant pathologists, mostly computationally-oriented, that supports the several forms of <strong>Open Science</strong> practices. We support efforts from individuals or groups to develop and deliver next-generation databases and tools for plant pathology-related subjects and applications using open source software, data and repositories.</p>
 
-<p><a href="pages/mission" class="btn btn-primary  btn-outline">Know our Vision and Mission and request to join</a> </p>
+
+

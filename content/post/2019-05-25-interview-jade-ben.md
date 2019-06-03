@@ -7,7 +7,6 @@ tags = ['Community', 'Open Science', 'Reproducibility', 'Interview']
 title = 'OPP Interviews: Jade d’Alpoim Guedes and Ben Marwick'
 math = true
 summary = """
-<img src = "/img/posts/post5-jade-ben-interview.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right; width:180px"> 
 In our third OPP Interview we have the privilege to chat with two prestigious computational scientists, representatives of the field of archaeology, about their experiences on the use, tool development and promotion of reproducible research practices in science.
 """
  

@@ -11,12 +11,12 @@ subtitle = "Get access to presentations and instructional materials produced by 
 weight = 44
 
 # Number of talks to list.
-count = 4
+count = 3
 
 # List format.
 #   0 = Simple
 #   1 = Detailed
-list_format = 1
+list_format = 0
 
 +++
 

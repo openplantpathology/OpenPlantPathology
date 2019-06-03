@@ -279,7 +279,7 @@ small,
 }
 
 .section-heading h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
 }
 
 .section-heading p {
@@ -602,8 +602,9 @@ article {
  
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 30px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -670,6 +671,8 @@ display: inline-block;
 
 .pub .pub-title {
   margin-bottom: 5px;
+  margin-top: 0px;
+  
 }
 
 .pub .pub-authors {
@@ -688,7 +691,7 @@ display: inline-block;
 .pub-list-item .pub-abstract {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .pub-list-item .pub-authors {
@@ -707,10 +710,12 @@ display: inline-block;
   padding-top: 10px;
 }
 
-#container-publications {
+.container-publications {
   display: block;
   position: relative;
   overflow: hidden;
+  padding-top: 0px;
+  
 }
 
 /*************************************************

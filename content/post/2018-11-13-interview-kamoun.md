@@ -7,7 +7,6 @@ tags = ['Community', 'Wheat blast', 'Effectors', 'Genomics', 'Evolution', 'Inter
 title = 'OPP Interviews: Sophien Kamoun'
 math = true
 summary = """
-<img src = "/img/members/kamoun.jpg" style = "border-radius: 50%; border-color: white 1px; margin: 30px; float: right"> 
 We talked with Prof. Sophien Kamoun, a biology scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting and advocacy for Open Science but, also importantly, for his work with oomycetes (#notafungus), effectors and evolution and, more recently, wheat blast. 
 """
  

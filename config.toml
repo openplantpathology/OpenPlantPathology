@@ -207,7 +207,7 @@ defaultContentLanguageInSubdir = false
   #   For email icon, use "fa" icon pack, "envelope" icon, and
   #   "mailto:your@email.com" as the link.
   #
-  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #   Full list: https://fontawesome.github.io/Font-Awesome/icons/
   #
   # Icon pack "ai" includes the following academic network icons:
   #
@@ -239,6 +239,7 @@ defaultContentLanguageInSubdir = false
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
+
 [params.menus]
   # Align the main menu to the right of the page? (true/false)
   align_right = true
@@ -248,60 +249,127 @@ defaultContentLanguageInSubdir = false
 #  url = "#publications_selected"
 #  weight = 2
  
+ 
+
 [[menu.main]]
-  name = "Blog Posts"
+  name = "About OPP"
+  weight = 1
+
+ 
+[[menu.main]]
+  name = "Vision and Mission"
+  parent = "About OPP"
+  url = "pages/mission"
+  weight = 1
+
+
+
+[[menu.main]]
+  name = "Leadership"
+  url = "#people"
+  parent = "About OPP"
+  weight = 3
+
+[[menu.main]]
+  name = "Member Directory"
+  url = "#members"
+  parent = "About OPP"
+  weight = 2
+  
+
+ 
+[[menu.main]]
+  name = "Blog Posts & Interviews"
+  pre = "<i class='fa fa-pencil'></i>"
   url = "#posts"
   weight = 4
   
 [[menu.main]]
   name = "Talks & Workshops"
-  pre = "<i class='fa fa-edit'></i>"
+  pre = "<i class='fa fa-pencil'></i>"
   url = "#talks"
-  weight = 6
+  weight = 8
+  
+  
+[[menu.main]]
+  name = "Recent & Upcoming Talks"
+  url = "#talks"
+  weight = 1
+  parent = "Talks & Workshops"
+
+[[menu.main]]
+  name = "Chronological List of Events"
+  url = "/talk"
+  weight = 2
+  parent = "Talks & Workshops"
+  
+
   
 [[menu.main]]
   name = "OPP Notes"
-  pre = "<i class='fa fa-bookmark'></i>"
-  url = "#publications"
+  pre = "<i class='fa fa-sticky-note'></i>"
   weight = 6
+
+
+[[menu.main]]
+  name = "Recent Notes"
+  url = "#publications"
+  weight = 1
+  parent = "OPP Notes"
+
+[[menu.main]]
+  name = "Browse Notes"
+  url = "/publication"
+  weight = 2
+  parent = "OPP Notes"
   
 [[menu.main]]
-  name = "Vision and Mission"
-  url = "pages/mission"
-  weight = 7
+  name = "Contribute a Note!"
+  url = "https://github.com/openplantpathology/opp_notes"
+  weight = 3
+  parent = "OPP Notes"
+  
 
 [[menu.main]]
-  name = "Members"
-  url = "#members"
-  weight = 8
-
-#[[menu.main]]
-#  name = "Leadership"
-#  url = "#people"
-#  weight = 10
-
-#[[menu.main]]
-#  name = "Contact"
-#  url = "#contact"
-#  weight = 12
-
-[[menu.main]]
-  name = "GH"
-  pre = "<i class='fa fa-github'></i>"
-  url = "https://github.com/openplantpathology/"
+  name = "Social"
+  pre = "<i class='fa fa-hashtag'></i>"
   weight = 14
 
 [[menu.main]]
-  name = "T"
-  pre = "<i class='fa fa-twitter-square'></i>"
-  url = "https://twitter.com/OpenPlantPath/"
-  weight = 16
+  name = "Follow us on GitHub"
+  pre = "<i class='fa fa-github'></i>"
+  url = "https://github.com/openplantpathology/"
+  weight = 1
+  parent = "Social"
 
 [[menu.main]]
-  name = "S"
+  name = "Follow us on Twitter"
+  pre = "<i class='fa fa-twitter-square'></i>"
+  url = "https://twitter.com/OpenPlantPath/"
+  weight = 2
+  parent = "Social"
+
+[[menu.main]]
+  name = "Sign in to our Slack"
   pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
-  weight = 18
+  weight = 3
+  parent = "Social"
+  
+[[menu.main]]
+  name = "Not part of our Slack? Sign up Here!"
+  pre = "<i class='fa fa-rocket'></i>"
+  url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
+  weight = 4
+  parent = "Social"
+
+
+#[[menu.main]]
+#  name = "Contacts"
+#  url = "#contact"
+#  weight = 12
+#  parent = "Social"
+
 
 # Taxonomies.
 [taxonomies]
