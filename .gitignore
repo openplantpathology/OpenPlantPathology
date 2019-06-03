@@ -5,3 +5,4 @@
 blogdown
 public
 static/directory/*.html
+.DS_Store
