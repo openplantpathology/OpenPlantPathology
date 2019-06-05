@@ -69,5 +69,5 @@ filter_default = 0
 +++
 # Our leadership
 
-Meet those who are taking the lead in different fronts within our community including individuals who are established scientists, early career scientists or students. Filter by knowledge domain or Leadership type.
+Meet those who are taking the lead in different fronts within our community including individuals who are established scientists, early career scientists or students. Filter by knowledge domain or leadership type.
 
