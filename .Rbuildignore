@@ -2,3 +2,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^Official Website of Open Plant Pathology\.Rcheck$
+^Official Website of Open Plant Pathology.*\.tar\.gz$
+^Official Website of Open Plant Pathology.*\.tgz$
