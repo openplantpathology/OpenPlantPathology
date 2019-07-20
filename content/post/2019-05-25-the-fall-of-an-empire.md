@@ -44,9 +44,9 @@ share the R code use to produce the animation for others' presentations.
 The data used here are from a more complete set obtained from a
 meta-regression study where the effect of year was tested as moderator
 variable ([Dalla Lana et
-al. 2018](https://apsjournals.apsnet.org/doi/abs/10.1094/PDIS-03-17-0408-RE)).
+al. 2018](https://apsjournals.apsnet.org/doi/abs/10.1094/PDIS-03-17-0408-RE)).
 The data of that study have been made available ([Del Ponte et
-al. 2017](https://osf.io/7d3ch/)), which makes it possible to reuse
+al. 2017](https://osf.io/7d3ch/)), which makes it possible to reuse
 them!
 
 We will start by importing, inspecting and preparing the data for
