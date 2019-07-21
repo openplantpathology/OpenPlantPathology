@@ -16,7 +16,7 @@ caption = ""
 
 +++
 
-> This is a preprint version of a Letter to Editor article published in Tropical Plant Pathology is available from the [TPP Springer Webpage](https://link.springer.com/article/10.1007/s40858-019-00300-4)
+> This is a preprint version of a Letter to Editor article published in Tropical Plant Pathology, which is available from the [TPP Springer Webpage](https://link.springer.com/article/10.1007/s40858-019-00300-4)
 
 __René H. J. Reim__  
 *University of Florida, USA* 
