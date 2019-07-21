@@ -4,6 +4,8 @@ lastmod = 2019-07-20
 draft = false
 title = 'Breaking down barriers between remote sensing and plant pathology'
 math = true
+categories = [""]
+tags = [""]
 summary = """
 Preprint of a Letter to Editor of Tropical Plant Pathology by Dr. Heim and collaborators on the challenges and potential solutions in the context of application of remote sensing in plant pathology. 
 """
@@ -13,10 +15,11 @@ image = ""
 caption = ""
 
 +++
-> Preprint version of a Letter to Editor article published in Tropical Plant Pathology an available at [TPP Springer webpage]( https://link.springer.com/article/10.1007/s40858-019-00300-4)
+
+> Preprint version of a Letter to Editor article published in Tropical Plant Pathology is available at [TPP Springer webpage](https://link.springer.com/article/10.1007/s40858-019-00300-4)
 
 __René H. J. Reim__  
-*University of Florida,  USA* 
+*University of Florida, USA* 
 
 __Angus J. Carnegie__  
 *Department of Primary Industries - Forestry, Australia* 
@@ -80,7 +83,3 @@ Vogel G (2017) Where have all the insects gone? Science 356:576–579
 Willis KJ (2017) State of the World’s plants 2017. Royal Botanic Gardens, Kew 84:64–71
 
 Zarco-Tejada PJ, Camino C, Beck PSA, Calderon R, Hornero A, Hernández-Clemente R, Kattenborn T, Montes-Borrego M, Susca L, Morelli M, Gonzalez-Dugo V, North PRJ, Landa BB, Boscia D, Saponari M, Navas-Cortes JA (2018) Previsual symptoms of Xylella fastidiosa infection revealed in spectral plant-trait alterations. Nature Plants 4:432–439
-
-
-
-
