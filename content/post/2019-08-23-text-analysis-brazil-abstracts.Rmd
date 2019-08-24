@@ -34,8 +34,7 @@ It was rather easy to follow the examples codes on how to read data from a table
 
 ```{r message=FALSE, warning=FALSE}
 library(rvest)
-library(magrittr) # Yes, I like to use pipes :)
-library(dplyr)
+library(tidyverse)
 cbfito <- read_html("http://cbfito2019.com.br/index.php?page=portugues") %>%
   html_table() %>%
   map_dfr(`[`, c("ID", "Título")) %>%
