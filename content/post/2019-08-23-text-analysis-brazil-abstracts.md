@@ -163,7 +163,3 @@ To answer the original question, the analysis showed that among the 706 posters 
 
 I believe text analysis is powerful and could be expanded to answer different questions should more information be available. For example, if each poster was associated with a specific session, that could be taken into account in the analysis. Maybe some kind of network analysis could be used to check which two words tend to appear more frequently together (same study). For example, for which group of pathogen is identification more common. What are the most common control methods studied in soybean? are they the same as in other crops? 
 
-
-
-
-
