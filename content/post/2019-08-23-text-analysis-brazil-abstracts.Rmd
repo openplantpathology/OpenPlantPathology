@@ -1,21 +1,10 @@
-+++
-date = 2019-08-23
-lastmod = 2019-08-23
-draft = false
-categories = ["R", "Tutorial", "Programming", "Visualization"]
-tags = ['R', 'Programming', 'Tutorial', 'Visualization']
-title = 'What are Brazilian plant pathologists researchers doing? a text analysis of scientific posters of the 51CBFito'
-math = true
-summary = """
-Emerson describes how he conducted a text analysis of the scientific posters presented at the 51 Congresso Brasileiro de Fitopatologia.
-"""
+---
+title: "What are Brazilian plant pathologists researchers doing? a text analysis of scientific posters of the 51CBFito"
+author: "Emerson"
+date: "8/23/2019"
+output: html_document
+---
  
-[header]
-image = ""
-caption = ""
-
-+++
-
 
 ## Motivation
 
@@ -34,7 +23,8 @@ It was rather easy to follow the examples codes on how to read data from a table
 
 ```{r message=FALSE, warning=FALSE}
 library(rvest)
-library(tidyverse)
+library(magrittr) # Yes, I like to use pipes :)
+library(dplyr)
 cbfito <- read_html("http://cbfito2019.com.br/index.php?page=portugues") %>%
   html_table() %>%
   map_dfr(`[`, c("ID", "Título")) %>%
@@ -52,6 +42,8 @@ nrow(cbfito) # total number of posters
 Now that I got the data, a [tidy](https://www.tidyverse.org/) approach was used to analyse text. The `unnest_tokens()` function allows to extract all words and create a new variable.
 
 ```{r}
+library(remotes)
+install_github("juliasilge/tidytext")
 library(tidytext)
 library(tidyr)
 cbfito_words <- cbfito %>%
@@ -161,6 +153,10 @@ words_freq %>%
 To answer the original question, the analysis showed that among the 706 posters in total that will be presented, there are great number of works that evaluated of disease control methods based on the use of fungicides, host resistance or biological control (**Trichoderma** and **Bacillus**) both in the field and under in vitro conditions. The most studied crops are soybean, maize, common bean, cowpea and tomato and the most common diseases are caused by fungi (**Colletotrichum**, **Fusarium**) followed by nematodes (**Meloidogyne**) and viruses. 
 
 I believe text analysis is powerful and could be expanded to answer different questions should more information be available. For example, if each poster was associated with a specific session, that could be taken into account in the analysis. Maybe some kind of network analysis could be used to check which two words tend to appear more frequently together (same study). For example, for which group of pathogen is identification more common. What are the most common control methods studied in soybean? are they the same as in other crops? 
+
+
+
+
 
 
 
