@@ -1,6 +1,6 @@
 +++
 date = 2019-08-23
-lastmod = 2019-058-23
+lastmod = 2019-08-23
 draft = false
 categories = ["R", "Tutorial", "Programming", "Visualization"]
 tags = ['R', 'Programming', 'Tutorial', 'Visualization']
