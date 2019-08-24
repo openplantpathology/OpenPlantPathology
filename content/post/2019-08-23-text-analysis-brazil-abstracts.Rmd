@@ -1,10 +1,20 @@
----
-title: "What are Brazilian plant pathologists researchers doing? a text analysis of scientific posters of the 51CBFito"
-author: "Emerson"
-date: "8/23/2019"
-output: html_document
----
++++
+date = 2019-08-23
+lastmod = 2019-08-23
+draft = false
+categories = ["R", "Tutorial", "Programming", "Visualization"]
+tags = ['R', 'Programming', 'Tutorial', 'Visualization']
+title = 'What are Brazilian plant pathologists researchers doing? a text analysis of scientific posters of the 51CBFito'
+math = true
+summary = """
+Emerson describes how he conducted a text analysis of the scientific posters presented at the 51 Congresso Brasileiro de Fitopatologia.
+"""
  
+[header]
+image = ""
+caption = ""
+
++++
 
 ## Motivation
 
