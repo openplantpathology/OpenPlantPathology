@@ -163,7 +163,7 @@ cbfito_words %>%
 ## 20 fungicidas        52
 ```
 
-The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words). There are several of those both in Portuguese and in English which I not want them to appear in the analysis as I am interested in more technical terms. To eliminate them, we need to find a list of stopwords. I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contained higher number of stop words in Portuguese. 
+The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words). There are several of those both in Portuguese and in English, which I not want them to appear in the analysis as I am interested in more technical terms. To eliminate them, we need to find a list of stopwords. I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contained higher number of stop words in Portuguese. 
 
 
 
@@ -256,7 +256,7 @@ words_freq %>%
 ![](/img/posts/post-text-fig01.png)<!-- -->
 
 
-Using barplots we have serious limitation in space. Also, it does not make sense to include in the plot too many words with just a few occurrences, for the case of a barplot. A nice solution for more crowdy data is to produce a wordcloud plot. In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
+Using barplots we have serious limitation in space. Also, it does not make sense to include in the plot too many words with just a few occurrences, for the case of a barplot. A nice solution for more crowded data is to produce a wordcloud plot. In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
 
 
 ```r
