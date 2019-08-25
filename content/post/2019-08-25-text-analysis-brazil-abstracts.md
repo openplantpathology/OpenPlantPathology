@@ -24,7 +24,7 @@ The  scientific conference promoted by the [Brazilian Society of Plant Pathology
 
 ## Sources of data
 
-I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles of organized by sessions. I was not succesful in extracting information from that file using *pdftools* package the way I would like to. I gave up using that source and asked the organizers if there was another format - different from a spreadsheet. They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese. That worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package. 
+I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles of organized by sessions. I was not succesful in extracting information from that file using [*pdftools*](https://docs.ropensci.org/pdftools) package the way I would like to. I gave up using that source and asked the organizers if there was another format - different from a spreadsheet. They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese. That worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package. 
 
 
 ## Time to harvest
