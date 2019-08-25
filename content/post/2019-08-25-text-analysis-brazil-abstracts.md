@@ -254,7 +254,7 @@ words_freq %>%
   labs(y = "Frequency", x = "")
 ```
 
-![](post-text-fig01.png)<!-- -->
+![](/img/posts/post-text-fig01.png)<!-- -->
 
 
 Using barplots we have limitations in space. Also, it does not make sense to plot too many words with just a few occurrences. A nice solution for more crowdy data is to produce a wordcloud plot. In the code to produce the wordcloud, I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
@@ -275,7 +275,7 @@ words_freq %>%
     rot.per = 0.40, colors=brewer.pal(8, "Dark2")))
 ```
 
-![](post-text-fig02.png)<!-- -->
+![](/img/posts/post-text-fig02.png)<!-- -->
 
 ## Conclusion
 
