@@ -19,12 +19,12 @@ caption = ""
 Emerson Del Ponte 
 
 
-The  scientific conference promoted by the [Brazilian Society of Plant Pathology](http://sbfitopatologia.org.br/) (SBF) is the primary venue for local scientists to present their research data. Among the different ways of delivering science and receiving feedback, poster presentation is tradition and central at the meeing. They might provide the largest amount of the least biased (not by invitation) information on the current and future status of research in the field. Most commonly, summaries of work presented in a conference are based on the number of abstracts per subarea or number of results from a keyword-based search. I have played with text analysis in a [recent research article](https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-02-17-0069-FI#fig2) and thought it could be useful here to identify the most frequent research areas to be presented at the [51CBFito meeting](http://cbfito2019.com.br/). I also wanted to learn new coding and, of course, share what I've learned. 
+The  scientific conference promoted by the [Brazilian Society of Plant Pathology](http://sbfitopatologia.org.br/) (SBF) is the primary venue for local scientists to present their research data. Among the different ways of delivering scientific content and receiving feedback, poster presentation is tradition and central at meetings. They might provide the largest amount of the least biased (not by invitation) information on the current and future status of research in the field. Most commonly, summaries of work presented in a conference are based on the number of abstracts per subarea or number of results from a keyword-based search. I have played with text analysis in a [recent research article](https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-02-17-0069-FI#fig2) and thought it could be useful to identify the most frequent research areas to be presented at the [51CBFito meeting](http://cbfito2019.com.br/). I also wanted to learn new coding and, of course, share what I've learned. 
 
 
 ## Sources of data
 
-I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles of organized by sessions. I was not succesful in extracting information from that file using [*pdftools*](https://docs.ropensci.org/pdftools) package the way I would like to. I gave up using that source and asked the organizers if there was another format - different from a spreadsheet. They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese. That worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package. 
+I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles organized by sessions. I was not succesful in extracting information from that file using [*pdftools*](https://docs.ropensci.org/pdftools) package the way I would like to. I gave up using that source and asked the organizers if there was another format - different from a spreadsheet. They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese. This source worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package. 
 
 
 ## Time to harvest
@@ -53,7 +53,7 @@ nrow(cbfito) # diplay the total number of posters
 
 ## Text analysis
 
-Now that I got the titles of 706 posters, a [tidy](https://www.tidyverse.org/) approach was used to analyse the text. The `unnest_tokens()` function allows to extract all words and store as a new variable.
+Now that I got the titles of 706 posters, a [tidy](https://www.tidyverse.org/) approach was used to analyse the text. The `unnest_tokens()` function allows to extract all words and store them in a new variable.
 
 
 ```r
@@ -101,7 +101,7 @@ cbfito_words %>%
 ## 10 ID 219 2016
 ```
 
-As we can see above there are some integers that I want to eliminate from the dataset together with the entire ID column. 
+As we can see above there are some integers that I want to remove together with the entire ID column. 
 
 
 ```r
@@ -163,7 +163,7 @@ cbfito_words %>%
 ## 20 fungicidas        52
 ```
 
-The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words). There are several of those both in Portuguese and in English, which I not want them to appear in the analysis as I am interested in more technical terms. To eliminate them, we need to find a list of stopwords. I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contained higher number of stop words in Portuguese. 
+The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words). There are several of those both in Portuguese and in English, which I do not want them to appear in the analysis as I am interested in the more technical terms. To eliminate them, we need to find a list of stopwords. I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contains the highest number of stop words in Portuguese. 
 
 
 
@@ -185,7 +185,7 @@ cbfito_words2 <- cbfito_words %>%
   anti_join(stop_words) # this is a list of English stopwords from the tidytext pkg
 ```
 
-Let's have another close look at the list of words and check if there are some field-specific words that we want to eliminate.
+Let's have another close look at the list of words and check if there are some field-specific words that I want to eliminate.
 
 
 ```r
@@ -209,7 +209,7 @@ cbfito_words2
 ## # … with 6,320 more rows
 ```
 
-I went through the list and could find a few words that I want to eliminate due to lack of relevance for this summary. I did it manually considering that I had "only" 2,000 words, but I went through only to those cited at least twice. The filter function can be used to eliminate those words from the list of words.
+I went through the list and could find a few unwanted words that are not of relevance for this summary. I did it manually considering that I had "only" 2,000 words, but I went through only those cited at least twice. The `filter` function can be used to eliminate those words from the list of words.
 
 ```r
 words_freq <- cbfito_words2 %>%
@@ -240,7 +240,7 @@ words_freq
 
 ## Visualization
 
-The barplot gives us an idea of the most common research interests based on the number of posters - assuming that the word is not repeated in the same poster title.
+The barplot gives us an idea of the most common research interests based on the number of posters - assuming that one word is not repeated in the same poster title.
 
 
 ```r
@@ -256,7 +256,7 @@ words_freq %>%
 ![](/img/posts/post-text-fig01.png)<!-- -->
 
 
-Using barplots we have serious limitation in space. Also, it does not make sense to include in the plot too many words with just a few occurrences, for the case of a barplot. A nice solution for more crowded data is to produce a wordcloud plot. In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
+Using barplots we have serious limitation in space. Also, it does not make sense to show too many words with just a few occurrences, for the case of a barplot. A nice solution for more crowded data is to produce a wordcloud. In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
 
 
 ```r
@@ -279,9 +279,9 @@ words_freq %>%
 
 ## Conclusion
 
-To answer the original question, the analysis showed most of the studies by Brazilian pathologists are focused on control methods by fungicides, host resistance or biological agentes (**Trichoderma** and **Bacillus**) both in the field and under in vitro conditions. The most studied crops are soybean, maize, common bean, cowpea and tomato and the most common diseases are caused by fungi (**Colletotrichum**, **Fusarium**) followed by nematodes (**Meloidogyne**) and viruses.
+To answer the original question, my analysis showed that most of the studies by Brazilian pathologists are focused on control methods by fungicides, host resistance or biological agentes (**Trichoderma** and **Bacillus**) both in the field and under in vitro conditions. The most studied crops are soybean, maize, common bean, cowpea and tomato and the most common diseases are caused by fungi (**Colletotrichum**, **Fusarium**) followed by nematodes (**Meloidogyne**) and viruses.
 
-Text analysis is an interesting approach and could be expanded to answer different questions should more information be available. For example, if each poster was associated with a specific session, that could be taken into account in the analysis. Maybe some kind of network analysis could be used to check which two or more words tend to appear more frequently together (same study). For example, for which group of pathogen was identification more common. What are the most common control methods studied in soybean? are they the same for other crops? Trends in research over time could be identified should text data on presentations from previous conference be available.
+Text analysis is an interesting approach and could be expanded further to answer different questions should more information be available. For example, if each poster was associated with a specific session, that could be taken into account in the analysis. Maybe some kind of network analysis could be used to check which words tend to appear more frequently together (same study). For example, for which group of pathogen was identification more common. What are the most common control methods studied in soybean? are they the same for other crops? Trends in research over time could be identified should text data on presentations from previous conference be available.
 
 
 
