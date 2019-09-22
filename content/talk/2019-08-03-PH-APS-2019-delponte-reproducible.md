@@ -19,7 +19,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = ""
+url_slides = "https://speakerdeck.com/emdelponte/article-organized-shareable-and-reproducible-using-r-and-friends"
 url_video = ""
 url_code = ""
 
