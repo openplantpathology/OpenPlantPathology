@@ -7,7 +7,7 @@ output:
     social: [ "twitter", "facebook" ]
     navbar:
       - { title: "<i class='fa fa-arrow-circle-left' aria-hidden='true'></i> Homepage", href: "https://www.openplantpathology.org/", align: right }
-      - { title: "<i class='fa fa-github' aria-hidden='true'></i> GitHub", href: "https://github.com/openplantpathology/OpenPlantPathology/tree/master/public/directory", align: right }
+      - { title: "<i class='fa fa-github' aria-hidden='true'></i> GitHub", href: "https://github.com/openplantpathology/OpenPlantPathology/tree/master/static/directory", align: right }
 
 ---
 
