@@ -7,7 +7,7 @@ Authors@R: c(person("Emerson M", "Del Ponte",
              person("Adam H", "Sparks",
                     email = "adamhsparks@gmail.com",
                     role = "aut"))
-Description: The source code for the the official webpage of Open Plant Pathology
+Description: The source code for the official webpage of Open Plant Pathology
 Depends: R (>= 3.3.2),
     blogdown, 
     DT,
