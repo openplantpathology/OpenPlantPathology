@@ -1,0 +1,75 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Plant Pathology on Open Plant Pathology</title>
+    <link>/</link>
+    <description>Recent content in Open Plant Pathology on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +1000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Peoples</title>
+      <link>/people/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pages</title>
+      <link>/pages/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> </title>
+      <link>/publication/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;To help ensure the quality of these materials, we ask that they be &lt;!-- raw HTML omitted --&gt;open peer-reviewed&lt;!-- raw HTML omitted --&gt; by qualified members of the Open Plant Pathology community. All Notes are assigned a DOI and count as citable material.
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/openplantpathology/opp_notes&#34;&gt;Do you want to contribute OPP Note? learn here how to do it.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks and Workshops</title>
+      <link>/talk/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>/post/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1000</pubDate>
+      
+      <guid>/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

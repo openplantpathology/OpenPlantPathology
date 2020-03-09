@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Population Biology on Open Plant Pathology</title>
+    <link>/tags/population-biology/</link>
+    <description>Recent content in Population Biology on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +1000</lastBuildDate>
+    
+	<atom:link href="/tags/population-biology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OPP Interviews: Niklaus J. Grünwald</title>
+      <link>/post/2018-08-26-interview-grunwald/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2018-08-26-interview-grunwald/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt; Get to know one of our leaders, Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of &lt;em&gt;Phytophthora infestans&lt;/em&gt; worldwide and developed R packages to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution.</description>
+    </item>
+    
+  </channel>
+</rss>

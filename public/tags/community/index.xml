@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Open Plant Pathology</title>
+    <link>/tags/community/</link>
+    <description>Recent content in Community on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Sat, 25 May 2019 00:00:00 +1000</lastBuildDate>
+    
+	<atom:link href="/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OPP Interviews: Jade d’Alpoim Guedes and Ben Marwick</title>
+      <link>/post/2019-05-25-interview-jade-ben/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2019-05-25-interview-jade-ben/</guid>
+      <description>In our third OPP Interview we have the privilege to chat with two prestigious computational scientists, representatives of the field of archaeology, about their experiences on the use, tool development and promotion of reproducible research practices in science.</description>
+    </item>
+    
+    <item>
+      <title>OPP Interviews: Sophien Kamoun</title>
+      <link>/post/2018-11-13-interview-kamoun/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2018-11-13-interview-kamoun/</guid>
+      <description>We talked with Prof. Sophien Kamoun, a biology scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting and advocacy for Open Science but, also importantly, for his work with oomycetes (#notafungus), effectors and evolution and, more recently, wheat blast.</description>
+    </item>
+    
+    <item>
+      <title>OPP Interviews: Niklaus J. Grünwald</title>
+      <link>/post/2018-08-26-interview-grunwald/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2018-08-26-interview-grunwald/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt; Get to know one of our leaders, Dr. Niklaus J. Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik has made significant scientific contributions to the understanding of the population biology and evolution of &lt;em&gt;Phytophthora infestans&lt;/em&gt; worldwide and developed R packages to advance and facilitate the analysis of genetic and genome sequence data with applications in taxonomy and evolution.</description>
+    </item>
+    
+    <item>
+      <title>What is going on in OPP? a quick summary of the first five months</title>
+      <link>/post/2018-05-20-second-post-five-month-summary/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2018-05-20-second-post-five-month-summary/</guid>
+      <description>OPP was created in early January and we had no idea how OPP would be received and whether it would catch interest and be sustainable. In this post, we provide a brief summary of major achievements during the first five months of OPP.</description>
+    </item>
+    
+    <item>
+      <title>Are you a scientist dealing with computational plant pathology? Then let&#39;s connect and code together!</title>
+      <link>/post/2018-01-08-first-post-community-call/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/post/2018-01-08-first-post-community-call/</guid>
+      <description>A community call for plant epidemiologists, pathogen population biologists, molecular ecologists and mathematical modelers to join a network for promoting data sharing and open tools.</description>
+    </item>
+    
+  </channel>
+</rss>

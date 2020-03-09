@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote_sensing on Open Plant Pathology</title>
+    <link>/tags/remote_sensing/</link>
+    <description>Recent content in Remote_sensing on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Mon, 07 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/remote_sensing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>René Heim</title>
+      <link>/people/heim/</link>
+      <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/people/heim/</guid>
+      <description>Post-Doctoral Fellow. University of Florida, USA. Remote sensing and spectroscopy</description>
+    </item>
+    
+    <item>
+      <title>Katie Gold</title>
+      <link>/people/katie/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/people/katie/</guid>
+      <description>Assistant Professor. Cornell University, USA. Grape pathology, remote sensing and spectroscopy</description>
+    </item>
+    
+    <item>
+      <title>Muhammad Mohsin Raza</title>
+      <link>/people/raza/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/people/raza/</guid>
+      <description>PhD Student. Iowa State University, USA. Epidemiology, remote sensing and machine learning</description>
+    </item>
+    
+  </channel>
+</rss>

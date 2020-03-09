@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Open Plant Pathology</title>
+    <link>/notes/</link>
+    <description>Recent content in Notes on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    
+	<atom:link href="/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/readme/</guid>
+      <description>OPP Notes Open Plant Pathology accepts content to be posted to the website, https://www.openplantpathology.org/, that provide examples of teaching materials, reproducible research and other materials of interest to plant pathologists. To help ensure the quality of these materials, we ask that they be peer-reviewed by qualified members of the Open Plant Pathology community.
+Instructions for Use   If you wish to inquire about the fit of your note first, you may open an Issue in openplantpathology/opp_notes for discussion with the OPP community.</description>
+    </item>
+    
+    <item>
+      <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
+      <link>/notes/sparks/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/sparks/1/</guid>
+      <description>pre  code.sourceCode { white-space: pre; position: relative; } pre  code.sourceCode  span { display: inline-block; line-height: 1.25; } pre  code.sourceCode  span:empty { height: 1.2em; } code.sourceCode  span { color: inherit; text-decoration: inherit; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { pre  code.sourceCode { white-space: pre-wrap; } pre  code.</description>
+    </item>
+    
+  </channel>
+</rss>

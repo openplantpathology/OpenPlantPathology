@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leadership on Open Plant Pathology</title>
+    <link>/tags/leadership/</link>
+    <description>Recent content in Leadership on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Tue, 09 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/leadership/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adam Sparks</title>
+      <link>/people/sparks/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/sparks/</guid>
+      <description>Founder. Plant pathologist and epidemiologist. University of Southern Queensland, Australia</description>
+    </item>
+    
+    <item>
+      <title>Emerson Del Ponte</title>
+      <link>/people/delponte/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/delponte/</guid>
+      <description>Founder. Plant disease epidemiologist. Universidade Federal de Viçosa, Brazil</description>
+    </item>
+    
+    <item>
+      <title>Neil McRoberts</title>
+      <link>/people/mcroberts/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/mcroberts/</guid>
+      <description>Plant disease epidemiologist and modeller. University of California - Davis, USA</description>
+    </item>
+    
+    <item>
+      <title>Nik Cunniffe</title>
+      <link>/people/cunniffe/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/cunniffe/</guid>
+      <description>Mathematical modeller. University of Cambridge, UK</description>
+    </item>
+    
+    <item>
+      <title>Nik Grunwald</title>
+      <link>/people/grunwald/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/grunwald/</guid>
+      <description>Plant pathologist. USDA, Oregon, USA</description>
+    </item>
+    
+    <item>
+      <title>Paul Esker</title>
+      <link>/people/esker/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/esker/</guid>
+      <description>Plant disease epidemiologist and modeller. Pennsylvania State University, USA</description>
+    </item>
+    
+    <item>
+      <title>Sydney Everhart</title>
+      <link>/people/everhart/</link>
+      <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/people/everhart/</guid>
+      <description>Plant disease epidemiologist and population biologist. University of Nebraska, USA</description>
+    </item>
+    
+    <item>
+      <title>René Heim</title>
+      <link>/people/heim/</link>
+      <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/people/heim/</guid>
+      <description>Post-Doctoral Fellow. University of Florida, USA. Remote sensing and spectroscopy</description>
+    </item>
+    
+    <item>
+      <title>Katie Gold</title>
+      <link>/people/katie/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/people/katie/</guid>
+      <description>Assistant Professor. Cornell University, USA. Grape pathology, remote sensing and spectroscopy</description>
+    </item>
+    
+  </channel>
+</rss>

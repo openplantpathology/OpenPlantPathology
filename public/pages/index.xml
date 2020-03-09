@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Open Plant Pathology</title>
+    <link>/pages/</link>
+    <description>Recent content in Pages on Open Plant Pathology</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020</copyright>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +1000</lastBuildDate>
+    
+	<atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Our Vision and Mission</title>
+      <link>/pages/mission/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +1000</pubDate>
+      
+      <guid>/pages/mission/</guid>
+      <description>OpenPlantPathology is a not for-profit scientific community founded in January 2018 by Emerson Del Ponteand Adam Sparksto facilitate communication among computational plant pathologists and promote open science and reproducible research practices in plant pathology.</description>
+    </item>
+    
+  </channel>
+</rss>

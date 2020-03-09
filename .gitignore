@@ -3,7 +3,6 @@
 .RData
 .Ruserdata
 blogdown
-public
 *.html
 .DS_Store
 static/notes/sparks
