@@ -4,6 +4,7 @@
 .Ruserdata
 blogdown
 *.html
+public/
 .DS_Store
 static/notes/sparks
 static/rmarkdown-libs/kePrint/kePrint.js
