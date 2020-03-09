@@ -11,6 +11,7 @@ Description: The source code for the official webpage of Open Plant Pathology
 Depends: R (>= 3.3.2),
     blogdown, 
     devtools,
+    ggpubr,
     googleway,
     gsheet,
     hrbrthemes,
