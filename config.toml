@@ -10,7 +10,7 @@ title = "Open Plant Pathology"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019"
+copyright = "&copy; 2020"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -263,19 +263,12 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 
-
 [[menu.main]]
   name = "Leadership"
   url = "#people"
   parent = "About OPP"
   weight = 3
 
-[[menu.main]]
-  name = "Member Directory"
-  url = "#members"
-  parent = "About OPP"
-  weight = 2
-  
 
  
 [[menu.main]]
