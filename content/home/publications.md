@@ -5,8 +5,8 @@ widget = "publications"
 active = true
 date = 2018-01-01
 
-title = "OPP Webinars"
-subtitle = "Live events and live-recorded webinars<br/><br/> [> Want to give a webinar? fill up this form](https://github.com/openplantpathology/opp_notes)<br/>[>Past webinars](/publication/)"
+title = ""
+subtitle = "<img src = '/img/headers/opp-webinar.png' width=100% align = right><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[> All webinars](/publication/)<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[> Propose a Webinar](https://forms.gle/EWJtLZurhW7MeHJ9A)"
 
 # Order that this section will appear in.
 weight = 41
