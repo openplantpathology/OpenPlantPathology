@@ -4,14 +4,14 @@ widget = "talks"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Workshops & Talks"
-subtitle = "Get access to presentations and instructional materials produced by OPP members"
+title = "Workshops"
+subtitle = "Tutorials and other instructional materials"
 
 # Order that this section will appear in.
 weight = 44
 
 # Number of talks to list.
-count = 5
+count = 2
 
 # List format.
 #   0 = Simple
