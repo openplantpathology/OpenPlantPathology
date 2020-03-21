@@ -5,8 +5,8 @@ widget = "publications"
 active = true
 date = 2018-01-01
 
-title = "OPP Notes"
-subtitle = "Teaching notes peer-reviewed by community members.<br/><br/> [>Contribute an OPP Note](https://github.com/openplantpathology/opp_notes)<br/>[>All Notes](/publication/)"
+title = "OPP Webinars"
+subtitle = "Live events and live-recorded webinars<br/><br/> [> Want to give a webinar? fill up this form](https://github.com/openplantpathology/opp_notes)<br/>[>Past webinars](/publication/)"
 
 # Order that this section will appear in.
 weight = 41

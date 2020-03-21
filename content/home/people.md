@@ -38,36 +38,18 @@ filter_default = 0
   tag = ".Founder"  
 
 [[filter]]
-  name = "Leadership"
-  tag = ".Leadership"  
+  name = "Reproducibility team"
+  tag = ".Reproducibility"  
   
-[[filter]]
-  name = "Junior Leadership"
-  tag = ".Junior"
 
 [[filter]]
-  name = "Epidemiology"
-  tag = ".Epidemiology"
-
-#[[filter]]
-#  name = "Population Biology"
-#  tag = ".Population_Biology"
-
-[[filter]]
-  name = "Mathematical Modeling"
-  tag = ".Modeling"
-
-[[filter]]
-  name = "Remote sensing"
-  tag = ".Remote_sensing"  
+  name = "Webinars"
+  tag = ".Webinars"    
   
-  
-#[[filter]]
-# name = "Decision Support Systems"
-# tag = ".DSS" 
+
   
 +++
-# Our leadership
+# Our teams
 
-Meet those who are taking the lead in different fronts within our community including individuals who are established scientists, early career scientists or students. Filter by knowledge domain or leadership type.
+Meet our teams. Filter by team name.
 

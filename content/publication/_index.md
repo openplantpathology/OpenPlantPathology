@@ -9,7 +9,7 @@ highlight = false
 #   1 = Detailed
 #   2 = APA
 #   3 = MLA
-list_format = 0
+list_format = 1
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
@@ -18,7 +18,7 @@ caption = ""
 +++
 
 <br>
-<h1> OPP Notes</h1>
+<h1> OPP Webinars</h1>
 <img src = "/img/notes-cover1.png" align = right width = 380px style = "position: relative;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   padding: 10px;

@@ -59,7 +59,7 @@ defaultContentLanguageInSubdir = false
   organizations = [ { name = "", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "opp-logo.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = ""  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "openplantpathology@gmail.com"
   address = ""
   office_hours = ""
@@ -76,7 +76,7 @@ defaultContentLanguageInSubdir = false
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = "opp-logo.png"
+  logo = ""
 
   # Enable/disable map in Contact widget.
   # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -264,13 +264,12 @@ defaultContentLanguageInSubdir = false
 
 
 [[menu.main]]
-  name = "Leadership"
+  name = "Our teams"
   url = "#people"
   parent = "About OPP"
   weight = 3
 
 
- 
 [[menu.main]]
   name = "Blog Posts & Interviews"
   pre = "<i class='fa fa-pencil'></i>"
@@ -278,83 +277,73 @@ defaultContentLanguageInSubdir = false
   weight = 4
   
 [[menu.main]]
-  name = "Talks & Workshops"
+  name = "Workshops"
   pre = "<i class='fa fa-pencil'></i>"
   url = "#talks"
   weight = 8
   
   
 [[menu.main]]
-  name = "Recent & Upcoming Talks"
+  name = "Recent & Upcoming Workshops"
   url = "#talks"
   weight = 1
-  parent = "Talks & Workshops"
+  parent = "Workshops"
 
 [[menu.main]]
   name = "Chronological List of Events"
   url = "/talk"
   weight = 2
-  parent = "Talks & Workshops"
+  parent = "Workshops"
   
 
   
 [[menu.main]]
-  name = "OPP Notes"
+  name = "OPP Webinars"
   pre = "<i class='fa fa-sticky-note'></i>"
   weight = 6
 
 
-[[menu.main]]
-  name = "Recent Notes"
-  url = "#publications"
-  weight = 1
-  parent = "OPP Notes"
 
 [[menu.main]]
-  name = "Browse Notes"
+  name = "Browse Webinars"
   url = "/publication"
   weight = 2
-  parent = "OPP Notes"
+  parent = "OPP Webinars"
   
 [[menu.main]]
-  name = "Contribute a Note!"
-  url = "https://github.com/openplantpathology/opp_notes"
+  name = "Contribute a Webinar!"
+  url = ""
   weight = 3
-  parent = "OPP Notes"
+  parent = "OPP Webinars"
   
-
-[[menu.main]]
-  name = "Social"
-  pre = "<i class='fa fa-hashtag'></i>"
-  weight = 14
 
 [[menu.main]]
   name = "Follow us on GitHub"
   pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
   weight = 1
-  parent = "Social"
+  parent = "About OPP"
 
 [[menu.main]]
   name = "Follow us on Twitter"
   pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
   weight = 2
-  parent = "Social"
+  parent = "About OPP"
 
 [[menu.main]]
   name = "Sign in to our Slack"
   pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
   weight = 3
-  parent = "Social"
+  parent = "About OPP"
   
 [[menu.main]]
   name = "Not part of our Slack? Sign up Here!"
   pre = "<i class='fa fa-rocket'></i>"
   url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
   weight = 4
-  parent = "Social"
+  parent = "About OPP"
 
 
 #[[menu.main]]
