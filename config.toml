@@ -259,7 +259,7 @@ defaultContentLanguageInSubdir = false
 
 
 [[menu.main]]
-  name = "Our teams"
+  name = "Our Teams"
   url = "#people"
   parent = "About us"
   weight = 2
@@ -274,7 +274,7 @@ defaultContentLanguageInSubdir = false
   
 [[menu.main]]
   name = "Workshops & Courses"
-  pre = "<i class='fa fa-file-code-o'></i>"
+  pre = "<i class='fas fa-chalkboard-teacher'></i>"
   url = "#talks"
   weight = 4
   
@@ -303,7 +303,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = " Twitter"
- # pre = "<i class='fa fa-twitter-square'></i>"
+  #pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
   weight = 4
   parent = "Social"
