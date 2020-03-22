@@ -23,13 +23,14 @@ caption = ""
   background: white">
 The Virtual Seminars (aka science webinar) is a venue for delivering scientific talks of general interest to a plant pathology audience. Here is how it works:
 
-- The seminars are live broadcasted at a date & time at speaker's convenience 
-- The speaker will be available to answer questions from from the audience after the seminar (e.g. up to 1 hour) either within the chat and/or on the OPP slack channel 
-- A video will be recorded and uploaded to our YouTube channel
-- The video and all associated materials (slides, chat texts, codes, etc) will be made freely acessible
-<br>
+- The seminars are pre-approved and the inviation disseminated widely
+- It is live broadcasted via Zoom at a date & time at speaker's convenience 
+- The speaker is available to answer questions from the audience after the seminar (e.g. up to 1 hour) either within the Zoom chat and/or on the OPP slack channel 
+- The live event will be recorded and uploaded to our YouTube channel
+- Video file and all associated materials (slides, chat texts, codes, etc) will be made freely acessible under the [CC BY](https://creativecommons.org/licenses/) license.
+<br><br>
 
-- [Submit your proposal of Virtual Seminar](https://github.com/openplantpathology/opp_notes)
+- Anyone is welcome to contribute a Virtual Seminar [Submit your proposal of Virtual Seminar](https://github.com/openplantpathology/opp_notes)
 
 Coordination:  
 Dr. Benjamin Schwassinger  

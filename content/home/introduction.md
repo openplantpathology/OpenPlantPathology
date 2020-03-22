@@ -14,4 +14,9 @@ weight = 10
 
 +++
 <br>
-Open Plant Pathology is an <a href="pages/mission">initiative</a> that supports and promotes the spread of all <strong>open, transparent and reproducible</strong> practices in the field Plant Pathology. We advocate for an open culture of exchange of knowledge, sharing scientific data and documenting/sharing computational codes that ultimately leads to more transparency and reproducibility of methods. We have a few projects that everyone is welcome to join in or propose new ones.
+Open Plant Pathology is an <a href="pages/mission">initiative</a> that supports and promotes the spread of all <strong>open, transparent and reproducible</strong> practices in the field Plant Pathology. We advocate for an open science culture and our teams work to enhance this culture by:
+
+- Offering [Workshops](/talk) presentially or via webinars
+- Organizing [Virtual seminar](/publication) for enhacing scientific exchanges
+- Developing [open sources tools](https://github.com/openplantpathology/) 
+- Supporting Editorial Boards of journals to enhance [reproducibility](http://sbfitopatologia.org.br/tpp/post/reproducibility-editor/) 

@@ -281,7 +281,7 @@ defaultContentLanguageInSubdir = false
   
 [[menu.main]]
   name = "Virtual Seminars"
-  url = "/publication"
+  url = "#publications"
   pre = "<i class='fa fa-caret-square-o-right'></i>"
   weight = 3
   
