@@ -1,5 +1,5 @@
 +++
-date = "2018-01-09"
+date = "2017-03-20"
 title = "Benjamin Schwessinger"
 summary = "Virtual Seminars Coordination. Plant pathologist.  Australian National University, Canberra, Australia "
 image_preview = "members/schwessinger.jpg"
