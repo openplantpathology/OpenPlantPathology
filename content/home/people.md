@@ -43,8 +43,8 @@ filter_default = 0
   
 
 [[filter]]
-  name = "Webinars"
-  tag = ".Webinars"    
+  name = "Virtual Seminars"
+  tag = ".Seminars"    
   
 
   

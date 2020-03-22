@@ -1,9 +1,9 @@
 +++
-title = "Title of the webinar"
+title = "Title of first scientific seminar"
 date = "2020-03-27"
 
-# Authors. Comma separated list, e.g. `["Adam H Sparks", "John P Thompson"]`.
-authors = ["Adam H Sparks"]
+# Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
+authors = ["Benjamin Schwessinger"]
 
 # Publication type.
 # Legend:
@@ -14,11 +14,11 @@ publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
 
-publication = "In *OPP Webinars* "
+publication = " "
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "This webinar"
+abstract = "Virtual seminars are .."
  
 # Featured image thumbnail (optional)
 image_preview = ""

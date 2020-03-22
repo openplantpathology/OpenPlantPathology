@@ -244,21 +244,16 @@ defaultContentLanguageInSubdir = false
   # Align the main menu to the right of the page? (true/false)
   align_right = true
 
-#[[menu.main]]
-#  name = "Publications"
-#  url = "#publications_selected"
-#  weight = 2
- 
  
 
 [[menu.main]]
-  name = "About OPP"
+  name = "About us"
   weight = 1
 
  
 [[menu.main]]
-  name = "Vision and Mission"
-  parent = "About OPP"
+  name = "Our Mission"
+  parent = "About us"
   url = "pages/mission"
   weight = 1
 
@@ -266,91 +261,67 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Our teams"
   url = "#people"
-  parent = "About OPP"
-  weight = 3
+  parent = "About us"
+  weight = 2
 
 
 [[menu.main]]
-  name = "Blog Posts & Interviews"
+  name = "Blog Posts"
   pre = "<i class='fa fa-pencil'></i>"
   url = "#posts"
+  weight = 2
+  
+  
+[[menu.main]]
+  name = "Workshops & Courses"
+  pre = "<i class='fa fa-file-code-o'></i>"
+  url = "#talks"
   weight = 4
   
-[[menu.main]]
-  name = "Workshops"
-  pre = "<i class='fa fa-pencil'></i>"
-  url = "#talks"
-  weight = 8
-  
   
 [[menu.main]]
-  name = "Recent & Upcoming Workshops"
-  url = "#talks"
-  weight = 1
-  parent = "Workshops"
-
-[[menu.main]]
-  name = "Chronological List of Events"
-  url = "/talk"
-  weight = 2
-  parent = "Workshops"
-  
-
-  
-[[menu.main]]
-  name = "OPP Webinars"
-  pre = "<i class='fa fa-sticky-note'></i>"
-  weight = 6
-
-
-
-[[menu.main]]
-  name = "Browse Webinars"
+  name = "Virtual Seminars"
   url = "/publication"
-  weight = 2
-  parent = "OPP Webinars"
-  
-[[menu.main]]
-  name = "Contribute a Webinar!"
-  url = ""
+  pre = "<i class='fa fa-caret-square-o-right'></i>"
   weight = 3
-  parent = "OPP Webinars"
   
 
+
+
 [[menu.main]]
-  name = "Follow us on GitHub"
-  pre = "<i class='fa fa-github'></i>"
+  name = "Social"
+  url = "/social"
+  pre = "<i class='fa fa-user-circle-o'></i>"
+  weight = 5
+
+[[menu.main]]
+  name = "GitHub"
+  #pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
-  weight = 1
-  parent = "About OPP"
+  weight = 5
+  parent = "Social"
 
 [[menu.main]]
-  name = "Follow us on Twitter"
-  pre = "<i class='fa fa-twitter-square'></i>"
+  name = " Twitter"
+ # pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
-  weight = 2
-  parent = "About OPP"
+  weight = 4
+  parent = "Social"
 
 [[menu.main]]
-  name = "Sign in to our Slack"
-  pre = "<i class='fa fa-slack'></i>"
+  name = "Login Slack"
+  #pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
-  weight = 3
-  parent = "About OPP"
+  weight = 6
+  parent = "Social"
   
 [[menu.main]]
-  name = "Not part of our Slack? Sign up Here!"
-  pre = "<i class='fa fa-rocket'></i>"
+  name = "Sign up Slack"
+  #pre = "<i class='fa fa-rocket'></i>"
   url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
-  weight = 4
-  parent = "About OPP"
+  weight = 7
+  parent = "Social"
 
-
-#[[menu.main]]
-#  name = "Contacts"
-#  url = "#contact"
-#  weight = 12
-#  parent = "Social"
 
 
 # Taxonomies.

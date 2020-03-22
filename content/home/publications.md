@@ -6,10 +6,10 @@ active = true
 date = 2018-01-01
 
 title = ""
-subtitle = "<img src = '/img/headers/opp-webinar.png' width=100% align = right><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[> All webinars](/publication/)<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[> Propose a Webinar](https://forms.gle/EWJtLZurhW7MeHJ9A)"
+subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><center>[All Seminars >>](/publication/)<br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</center>"
 
 # Order that this section will appear in.
-weight = 41
+weight = 30
 
 # Number of publications to list.
 count = 10

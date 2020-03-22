@@ -5,11 +5,11 @@ widget = "posts"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Blog posts"
-subtitle = "Updates on our recent work, projects, tutorials and viewpoints "
+title = ""
+subtitle = "<img src = '/img/headers/opp-blog.png'><center>"
 
 # Order that this section will appear in.
-weight = 40
+weight = 20
 
 # Filter posts by tag.
 #  By default, show all recent posts.

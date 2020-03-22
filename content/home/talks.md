@@ -4,11 +4,10 @@ widget = "talks"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Workshops"
-subtitle = "Tutorials and other instructional materials"
-
+title = ""
+subtitle = "<img src = '/img/headers/workshops.png'><center>"
 # Order that this section will appear in.
-weight = 44
+weight = 40
 
 # Number of talks to list.
 count = 2
