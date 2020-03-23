@@ -267,7 +267,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Blog Posts"
-  pre = "<i class='fa fa-pencil'></i>"
+  pre = "<i class='fas fa-blog'></i>"
   url = "#posts"
   weight = 2
   
@@ -291,7 +291,7 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Social"
   url = "/social"
-  pre = "<i class='fa fa-user-circle-o'></i>"
+  pre = "<i class='fas fa-user-circle-o'></i>"
   weight = 5
 
 [[menu.main]]
