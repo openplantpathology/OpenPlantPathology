@@ -1,5 +1,5 @@
 +++
-date = "2018-01-09"
+date = "2017-04-10"
 title = "Zhian kamvar"
 summary = "Reproducibility team. Plant pathologist. The Carpentries"
 image_preview = "members/kamvar.jpg"
