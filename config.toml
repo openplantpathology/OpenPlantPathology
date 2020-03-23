@@ -244,50 +244,43 @@ defaultContentLanguageInSubdir = false
   # Align the main menu to the right of the page? (true/false)
   align_right = true
 
- 
-
+# About Us
 [[menu.main]]
-  name = "About us"
+  name = "About Us"
   weight = 1
 
- 
 [[menu.main]]
   name = "Our Mission"
-  parent = "About us"
+  parent = "About Us"
   url = "pages/mission"
   weight = 1
-
 
 [[menu.main]]
   name = "Our Teams"
   url = "#people"
-  parent = "About us"
+  parent = "About Us"
   weight = 2
 
 
 [[menu.main]]
   name = "Blog Posts"
-  pre = "<i class='fas fa-blog'></i>"
+  pre = "<i class='fas fa-edit'></i>"
   url = "#posts"
   weight = 2
-  
-  
-[[menu.main]]
-  name = "Workshops & Courses"
-  pre = "<i class='fas fa-chalkboard-teacher'></i>"
-  url = "#talks"
-  weight = 4
-  
   
 [[menu.main]]
   name = "Virtual Seminars"
   url = "#publications"
   pre = "<i class='fa fa-caret-square-o-right'></i>"
   weight = 3
+
+[[menu.main]]
+  name = "Workshops & Courses"
+  pre = "<i class='fas fa-chalkboard-teacher'></i>"
+  url = "#talks"
+  weight = 4
   
-
-
-
+# Social menu
 [[menu.main]]
   name = "Social"
   url = "/social"
@@ -321,7 +314,6 @@ defaultContentLanguageInSubdir = false
   url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
   weight = 7
   parent = "Social"
-
 
 
 # Taxonomies.
