@@ -291,7 +291,7 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Social"
   url = "/social"
-  pre = "<i class='fas fa-user-circle-o'></i>"
+  pre = "<i class='fas fa-user-circle'></i>"
   weight = 5
 
 [[menu.main]]
