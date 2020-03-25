@@ -38,7 +38,7 @@ filter_default = 0
   tag = ".Founder"  
 
 [[filter]]
-  name = "Reproducibility team"
+  name = "Reproducibility Team"
   tag = ".Reproducibility"  
   
 
