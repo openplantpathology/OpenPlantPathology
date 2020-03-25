@@ -14,7 +14,8 @@ weight = 10
 
 +++
 <br>
-Open Plant Pathology is an <a href="pages/mission">initiative</a> that supports and promotes the spread of all <strong>open, transparent and reproducible</strong> practices in the field Plant Pathology. We advocate for an open science culture and our teams work to enhance this culture by:
+Open Plant Pathology is an <a href="pages/mission">initiative</a> that supports and promotes the spread of all <strong>open, transparent and reproducible</strong> practices in the field of plant pathology.
+We advocate for an open science culture and our teams work to enhance this culture by:
 
 - Offering [Workshops](/talk) presentially or via webinars
 
