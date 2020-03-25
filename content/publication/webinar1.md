@@ -14,15 +14,13 @@ publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
 
-publication = " "
+publication = ""
 publication_short = ""
 
 # Abstract and optional shortened version.
 
 abstract = "The Virtual Seminars (aka science webinar) are a venue for delivering scientific talks of general interest to a plant pathology audience. Be our first speaker! [Fill this form](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form)"
 
-
- 
 # Featured image thumbnail (optional)
 image_preview = ""
 
