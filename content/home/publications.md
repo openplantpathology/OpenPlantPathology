@@ -6,7 +6,7 @@ active = true
 date = 2018-01-01
 
 title = ""
-subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><center>[All Seminars >>](/publication/)<br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</center>"
+subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><center>[Know more >>](/publication/)<br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</center>"
 
 # Order that this section will appear in.
 weight = 30

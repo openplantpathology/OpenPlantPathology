@@ -1,9 +1,9 @@
 +++
-title = "Title of first scientific seminar"
+title = "Virtual Seminars"
 date = "2020-03-27"
 
 # Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
-authors = ["Benjamin Schwessinger"]
+authors = ["Disseminating science broadly and openly"]
 
 # Publication type.
 # Legend:
@@ -18,7 +18,7 @@ publication = " "
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "Virtual seminars are .."
+abstract = "The Virtual Seminars (aka science webinar) is a venue for delivering scientific talks of general interest to a plant pathology audience. Know more about it [here](http://127.0.0.1:4321/publication/). Be our first speaker! [Fill this form](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form)"
  
 # Featured image thumbnail (optional)
 image_preview = ""

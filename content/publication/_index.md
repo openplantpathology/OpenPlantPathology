@@ -35,7 +35,9 @@ Here is how it works:
 - Video file and all associated materials (slides, chat texts, codes, etc.) will be made freely accessible under the [CC BY](https://creativecommons.org/licenses/) license.
 <br><br>
 
-- Anyone is welcome to contribute a Virtual Seminar [Submit your proposal of Virtual Seminar](https://github.com/openplantpathology/opp_notes)
+- Anyone is welcome to contribute a Virtual Seminar [Submit your proposal here](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form)
+
+<br>
 
 Coordination:  
 Dr. Benjamin Schwessinger  
