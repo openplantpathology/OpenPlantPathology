@@ -19,7 +19,7 @@ before_install:
 
 script:
   - Rscript -e 'blogdown::install_hugo(version = "0.55.6")'
-  - Rscript -e 'blogdown::build_site(local = TRUE, method = "html", )'
+  - Rscript -e 'blogdown::build_site(local = TRUE, method = "html")'
 
 after_success:
 -  sh deploy.sh
