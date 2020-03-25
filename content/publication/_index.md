@@ -21,7 +21,7 @@ caption = ""
 <h1> Virtual seminars</h1>
 
 Coordination: Dr. [Benjamin Schwessinger](https://twitter.com/schwessinger)  
-
+ 
 The Virtual Seminars (aka science webinar) is a venue for delivering scientific talks of general interest to a plant pathology audience. Anyone is welcome to contribute a seminar. If you are interested, [please answer a few questions for approval](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form).  
 
 - The seminars are pre-approved and [disseminated widely](https://twitter.com/OpenPlantPath)
