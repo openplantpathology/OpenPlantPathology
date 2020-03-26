@@ -19,7 +19,7 @@ publication_short = ""
 
 # Abstract and optional shortened version.
 
-abstract = "The Virtual Seminars (aka science webinar) are a venue for delivering scientific talks of general interest to a plant pathology audience. Be our first speaker! [Fill this form](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form)"
+abstract = "The Virtual Seminars (aka science webinars) are a venue for delivering scientific talks of general interest to a plant pathology audience. Be our first speaker! [Fill this form](https://docs.google.com/forms/d/e/1FAIpQLSdCBzRJRzSVnx4J-sIaeAfpQvbSGHCjyINnIT-tqOKLk3wPQA/viewform?usp=send_form)"
 
 # Featured image thumbnail (optional)
 image_preview = ""
@@ -45,7 +45,7 @@ url_source = ""
  
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-#url_custom = [{name = "download .zip", url = "https://zenodo.org/record/1172820/files/adamhsparks/Modelling_Nematode_Populations-v1.0.0.zip"}]
+#url_custom = [{name = "", url = ""}]
 
 # Does the content use math formatting?
 math = true
@@ -59,5 +59,3 @@ highlight = true
 image = ""
 caption = "My caption :smile:"
 +++
-
-
