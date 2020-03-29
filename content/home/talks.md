@@ -10,7 +10,7 @@ subtitle = "<img src = '/img/headers/workshops.png'><center>"
 weight = 40
 
 # Number of talks to list.
-count = 2
+count = 3
 
 # List format.
 #   0 = Simple

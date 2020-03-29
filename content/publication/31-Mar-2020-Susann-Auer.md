@@ -3,7 +3,7 @@ title = "Molecular response of clubroot infected plants to the endophytic fungus
 date = "2020-03-31"
 
 # Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
-authors = ["Dr. Susan Auer - Postdoc Technische Universität Dresden"]
+authors = ["Dr. Susann Auer - Postdoc Technische Universität Dresden"]
 
 # Publication type.
 # Legend:

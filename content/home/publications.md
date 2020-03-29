@@ -6,7 +6,7 @@ active = true
 date = 2018-01-01
 
 title = ""
-subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><center>[Know more >>](/publication/)<br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</center>"
+subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><p align = center>[Know more and browse >>](/publication/) <br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</p> "
 
 # Order that this section will appear in.
 weight = 30
@@ -35,4 +35,4 @@ publication_type = "-1"
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = false
 +++
-
+<h3>Upcoming Virtual Seminars</h3> 

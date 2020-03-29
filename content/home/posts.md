@@ -18,6 +18,6 @@ tags_include = []
 tags_exclude = []
 
 # Number of posts to list.
-count = 1
+count = 2
 
 +++
