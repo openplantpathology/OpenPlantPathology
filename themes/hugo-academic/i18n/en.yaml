@@ -41,7 +41,7 @@
   translation: Project
 
 - id: btn_poster
-  translation: Poster
+  translation: Zoom Live
 
 - id: btn_source
   translation: Source Document
