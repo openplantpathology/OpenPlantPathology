@@ -1,6 +1,6 @@
 +++
 title = "How the study of necrotrophic effectors advanced our understanding of the enigmatic PR-1 protein"
-date = "2020-04-09"
+date = "2020-04-20"
 
 # Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
 authors = ["Dr. Peter Solomon - Prof. The Australian National University"]
@@ -19,7 +19,7 @@ publication_short = ""
 
 # Abstract and optional shortened version.
 
-abstract = "How the study of necrotrophic effectors advanced our understanding of the enigmatic PR-1 protein</br></br>Date: 09 April 2020 </br> Time: 09:00 AEDT ([Convert time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Peter+Solomon%3A+How+the+study+of+necrotrophic+effectors+advanced+our+understanding+of+the+enigmatic+P&iso=20200420T09&p1=57&ah=1))</br><br>"
+abstract = "How the study of necrotrophic effectors advanced our understanding of the enigmatic PR-1 protein</br></br>Date: 20 April 2020 </br> Time: 09:00 AEDT ([Convert time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Peter+Solomon%3A+How+the+study+of+necrotrophic+effectors+advanced+our+understanding+of+the+enigmatic+P&iso=20200420T09&p1=57&ah=1))</br><br>"
 
 # Featured image thumbnail (optional)
 image_preview = ""
