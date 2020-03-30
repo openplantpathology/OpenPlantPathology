@@ -3,7 +3,7 @@ title = "Technology driven cassava pest management"
 date = "2020-05-04"
 
 # Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
-authors = ["Dr. Sally Mallowa - Assistant Prof. Augustana University"]
+authors = ["Dr. Sally Mallowa - Asst. Prof. Augustana University"]
 
 # Publication type.
 # Legend:
@@ -19,7 +19,7 @@ publication_short = ""
 
 # Abstract and optional shortened version.
 
-abstract = "Cassava is an important crop in globally especially Africa, Asia, South and Central America. It is important for food, sarch,etc. The biotic contraints to its production include viral diseases, the arsenal of tools available for its management currently include breeding molecular breeding, technology driven sourcin of planting material, apps for disease diagnostics and sequencING tools for small scale farmers. The level of technology being used is so high and given that it's been developed for small scale growers it has great impact. It is a case study where technology piloted in Africa can be scaled up for  the rest of the world</br></br>Date: 04 May 2020 </br> Time: 09:00 CDT ([Convert time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Sally+Mallowa%3A+Technology+driven+cassava+pest+management&iso=20200504T09&p1=627&ah=1))"
+abstract = "<img src = '/img/seminars/sally-mallowa.jpg' width = 500 align = right style = 'padding:40px'> Cassava is an important crop globally, however its importance as a food security crop, in Asia and Africa, its tolerance of a wider range of growth conditions and its increasing importance as a cash crop (e.g. for starch), cannot be over-emphasized. In the recent past, a priority of many national research programs, international research institutions, non-governmental organizations, and funding agencies, has been focused on finding novel solutions to the complex constraints to cassava production.  There has been a measure of success on several fronts that integrate cutting edge technologies including sequencing for viral diseases, molecular breeding, disease monitoring and plant material tracking tools, use of AI in development of diagnostic apps amongst others. There is great potential and promise in these tools, the boots on the ground are scientists in multi-institutional collaborations, ready to scale up and change things for farmers. Thank You! #IYPH2020</br></br>Date: 04 May 2020 </br> Time: 09:00 CDT ([Convert time](https://www.timeanddate.com/worldclock/fixedtime.html?msg=Sally+Mallowa%3A+Technology+driven+cassava+pest+management&iso=20200504T09&p1=627&ah=1))"
 
 # Featured image thumbnail (optional)
 image_preview = ""
