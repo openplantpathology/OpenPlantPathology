@@ -41,10 +41,10 @@
   translation: Project
 
 - id: btn_poster
-  translation: Zoom Live
+  translation: Live streaming
 
 - id: btn_source
-  translation: Source Document
+  translation: Add to Calendar
 
 - id: btn_copy
   translation: Copy
