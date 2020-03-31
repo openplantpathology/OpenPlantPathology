@@ -40,7 +40,7 @@ url_dataset = ""
 #url_project = ""
 url_slides = ""
 url_video = ""
-url_source = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Remco+Stam%3A+The+diversity+and+molecular+evolution+of+plant+defence+against+pathogens+in+nature&iso=20200406T10&p1=37&ah=1"
+url_source = "/seminars/remco-stam.ics"
 url_poster = "https://anu.zoom.us/j/559337822" 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.

@@ -35,4 +35,4 @@ publication_type = "-1"
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = false
 +++
-<h3>Upcoming Virtual Seminars</h3> 
+### Upcoming and past [Seminars >>](/publication/)

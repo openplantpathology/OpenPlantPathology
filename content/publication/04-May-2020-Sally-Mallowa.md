@@ -41,7 +41,7 @@ url_dataset = ""
 url_slides = ""
 url_video = ""
 url_poster = "https://anu.zoom.us/j/177017300"
-url_source = "https://www.timeanddate.com/scripts/ics.php?type=utc&p1=627&iso=20200504T09&ah=1&msg=Sally%20Mallowa%3a%20Technology%20driven%20cassava%20pest%20management"
+url_source = "/seminars/sally.ics"
  
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.

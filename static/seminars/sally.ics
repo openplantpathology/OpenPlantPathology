@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//timeanddate.com//Event Time Announcer
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20200504T140000Z
+DTEND:20200504T150000Z
+TRANSP:TRANSPARENT
+SUMMARY: Virtual Seminar: Dr. Sally Mallowa 
+DESCRIPTION: Abstract: Cassava is an important crop globally, however its importance as a food security crop, in Asia and Africa, its tolerance of a wider range of growth conditions and its increasing importance as a cash crop (e.g. for starch), cannot be over-emphasized. In the recent past, a priority of many national research programs, international research institutions, non-governmental organizations, and funding agencies, has been focused on finding novel solutions to the complex constraints to cassava production.  There has been a measure of success on several fronts that integrate cutting edge technologies including sequencing for viral diseases, molecular breeding, disease monitoring and plant material tracking tools, use of AI in development of diagnostic apps amongst others. There is great potential and promise in these tools, the boots on the ground are scientists in multi-institutional collaborations, ready to scale up and change things for farmers. 
+LOCATION:Sioux Falls
+URL;VALUE=URI:https://anu.zoom.us/j/177017300
+UID:https://anu.zoom.us/j/177017300
+DTSTAMP:20200504T140000Z
+END:VEVENT
+END:VCALENDAR
