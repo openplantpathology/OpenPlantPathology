@@ -40,8 +40,8 @@ url_dataset = ""
 #url_project = ""
 url_slides = "https://osf.io/hsn53/"
 url_video = ""
-url_poster = "https://anu.zoom.us/j/517123473"
-url_source = "https://www.timeanddate.com/scripts/ics.php?type=utc&p1=37&iso=20200331T10&ah=1&msg=Susann%20Auer%3a%20Molecular%20response%20of%20clubroot%20infected%20plants%20to%20the%20endophytic%20fungus%20A.%20alternatum"
+url_poster = ""
+url_source = ""
  
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
