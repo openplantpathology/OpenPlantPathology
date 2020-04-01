@@ -39,7 +39,7 @@ url_code = ""
 url_dataset = ""
 #url_project = ""
 url_slides = "https://osf.io/hsn53/"
-url_video = ""
+url_video = "https://youtu.be/vcNz5qatqaE"
 url_poster = ""
 url_source = ""
  
