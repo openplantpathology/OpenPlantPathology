@@ -101,7 +101,7 @@ defaultContentLanguageInSubdir = false
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = ""
+  date_format = "Mon, Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
   time_format = "3:04 PM"
 
@@ -177,6 +177,11 @@ defaultContentLanguageInSubdir = false
   # Configuration of talk pages.
   [params.talks]
     # Show talk time?
+    time = true
+
+  # Configuration of talk pages.
+  [params.virtual_seminars]
+    # Show seminar time?
     time = true
 
   # Configuration of publication pages.
@@ -270,7 +275,7 @@ defaultContentLanguageInSubdir = false
   
 [[menu.main]]
   name = "Virtual Seminars"
-  url = "#publications"
+  url = "#virtual_seminars"
   pre = "<i class='fa fa-caret-square-o-right'></i>"
   weight = 3
 
@@ -289,30 +294,30 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "GitHub"
-  #pre = "<i class='fa fa-github'></i>"
+  pre = "<i class='fa fa-github'></i>"
   url = "https://github.com/openplantpathology/"
-  weight = 5
+  weight = 1
   parent = "Social"
 
 [[menu.main]]
   name = " Twitter"
-  #pre = "<i class='fa fa-twitter-square'></i>"
+  pre = "<i class='fa fa-twitter-square'></i>"
   url = "https://twitter.com/OpenPlantPath/"
-  weight = 4
+  weight = 2
   parent = "Social"
 
 [[menu.main]]
   name = "Login Slack"
-  #pre = "<i class='fa fa-slack'></i>"
+  pre = "<i class='fa fa-slack'></i>"
   url = "https://openplantpathology.slack.com/"
-  weight = 6
+  weight = 3
   parent = "Social"
   
 [[menu.main]]
   name = "Sign up Slack"
-  #pre = "<i class='fa fa-rocket'></i>"
+  pre = "<i class='fa fa-rocket'></i>"
   url = "https://communityinviter.com/apps/openplantpathology/open-plant-pathology"
-  weight = 7
+  weight = 4
   parent = "Social"
 
 
