@@ -38,4 +38,4 @@ Anyone is welcome to contribute a seminar. If you are interested, [please answer
 
 
 <br>
-<h2>Browse Past Seminars</h2>
+<h2>Browse Seminars</h2>
