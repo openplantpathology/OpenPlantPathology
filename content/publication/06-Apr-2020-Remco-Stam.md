@@ -3,7 +3,7 @@ title = "The diversity and molecular evolution of plant defence against pathogen
 date = "2020-04-06"
 
 # Authors. Comma separated list, e.g. `["Benjamin Schwessinger"]`.
-authors = ["Dr. Remco Stan - Technical University of Munich"]
+authors = ["Dr. Remco Stam - Technical University of Munich"]
 
 # Publication type.
 # Legend:
