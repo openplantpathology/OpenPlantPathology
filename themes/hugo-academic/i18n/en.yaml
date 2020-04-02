@@ -81,7 +81,7 @@
 # Virtual Seminars widget
 
 - id: more_seminars
-  translation: More Cowbell
+  translation: More Seminars
 
 # Publication/Talk details
 
@@ -136,7 +136,7 @@
 - id: projects
   translation: Projects
 
-- id: seminars
+- id: virtual_seminars
   translation: Virtual Seminars
 
 # Error 404
