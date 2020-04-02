@@ -18,4 +18,3 @@ count = 2
 list_format = 0
 
 +++
-<h1>Workshops</h1>
