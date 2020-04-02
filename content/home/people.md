@@ -45,8 +45,14 @@ filter_default = 0
 [[filter]]
   name = "Virtual Seminars"
   tag = ".Seminars"    
-  
 
+[[filter]]
+  name = "Blog & Social media"
+  tag = ".Blog"    
+  
+[[filter]]
+  name = "Website"
+  tag = ".Website"   
   
 +++
 # Our teams
