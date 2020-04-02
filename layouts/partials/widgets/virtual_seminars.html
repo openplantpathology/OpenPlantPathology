@@ -1,0 +1,30 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{ $virtual_seminars_len := len (where $.Site.RegularPages "Type" "virtual_seminars") }}
+
+<!-- virtual_seminars widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ if gt $virtual_seminars_len $page.Params.count }}
+    <p class="view-all">
+      <a href="{{ "/virtual_seminars/" | relLangURL }}">
+        {{ i18n "more_seminars" | markdownify }}
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+    {{ end }}
+  </div>
+  <div class="col-xs-12 col-md-8">
+    {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    {{ range first $page.Params.count (sort (where $.Site.RegularPages "Type" "virtual_seminars") ".Params.time_start" "desc") }}
+      {{ if eq $page.Params.list_format 1 }}
+        {{ partial "virtual_seminars_li_detailed" . }}
+      {{ else }}
+        {{ partial "virtual_seminars_li_simple" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

@@ -1,21 +1,38 @@
 +++
-# Recent and Upcoming Seminars widget.
-# This widget displays recent posts from `content/virtual_seminars/`.
+# Recent Publications widget.
+# This widget displays recent publications from `content/virtual_seminars/`.
 widget = "virtual_seminars"
 active = true
-date = "2016-04-20T00:00:00"
+date = 2018-01-01
 
-title = "<img src = '/img/headers/virtual-seminar.png'>"
-subtitle = ""
+title = "Virtual Seminars"
+subtitle = "<img src = '/img/headers/virtual-seminar.png' width=100%><p align = center>[Learn more and browse >>](/virtual_seminars/) <br/> [Propose a Seminar >>](https://forms.gle/EWJtLZurhW7MeHJ9A)</p> "
+
 # Order that this section will appear in.
-weight = 40
+weight = 30
 
-# Number of seminars to list.
-count = 4
+# Number of publications to list.
+count = 10
 
 # List format.
 #   0 = Simple
 #   1 = Detailed
-list_format = 1
+#   2 = APA
+#   3 = MLA
+list_format = 0
 
+# Filter by publication type.
+# -1: Any
+#  0: Uncategorized
+#  1: Conference proceedings
+#  2: Journal
+#  3: Work in progress
+#  4: Technical report
+#  5: Book
+#  6: Book chapter
+publication_type = "-1"
+
+# Exclude publications that are shown in the Selected Publications widget?
+exclude_selected = false
 +++
+### Upcoming and past [Seminars >>](/virtual_seminars/)

@@ -3,8 +3,8 @@
 .RData
 .Ruserdata
 blogdown
-*.html
 /public/
+/content/notes/sparks/1/index.html
 .DS_Store
 static/notes/sparks
 static/rmarkdown-libs/kePrint/kePrint.js
