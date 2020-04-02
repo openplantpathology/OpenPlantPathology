@@ -19,7 +19,7 @@ location = ""
 url_pdf = ""
 url_code = ""
 url_dataset = ""
-url_slides = "https://osf.io/hsn53/"
+url_slides = ""
 url_video = "https://youtu.be/vcNz5qatqaE"
 
 # Custom links (optional).
