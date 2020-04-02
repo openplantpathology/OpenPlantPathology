@@ -75,8 +75,13 @@
 
 # Talks widget
 
-- id: more_talks
-  translation: More Talks
+- id: more_workshops
+  translation: More Workshops
+
+# Virtual Seminars widget
+
+- id: more_seminars
+  translation: More Cowbell
 
 # Publication/Talk details
 
@@ -130,6 +135,9 @@
 
 - id: projects
   translation: Projects
+
+- id: seminars
+  translation: Virtual Seminars
 
 # Error 404
 

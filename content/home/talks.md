@@ -1,16 +1,16 @@
 +++
-# Recent and Upcoming Talks widget.
+# Recent and Upcoming Workshops widget.
 widget = "talks"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = ""
-subtitle = "<img src = '/img/headers/workshops.png'><center>"
+title = "<img src = '/img/headers/workshops.png'>"
+subtitle = ""
 # Order that this section will appear in.
 weight = 40
 
-# Number of talks to list.
-count = 3
+# Number of workshops to list.
+count = 2
 
 # List format.
 #   0 = Simple
@@ -18,4 +18,4 @@ count = 3
 list_format = 0
 
 +++
-
+<h1>Workshops</h1>
