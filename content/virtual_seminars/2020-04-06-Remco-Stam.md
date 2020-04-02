@@ -18,7 +18,7 @@ url_pdf = ""
 url_code = ""
 url_dataset = ""
 url_slides = ""
-url_video = "https://youtu.be/vcNz5qatqaE"
+url_video = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
