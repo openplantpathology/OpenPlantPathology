@@ -12,7 +12,7 @@ subtitle = "<center><img src = '/img/headers/virtual-seminar.png' width=100%>"
 weight = 30
 
 # Number of seminars to list.
-count = 4
+count = 6
 
 # List format.
 #   0 = Simple
