@@ -1,7 +1,7 @@
 +++
 date = 2019-06-02T00:00:00   # Schedule page publish date.
 title = "Modeling tools and techniques using R"
-authors = ["Paul Ekser", "Felipe Dalla Lana"]
+authors = ["Paul Esker", "Felipe Dalla Lana"]
 time_start = 2019-08-03T08:00:00
 time_end = 2019-08-03T12:00:00
 abstract = "In this workshop, we will present an overview of different modeling approaches that are available in the R language and environment for statistical and graphical computing. We will focus on using a hands-on approach that explores different aspects of statistical modeling ranging from exploratory data analysis to model development, validation, and prediction. The workshop will integrate different tools that are available in R with specific focus on linear models (lm), nonlinear minimization (nlm), generalized linear models (glm), and dose-response curve fitting with tools from the drc package. We will illustrate concepts using agricultural examples. Some knowledge of R will be helpful but background information will be provided to help guide new users."

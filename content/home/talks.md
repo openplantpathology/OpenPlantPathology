@@ -4,13 +4,13 @@ widget = "talks"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "<img src = '/img/headers/workshops.png'>"
+title = "<center><img src = '/img/headers/workshops.png'>"
 subtitle = ""
 # Order that this section will appear in.
 weight = 40
 
 # Number of workshops to list.
-count = 2
+count = 4
 
 # List format.
 #   0 = Simple

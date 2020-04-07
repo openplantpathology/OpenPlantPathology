@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//timeanddate.com//Event Time Announcer
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20200430T080000Z
+DTEND:20200430T090000Z
+TRANSP:TRANSPARENT
+SUMMARY:Virtual Seminar: Dr. Gert Kema
+DESCRIPTION: The ongoing pandemic of Tropical Race 4 threatens global banana production
+LOCATION:Wageningen
+URL;VALUE=URI:https://anu.zoom.us/j/237886909
+UID:https://anu.zoom.us/j/237886909
+DTSTAMP:20200430T080000Z
+END:VEVENT
+END:VCALENDAR

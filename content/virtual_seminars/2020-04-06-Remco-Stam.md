@@ -18,11 +18,11 @@ url_pdf = ""
 url_code = ""
 url_dataset = ""
 url_slides = ""
-url_video = ""
+url_video = "https://youtu.be/xaUz_68jwHk"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Calendar Invite", url = "/seminars/remco-stam.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/559337822"}]
+url_custom = [{name = "DOI", url = "https://doi.org/10.17605/OSF.IO/S28Q9"}]
 
 # Does the content use math formatting?
 math = true
