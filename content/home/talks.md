@@ -4,8 +4,8 @@ widget = "talks"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "<center><img src = '/img/headers/workshops.png'>"
-subtitle = ""
+title = "<img src = '/img/headers/workshops.png'>"
+subtitle = "<center>"
 # Order that this section will appear in.
 weight = 40
 

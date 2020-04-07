@@ -5,8 +5,8 @@ widget = "virtual_seminars"
 active = true
 date = 2018-01-01
 
-title = ""
-subtitle = "<center><img src = '/img/headers/virtual-seminar.png' width=100%>"
+title = "<img src = '/img/headers/virtual-seminar.png' width=100%>"
+subtitle = "<center>"
 
 # Order that this section will appear in.
 weight = 30
