@@ -17,19 +17,12 @@ jobs:
       - name: Install npm
         uses: actions/setup-node@v1
 
-      - name: Install postcss-cli and autoprefixer
-        run: |
-          npm install postcss-cli
-          npm install autoprefixer
-
       - name: Setup R
         uses: r-lib/actions/setup-r@master
 
       - name: Install system level dependencies
         run: |
-          sudo apt-get install pandoc
-          sudo apt-get install pandoc-citeproc
-          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install pandoc pandoc-citeproc libcurl4-openssl-dev
 
       - name: Cache Renv packages
         uses: actions/cache@v1
