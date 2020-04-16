@@ -1,10 +1,10 @@
 +++
 date = 2019-08-25
-lastmod = 2019-08-25
+lastmod = 2020-04-16
 draft = false
 categories = ["Survey", "Community"]
 tags = ['Programming', 'Survey', 'Reproducibility']
-title = 'What are Brazilian plant pathologists doing? a text-analysis of scientific poster titles'
+title = 'What are Brazilian plant pathologists doing? A text-analysis of scientific poster titles'
 math = true
 summary = """
 A text analysis of the titles of more than 700 scientific posters to be presented at the 51 CBFito in Brazil using web scraping, text mining and wordcloud for visulization. 
