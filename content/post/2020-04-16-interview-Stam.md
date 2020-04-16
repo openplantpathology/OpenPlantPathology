@@ -69,3 +69,8 @@ I want to understand factors that govern coevolution between plants and pathogen
 _OPP: Thank you so much Remco for making the time to speak to me and to share your thoughts on coevolution and the underlying mechanisms. You were so patient and explained so clearly something which is outside my usual research 'comfort zone'. I am excited to see where your research will take you._
 
 You can go and watch [Remco's #OPPvirtualseminar](https://www.youtube.com/watch?v=xaUz_68jwHk&feature=youtu.be) on our [official YouTube channel](https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA?view_as=subscriber). You are also welcome to interact with us in our Slack Community on our #virtual-seminar channel. By clicking on this link you can [request to join](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) Open Plant Pathology on Slack.
+
+
+<br><br><br>
+
+--------------------------------------------------------------------------------
