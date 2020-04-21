@@ -24,7 +24,7 @@ html {
   font-family: '{{ .Get "body_font" }}', sans-serif;
   font-size: {{ .Get "font_size_small" }}px;
   color: rgba(0,0,0,0.8);
-  line-height: 1.6;
+  line-height: 1.75;
 }
 @media screen and (min-width: 58em) {
   html {
@@ -72,21 +72,23 @@ ul, ol, dl {
 h1, h2, h3, h4, h5, h6 {
   font-family: '{{ .Get "heading_font" }}', sans-serif;
   font-weight: 400;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2.15rem;
+  font-size: 1.65rem;
 }
 h2 {
-  margin-top: 1rem;
-  font-size: 1.75rem;
+  margin-top:2.2rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem;
 }
 h3 {
   font-weight: 700;
-  margin-top: 1.5rem;
+  margin-top: 2.0rem;
+  margin-bottom: .75rem;
   font-size: 1.25rem;
 }
 h4, h5, h6 {
@@ -550,7 +552,8 @@ article {
 }
 
 .article-title {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-weight:800;
 }
 
 .article-title a {
