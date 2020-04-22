@@ -72,7 +72,7 @@ Communication is a crucial component when describing scientific findings to the 
 ### Story map
 
 <center>
-<iframe width=100% height = 600px  src="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f"></iframe>
+<iframe width=100% height = 600px  src="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f?play=true&speed=slow"></iframe>
 </center>
 
 ### Summary/links of the outcomes 
