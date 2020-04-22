@@ -69,6 +69,12 @@ While reviewing the literature, I was always fascinated by the techniques and to
 
 Communication is a crucial component when describing scientific findings to the general public. I am enthusiastic about presenting my research in an interactive and visually enriched way so that the audience can understand it fully. Therefore, I presented my research as two [extension videos](https://crops.extension.iastate.edu/video/detecting-soybean-sudden-death-syndrome-using-remote-sensing) and a [story map](https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f) so that the layperson can also know what I am doing and the importance thereof for society. I urge other students and researchers to also believe in reproducibility and make their data and code public so that we can see and learn the tools researchers are using. 
 
+### Story map
+
+<center>
+<iframe width=100% height = 600px  src="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f"></iframe>
+</center>
+
 ### Summary/links of the outcomes 
 
 - [PhD Dissertation](https://lib.dr.iastate.edu/etd/17770/)  
