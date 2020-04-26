@@ -12,7 +12,7 @@ subtitle = "<center><a href = '/virtual_seminars'>More Seminars <i class='fa fa-
 weight = 30
 
 # Number of seminars to list.
-count = 5
+count = 4
 
 # List format.
 #   0 = Simple
