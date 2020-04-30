@@ -22,11 +22,11 @@ selected = true
 
 # Links (optional).
 url_slides = ""
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=7Kcrb5Q8CVo"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name ="Convert time", url ="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Peter+Solomon%3A+How+the+study+of+necrotrophic+effectors+advanced+our+understanding+of+the+enigmatic+P&iso=20200420T19&p1=57&ah=1"}, {name = "Add to calendar", url = "/seminars/peter-solomon.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/91270358303"}]
+url_custom = [{name = "DOI", url = "https://doi.org/0.17605/OSF.IO/DNJSC/"}]
 
 # Does the content use math formatting?
 math = true
