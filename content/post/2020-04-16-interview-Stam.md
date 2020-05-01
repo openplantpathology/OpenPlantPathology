@@ -22,13 +22,13 @@ _OPP Blog and Social Media Editor_
 
 Dr. [Remco Stam](http://www.remcostam.com/) ([@EvoMPMI](https://twitter.com/EvoMPMI)), a principal investigator (PI) at Technical University of Munich (Germany), delivered a talk on, _The diversity and molecular evolution of plant defence against pathogens in nature_ on the 6th of March at the [#OPPVirtualSeminars](https://openplantpathology.org/virtual_seminars/2020-04-06-remco-stam/).
 
-## OPPVirtualSeminar Experience: Question and Response
+## OPPVirtualSeminar Experience: Question and Response  
 
-### OPP: How did you find your experience presenting for the OPP Virtual Seminar? Have you done something similar in the past?
+### OPP: How did you find your experience presenting for the OPP Virtual Seminar? Have you done something similar in the past?  
 
 I found presenting very exciting, but also a little strange because you are not seeing an audience like you normally would. I love public speaking and I love what I do, so I love telling people about it. I enjoy the interaction at conferences and seeing people's expressions and their body language, it tells you a lot about your talk and the delivery thereof. Virtually, you can not gauge the 'mood of the room' and you can not tell if people are distracted or on phones or making coffee... But, a positive is that you can judge from the questions asked and the feedback, that people did pay attention, and even more enjoyed the talk. I have given a virtual seminar before, with a department in Copenhagen, but there was a camera in the room with the audience, so there was some type of gauge for interactions and interest. I most definitely would give another talk in this format though.
 
-### OPP: Any advice to future virtual seminar presenters?_
+### OPP: Any advice to future virtual seminar presenters?  
 
 I would say my biggest piece of advice is - be yourself, like you always are. Keep true to yourself and present results you have confidence in, results you can validate with robust analyses. Some practical advice is to check your microphone and that you do not move away from your computer if you only have access to your computer's internal microphone. You can also find a way to grab people's attention, like a trigger, to bring them back to focusing on your presentation.
 
