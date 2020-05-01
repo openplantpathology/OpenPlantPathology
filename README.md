@@ -1,5 +1,5 @@
 # OpenPlantPathology
 
-[![Build Status](https://travis-ci.org/openplantpathology/OpenPlantPathology.svg?branch=master)](https://travis-ci.org/openplantpathology/OpenPlantPathology) [![Netlify Status](https://api.netlify.com/api/v1/badges/49264c27-be62-46f0-aeaf-5882bcdfdb3e/deploy-status)](https://app.netlify.com/sites/openplantpathology/deploys)
+[![blogdown](https://github.com/openplantpathology/OpenPlantPathology/workflows/blogdown/badge.svg)](https://github.com/openplantpathology/OpenPlantPathology/actions?query=workflow%3Ablogdown) [![Netlify Status](https://api.netlify.com/api/v1/badges/49264c27-be62-46f0-aeaf-5882bcdfdb3e/deploy-status)](https://app.netlify.com/sites/openplantpathology/deploys)
 
 This repository contains the code for the Open Plant Pathology website, https://www.openplantpathology.org/.
