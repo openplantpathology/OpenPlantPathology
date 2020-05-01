@@ -6,7 +6,7 @@ active = true
 date = 2018-01-01
 
 title = "<img src = '/img/headers/virtual-seminar.png' width=100%>"
-subtitle = "<center>"
+subtitle = "<center> <a href="content/virtual_seminars/">More Seminars</a>"
 
 # Order that this section will appear in.
 weight = 30
