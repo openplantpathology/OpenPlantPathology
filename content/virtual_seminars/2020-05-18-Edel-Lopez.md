@@ -6,7 +6,7 @@ time_end = 2020-05-18T11:00:00
 authors = ["Dr. Edel Pèrez-Lòpez - Université Laval"]
 
 # Abstract
-abstract = "Forthcoming. <img src = '/img/seminars/blank.jpg' width = 200 align = right style = 'padding:40px'>"
+abstract = "<img src = '/img/seminars/edel-lopez.png'  style = 'padding:40px'> Phytoplasmas taxonomy is very complex. Besides genus ('_Candidatus_ Phytoplasma'), phytoplasmas are also classified into groups and subgroups based on the RFLP pattern obtained after digesting the F2nR2 sequence (into the 16S rRNA operon) with 17 restriction enzymes. Many other taxonomic markers have been suggested in order to simplify this classification scheme. Since 2014 we identified cpn60 universal target (cpn60UT) as a suitable marker to identify and classify phytoplasmas, developing a friendly classification scheme supported by the 16S classification.  We also went further on automating the use of cpn60UT to classify phytoplasmas through the online tool CpnClassiPhyR. Besides, we have been using cpn60UT to develop fast and accurate diagnostic tools to detect phytoplasmas affecting economically important crops. Here I will summarize our findings related with the use of cpn60UT to detect, identify and characterize phytoplasmas. "
 
 # Featured image thumbnail (optional)
 image_preview = ""
