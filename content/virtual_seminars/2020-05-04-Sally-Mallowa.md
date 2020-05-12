@@ -24,8 +24,8 @@ url_slides = ""
 url_video = "https://www.youtube.com/watch?v=1ND98xcPqkM"
 
 # Custom links (optional).
-#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-#url_custom = [{name = "", url = ""}]
+#   Uncomment line below to enable. For multiple links, use the form`[{...}, {...}, {...}]`.
+url_custom = [{name = "DOI", url = "https://doi.org/10.17605/OSF.IO/HR6SN"}]
 
 # Does the content use math formatting?
 math = true
