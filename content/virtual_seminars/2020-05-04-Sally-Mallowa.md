@@ -21,12 +21,8 @@ selected = true
 
 # Links (optional).
 url_slides = ""
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=1ND98xcPqkM"
 
-# Custom links (optional).
-#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Convert time", url ="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Sally+Mallowa%3A+Technology+driven+cassava+pest+management&iso=20200504T09&p1=627&ah=1" }, {name = "Calendar Invite", url = "/seminars/sally.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/177017300"}]
- 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 #url_custom = [{name = "", url = ""}]
