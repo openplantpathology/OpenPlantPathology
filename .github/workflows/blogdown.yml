@@ -1,54 +1,54 @@
 on:
   push:
-    branches: master
+  branches: master
 
 name: blogdown
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+  runs-on: macOS-latest
+env:
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+steps:
+  - name: Checkout repo
+uses: actions/checkout@v2
 
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@2.1.1
+- name: Setup R
+uses: r-lib/actions/setup-r@master
 
-      - name: Install npm
-        uses: actions/setup-node@v1
+- name: Install pandoc and pandoc citeproc
+run: |
+  brew install pandoc
+brew install pandoc-citeproc
 
-      - name: Setup R
-        uses: r-lib/actions/setup-r@master
+- name: Cache Renv packages
+uses: actions/cache@v1
+with:
+  path: $HOME/.local/share/renv
+key: r-${{ hashFiles('renv.lock') }}
+restore-keys: r-
+  
+  - name: Install packages
+run: |
+  R -e 'install.packages("renv")'
+R -e 'renv::restore()'
 
-      - name: Install system level dependencies
-        run: |
-          sudo apt-get install pandoc pandoc-citeproc libcurl4-openssl-dev
+- name: Install hugo
+run: |
+  R -e 'blogdown::install_hugo(version = "0.55.6")'
 
-      - name: Cache Renv packages
-        uses: actions/cache@v1
-        with:
-          path: $HOME/.local/share/renv
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r-
+- name: Build site
+run: |
+  R -e 'blogdown::build_site(TRUE)'
 
-      - name: Install packages
-        run: |
-          R -e 'install.packages("renv")'
-          R -e 'renv::restore()'
+- name: Install npm
+uses: actions/setup-node@v1
 
-      - name: Install hugo
-        run: |
-          R -e 'blogdown::install_hugo(version = "0.55.6")'
-
-      - name: Build site
-        run: |
-          R -e 'blogdown::build_site(local = TRUE, method = "html")'
-
-      - name: Deploy to netlify
-        uses: netlify/actions/cli@master
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=public --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+- name: Deploy to Netlify
+# NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+run: |
+  npm install netlify-cli -g
+netlify deploy --prod
