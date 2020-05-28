@@ -1,8 +1,8 @@
 +++
 title = "cpn60UT: the perfect marker to identify and characterize phytoplasmas?"
-date = "2020-05-18"
-time_start = 2020-05-18T10:00:00
-time_end = 2020-05-18T11:00:00
+date = "2020-06-01"
+time_start = 2020-06-01T07:30:00
+time_end = 2020-06-01T07:30:00
 authors = ["Dr. Edel Pèrez-Lòpez - Université Laval"]
 
 # Abstract
@@ -25,7 +25,7 @@ url_video = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+P%C3%A9rez-L%C3%B3pez%3A+%E2%80%9Ccpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F%E2%80%9D&iso=20200518T10&p1=1211&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/94482472536"}]
+url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+P%C3%A9rez-L%C3%B3pez%3A+%E2%80%9Ccpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F%E2%80%9D&iso=20200601T0730&p1=165&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/94482472536"}]
 
 
 # Does the content use math formatting?
