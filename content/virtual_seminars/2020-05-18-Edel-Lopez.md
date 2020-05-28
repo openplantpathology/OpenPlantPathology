@@ -2,7 +2,7 @@
 title = "cpn60UT: the perfect marker to identify and characterize phytoplasmas?"
 date = "2020-06-01"
 time_start = 2020-06-01T07:30:00
-time_end = 2020-06-01T07:30:00
+time_end = 2020-06-01T08:30:00
 authors = ["Dr. Edel Pèrez-Lòpez - Université Laval"]
 
 # Abstract
