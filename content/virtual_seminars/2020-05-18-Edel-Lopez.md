@@ -25,11 +25,8 @@ url_video = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-<<<<<<< HEAD
-url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+P%C3%A9rez-L%C3%B3pez%3A+%E2%80%9Ccpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F%E2%80%9D&iso=20200601T0730&p1=165&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/94482472536"}]
-=======
-url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+P%C3%A9rez-L%C3%B3pez%3A+%E2%80%9Ccpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F%E2%80%9D&iso=20200518T10&p1=1211&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom", url = "https://anu.zoom.us/j/98574178929"}]
->>>>>>> 2e05c01767b04f51d12c91eed1ce0c1dcf2d4cc0
+
+url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+P%C3%A9rez-L%C3%B3pez%3A+%E2%80%9Ccpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F%E2%80%9D&iso=20200518T10&p1=1211&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom", url = ""}]
 
 
 # Does the content use math formatting?
