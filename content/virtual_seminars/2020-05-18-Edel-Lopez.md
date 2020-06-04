@@ -26,7 +26,7 @@ url_video = ""
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 
-url_custom = [{name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Edel+Perez-Lopez%3A+cpn60UT%3A+the+perfect+marker+to+identify+and+characterize+phytoplasmas%3F&iso=20200601T0730&p1=189&ah=1"}, {name = "Calendar Invite", url = "/seminars/edel.ics"}, {name = "Zoom Registration", url = "https://usq.zoom.us/webinar/register/WN_yxfD_VoNQXSR5M2j-75mXA"}]
+# url_custom = [{name = "Convert time", url = url_custom = [{name = "DOI", url = ""}]
 
 
 # Does the content use math formatting?
