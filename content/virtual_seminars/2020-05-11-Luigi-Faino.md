@@ -21,11 +21,11 @@ selected = true
 
 # Links (optional).
 url_slides = ""
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=-u2q8dkONgU"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = []
+#url_custom = [{name = "", url = ""}]
 
 
 # Does the content use math formatting?
