@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Australia/Brisbane
+TZURL:http://tzurl.org/zoneinfo-outlook/Australia/Brisbane
+X-LIC-LOCATION:Australia/Brisbane
+BEGIN:STANDARD
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1000
+TZNAME:AEST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200615T031109Z
+DTSTART;TZID=Australia/Brisbane:20200618T200000
+DTEND;TZID=Australia/Brisbane:20200618T211500
+SUMMARY:#OPPVirtual Seminar - Dr. Simon Williams
+UID:20200615T031109Z-93526643653@fe80:0:0:0:cc5:c6ff:feaa:66adeth0
+TZID:Australia/Brisbane
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://usq.zoom.us/j/93526643653\n	Descr
+ iption: Plant pathogens cause disease through secreted effector proteins
+ \, which act to modulate their hosts physiology and promote infection. T
+ ypically\, the sequence of effector proteins provides little functional 
+ information and further targeted experimentation is required. We look to
+  utilise structural biology and biochemical approaches to help us unders
+ tand effector function. In this talk I will present lessons learnt from 
+ our structural studies of SnTox3\, an effector from the fungal pathogen 
+ Parastagonospora nodorum. This will include methodologies we developed t
+ hat can be employed to work with other cysteine-rich effectors. I will a
+ lso present data that support the definition of a new class of fungal ef
+ fectors and how the identification and classification of these effectors
+  will have implications for the approaches used to study them.\n\nOr joi
+ n by phone:\n    Dial(for higher quality\, dial a number based on your c
+ urrent location):\n        Australia: +61 731 853 730  or +61 861 193 90
+ 0  or +61 8 7150 1149  or +61 2 8015 6011  or +61 3 7018 2005 \n    Webi
+ nar ID: 935 2664 3653\n    International numbers available: https://usq.
+ zoom.us/u/aN9qgCtoA\n\n\nOr an H.323/SIP room system:\n    H.323: 113.19
+ 7.7.12 or 113.197.7.13\n    Webinar ID: 935 2664 3653\n\n    SIP: 935266
+ 43653@113.197.7.12 or 93526643653@113.197.7.13\n
+LOCATION:https://usq.zoom.us/j/93526643653
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
