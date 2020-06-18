@@ -25,9 +25,7 @@ url_video = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [
-{name = "Zoom", url = "https://usq.zoom.us/j/93526643653"}, {name = "Convert time", url = "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Unique+effector+fold+and+insights+into+Kex2+protease+processing+revealed+by+++the+crystal+structure+&iso=20200618T20&p1=57&ah=1"},
-{name = "Add to Google Calendar", url = "seminars/simon-williams.html"}, {name = "Add to Outlook", url = "seminars/simon-williams.ics"}]
+# url_custom = []
 
 
 # Does the content use math formatting?
