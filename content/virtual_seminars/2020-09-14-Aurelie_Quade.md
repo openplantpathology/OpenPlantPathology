@@ -6,7 +6,7 @@ time_start = 2020-09-14T20:00:00
 time_end = 2020-09-14T21:00:00
 
 # Abstract
-abstract = "The vulnerability of the Australian maize industry to <em>Puccina sorghi</em> is currently unknown. Maize is grown across a range of agro-ecological regions in Australia and the effectiveness and stability of deployed Rp genes has not been examined. Further to this, assessments of the <em>P. sorghi<em> population to determine pathotype diversity have not been conducted for many years. The current study was undertaken to assess phenotypic, genetic and physiological resistance to CR and provide support for maize breeding programs in Australia."
+abstract = "<src = '/img/seminars/aurelie-quade.jpg' width = 500 align = right style = 'padding:40px'> The vulnerability of the Australian maize industry to <em>Puccina sorghi</em> is currently unknown. Maize is grown across a range of agro-ecological regions in Australia and the effectiveness and stability of deployed Rp genes has not been examined. Further to this, assessments of the <em>P. sorghi<em> population to determine pathotype diversity have not been conducted for many years. The current study was undertaken to assess phenotypic, genetic and physiological resistance to common rust and provide support for maize breeding programs in Australia."
 
 # Featured image thumbnail (optional)
 image_preview = ""
