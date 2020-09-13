@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:Australia/Brisbane
+TZURL:http://tzurl.org/zoneinfo-outlook/Australia/Brisbane
+X-LIC-LOCATION:Australia/Brisbane
+BEGIN:STANDARD
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1000
+TZNAME:AEST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200913T215930Z
+DTSTART;TZID=Australia/Brisbane:20200914T200000
+DTEND;TZID=Australia/Brisbane:20200914T211500
+SUMMARY:Aurelie Quade #OPPVirtualSeminar
+UID:20200913T215930Z-96442319336@fe80:0:0:0:837:e5ff:fee1:47c1ens5
+TZID:Australia/Brisbane
+DESCRIPTION:Join from a PC\, Mac\, iPad\, iPhone or Android device:\n    
+ Please click this URL to join. https://usq.zoom.us/j/96442319336\n	Descr
+ iption: The vulnerability of the Australian maize industry to Puccina so
+ rghi is currently unknown. Maize is grown across a range of agro-ecologi
+ cal regions in Australia and the effectiveness and stability of deployed
+  Rp genes has not been examined. Further to this\, assessments of the P.
+  sorghi population to determine pathotype diversity have not been conduc
+ ted for many years. The current study was undertaken to assess phenotypi
+ c\, genetic and physiological resistance to common rust and provide supp
+ ort for maize breeding programs in Australia.\n\n\nOr an H.323/SIP room 
+ system:\n    H.323: 113.197.7.14 or 113.197.7.140\n    Webinar ID: 964 4
+ 231 9336\n\n    SIP: 96442319336@113.197.7.14 or 96442319336@113.197.7.1
+ 40\n
+LOCATION:https://usq.zoom.us/j/96442319336
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
