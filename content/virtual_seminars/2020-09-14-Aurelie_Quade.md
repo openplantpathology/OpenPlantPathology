@@ -25,7 +25,7 @@ selected = true
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Zoom Link", url = "https://usq.zoom.us/j/96442319336"}, {name = "Outlook Calendar (.ics)", url = "/seminars/aurelie_quade.ics"}]
+url_custom = [{name = "Zoom Link", url = "https://usq.zoom.us/j/96442319336"}, {name = "Outlook Calendar (.ics)", url = "/seminars/aurelie-quade.ics"}]
 
 # Does the content use math formatting?
 math = true
