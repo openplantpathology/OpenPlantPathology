@@ -20,7 +20,7 @@ selected = true
 #projects = ["teaching-notes"]
 
 # Links (optional).
-#url_slides = ""
+url_slides = "https://doi.org/10.17605/OSF.IO/FESVY"
 url_video = "https://youtu.be/gYfPN4pNZjM"
 
 # Custom links (optional).
