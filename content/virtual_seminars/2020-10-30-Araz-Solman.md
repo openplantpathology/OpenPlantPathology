@@ -1,6 +1,6 @@
 +++
 title = "A tale of two crop diseases"
-authors = ["Dr. Araz Solmon - Queensland Department of Agriculture and Fisheries"]
+authors = ["Dr. Araz Solman - Queensland Department of Agriculture and Fisheries"]
 date = "2020-10-30"
 time_start = 2020-10-30T10:00:00
 time_end = 2020-10-30T11:30:00
