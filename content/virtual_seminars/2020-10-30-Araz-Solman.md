@@ -1,6 +1,6 @@
 +++
 title = "A tale of two crop diseases"
-authors = ["Dr. Araz Solmon - Queensland Department of Agriculture and Fisheries"]
+authors = ["Dr. Araz Solman - Queensland Department of Agriculture and Fisheries"]
 date = "2020-10-30"
 time_start = 2020-10-30T10:00:00
 time_end = 2020-10-30T11:30:00
@@ -26,7 +26,7 @@ selected = true
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 # url_custom = [url = url_custom = [{name = "DOI", url = ""}]
-url_custom = [{name = "Calendar Invite .ics", url = "seminars/araz-solmon.ics"}, {name = "Zoom", url = "https://usq.zoom.us/j/89512589822"}]
+url_custom = [{name = "Calendar Invite .ics", url = "seminars/araz-solman.ics"}, {name = "Zoom", url = "https://usq.zoom.us/j/89512589822"}]
 
 
 # Does the content use math formatting?
