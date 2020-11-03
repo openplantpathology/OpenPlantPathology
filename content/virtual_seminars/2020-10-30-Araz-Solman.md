@@ -21,12 +21,11 @@ selected = true
 
 # Links (optional).
 #url_slides = ""
-#url_video = ""
+url_video = "https://youtu.be/7ptnGlNvCeQ"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
 # url_custom = [url = url_custom = [{name = "DOI", url = ""}]
-url_custom = [{name = "Calendar Invite .ics", url = "seminars/araz-solman.ics"}, {name = "Zoom", url = "https://usq.zoom.us/j/89512589822"}]
 
 
 # Does the content use math formatting?
