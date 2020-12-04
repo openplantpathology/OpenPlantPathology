@@ -25,7 +25,7 @@ selected = true
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Zoom Link", url = "https://usq.zoom.us/j/85444037707"}, {name = "Calendar Invite (.ics)", url = "seminars/lauren-huth.ics"}]
+#url_custom = [{}]
 
 
 # Does the content use math formatting?
