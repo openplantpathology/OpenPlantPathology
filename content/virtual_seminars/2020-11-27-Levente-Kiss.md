@@ -25,7 +25,7 @@ selected = true
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-#url_custom = [{}]
+url_custom = [{name = "DOI"}, {url = "https://doi.org/10.17605/OSF.IO/THG7N"}]
 
 # Does the content use math formatting?
 math = true
