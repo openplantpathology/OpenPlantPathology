@@ -20,12 +20,12 @@ selected = true
 #projects = ["teaching-notes"]
 
 # Links (optional).
-#url_slides = ""
+url_slides = "https://doi.org/10.17605/OSF.IO/THG7N"
 #url_video = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Slides", url = "https://doi.org/10.17605/OSF.IO/THG7N"}]
+#url_custom = [{}]
 
 # Does the content use math formatting?
 math = true
