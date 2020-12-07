@@ -17,12 +17,12 @@ selected = true
 url_pdf = ""
 url_code = ""
 url_dataset = ""
-url_slides = ""
+url_slides = "https://doi.org/10.17605/OSF.IO/S28Q9"
 url_video = "https://youtu.be/xaUz_68jwHk"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "DOI", url = "https://doi.org/10.17605/OSF.IO/S28Q9"}]
+#url_custom = [{}]
 
 # Does the content use math formatting?
 math = true
