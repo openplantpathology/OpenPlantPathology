@@ -21,7 +21,7 @@ selected = true
 
 # Links (optional).
 url_slides = "https://doi.org/10.17605/OSF.IO/THG7N"
-#url_video = ""
+url_video = "https://youtu.be/5rug_0Tr6Ew"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
