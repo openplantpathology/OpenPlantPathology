@@ -15,10 +15,7 @@ event = ""
 event_url = ""
 location = ""
 
-# Links (optional).
-url_pdf = ""
-url_code = ""
-url_dataset = ""
+# Links (optional)
 url_slides = "https://doi.org/10.17605/OSF.IO/HSN53"
 url_video = "https://youtu.be/vcNz5qatqaE"
 
