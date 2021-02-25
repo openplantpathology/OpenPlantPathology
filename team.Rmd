@@ -43,4 +43,4 @@ The Carpentries, USA
 [**Susann Auer**](https://twitter.com/SusannAuer)\
 Editor for Reproducibility\
 Plant Pathologist\
-Dresden University of Technology, Germany
+Technische Universität Dresden, Germany
