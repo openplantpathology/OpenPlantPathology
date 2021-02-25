@@ -267,10 +267,7 @@ questions. A few of us have experience with different types of R packages and
 are happy to offer support. If you wish to join, flick us an e-mail at
 <openplantpathology@gmail.com> and we will send you an invite link. 
 
-If anything is not clear or you think I have left something important out,
-please leave a comment below or join our Slack group and let me know.
-
 # Acknowledgements
 
-Thanks to [@mladencucak](https://twitter.com/mladencucak) for his thoughtful
+Thanks to [mladencucak](https://twitter.com/mladencucak) for his thoughtful
 comments and suggestions on this article.
