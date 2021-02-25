@@ -1,0 +1,25 @@
+---
+title: "The diversity and molecular evolution of plant defence against pathogens in nature"
+description: |
+  Virtual seminar given by Dr. Remco Stam (Technical University of Munich). Abstract: Plant pathogen defence responses are often studied in model systems or in agricultural settings. However, in nature plants also encounter a large variety of pathogens. Interestingly, in natural systems this seldom leads to epidemics. One possible reason for this is the high amount of genetic variation that can be found in natural plant populations. 
+author:
+  - name: Benjamin Schwessinger
+    url: https://twitter.com/schwessinger
+date: 04-06-2020
+output:
+  distill::distill_article:
+    self_contained: false
+preview: seminar-remco.png
+categories:
+  - Virtual seminars
+---
+
+### About
+
+Presenter: Dr. Remco Stam (Technical University of Munich) Date: April 6th 2020 Host: Benjamin Schwessinger Links: [Video](https://youtu.be/xaUz_68jwHk) \| [Slides](https://doi.org/10.17605/OSF.IO/S28Q9)
+
+### Abstract
+
+Plant pathogen defence responses are often studied in model systems or in agricultural settings. However, in nature plants also encounter a large variety of pathogens. Interestingly, in natural systems this seldom leads to epidemics. One possible reason for this is the high amount of genetic variation that can be found in natural plant populations. In my lab we combine population genetics, genomics and molecular biology to unravel such variation and understand the evolutionary pressures that shape it. We study the genetic diversity of pathogen defence associated genes in a wild tomato species, *Solanum chilense* as well as its natural pathogens. In this talk I will highlight why *S. chilense* is an excellent system to study defence related diversity and evolution and I will show examples of recent findings on NLR gene evolution and the diversity of defence responses observed in general.
+
+![](seminar-remco.png)

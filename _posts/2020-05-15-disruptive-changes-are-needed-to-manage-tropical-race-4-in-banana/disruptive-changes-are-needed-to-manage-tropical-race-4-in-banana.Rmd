@@ -1,0 +1,69 @@
+---
+title: " OPP Interviews: Prof. Gert Kemma from Wageningen University & Research"
+description: |
+  Post seminar interview with Dr. Gert Kema (Wageningen University & Research), is the professor leading research at the Laboratory of Phytopathology. A focus on septoria tritici blotch of wheat for ~25 years set Gert on a path to work on banana as a result of the relationship between the causal fungi, _Mycosphaerella graminicola_, now known as _Zymoseptoria tritici_ and _Mycosphaerella fijiensis_ now known as _Pseudocercospora fijiensis_, associated with black sigatoka.
+author:
+  - name: Lisa Rothmann
+    url: https://twitter.com/LandbouLisa
+date: 05-15-2020
+output:
+  distill::distill_article:
+    self_contained: false
+preview: kema.png
+categories:
+  - Interviews
+---
+
+Dr. Gert Kema, from Wageningen University & Research (Wageningen), is the professor leading research at the [Laboratory of Phytopathology](https://www.wur.nl/en/Research-Results/Chair-groups/Plant-Sciences/Laboratory-of-Phytopathology.htm). A focus on septoria tritici blotch of wheat for ~25 years set Gert on a path to work on banana as a result of the relationship between the causal fungi, _Mycosphaerella graminicola_, now known as _Zymoseptoria tritici_ and _Mycosphaerella fijiensis_ now known as _Pseudocercospora fijiensis_, associated with black sigatoka. Gert delivered a talk on, *The ongoing pandemic of Tropical Race 4 threatens global banana production* on the 30th of April at the [#OPPVirtualSeminars](https://openplantpathology.org/virtual_seminars/2020-04-30-gert-kema/).  
+
+
+### OPP: How did you find your experience presenting for the OPP Virtual Seminar?  
+
+This was the first time I interacted with the Open Plant Pathology platform. The opportunity came across my screen coincidentally when I saw [Remco Stam](https://openplantpathology.org/virtual_seminars/2020-04-06-remco-stam/) was going to deliver a talk. I signed up immediately. During this crisis, we have modified our laboratory practices and have been making use of video conferencing for our student colloquiums and meetings. This makes me rather used too giving a virtual presentation. I enjoy sharing my research and I consider myself an experienced speaker, privileged to have had the opportunity to present at multiple international conferences previously. This reduced my hesitation to participate and encourage others to also part-take in the future.  
+
+The virtual seminars have been phenomenal for our student groups, we encourage their participation and we discuss them afterwards. These opportunities for students to get exposure to speakers and multiple topics they may not have had otherwise. Another great thing is the potential collaborations which can be built during this time. We can reach out to one another and build our networks. These have been some of the upsides of the crisis, it is always good to keep the positive aspects in mind in all situations.  
+
+### OPP: Any advice to future virtual seminar presenters? 
+I think one of the things I could have done was to keep in mind the time zones, to perhaps conduct the talk in the afternoon, so that the South American community could have also joined in the live discussion. Luckily, they can access the YouTube recording. Perhaps, a balanced approach to scheduling to include those who work on the crop you are presenting on too.  
+
+It may seem strange to some, talking without a “traditional audience” but just trust that the audience is interested and paying attention, they did after all make the decision to spend their time listening to you.  
+
+
+### OPP: The dissemination of the Fusarium wilt disease-causing organisms is through water and contaminated soil and tools. What are your personal experiences with this and what is in place to prevent the spread?  
+
+An example of the power of water as a dispersal mechanism is in the Philippines during Typhoon Pablo, in 2012, much damage was caused and water was at the front of the disease spreading. However, water is not the primary or most impactful dispersal mode. The movement of contaminated tools and soil are what cause the most efficient spread of [Fusarium wilt](https://fusariumwilt.org/index.php/en/about-fusarium-wilt/) disease-causing organisms (_Fusarium oxysporum f. sp. cubense_ and _F. odoratissimum_).
+On a visit to the Philippines, we walked through fields, not intentionally collecting samples under our soles, just walking in the fields. We could detect TR4 in the samples we collected from our shoes. Humans are vectors. This is clear in the intercontinental dissemination of the pathogens, illustrated for example by the [forensic phylogenetics](https://www.frontiersin.org/articles/10.3389/fpls.2018.00457/full#B13) clearly showing the genetic similarity of TR4 strains we identified in the [Philippines and Pakistan](https://apsjournals.apsnet.org/doi/10.1094/PDIS-12-14-1356-PDN).  
+
+Much of the banana production is under smallholder production, a recently completed study indicated ~80% of the growers cannot recognise Fusarium wilt. The knowledge dissemination is limited on the farms. At a national level, there is much in place to ensure the spread is limited. On entering airports and farming districts, for example, there are banners communicating the risk and quarantine of Fusarium wilt. There are tire dips, disinfection stations and foot dips or mats to reduce the dissemination. However, killing Fusarium chlamydospores takes ~15-20 seconds exposure to disinfectants, and when in reality walking over the disinfection pads many do not spend this amount of time on the mat. Nevertheless, we have to conclude that in many farms the measures taken to prevent the entry of TR4 is not appropriate or even absent. Hence there is a lot to to understand with this pathogen and its host and to reach out to the producers and enable them to identify the pathogen to monitor at a disruptive scale so that swifter and accurate diagnoses can be made.  
+
+### OPP: Cavendish was the champion of managing Fusarium wilt. However, TR4 belonging to a single species, _Fusarium odoratissimum_, has shaken this. Why do you think research and development has not moved forward in the last century for banana like other crops, for example wheat?
+
+The research spheres of wheat and banana are worlds apart. It is a complex comparison but I will explain a few reasons.  
+
+  - In the early years, wheat breeding was conducted in e.g. the Netherlands at Universities, but over time private companies have taken over. However, there is a lively public-private partnership between academia and breeding companies now.  
+  - Many people are involved in the wheat research community, the volume of genes identified in wheat rust resistance, for example, is a clear indication of what a large network of researchers can achieve.  
+  - These two components are lacking in the banana research sphere. However, we are starting to see some changes. More people are taking an interest in banana and it is becoming more attractive. Like myself, when I started working on TR4 ~10 years ago, I needed to learn a lot from those more experienced. Despite the fact that new blood within a community is sometimes seen as a challenge, it is also a fact that new people bring new ideas that can boost progress.  
+  - In the past, banana production was dominated by multinationals, on the stock markets. Their crop management strategies were short-sighted and not always open to future required research and development. This is changing now too. For example, Chiquita is now a family-owned company, it is clear to see the strategy being followed is different from that of the past. They have [joined our research](https://www.ccrs.uzh.ch/dam/jcr:70d266cb-5f87-41fe-9b6b-c9dd4ace9608/Press%20Release_UnivWageningen_Chiquita_20180723_EN.pdf) to facilitate changes in pest management.  
+
+### OPP: I would like to ask a question from the audience on the 30th of April, “can we use genome-wide association studies (GWAS) now in banana to uncover more resistance genes?”  
+
+Yes, and this is an approach we are currently pursuing. Although TR4 is catapulting much of the research and development, we need to consider Black Sigatoka in our research too. There is not much hope if we are to develop a TR4 resistant cultivar but it has the same or greater susceptibility for Black Sigatoka. We need to take a combined approach with a broad vision. The genetic diversity of banana is phenomenal and is mostly untouched.
+Here is another difference between the ‘wheat and banana worlds’ - phenotyping. In order to score cereal rusts, you have plants grown for ~10 days, inoculated and after 2-3 weeks you can usually successfully score. Banana are inoculated at 3 months of age and scoring takes place 7-10 weeks after inoculation. But once you are set up the options are at least there to conduct this research.  
+
+### OPP: Re: A Cavendish wild relative, what is the likelihood of uncovering a similar crop wild relative for future management?  
+
+Yes, I think the potential is there, but keep in mind wild relatives of South East Asia and Indonesia may taste great, but they are not seedless and this is what the market desires. We need to engage in high-throughput genetics to speed up and unlock the genetic potential to manage large-scale banana production sustainably.
+Simultaneously, we need also to have a smallholder producer focused approach in generating our disease management strategies. An inspiring example of this is [Simon Groot](https://www.worldfoodprize.org/en/laureates/2019_groot/), the winner of the World Food Prize last year, with his company [East-West Seed](https://www.eastwestseed.com/aboutus/organization). This approach serves growers and is solution-driven, moving away from old fashioned monoculture, to provide accessible genetics to the public.  
+
+### OPP: We know pathogens spread, and Fusarium wilt DCOs have a history of “moving” on a large-scale. Many smallholder growers are impacted by this, there is research on protecting crop but how are producer livelihoods protected?  
+
+We need feet on the ground, the research needs to reach the smallholders. We need to increase the ability of producers to recognise the disease and report these incursions. Fortunately, there are many web-based technologies which broaden the audience, but despite this, the disease continues to spread. We need to identify the holes and close them. The information is in many languages, English, French, Spanish but we need more translations. We need to prevent the incursion of this pathogen into new areas and if this cannot be done we need to isolate areas and eradicate what is possible to reduce the spread.  
+
+### OPP: Currently, there is much research on the second genome, rhizosphere and microbiome of hosts and their defence strategies. Is this a potential way to disrupt soil borne inoculum and protect the crop?  
+
+Our research group is also involved in collaborations for soil microbiome gene expression in the host to manipulate disease management. There are tools available to achieve this and there is a growing awareness to the contribution of the overall environment of crop production. But we have to realize that we cannot sustainably protect a susceptible crop. We should be aware that we do not step into the same trap as the past, continuing with Cavendish 2.0. We need another approach and should not maintain a global monoculture or invest in dead research. We need to stand on the shoulder of our predecessors and develop new vistas and new varieties, we should open the tap like seen in for example wheat breeding, and it should continue to flow.  
+
+### OPP: Much appreciation to Gert for sharing your research with us and contributing to growing the Open Plant Pathology experience.  
+
+You can go and watch [Gert’s #OPPvirtualseminar](https://www.youtube.com/watch?v=t9DARCO0wE8&t=1533s) on our [official YouTube channel](https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA). The slides from the presentation are stored at our [OSF Project](https://osf.io/fesv5/). You are also welcome to interact with us in our Slack Community on our #virtual-seminar channel. By clicking on this link you can [request to join](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) Open Plant Pathology on Slack. 
+

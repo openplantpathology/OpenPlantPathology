@@ -1,0 +1,26 @@
+---
+title: "Workshop: Network Analysis in Plant Pathology"
+description: |
+  This workshop will prepare participants to interpret network analyses, and will provide participants with experience in network analysis for several representative data sets. The workshop will use the R programming environment, and will provide a brief introduction to R.
+author:
+  - name: Adam Sparks
+    url: https://twitter.com/adamhsparks
+date: 08-07-2018
+output:
+  distill::distill_article:
+    self_contained: false
+preview: networks1.png
+categories:
+  - Workshops
+
+---
+
+[Website](https://kelseyandersen.github.io/NetworksPlantPathology/index.html)
+[Code](https://github.com/kelseyandersen/NetworksPlantPathology)
+
+
+Workshop led by Garret Lab (University of Florida) given at [ICPP2018](https://apsnet.confex.com/apsnet/ICPP2018/meetingapp.cgi/Session/2111) July 28, 2018  
+Boston, United States
+
+This workshop will prepare participants to interpret network analyses, and will provide participants with experience in network analysis for several representative data sets. The learning goals for this workshop are for participants to (1) understand basic ideas in network science, and (2) gain practice in network analysis with examples including microbiome networks, epidemic networks, and networks of the spread of technologies. The workshop will use the R programming environment, and will provide a brief introduction. Networks are a key component of plant pathology, and understanding them supports genetics, microbiome science, and epidemiology
+

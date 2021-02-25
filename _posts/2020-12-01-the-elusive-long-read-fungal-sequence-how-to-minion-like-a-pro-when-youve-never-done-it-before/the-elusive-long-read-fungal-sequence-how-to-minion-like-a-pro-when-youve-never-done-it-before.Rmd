@@ -1,0 +1,38 @@
+---
+title: "The elusive long-read fungal sequence: how to minION like a pro (when you’ve never done it before)"
+description: |
+  Research seminar presented by Ms. Lauren Huth to the Center for Crop Health, University of Southern Queensland. The rapid development of microbial genome sequencing methods in the last decade has revolutionized whole genome sequencing and has become the standard for many molecular typing applications in research. Largely driven by the development of high-throughput, low cost, second generation sequencing methods, the industry has become familiar with Illumina as the most widely used sequencing platform for microbial genomics. 
+
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.com
+date: 2020-12-01
+output:
+  distill::distill_article:
+    self_contained: false
+preview: seminar-lauren.png
+categories: 
+  - CCH-USQ Seminars
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### About
+
+Presentar: Ms. Lauren Huth \
+Institution: USQ, Institute for Life Sciences and the Environment \
+Date: 1 Dec 2020\
+Host: Adam Sparks \
+Links: [Video](https://www.youtube.com/watch?v=bbEpGrsBuNc) \| [Slides](https://osf.io/m6fgy/)
+
+### Abstract
+
+The rapid development of microbial genome sequencing methods in the last decade has revolutionized whole genome sequencing and has become the standard for many molecular typing applications in research. Largely driven by the development of high-throughput, low cost, second generation sequencing methods, the industry has become familiar with Illumina as the most widely used sequencing platform for microbial genomics. However, it has become clear that short-read sequencing has significant limitations, in particular, the inability to fully reconstruct genomic structures of interest.
+
+Oxford Nanopore Technologies offer a solution to this employing a single-molecule, long-read sequencing platform called minION often generating reads with a median length of 8-10kb and as long as 100kb. In-house sequencing can be a daunting task, even for those experienced in the process. In addition to this, fungi can be particularly difficult to prepare compared to other samples.
+
+This talk will provide a beginner's overview of Oxford Nanopore Technology and their platforms including the minION and flongle and what is required for a successful sequencing run. In particular, this seminar will focus on high molecular weight DNA extraction of fungi, quantification, purification, purity ratio checks, short read eliminators and library preparation using the Genomic DNA by Ligation sequencing kits. There will be an overview of costs as well as some tips and tricks to get the most out of your sequencing run.
+
+![](seminar-lauren.png)

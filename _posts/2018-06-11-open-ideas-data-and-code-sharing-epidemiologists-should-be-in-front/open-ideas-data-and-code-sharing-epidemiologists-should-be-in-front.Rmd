@@ -1,0 +1,38 @@
+---
+title: "Open ideas, data and code sharing: epidemiologists should be in front!"
+description: |
+  Talk given by OPP Founder, Emerson M. Del Ponte, at the 12 International Epidemiology Workshop on June 12 2018 (Lillehammer, Norway) to promote the initiative among plant disease epidemiologits
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.com
+  - name: Emerson Del Ponte
+    url: https://emersondelponte.netlify.app
+date: 06-12-2018
+output:
+  distill::distill_article:
+    self_contained: false
+preview: talk_opp1.png
+categories: 
+  - Talks
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+[slides](https://speakerdeck.com/emdelponte/open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front) | [code](https://openplantpathology.github.io/OPP.at.IEW12/)   
+  
+Botanical epidemiologists have long been leaders in using mathematical, statistical and computational approaches to tackle theoretical and applied research problems. Such skills always distinguished us from other plant pathology disciplines and naturally allowed us to bring together quantitative researchers (e.g. mathematicians, statisticians, programmers), which has been beneficial to our area of research.
+
+
+
+![](talk_opp1.png){style="text-align: center; width: 50%;  display: block; margin: 0 auto;"}
+
+The availability of increasing amounts of data at scales from genomes to landscapes requires an even more diverse set of skills and enhanced ability to interact widely and advance the field. Additionally, donors, governments and journals are pushing for increased transparency and reproducibility (Bond-Lamberty et al. 2016). Because of this an open approach to science is quickly becoming more accepted, including unconstrained access and sharing of scientific content, data collection and computer code.
+
+It is envisioned that fostering open science attitudes within our research communities will lead to improved reproducibility of the research, both in relation to the methods and the findings. Adopting reproducible research practices directly benefits us as researchers. Between complicated analyses, reviews and revisions and questions years later about the data that was collected or analysis that was conducted, it's extremely beneficial to be able to easily reproduce your work quickly and easily.
+
+Second, it is beneficial to the end-user or reader to be able to verify the validity of the methods used and recreate the analysis which helps with knowledge transfer. Lastly, sharing work openly and making it discoverable can lead to collaborations. While relatively few examples of reproducible research in plant pathology exist (Shah and Madden 2004), it is changing (Del Ponte 2018, Duku et al. 2015, Sparks et al. 2018). To help facilitate this change, we founded the Open Plant Pathology community (Del Ponte and Sparks 2018), which aims to foster relationships between researchers and promote open, transparent and reproducible research using shared data and reusable software. With our history of moving plant pathology forward using computational resources, botanical epidemiologists should be in front leading the way for plant pathology with these new methods.
+
+

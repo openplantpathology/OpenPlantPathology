@@ -1,0 +1,26 @@
+---
+title: "Workshop: Introduction to Multivariate Statistics Using R"
+description: |
+  This workshop aims to introduce new users to several different and useful multivariate analysis methods available in the R statistical computing language. It is focus will be on application rather than background theory. 
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/edelponte
+date: 07-12-2018
+output:
+  distill::distill_article:
+    self_contained: false
+preview: workshop_neil.png
+categories:
+  - Workshops
+---
+
+[Website](https://openplantpathology.github.io/OPP_Workshop_Multivariate/) | [Code](https://github.com/openplantpathology/OPP_Workshop_Multivariate)
+
+Workshop given by Dr. Neil McRoberts at [ICPP2018](https://apsnet.confex.com/apsnet/ICPP2018/meetingapp.cgi/Session/2064)
+
+### Abstract
+
+The aim of the workshop is to introduce new users to several different and useful multivariate analysis methods available in the R statistical computing language. Plant Pathologists often collected multiple measurements on the same subject, as such it is important to examine the different methods and techniques that can be applied to visualize and group multivariate responses. This workshop will provide participants with examples using R that illustrate several different multivariate statistical methods like principal components analysis, principle coordinates analysis, clustering, ordination and discriminant analysis. The focus of this workshop will be on application rather than background theory and while some prior experience with R will be useful, it is not necessary
+
+
+
