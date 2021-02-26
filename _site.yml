@@ -9,17 +9,18 @@ navbar:
   search: TRUE
   source_url: TRUE
   left: 
-    - text: "Mission"
+    - text: "▸ Mission"
       href: about.html
-    - text: "Who we are"
+    - text: "♙ Who we are"
       href: team.html
-    - text: "Virtual seminars"
+    - text: "▇ Virtual seminars"
       href: seminars.html
+    - text: "＃Join our Slack"
+      href: https://communityinviter.com/apps/openplantpathology/open-plant-pathology
   right: 
     - icon: fab fa-twitter fa-lg
       href: https://twitter.com/OpenPlantPath/
-    - icon: fab fa-slack fa-lg
-      href: https://communityinviter.com/apps/openplantpathology/open-plant-pathology
+    
       
 output:
   distill::distill_article:
