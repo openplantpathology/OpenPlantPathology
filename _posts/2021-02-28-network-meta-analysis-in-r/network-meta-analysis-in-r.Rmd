@@ -22,16 +22,16 @@ Meta-analysis has gained popularity in Plant Pathology. Among the several method
 
 A recent survey (Del Ponte, unpublished) showed more than 50 scientific articles published using plant disease-related data, mainly to test treatment effects related with fungicide efficacy. Although this is VERY little compared with other fields such as medicine and psychology fields, there is a trend towards increasing its use in our field, especially with some structures of the data for which a multiple treatment comparison is of interest (see links to papers at the end of this post). Hence, this post is for those who have interest in learning how to fit network models using open source tools, as alternative to SAS and other commercial software.
 
-As a use case, I reproduce the analysis in the review paper wher the authors made available all the data (wheat yield response to fungicides) and the codes using SAS @madden2016, using one meta-analysis-specific packages in R, the [metafor](https://www.metafor-project.org/doku.php/help) package, which allowed me to fit the same model, the arm-based or uncondional, fitted in the original paper. I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`. I will explain the details on how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
+Here, I reproduce the analysis in the review paper where the authors made available all the data (wheat yield response to fungicides) and the codes using SAS @madden2016, using one meta-analysis-specific packages in R. This allowed me to fit the same model, the arm-based or unconditional, fitted in the original paper. I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`. I will explain the details on how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
 
-You should be able to reproduce the analysis below by copying and pasting into R. To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results. [Click here to get access to the R projet in the cloud](https://rstudio.cloud/project/2250558)
+You should be able to reproduce the analysis below by copying and pasting into R. To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results. [Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558)
 
 ### Data preparation
 
 The data were obtained from the supplemental [FileS1](https://apsjournals.apsnet.org/doi/suppl/10.1094/PHYTO-12-15-0342-RVW/suppl_file/PHYTO-12-15-0342-RVW.s1.sas), a SAS file that contains a documented code and the data. Here, the data were organized in an MS Excel file following the same original structure and content, excepting that missing data was represented by an empty cell. Let's load some packages for data importing and wrangling.
 
 ```{r message=FALSE, warning=FALSE}
-library(tidyverse) # load several useful pkgs
+library(tidyverse) # load several useful pkg
 library(readxl) # import data excel data
 
 ```
@@ -62,7 +62,7 @@ wheat <- wheat %>%
 
 I will use the [metafor](http://www.metafor-project.org/doku.php) package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R. I followed the example for fitting the arm-based network MA as shown in [this presentation](http://www.wvbauer.com/lib/exe/fetch.php/talks:2016_viechtbauer_goettingen_multilevel_multivariate_network_ma.pdf) by the author of the package.
 
-In the original paper (Madden et al. 2016), the authors compared three different variance-covariance matrix for a random-effects model: compound simetry (CS), heterogeneous CS (HCS) and unstructured (UN). Thse can be informed directly in the `rma.mv` function.
+In the original paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN). These can be informed directly in the `rma.mv` function.
 
 Let's load `metafor` package.
 
@@ -70,7 +70,7 @@ Let's load `metafor` package.
 library(metafor)
 ```
 
-## Fixed effects model
+### Fixed effects model
 
 Here is how to fit Model F1, the fixed-effects model, with a CS (compound symmetry) structure. In metafor, we will use the `rma.mv` function for fitting mixed effects model for multivariate and multi-treatment situations. We enter the effect of interest, which is `yield` and the sampling variance `varyld`. Our moderators will be the additive effect of treatment `trt` and the trial `trial` in the fixed effects model. The `method` is the maximum likelihood. The `random` component will be treatment and trial, meaning a random intercept and slope for each treatment. The `struct` is CS and the `data` is wheat.
 
@@ -89,11 +89,11 @@ net_arm_CS_fixed <- rma.mv(yield, varyld,
 summary(net_arm_CS_fixed)
 ```
 
-## Random effects
+### Random effects
 
 For the random effects model, the specification is similar to the fixed, except that trials are considered only random effects in the model.
 
-### Compound symmetry
+#### Compound symmetry
 
 Let's first fit the model with a compound symmetry (CS) structure for the variance-covariance matrix, which is equivalent to the R1 model in the paper @madden2016. In that case, because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016
 
@@ -113,7 +113,7 @@ Let's see the results.
 summary(net_arm_CS)
 ```
 
-### Heterogeneous CS
+#### Heterogeneous CS
 
 Alternatively, between-study variance can be considered unequal when there is an overall random study effect. In this model there is a constant between-study correlation for all pairs of treatments with unequal between-study total variances, and this matrix is called heterogeneous compound symmetry (HCS). This the R2 model in @madden2016.
 
@@ -133,7 +133,7 @@ And the results.
 summary(net_arm_HCS)
 ```
 
-### Unstructured matrix
+#### Unstructured matrix
 
 Finally, we fit the model with an unstructured (UN) variance-covariance matrix. Here, we allow the matrix to be completely unstructured, with different variance for each treatment or different covariance (correlation) for each pair of treatments. Note: I needed to use an optimizer for allowing convergence.
 
