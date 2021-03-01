@@ -20,9 +20,11 @@ preview: meta.png
 
 Meta-analysis has gained popularity in Plant Pathology. Among the several methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper in *Phytopathology* @madden2016.
 
-A recent survey (Del Ponte, unpublished) showed that the more than 50 scientific articles have been published using plant disease data. Although this is very little compared with other fields, there is a trend towards increasing its use, especially with some structures of the data for which a multiple treatment comparison is of interest (see links to papers at the end of this post). Hence, this post is for those who have interest in learning how to fit network models using open source tools, as alternative to SAS and other commercial software.
+A recent survey (Del Ponte, unpublished) showed more than 50 scientific articles published using plant disease-related data, mainly to test treatment effects related with fungicide efficacy. Although this is VERY little compared with other fields such as medicine and psychology fields, there is a trend towards increasing its use in our field, especially with some structures of the data for which a multiple treatment comparison is of interest (see links to papers at the end of this post). Hence, this post is for those who have interest in learning how to fit network models using open source tools, as alternative to SAS and other commercial software.
 
 As a use case, I reproduce the analysis in the review paper wher the authors made available all the data (wheat yield response to fungicides) and the codes using SAS @madden2016, using one meta-analysis-specific packages in R, the [metafor](https://www.metafor-project.org/doku.php/help) package, which allowed me to fit the same model, the arm-based or uncondional, fitted in the original paper. I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`. I will explain the details on how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
+
+You should be able to reproduce the analysis below by copying and pasting into R. To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results. [Click here to get access to the R projet in the cloud](https://rstudio.cloud/project/2250558)
 
 ### Data preparation
 
@@ -44,7 +46,7 @@ wheat <- wheat %>%
   na.omit() # here we omit the rows with missing data
 ```
 
-Let's replace the names of the levels of the treatment factor from number to acronyn.
+Let's replace the names of the levels of the treatment factor from number to acronym.
 
 ```{r}
 wheat <- wheat %>%
@@ -133,7 +135,7 @@ summary(net_arm_HCS)
 
 ### Unstructured matrix
 
-Finally, we fit the model with an unstructure (UN) variance-covariance matrix. Here, we allow the matrix to be completely unstructured, with different variance for each treatment or different covariance (correlation) for each pair of treatments. Note: I needed to use an optimizer for allowing convergence.
+Finally, we fit the model with an unstructured (UN) variance-covariance matrix. Here, we allow the matrix to be completely unstructured, with different variance for each treatment or different covariance (correlation) for each pair of treatments. Note: I needed to use an optimizer for allowing convergence.
 
 ```{r, cache = TRUE}
 # Be more patient. This may take much longer to complete run.
@@ -173,8 +175,8 @@ And now we prepare a table for displaying the statistics.
 
 ```{r}
 table1 <- 
-  data.frame(R1_mean[1], R1_mean[2],R1_se, R2_mean[2], R2_se, R3_mean[2], R3_se)
-colnames(table1) <- c("Treat", "R1_mean", "R1_se", "R2_mean", "R2_se", "R3_mean", "R3_se")
+  data.frame(R1_mean, R1_se, R2_mean, R2_se, R3_mean, R3_se)
+colnames(table1) <- c("R1_mean", "R1_se", "R2_mean", "R2_se", "R3_mean", "R3_se")
 table1$Treat <- c("CTRL", "MET", "PROP", "PROT", "TEBU", "TEBU+PROT")
 table1
 
@@ -230,4 +232,14 @@ We can check whether the full model with the moderator is a better fit than the 
 anova(net_arm_CS, net_arm_CS_class)
 ```
 
+### Wrapping up
+
 So recapping, we fitted five models: fixed effects, three random effects with different structures and the one with a moderator variables. Results are not identical to those obtained in @madden2016, but they are all very similar.
+
+These methods above, mainly the unstructured (UN) model, has been fitted in meta-analysis studies conducted in my laboratory. All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!).
+
+### To know more
+
+You may want to check these repositories of code and data from work published in my lab using these methods.
+
+@barro2021, @barro2020, [Machado et al. (2017)](https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/)
