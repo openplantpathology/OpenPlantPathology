@@ -1,7 +1,7 @@
 ---
 title: "Network meta-analysis in R"
 description: |
-  Meta-analysis (MA)has gained more popularity in Plant Pathology. Among the methods, network meta-Analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar. 
+  Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar. 
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/edelponte
@@ -36,16 +36,17 @@ The data were obtained from the supplemental [FileS1](https://apsjournals.apsnet
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse) # load several useful pkgs
 library(readxl) # import excel data
-
 ```
 
 Now we are ready to import the data and convert both yield and variance to metric unit as performed in the paper. Note: we do not need to create the weight variable as in the SAS code because this is handled in the meta-analysis specific R packages.
 
 ```{r}
 wheat0 <- read_excel("wheat.xlsx")
-wheat <- wheat0 %>% 
-  mutate(varyld = (1/wtyield)*(0.0628^2), 
-         yield = yield * 0.0628) %>% 
+wheat <- wheat0 %>%
+  mutate(
+    varyld = (1 / wtyield) * (0.0628^2),
+    yield = yield * 0.0628
+  ) %>%
   na.omit() # here we omit the rows with missing data
 ```
 
@@ -53,12 +54,12 @@ Let's replace the names of the levels of the treatment factor from numbers to th
 
 ```{r}
 wheat <- wheat %>%
-  mutate(trt = replace(trt, trt == 10, "CTRL")) %>% 
-  mutate(trt = replace(trt, trt == 2, "TEBU")) %>% 
-  mutate(trt = replace(trt, trt == 3, "PROP")) %>% 
-  mutate(trt = replace(trt, trt == 4, "PROT")) %>% 
-  mutate(trt = replace(trt, trt == 5, "TEBU+PROT")) %>% 
-  mutate(trt = replace(trt, trt == 6, "MET")) 
+  mutate(trt = replace(trt, trt == 10, "CTRL")) %>%
+  mutate(trt = replace(trt, trt == 2, "TEBU")) %>%
+  mutate(trt = replace(trt, trt == 3, "PROP")) %>%
+  mutate(trt = replace(trt, trt == 4, "PROT")) %>%
+  mutate(trt = replace(trt, trt == 5, "TEBU+PROT")) %>%
+  mutate(trt = replace(trt, trt == 6, "MET"))
 ```
 
 ### Meta-analytic (arm-based) model
@@ -71,25 +72,24 @@ In the original NMA paper, the authors compared three different variance-covaria
 library(metafor)
 ```
 
-Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016.This is use because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
+Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016. This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
 
 We use the `rma.mv` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood. The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also reandom. The `struct` is CS and the `data` is wheat.
 
 ```{r, cache = TRUE}
 net_arm_CS <- rma.mv(yield, varyld,
-                    mods = ~ trt, 
-                    method= "ML",
-                    random = list(~ trt | factor(trial)),  
-                    struct="CS",  
-                    data=wheat)
-
+  mods = ~trt,
+  method = "ML",
+  random = list(~ trt | factor(trial)),
+  struct = "CS",
+  data = wheat
+)
 ```
 
 We call the summary results of the model. Let's jump straight to model results where we can check the estimates for each treatment which are the differences to the intercept, defined as the untreated check. We can see that MET (0.436 ton) and PROP (0.20 ton) provided the highest and lowest numerical yield difference relative to the untreated (intercept). We should also look at the 95% confidence intervals.
 
 ```{r}
 summary(net_arm_CS)
-
 ```
 
 #### Heterogeneous CS
@@ -99,11 +99,11 @@ Alternatively, between-study variance can be considered unequal when there is an
 ```{r, cache=TRUE}
 # Be patient. The model fit may take more than a minute to finish running
 net_arm_HCS <- rma.mv(yield, varyld,
-                    mods = ~  trt, 
-                    method= "ML",
-                    random = list(~ trt | factor(trial)),  
-                    struct="HCS",  data=wheat)
-
+  mods = ~trt,
+  method = "ML",
+  random = list(~ trt | factor(trial)),
+  struct = "HCS", data = wheat
+)
 ```
 
 Compare the results with the previous model.
@@ -119,12 +119,13 @@ Finally, we fit now the model with an unstructured (UN) variance-covariance matr
 ```{r, cache = TRUE}
 # Be more patient. This may take much longer to complete run.
 net_arm_UN <- rma.mv(yield, varyld,
-                    mods = ~ trt, 
-                    method= "ML",
-                    random = list(~ trt | factor(trial)), 
-                    struct="UN", 
-                    control=list(optimizer = "nlm"), 
-                    data=wheat)
+  mods = ~trt,
+  method = "ML",
+  random = list(~ trt | factor(trial)),
+  struct = "UN",
+  control = list(optimizer = "nlm"),
+  data = wheat
+)
 ```
 
 We can then check results:
@@ -141,24 +142,21 @@ To facilitate comparison, we can extract the mean estimate and the respective st
 library(broom) # load this to use the tidy function
 
 R1_mean <- tidy(round(net_arm_CS$b, 3))
-R2_mean <- tidy(round(net_arm_HCS$b,3))
-R3_mean <- tidy(round(net_arm_UN$b,3))
-R1_se <- tidy(round(net_arm_CS$se,3))
-R2_se <- tidy(round(net_arm_HCS$se,3))
-R3_se <- tidy(round(net_arm_UN$se,3))
-
-
+R2_mean <- tidy(round(net_arm_HCS$b, 3))
+R3_mean <- tidy(round(net_arm_UN$b, 3))
+R1_se <- tidy(round(net_arm_CS$se, 3))
+R2_se <- tidy(round(net_arm_HCS$se, 3))
+R3_se <- tidy(round(net_arm_UN$se, 3))
 ```
 
 And now we prepare a table for displaying the statistics and can compare with the original paper. We can notice that the results are very similar, although not identical.
 
 ```{r}
-table1 <- 
+table1 <-
   data.frame(R1_mean, R1_se, R2_mean, R2_se, R3_mean, R3_se)
 colnames(table1) <- c("R1_mean", "R1_se", "R2_mean", "R2_se", "R3_mean", "R3_se")
 table1$Treat <- c("CTRL", "MET", "PROP", "PROT", "TEBU", "TEBU+PROT")
 knitr::kable(table1)
-
 ```
 
 ![](https://apsjournals.apsnet.org/cms/10.1094/PHYTO-12-15-0342-RVW/asset/images/medium/phyto-12-15-0342-rvw_t3.gif)
@@ -171,7 +169,6 @@ As in the original paper, we will compare all three models based on the LRT test
 anova(net_arm_HCS, net_arm_CS)
 anova(net_arm_CS, net_arm_UN)
 anova(net_arm_HCS, net_arm_UN)
-
 ```
 
 ### Forest plot
@@ -179,18 +176,22 @@ anova(net_arm_HCS, net_arm_UN)
 With the results in hand, a dot and error plot with treatments ordered from highest to lowest yield difference is a nice way to visualize the results - not identical but similar to a traditional forest plots. For such, we make the size of the dots proportional to the inverse of the standard error.
 
 ```{r fig.height=3.5, fig.width=4}
-table1 %>% 
-  filter(Treat != "CTRL") %>% 
-  ggplot(aes(reorder(Treat, R3_mean), R3_mean))+
-  geom_point(aes(size = 1/R3_se), shape =15)+
-  geom_errorbar(aes(ymin = R3_mean - R3_se, 
-                    ymax = R3_mean + R3_se), width = 0.01)+
-  ylim(0.1,0.6)+
-  labs(y = "Yield difference (ton/ha)",
-       x = "",
-       title = "Yield response to fungicides",
-       caption = "Data source: Madden et al. (2016)")+
-  theme_light()+
+table1 %>%
+  filter(Treat != "CTRL") %>%
+  ggplot(aes(reorder(Treat, R3_mean), R3_mean)) +
+  geom_point(aes(size = 1 / R3_se), shape = 15) +
+  geom_errorbar(aes(
+    ymin = R3_mean - R3_se,
+    ymax = R3_mean + R3_se
+  ), width = 0.01) +
+  ylim(0.1, 0.6) +
+  labs(
+    y = "Yield difference (ton/ha)",
+    x = "",
+    title = "Yield response to fungicides",
+    caption = "Data source: Madden et al. (2016)"
+  ) +
+  theme_light() +
   coord_flip()
 ```
 
@@ -200,9 +201,8 @@ Using the best model (or any model, in fact) we can perform a head-to-head compa
 
 ```{r message=FALSE, warning=FALSE}
 library(multcomp)
-net_arm_UN_comp <- summary(glht(net_arm_UN, linfct=cbind(contrMat(rep(1,6), type="Tukey")), test=adjusted("none")))
+net_arm_UN_comp <- summary(glht(net_arm_UN, linfct = cbind(contrMat(rep(1, 6), type = "Tukey")), test = adjusted("none")))
 net_arm_UN_comp
-
 ```
 
 We plot the results for more easily checking which differences are statistically significant (not embracing zero).
@@ -218,10 +218,10 @@ In the original paper, two models were expanded to include the effect of wheat c
 ```{r, cache=TRUE}
 
 net_arm_CS_class <- rma.mv(yield, varyld,
-                    mods = ~ factor(trt)*class, 
-                    method= "ML",
-                    random = list(~ factor(trt) | factor(trial)),                     struct="HCS",  data=wheat)
-
+  mods = ~ factor(trt) * class,
+  method = "ML",
+  random = list(~ factor(trt) | factor(trial)), struct = "HCS", data = wheat
+)
 ```
 
 As usual, we look at the model summary and check the estimates for each combination of treatment and wheat class.

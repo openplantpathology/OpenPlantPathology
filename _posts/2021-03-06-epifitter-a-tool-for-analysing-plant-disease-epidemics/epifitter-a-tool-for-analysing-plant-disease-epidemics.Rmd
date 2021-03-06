@@ -1,0 +1,123 @@
+---
+title: "epifitter, a tool for analysing plant disease epidemics"
+description: |
+  Epifitter is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/edelponte
+date: 03-06-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: epifitter.png
+categories: 
+  - R packages
+bibliography: references.bib
+---
+
+Inevitably, pathogens spread throughout plant populations - some rapidly and more effectively when crops are intensively grown and man fails to control the situation. Even more so, when Mother Nature is very kind to the pathogen with the provision of the right meteorological conditions for epidemic onset, development and spread.
+
+The progress of epidemics over time, described by disease progress curves (DPCs), is central in the field of plant disease epidemiology and has roots with its birth as a discipline during the early 1960's. In fact, JE Vanderplank and other important scientists who followed a couple decades thereafter provided and shaped the tools that we have available for the study of the temporal progress of epidemics.
+
+The subject is broad and can be complex, but relatively simple approaches may provide sufficient and important knowledge and tools for making inferences and testing hypotheses, depending on the question and scale of the application. When dealing with data collected at the population level (disease intensity in a group of individuals), the fit of simple two-parameter population dynamics models (e.g. Gompertz, logistic, monomolecular) is an effective way to understand, compare and predict epidemics.
+
+These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation. The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics. The mathematics behind model fitting is straightforward and can be done using linear regression as far as the original data is transformed to linearize the pattern of the curve. Alternatively, non-linear approaches can also be used, but require computational resources.
+
+## How did epifitter happen?
+
+During my journey teaching a graduate course in plant disease epidemiology since late 2007 I have used different approaches when teaching the fitting of models to DPC data. In the beginning, I made use of SAS codes, a DOS-based software and a spreadsheet. In 2014, I became an [R](https://www.r-project.org/) and [RStudio](https://rstudio.com) user and since then never looked back and abandoned all other software. I was trying to use only R for teaching and analysing epidemic data, which was quite possible for most, but not all, my epidemiological analyses at the time.
+
+I have been writing my teaching notes in R and improving (as well as shortening!) my codes each year since. In 2018, my MSc student, Kaique Alves, started to program in R after he joined my lab and attended my epidemiology class. I was providing the codes for the class and, at some point when explaining an exercise on model fitting. During thatt course, I challenged Kaique to implement functions for automating the process of model fitting, selection and plotting. One year after Kaique completed the course, epifitter was born and it took a few more months to be delivered on [GitHub](https://github.com/AlvesKS/epifitter) and finally on [CRAN](https://cran.r-project.org/web/packages/epifitter/index.html) in October 2020.
+
+## How is it being used?
+
+Epifitter is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data. The models fitted to data are the "classic" population dynamics models (e.g. Gompertz, logistic, monomolecular) using both the data linearization and the non-linear approaches for both single or multiple epidemics. Making this package useful for both research and teaching purposes.
+
+As of March the 3rd, the package has been downloaded 2,321 times (\~600 downloads/month). Recently, I used epifitter in my graduate (online inter-institutional) epidemiology class with great success. The few functions optimized to simplify model fitting and selection shorten the learning curve because students need to learn just a few R functions compared with my original codes. This is also valid for visualizing model results. Additionally, we have used the package in ongoing research in the lab that deals with disease progress data. The chapter on model fitting of my "[R4 Plant Disease Epidemiology](https://emdelponte.github.io/epidemiology-R/fitting-models.html)'' book (which is in the making) is based solely on epifitter. Finally, it has also been used in a vignette of the [epicrop](https://adamhsparks.github.io/epicrop/) package and other research projects associated with the use of the latter package to calculate area under the disease progress curve (audpc).
+
+### What is next? 
+
+The plan is to keep maintaining and expanding by creating a few other functions. We are gathering information for developing functions for comparing epidemic parameters obtained from epidemic data coming from different experimental designs, such as randomized blocks design. Furthermore, we plan to create functions to fit disease gradient models, add datasets and expand the documentation (via blog posts and screencast tutorials) to facilitate the understanding of package use and provide more examples.
+
+## Where to get the package?
+
+epifitter can be downloaded from CRAN and its development version from GitHub. \
+CRAN: [<https://cran.r-project.org/web/packages/epifitter/index.html>](https://cran.r-project.org/web/packages/epifitter/index.html){.uri} \
+GH: [<https://github.com/AlvesKS/epifitter>](https://github.com/AlvesKS/epifitter){.uri}
+
+Package documentation: <https://alvesks.github.io/epifitter/> \
+R4PDE: [<https://emdelponte.github.io/epidemiology-R/fitting-models.html>](https://emdelponte.github.io/epidemiology-R/fitting-models.html){.uri}
+
+**Authors**\
+Kaique dos Santos Alves \
+Emerson Medeiros Del Ponte
+
+## Examples
+
+Create the pepper dataset available from the book "The Study of Plant Disease Epidemics" @chapter2017e chapter 4, page 93.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(epifitter)
+pepper <-
+  tibble::tribble(
+    ~t, ~`1`, ~`2`, ~`3`,
+    0, 0.08, 0.001, 0.001,
+    7, 0.13, 0.01, 0.001,
+    14, 0.78, 0.09, 0.01,
+    21, 0.92, 0.25, 0.05,
+    28, 0.99, 0.8, 0.18,
+    35, 0.995, 0.98, 0.34,
+    42, 0.999, 0.99, 0.48,
+    49, 0.999, 0.999, 0.74
+  )
+
+```
+
+Plot curve 1
+
+```{r}
+ggplot(pepper, aes(t, `1`))+
+  geom_point()+
+  geom_line()+
+  theme_light()
+```
+
+### Model fitting
+
+Using data linearization approach with the fit_lin() function
+
+```{r}
+epi1 <- fit_lin(
+  time = pepper$t,
+  y = pepper$`1`
+)
+```
+
+### Inspect model parameter estimates
+
+The models are ranked from highest to lowest CCC. The epi1\$Stas_all give the complete results.
+
+```{r}
+epi1$Stats
+```
+
+Fit a non-linear regression model to one epidemic at a time.
+
+```{r message=FALSE, warning=FALSE}
+epi2 <- fit_nlin(
+  time = pepper$t,
+  y = pepper$`1`,
+  starting_par = list(y0 = 0.001, r = 0.03),
+  maxiter = 1024
+)
+
+epi2$Stats
+```
+
+### AUDPC or AUDPS
+
+```{r}
+AUDPC(time = pepper$t, y = pepper$`1`, y_proportion = TRUE)
+AUDPS(time = pepper$t, y = pepper$`1`, y_proportion = TRUE)
+```
