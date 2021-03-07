@@ -74,7 +74,7 @@ library(metafor)
 
 Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016. This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
 
-We use the `rma.mv` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood. The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also reandom. The `struct` is CS and the `data` is wheat.
+We use the `rma.mv` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood. The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random. The `struct` is CS and the `data` is wheat.
 
 ```{r, cache = TRUE}
 net_arm_CS <- rma.mv(yield, varyld,
@@ -246,4 +246,4 @@ We fitted three network models to the means of wheat yields under the effect of 
 
 -   Other papers using network models: [@yellareddygari2019], [@edwardsmolina2018], [@paul2018], [@paul2008]
 
--   Fitting [arm-based meta-analysis](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html)with metafor
+-   Fitting [arm-based meta-analysis](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) with metafor
