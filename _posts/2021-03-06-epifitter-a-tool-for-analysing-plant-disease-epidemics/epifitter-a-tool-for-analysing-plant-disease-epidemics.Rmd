@@ -15,6 +15,7 @@ categories:
 bibliography: references.bib
 ---
 
+## Background
 Inevitably, pathogens spread throughout plant populations - some rapidly and more effectively when crops are intensively grown and man fails to control the situation. Even more so, when Mother Nature is very kind to the pathogen with the provision of the right meteorological conditions for epidemic onset, development and spread.
 
 The progress of epidemics over time, described by disease progress curves (DPCs), is central in the field of plant disease epidemiology and has roots with its birth as a discipline during the early 1960's. In fact, JE Vanderplank and other important scientists who followed a couple decades thereafter provided and shaped the tools that we have available for the study of the temporal progress of epidemics.

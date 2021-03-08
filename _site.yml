@@ -9,11 +9,11 @@ navbar:
   search: TRUE
   source_url: TRUE
   left: 
-    - text: "Mission | "
+    - text: "Mission  "
       href: about.html
-    - text: "Who we are | "
+    - text: "Who we are  "
       href: team.html
-    - text: "Virtual seminars | "
+    - text: "Virtual seminars  "
       href: seminars.html
     - text: "＃Join our Slack"
       href: https://communityinviter.com/apps/openplantpathology/open-plant-pathology
