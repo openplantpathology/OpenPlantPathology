@@ -35,9 +35,9 @@ repository_url: https://github.com/openplantpathology/OpenPlantPathology
 creative_commons: CC BY
 collections:
   posts:
-    citations: true
+    citations: false
     categories: true
     categories_metadata: true
-    authors_metadata: true
+    authors_metadata: false
 
 

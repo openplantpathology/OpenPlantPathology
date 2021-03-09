@@ -1,0 +1,28 @@
+---
+title: "Fusarium wilt of banana: a re-emerging disease that threatens banana production"
+description: |
+  Seminar presented at the Department of Plant Pathology (University of Kentucky). Dr. Fernando Garcia-Bastidas (Keygen) digs into the history of epidemics of Panama disease (Race 1) that devastated Gros Michel bananas in the previous century; illustrates how Cavendish saved the industry and the re-emergence of the threat; and discusses possible solutions for disease management focusing on the plant breeding efforts.
+author:
+  - name: Fernando Garcia-Bastidas
+    url: https://twitter.com/https://twitter.com/Ferchucky
+date: 03-09-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: seminar-fernando.png
+categories:
+  - U.K. Seminars
+---
+
+
+### About
+
+Presenter: Dr. Fernando Garcia-Bastidas, Keygen, Netherlands \
+Date: 01 March 2021 \
+Host: Department of Plant Pathology, University of Kentucky \
+Links: [Video](https://youtu.be/RniIlu4afVE)
+
+### Abstract
+
+Despite the fact that bananas (Musa spp.) are the world’s most popular fruit, consumed as a snack or as major staple food in many countries, its production largely relies on a few closely related cultivars, clonally propagated and planted in extensive monocultures. Among these, the globally commercialized Cavendish. These cultivars are susceptible to the devastating Panama Disease caused by Fusarium odoratissimum (AKA Fusarium oxysporum f.sp. cubense Tropical Race 4). In this presentation, we will explore the past, present and future of complex relationship bananas- Fusarium. We will dig into the history and explore the impact of the epic epidemic of Panama disease (Race 1) that devastated Gros Michel bananas in the previous century, how Cavendish saved the industry and the re-emergence of the threat. Finally, we will discuss the possible solutions for disease management focusing on the plant breeding efforts.
+
