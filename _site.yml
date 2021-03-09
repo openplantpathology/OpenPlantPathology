@@ -3,6 +3,7 @@ title: "Open Plant Pathology"
 google_analytics: "UA-112255011-1"
 description: |
 output_dir: "docs"
+base_url: https://www.openplantpathology.org/
 navbar:
   logo:
     image: images/logo2.png
