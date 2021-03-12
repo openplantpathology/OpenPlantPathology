@@ -40,6 +40,7 @@ The data set is available online, in a github repo, as a `csv` file. We will imp
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
+library(readr)
 url <- "https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv" #this allows us to import the data from the online github repo
 mycoffee <- read_csv(url) #and store it as a data frame object in our R environmnet
 
@@ -177,3 +178,31 @@ That is it, we hope you find this useful, and of course these are very basic plo
 -   [Patchwork R package goes nerd viral](https://www.littlemissdata.com/blog/patchwork)
 
 -   [7 tips to combine multiple ggplots using patchwork](https://cmdlinetips.com/2020/01/tips-to-combine-multiple-ggplots-using-patchwork/)
+
+## Post-publication updates
+
+### Plotting raster image (March 11 2021)
+
+For the purpose of plotting raster images I found that the cowplot provides a neat solution. Let's load an image using the `draw_image()` function of cowplot (which requires the magick package to work). We will download an [image of coffee leaf rust from the internet](https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg) and create the `clr_photo` object.
+
+```{r}
+library(cowplot)
+clr_photo <- ggdraw() +
+  draw_image("https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg") 
+```
+
+Ok, now we can use it as any other object in patchwork.
+
+```{r echo=TRUE}
+
+(p_cor | clr_photo) +
+  plot_layout(widths = c(0.5, 1))+
+  plot_annotation(tag_levels = "A")+
+ggsave("mymultipanel2.png", width = 10, height = 5)
+```
+
+
+
+Here is the image as saved.
+
+![](mymultipanel2.png)

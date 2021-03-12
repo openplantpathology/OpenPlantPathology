@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/anchor-4.2.2/anchor.min.js","multiple-plot-figure_files/bowser-1.9.3/bowser.min.js","multiple-plot-figure_files/distill-2.2.21/template.v2.js","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js","multiple-plot-figure_files/jquery-1.11.3/jquery.min.js","multiple-plot-figure_files/popper-2.6.0/popper.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-bundle.umd.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-light-border.css","multiple-plot-figure_files/tippy-6.2.7/tippy.css","multiple-plot-figure_files/tippy-6.2.7/tippy.umd.min.js","multiple-plot-figure_files/webcomponents-2.0.0/webcomponents.js","mymultipanel1.png"]}
+  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/anchor-4.2.2/anchor.min.js","multiple-plot-figure_files/bowser-1.9.3/bowser.min.js","multiple-plot-figure_files/distill-2.2.21/template.v2.js","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js","multiple-plot-figure_files/header-attrs-2.7/header-attrs.js","multiple-plot-figure_files/jquery-1.11.3/jquery.min.js","multiple-plot-figure_files/popper-2.6.0/popper.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-bundle.umd.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-light-border.css","multiple-plot-figure_files/tippy-6.2.7/tippy.css","multiple-plot-figure_files/tippy-6.2.7/tippy.umd.min.js","multiple-plot-figure_files/webcomponents-2.0.0/webcomponents.js","mymultipanel1.png","mymultipanel2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1433,7 +1433,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js"></script>
+  <script src="multiple-plot-figure_files/header-attrs-2.7/header-attrs.js"></script>
   <script src="multiple-plot-figure_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="multiple-plot-figure_files/popper-2.6.0/popper.min.js"></script>
   <link href="multiple-plot-figure_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1494,9 +1494,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>The data set is available online, in a github repo, as a <code>csv</code> file. We will import the coffee leaf rust data into the R environment and store this as a data frame object named <code>mycoffee</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span>
 <span class='va'>url</span> <span class='op'>&lt;-</span> <span class='st'>"https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv"</span> <span class='co'>#this allows us to import the data from the online github repo</span>
-<span class='va'>mycoffee</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='va'>url</span><span class='op'>)</span> <span class='co'>#and store it as a data frame object in our R environmnet</span>
+<span class='va'>mycoffee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='va'>url</span><span class='op'>)</span> <span class='co'>#and store it as a data frame object in our R environmnet</span>
 </code></pre>
 </div>
 </div>
@@ -1504,7 +1505,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>In the <code>mycoffee</code> data frame, there are two coffee rust-related variables (responses) of interest for our investigation, <code>inc</code> and <code>sev2</code>, incidence and severity, both are measured as a percentage; and there is a strong <strong>association</strong> between them.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'>theme_set</span><span class='op'>(</span><span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># for a global ggplot theme</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>theme_set</span><span class='op'>(</span><span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># for a global ggplot theme</span>
 
 <span class='va'>p_cor</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
   <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>inc</span>, <span class='va'>sev2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
@@ -1517,7 +1518,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Let’s make two other plots, one for <code>cultivar</code> (factor variable) and other for <code>altitude</code> (numeric variable), relating each with <code>inc</code>. As we did for the first plots, we need to assign each plot to a ggplot object before we can produce the multi panel figure.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p_cult</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cult</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
   <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>cultivar</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_boxplot</span><span class='op'>(</span><span class='op'>)</span>
 
@@ -1528,7 +1529,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p_alt</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_alt</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
   <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>altitude</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>geom_point</span><span class='op'>(</span><span class='op'>)</span>
   
@@ -1541,7 +1542,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Now that we have the two ggplot objects, we can use the patchwork pkg to produce a two-plot panel - the easiest way I’ve seen with the simplest layout, side by side.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span>
 <span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span>
 </code></pre>
 </div>
@@ -1550,7 +1551,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Is that it? Yes! just load the package and the <code>|</code> character will do the magic when connecting the two ggplot objects. But there is more, actually much more if you look at the documentation of the package. Let’s keep exploring a few cool features for our nice coffee rust data set. Now we switch to the <code>/</code> character to see one plot on top of another.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p_cult</span> <span class='op'>/</span> <span class='va'>p_alt</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cult</span> <span class='op'>/</span> <span class='va'>p_alt</span>
 </code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
@@ -1559,13 +1560,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>What about a three-panel plot… can we also do this? Yes, just follow the same logic.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p_cor</span> <span class='op'>/</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cor</span> <span class='op'>/</span>
   <span class='op'>(</span><span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span> <span class='op'>)</span>
 </code></pre>
 </div>
 <img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png" width="624" />
 <div class="sourceCode">
-<pre><code><span class='co'># try yourself:</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># try yourself:</span>
 <span class='co'># p_cor | p_cult | p_alt </span>
 </code></pre>
 </div>
@@ -1574,13 +1575,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>For scientific publishing, we need to refer to each plot by using a tag, usually using letters of the alphabet. The <code>plot_annotation</code> function comes in handy to have the tag_levels defined.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span>
 <span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span>
 </code></pre>
 </div>
 <img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png" width="624" />
 <div class="sourceCode">
-<pre><code><span class='co'># Try yourself these alternatives:</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Try yourself these alternatives:</span>
 <span class='co'># p1 + plot_annotation(tag_levels = 'a')</span>
 </code></pre>
 </div>
@@ -1588,7 +1589,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Is the default font size too small? This is no problem, we can customize the text size element of the theme.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span> <span class='op'>&amp;</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span> <span class='op'>&amp;</span>
   <span class='fu'>theme</span><span class='op'>(</span>plot.tag <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span><span class='op'>)</span> 
 </code></pre>
 </div>
@@ -1598,7 +1599,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>By default, each plot occupies the same space in the panel. Sometimes we want them to occupy different spaces, right… This can be handled using the <code>plot_layout</code> function and the width argument. Let’s say we want the scatter plot to be double the width of the boxplot. The logic is similar when arranging the plots in a single column and two rows, but using the <code>height</code> argument.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -1606,7 +1607,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://patchwork.data-imaginist.com/reference/wrap_elements.html'>wrap_elements</a></span><span class='op'>(</span><span class='fu'>grid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.text.html'>textGrob</a></span><span class='op'>(</span><span class='st'>'Text on top side'</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>p1</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://patchwork.data-imaginist.com/reference/wrap_elements.html'>wrap_elements</a></span><span class='op'>(</span><span class='fu'>grid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.text.html'>textGrob</a></span><span class='op'>(</span><span class='st'>'Text on top side'</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>p1</span>
 </code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
@@ -1615,7 +1616,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Finally, we want to display a large plot, but the other plot should be an inset of this one.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p_cor</span> <span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cor</span> <span class='op'>+</span>
     <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/inset_element.html'>inset_element</a></span><span class='op'>(</span><span class='va'>p_cult</span>, 
                       left <span class='op'>=</span> <span class='fl'>0</span>, 
                       bottom <span class='op'>=</span> <span class='fl'>0.4</span>, 
@@ -1631,7 +1632,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Saving is the same as with any ggplot, using the <code>ggsave</code> function and setting the <code>width</code> and <code>height</code>, as well as the <code>dpi</code> argument. Everything working, the PNG file should appear in the working directory. If the figure is not at the desired size at first, I keep modifying the width and height, until you are happy with your visualization.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>p1</span> <span class='op'>+</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span>
   <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
   <span class='fu'>ggsave</span><span class='op'>(</span><span class='st'>"mymultipanel1.png"</span>, width <span class='op'>=</span> <span class='fl'>8</span>, height <span class='op'>=</span> <span class='fl'>3</span>, dpi <span class='op'>=</span> <span class='fl'>300</span> <span class='op'>)</span>
 </code></pre>
@@ -1644,6 +1645,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p><a href="https://www.littlemissdata.com/blog/patchwork">Patchwork R package goes nerd viral</a></p></li>
 <li><p><a href="https://cmdlinetips.com/2020/01/tips-to-combine-multiple-ggplots-using-patchwork/">7 tips to combine multiple ggplots using patchwork</a></p></li>
 </ul>
+<h2 id="post-publication-updates">Post-publication updates</h2>
+<h3 id="plotting-raster-image-march-11-2021">Plotting raster image (March 11 2021)</h3>
+<p>For the purpose of plotting raster images I found that the cowplot provides a neat solution. Let’s load an image using the <code>draw_image()</code> function of cowplot (which requires the magick package to work). We will download an <a href="https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg">image of coffee leaf rust from the internet</a> and create the <code>clr_photo</code> object.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wilkelab.org/cowplot/'>cowplot</a></span><span class='op'>)</span>
+<span class='va'>clr_photo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wilkelab.org/cowplot/reference/ggdraw.html'>ggdraw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://wilkelab.org/cowplot/reference/draw_image.html'>draw_image</a></span><span class='op'>(</span><span class='st'>"https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg"</span><span class='op'>)</span> 
+</code></pre>
+</div>
+</div>
+<p>Ok, now we can use it as any other object in patchwork.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='op'>(</span><span class='va'>p_cor</span> <span class='op'>|</span> <span class='va'>clr_photo</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
+<span class='fu'>ggsave</span><span class='op'>(</span><span class='st'>"mymultipanel2.png"</span>, width <span class='op'>=</span> <span class='fl'>10</span>, height <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
+</div>
+<p>Here is the image as saved.</p>
+<p><img src="mymultipanel2.png" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
