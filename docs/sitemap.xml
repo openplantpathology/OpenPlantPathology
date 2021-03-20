@@ -2,206 +2,210 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://www.openplantpathology.org/about.html</loc>
-    <lastmod>2021-03-09T07:33:34-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/</loc>
-    <lastmod>2021-01-02T00:44:09-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:09-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/seminars.html</loc>
-    <lastmod>2021-03-09T07:33:34-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/team.html</loc>
-    <lastmod>2021-03-09T07:33:34-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.openplantpathology.org/posts/2021-03-19-sadbank-a-database-of-standard-area-diagrams-of-plant-disease-severity/</loc>
+    <lastmod>2021-03-19T21:35:48-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-03-15-vanderplank-contributing-an-epidemic-proportion-to-plant-health/</loc>
-    <lastmod>2021-03-15T14:23:27-03:00</lastmod>
+    <lastmod>2021-03-19T18:50:24-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-03-11-mdrbot-map-detect-and-research-botryosphaeriaceae-species/</loc>
-    <lastmod>2021-03-11T09:26:29-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-03-09-fusarium-wilt-of-banana-a-re-emerging-disease-that-threatens-banana-production/</loc>
-    <lastmod>2021-03-09T14:54:51-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes/</loc>
-    <lastmod>2021-03-09T07:51:52-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics/</loc>
-    <lastmod>2021-03-09T07:33:34-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r/</loc>
-    <lastmod>2021-03-08T06:21:16-03:00</lastmod>
+    <lastmod>2021-03-07T01:46:25-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis/</loc>
-    <lastmod>2021-03-09T14:02:24-03:00</lastmod>
+    <lastmod>2021-03-11T20:33:38-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-02-19-interview-dr-bananaman-garcia/</loc>
-    <lastmod>2021-02-25T11:30:21-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:09-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/</loc>
-    <lastmod>2021-03-12T06:37:58-03:00</lastmod>
+    <lastmod>2021-03-11T21:36:42-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-12-01-the-elusive-long-read-fungal-sequence-how-to-minion-like-a-pro-when-youve-never-done-it-before/</loc>
-    <lastmod>2021-02-23T11:48:47-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:09-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-11-27-deciphering-the-origin-of-powdery-mildews-in-australia-implications-for-plant-biosecurity/</loc>
-    <lastmod>2021-02-22T18:19:58-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:09-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-10-30-a-tale-of-two-crop-diseases/</loc>
-    <lastmod>2021-02-23T11:39:38-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:09-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-09-14-effectiveness-and-expression-of-resistance-in-maize-to-isolates-of-puccinia-sorghi-from-eastern-australia/</loc>
-    <lastmod>2021-02-23T11:26:37-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-06-11-cristal-structure-of-tox3-a-unique-effector-fold-and-insights-into-kex2-protease-processing-of-fungal-effectors/</loc>
-    <lastmod>2021-02-23T11:18:39-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-06-02-cassava-change-agent-in-classrooms-and-communities/</loc>
-    <lastmod>2021-02-22T07:59:00-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-06-01-cpn60ut-the-perfect-marker-to-identify-and-characterize-phytoplasmas/</loc>
-    <lastmod>2021-02-23T10:26:45-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-05-15-disruptive-changes-are-needed-to-manage-tropical-race-4-in-banana/</loc>
-    <lastmod>2021-02-22T07:58:44-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-05-11-evolution-of-mini-chromosomes-in-fusarium/</loc>
-    <lastmod>2021-02-23T10:15:22-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-05-04-technology-driven-cassava-pest-management/</loc>
-    <lastmod>2021-01-22T08:47:41-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-05-01-the-not-so-simple-interactions-associated-with-pr-1-proteins-and-septoria-nodorum-blotch-in-wheat/</loc>
-    <lastmod>2021-02-22T08:11:46-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-30-the-ongoing-pandemic-of-tropical-race-4-threatens-global-banana-production/</loc>
-    <lastmod>2021-02-22T08:11:53-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-20-how-the-study-of-necrotrophic-effectors-advanced-our-understanding-of-the-enigmatic-pr-1-protein/</loc>
-    <lastmod>2021-02-23T10:54:57-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-20-research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome/</loc>
-    <lastmod>2021-02-22T12:01:16-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-16-evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity/</loc>
-    <lastmod>2021-02-22T16:31:34-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles/</loc>
-    <lastmod>2021-02-22T16:06:32-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-06-the-diversity-and-molecular-evolution-of-plant-defence-against-pathogens-in-nature/</loc>
-    <lastmod>2021-02-23T10:49:06-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-03-clubroot-of-brassicas-an-old-but-still-poorly-understood-disease-on-the-rise/</loc>
-    <lastmod>2021-02-22T16:16:59-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-04-03-opp-virtual-seminar-delivering-scientific-talks-without-barriers/</loc>
-    <lastmod>2021-02-22T14:01:18-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2020-03-31-molecular-response-of-clubroot-infected-plants-to-the-endophytic-fungus-acremonium-alternatum/</loc>
-    <lastmod>2021-02-23T10:40:17-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-11-25-reproducible-reports-and-research-using-r/</loc>
-    <lastmod>2021-02-22T17:00:14-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear/</loc>
-    <lastmod>2021-01-02T02:21:48-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-08-03-get-your-research-project-organized-shareable-and-reproducible-using-r/</loc>
-    <lastmod>2021-02-22T17:25:39-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-07-20-breaking-down-barriers-between-remote-sensing-and-plant-pathology/</loc>
-    <lastmod>2021-02-22T14:58:41-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-06-02-modeling-tools-and-techniques-using-r/</loc>
-    <lastmod>2021-02-22T17:38:30-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-06-02-reproducible-reports-and-research-using-r/</loc>
-    <lastmod>2021-02-22T17:52:55-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-05-25-opp-interviews-jade-dalpoim-guedes-and-ben-marwick/</loc>
-    <lastmod>2021-02-22T15:58:24-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2019-01-09-a-plant-pathologists-guide-to-writing-your-first-r-package/</loc>
-    <lastmod>2021-02-25T06:41:21-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun/</loc>
-    <lastmod>2021-02-22T14:27:17-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-08-26-opp-interviews-niklaus-j-grnwald/</loc>
-    <lastmod>2021-02-22T15:12:29-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-08-07-workshop-network-analysis-in-plant-pathology/</loc>
-    <lastmod>2021-02-22T17:23:05-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-08-06-workshop-population-genomics-in-r/</loc>
-    <lastmod>2021-02-22T17:00:35-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-07-13-talk-establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r/</loc>
-    <lastmod>2021-02-22T16:51:34-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-07-12-workshop-introduction-to-multivariate-statistics-using-r/</loc>
-    <lastmod>2021-02-22T17:26:24-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-06-11-open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front/</loc>
-    <lastmod>2021-02-22T16:49:19-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire/</loc>
-    <lastmod>2021-02-22T14:45:37-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-05-20-what-is-going-on-in-opp-a-quick-summary-of-the-first-five-months/</loc>
-    <lastmod>2021-02-22T15:48:38-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
   <url>
     <loc>https://www.openplantpathology.org/posts/2018-01-01-are-you-a-scientist-dealing-with-computational-plant-pathology-then-lets-connect-and-code-together/</loc>
-    <lastmod>2021-01-02T00:20:25-03:00</lastmod>
+    <lastmod>2021-02-28T12:41:08-03:00</lastmod>
   </url>
 </urlset>

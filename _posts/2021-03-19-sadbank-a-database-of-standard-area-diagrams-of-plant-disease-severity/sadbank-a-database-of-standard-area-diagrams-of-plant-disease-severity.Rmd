@@ -1,0 +1,42 @@
+---
+title: "SADBAnk - a database of standard area diagrams of plant disease severity"
+description: |
+  SADBAnk is a curated collection of studies on Standard Area Diagram set (SADs), pictorial representations of disease symptoms and/or signs in a plant organ where each diagram depicts a percent diseased area. They are designed in a wide range of styles and are used as tools to use during or prior to visual assessments of disease severity to “calibrate” a rater’s eye and improve accuracy, precision and reliability of the estimates.
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/edelponte
+
+date: 03-19-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories: 
+  - Databases
+preview: sadbank.png
+---
+
+## Background
+
+A definition for Standard area diagram set (SAD, also known as diagrammatic scales or disease diagrams): a generic term for a pictorial or graphic representation of selected percent severity on plant parts generally used as an aid for more accurate visual estimation (percent scale) or classification (using an ordinal scale) of severity on a specimen. 
+
+The first known SAD was published by Cobb (1892)accompanying an ordinal scale (1, 5 10, 20 and 50% severity) originally used for ‘classifying’ rather than interpolation to the nearest percent estimate. It was during the late 1960s that a plethora of SADs have been proposed and further published by Clive James, in an influential article in the Canadian Plant Disease Survey (James 1971) with “assessment keys" for 19 diseases. Two decades later, a list of several SADs developed during that period was presented in Campbell and Madden (1990) book and, more recently, in a review article that listed 105 peer-review studies on SADs published between 1991 and 2017 (Del Ponte et al. 2017). SAD research is very active and results have shown that an "average rater" will likely benefit from the use of SAD to "calibrate" his eye during the assessment and improve accuracy. Collectively, estimates by different raters are more reliable when aided with SADs (Del Ponte et al. 2017).
+
+
+## What is the database for?
+
+The goal of the database is to serve as a central repository of SAD research studies where plant pathologists can refer to when searching SADs for specific diseases. 
+
+
+## How is it developed?
+
+The data is organized as a Google Sheet file and an interface to consult the database was developed using R Markdown.
+
+
+## What's next?
+
+Currently, the database contains 170 SADs (as of March 2021) found in peer-reviewed articles published after 1990, but previous works will also be included. A preview image of the SAD will be included in future versions. 
+
+**Project website**: [sadbank.netlify.app](http://sadbank.netlify.app)\
+**Data source**: [github.com/emdelponte/sadbank](https://github.com/emdelponte/sadbank)\
+**Author and maintainer**: Emerson M. Del Ponte\
+**Maintainer**: Ignácio Cazón \
