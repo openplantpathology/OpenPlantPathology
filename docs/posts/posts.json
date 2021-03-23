@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide/",
+    "title": "ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide",
+    "description": "Clubroot is a devastating disease caused by the soil-borne protist Plasmodiophora brassicae putting at risk Brassicas worldwide. An open database to record the presence of clubroot and Plasmodiophora brassicae reported by researchers, industry and growers.",
+    "author": [
+      {
+        "name": "Edel Lopez",
+        "url": "https://twitter.com/Edel_PLopez"
+      }
+    ],
+    "date": "2021-03-23",
+    "categories": [
+      "Databases"
+    ],
+    "contents": "\nBackground\nClubroot is a devastating disease caused by the soil-borne protist Plasmodiophora brassicae putting at risk Brassicas worldwide. The clubroot pathogen, as final step of its life cycle, release resting spores to the soil that can remain viable in soil for up to 20 years (Peng et al. 2015), making the management of the disease very difficult. For growers, to know the distribution of the pathogen is key to avoid the introduction of infected soil and to perform the proper disinfection if machinery from fellow farmers is used in their lands.\nWhat is the database for?\nClubrootTracker is an open database to record the presence of clubroot disease. This project was published as a Resource Announcement in Plant Health Progress (Muirhead et al. 2020), and a full article will be published once new locations are recorded.\nHow it is developed?\nClubrootTracker is an interactive map tool written in the Bootstrap version 3.3.7 web framework using leaflet.js (https://leafletjs.com) and a JavaScript library for the interactive map user interface. Using Python, GPS data was converted into a GeoJSON file, allowing to render the data points of the areas affected by clubroot.\n\nWhat’s next?\nWe would like to include worldwide clubroot distribution data. Due to confidentiality concerns expressed by some government officials and growers we are now working in a way to display the distribution of the pathogen without data points. We are also working with scientists from Europe and Latin America to start registering clubroot distribution.\nProject website: http://clubroottracker.ca/\nData source: https://github.com/kevmu/ClubrootTracker\nAuthors and maintainer: Edel Pérez-López and Kevin Muirhead\nMaintainer: Kevin Muirhead\nCurrent Collaborators: Mauricio Luna, Thies Marten Heick, and Gunilla Berg.\n\n\n\nMuirhead, Kevin, Christopher D. Todd, Yangdou Wei, Peta Bonham-Smith, and Edel Pérez-López. 2020. “ClubrootTracker: A Resource to Plan a Clubroot-Free Farm.” Plant Health Progress 21 (3): 185–87. https://doi.org/10.1094/php-01-20-0003-rs.\n\n\n———. 2020. “ClubrootTracker: A Resource to Plan a Clubroot-Free Farm.” Plant Health Progress 21 (3): 185–87. https://doi.org/10.1094/php-01-20-0003-rs.\n\n\nPeng, Gary, Denis Pageau, Stephen E. Strelkov, Bruce D. Gossen, Sheau-Fang Hwang, and Rachid Lahlali. 2015. “A >2-Year Crop Rotation Reduces Resting Spores of Plasmodiophora Brassicae in Soil and the Impact of Clubroot on Canola.” European Journal of Agronomy 70 (October): 78–84. https://doi.org/10.1016/j.eja.2015.07.007.\n\n\n\n\n",
+    "preview": "posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide/clubroot.png",
+    "last_modified": "2021-03-23T16:43:04-03:00",
+    "input_file": "clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide.utf8.md",
+    "preview_width": 1305,
+    "preview_height": 1360
+  },
+  {
     "path": "posts/2021-03-19-sadbank-a-database-of-standard-area-diagrams-of-plant-disease-severity/",
     "title": "SADBAnk - a database of standard area diagrams of plant disease severity",
     "description": "SADBAnk is a curated collection of studies on Standard Area Diagram set (SADs), pictorial representations of disease symptoms and/or signs in a plant organ where each diagram depicts a percent diseased area. They are designed in a wide range of styles and are used as tools to use during or prior to visual assessments of disease severity to “calibrate” a rater’s eye and improve accuracy, precision and reliability of the estimates.",
