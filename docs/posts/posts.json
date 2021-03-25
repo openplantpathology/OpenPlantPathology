@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains/",
+    "title": "RSSCdb, a database for tracking the global spread of Ralstonia solanacearum sequevars and strains ",
+    "description": "RSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar). The project was developed to provide UC Davis undergraduate researchers with a remote research experience.",
+    "author": [
+      {
+        "name": "Tiffany Lowe-Power",
+        "url": "https://twitter.com/TLowePower"
+      }
+    ],
+    "date": "2021-03-24",
+    "categories": [
+      "Databases"
+    ],
+    "contents": "\nBackground\nBacterial wilt pathogens in the Ralstonia solanacearum species complex (RSSC) are destructive pathogens, especially in tropical and sub-tropical climates with year-round precipitation. Most strains in this species complex are soil-borne pathogens that cause persistant infestations once introduced. Tomato, potato, tobacco, banana, ginger, and peanut are crops that are well-recognized hosts of Ralstonia. In 2005, Mark Fegan and Philippe Prior formalized a DNA-based taxonomy for the RSSC called a “phylotype-sequevar” system . Since their publication, hundreds of plant pathologists around the world have classified the population diversity of the RSSC on specific crops or in geographic regions.\nWhat is the database for?\nRSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar). This strain metadata is available in the main text or supplemental material of the publication. The project was developed to provide UC Davis undergraduate researchers with a remote research experience. The data will be supplemental material for a systematic review article to be submitted for publication after data collection is finalized (Lowe-Power et al. unpublished). In the interim, the data is released on BioRxiv and GitHub after UC Davis students complete their thesis (https://www.biorxiv.org/content/10.1101/2020.07.13.189936v1).\nHow is it developed?\nThe database is organized in an Excel spreadsheet, a format that facilitates regular curation of data entry.\nWhat’s next?\nEmerson M. Del Ponte will advise a student on creating an interactive dashboard to view the data, similar to his FGSCdb for tracking species and chemotypes of the Fusarium graminearum species complex: https://fgsc.netlify.app/\nWe would like to extend the utility of the Ralstonia diversity project by allowing other researches to contribute raw data to populate the global map. Get in touch (tlowepower@ucdavis.edu) to receive instructions on how to submit your data.\nExample of the global distribution map for Ralstonia pseudosolanacearumData source: https://github.com/lowepowerlab/Ralstonia_Global_Diversity\nAuthor and maintainer: Tiffany Lowe-Power and Emerson M. Del Ponte\nReference: Fegan, M., & Prior, P. (2005). How complex is the Ralstonia solanacearum species complex. Bacterial wilt disease and the Ralstonia solanacearum species complex, 1, 449-61.\n\n\n\n",
+    "preview": "posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains/rssc.png",
+    "last_modified": "2021-03-24T22:32:16-03:00",
+    "input_file": "rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains.utf8.md",
+    "preview_width": 594,
+    "preview_height": 362
+  },
+  {
     "path": "posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide/",
     "title": "ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide",
     "description": "Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae* putting at risk Brassicas worldwide. An open database to record the presence of clubroot and *Plasmodiophora brassicae* reported by researchers, industry and growers.",
