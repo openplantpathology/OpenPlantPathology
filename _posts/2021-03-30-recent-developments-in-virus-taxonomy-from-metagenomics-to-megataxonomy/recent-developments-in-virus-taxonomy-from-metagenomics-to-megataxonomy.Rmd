@@ -1,0 +1,27 @@
+---
+title: "Recent developments in virus taxonomy: from metagenomics to megataxonomy"
+description: |
+  Seminar presented at the Department of Plant Pathology, University of Kentucky on March 29th 2021, by Prof. Murilo Zerbini from the Departamento de Fitopatologia, Universidade Federal de Viçosa, Viçosa, Brazil. Dr. Zerbini is currently the President of the International Committee on Virus Taxonomy (ICTV). 
+  
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/edelponte
+date: 03-30-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: seminar-zerbini.png
+categories:
+  - U.K. Seminars
+---
+
+
+### About
+
+Presenter: Dr. F. Murilo Zerbini, Viçosa, Brazil \
+Date: 29 March 2021 \
+Host: Department of Plant Pathology, University of Kentucky \
+Links: [Seminar's Video](https://www.youtube.com/watch?v=eyMqWP98vic)  
+
+### Abstract
+

@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy/",
+    "title": "Recent developments in virus taxonomy: from metagenomics to megataxonomy",
+    "description": "Seminar presented at the Department of Plant Pathology, University of Kentucky on March 29th 2021, by Prof. Murilo Zerbini from the Departamento de Fitopatologia, Universidade Federal de Viçosa, Viçosa, Brazil. Dr. Zerbini is currently the President of the International Committee on Virus Taxonomy (ICTV).",
+    "author": [
+      {
+        "name": "Emerson Del Ponte",
+        "url": "https://twitter.com/edelponte"
+      }
+    ],
+    "date": "2021-03-30",
+    "categories": [
+      "U.K. Seminars"
+    ],
+    "contents": "\nAbout\nPresenter: Dr. F. Murilo Zerbini, Viçosa, Brazil\nDate: 29 March 2021\nHost: Department of Plant Pathology, University of Kentucky\nLinks: Seminar’s Video\nAbstract\n\n\n\n",
+    "preview": "posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy/seminar-zerbini.png",
+    "last_modified": "2021-03-30T18:09:46-03:00",
+    "input_file": "recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy.utf8.md",
+    "preview_width": 499,
+    "preview_height": 499
+  },
+  {
     "path": "posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains/",
     "title": "RSSCdb, a database for tracking the global spread of Ralstonia solanacearum sequevars and strains ",
     "description": "RSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar). The project was developed to provide UC Davis undergraduate researchers with a remote research experience.",
