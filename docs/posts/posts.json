@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures/",
+    "title": "The Togashi Dataset, an open database of fungal and oomycete cardinal temperatures",
+    "description": "An open database providing cardinal temperatures (minimum, optimum and maximum) for various physiological and growth processes of plant pathogenic fungi and oomycetes reported in Togashi (1949).",
+    "author": [
+      {
+        "name": "Daniel Bebber",
+        "url": "https://twitter.com/DanBebber"
+      }
+    ],
+    "date": "2021-04-09",
+    "categories": [
+      "Databases"
+    ],
+    "contents": "\nBackground\nCardinal temperatures provide a basic definition of the temperature response functions, or thermal performance curves (TPCs), of physiological processes. The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases. A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949), and has now been digitized.\nWhat is the database for?\nCardinal temperatures can be useful for epidemiological models of plant disease (Bebber 2019). Cardinal temperatures can help to understand the ecological niche of plant pathogens (Chaloner, Gurr, and Bebber 2020)and how temperature physiology evolves under climate change, for example.\nWhat’s next?\nThe data published in Togashi (1949) are old, and many experimental studies on plant pathogen temperature responses have been published since (examples in (Magarey, Sutton, and Thayer 2005)). New estimates of cardinal temperatures can be estimated from published thermal performance curves (Bebber 2019). Future work will involve collating TPCs and estimating cardinal temperatures from the literature.\nFurther information\n\nData source: (“Fungal and Oomycete Cardinal Temperatures (the Togashi Dataset)” 2020)\nTogashi, K. (1949). Biological characters of plant pathogens: Temperature relations. Meibundo.\nContact: Dan Bebber\n\n\n\nBebber, Daniel P. 2019. “Climate Change Effects on Black Sigatoka Disease of Banana.” Philosophical Transactions of the Royal Society B: Biological Sciences 374 (1775): 20180269. https://doi.org/10.1098/rstb.2018.0269.\n\n\nChaloner, Thomas M., Sarah J. Gurr, and Daniel P. Bebber. 2020. “Geometry and Evolution of the Ecological Niche in Plant-Associated Microbes.” Nature Communications 11 (1). https://doi.org/10.1038/s41467-020-16778-5.\n\n\n“Fungal and Oomycete Cardinal Temperatures (the Togashi Dataset).” 2020. Dryad. https://doi.org/10.5061/DRYAD.TQJQ2BVW6.\n\n\nMagarey, R. D., T. B. Sutton, and C. L. Thayer. 2005. “A Simple Generic Infection Model for Foliar Fungal Plant Pathogens.” Phytopathology® 95 (1): 92–100. https://doi.org/10.1094/phyto-95-0092.\n\n\n\n\n",
+    "preview": "posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures/togashi.png",
+    "last_modified": "2021-04-09T17:31:52-03:00",
+    "input_file": "the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures.utf8.md",
+    "preview_width": 600,
+    "preview_height": 543
+  },
+  {
     "path": "posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy/",
     "title": "Recent developments in virus taxonomy: from metagenomics to megataxonomy",
     "description": "Seminar presented at the Department of Plant Pathology, University of Kentucky on March 29th 2021, by Prof. Murilo Zerbini from the Departamento de Fitopatologia, Universidade Federal de Viçosa, Viçosa, Brazil. Dr. Zerbini is currently the President of the International Committee on Virus Taxonomy (ICTV).",
