@@ -17,7 +17,7 @@ bibliography: references.bib
 
 ## Background
 
-Cardinal temperatures provide a basic definition of the temperature response functions, or thermal performance curves (TPCs), of physiological processes. The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases. A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949) and [has now been digitized.](https://doi.org/10.5061/dryad.tqjq2bvw6).
+Cardinal temperatures provide a basic definition of the temperature response functions, or thermal performance curves (TPCs), of physiological processes. The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases. A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949) and [has now been digitized](https://doi.org/10.5061/dryad.tqjq2bvw6).
 
 ## What is the database for?
 
