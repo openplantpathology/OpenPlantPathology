@@ -17,11 +17,11 @@ bibliography: references.bib
 
 ## Background
 
-Cardinal temperatures provide a basic definition of the temperature response functions, or thermal performance curves (TPCs), of physiological processes. The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases. A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949), and has now been digitized.
+Cardinal temperatures provide a basic definition of the temperature response functions, or thermal performance curves (TPCs), of physiological processes. The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases. A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949) and [has now been digitized.](https://doi.org/10.5061/dryad.tqjq2bvw6).
 
 ## What is the database for?
 
-Cardinal temperatures can be useful for epidemiological models of plant disease [@bebber2019]. Cardinal temperatures can help to understand the ecological niche of plant pathogens [@chaloner2020]and how temperature physiology evolves under climate change, for example.
+Cardinal temperatures can be useful for epidemiological models of plant disease [@bebber2019]. Cardinal temperatures can help to understand the ecological niche of plant pathogens [@chaloner2020] and how temperature physiology evolves under climate change, for example.
 
 ## What's next?
 
@@ -29,7 +29,7 @@ The data published in Togashi (1949) are old, and many experimental studies on p
 
 ## Further information 
 
-![](togashi2.png)
+![Screenshot of Togashi dataset repository available from Dryad.](togashi2.png)
 
 Data source: [@bebber2020]
 
