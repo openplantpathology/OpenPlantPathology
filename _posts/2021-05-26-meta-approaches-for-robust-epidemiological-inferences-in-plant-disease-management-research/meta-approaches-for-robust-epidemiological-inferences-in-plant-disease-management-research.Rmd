@@ -1,0 +1,25 @@
+---
+title: "Meta approaches for robust epidemiological inferences in plant disease management research"
+description: |
+  Seminar presented by Dr. Emerson Del Ponte (Universidade Federal de Viçosa, Brazil) for the Department of Botany and Plant Pathology, Oregon State University, on May 20 2021.  
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/emdelponte
+date: 05-26-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: preview-delponte.png
+categories:
+  - BPP Seminars
+---
+
+
+### About
+
+Presenter: Dr. Emerson Del Ponte, Viçosa, Brazil \
+Date: 20 May 2021 \
+Host: Department of Botany and Plant Pathology, Oregon State University \
+Links: [Seminar's Video](https://www.youtube.com/watch?v=xoIWexJ1alU)  
+
+### Abstract
