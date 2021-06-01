@@ -12,6 +12,8 @@ output:
     self_contained: false
 bibliography: references.bib
 preview: logo_pliman.png
+categories: 
+  - R4PlantPath
 ---
 
 ## Introduction
@@ -151,7 +153,7 @@ ccc$rho.c
 
 ```
 
-### Conclusion
+## Conclusion
 
 The community of R users might enjoying using [pliman](https://tiagoolivoto.github.io/pliman/) as an alternative to proprietary software or other point-and-click open source solutions such as imageJ. The simplicity of the batch processing approach can greatly improve the speed of the assessment and the user can set arguments to run R in parallel for enhanced computational speed.
 

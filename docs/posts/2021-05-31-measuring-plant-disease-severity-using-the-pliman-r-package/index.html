@@ -125,7 +125,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","draft","author","date","output","bibliography","preview","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Measuring plant disease severity using the pliman R package"]},{"type":"character","attributes":{},"value":["pliman (PLant IMage ANalysis) is an R package for the analysis of images of plants, mainly leaves, that offers a function for measuring plant disease severity. In this post I will demonstrate the use of pliman for determining severity on leaves affected by soybean rust as a case study."]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/emdelponte"]}]}]},{"type":"character","attributes":{},"value":["05-31-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["logo_pliman.png"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","draft","author","date","output","bibliography","preview","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Measuring plant disease severity using the pliman R package"]},{"type":"character","attributes":{},"value":["pliman (PLant IMage ANalysis) is an R package for the analysis of images of plants, mainly leaves, that offers a function for measuring plant disease severity. In this post I will demonstrate the use of pliman for determining severity on leaves affected by soybean rust as a case study."]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/emdelponte"]}]}]},{"type":"character","attributes":{},"value":["05-31-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["logo_pliman.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2434,6 +2434,9 @@ gtag('config', 'UA-112255011-1');
 <div class="d-title">
 <h1>Measuring plant disease severity using the pliman R package</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>pliman (PLant IMage ANalysis) is an R package for the analysis of images of plants, mainly leaves, that offers a function for measuring plant disease severity. In this post I will demonstrate the use of pliman for determining severity on leaves affected by soybean rust as a case study.</p></p>
 </div>
@@ -2501,7 +2504,7 @@ gtag('config', 'UA-112255011-1');
 </div>
 <p><img src="measuring-plant-disease-severity-using-the-pliman-r-package_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 <pre><code>   healthy symptomatic
-1 92.87327    7.126727</code></pre>
+1 93.03385    6.966147</code></pre>
 </div>
 <h3 id="lots-of-images">Lots of images</h3>
 <p>That was fun, but usually we don’t have a single image to process but several. It would take a longer time to process each one using the above procedure, thus becoming tedious.</p>
@@ -2521,29 +2524,29 @@ gtag('config', 'UA-112255011-1');
 </div>
 <pre><code>Processing image img11 |===                            | 10% 00:00:00 
 Processing image img35 |======                         | 20% 00:00:03 
-Processing image img37 |=========                      | 30% 00:00:06 
+Processing image img37 |=========                      | 30% 00:00:05 
 Processing image img38 |============                   | 40% 00:00:07 
-Processing image img46 |================               | 50% 00:00:09 
-Processing image img5 |===================             | 60% 00:00:12 
-Processing image img63 |======================         | 70% 00:00:16 
-Processing image img67 |=========================      | 80% 00:00:20 
-Processing image img70 |============================   | 90% 00:00:23 
-Processing image img75 |===============================| 100% 00:00:25 </code></pre>
+Processing image img46 |================               | 50% 00:00:08 
+Processing image img5 |===================             | 60% 00:00:11 
+Processing image img63 |======================         | 70% 00:00:14 
+Processing image img67 |=========================      | 80% 00:00:18 
+Processing image img70 |============================   | 90% 00:00:20 
+Processing image img75 |===============================| 100% 00:00:22 </code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pliman</span>
 </code></pre>
 </div>
 <pre><code>   sample  healthy symptomatic
-1   img11 74.09054  25.9094645
-2   img35 38.53600  61.4639987
-3   img37 59.36530  40.6346991
-4   img38 80.96445  19.0355478
-5   img46 92.63620   7.3638020
-6    img5 17.45774  82.5422648
-7   img63 97.21712   2.7828830
-8   img67 99.88182   0.1181821
-9   img70 27.56571  72.4342913
-10  img75 92.79556   7.2044410</code></pre>
+1   img11 72.78428  27.2157152
+2   img35 32.97368  67.0263247
+3   img37 60.39800  39.6020014
+4   img38 82.83456  17.1654413
+5   img46 92.79472   7.2052764
+6    img5 19.16212  80.8378771
+7   img63 97.28427   2.7157321
+8   img67 99.82933   0.1706671
+9   img70 28.33512  71.6648781
+10  img75 92.34768   7.6523173</code></pre>
 </div>
 <p>With the argument <code>save_image</code> set to TRUE, the images are all saved in the folder with the standard prefix “proc.”</p>
 <p><img src="pliman2.png" /></p>
@@ -2595,9 +2598,9 @@ Processing image img75 |===============================| 100% 00:00:25 </code></
 </code></pre>
 </div>
 <pre><code>        est     lower     upper
-1 0.9869346 0.9675852 0.9947644</code></pre>
+1 0.9804542 0.9447948 0.9931607</code></pre>
 </div>
-<h3 id="conclusion">Conclusion</h3>
+<h2 id="conclusion">Conclusion</h2>
 <p>The community of R users might enjoying using <a href="https://tiagoolivoto.github.io/pliman/">pliman</a> as an alternative to proprietary software or other point-and-click open source solutions such as imageJ. The simplicity of the batch processing approach can greatly improve the speed of the assessment and the user can set arguments to run R in parallel for enhanced computational speed.</p>
 <p>The most critical step, as I mentioned, is the definition of the reference palettes. Several preliminary runs may be needed for a few leaves to check whether the segmentation is being performed correctly, based on visual judgement. This is no different than any other color-threshold based methods when the choices made by the user affect the final result and contribute to variation among assessors. The cons are also the same encountered in the direct competitors, which is the necessity to have images taken at uniform and controlled conditions, especially a contrasting background.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
