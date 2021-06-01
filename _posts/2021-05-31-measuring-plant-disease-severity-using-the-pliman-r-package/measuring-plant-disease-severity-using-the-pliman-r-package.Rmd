@@ -1,8 +1,8 @@
 ---
 title: "Measuring plant disease severity using the pliman R package"
 description: |
-  pliman, short for PLant IMage ANalysis, is an R package dedicated to the analysis of images of plants, mainly leaves. Among several functionalities, pliman offers a function for measuring plant disease severity. In this post I will demonstrate the process for the analysis of single images or batch processing images with soybean rust symptoms as a case study. 
-draft: true
+  pliman (PLant IMage ANalysis) is an R package for the analysis of images of plants, mainly leaves, that offers a function for measuring plant disease severity. In this post I will demonstrate the use of pliman for determining severity on leaves affected by soybean rust as a case study. 
+draft: false
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/emdelponte
@@ -16,38 +16,45 @@ preview: logo_pliman.png
 
 ## Introduction
 
-In this post I will demonstrate one of the uses for [pliman](https://tiagoolivoto.github.io/pliman/), a new R package that provides a suite of functions for conducting several analysis on images of plants, especially leaves. For obvious reasons, I was greatly interested in testing a function that allows measuring plant disease severity - or the percent leaf area affected.
+Two weeks ago I came across [pliman](https://tiagoolivoto.github.io/pliman/), a new R package developed by [Tiago Olivoto](https://github.com/TiagoOlivoto), that provides a suite of functions for conducting several analysis on images of plants. For obvious reasons, I was greatly interested in testing a function that allows measuring plant disease severity - or the percent leaf area affected.
 
-More than two dozen softwares, most of them proprietary, have been used for measuring percent severity in phytopathometry research [@Del2017]. Thus far, none have been made available as a specialized R package or one with dedicated functions for facilitating severity measurement.
+More than two dozen software, most of them proprietary, have been used for measuring percent severity in phytopathometry research [@Del2017]. Thus far, none have been made available as a specialized R package or one with functions built specific for plant disease severity measurement.
 
-The availability of such tools is of great importance mainly for research purposes or situations when the most accurate disease severity is necessary [@bock2020a]. Examples include the development of standard area diagrams (set of images of leaves with known severity) as well as for the validation of the tool. In the case images are obtained under standardized conditions (light and background), batch processing of images, using the same color palettes (for healthy and diseased pixels) can greatly speed up and automate the process.
+The availability of these tools is of great importance mainly for research purposes or situations when the most accurate disease severity is necessary [@bock2020a]. Examples include the development of standard area diagrams (set of images of leaves with known severity) as well as their validation when an "actual" severity measurement is necessary. These images are usually obtained under standardized conditions (light and background) and analyzed individually. However, a batch processing can automate and greatly speed up the process.
 
-Here, I will demonstrate how to measure severity using the `sympmatic_area()` function of pliman to measure severity in 10 leaves (batch processing) of soybean rust. I will also compare the measures with ones determined using Quant software used in a previous work [@franceschi2020]
+In this post I will demonstrate how to measure severity using the `sympmatic_area()` function of pliman to measure severity in 10 leaves (batch processing) of soybean rust. I will also compare the measures with ones determined using QUANT software as used in a previous work [@franceschi2020]
 
 ## What is healthy and diseased?
 
-The most critical is the initial step when the user needs to set the color palettes as images representing each of three classes named background (b), symptomatic (s) and healthy (h). This can be done simply by sampling small areas of the image and producing a composite image. Note: depending on how these templates are set, results can vary significantly. The observation of the processed masks becomes important to more correctly create the palettes.
+The most critical is the initial step when the user needs to correctly define the color palettes, which in pliman are separate images representing each of three classes named background (b), symptomatic (s) and healthy (h).
 
-In my case, I cut and pasted sections of images of several leaves representative of each class into a Google slide. Once the palette was ready, I exported each one as a separate image PNG file (JPG also works). These were named: sbr_b.png, sbr_h.png and sbr_s.png.
+These reference image palettes can be made simply by manually sampling small areas of the image and producing a composite image. Of course, the results may vary significantly depending on how these areas are chosen. The observation of the processed masks becomes important to create image palettes that are most representative of the respective class.
+
+Here, I cut and pasted several sections of images representative of each class from a few leaves into a Google slide. Once the image palette was ready, I exported each one as a separate image PNG file (JPG also works). These were named: sbr_b.png, sbr_h.png and sbr_s.png.
 
 ![](pliman1.png)
 
-Now that we have the image palettes, let's start working with pliman and import the image palettes into the environment for further analysis. Let's create an image object for each palette named h (healthy), s (symptoms) and b (background).
+Now that we have the image palettes, we can start by importing the image palettes into the environment for further analysis. Let's create an image object for each palette named h (healthy), s (symptoms) and b (background).
 
-```{r}
+```{r message=FALSE, warning=FALSE}
+# install.package("pliman")
+# note that pliman requires R version 4 and EBImage pkg
+# install.packages("BiocManager")
+# BiocManager::install("EBImage")
+
 library(pliman)
 h <- image_import("sbr_h.png")
 s <- image_import("sbr_s.png")
 b <- image_import("sbr_b.png")
 ```
 
-We can visualize the images using `image_combine()` function.
+We can visualize the imported images using the `image_combine()` function.
 
 ```{r}
 image_combine(h, s, b, ncol = 3)
 ```
 
-## Computing severity
+## Measuring severity
 
 ### Single image
 
@@ -59,7 +66,7 @@ image_combine(img)
 
 ```
 
-Now the fun begins when using the `symptomatic_area()` function to determine severity. Four arguments are needed, the one representing the target image and each of the three images of the color palettes. As the author of the package says "pliman will take care of all details!".
+Now the fun begins with the `symptomatic_area()` function to determine severity. Four arguments are needed, the one representing the target image and each of the three images of the color palettes. As the author of the package says "pliman will take care of all details!".
 
 ```{r}
 symptomatic_area(img = img,
@@ -68,16 +75,15 @@ symptomatic_area(img = img,
                  img_background = b,
                  show_image = TRUE)
 
-
 ```
 
 ### Lots of images
 
-That was fun, but usually we don't have a single image to process but several. It would take a longer time to process each one using the above procedure, becoming tedious.
+That was fun, but usually we don't have a single image to process but several. It would take a longer time to process each one using the above procedure, thus becoming tedious.
 
 To automate the process, pliman offers a batch processing approach. For such, instead of using `img` argument, one can use `img_pattern` and define the prefix of names of the images. In addition, we also need to define the folder where the original files are located.
 
-If the users wants to save the processed masks, the `save_image` argument needs to be set to TRUE and the directory where the images shall be saved also informed. Check below how to process 10 images of soybean rust symptoms. The outcome is a dataframe with measures for each leaf.
+If the users wants to save the processed masks, the `save_image` argument needs to be set to TRUE and the directory where the images will be saved also should be informed. Check below how to process 10 images of soybean rust symptoms. The outcome is a dataframe with the measures of the percent healthy and percent symptomatic area for each leaf.
 
 ```{r}
 pliman <- symptomatic_area(img_pattern = "img",
@@ -96,7 +102,7 @@ With the argument `save_image` set to TRUE, the images are all saved in the fold
 
 ![](pliman2.png)
 
-## How accurate are the measures?
+## How good are these measures?
 
 These 10 images were previously processed in QUANT software for determining severity. Let's create a tibble for the image code and respective "actual" severity - assuming QUANT's measures as reference.
 
@@ -136,7 +142,7 @@ dat %>%
   
 ```
 
-The concordance correlation coefficient is a test for agreement between two observers or methods. It is an indication of how accurate the pliman measures are compared with a standard. The coefficient is greater than 0.95, suggesting an excellent agreement!
+The concordance correlation coefficient is a test for agreement between two observers or methods. It is an indication of how accurate the pliman measures are compared with a standard. The coefficient is greater than 0.97, suggesting an excellent agreement!
 
 ```{r}
 library(epiR)
@@ -144,3 +150,9 @@ ccc <- epi.ccc(dat$actual, dat$symptomatic)
 ccc$rho.c
 
 ```
+
+### Conclusion
+
+The community of R users might enjoying using [pliman](https://tiagoolivoto.github.io/pliman/) as an alternative to proprietary software or other point-and-click open source solutions such as imageJ. The simplicity of the batch processing approach can greatly improve the speed of the assessment and the user can set arguments to run R in parallel for enhanced computational speed.
+
+The most critical step, as I mentioned, is the definition of the reference palettes. Several preliminary runs may be needed for a few leaves to check whether the segmentation is being performed correctly, based on visual judgement. This is no different than any other color-threshold based methods when the choices made by the user affect the final result and contribute to variation among assessors. The cons are also the same encountered in the direct competitors, which is the necessity to have images taken at uniform and controlled conditions, especially a contrasting background.
