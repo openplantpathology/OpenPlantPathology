@@ -2,7 +2,7 @@
 title: "Measuring plant disease severity using the pliman R package"
 description: |
   pliman, short for PLant IMage ANalysis, is an R package dedicated to the analysis of images of plants, mainly leaves. Among several functionalities, pliman offers a function for measuring plant disease severity. In this post I will demonstrate the process for the analysis of single images or batch processing images with soybean rust symptoms as a case study. 
-draft: FALSE
+draft: true
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/emdelponte
