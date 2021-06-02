@@ -19,19 +19,19 @@ categories:
 
 ## Introduction
 
-Two weeks ago I came across [pliman](https://tiagoolivoto.github.io/pliman/), a new R package developed by [Tiago Olivoto](https://github.com/TiagoOlivoto) that provides a suite of functions for conducting several analysis on images of plants. For obvious reasons, I was greatly interested in testing a function that allows measuring plant disease severity - or the percent leaf area affected.
+Two weeks ago I came across [pliman](https://tiagoolivoto.github.io/pliman/), a new R package developed by [Tiago Olivoto](https://github.com/TiagoOlivoto) that provides a suite of functions for conducting several analyses on images of plants. For obvious reasons, I was greatly interested in testing a function that allows measuring plant disease severity - or the percentage leaf area affected.
 
-More than two dozen software, most of them proprietary, have been used for measuring percent severity in phytopathometry research [@Del2017]. As far as I know, there is no specialized R package or one with functions built specific for plant disease severity measurement.
+More than two dozen software, most of them proprietary, have been used for measuring percentage severity in phytopathometry research [@Del2017]. As far as I know, there is no specialized R package or one with functions built particularly for plant disease severity measurement.
 
-The availability of these image analysis tools is of great importance mainly for research purposes or situations when the most accurate severity is necessary [@bock2020a]. Examples include the development of standard area diagrams (set of images of leaves with known severity) as well as their validation when an "actual" severity measurement is necessary. These images are usually obtained under standardized conditions (light and background) and analyzed individually. However, a batch processing can automate and greatly speed up the process.
+The availability of these image analysis tools is of great importance mainly for research purposes or situations when the most accurate severity is necessary [@bock2020a]. Examples include the development of standard area diagrams (set of images of leaves with known severity) as well as their validation when an "actual" severity measurement is required. These images are usually obtained under standardized conditions (light and background) and analyzed individually. However, a batch processing can automate and greatly speed up the process - which is of course beneficial in any research field.
 
-In this post I will demonstrate how to measure severity using the `sympmatic_area()` function of pliman to measure severity in 10 leaves (batch processing) of soybean rust. I will further compare the measures with ones determined using QUANT software as used in a previous work [@franceschi2020]
+In this post I will demonstrate how to measure severity using the `sympmatic_area()` function of `pliman` to measure severity in 10 leaves (batch processing) infected with soybean rust. I will further compare the measures with ones determined using QUANT software as used in a previous work [@franceschi2020]
 
 ## What is healthy and diseased?
 
-The most critical is the initial step when the user needs to correctly define the color palettes, which in pliman are separate images representing each of three classes named background (b), symptomatic (s) and healthy (h).
+The most critical step is the initial step - this avoids garbage in, garbage out, when the user needs to correctly define the color palettes, which in `pliman` are separate images representing each of three classes named background (b), symptomatic (s) and healthy (h).
 
-These reference image palettes can be made simply by manually sampling small areas of the image and producing a composite image. Of course, the results may vary significantly depending on how these areas are chosen. The observation of the processed masks becomes important to create image palettes that are most representative of the respective class.
+These reference image palettes can be made simply by manually sampling small areas of the image and producing a composite image. Of course, the results may vary significantly depending on how these areas are chosen, and are subjective in nature due to the researchers experience. The observation of the processed masks becomes important to create image palettes that are most representative of the respective class.
 
 Here, I cut and pasted several sections of images representative of each class from a few leaves into a Google slide. Once the image palette was ready, I exported each one as a separate image PNG file (JPG also works). These were named: sbr_b.png, sbr_h.png and sbr_s.png.
 
