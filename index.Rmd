@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Open Plant Pathology"
 site: distill::distill_website
 listing: posts
 ---
