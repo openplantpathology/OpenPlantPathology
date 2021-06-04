@@ -21,9 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### About
 
-Presentar: Ms. Lauren Huth \
+Presenter: Ms. Lauren Huth \
 Institution: USQ, Institute for Life Sciences and the Environment \
-Date: 1 Dec 2020\
+Date: 1 Dec 2020 \
 Host: Adam Sparks \
 Links: [Video](https://www.youtube.com/watch?v=bbEpGrsBuNc) \| [Slides](https://osf.io/m6fgy/)
 
