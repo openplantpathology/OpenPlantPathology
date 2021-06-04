@@ -1,0 +1,37 @@
+---
+title: "Design and Application of Specific PCR Ramularia collo-cygni detection Identifying fungicide resistance in Pyrenophora teres"
+description: |
+  Noel Knight began his research career at the University of Southern Queensland in Toowoomba in 2007, investigating pathotypes of the spot blotch pathogen of barley and describing disease symptoms of Fusarium crown rot on wheat. He subsequently spent two years at Cornell University in New York State researching leaf diseases of beetroot. Noel joined the Fungicide Resistance Group in the Centre for Crop and Disease Management at Curtin University in 2020, undertaking projects involved in detecting and characterising fungicide resistance in the barley net blotch pathogens.
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.com
+date: 2021-06-04
+output:
+  distill::distill_article:
+    self_contained: false
+preview: usq-seminar-knight.jpg
+categories:
+  - CCH-USQ Seminars
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### About
+
+Presenter: Dr. Noel Knight \
+Institution: Curtin University, Centre for Crop and Disease Management, Fungicide Resistance Group \
+Date: 08 Jun 2021 \
+Time: 11:00AM - 12:00PM AEST \
+Host: Adam Sparks \
+Links: [Zoom](https://usq.zoom.us/j/89029927752?pwd=ZGFvejRaMHJWb0NPMmk2ckhQdEEydz09)
+
+### Abstract
+
+PCR is a useful tool for detecting and quantifying DNA sequences of specific species or alleles.
+A comprehensive design strategy is essential for allowing target DNA to be detected and non-target DNA to be avoided.
+Examples of design strategies and research applications will be discussed for two topics.
+Firstly, specific detection of the barley leaf pathogen _Ramularia collo-cygni_ in Australia.
+And secondly, genotyping alleles associated with fungicide sensitivity, reduced sensitivity and resistance in the barley net blotch pathogens _Pyrenophora teres_ f. _teres_ and _P. teres_ f. _maculata_.
+The development of detection workflows for these pathosystems provides a robust process for investigating the presence and frequency of pathogens and fungicide resistance.
