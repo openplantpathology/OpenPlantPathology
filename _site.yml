@@ -14,8 +14,7 @@ navbar:
       href: about.html
     - text: "Who we are  "
       href: team.html
-    - text: "Virtual seminars  "
-      href: seminars.html
+
   right: 
     - icon: fab fa-youtube fa-lg
       href: https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA
