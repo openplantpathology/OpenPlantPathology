@@ -1,8 +1,9 @@
-name: "distill-blog"
+name: "Open Plant Pathology"
 title: "Open Plant Pathology"
 google_analytics: "UA-112255011-1"
 description: |
 output_dir: "docs"
+favicon: images/favicon.ico
 base_url: https://www.openplantpathology.org/
 navbar:
   logo:
