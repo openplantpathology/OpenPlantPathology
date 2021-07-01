@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Open Plant Pathology</title>
+    <link>https://www.openplantpathology.org/</link>
+    <atom:link href="https://www.openplantpathology.org/index.xml" rel="self" type="application/rss+xml"/>
+    <description>The Open Plant Pathology (OPP) initiative supports and promotes openness, transparency and reproducibility of scientific research data and methods applied to plant pathological research and applications.
+</description>
+    <image>
+      <title>Open Plant Pathology</title>
+      <url>https://www.openplantpathology.org/images/favicon.ico</url>
+      <link>https://www.openplantpathology.org/</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Climate change will create winners and losers in the fight against plant disease</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-07-01-climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease</link>
+      <description>Adam Sparks and Paul Melloy recently joined CHaBits (Consortium for Heat and Biotic Stresses) to discuss the effects of climate change on plant disease. CHaBits have graciously hosted the seminar recording on their YouTube.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-01-climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease</guid>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-01-climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease/CHaBits.png" medium="image" type="image/png" width="2283" height="925"/>
+    </item>
+    <item>
+      <title>Design and Application of Specific PCR Ramularia collo-cygni detection Identifying fungicide resistance in Pyrenophora teres</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-06-08-noel-knight-usq-cch-seminar</link>
+      <description>Noel Knight began his research career at the University of Southern Queensland in Toowoomba in 2007, investigating pathotypes of the spot blotch pathogen of barley and describing disease symptoms of Fusarium crown rot on wheat. He subsequently spent two years at Cornell University in New York State researching leaf diseases of beetroot. Noel joined the Fungicide Resistance Group in the Centre for Crop and Disease Management at Curtin University in 2020, undertaking projects involved in detecting and characterising fungicide resistance in the barley net blotch pathogens.</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-06-08-noel-knight-usq-cch-seminar</guid>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-06-08-noel-knight-usq-cch-seminar/usq-seminar-knight.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Measuring plant disease severity using the pliman R package</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package</link>
+      <description>pliman (PLant IMage ANalysis) is an R package for the analysis of images of plants, mainly leaves, that offers a function for measuring plant disease severity. In this post I will demonstrate the use of pliman for determining severity on leaves affected by soybean rust as a case study.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package</guid>
+      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package/logo_pliman.png" medium="image" type="image/png" width="538" height="540"/>
+    </item>
+    <item>
+      <title>Meta approaches for robust epidemiological inferences in plant disease management research</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-05-26-meta-approaches-for-robust-epidemiological-inferences-in-plant-disease-management-research</link>
+      <description>Seminar presented by Dr. Emerson Del Ponte (Universidade Federal de Viçosa, Brazil) for the Department of Botany and Plant Pathology, Oregon State University, on May 20 2021.</description>
+      <category>BPP Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-05-26-meta-approaches-for-robust-epidemiological-inferences-in-plant-disease-management-research</guid>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-05-26-meta-approaches-for-robust-epidemiological-inferences-in-plant-disease-management-research/preview-delponte.png" medium="image" type="image/png" width="538" height="468"/>
+    </item>
+    <item>
+      <title>Johanna Westerdijk: curating culture in the discipline of plant pathology</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <dc:creator>Fernando García-Bastidas</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-05-23-johanna-westerdijk-curating-culture-in-the-discipline-of-plant-pathology</link>
+      <description>In this second #OPPToons, a tribute to a pioneering and inspiring woman in plant pathology, Prof. Johanna Westerdijk (1883-1961), the first female Professor in the Netherlands, from the University of Utrecht.</description>
+      <category>OPPToons</category>
+      <guid>https://www.openplantpathology.org/posts/2021-05-23-johanna-westerdijk-curating-culture-in-the-discipline-of-plant-pathology</guid>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-05-23-johanna-westerdijk-curating-culture-in-the-discipline-of-plant-pathology/Westerdijk-preview.png" medium="image" type="image/png" width="400" height="355"/>
+    </item>
+    <item>
+      <title>The Togashi Dataset, an open database of fungal and oomycete cardinal temperatures</title>
+      <dc:creator>Daniel Bebber</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures</link>
+      <description>An open database providing cardinal temperatures (minimum, optimum and maximum) for various physiological and growth processes of plant pathogenic fungi and oomycetes reported in Togashi (1949).</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures</guid>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures/togashi.png" medium="image" type="image/png" width="600" height="543"/>
+    </item>
+    <item>
+      <title>Recent developments in virus taxonomy: from metagenomics to megataxonomy</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy</link>
+      <description>Seminar presented at the Department of Plant Pathology, University of Kentucky on March 29th 2021, by Prof. Murilo Zerbini from the Departamento de Fitopatologia, Universidade Federal de Viçosa, Viçosa, Brazil. Dr. Zerbini is currently the President of the International Committee on Virus Taxonomy (ICTV).</description>
+      <category>U.K. Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy</guid>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-30-recent-developments-in-virus-taxonomy-from-metagenomics-to-megataxonomy/seminar-zerbini.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>RSSCdb, a database for tracking the global spread of Ralstonia solanacearum sequevars and strains </title>
+      <dc:creator>Tiffany Lowe-Power</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains</link>
+      <description>RSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar). The project was developed to provide UC Davis undergraduate researchers with a remote research experience.</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains</guid>
+      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-24-rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains/rssc.png" medium="image" type="image/png" width="594" height="362"/>
+    </item>
+    <item>
+      <title>ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide</title>
+      <dc:creator>Edel Lopez</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide</link>
+      <description>Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae* putting at risk Brassicas worldwide. An open database to record the presence of clubroot and *Plasmodiophora brassicae* reported by researchers, industry and growers.</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide</guid>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-23-clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide/clubroot.png" medium="image" type="image/png" width="1305" height="1360"/>
+    </item>
+    <item>
+      <title>SADBAnk - a database of standard area diagrams of plant disease severity</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-19-sadbank-a-database-of-standard-area-diagrams-of-plant-disease-severity</link>
+      <description>SADBAnk is a curated collection of studies on Standard Area Diagram set (SADs), pictorial representations of disease symptoms and/or signs in a plant organ where each diagram depicts a percent diseased area. They are designed in a wide range of styles and are used as tools to use during or prior to visual assessments of disease severity to “calibrate” a rater’s eye and improve accuracy, precision and reliability of the estimates.</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-19-sadbank-a-database-of-standard-area-diagrams-of-plant-disease-severity</guid>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-19-sadbank-a-database-of-standard-area-diagrams-of-plant-disease-severity/sadbank.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Vanderplank: contributing an epidemic proportion to plant health</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <dc:creator>Fernando García-Bastidas</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-15-vanderplank-contributing-an-epidemic-proportion-to-plant-health</link>
+      <description>We are starting our #OPPtoons series with one of the famous plant pathologists responsible for providing the grounds for establishing the discipline of plant disease epidemiology, James Edward Vanderplank (VDP; 1908 - 1997).</description>
+      <category>OPPToons</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-15-vanderplank-contributing-an-epidemic-proportion-to-plant-health</guid>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-15-vanderplank-contributing-an-epidemic-proportion-to-plant-health/vdp-preview.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>MDRBOT– Map, Detect and Research Botryosphaeriaceae species</title>
+      <dc:creator>Eduardo Batista</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-11-mdrbot-map-detect-and-research-botryosphaeriaceae-species</link>
+      <description>A freely available database that can be consulted through an interactive and online application. The current release (version 1.0) contains 14,405 cured isolates and 2989 literature references of 12,121 different host–fungus interactions with 1692 different plant species from 149 countries.</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-11-mdrbot-map-detect-and-research-botryosphaeriaceae-species</guid>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-11-mdrbot-map-detect-and-research-botryosphaeriaceae-species/bot1.png" medium="image" type="image/png" width="563" height="406"/>
+    </item>
+    <item>
+      <title>Fusarium wilt of banana: a re-emerging disease that threatens banana production</title>
+      <dc:creator>Fernando Garcia-Bastidas</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-09-fusarium-wilt-of-banana-a-re-emerging-disease-that-threatens-banana-production</link>
+      <description>Seminar presented at the Department of Plant Pathology (University of Kentucky). Dr. Fernando Garcia-Bastidas (Keygen) digs into the history of epidemics of Panama disease (Race 1) that devastated Gros Michel bananas in the previous century; illustrates how Cavendish saved the industry and the re-emergence of the threat; and discusses possible solutions for disease management focusing on the plant breeding efforts.</description>
+      <category>U.K. Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-09-fusarium-wilt-of-banana-a-re-emerging-disease-that-threatens-banana-production</guid>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-09-fusarium-wilt-of-banana-a-re-emerging-disease-that-threatens-banana-production/seminar-fernando.png" medium="image" type="image/png" width="647" height="559"/>
+    </item>
+    <item>
+      <title>FGSCdb, an open database for tracking the global spread of species and chemotypes</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes</link>
+      <description>An open database of characterized strains of Fusarium graminearum species complex species whose data have been gathered directly from researchers or extracted from the peer-reviewed articles whenever the geographic, host of origin, year, and phylogenetic species and chemotypes.</description>
+      <category>Databases</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes</guid>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes/fgsc.png" medium="image" type="image/png" width="575" height="443"/>
+    </item>
+    <item>
+      <title>epifitter, a tool for analysing plant disease epidemics</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</link>
+      <description>Epifitter is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
+      <category>R packages</category>
+      <guid>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</guid>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics/epifitter.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Network meta-analysis in R</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r</link>
+      <description>Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r</guid>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r/network1.png" medium="image" type="image/png" width="509" height="407"/>
+    </item>
+    <item>
+      <title>Seminar: Rubber leaf drop - in defence of Pestalotiopsis</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis</link>
+      <description>Seminar given by Dr. Anthony Young for the CCH-USQ Seminar Series. Dr. Young is a Senior Lecturer in Crop Protection at The University of Queensland, Gatton Campus. In this seminar, he will explore the epidemiology of rubber (Hevea brasiliensis) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term ‘disease.’</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis</guid>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis/anthony.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>An interview with Dr. BananaMan García: on being bananas about bananas</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-02-19-interview-dr-bananaman-garcia</link>
+      <description>Get to know our newest member of the OPP team, Dr. Fernando Alexander García-Bastidas, a Colombian researcher in Wageningen (NL) at KeyGene leading banana breeding program focusing on Panama Disease. He is also known as Dr. Bananaman, the creator of the #bananatoons. Fernando will be responsible for creating open digital art useful for plant pathology teaching and outreach.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2021-02-19-interview-dr-bananaman-garcia</guid>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-02-19-interview-dr-bananaman-garcia/ferchucky.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>A multi panel figure for coffee leaf rust</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure</link>
+      <description>In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure</guid>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/multipanel1.png" medium="image" type="image/png" width="1554" height="1096"/>
+    </item>
+    <item>
+      <title>The elusive long-read fungal sequence: how to minION like a pro (when you’ve never done it before)</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-12-01-the-elusive-long-read-fungal-sequence-how-to-minion-like-a-pro-when-youve-never-done-it-before</link>
+      <description>Research seminar presented by Ms. Lauren Huth to the Center for Crop Health, University of Southern Queensland. The rapid development of microbial genome sequencing methods in the last decade has revolutionized whole genome sequencing and has become the standard for many molecular typing applications in research. Largely driven by the development of high-throughput, low cost, second generation sequencing methods, the industry has become familiar with Illumina as the most widely used sequencing platform for microbial genomics.</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-12-01-the-elusive-long-read-fungal-sequence-how-to-minion-like-a-pro-when-youve-never-done-it-before</guid>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-12-01-the-elusive-long-read-fungal-sequence-how-to-minion-like-a-pro-when-youve-never-done-it-before/seminar-lauren.png" medium="image" type="image/png" width="860" height="509"/>
+    </item>
+    <item>
+      <title>Deciphering the origin of powdery mildews in Australia. Implications for plant biosecurity</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-11-27-deciphering-the-origin-of-powdery-mildews-in-australia-implications-for-plant-biosecurity</link>
+      <description>Seminar given by Dr. Levente Kiss (University of Southern Queensland). Powdery mildews are widespread obligate biotrophic fungal plant pathogens, comprising over 900 species that infect more than 10,000 plant species globally. The symptoms caused by these fungi are easy to spot, but the fungi themselves are difficult to handle, and some are difficult to identify.</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-11-27-deciphering-the-origin-of-powdery-mildews-in-australia-implications-for-plant-biosecurity</guid>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-11-27-deciphering-the-origin-of-powdery-mildews-in-australia-implications-for-plant-biosecurity/seminar-levente.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>A tale of two crop diseases</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-10-30-a-tale-of-two-crop-diseases</link>
+      <description>Seminar given by Dr. Araz Solman from the Queensland Department of Agriculture and Fisheries. Short abstract: Research into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: _Pyrenophora tritici-repentis_ (Ptr) and _Parastagonospora nodorum_ (Pan).</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-10-30-a-tale-of-two-crop-diseases</guid>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-10-30-a-tale-of-two-crop-diseases/seminar-araz.png" medium="image" type="image/png" width="607" height="545"/>
+    </item>
+    <item>
+      <title>Effectiveness and expression of resistance in maize to isolates of Puccinia sorghi from Eastern Australia</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-09-14-effectiveness-and-expression-of-resistance-in-maize-to-isolates-of-puccinia-sorghi-from-eastern-australia</link>
+      <description>CCH-USQ seminar given by Ms. Aurelie Quade from the University of Southern Queensland. The vulnerability of the Australian maize industry to Puccina sorghi is currently unknown. Maize is grown across a range of agro-ecological regions in Australia and the effectiveness and stability of deployed Rp genes has not been examined.</description>
+      <category>CCH-USQ Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-09-14-effectiveness-and-expression-of-resistance-in-maize-to-isolates-of-puccinia-sorghi-from-eastern-australia</guid>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-09-14-effectiveness-and-expression-of-resistance-in-maize-to-isolates-of-puccinia-sorghi-from-eastern-australia/seminar-aurelie.png" medium="image" type="image/png" width="605" height="551"/>
+    </item>
+    <item>
+      <title>Crystal structure of Tox3 - a unique effector fold and insights into Kex2 protease processing of fungal effectors</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-06-11-crystal-structure-of-tox3-a-unique-effector-fold-and-insights-into-kex2-protease-processing-of-fungal-effectors</link>
+      <description>Virtual seminar given by Dr. Simon Williams from Australian National University.  Plant pathogens cause disease through secreted effector proteins, which act to modulate their hosts physiology and promote infection. Typically, the sequence of effector proteins provides little functional information and further targeted experimentation is required. We look to utilise structural biology and biochemical approaches to help us understand effector function.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-06-11-crystal-structure-of-tox3-a-unique-effector-fold-and-insights-into-kex2-protease-processing-of-fungal-effectors</guid>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-06-11-crystal-structure-of-tox3-a-unique-effector-fold-and-insights-into-kex2-protease-processing-of-fungal-effectors/seminar-simon.png" medium="image" type="image/png" width="597" height="563"/>
+    </item>
+    <item>
+      <title>OPP Interviews: Dr. Sally Mallowa from Augustana University</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-06-02-cassava-change-agent-in-classrooms-and-communities</link>
+      <description>Post seminar interview with Dr. Sally Mallowa, an Assistant Professor of Biology at Augustana University (South Dakota, USA). Sally delivered a talk on, Technology driven cassava pest management on the 4th of May 2020</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2020-06-02-cassava-change-agent-in-classrooms-and-communities</guid>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-06-02-cassava-change-agent-in-classrooms-and-communities/sally.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>cpn60UT: the perfect marker to identify and characterize phytoplasmas?</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-06-01-cpn60ut-the-perfect-marker-to-identify-and-characterize-phytoplasmas</link>
+      <description>Seminar given by Dr. Edel Pèrez-Lòpez - Université Laval. Abstract: Phytoplasmas taxonomy is very complex. Besides genus ('_Candidatus_ Phytoplasma'), phytoplasmas are also classified into groups and subgroups based on the RFLP pattern obtained after digesting the F2nR2 sequence (into the 16S rRNA operon) with 17 restriction enzymes. Many other taxonomic markers have been suggested in order to simplify this classification scheme.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-06-01-cpn60ut-the-perfect-marker-to-identify-and-characterize-phytoplasmas</guid>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-06-01-cpn60ut-the-perfect-marker-to-identify-and-characterize-phytoplasmas/seminar-edel.png" medium="image" type="image/png" width="559" height="353"/>
+    </item>
+    <item>
+      <title> OPP Interviews: Prof. Gert Kemma from Wageningen University &amp; Research</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-05-15-disruptive-changes-are-needed-to-manage-tropical-race-4-in-banana</link>
+      <description>Post seminar interview with Dr. Gert Kema (Wageningen University &amp; Research), is the professor leading research at the Laboratory of Phytopathology. A focus on septoria tritici blotch of wheat for ~25 years set Gert on a path to work on banana as a result of the relationship between the causal fungi, _Mycosphaerella graminicola_, now known as _Zymoseptoria tritici_ and _Mycosphaerella fijiensis_ now known as _Pseudocercospora fijiensis_, associated with black sigatoka.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2020-05-15-disruptive-changes-are-needed-to-manage-tropical-race-4-in-banana</guid>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-05-15-disruptive-changes-are-needed-to-manage-tropical-race-4-in-banana/kema.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Evolution of mini-chromosomes in Fusarium</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-05-11-evolution-of-mini-chromosomes-in-fusarium</link>
+      <description>Seminar given by Dr. Luigi Faino (University of Rome La Sapienza) on Fusarium verticillioides, a maize pathogen that causes millions of dollars in loss every year due to the production of mycotoxins, namely the neurotoxic and carcinogenic fumonisins. Dr. Faino investigated the F. verticillioides (Fv) strain 10027 which is an Italian isolate and it produces high amount of fumonisin B1.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-05-11-evolution-of-mini-chromosomes-in-fusarium</guid>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-05-11-evolution-of-mini-chromosomes-in-fusarium/seminar-luigi.png" medium="image" type="image/png" width="500" height="337"/>
+    </item>
+    <item>
+      <title>Technology driven cassava pest management</title>
+      <link>https://www.openplantpathology.org/posts/2020-05-04-technology-driven-cassava-pest-management</link>
+      <description>In the recent past, a priority of many national research programs, international research institutions, non-governmental organizations, and funding agencies, has been focused on finding novel solutions to the complex constraints to cassava production.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-05-04-technology-driven-cassava-pest-management</guid>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-05-04-technology-driven-cassava-pest-management/seminar-cassava.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Post-seminar interview: Dr. Peter Solomon from The Australian National University</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-05-01-the-not-so-simple-interactions-associated-with-pr-1-proteins-and-septoria-nodorum-blotch-in-wheat</link>
+      <description>A post-talk interview with Dr. Peter Solomon, a specialist in the field of wheat biosecurity. Peter is a dedicated researcher, committing over twenty years of research to dissect the intricate interactions of effector and host defence proteins.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2020-05-01-the-not-so-simple-interactions-associated-with-pr-1-proteins-and-septoria-nodorum-blotch-in-wheat</guid>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-05-01-the-not-so-simple-interactions-associated-with-pr-1-proteins-and-septoria-nodorum-blotch-in-wheat/solomon.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>The ongoing pandemic of Tropical Race 4 threatens global banana production</title>
+      <link>https://www.openplantpathology.org/posts/2020-04-30-the-ongoing-pandemic-of-tropical-race-4-threatens-global-banana-production</link>
+      <description>Dr. Kema reviews their research on the understanding of the phylogeography of TR4, and discuss on the broad genetic potential of the crop for breeding as well as options for disease management to avoid a repetition of history.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-30-the-ongoing-pandemic-of-tropical-race-4-threatens-global-banana-production</guid>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-30-the-ongoing-pandemic-of-tropical-race-4-threatens-global-banana-production/seminar-kema.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>How the study of necrotrophic effectors advanced our understanding of the enigmatic PR-1 protein</title>
+      <dc:creator>Benjamin Schwessinger</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-20-how-the-study-of-necrotrophic-effectors-advanced-our-understanding-of-the-enigmatic-pr-1-protein</link>
+      <description>Seminar given by Dr. Peter Solomon (The Australian National University). Abstract: It had long been thought that necrotrophic plant pathogenic fungi use a barrage of lytic enzymes to break down host cells releasing nutrients for growth. However, in recent years it has emerged that some necrotrophic fungi facilitate disease through a strict gene-for-gene mechanism as observed in biotrophic pathogens.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-20-how-the-study-of-necrotrophic-effectors-advanced-our-understanding-of-the-enigmatic-pr-1-protein</guid>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-20-how-the-study-of-necrotrophic-effectors-advanced-our-understanding-of-the-enigmatic-pr-1-protein/seminar-solomon.png" medium="image" type="image/png" width="607" height="523"/>
+    </item>
+    <item>
+      <title>Research Compendium: High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome</title>
+      <dc:creator>Lisa Rothman</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-20-research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome</link>
+      <description>In this inaugural post, we showcase a reproducible example of research conducted by Dr. Muhammad Mohsin Raza, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work. His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings.</description>
+      <category>Research compendia</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-20-research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome</guid>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-20-research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome/post-mohsin.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Evolution is not static: understanding factors that govern pathogen-host diversity</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-16-evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity</link>
+      <description>A post-talk interview with Dr. Remco Stam, a specialist on host-pathogen genetic diversity and (co)evolution. Remco is a forward-thinking researcher, with a humble yet passionate approach to understanding (co)evolution between host plants and their pathogens.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-16-evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity</guid>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-16-evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity/interview-remco.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>What are Brazilian plant pathologists doing? A text-analysis of scientific poster titles</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles</link>
+      <description>A short description of the post.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles</guid>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles/post-text-fig02.png" medium="image" type="image/png" width="672" height="480"/>
+    </item>
+    <item>
+      <title>The diversity and molecular evolution of plant defence against pathogens in nature</title>
+      <dc:creator>Benjamin Schwessinger</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-06-the-diversity-and-molecular-evolution-of-plant-defence-against-pathogens-in-nature</link>
+      <description>Virtual seminar given by Dr. Remco Stam (Technical University of Munich). Abstract: Plant pathogen defence responses are often studied in model systems or in agricultural settings. However, in nature plants also encounter a large variety of pathogens. Interestingly, in natural systems this seldom leads to epidemics. One possible reason for this is the high amount of genetic variation that can be found in natural plant populations.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-06-the-diversity-and-molecular-evolution-of-plant-defence-against-pathogens-in-nature</guid>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-06-the-diversity-and-molecular-evolution-of-plant-defence-against-pathogens-in-nature/seminar-remco.png" medium="image" type="image/png" width="613" height="572"/>
+    </item>
+    <item>
+      <title>Clubroot of brassicas, an old but still poorly understood disease on the rise!</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-03-clubroot-of-brassicas-an-old-but-still-poorly-understood-disease-on-the-rise</link>
+      <description>Dr. Susann Auer a postdoc at Technische Universität Dresden (Dresden, Germany), delivered the first OPP Virtual Seminar on the 31st of March on the molecular response of Clubroot infected plants to the endophytic fungus Acremonium alternatum. I had the privilege to get to know her and her work a little better. Dr. Auer is a passionate researcher, who shows care towards her students and is thoughtful in considering her fellow researchers.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-03-clubroot-of-brassicas-an-old-but-still-poorly-understood-disease-on-the-rise</guid>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-03-clubroot-of-brassicas-an-old-but-still-poorly-understood-disease-on-the-rise/post-auer.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>OPP Virtual Seminar: delivering scientific talks without barriers</title>
+      <dc:creator>Lisa Rothmann</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-04-03-opp-virtual-seminar-delivering-scientific-talks-without-barriers</link>
+      <description>After two years promoting and supporting openness, transparency and reproducibility in our field, we are very proud to announce a new exciting project: the Virtual Seminars (aka science webinars), a new venue for delivering scientific talks in plant pathology-related topics. The idea was brought up by Dr. Benjamin Schwessinger (Australian National University), a prominent representative of scientists advocating for urgent changes in scientific meetings, including replacement of the current model by digital conferences. We had a quick chat with Benjamin who further stressed why he believes the timing is perfect to start experiencing virtual talks in plant pathology, a trend that is spreading into other scientific communities</description>
+      <category>General</category>
+      <guid>https://www.openplantpathology.org/posts/2020-04-03-opp-virtual-seminar-delivering-scientific-talks-without-barriers</guid>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-04-03-opp-virtual-seminar-delivering-scientific-talks-without-barriers/post-virtualseminar.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Molecular response of clubroot infected plants to the endophytic fungus Acremonium alternatum</title>
+      <dc:creator>Benjamin Schwessinger</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2020-03-31-molecular-response-of-clubroot-infected-plants-to-the-endophytic-fungus-acremonium-alternatum</link>
+      <description>In our first OPP Virtual seminar we have Dr. Susann Auer - Postdoc Technische Universität Dresden, speaking about the clubroot, a disease that continues to cause economic losses in Brassica crops worldwide, sustainable control measures are not in sight. The clubroot pathogen persists in soils in the form of durable resting spores which infect new crops every consecutive year.</description>
+      <category>Virtual seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2020-03-31-molecular-response-of-clubroot-infected-plants-to-the-endophytic-fungus-acremonium-alternatum</guid>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2020-03-31-molecular-response-of-clubroot-infected-plants-to-the-endophytic-fungus-acremonium-alternatum/seminar-susann.png" medium="image" type="image/png" width="500" height="245"/>
+    </item>
+    <item>
+      <title>Reproducible Reports and Research Using R</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-11-25-reproducible-reports-and-research-using-r</link>
+      <description>Workshop taught by Adam H. Sparks, Nick Tierney, Paul Melloy, and Nirodha Weeraratnee at the Australasian Plant Pathology Society Conference 2019</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2019-11-25-reproducible-reports-and-research-using-r</guid>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-11-25-reproducible-reports-and-research-using-r/workshop-apps.png" medium="image" type="image/png" width="278" height="293"/>
+    </item>
+    <item>
+      <title>Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear</link>
+      <description>We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.</description>
+      <category>General</category>
+      <guid>https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear</guid>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear/survey1.png" medium="image" type="image/png" width="325" height="317"/>
+    </item>
+    <item>
+      <title>Get your research project organized, shareable and reproducible using R</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-08-03-get-your-research-project-organized-shareable-and-reproducible-using-r</link>
+      <description>The importance of sharing data and computational code has been highlighted extensively to promote transparency and replication of scientific results. Data and code sharing practices are rare in the plant pathology, but they are expected to increase in the near future. It is urgent that plant pathologists get training in how to organize their research in a way that promotes effective project management, reproducibility, collaboration and sharing of results.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2019-08-03-get-your-research-project-organized-shareable-and-reproducible-using-r</guid>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-08-03-get-your-research-project-organized-shareable-and-reproducible-using-r/workshop-emerson-aps.png" medium="image" type="image/png" width="489" height="366"/>
+    </item>
+    <item>
+      <title>Breaking down barriers between remote sensing and plant pathology</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-07-20-breaking-down-barriers-between-remote-sensing-and-plant-pathology</link>
+      <description>This is a preprint of a Letter to Editor of Tropical Plant Pathology by Heim _et al._ on the challenges and potential solutions in the context of application of remote sensing in plant pathology.</description>
+      <category>Preprints</category>
+      <guid>https://www.openplantpathology.org/posts/2019-07-20-breaking-down-barriers-between-remote-sensing-and-plant-pathology</guid>
+      <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-07-20-breaking-down-barriers-between-remote-sensing-and-plant-pathology/post-remote-sensing-pp.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Modeling tools and techniques using R</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-06-02-modeling-tools-and-techniques-using-r</link>
+      <description>In this workshop, we will present an overview of different modeling approaches that are available in the R language and environment for statistical and graphical computing. We will focus on using a hands-on approach that explores different aspects of statistical modeling ranging from exploratory data analysis to model development, validation, and prediction.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2019-06-02-modeling-tools-and-techniques-using-r</guid>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-06-02-modeling-tools-and-techniques-using-r/workshop-modelling.png" medium="image" type="image/png" width="1344" height="960"/>
+    </item>
+    <item>
+      <title>Reproducible Reports and Research Using R</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <dc:creator>Nick Tierney"</dc:creator>
+      <dc:creator>Paul Melloy</dc:creator>
+      <dc:creator>Nirodha Weeraratnee</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-06-02-reproducible-reports-and-research-using-r</link>
+      <description>As scientists, we often read about or hear about reproducible research, but we may not be sure where to start or how we can make our research reproducible. Sharing code, scripts and data that make up your analysis with others such that they are able to easily reproduce your results can make it easy to obtain feedback and improve the quality of your work. This workshop will introduce participants to ways that R and related tools, such as RMarkdown.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2019-06-02-reproducible-reports-and-research-using-r</guid>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-06-02-reproducible-reports-and-research-using-r/workshop-apps.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>OPP Interviews: Jade d’Alpoim Guedes and Ben Marwick</title>
+      <dc:creator>Rene Heim</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-05-25-opp-interviews-jade-dalpoim-guedes-and-ben-marwick</link>
+      <description>In our third OPP Interview we have the privilege to chat with two prestigious computational scientists, representatives of the field of archaeology, about their experiences on the use, tool development and promotion of reproducible research practices in science.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2019-05-25-opp-interviews-jade-dalpoim-guedes-and-ben-marwick</guid>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-05-25-opp-interviews-jade-dalpoim-guedes-and-ben-marwick/interview-ben-jade.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>A Plant Pathologist's Guide to Writing Your First R Package</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2019-01-09-a-plant-pathologists-guide-to-writing-your-first-r-package</link>
+      <description>So you want to write your first R package, but you don't know where to start? We can help with that! Writing an R package is not difficult, but it can be intimidating for a first timer. Why would you want to write an R package? Read more to find out!</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2019-01-09-a-plant-pathologists-guide-to-writing-your-first-r-package</guid>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2019-01-09-a-plant-pathologists-guide-to-writing-your-first-r-package/post-rpackage.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>OPP Interviews: Sophien Kamoun</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun</link>
+      <description>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun</guid>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun/interview-kamoun.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>OPP Interviews: Niklaus J. Grünwald</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-08-26-opp-interviews-niklaus-j-grnwald</link>
+      <description>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first OPP interview features Dr. Niklaus Grünwald, a plant pathologist with USDA ARS, Corvallis, OR, USA. Nik is well recognized by his research on population genetics and genomics of plant pathogens - mainly on oomycetes of major importance to global agriculture.</description>
+      <category>Interviews</category>
+      <guid>https://www.openplantpathology.org/posts/2018-08-26-opp-interviews-niklaus-j-grnwald</guid>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-08-26-opp-interviews-niklaus-j-grnwald/interview-nik.png" medium="image" type="image/png" width="499" height="499"/>
+    </item>
+    <item>
+      <title>Workshop: Network Analysis in Plant Pathology</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-08-07-workshop-network-analysis-in-plant-pathology</link>
+      <description>This workshop will prepare participants to interpret network analyses, and will provide participants with experience in network analysis for several representative data sets. The workshop will use the R programming environment, and will provide a brief introduction to R.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2018-08-07-workshop-network-analysis-in-plant-pathology</guid>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-08-07-workshop-network-analysis-in-plant-pathology/networks1.png" medium="image" type="image/png" width="300" height="250"/>
+    </item>
+    <item>
+      <title>Workshop: Population Genomics in R</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-08-06-workshop-population-genomics-in-r</link>
+      <description>This workshop cover analyses of plan pathological data from tools such as whole-genome variant calling and genotyping-by-sequencing or RADseq once variant call data are in hand. This workshop will not cover genome assembly, read mapping to reference genomes or the calling of variants.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2018-08-06-workshop-population-genomics-in-r</guid>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-08-06-workshop-population-genomics-in-r/workshop-nik.png" medium="image" type="image/png" width="300" height="313"/>
+    </item>
+    <item>
+      <title>Establishing a community for supporting and fostering adoption of reproducible research using R</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-07-13-talk-establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r</link>
+      <description>Lightning talk presented at useR!2018 in Brisbane, Queensland, Australia by Adam Sparks who discuss our methods of community building and what has worked and what has not for others that may wish to pursue similar efforts</description>
+      <category>Talks</category>
+      <guid>https://www.openplantpathology.org/posts/2018-07-13-talk-establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r</guid>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-07-13-talk-establishing-a-community-for-supporting-and-fostering-adoption-of-reproducible-research-using-r/talk_opp1.png" medium="image" type="image/png" width="503" height="350"/>
+    </item>
+    <item>
+      <title>Workshop: Introduction to Multivariate Statistics Using R</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-07-12-workshop-introduction-to-multivariate-statistics-using-r</link>
+      <description>This workshop aims to introduce new users to several different and useful multivariate analysis methods available in the R statistical computing language. It is focus will be on application rather than background theory.</description>
+      <category>Workshops</category>
+      <guid>https://www.openplantpathology.org/posts/2018-07-12-workshop-introduction-to-multivariate-statistics-using-r</guid>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-07-12-workshop-introduction-to-multivariate-statistics-using-r/workshop_neil.png" medium="image" type="image/png" width="458" height="379"/>
+    </item>
+    <item>
+      <title>Open ideas, data and code sharing: epidemiologists should be in front!</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-06-11-open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front</link>
+      <description>Talk given by OPP Founder, Emerson M. Del Ponte, at the 12 International Epidemiology Workshop on June 12 2018 (Lillehammer, Norway) to promote the initiative among plant disease epidemiologits</description>
+      <category>Talks</category>
+      <guid>https://www.openplantpathology.org/posts/2018-06-11-open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front</guid>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-06-11-open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front/talk_opp1.png" medium="image" type="image/png" width="503" height="350"/>
+    </item>
+    <item>
+      <title>The fall of an empire</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire</link>
+      <description>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire</guid>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire/post-fall-empire.png" medium="image" type="image/png" width="632" height="628"/>
+    </item>
+    <item>
+      <title>What is going on in OPP? a quick summary of the first five months</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-05-20-what-is-going-on-in-opp-a-quick-summary-of-the-first-five-months</link>
+      <description>OPP was created in early January and we had no idea how OPP would be received and whether it would catch interest and be sustainable. In this post, we provide a brief summary of major achievements during the first five months of OPP.</description>
+      <category>General</category>
+      <guid>https://www.openplantpathology.org/posts/2018-05-20-what-is-going-on-in-opp-a-quick-summary-of-the-first-five-months</guid>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Are you a scientist dealing with computational plant pathology? Then let's connect and code together!</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2018-01-01-are-you-a-scientist-dealing-with-computational-plant-pathology-then-lets-connect-and-code-together</link>
+      <description>We propose to develop a community that values the sharing of knowledge, ideas and data; building capacity; and promotes open and reproducible research to benefit plant pathologists.</description>
+      <category>General</category>
+      <guid>https://www.openplantpathology.org/posts/2018-01-01-are-you-a-scientist-dealing-with-computational-plant-pathology-then-lets-connect-and-code-together</guid>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2018-01-01-are-you-a-scientist-dealing-with-computational-plant-pathology-then-lets-connect-and-code-together/opp1.png" medium="image" type="image/png" width="671" height="657"/>
+    </item>
+  </channel>
+</rss>

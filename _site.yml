@@ -2,6 +2,7 @@ name: "Open Plant Pathology"
 title: "Open Plant Pathology"
 google_analytics: "UA-112255011-1"
 description: |
+  The Open Plant Pathology (OPP) initiative supports and promotes openness, transparency and reproducibility of scientific research data and methods applied to plant pathological research and applications.
 output_dir: "docs"
 favicon: images/favicon.ico
 base_url: https://www.openplantpathology.org/
