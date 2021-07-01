@@ -26,7 +26,7 @@ Presenters: Associate Professor Adam H. Sparks^1,2^ and Dr Paul Melloy^2^ \
 Institution: ^1^ Department of Primary Industries and Regional Development, Farming Systems Innovation and ^2^ University of Southern Queensland, Centre for Crop Health \
 Date: 24 Jun 2021 \
 Time: 13:00AM - 14:30PM AWST \
-Host: Dr Krishna Jagadish, Kansas State University, Department of Agronomy \
+Host: Dr Krishna Jagadish SV, Kansas State University, Department of Agronomy \
 Links: [Video](https://youtu.be/PO958Vhdiss) \| [Slides](https://speakerdeck.com/adamhsparks/climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease)
 
 !["CHaBits logo. Provided by CHaBits"](chabits.png)
