@@ -29,7 +29,7 @@ Time: 13:00AM - 14:30PM AWST \
 Host: Dr Krishna Jagadish, Kansas State University, Department of Agronomy \
 Links: [Video](https://youtu.be/PO958Vhdiss) \| [Slides](https://speakerdeck.com/adamhsparks/climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease)
 
-![](chabits.png)
+!["CHaBits logo. Provided by CHaBits"](chabits.png)
 
 Recently [Adam Sparks](https://adamhsparks.com/) and [Paul Melloy](https://staffprofile.usq.edu.au/Profile/Paul-Melloy) joined the CHaBits, Consortium for Heat and Biotic Stress, to discuss the effects of climate change on plant disease.
 They covered the basic pathogen groups and the plant disease triangle to give participants a good background on how and why climate change will affect plant disease by affecting the host, pathogen and environment.
