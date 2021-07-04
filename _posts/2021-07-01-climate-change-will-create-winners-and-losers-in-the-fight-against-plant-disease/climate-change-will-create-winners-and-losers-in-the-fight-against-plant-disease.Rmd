@@ -27,7 +27,7 @@ Institution: ^1^ Department of Primary Industries and Regional Development, Farm
 Date: 24 Jun 2021 \
 Time: 13:00AM - 14:30PM AWST \
 Host: Dr Krishna Jagadish SV, Kansas State University, Department of Agronomy \
-Links: [Video](https://youtu.be/PO958Vhdiss) \| [Slides](https://speakerdeck.com/adamhsparks/climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease)
+Links: [Video](https://youtu.be/PO958Vhdiss) \| [Slides](https://speakerdeck.com/adamhsparks/climate-change-will-create-winners-and-losers-in-the-fight-against-plant-disease) \| [Slides DOI](https://doi.org/10.17605/OSF.IO/8AWVD)
 
 !["CHaBits logo. Provided by CHaBits"](chabits.png)
 
