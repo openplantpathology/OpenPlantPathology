@@ -15,7 +15,7 @@
     ],
     "contents": "\nAbout\nPresenter: Prof. Elizabeth Aitken\nInstitution: The University of Queensland, School of Agriculture and Food Sciences\nHost: Queensland Chapter Australiasan Plant Pathology Society, @qldapps\nLinks: Video\nDOI: 10.17605/OSF.IO/XGTQV\nAbstract\nProfessor Elizabeth Aitken has been an academic at UQ since 1993 lecturing plant pathology and fungal biology at undergraduate and postgraduate level. Over that period much of her research has focused on diseases of tropical crops in particular banana, ginger, cotton and sunflower. Research topics have included the genetics of plant-pathogen interactions, molecular aspects of pathogenicity and disease diagnostics. Currently, her lab is concentrating on Fusarium wilt, particularly on banana where host resistance, pathogen diversity and etiology are being explored. However, none of this work would have happened without the involvement of the numerous postgraduate and Honours students and postdocs, who have been in the Aitken lab over the years, as well as successful collaborations with colleagues. Liz has also taken on significant committee roles in postgraduate student mentoring, biosafety and research integrity within the UQ community.\n\n\n\n",
     "preview": "posts/2021-07-15-fusarium-wilt-of-banana-an-inevitable-disease/qld-apps-seminar-aitken.jpg",
-    "last_modified": "2021-07-15T18:39:33+08:00",
+    "last_modified": "2021-07-15T21:09:41+08:00",
     "input_file": {}
   },
   {
@@ -366,8 +366,8 @@
   },
   {
     "path": "posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis/",
-    "title": "Seminar: Rubber leaf drop - in defence of Pestalotiopsis",
-    "description": "Seminar given by Dr. Anthony Young for the CCH-USQ Seminar Series. Dr. Young is a Senior Lecturer in Crop Protection at The University of Queensland, Gatton Campus. In this seminar, he will explore the epidemiology of rubber (Hevea brasiliensis) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term ‘disease.’",
+    "title": "Rubber leaf drop - in defence of Pestalotiopsis",
+    "description": "Seminar given by Dr. Anthony Young for the CCH-USQ Seminar Series. Dr. Young is a Senior Lecturer in Crop Protection at The University of Queensland, Gatton Campus. In this seminar, he will explore the epidemiology of rubber (_Hevea brasiliensis_) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term 'disease.'",
     "author": [
       {
         "name": "Adam Sparks",
@@ -378,9 +378,9 @@
     "categories": [
       "CCH-USQ Seminars"
     ],
-    "contents": "\nAbout\nPresenter: Dr. Anthony Young - USQ, Australia\nDate: 23 Feb 2021\nHost: CCH-Seminar Series\nLinks: Video\nAbstract\n‘Disease’ is a catch-all term that reflects anything that adversely impacts the organism in question. We come to think of diseases as always being associated with a pathogen, and we almost invariably consider the pathogen as the ‘cause’ of the disease. Of course, this contravenes the central tenet of the disease triangle: ignoring the role of the environment limits our understanding of the disease presentation. Furthermore, given a climate that is changing in front of our eyes, there is the strong prospect that the role of the pathogen will likewise change through the prism of the disease triangle. In this presentation, Dr. Young will explore the epidemiology of rubber (Hevea brasiliensis) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term ‘disease.’ During this presentation he will explore the case against the foliar pathogen Pestalotiopsis in relation to rubber leaf drop and discuss more generally the principles of plant pathology.\n\n\n\n",
+    "contents": "\nAbout\nPresenter: Dr. Anthony Young\nInstitution: The University of Queensland, School of Agriculture and Food Sciences\nDate: 23 Feb 2021\nHost: CCH-Seminar Series\nLinks: Video\nDOI: 10.17605/OSF.IO/TRFC2\nAbstract\n‘Disease’ is a catch-all term that reflects anything that adversely impacts the organism in question. We come to think of diseases as always being associated with a pathogen, and we almost invariably consider the pathogen as the ‘cause’ of the disease. Of course, this contravenes the central tenet of the disease triangle: ignoring the role of the environment limits our understanding of the disease presentation. Furthermore, given a climate that is changing in front of our eyes, there is the strong prospect that the role of the pathogen will likewise change through the prism of the disease triangle. In this presentation, Dr. Young will explore the epidemiology of rubber (Hevea brasiliensis) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term ‘disease.’ During this presentation he will explore the case against the foliar pathogen Pestalotiopsis in relation to rubber leaf drop and discuss more generally the principles of plant pathology.\n\n\n\n",
     "preview": "posts/2021-02-22-seminar-rubber-leaf-drop-in-defence-of-pestalotiopsis/anthony.png",
-    "last_modified": "2021-03-10T08:19:29+08:00",
+    "last_modified": "2021-07-15T21:19:09+08:00",
     "input_file": {},
     "preview_width": 499,
     "preview_height": 499
@@ -476,16 +476,16 @@
     "author": [
       {
         "name": "Adam Sparks",
-        "url": "https://twitter.com/adamhsparks"
+        "url": "https://adamhsparks.com"
       }
     ],
     "date": "2020-10-30",
     "categories": [
       "CCH-USQ Seminars"
     ],
-    "contents": "\nAbout\nPresenter: Araz Solman\nInstitution: Queensland Department of Agriculture and Fisheries\nDate: October 30th 2020\nHost: Adam Sparks\nLinks: Video\nAbstract\nResearch into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: Pyrenophora tritici-repentis (Ptr) and Parastagonospora nodorum (Pan). These fungi commonly infect wheat leaves, causing yield loss by reducing leaf area available for photosynthesis. Symptoms caused by these fungi are very similar and often difficult to distinguish visually. Symptoms can also be misdiagnosed when unrelated wheat pathogens challenge conventional diagnosis. Results of field survey across WA wheatbelt showed that co-infection by Ptr and Pan is prevalent and likely to be commonplace. Furthermore, under controlled environment conditions, Ptr and Pan can complement the infection of co-inoculated leaves causing more rapid and extensive disease damage. This complementation is most evident in susceptible wheat cultivars and is highly influenced by the inoculation sequence of Ptr and Pan. Mechanisms governing this complementation are unclear but initial cytological evidence points towards an anatomical separation in leaf tissue occupied that may enable Ptr-Pan co-existence.\n\n\n\n\n",
+    "contents": "\nAbout\nPresenter: Dr Araz Solman\nInstitution: Queensland Department of Agriculture and Fisheries\nDate: October 30th 2020\nHost: USQ CCH\nLinks: Video\nDOI: 10.17605/OSF.IO/MCQDG\nAbstract\nResearch into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: Pyrenophora tritici-repentis (Ptr) and Parastagonospora nodorum (Pan). These fungi commonly infect wheat leaves, causing yield loss by reducing leaf area available for photosynthesis. Symptoms caused by these fungi are very similar and often difficult to distinguish visually. Symptoms can also be misdiagnosed when unrelated wheat pathogens challenge conventional diagnosis. Results of field survey across WA wheatbelt showed that co-infection by Ptr and Pan is prevalent and likely to be commonplace. Furthermore, under controlled environment conditions, Ptr and Pan can complement the infection of co-inoculated leaves causing more rapid and extensive disease damage. This complementation is most evident in susceptible wheat cultivars and is highly influenced by the inoculation sequence of Ptr and Pan. Mechanisms governing this complementation are unclear but initial cytological evidence points towards an anatomical separation in leaf tissue occupied that may enable Ptr-Pan co-existence.\n\n\n\n\n",
     "preview": "posts/2020-10-30-a-tale-of-two-crop-diseases/seminar-araz.png",
-    "last_modified": "2021-02-25T17:18:41+08:00",
+    "last_modified": "2021-07-15T21:09:28+08:00",
     "input_file": {},
     "preview_width": 607,
     "preview_height": 545

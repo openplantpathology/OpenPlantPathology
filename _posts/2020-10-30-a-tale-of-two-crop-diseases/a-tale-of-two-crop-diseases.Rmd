@@ -4,7 +4,7 @@ description: |
   Seminar given by Dr. Araz Solman from the Queensland Department of Agriculture and Fisheries. Short abstract: Research into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: _Pyrenophora tritici-repentis_ (Ptr) and _Parastagonospora nodorum_ (Pan).
 author:
   - name: Adam Sparks
-    url: https://twitter.com/adamhsparks
+    url: https://adamhsparks.com
 date: 10-30-2020
 output:
   distill::distill_article:
@@ -15,14 +15,24 @@ categories:
 ---
 
 ### About
-Presenter: Araz Solman  
-Institution: Queensland Department of Agriculture and Fisheries  
-Date: October 30th 2020  
-Host: Adam Sparks  
-Links: [Video](https://youtu.be/7ptnGlNvCeQ) 
+
+Presenter: Dr Araz Solman \
+Institution: Queensland Department of Agriculture and Fisheries \
+Date: October 30th 2020 \
+Host: USQ CCH \
+Links: [Video](https://youtu.be/7ptnGlNvCeQ)  \
+DOI: [10.17605/OSF.IO/MCQDG](https://doi.org/10.17605/OSF.IO/MCQDG)
 
 ### Abstract
 
-Research into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: *Pyrenophora tritici-repentis* (Ptr) and *Parastagonospora nodorum* (Pan). These fungi commonly infect wheat leaves, causing yield loss by reducing leaf area available for photosynthesis. Symptoms caused by these fungi are very similar and often difficult to distinguish visually. Symptoms can also be misdiagnosed when unrelated wheat pathogens challenge conventional diagnosis. Results of field survey across WA wheatbelt showed that co-infection by Ptr and Pan is prevalent and likely to be commonplace. Furthermore, under controlled environment conditions, Ptr and Pan can complement the infection of co-inoculated leaves causing more rapid and extensive disease damage. This complementation is most evident in susceptible wheat cultivars and is highly influenced by the inoculation sequence of Ptr and Pan. Mechanisms governing this complementation are unclear but initial cytological evidence points towards an anatomical separation in leaf tissue occupied that may enable Ptr-Pan co-existence.
+Research into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease.
+However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach.
+In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: *Pyrenophora tritici-repentis* (Ptr) and *Parastagonospora nodorum* (Pan).
+These fungi commonly infect wheat leaves, causing yield loss by reducing leaf area available for photosynthesis. Symptoms caused by these fungi are very similar and often difficult to distinguish visually.
+Symptoms can also be misdiagnosed when unrelated wheat pathogens challenge conventional diagnosis.
+Results of field survey across WA wheatbelt showed that co-infection by Ptr and Pan is prevalent and likely to be commonplace.
+Furthermore, under controlled environment conditions, Ptr and Pan can complement the infection of co-inoculated leaves causing more rapid and extensive disease damage.
+This complementation is most evident in susceptible wheat cultivars and is highly influenced by the inoculation sequence of Ptr and Pan.
+Mechanisms governing this complementation are unclear but initial cytological evidence points towards an anatomical separation in leaf tissue occupied that may enable Ptr-Pan co-existence.
 
 ![](seminar-araz.png)
