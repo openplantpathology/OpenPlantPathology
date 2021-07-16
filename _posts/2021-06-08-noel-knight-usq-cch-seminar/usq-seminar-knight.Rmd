@@ -24,7 +24,7 @@ Presenter: Dr. Noel Knight \
 Institution: Curtin University, Centre for Crop and Disease Management, Fungicide Resistance Group \
 Date: 08 Jun 2021 \
 Time: 11:00AM - 12:00PM AEST \
-Host: Adam Sparks \
+Host: USQ CCH \
 Links: [Video](https://youtu.be/h2B5TiSjjHM)  \| [Slides](https:/https://osf.io/ey9m2/) \
 DOI: [10.17605/OSF.IO/UT2ZG](https://doi.org/10.17605/OSF.IO/UT2ZG)
 
