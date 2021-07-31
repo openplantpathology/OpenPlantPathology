@@ -1,0 +1,44 @@
+---
+title: "Diagnosis of African Citrus Greening"
+description: |
+  African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf). To fill the Australian capability and capacity gaps for diagnostics of African greening, I undertook a two-week diagnostic training at Citrus Research International (CRI), Nelspruit, South Africa in June 2019. This presentation will show what I had gained from the training.
+Tuan Nguyen
+date: 07-31-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Qld-APPS Seminars
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### About
+
+Presenter: Dr Tuan Nguyen \
+Institution: Queensland Department of Agriculture and Fisheries, Biosecurity Queensland, Plant Biosecurity Laboratory, Plant Biosecurity and Product Integrity Program \
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Links: [Video]() \
+DOI: []()
+
+## Biography
+
+Dr Tuan Nguyen is a Senior Scientist working at the Plant Biosecurity Laboratory, Plant Biosecurity and Product Integrity Program, Biosecurity Queensland, Queensland Department of Agriculture and Fisheries.
+His role is to lead the Panama Diagnostic Team providing research, diagnostic and intelligence services on Panama Tropical Race 4 (TR4) disease to support the Panama TR4 Program for early detection of TR4.
+He also provides diagnostic support for other plant pests and diseases to meet the biosecurity needs of Queensland.
+
+##Abstract
+
+African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf).
+Once infecting citrus plants, this disease causes a number of symptoms including foliar blotchy mottle, yellow leaf veins, sparse foliage, and smaller fruits showing ripening color inversion.
+African greening is exotic to Australia (currently only present in Africa and some Middle East countries) but due to its significant impact on citrus plants, this disease may devastate the Australian citrus industry if it spreads to our country.
+Early detection of CLaf and its vector (the African citrus psyllid _Trioza erytreae_) by regular surveillance and diagnostics can protect the citrus industry.
+A PCR diagnostic assay for CLaf has been developed.
+However, due to a lack of reference DNA materials and diagnostic skills for the African greening, this assay has not been validated and used for diagnostics.
+To fill the Australian capability and capacity gaps for diagnostics of African greening, I undertook a two-week diagnostic training at Citrus Research International (CRI), Nelspruit, South Africa in June 2019, funded by Plant Health Australia under the Diagnostic Residential Program.
+The purposes of my trip were to acquire diagnostic skills for the African greening, as well as to source infected plant materials to generate positive control DNA for the validation of the CLaf PCR diagnostic assay.
+This presentation will show what I had gained from the training including (1) assessing if the plant is infected with African Greening based on disease symptoms, (2) sampling and diagnosing the disease and also (3) identification of the African citrus psyllid _Trioza erytreae_.

@@ -1,0 +1,44 @@
+---
+title: "Characterization of Pyrenophora teres isolates and mapping of virulence genes"
+description: |
+  Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_.
+author:
+  - name: Buddhika Amarasinghe Dahanayaka
+date: 07-31-2021
+output:
+  distill::distill_article:
+    self_contained: false
+draft:true
+categories:
+  - Qld-APPS Seminars
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About
+
+Presenter: Buddhika Amarasinghe Dahanayaka \
+Institution: University of Southern Queensland, Centre for Crop Health \
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Links: [Video]() \
+DOI: []()
+
+## Biography
+
+Buddhika Amarasinghe Dahanayaka is a third year PhD student in the Centre for Crop Health at the University of Southern Queensland.
+Her PhD research is based on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_.
+She completed her Master of Philosophy at Wayamba University of Sri Lanka on identifying genes responsible for salinity tolerance in rice and her research interests include QTL mapping, population genetics, phylogenetics and bioinformatics.
+Her recent publications based on her PhD project, "[Population structure of _Pyrenophora teres_ f. _teres_ barley pathogens from different continents](https://apsjournals.apsnet.org/doi/10.1094/PHYTO-09-20-0390-R?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)" and "Investigating in vitro mating preference between or within the two forms of _Pyrenophora teres_ and its hybrids](https://apsjournals.apsnet.org/doi/abs/10.1094/PHYTO-02-21-0058-R)", are available at _Phytopathology_ (_Firstlook_).
+
+## Abstract
+
+Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry.
+My PhD study addressed some of the research gaps involving the _P. teres_-barley pathosystem: 1) _Pyrenophora teres_ f. _teres_ (_Ptt_) populations collected from different continents were genetically characterised and revealed recent/ongoing gene migration among/within different continents.
+Two field hybrids were also identified.
+2) The mating preference between the two forms of _P. teres_ and its hybrids were investigated by crossing different sets of _Ptt_ and _Pyrenophora teres_ f. _maculata_ (_Ptm_) isolates.
+This indicated that _Ptm_ did not have a mating preference for the same form but mostly hybridised with _Ptt_ isolates.
+_Ptt_ isolates had greater reproduction vigour than _Ptm_ isolates under the given laboratory conditions.
+3) Quantitative trait loci (QTL) mapping of a _Ptt_/_Ptm_ cross detected nine QTL associated with virulence and leaf symptoms on five different linkage groups/chromosomes.
