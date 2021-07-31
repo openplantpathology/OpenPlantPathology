@@ -1,8 +1,9 @@
 ---
 title: "Diagnosis of African Citrus Greening"
 description: |
-  African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf). To fill the Australian capability and capacity gaps for diagnostics of African greening, I undertook a two-week diagnostic training at Citrus Research International (CRI), Nelspruit, South Africa in June 2019. This presentation will show what I had gained from the training.
-Tuan Nguyen
+  African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf). To fill the Australian capability and capacity gaps for diagnostics of African greening, I undertook a two-week diagnostic training at Citrus Research International (CRI), Nelspruit, South Africa in June 2019. This presentation will show what I had gained from the training.  Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
+author:
+  - name: Dr Tuan Nguyen
 date: 07-31-2021
 output:
   distill::distill_article:
