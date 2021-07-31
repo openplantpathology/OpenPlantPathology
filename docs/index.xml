@@ -18,6 +18,7 @@
       <dc:creator>Austin McCoy</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</link>
       <description>'hagis' is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.</description>
+      <category>R packages</category>
       <guid>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</guid>
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data/hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-1.png" medium="image" type="image/png" width="1248" height="768"/>

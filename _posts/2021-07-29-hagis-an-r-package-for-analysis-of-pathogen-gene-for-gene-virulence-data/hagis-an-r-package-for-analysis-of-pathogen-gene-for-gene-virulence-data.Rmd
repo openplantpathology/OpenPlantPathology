@@ -8,6 +8,8 @@ date: 07-29-2021
 output:
   distill::distill_article:
     self_contained: false
+categories: 
+  - R packages
 ---
 
 
