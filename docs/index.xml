@@ -177,10 +177,10 @@
       <media:content url="https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes/fgsc.png" medium="image" type="image/png" width="575" height="443"/>
     </item>
     <item>
-      <title>epifitter, a tool for analysing plant disease epidemics</title>
+      <title>'epifitter', a tool for analysing plant disease epidemics</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</link>
-      <description>Epifitter is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
+      <description>'epifitter' is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
       <category>R packages</category>
       <guid>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</guid>
       <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
