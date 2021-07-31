@@ -3,8 +3,7 @@ title: "Fusarium wilt of banana – an inevitable disease"
 description: |
   Professor Elizabeth Aitken presents her group's work on Fusarium wilt, particularly on banana where host resistance, pathogen diversity and etiology are being explored for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
 author:
-  - name: Adam Sparks
-    url: https://adamhsparks.com
+  - name: Prof. Elizabeth Aitken
 date: 07-15-2021
 output:
   distill::distill_article:
@@ -23,11 +22,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Presenter: Prof. Elizabeth Aitken \
 Institution: The University of Queensland, School of Agriculture and Food Sciences \
-Host: Queensland Chapter Australiasan Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
 Links: [Video](https://youtu.be/kbRoZublp1M) \
 DOI: [10.17605/OSF.IO/XGTQV](https://doi.org/10.17605/OSF.IO/XGTQV)
 
-### Abstract
+### Biography
 
 Professor Elizabeth Aitken has been an academic at UQ since 1993 lecturing plant pathology and fungal biology at undergraduate and postgraduate level.
 Over that period much of her research has focused on diseases of tropical crops in particular banana, ginger, cotton and sunflower.
