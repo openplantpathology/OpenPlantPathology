@@ -10,7 +10,6 @@ author:
 output:
   distill::distill_article:
     self_contained: false
-preview: epifitter.png
 categories: 
   - R4PlantPath
 bibliography: bibliography.bib
