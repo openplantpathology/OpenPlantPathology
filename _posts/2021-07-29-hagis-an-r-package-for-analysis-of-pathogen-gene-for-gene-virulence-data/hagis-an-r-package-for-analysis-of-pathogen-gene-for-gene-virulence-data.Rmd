@@ -10,6 +10,7 @@ output:
     self_contained: false
 categories: 
   - R packages
+  - R4PlantPath
 ---
 
 

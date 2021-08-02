@@ -8,9 +8,9 @@ date: 07-31-2021
 output:
   distill::distill_article:
     self_contained: false
+preview: qld-apps-seminar-nguyen.jpg
 categories:
   - Qld-APPS Seminars
-draft: true
 ---
 
 
@@ -23,8 +23,8 @@ knitr::opts_chunk$set(echo = FALSE)
 Presenter: Dr Tuan Nguyen \
 Institution: Queensland Department of Agriculture and Fisheries, Biosecurity Queensland, Plant Biosecurity Laboratory, Plant Biosecurity and Product Integrity Program \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Links: [Video]() \
-DOI: []()
+Links: [Video](https://youtu.be/4GICyR_Gc20) \
+DOI: [10.17605/OSF.IO/ACPB7](https://doi.org/10.17605/OSF.IO/ACPB7)
 
 ## Biography
 
@@ -32,7 +32,7 @@ Dr Tuan Nguyen is a Senior Scientist working at the Plant Biosecurity Laboratory
 His role is to lead the Panama Diagnostic Team providing research, diagnostic and intelligence services on Panama Tropical Race 4 (TR4) disease to support the Panama TR4 Program for early detection of TR4.
 He also provides diagnostic support for other plant pests and diseases to meet the biosecurity needs of Queensland.
 
-##Abstract
+## Abstract
 
 African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf).
 Once infecting citrus plants, this disease causes a number of symptoms including foliar blotchy mottle, yellow leaf veins, sparse foliage, and smaller fruits showing ripening color inversion.

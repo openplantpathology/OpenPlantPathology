@@ -12,13 +12,44 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 29 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
+      <dc:creator>Buddhika Amarasinghe Dahanayaka</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</link>
+      <description>Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Diagnosis of African Citrus Greening</title>
+      <dc:creator>Dr Tuan Nguyen</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-07-31-diagnosis-of-african-citrus-greening</link>
+      <description>African citrus greening (or also known as African greening) is a serious, debilitating, insect-transmissible citrus disease associated with the heat sensitive, phloem-limited, non-cultured bacterial species _Candidatus_ Liberibacter africanus (CLaf). To fill the Australian capability and capacity gaps for diagnostics of African greening, I undertook a two-week diagnostic training at Citrus Research International (CRI), Nelspruit, South Africa in June 2019. This presentation will show what I had gained from the training.  Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-31-diagnosis-of-african-citrus-greening</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-diagnosis-of-african-citrus-greening/qld-apps-seminar-nguyen.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Mycorrhizal fungi improve yield, biomass and nitrogen fixation by rhizobia but increase population densities of the root-lesion nematode Pratylenchus thornei in mung bean</title>
+      <dc:creator>Elaine Gough</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean</link>
+      <description>Mung bean is a short-season, high-value legume crop in eastern Australia that is susceptible to the plant-parasitic root-lesion nematode _Pratylenchus thornei_. It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates. Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and Pratylenchus population density in crops. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean/qld-apps-seminar-gough.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>'hagis', an R package for analysis of pathogen gene-for-gene virulence data</title>
       <dc:creator>Austin McCoy</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</link>
       <description>'hagis' is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.</description>
       <category>R packages</category>
+      <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</guid>
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data/hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -182,6 +213,7 @@
       <link>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</link>
       <description>'epifitter' is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
       <category>R packages</category>
+      <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</guid>
       <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics/epifitter.png" medium="image" type="image/png" width="499" height="499"/>

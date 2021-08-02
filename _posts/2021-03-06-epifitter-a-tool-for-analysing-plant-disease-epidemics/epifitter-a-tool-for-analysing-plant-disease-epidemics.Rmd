@@ -12,6 +12,7 @@ output:
 preview: epifitter.png
 categories: 
   - R packages
+  - R4PlantPath
 bibliography: references.bib
 ---
 

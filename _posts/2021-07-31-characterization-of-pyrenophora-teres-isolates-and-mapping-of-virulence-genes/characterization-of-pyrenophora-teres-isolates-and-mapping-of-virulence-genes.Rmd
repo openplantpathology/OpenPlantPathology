@@ -8,7 +8,7 @@ date: 07-31-2021
 output:
   distill::distill_article:
     self_contained: false
-draft:true
+preview: qld-apps-seminar-dahanayaka.jpg
 categories:
   - Qld-APPS Seminars
 ---
@@ -23,15 +23,15 @@ knitr::opts_chunk$set(echo = FALSE)
 Presenter: Buddhika Amarasinghe Dahanayaka \
 Institution: University of Southern Queensland, Centre for Crop Health \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Links: [Video]() \
-DOI: []()
+Links: [Video](https://youtu.be/cS3cAwU5jOc) \
+DOI: [10.17605/OSF.IO/TV9CS](https:doi.org//10.17605/OSF.IO/TV9CS)
 
 ## Biography
 
 Buddhika Amarasinghe Dahanayaka is a third year PhD student in the Centre for Crop Health at the University of Southern Queensland.
 Her PhD research is based on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_.
 She completed her Master of Philosophy at Wayamba University of Sri Lanka on identifying genes responsible for salinity tolerance in rice and her research interests include QTL mapping, population genetics, phylogenetics and bioinformatics.
-Her recent publications based on her PhD project, "[Population structure of _Pyrenophora teres_ f. _teres_ barley pathogens from different continents](https://apsjournals.apsnet.org/doi/10.1094/PHYTO-09-20-0390-R?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)" and "Investigating in vitro mating preference between or within the two forms of _Pyrenophora teres_ and its hybrids](https://apsjournals.apsnet.org/doi/abs/10.1094/PHYTO-02-21-0058-R)", are available at _Phytopathology_ (_Firstlook_).
+Her recent publications based on her PhD project, "[Population structure of _Pyrenophora teres_ f. _teres_ barley pathogens from different continents](https://apsjournals.apsnet.org/doi/10.1094/PHYTO-09-20-0390-R?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)" and "[Investigating in vitro mating preference between or within the two forms of _Pyrenophora teres_ and its hybrids](https://apsjournals.apsnet.org/doi/abs/10.1094/PHYTO-02-21-0058-R)", are available at _Phytopathology_ (_Firstlook_).
 
 ## Abstract
 
