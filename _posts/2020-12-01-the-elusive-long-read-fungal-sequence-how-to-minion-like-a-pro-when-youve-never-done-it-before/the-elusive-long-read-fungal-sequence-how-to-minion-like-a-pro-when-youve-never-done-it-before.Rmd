@@ -13,6 +13,7 @@ output:
 preview: seminar-lauren.png
 categories: 
   - CCH-USQ Seminars
+doi: "10.17605/OSF.IO/M6FGY"
 ---
 
 ```{r setup, include=FALSE}
@@ -22,11 +23,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ### About
 
 Presenter: Ms. Lauren Huth \
-Institution: USQ, Institute for Life Sciences and the Environment \
-Date: 1 Dec 2020 \
+Institution: University of Southern Queensland, Institute for Life Sciences and the Environment \
+Date: December 1, 2020 \
 Host: USQ CCH \
-Links: [Video](https://www.youtube.com/watch?v=bbEpGrsBuNc) \
-DOI: [10.17605/OSF.IO/M6FGY](https://doi.org/10.17605/OSF.IO/M6FGY)
+Links: [Video](https://www.youtube.com/watch?v=bbEpGrsBuNc)
 
 ### Abstract
 
