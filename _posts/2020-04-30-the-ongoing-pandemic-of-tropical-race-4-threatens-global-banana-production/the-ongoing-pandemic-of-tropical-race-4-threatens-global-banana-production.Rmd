@@ -7,17 +7,37 @@ output:
   distill::distill_article:
     self_contained: false
 preview: seminar-kema.png
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.com/
 categories:
   - Virtual seminars
+doi: "10.17605/OSF.IO/69PBA"
 ---
 
-[Slides](https://osf.io/69pba/) | [Video](https://www.youtube.com/watch?v=t9DARCO0wE8&t=1533s)
+### About
+
+Presenter: Dr. Gert Kema\
+Institution: Wageningen University & Research, Biointeractions and Plant Health\
+Date: April 30, 2020\
+Host: Dr. Benjamin Schwessinger\
+Links: [Video](https://www.youtube.com/watch?v=t9DARCO0wE8&t=1533s) \| [Slides](https://doi.org/10.17605/OSF.IO/69PBA)
 
 ### Abstract
 
-Michel banana production in the previous century. After years of muddling through, there remained just one solution: Cavendish bananas. Their excelling natural resistance to the so-called Fusarium Race 1 strains, which killed Gros Michel, saved the industry. It turned them into an example of durable resistance for at least 70 years around the world, while growing in Race 1 infested soils. This boomed Cavendish production, which today covers 95% of the export trade and approximately 50% of the overall global banana production. 
-<br>
+Fusarium wilt of banana decimated Gros Michel banana production in the previous century.
+After years of muddling through, there remained just one solution: Cavendish bananas.
+Their excelling natural resistance to the so-called Fusarium Race 1 strains, which killed Gros Michel, saved the industry.
+It turned them into an example of durable resistance for at least 70 years around the world, while growing in Race 1 infested soils.
+This boomed Cavendish production, which today covers 95% of the export trade and approximately 50% of the overall global banana production. 
+
 ![](seminar-kema.png){style="width: 60%;  display: block; margin: 0 auto;"}
 
-The risks of such a monoculture have for long been underestimated, despite the fact that another Fusarium strain affected Cavendish already in the 1960’s. This was the source of an epidemic that stayed for long under the radar. Until 2014, when this so-called Tropical Race 4 (TR4) strain was detected in Jordan, outside its endemic Southeast Asian environment. From thereon it rapidly disseminated to many other countries from Africa, to the Indian subcontinent, the Middle East, and recently to Latin America. Since TR4 also affect many other varieties, including major staple foods such as plantain, it also threatens food security. The Cavendish debacle is an example of fragile agriculture. This has to change and requires thorough analyses, and new initiatives to diversify the crop. In this talk I will review our understanding of the phylogeography of TR4, and discuss on the broad genetic potential of the crop for breeding as well as options for disease management to avoid a repetition of history."
+The risks of such a monoculture have for long been underestimated, despite the fact that another Fusarium strain affected Cavendish already in the 1960’s.
+This was the source of an epidemic that stayed for long under the radar. Until 2014, when this so-called Tropical Race 4 (TR4) strain was detected in Jordan, outside its endemic Southeast Asian environment.
+From thereon it rapidly disseminated to many other countries from Africa, to the Indian subcontinent, the Middle East, and recently to Latin America.
+Since TR4 also affect many other varieties, including major staple foods such as plantain, it also threatens food security.
+The Cavendish debacle is an example of fragile agriculture.
+This has to change and requires thorough analyses, and new initiatives to diversify the crop.
+In this talk I will review our understanding of the phylogeography of TR4, and discuss on the broad genetic potential of the crop for breeding as well as options for disease management to avoid a repetition of history."
 
