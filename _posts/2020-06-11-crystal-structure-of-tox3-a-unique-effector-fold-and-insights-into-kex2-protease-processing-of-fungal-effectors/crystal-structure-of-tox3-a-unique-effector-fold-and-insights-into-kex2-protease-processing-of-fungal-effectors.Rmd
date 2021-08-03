@@ -12,6 +12,7 @@ output:
 preview: seminar-simon.png
 categories:
   - Virtual seminars
+doi: "10.17605/OSF.IO/V435Z"
 ---
 
 ### About
@@ -23,6 +24,11 @@ Links: [Video](https://www.youtube.com/watch?v=r-KnayUpSPg) \| [Slides](https://
 
 ### Abstract
 
-Plant pathogens cause disease through secreted effector proteins, which act to modulate their hosts physiology and promote infection. Typically, the sequence of effector proteins provides little functional information and further targeted experimentation is required. We look to utilise structural biology and biochemical approaches to help us understand effector function. In this talk I will present lessons learnt from our structural studies of SnTox3, an effector from the fungal pathogen *Parastagonospora nodorum*. This will include methodologies we developed that can be employed to work with other cysteine-rich effectors. I will also present data that support the definition of a new class of fungal effectors and how the identification and classification of these effectors will have implications for the approaches used to study them.
+Plant pathogens cause disease through secreted effector proteins, which act to modulate their hosts physiology and promote infection.
+Typically, the sequence of effector proteins provides little functional information and further targeted experimentation is required.
+We look to utilise structural biology and biochemical approaches to help us understand effector function.
+In this talk I will present lessons learnt from our structural studies of SnTox3, an effector from the fungal pathogen *Parastagonospora nodorum*.
+This will include methodologies we developed that can be employed to work with other cysteine-rich effectors.
+I will also present data that support the definition of a new class of fungal effectors and how the identification and classification of these effectors will have implications for the approaches used to study them.
 
 ![](seminar-simon.png)
