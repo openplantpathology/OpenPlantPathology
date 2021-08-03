@@ -3,7 +3,8 @@ title: "Characterization of Pyrenophora teres isolates and mapping of virulence 
 description: |
   Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
 author:
-  - name: Buddhika Amarasinghe Dahanayaka
+  - name: Adam Sparks
+    url: https://adamhsparks.com
 date: 07-31-2021
 output:
   distill::distill_article:
@@ -11,6 +12,7 @@ output:
 preview: qld-apps-seminar-dahanayaka.jpg
 categories:
   - Qld-APPS Seminars
+doi: "10.17605/OSF.IO/TV9CS"
 ---
 
 
@@ -23,8 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Presenter: Buddhika Amarasinghe Dahanayaka \
 Institution: University of Southern Queensland, Centre for Crop Health \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Links: [Video](https://youtu.be/cS3cAwU5jOc) \
-DOI: [10.17605/OSF.IO/TV9CS](https:doi.org//10.17605/OSF.IO/TV9CS)
+Links: [Video](https://youtu.be/cS3cAwU5jOc)
 
 ## Biography
 
