@@ -12,6 +12,7 @@ output:
 preview: seminar-araz.png
 categories:
   - CCH-USQ Seminars
+doi: "10.17605/OSF.IO/MCQDG"
 ---
 
 ### About
@@ -20,8 +21,7 @@ Presenter: Dr Araz Solman \
 Institution: Queensland Department of Agriculture and Fisheries \
 Date: October 30th 2020 \
 Host: USQ CCH \
-Links: [Video](https://youtu.be/7ptnGlNvCeQ)  \
-DOI: [10.17605/OSF.IO/MCQDG](https://doi.org/10.17605/OSF.IO/MCQDG)
+Links: [Video](https://youtu.be/7ptnGlNvCeQ)
 
 ### Abstract
 
