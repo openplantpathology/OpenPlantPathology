@@ -11,6 +11,7 @@ output:
 preview: qld-apps-seminar-aitken.jpg
 categories:
   - Qld-APPS Seminars
+doi: "10.17605/OSF.IO/XGTQV"
 ---
 
 
@@ -23,8 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Presenter: Prof. Elizabeth Aitken \
 Institution: The University of Queensland, School of Agriculture and Food Sciences \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Links: [Video](https://youtu.be/kbRoZublp1M) \
-DOI: [10.17605/OSF.IO/XGTQV](https://doi.org/10.17605/OSF.IO/XGTQV)
+Links: [Video](https://youtu.be/kbRoZublp1M)
 
 ### Biography
 
