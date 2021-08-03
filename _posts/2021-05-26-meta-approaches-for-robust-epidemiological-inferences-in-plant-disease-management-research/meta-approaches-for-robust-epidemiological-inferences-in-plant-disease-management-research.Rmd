@@ -17,9 +17,8 @@ categories:
 
 ### About
 
-Presenter: Dr. Emerson Del Ponte, Viçosa, Brazil \
+Presenter: Dr. Emerson Del Ponte \
+Instutution: Universidade Federal de Viçosa, Brazil \
 Date: 20 May 2021 \
 Host: Department of Botany and Plant Pathology, Oregon State University \
-Links: [Seminar's Video](https://www.youtube.com/watch?v=xoIWexJ1alU)  
-
-### Abstract
+Links: [Video](https://www.youtube.com/watch?v=xoIWexJ1alU)  
