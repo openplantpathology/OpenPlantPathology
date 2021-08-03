@@ -5,14 +5,20 @@ description: |
 author:
 - name: Adam H. Sparks
   affiliation: University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
+  url: https://adamhsparks.com/
 - name: John P. Thompson
   affiliation: University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU
 output:
   distill::distill_article:
     self_contained: false
+doi: "10.5281/zenodo.5153255"
+slug: nematode_modelling
+citation_url: https://openplantpathology.org/nematode_modelling
 categories: 
   - R4PlantPath
 bibliography: bibliography.bib
+repository_url: https://github.com/adamhsparks/Modelling_Nematode_Populations
+compare_updates_url: https://github.com/adamhsparks/Modelling_Nematode_Populations/compare/v0.0.1...main
 csl: phytopathology.csl
 draft: true
 ---
@@ -28,10 +34,6 @@ knitr::opts_chunk$set(
   autodep = FALSE
 )
 ```
-
-
-[![DOI](https://zenodo.org/badge/119438897.svg)](https://zenodo.org/badge/latestdoi/119438897)
-[![GitHub version](https://img.shields.io/github/release/adamhsparks/Modelling_Nematode_Populations.svg)](https://github.com/adamhsparks/Modelling_Nematode_Populations)
 
 ## Objectives
 
