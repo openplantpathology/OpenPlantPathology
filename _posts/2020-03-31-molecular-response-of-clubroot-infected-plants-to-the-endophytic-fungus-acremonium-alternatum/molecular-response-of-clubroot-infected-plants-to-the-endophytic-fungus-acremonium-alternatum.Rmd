@@ -12,14 +12,16 @@ output:
 preview: seminar-susann.png
 categories:
   - Virtual seminars
+doi: "10.17605/OSF.IO/HSN53"
 ---
 
 ### About
 
-Presenter: Dr. Dr. Susann Auer, Postdoc Technische Universität Dresden\
-Date: March 31 2020 \
+Presenter: Dr. Susann Auer \
+Institution: Technische Universität Dresden\
+Date: March 31, 2020 \
 Host: Benjamin Schwessinger \
-Links: [Video](ttps://youtu.be/vcNz5qatqaE) \| [Slides](https://doi.org/10.17605/OSF.IO/HSN53)
+Links: [Video](https://youtu.be/vcNz5qatqaE) \| [Slides](https://doi.org/10.17605/OSF.IO/HSN53)
 
 ### Abstract
 
