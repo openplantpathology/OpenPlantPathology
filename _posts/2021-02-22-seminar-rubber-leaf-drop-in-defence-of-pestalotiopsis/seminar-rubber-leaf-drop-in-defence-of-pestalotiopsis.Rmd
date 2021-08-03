@@ -13,6 +13,7 @@ output:
 preview: anthony.png
 categories:
   - CCH-USQ Seminars
+doi: "10.17605/OSF.IO/TRFC2"
 ---
 
 ### About
@@ -21,8 +22,7 @@ Presenter: Dr. Anthony Young \
 Institution: The University of Queensland, School of Agriculture and Food Sciences \
 Date: 23 Feb 2021 \
 Host: USQ CCH \
-Links: [Video](https://youtu.be/mxSiEFcgLak) \
-DOI: [10.17605/OSF.IO/TRFC2](https://doi.org/10.17605/OSF.IO/TRFC2)
+Links: [Video](https://youtu.be/mxSiEFcgLak)
 
 ### Abstract
 
