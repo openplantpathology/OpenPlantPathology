@@ -3,7 +3,8 @@ title: "Mycorrhizal fungi improve yield, biomass and nitrogen fixation by rhizob
 description: |
   Mung bean is a short-season, high-value legume crop in eastern Australia that is susceptible to the plant-parasitic root-lesion nematode _Pratylenchus thornei_. It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates. Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and Pratylenchus population density in crops. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
 author:
-  - name: Elaine Gough
+  - name: Adam Sparks
+    url: https://adamhsparks.com
 date: 07-31-2021
 output:
   distill::distill_article:
@@ -11,6 +12,7 @@ output:
 preview: qld-apps-seminar-gough.jpg
 categories:
   - Qld-APPS Seminars
+doi: "10.17605/OSF.IO/J5KXM"
 ---
 
 
@@ -23,8 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 Presenter: Ms Elaine Gough \
 Institution: University of Southern Queensland, Centre for Crop Health \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Links: [Video](https://youtu.be/V28QN7l_enw) \
-DOI: [10.17605/OSF.IO/J5KXM](https://doi.org/10.17605/OSF.IO/J5KXM)
+Links: [Video](https://youtu.be/V28QN7l_enw)
 
 ## Biography
 
