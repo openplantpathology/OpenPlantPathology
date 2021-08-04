@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
+
+<meta property="description" itemprop="description" content="_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper."/>
+
+<link rel="canonical" href="https://openplantpathology.org/nematode_modelling/"/>
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../images/favicon.ico"/>
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2021-08-04"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-08-04"/>
+<meta name="article:author" content="Adam H. Sparks"/>
+<meta name="article:author" content="John P. Thompson"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper."/>
+<meta property="og:url" content="https://openplantpathology.org/nematode_modelling/"/>
+<meta property="og:image" content="https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling/nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png"/>
+<meta property="og:image:width" content="1248"/>
+<meta property="og:image:height" content="768"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Open Plant Pathology"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R"/>
+<meta property="twitter:description" content="_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper."/>
+<meta property="twitter:url" content="https://openplantpathology.org/nematode_modelling/"/>
+<meta property="twitter:image" content="https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling/nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png"/>
+<meta property="twitter:image:width" content="1248"/>
+<meta property="twitter:image:height" content="768"/>
+
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R"/>
+<meta name="citation_fulltext_html_url" content="https://openplantpathology.org/nematode_modelling"/>
+<meta name="citation_doi" content="10.5281/zenodo.5153255"/>
+<meta name="citation_fulltext_world_readable" content=""/>
+<meta name="citation_online_date" content="2021/08/04"/>
+<meta name="citation_publication_date" content="2021/08/04"/>
+<meta name="citation_author" content="Adam H. Sparks"/>
+<meta name="citation_author_institution" content="University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU"/>
+<meta name="citation_author" content="John P. Thompson"/>
+<meta name="citation_author_institution" content="University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU"/>
+<!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Modelling population densities of root-lesion nematode (&lt;i&gt;Pratylenchus thornei&lt;/i&gt;) from soil profile temperatures to choose an optimum sowing date for wheat in a subtropical region;citation_publication_date=2015;citation_volume=183;citation_doi=10.1016/j.fcr.2015.07.005;citation_issn=0378-4290;citation_author=J. P. Thompson"/>
+  <meta name="citation_reference" content="citation_title=Practical Regression and Anova using R;citation_publication_date=2002;citation_publisher=[University of Bath];citation_author=Julian J Faraway"/>
+  <meta name="citation_reference" content="citation_title=readr: Read Rectangular Text Data;citation_publication_date=2017;citation_author=Hadley Wickham;citation_author=Jim Hester;citation_author=Romain Francois"/>
+  <meta name="citation_reference" content="citation_title=ggplot2: Elegant Graphics for Data Analysis;citation_publication_date=2016;citation_publisher=Springer-Verlag New York;citation_author=Hadley Wickham"/>
+  <meta name="citation_reference" content="citation_title=tidyr: Easily Tidy Data with ’spread()’ and ’gather()’ Functions;citation_publication_date=2018;citation_author=Hadley Wickham;citation_author=Lionel Henry"/>
+  <meta name="citation_reference" content="citation_title=dplyr: A Grammar of Data Manipulation;citation_publication_date=2017;citation_author=Hadley Wickham;citation_author=Romain Francois;citation_author=Lionel Henry;citation_author=Kirill Müller"/>
+  <meta name="citation_reference" content="citation_title=tidyverse: Easily Install and Load the ’Tidyverse’;citation_publication_date=2017;citation_author=Hadley Wickham"/>
+  <meta name="citation_reference" content="citation_title=R: A Language and Environment for Statistical Computing;citation_publication_date=2017;citation_publisher=R Foundation for Statistical Computing;citation_author=R: A Language and Environment for Statistical Computing"/>
+  <meta name="citation_reference" content="citation_title=Tidy data;citation_publication_date=2014;citation_volume=59;citation_author=Hadley Wickham"/>
+  <meta name="citation_reference" content="citation_title=Viridis: Default color maps from ’matplotlib’;citation_publication_date=2018;citation_author=Simon Garnier"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","output","doi","slug","citation_url","categories","bibliography","repository_url","compare_updates_url","csl","draft","date","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Linear modelling of soil temperature effects on root lesion nematode population densities in R"]},{"type":"character","attributes":{},"value":["_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","url"]}},"value":[{"type":"character","attributes":{},"value":["Adam H. Sparks"]},{"type":"character","attributes":{},"value":["University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU"]},{"type":"character","attributes":{},"value":["https://adamhsparks.com/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["John P. Thompson"]},{"type":"character","attributes":{},"value":["University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["10.5281/zenodo.5153255"]},{"type":"character","attributes":{},"value":["nematode_modelling"]},{"type":"character","attributes":{},"value":["https://openplantpathology.org/nematode_modelling"]},{"type":"character","attributes":{},"value":["R4PlantPath","Reproducible Research"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["https://github.com/adamhsparks/Modelling_Nematode_Populations"]},{"type":"character","attributes":{},"value":["https://github.com/adamhsparks/Modelling_Nematode_Populations/compare/v0.0.1...main"]},{"type":"character","attributes":{},"value":["phytopathology.csl"]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["08-04-2021"]},{"type":"character","attributes":{},"value":["https://openplantpathology.org/nematode_modelling/"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bibliography.bib","data/Nematode_Data.csv","LICENSE","nematode_modelling_files/figure-html5/boxplots_ln-1.png","nematode_modelling_files/figure-html5/boxplots_original-1.png","nematode_modelling_files/figure-html5/moderately_resistant_model-1.png","nematode_modelling_files/figure-html5/plot_model-1.png","nematode_modelling_files/figure-html5/qq_ln-1.png","nematode_modelling_files/figure-html5/qq_original-1.png","nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png","nematode_modelling_files/figure-html5/susceptible_model-1.png","nematode_modelling_files/figure-html5/unplanted_poly-1.png","nematode_modelling_files/figure-html5/visualise_linear-1.png","nematode_modelling_files/figure-html5/visualise_mr_model-1.png","nematode_modelling_files/figure-html5/visualise_s_model-1.png","nematode_modelling_files/figure-html5/visualise_unplanted_poly_model-1.png","phytopathology.csl"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      50px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    sans-serif;
+  --mono-font:       monospace;
+  --body-font:       sans-serif;
+  --navbar-font:     sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+</style>
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      36px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    sans-serif;
+  --mono-font:       monospace;
+  --body-font:       sans-serif;
+  --navbar-font:     sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.8rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.6rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    16px;
+  --contents-size:   14px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;    
+  --text-color:       #ffffff; /* edited */
+  --text-size:        16px;
+  --hover-color:      #ffffff; /* edited */
+  --bkgd-color:       #1B75B2; /* edited */
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        13px;
+  --hover-color:      white;
+  --bkgd-color:       #1B75B2;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+</style>
+<style type="text/css">
+/* base style */
+
+/* FONT FAMILIES */
+
+:root {
+  --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body,
+.posts-list .post-preview p,
+.posts-list .description p {
+  font-family: var(--body-font), var(--body-default);
+}
+
+h1, h2, h3, h4, h5, h6,
+.posts-list .post-preview h2,
+.posts-list .description h2 {
+  font-family: var(--heading-font), var(--heading-default);
+}
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: var(--mono-font), var(--mono-default);
+}
+
+
+/*-- TITLE --*/
+d-title h1,
+.posts-list > h1 {
+  color: var(--title-color, black);
+}
+
+d-title h1 {
+  font-size: var(--title-size, 50px);
+}
+
+/*-- HEADERS --*/
+d-article h1,
+d-article h2,
+d-article h3,
+d-article h4,
+d-article h5,
+d-article h6 {
+  color: var(--header-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- BODY --*/
+d-article > p,  /* only text inside of <p> tags */
+d-article > ul, /* lists */
+d-article > ol {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+  font-size: var(--body-size, 1.06rem);
+}
+
+
+/*-- CODE --*/
+d-article div.sourceCode code,
+d-article pre code {
+  font-size: var(--code-size, 14px);
+}
+
+/*-- ASIDE --*/
+d-article aside {
+  font-size: var(--aside-size, 12px);
+  color: var(--aside-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- FIGURE CAPTIONS --*/
+figure .caption,
+figure figcaption,
+.figure .caption {
+  font-size: var(--fig-cap-size, 13px);
+  color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- METADATA --*/
+d-byline h3 {
+  font-size: var(--heading-size, 0.6rem);
+  color: var(--heading-color, rgba(0, 0, 0, 0.5));
+}
+
+d-byline {
+  font-size: var(--body-size, 0.8rem);
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+d-byline a,
+d-article d-byline a {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- TABLE OF CONTENTS --*/
+.d-contents nav h3 {
+  font-size: var(--heading-size, 18px);
+}
+
+.d-contents nav a {
+  font-size: var(--contents-size, 13px);
+}
+
+/*-- APPENDIX --*/
+d-appendix h3 {
+  font-size: var(--heading-size, 15px);
+  color: var(--heading-color, rgba(0, 0, 0, 0.65));
+}
+
+d-appendix {
+  font-size: var(--text-size, 0.8em);
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+d-appendix d-footnote-list a.footnote-backlink {
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+.distill-site-header .title {
+  font-size: var(--title-size, 18px);
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.distill-site-header a,
+.nav-dropdown .nav-dropbtn {
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  font-size: var(--text-size, 15px);
+}
+
+.distill-site-header a:hover,
+.nav-dropdown:hover .nav-dropbtn {
+  color: var(--hover-color, white);
+}
+
+.distill-site-header {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer a:hover {
+  color: var(--hover-color, white);
+}</style>
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=UA-112255011-1"></script>
+<script type="text/javascript" cookie-consent="tracking">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-112255011-1');
+</script>
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Linear modelling of soil temperature effects on root lesion nematode population densities in R","description":"_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper.","doi":"10.5281/zenodo.5153255","authors":[{"author":"Adam H. Sparks","authorURL":"https://adamhsparks.com/","affiliation":"University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU","affiliationURL":"#","orcidID":""},{"author":"John P. Thompson","authorURL":"#","affiliation":"University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-08-04T00:00:00.000+00:00","citationText":"Sparks & Thompson, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a class="logo">
+<img src="../../images/logo2.png" alt="Logo"/>
+</a>
+<a href="../../index.html" class="title">Open Plant Pathology</a>
+<a href="../../about.html">Mission  </a>
+<a href="../../team.html">Who we are  </a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA">
+<i class="fab fa-youtube fa-lg" aria-hidden="true"></i>
+</a>
+<a href="https://twitter.com/OpenPlantPath/">
+<i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+</a>
+<a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">
+<i class="fab fa-slack fa-lg" aria-hidden="true"></i>
+</a>
+<a href="https://github.com/openplantpathology/OpenPlantPathology" aria-label="Link to source">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Linear modelling of soil temperature effects on root lesion nematode population densities in R</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
+  <a href="../../index.html#category:Reproducible_Research" class="dt-tag">Reproducible Research</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p><em>Pratylenchus thornei</em>, the root-lesion nematode, is widely distributed in wheat (<em>Triticum aestivum</em>) growing areas of many countries and is of particular concern in sub-tropical environments <span class="citation" data-cites="THOMPSON2015">(<a href="#ref-THOMPSON2015" role="doc-biblioref">Thompson 2015</a>)</span>. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress <span class="citation" data-cites="THOMPSON2015">(<a href="#ref-THOMPSON2015" role="doc-biblioref">Thompson 2015</a>)</span>. In the original paper the population response of <em>P. thornei</em> in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of <em>P. thornei</em> as described in the original paper.</p></p>
+</div>
+
+<div class="d-byline">
+  Adam H. Sparks <a href="https://adamhsparks.com/" class="uri">https://adamhsparks.com/</a> (University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU)
+  
+,   John P. Thompson  (University of Southern Queensland, Centre for Crop Health, Toowoomba, Qld, AU)
+  
+<br/>08-04-2021
+</div>
+
+<div class="d-article">
+<h2 id="objectives">Objectives</h2>
+<p>There are two types of models described in the paper, the first model is a linear model used to describe the unplanted control and two quadratic models fit Gatcher (Susceptible) and GS50a (Moderately Resistant) wheat cultivars. For a more detailed discussion on fitting plant disease models in R, please see the “<a href="http://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/LinearRegression.aspx">Linear Regression</a>” module in the “<a href="https://www.apsnet.org/edcenter/disimpactmngmnt/topc/EcologyAndEpidemiologyInR/Pages/default.aspx">Ecology and Epidemiology in R</a>” documents available in the American Phytopathological Society’s (APS) Education Center. For an even more in-depth discussion on linear models in R, how to fit and how to interpret the diagnostics that R provides the reader should refer to Faraway <span class="citation" data-cites="FARAWAY2002">(<a href="#ref-FARAWAY2002" role="doc-biblioref">2002</a>)</span>.</p>
+<p>This post will illustrate how to fit the original linear and quadratic models using the original data in R <span class="citation" data-cites="R2017">(<a href="#ref-R2017" role="doc-biblioref">R Core Team 2017</a>)</span>.</p>
+<h2 id="packages">Packages</h2>
+<p>Using the <em>tidyverse</em>, <span class="citation" data-cites="TIDYVERSE2017">(<a href="#ref-TIDYVERSE2017" role="doc-biblioref">2017</a>)</span> package simplifies the libraries used in this work. It is a collection of packages designed to work together for data science, <a href="https://www.tidyverse.org/" class="uri">https://www.tidyverse.org/</a>. The <em>tidyverse</em> includes, <em>readr</em> <span class="citation" data-cites="READR2017">(<a href="#ref-READR2017" role="doc-biblioref">2017b</a>)</span>, used to import the data; <em>tidyr</em> <span class="citation" data-cites="TIDYR2018">(<a href="#ref-TIDYR2018" role="doc-biblioref">2018</a>)</span>, used to format the data; <em>dplyr</em> <span class="citation" data-cites="DPLYR2017">(<a href="#ref-DPLYR2017" role="doc-biblioref">2017a</a>)</span>, used to subset the data; and <em>ggplot2</em> <span class="citation" data-cites="GGPLOT22009">(<a href="#ref-GGPLOT22009" role="doc-biblioref">2016</a>)</span>, used for visualising the data and model fits. <em>viridis</em> <span class="citation" data-cites="VIRIDIS2018">(<a href="#ref-VIRIDIS2018" role="doc-biblioref">2018</a>)</span> is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.</p>
+<p>The following code chunk checks first to see if you have <em>tidyverse</em> and <em>viridis</em> installed, if not, it will automatically install them and then load them.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='st'><a href='https://tidyverse.tidyverse.org'>"tidyverse"</a></span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span>,
+                   repos <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>CRAN <span class='op'>=</span> <span class='st'>"https://cloud.r-project.org/"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://tidyverse.tidyverse.org'>"tidyverse"</a></span><span class='op'>)</span>
+<span class='op'>}</span>
+
+<span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='st'><a href='https://sjmgarnier.github.io/viridis/'>"viridis"</a></span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"viridis"</span>,
+                   repos <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>CRAN <span class='op'>=</span> <span class='st'>"https://cloud.r-project.org/"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://sjmgarnier.github.io/viridis/'>"viridis"</a></span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h2 id="data-wrangling">Data Wrangling</h2>
+<p>The data are located in the <code>data</code> sub-folder. Import the data using <code>read_csv()</code> function from <em>readr</em> and view them.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/Nematode_Data.csv"</span><span class='op'>)</span>
+
+<span class='va'>nema</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 24 × 9
+   Weeks  Days Temperature Degree_days Unplanted Gatcher GS50a Potam
+   &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1     8    56        15           280      5.75    6.77  6.69  7.61
+ 2     8    56        20           560      5.92    9.51  7.42  9.28
+ 3     8    56        22.5         700      6.38    9.96  8.21  9.02
+ 4     8    56        25           840      6.51    9.35  8.25  9.73
+ 5    10    70        15           350      5.85    7.44  6.04  5.97
+ 6    10    70        20           700      6.16   10.3   8.91 10.3 
+ 7    10    70        22.5         875      6.19   10.4   9.18 10.7 
+ 8    10    70        25          1050      6.36   10.6   9.04 10.5 
+ 9    12    84        15           420      5.76    9.93  8.19  8.74
+10    12    84        20           840      6.98   11.7   9.85 11.3 
+# … with 14 more rows, and 1 more variable: Suneca &lt;dbl&gt;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>nema</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 24</code></pre>
+</div>
+<h3 id="description-of-fields-in-the-data">Description of Fields in the Data</h3>
+<p>There are nine columns in the <code>nema</code> data described here in the following table.</p>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Field
+</th>
+<th style="text-align:left;">
+Data Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Weeks
+</td>
+<td style="text-align:left;">
+Number of weeks after wheat sowing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Days
+</td>
+<td style="text-align:left;">
+Number of days after wheat sowing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Temperature
+</td>
+<td style="text-align:left;">
+Temperature (°C) treatment
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Degree_Days
+</td>
+<td style="text-align:left;">
+Average thermal time degree days above 10 °C for four soil depths (8, 15, 30 and 60 cm)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unplanted
+</td>
+<td style="text-align:left;">
+Log<sup>*</sup>, <code>log()</code>, nematode population in the control treatment with no wheat planted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gatcher
+</td>
+<td style="text-align:left;">
+Log<sup>*</sup>, <code>log()</code>, nematode population in a susceptible wheat cultivar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GS50a
+</td>
+<td style="text-align:left;">
+Log<sup>*</sup>, <code>log()</code>, nematode population in a moderately resistant wheat cultivar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Potam
+</td>
+<td style="text-align:left;">
+Log<sup>*</sup>, <code>log()</code>, nematode population in a susceptible wheat cultivar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Suneca
+</td>
+<td style="text-align:left;">
+Log<sup>*</sup>, <code>log()</code>, nematode population in a susceptible wheat cultivar
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>*</sup> For an exploration into the reasons why the data were transformed using the natural log <code>log()</code>, see the <a href="#exploring-why-the-data-were-log-transformed">Exploring Why the Data Were Log Transformed</a> in the <a href="#bonus-material">Bonus Material</a> section
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<h3 id="wide-to-long-data">Wide to Long Data</h3>
+<p>You can see that each of the varieties have their own column in the original data format, this is commonly called wide data. Wide data are commonly found in spreadsheets but do not lend themselves easily to data analysis, modelling and visualisation. To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R. The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table <span class="citation" data-cites="TIDY-DATA2014">(<a href="#ref-TIDY-DATA2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
+<p>In order to use <em>ggplot2</em> for visualising the data, they need to be converted from wide to long. Using <code>pivot_longer()</code> from the <em>tidyr</em> package to convert from wide to long format where the varieties are all listed in a single column, <code>Variety</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema_long</span> <span class='op'>&lt;-</span> <span class='va'>nema</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>pivot_longer</span><span class='op'>(</span>cols <span class='op'>=</span> <span class='va'>Unplanted</span><span class='op'>:</span><span class='va'>Suneca</span>,
+               names_to <span class='op'>=</span> <span class='st'>"Variety"</span>,
+               values_to <span class='op'>=</span> <span class='st'>"Log_pop"</span><span class='op'>)</span>
+
+<span class='va'>nema_long</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 120 × 6
+   Weeks  Days Temperature Degree_days Variety   Log_pop
+   &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt;
+ 1     8    56          15         280 Unplanted    5.75
+ 2     8    56          15         280 Gatcher      6.77
+ 3     8    56          15         280 GS50a        6.69
+ 4     8    56          15         280 Potam        7.61
+ 5     8    56          15         280 Suneca       6.70
+ 6     8    56          20         560 Unplanted    5.92
+ 7     8    56          20         560 Gatcher      9.51
+ 8     8    56          20         560 GS50a        7.42
+ 9     8    56          20         560 Potam        9.28
+10     8    56          20         560 Suneca       9.12
+# … with 110 more rows</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>nema_long</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 120</code></pre>
+</div>
+<p>As we see, the original <code>nema</code> data had only 24 rows and the long format of the data have 120 rows now.</p>
+<h2 id="data-visualisation">Data Visualisation</h2>
+<p>Now that the data are in the format that <em>ggplot2</em> uses, take a look at the data first to see what it looks like. Here we fit a smoothed line for each variety’s nematode population to the raw data. The individual temperature treatments are shown here by shape, the variety by colour.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>nema_long</span>,
+       <span class='fu'>aes</span><span class='op'>(</span>
+         x <span class='op'>=</span> <span class='va'>Degree_days</span>,
+         y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+         colour <span class='op'>=</span> <span class='va'>Temperature</span>,
+         group <span class='op'>=</span> <span class='va'>Variety</span>
+       <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_smooth</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+              se <span class='op'>=</span> <span class='cn'>FALSE</span>,
+              alpha <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"ln("</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+                        <span class='st'>"/kg soil) + 1"</span><span class='op'>)</span>,
+                  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>xlab</span><span class='op'>(</span><span class='st'>"Thermal Time (°C Days Above 10°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"top"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>guides</span><span class='op'>(</span>color <span class='op'>=</span> <span class='fu'>guide_colorbar</span><span class='op'>(</span>
+    title.position <span class='op'>=</span> <span class='st'>"top"</span>,
+    title.hjust <span class='op'>=</span> <span class='fl'>.5</span>,
+    barwidth <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>20</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+    barheight <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='st'>"lines"</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://sjmgarnier.github.io/viridis/reference/scale_viridis.html'>scale_colour_viridis</a></span><span class='op'>(</span><span class='st'>"Temperature (°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span> <span class='va'>Variety</span>, ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png" width="624" /></p>
+</div>
+<h2 id="modelling">Modelling</h2>
+<h3 id="unplanted-model">Unplanted Model</h3>
+<p>The paper uses a linear model for the unplanted control. Here we will write a function to use in modelling the unplanted population data. I have wrapped the model in a function which makes it pipe-able, <code>%&gt;%</code> and has other advantages when it comes to fitting the same model to several sets of data.</p>
+<p>In the linear equation for the Unplanted control treatment, the rate of population increase can be expressed as:</p>
+<p><span class="math display">\[y = y_0 + rt\]</span></p>
+<p>Where <span class="math inline">\(y_0\)</span> is the initial population, <span class="math inline">\(r\)</span> is the rate of change and <span class="math inline">\(t\)</span> equal time.</p>
+<h4 id="fitting-a-linear-model">Fitting a Linear Model</h4>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>linear_model</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>df</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Log_pop</span> <span class='op'>~</span> <span class='va'>Degree_days</span>,
+     data <span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<p>Now check the model fit, using <code>filter()</code> from <em>dplyr</em> to select only Unplanted data from the data set for the model and fit the linear model to the data.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>unplanted_model</span> <span class='op'>&lt;-</span> <span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Unplanted"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>linear_model</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Using <code>par(mfrow = c(2, 2))</code> creates a four-panel graph rather than four individual graphs, which the next function will create by default when using R base graphics. If you want to arrange <em>ggplot2</em> graphs, see <a href="https://openplantpathology.org/posts/2021-02-05-multiple-plot-figure/">A multi panel figure for coffee leaf rust</a> for examples of this.</p>
+<p>Using the <code>plot()</code> function with any <code>lm()</code> object will create four diagnostic plots for your inspection.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>unplanted_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/plot_model-1.png" width="624" /></p>
+</div>
+<p>These plots do not appear to indicate anything amiss as one would hope for from the models that have already been published. If you are unfamiliar with how to interpret these diagnostic plots see <a href="#interpreting-linear-models-in-r">Interpreting Linear Models in R</a> in the <a href="#further-reading">Further Reading</a> section.</p>
+<p>Using the <code>summary()</code> function displays information about the model fit. If you are unfamiliar with how to read and interpret the output of <code>summary()</code> for a linear model, please refer to <a href="#interpreting-linear-models-in-r">Interpreting Linear Models in R</a> in the <a href="#further-reading">Further Reading</a> section for references that go into more detail on this matter.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>unplanted_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Log_pop ~ Degree_days, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.6605 -0.2581 -0.0568  0.2112  0.9851 
+
+Coefficients:
+            Estimate Std. Error t value             Pr(&gt;|t|)    
+(Intercept) 5.415064   0.192973    28.1 &lt; 0.0000000000000002 ***
+Degree_days 0.001295   0.000182     7.1            0.0000004 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.385 on 22 degrees of freedom
+Multiple R-squared:  0.696, Adjusted R-squared:  0.683 
+F-statistic: 50.5 on 1 and 22 DF,  p-value: 0.000000401</code></pre>
+</div>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of the Unplanted linear model was 0.7, we can see here that agrees: 0.7. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0, which also agrees.</p>
+<h4 id="visualising-the-model-fit-to-the-data">Visualising the Model Fit to the Data</h4>
+<p>Using <em>ggplot2</em>’s <code>geom_smooth()</code> we can fit the same model above and graph the resulting line.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Variety</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Unplanted"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Degree_days</span>,
+             y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+             colour <span class='op'>=</span> <span class='va'>Temperature</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_smooth</span><span class='op'>(</span>
+    method <span class='op'>=</span> <span class='st'>"lm"</span>,
+    formula <span class='op'>=</span> <span class='va'>y</span> <span class='op'>~</span> <span class='va'>x</span>,
+    size <span class='op'>=</span> <span class='fl'>1</span>,
+    se <span class='op'>=</span> <span class='cn'>FALSE</span>,
+    colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+    alpha <span class='op'>=</span> <span class='fl'>0.5</span>
+  <span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"ln("</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+                        <span class='st'>"/kg soil) + 1"</span><span class='op'>)</span>,
+                  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>xlab</span><span class='op'>(</span><span class='st'>"Thermal Time (°C Days Above 10°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"top"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>guides</span><span class='op'>(</span>color <span class='op'>=</span> <span class='fu'>guide_colorbar</span><span class='op'>(</span>
+    title.position <span class='op'>=</span> <span class='st'>"top"</span>,
+    title.hjust <span class='op'>=</span> <span class='fl'>.5</span>,
+    barwidth <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>20</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+    barheight <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='st'>"lines"</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://sjmgarnier.github.io/viridis/reference/scale_viridis.html'>scale_colour_viridis</a></span><span class='op'>(</span><span class='st'>"Temperature (°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"Unplanted Linear Model"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/visualise_linear-1.png" width="624" /></p>
+</div>
+<h3 id="quadratic-models">Quadratic Models</h3>
+<p>In the original paper, the quadratic model best described Gatcher and GS50a data, which are fit here.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>quadratic_model</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>df</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Log_pop</span> <span class='op'>~</span> <span class='va'>Degree_days</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>Degree_days</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>,
+      data <span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h4 id="susceptible-varieties">Susceptible Varieties</h4>
+<p>Gatcher, Potam and Suneca all have very similar curves, here Gatcher is used to fit a quadratic model as in the original paper following the same methods as above for the linear model.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>s_model</span> <span class='op'>&lt;-</span> <span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Gatcher"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>quadratic_model</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>s_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="nematode_modelling_files/figure-html5/susceptible_model-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>s_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-1.807 -0.589  0.073  0.582  1.149 
+
+Coefficients:
+                     Estimate   Std. Error t value  Pr(&gt;|t|)    
+(Intercept)       5.476104048  0.904332841    6.06 0.0000052 ***
+Degree_days       0.008961212  0.001909375    4.69   0.00012 ***
+I(Degree_days^2) -0.000002612  0.000000901   -2.90   0.00858 ** 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.863 on 21 degrees of freedom
+Multiple R-squared:   0.8,  Adjusted R-squared:  0.781 
+F-statistic:   42 on 2 and 21 DF,  p-value: 0.0000000462</code></pre>
+</div>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of Gatcher’s quadratic model was 0.80, we can see here that agrees: 0.8. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0.0001, which also agrees.</p>
+<h5 id="visualise-susceptible-variety-model">Visualise Susceptible Variety Model</h5>
+<p>The model visualisation is the same for the quadratic models as the linear model, however you will note that the line has a downward curve at higher temperatures.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Variety</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Gatcher"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Degree_days</span>,
+             y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+             colour <span class='op'>=</span> <span class='va'>Temperature</span>,<span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_smooth</span><span class='op'>(</span>
+    method <span class='op'>=</span> <span class='st'>"lm"</span>,
+    formula <span class='op'>=</span> <span class='va'>y</span> <span class='op'>~</span> <span class='va'>x</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span>,
+    size <span class='op'>=</span> <span class='fl'>1</span>,
+    se <span class='op'>=</span> <span class='cn'>FALSE</span>,
+    colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+    alpha <span class='op'>=</span> <span class='fl'>0.5</span>
+  <span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"ln("</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+                        <span class='st'>"/kg soil) + 1"</span><span class='op'>)</span>,
+                  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>xlab</span><span class='op'>(</span><span class='st'>"Thermal Time (°C Days Above 10°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"top"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>guides</span><span class='op'>(</span>color <span class='op'>=</span> <span class='fu'>guide_colorbar</span><span class='op'>(</span>
+    title.position <span class='op'>=</span> <span class='st'>"top"</span>,
+    title.hjust <span class='op'>=</span> <span class='fl'>.5</span>,
+    barwidth <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>20</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+    barheight <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='st'>"lines"</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://sjmgarnier.github.io/viridis/reference/scale_viridis.html'>scale_colour_viridis</a></span><span class='op'>(</span><span class='st'>"Temperature (°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"Gatcher Quadratic Model"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/visualise_s_model-1.png" width="624" /></p>
+</div>
+<h4 id="moderately-resistant-cultiver">Moderately Resistant Cultiver</h4>
+<p>GS50a, moderately resistant to <em>P. thornei</em>, also fits a quadratic model but the coefficients are slightly different due to different responses to the variety and temperature.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>mr_model</span> <span class='op'>&lt;-</span> <span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"GS50a"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>quadratic_model</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>mr_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="nematode_modelling_files/figure-html5/moderately_resistant_model-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>mr_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.1128 -0.3985  0.0289  0.4549  1.1860 
+
+Coefficients:
+                     Estimate   Std. Error t value   Pr(&gt;|t|)    
+(Intercept)       5.156893818  0.677913227    7.61 0.00000018 ***
+Degree_days       0.006274415  0.001431321    4.38    0.00026 ***
+I(Degree_days^2) -0.000001609  0.000000675   -2.38    0.02672 *  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.647 on 21 degrees of freedom
+Multiple R-squared:  0.823, Adjusted R-squared:  0.806 
+F-statistic: 48.9 on 2 and 21 DF,  p-value: 0.0000000125</code></pre>
+</div>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of GS50a’s quadratic model was 0.82, we can see here that agrees: 0.82. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0.0003, which also agrees.</p>
+<h5 id="visualising-the-model-fit-to-the-data-1">Visualising the Model Fit to the Data</h5>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Variety</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"GS50a"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Degree_days</span>,
+             y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+             colour <span class='op'>=</span> <span class='va'>Temperature</span>,<span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_smooth</span><span class='op'>(</span>
+    method <span class='op'>=</span> <span class='st'>"lm"</span>,
+    formula <span class='op'>=</span> <span class='va'>y</span> <span class='op'>~</span> <span class='va'>x</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span>,
+    size <span class='op'>=</span> <span class='fl'>1</span>,
+    se <span class='op'>=</span> <span class='cn'>FALSE</span>,
+    colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+    alpha <span class='op'>=</span> <span class='fl'>0.5</span>
+  <span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"ln("</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+                        <span class='st'>"/kg soil) + 1"</span><span class='op'>)</span>,
+                  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>xlab</span><span class='op'>(</span><span class='st'>"Thermal Time (°C Days Above 10°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"top"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>guides</span><span class='op'>(</span>color <span class='op'>=</span> <span class='fu'>guide_colorbar</span><span class='op'>(</span>
+    title.position <span class='op'>=</span> <span class='st'>"top"</span>,
+    title.hjust <span class='op'>=</span> <span class='fl'>.5</span>,
+    barwidth <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>20</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+    barheight <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='st'>"lines"</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://sjmgarnier.github.io/viridis/reference/scale_viridis.html'>scale_colour_viridis</a></span><span class='op'>(</span><span class='st'>"Temperature (°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"GS50a Quadratic Model"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/visualise_mr_model-1.png" width="624" /></p>
+</div>
+<h2 id="discussion-and-conclusions">Discussion and Conclusions</h2>
+<p>As in the original paper, the model equations can be derived from these models as well. The derived regression equations are:</p>
+<p>Gatcher (Susceptible): <span class="math display">\[ln(P. thornei + 1) = -0.000003(0.0000009)T^2 + 0.009(0.0019)T + 5.4671(0.904)\]</span></p>
+<p>GS50a (Moderately Resistant): <span class="math display">\[ln(P. thornei + 1) = -0.000002(0.0000007)T^2 + 0.0063(0.0014)T + 5.1559(0.678)\]</span></p>
+<p>Unplanted Control: <span class="math display">\[ln(P. thornei + 1) = 0.0013(0.00018)T + 5.4151(0.193)\]</span></p>
+<p>Refer back to the <code>summary()</code> outputs for each of the models for the coefficient values and <span class="math inline">\(R^2\)</span> values, which match those reported in the original paper where the models were fit with Genstat.</p>
+<p>Gatcher and GS50a have similar phenologies, but differ in resistance to root lesion nematodes, making the model comparisons a reasonable objective. The original paper goes on to test the effect of sowing date based on degree days. <span class="citation" data-cites="THOMPSON2015">(<a href="#ref-THOMPSON2015" role="doc-biblioref">Thompson 2015</a>)</span> reported a 61% increase in yield on average from sowing the susceptible, intolerant cultivar Gatcher at the end of May than sowing it in the third week of June. By June the soil temperatures and nematode populations were both greater, leading to lower wheat yield. The effects were less pronounced in the moderately resistant cultivar, GS50a, but were similar with a reduction in nematode population densities occurring due to earlier planting.</p>
+<p>The models illustrated here for Gatcher and GS50a were able to accurately reflect the changes in nematode population as a result of degree days, which affected the nematodes’ ability to damage the crop and reduce yield <span class="citation" data-cites="THOMPSON2015">(<a href="#ref-THOMPSON2015" role="doc-biblioref">Thompson 2015</a>)</span>.</p>
+<h2 id="bonus-material">Bonus Material</h2>
+<h3 id="exploring-why-the-data-were-log-transformed">Exploring Why the Data Were Log Transformed</h3>
+<p>In the paper the the natural log, <code>ln() +1</code>, of the nematode population counts were used to fit the models. Here we will explore a bit further why this was necessary.</p>
+<p><em>A note about using <code>log() + 1</code> rather than just <code>log()</code>.</em> <em>This is necessary with these data to avoid taking <code>log(0)</code>.</em> <em>Try it in R to see what happens if you are not familiar.</em></p>
+<p>First, plot the data for each of the four temperatures and the four varieties, plus the unplanted control converting from the natural log value back to the original actual count values to see what the population numbers look like. Note the use of <code>exp() - 1</code> in the <code>y</code> aesthetic, to transform the values from the <code>ln() + 1</code> values. Doing this shows us the original data’s values and helps demonstrate why the data were log transformed for analysis. To examine the data, first we will use boxplots and then quantile-quantile (qq) plots.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>nema_long</span>,
+       <span class='fu'>aes</span><span class='op'>(</span>
+         x <span class='op'>=</span> <span class='va'>Temperature</span>,
+         y <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>Log_pop</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span>,
+         group <span class='op'>=</span> <span class='va'>Temperature</span>
+       <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_boxplot</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+               outlier.color <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_jitter</span><span class='op'>(</span>width <span class='op'>=</span> <span class='fl'>0.1</span>,
+              alpha <span class='op'>=</span> <span class='fl'>0.6</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span>
+    <span class='st'>"exp(ln("</span>,
+    <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+    <span class='st'>"/kg soil) + 1)"</span>
+  <span class='op'>)</span>,
+  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span> <span class='va'>Variety</span>,
+             ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"Untransformed Data"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/boxplots_original-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>nema_long</span>,
+       <span class='fu'>aes</span><span class='op'>(</span>sample <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>Log_pop</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>stat_qq</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span> <span class='va'>Variety</span>,
+             ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/qq_original-1.png" width="624" /></p>
+</div>
+<p>The boxplots show that there is a wide range of values with the 25 °C temperature populations close to zero with others having quite large ranges, this could indicate heteroscedasticity.</p>
+<p>Also, looking at the qq-plots it is apparent that the original data do not meet the assumptions of normally distributed errors for a linear model. See the <a href="#further-reading">Further Reading</a> section for suggested reading on interpreting qq-plots.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>nema_long</span>,
+       <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Temperature</span>,
+           y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+           group <span class='op'>=</span> <span class='va'>Temperature</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_boxplot</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+               outlier.color <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_jitter</span><span class='op'>(</span>width <span class='op'>=</span> <span class='fl'>0.1</span>,
+              alpha <span class='op'>=</span> <span class='fl'>0.6</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span>
+    <span class='st'>"exp(ln("</span>,
+    <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+    <span class='st'>"/kg soil) + 1)"</span>
+  <span class='op'>)</span>,
+  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_wrap</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>Variety</span>,
+              ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"Log Transformed Data"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/boxplots_ln-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>nema_long</span>,
+       <span class='fu'>aes</span><span class='op'>(</span>sample <span class='op'>=</span> <span class='va'>Log_pop</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>stat_qq</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span> <span class='va'>Variety</span>,
+             ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/qq_ln-1.png" width="624" /></p>
+</div>
+<p>Here we see that the <code>log()</code> transformed data’s boxplots show fewer outliers and tighter range of values. The qq-plots also indicate that it is possible to conduct a linear regression with these data.</p>
+<h3 id="using-aic-to-compare-model-quality">Using AIC to Compare Model Quality</h3>
+<p>Even though the original paper used a linear model for the unplanted data, a polynomial model also fits these data quite well. We can compare the original linear model from the paper with a polynomial model quite easily in R to see how the models compare using AIC (Akaike information criterion). AIC is used to measure the models’ relative quality to each other.</p>
+<p>Since the <code>unplanted_model</code> object already exists as a product of the linear model, we simply need to use the polynomial model with the unplanted data to create a new object to compare them.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>unplanted_poly_model</span> <span class='op'>&lt;-</span> <span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Unplanted"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>quadratic_model</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>unplanted_poly_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="nematode_modelling_files/figure-html5/unplanted_poly-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>unplanted_poly_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = Log_pop ~ Degree_days + I(Degree_days^2), data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.4870 -0.2387 -0.0804  0.1921  0.9747 
+
+Coefficients:
+                     Estimate   Std. Error t value       Pr(&gt;|t|)    
+(Intercept)       5.061614851  0.403124966    12.6 0.000000000031 ***
+Degree_days       0.002125214  0.000851143     2.5          0.021 *  
+I(Degree_days^2) -0.000000401  0.000000402    -1.0          0.329    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.385 on 21 degrees of freedom
+Multiple R-squared:  0.71,  Adjusted R-squared:  0.683 
+F-statistic: 25.7 on 2 and 21 DF,  p-value: 0.00000226</code></pre>
+</div>
+<p>By this information, the <span class="math inline">\(R^2\)</span> value is a bit better from the <code>unplanted_poly_model</code>, 0.7101, than the original <code>unplanted_model</code>’s, 0.6964. Using the same code from above it is easy to visualise the new model’s fit using <em>ggplot2</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nema_long</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Variety</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Variety</span> <span class='op'>==</span> <span class='st'>"Unplanted"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Degree_days</span>,
+             y <span class='op'>=</span> <span class='va'>Log_pop</span>,
+             colour <span class='op'>=</span> <span class='va'>Temperature</span>, <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_point</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3.5</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_smooth</span><span class='op'>(</span>
+    method <span class='op'>=</span> <span class='st'>"lm"</span>,
+    formula <span class='op'>=</span> <span class='va'>y</span> <span class='op'>~</span> <span class='va'>x</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span>,
+    size <span class='op'>=</span> <span class='fl'>1</span>,
+    se <span class='op'>=</span> <span class='cn'>FALSE</span>,
+    colour <span class='op'>=</span> <span class='st'>"grey"</span>,
+    alpha <span class='op'>=</span> <span class='fl'>0.5</span>
+  <span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ylab</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expression.html'>expression</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"ln("</span>,
+                        <span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='st'>"P. thornei"</span><span class='op'>)</span>,
+                        <span class='st'>"/kg soil) + 1"</span><span class='op'>)</span>,
+                  sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>xlab</span><span class='op'>(</span><span class='st'>"Thermal Time (°C Days Above 10°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"top"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>guides</span><span class='op'>(</span>color <span class='op'>=</span> <span class='fu'>guide_colorbar</span><span class='op'>(</span>
+    title.position <span class='op'>=</span> <span class='st'>"top"</span>,
+    title.hjust <span class='op'>=</span> <span class='fl'>.5</span>,
+    barwidth <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>20</span>, <span class='st'>"lines"</span><span class='op'>)</span>,
+    barheight <span class='op'>=</span> <span class='fu'>unit</span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='st'>"lines"</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>coord_cartesian</span><span class='op'>(</span>clip <span class='op'>=</span> <span class='st'>"off"</span>,
+                  expand <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://sjmgarnier.github.io/viridis/reference/scale_viridis.html'>scale_colour_viridis</a></span><span class='op'>(</span><span class='st'>"Temperature (°C)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>ggtitle</span><span class='op'>(</span><span class='st'>"Unplanted Quadratic Model"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="nematode_modelling_files/figure-html5/visualise_unplanted_poly_model-1.png" width="624" /></p>
+</div>
+<p>Checking the model fit visually, we can see that it fits the data nicely. To get a better feel for how these models compare, AIC can be used to determine the relative quality of a model for a <em>given set of data</em>. That is, you cannot compare models for other data using AIC.</p>
+<p>Checking the AIC is quite simple in R, just <code>AIC()</code>. Here we check the AIC of the original linear <code>unplanted_model</code> and the new <code>unplanted_poly_model</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/AIC.html'>AIC</a></span><span class='op'>(</span><span class='va'>unplanted_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 26.17</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/AIC.html'>AIC</a></span><span class='op'>(</span><span class='va'>unplanted_poly_model</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 27.06</code></pre>
+</div>
+<p>Ideally when fitting models, you look for the least complex model that provides the best explanation of the variation in the data. In this case the original linear model has a lower AIC, 26.1715, than that of the polynomial model, 27.058, but they are extremely close and the <span class="math inline">\(R^2\)</span> value of the polynomial model, 0.7101, is a bit better than the linear model’s <span class="math inline">\(R^2\)</span>, 0.6964, as well. Therefore, without more data to distinguish the models it appears that either model suffices for the data provided.</p>
+<h2 id="further-reading">Further Reading</h2>
+<h3 id="tidy-data">Tidy Data</h3>
+<p>Wickham <span class="citation" data-cites="TIDY-DATA2014">(<a href="#ref-TIDY-DATA2014" role="doc-biblioref">2014</a>)</span> introduced the idea of tidy data for analysis. As you work with raw data from many sources, it is useful to understand what this means and why it is useful. In this example, <em>tidyr</em> was used to convert the data from wide to long format. For a more in-depth look at using <em>tidyr</em> see:</p>
+<ul>
+<li><p><a href="https://blog.rstudio.com/2014/07/22/introducing-tidyr/">Introducing tidyr</a></p></li>
+<li><p><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">“Lengthen columns” into key-value pairs</a>.</p></li>
+</ul>
+<h3 id="interpreting-linear-models-in-r">Interpreting Linear Models in R</h3>
+<p>The University of Georgia has a nice, easy to understand set of materials that demonstrate how to interpret diagnostic plot outputs from <code>plot(lm.object)</code>, <a href="http://strata.uga.edu/8370/rtips/regressionPlots.html">Regression diagnostic plots</a> on their Data Analysis in the Geosciences page. For even more, this Cross Validated question has an excellent discussion on <a href="https://stats.stackexchange.com/questions/58141/interpreting-plot-lm">Interpreting plot.lm()</a>.</p>
+<p>The University of Montana provides an on-line text, “<em>Statistics With R</em>,” that includes a section on <a href="https://arc.lib.montana.edu/book/statistics-with-r-textbook/item/57">ANOVA model diagnostics including QQ-plots</a>. Since ANOVA uses <code>lm()</code> in R, the tools and descriptions here are applicable to the qq-plots we have generated here in this illustration.</p>
+<p>For a detailed look at how to interpret the output from <code>summary()</code> for linear models, see The YHAT Blog post, <a href="http://blog.yhat.com/posts/r-lm-summary.html">Fitting &amp; Interpreting Linear Models in R</a>.</p>
+<p>Faraway <span class="citation" data-cites="FARAWAY2002">(<a href="#ref-FARAWAY2002" role="doc-biblioref">2002</a>)</span>, “<a href="https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf"><em>Practical Regression and Anova using R</em></a>” is an excellent free resource that goes into detail about fitting linear models using R and how to interpret the diagnostics. Prof. Faraway has more recent books on the subject as well that you might wish to borrow from your library or purchase, see <a href="http://www.maths.bath.ac.uk/~jjf23/LMR/">http://www.maths.bath.ac.uk/~jjf23/LMR/</a> for more details.</p>
+<h3 id="selecting-the-right-colour-scheme">Selecting the Right Colour Scheme</h3>
+<p>Selecting good colour schemes is essential for communicating your message. The <em>viridis</em> package makes this much easier to do. Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, <a href="https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/">Using the new ‘viridis’ colormap in R (thanks to Simon Garnier)</a>. Other colour palettes for R exist as well. Notably the <em>RColorBrewer</em> package provides an easy-to-use interface for the fantastic Color Brewer palettes <a href="http://colorbrewer2.org/">http://colorbrewer2.org/</a> commonly used for cartography but also useful for graphs.</p>
+<h2 id="a-note-on-this-article">A Note on This Article</h2>
+<p>This article was original published in 2018 on Open Plant Pathology shortly after we launched. Since then it has been updated with minor changes to the R code to bring it up-to-date with the latest libraries and present cleaner figures and integrate into the new website framework that OPP now uses. Changes since the original can be viewed using the link below that compares the original article with this version. <em>The message and scientific contents remain the same.</em></p>
+<p>AHS, 2021.08.04</p>
+<h2 id="reproducibility">Reproducibility</h2>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>─ Session info ─────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 4.1.0 (2021-05-18)
+ os       macOS Big Sur 11.5.1        
+ system   aarch64, darwin20           
+ ui       X11                         
+ language (EN)                        
+ collate  en_AU.UTF-8                 
+ ctype    en_AU.UTF-8                 
+ tz       Australia/Perth             
+ date     2021-08-04                  
+
+─ Packages ─────────────────────────────────────────────────────────
+ package     * version    date       lib
+ assertthat    0.2.1      2019-03-21 [2]
+ backports     1.2.1      2020-12-09 [2]
+ bit           4.0.4      2020-08-04 [1]
+ bit64         4.0.5      2020-08-30 [1]
+ broom         0.7.9      2021-07-27 [1]
+ bslib         0.2.5.1    2021-05-18 [2]
+ cellranger    1.1.0      2016-07-27 [2]
+ cli           3.0.1      2021-07-17 [1]
+ colorspace    2.0-2      2021-06-24 [1]
+ crayon        1.4.1      2021-02-08 [2]
+ DBI           1.1.1      2021-01-15 [2]
+ dbplyr        2.1.1      2021-04-06 [2]
+ digest        0.6.27     2020-10-24 [2]
+ distill       1.2        2021-01-13 [1]
+ downlit       0.2.1      2020-11-04 [2]
+ dplyr       * 1.0.7      2021-06-18 [1]
+ ellipsis      0.3.2      2021-04-29 [2]
+ evaluate      0.14       2019-05-28 [2]
+ fansi         0.5.0      2021-05-25 [2]
+ farver        2.1.0      2021-02-28 [2]
+ forcats     * 0.5.1      2021-01-27 [2]
+ fs            1.5.0      2020-07-31 [2]
+ generics      0.1.0      2020-10-31 [2]
+ ggplot2     * 3.3.5      2021-06-25 [1]
+ glue          1.4.2      2020-08-27 [2]
+ gridExtra     2.3        2017-09-09 [2]
+ gtable        0.3.0      2019-03-25 [2]
+ haven         2.4.1      2021-04-23 [2]
+ highr         0.9        2021-04-16 [2]
+ hms           1.1.0      2021-05-17 [2]
+ htmltools     0.5.1.1    2021-01-22 [2]
+ httr          1.4.2      2020-07-20 [2]
+ jquerylib     0.1.4      2021-04-26 [2]
+ jsonlite      1.7.2      2020-12-09 [2]
+ kableExtra  * 1.3.4      2021-02-20 [1]
+ knitr         1.33       2021-04-24 [2]
+ labeling      0.4.2      2020-10-20 [2]
+ lattice       0.20-44    2021-05-02 [2]
+ lifecycle     1.0.0      2021-02-15 [2]
+ lubridate     1.7.10     2021-02-26 [2]
+ magrittr      2.0.1      2020-11-17 [2]
+ Matrix        1.3-3      2021-05-04 [2]
+ mgcv          1.8-35     2021-04-18 [2]
+ modelr        0.1.8      2020-05-19 [2]
+ munsell       0.5.0      2018-06-12 [2]
+ nlme          3.1-152    2021-02-04 [2]
+ pillar        1.6.2      2021-07-29 [1]
+ pkgconfig     2.0.3      2019-09-22 [2]
+ purrr       * 0.3.4      2020-04-17 [2]
+ R6            2.5.0      2020-10-28 [2]
+ Rcpp          1.0.7      2021-07-07 [1]
+ readr       * 2.0.0      2021-07-20 [1]
+ readxl        1.3.1      2019-03-13 [2]
+ reprex        2.0.0      2021-04-02 [2]
+ rlang         0.4.11     2021-04-30 [2]
+ rmarkdown     2.9        2021-06-15 [1]
+ rstudioapi    0.13       2020-11-12 [2]
+ rvest         1.0.1      2021-07-26 [1]
+ sass          0.4.0.9000 2021-06-16 [2]
+ scales        1.1.1      2020-05-11 [2]
+ sessioninfo   1.1.1      2018-11-05 [2]
+ stringi       1.7.3      2021-07-16 [1]
+ stringr     * 1.4.0      2019-02-10 [2]
+ svglite       2.0.0      2021-02-20 [1]
+ systemfonts   1.0.2      2021-05-11 [2]
+ tibble      * 3.1.3      2021-07-23 [1]
+ tidyr       * 1.1.3      2021-03-03 [2]
+ tidyselect    1.1.1      2021-04-30 [2]
+ tidyverse   * 1.3.1      2021-04-15 [1]
+ tzdb          0.1.2      2021-07-20 [1]
+ utf8          1.2.2      2021-07-24 [1]
+ vctrs         0.3.8      2021-04-29 [2]
+ viridis     * 0.6.1      2021-05-11 [2]
+ viridisLite * 0.4.0      2021-04-13 [2]
+ vroom         1.5.3      2021-07-14 [1]
+ webshot       0.5.2      2019-11-22 [1]
+ withr         2.4.2      2021-04-18 [2]
+ xfun          0.24       2021-06-15 [1]
+ xml2          1.3.2      2020-04-23 [2]
+ yaml          2.2.1      2020-02-01 [2]
+ source                       
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ Github (rstudio/sass@f148415)
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+ CRAN (R 4.1.0)               
+
+[1] /Users/adamsparks/Library/R/arm64/4.1/library
+[2] /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library</code></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-FARAWAY2002" class="csl-entry" role="doc-biblioentry">
+Faraway, J. J. 2002. <em><span class="nocase">Practical Regression and Anova using R</span></em>. [University of Bath]. Available at: <a href="https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf">https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf</a>.
+</div>
+<div id="ref-VIRIDIS2018" class="csl-entry" role="doc-biblioentry">
+Garnier, S. 2018. <em>Viridis: Default color maps from ’matplotlib’</em>. Available at: <a href="https://CRAN.R-project.org/package=viridis">https://CRAN.R-project.org/package=viridis</a>.
+</div>
+<div id="ref-R2017" class="csl-entry" role="doc-biblioentry">
+R Core Team. 2017. <em><span class="nocase">R: A Language and Environment for Statistical Computing</span></em>. Vienna, Austria: R Foundation for Statistical Computing. Available at: <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-THOMPSON2015" class="csl-entry" role="doc-biblioentry">
+Thompson, J. P. 2015. Modelling population densities of root-lesion nematode (<span><em>Pratylenchus thornei</em></span>) from soil profile temperatures to choose an optimum sowing date for wheat in a subtropical region. Field Crops Research. 183:50–55 Available at: <a href="http://www.sciencedirect.com/science/article/pii/S0378429015300083">http://www.sciencedirect.com/science/article/pii/S0378429015300083</a>.
+</div>
+<div id="ref-GGPLOT22009" class="csl-entry" role="doc-biblioentry">
+Wickham, H. 2016. <em><span class="nocase">ggplot2: Elegant Graphics for Data Analysis</span></em>. Springer-Verlag New York. Available at: <a href="http://ggplot2.org">http://ggplot2.org</a>.
+</div>
+<div id="ref-TIDY-DATA2014" class="csl-entry" role="doc-biblioentry">
+Wickham, H. 2014. Tidy data. The Journal of Statistical Software. 59 Available at: <a href="http://www.jstatsoft.org/v59/i10/">http://www.jstatsoft.org/v59/i10/</a>.
+</div>
+<div id="ref-TIDYVERSE2017" class="csl-entry" role="doc-biblioentry">
+Wickham, H. 2017. <em><span class="nocase">tidyverse: Easily Install and Load the ’Tidyverse’</span></em>. Available at: <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+</div>
+<div id="ref-DPLYR2017" class="csl-entry" role="doc-biblioentry">
+Wickham, H., Francois, R., Henry, L., and Müller, K. 2017a. <em><span class="nocase">dplyr: A Grammar of Data Manipulation</span></em>. Available at: <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+<div id="ref-TIDYR2018" class="csl-entry" role="doc-biblioentry">
+Wickham, H., and Henry, L. 2018. <em><span class="nocase">tidyr: Easily Tidy Data with ’spread()’ and ’gather()’ Functions</span></em>. Available at: <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>.
+</div>
+<div id="ref-READR2017" class="csl-entry" role="doc-biblioentry">
+Wickham, H., Hester, J., and Francois, R. 2017b. <em><span class="nocase">readr: Read Rectangular Text Data</span></em>. Available at: <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+  <h3 id="references">References</h3>
+  <div id="references-listing"></div>
+  <h3 id="updates-and-corrections">Updates and Corrections</h3>
+  <p>
+    <span>
+      <a href="https://github.com/adamhsparks/Modelling_Nematode_Populations/compare/v0.0.1...main">View all changes</a>
+       to this article since it was first published. 
+    </span>
+    If you see mistakes or want to suggest changes, please <a href="https://github.com/adamhsparks/Modelling_Nematode_Populations/issues/new">create an issue</a> on the source repository.
+  </p>
+  <h3 id="reuse">Reuse</h3>
+  <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/adamhsparks/Modelling_Nematode_Populations">https://github.com/adamhsparks/Modelling_Nematode_Populations</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Sparks &amp; Thompson (2021, Aug. 4). Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R. Retrieved from https://openplantpathology.org/nematode_modelling</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{nematode_modelling,
+  author = {Sparks, Adam H. and Thompson, John P.},
+  title = {Open Plant Pathology: Linear modelling of soil temperature effects on root lesion nematode population densities in R},
+  url = {https://openplantpathology.org/nematode_modelling},
+  year = {2021}
+}</pre>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+  <html>
+    <head>
+      <title>Title</title>
+    </head>
+    <body><a href="https://twitter.com/OpenPlantPath"> Follow us! </a> | 
+<a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology"> Join our Slack!</a> | 
+<a href="https://github.com/openplantpathology"> See what we are up to on GitHub</a> | 
+<a href="mailto: openplantpathology@gmail.com">Email-us</a>
+
+
+</body>
+  </html>
+</div>
+<!--/radix_placeholder_navigation_after_body-->
+
+
+</body>
+
+</html>
