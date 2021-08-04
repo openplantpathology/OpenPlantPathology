@@ -11,7 +11,7 @@ output:
     self_contained: false
 preview: post-mohsin.png
 categories: 
-  - Research compendia
+  - Research Compendia
 ---
 
 We are happy to kick start a new blog section called **OPP Research Compendia**. We aim to encourage plant pathologists to engage in reproducible research practices by providing examples developed by the plant pathology community. Briefly, the importance of the research and the main steps of the workflow is summarized and links are provided to data, scripts and other research outcomes that help to understand, reproduce and communicate the research findings.
