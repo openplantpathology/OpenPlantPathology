@@ -19,7 +19,7 @@ doi: "10.17605/OSF.IO/S28Q9"
 
 Presenter: Dr. Remco Stam\
 Institution: Technical University of Munich\
-Date: April 6th 2020\
+Date: April 6, 2020\
 Host: Dr. Benjamin Schwessinger\
 Links: [Video](https://youtu.be/xaUz_68jwHk) \| [Slides](https://doi.org/10.17605/OSF.IO/S28Q9)
 
