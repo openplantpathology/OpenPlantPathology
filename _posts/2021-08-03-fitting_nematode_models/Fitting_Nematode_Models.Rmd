@@ -608,7 +608,7 @@ For a more in-depth look at using _tidyr_ see:
 
 - [Introducing tidyr](https://blog.rstudio.com/2014/07/22/introducing-tidyr/)
 
-- [Gather columns into key-value pairs](http://tidyr.tidyverse.org/reference/gather.html).
+- ["Lengthen columns" into key-value pairs](https://tidyr.tidyverse.org/reference/pivot_longer.html).
 
 ### Interpreting Linear Models in R
 
@@ -627,9 +627,9 @@ Prof. Faraway has more recent books on the subject as well that you might wish t
 
 Selecting good colour schemes is essential for communicating your message.
 The _viridis_ package makes this much easier to do.
-Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, [Using the new ‘viridis’ colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
+Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, [Using the new 'viridis' colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
 Other colour palettes for R exist as well.
-Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Colour Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.
+Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Color Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.
 
 ## Reproducibility
 
