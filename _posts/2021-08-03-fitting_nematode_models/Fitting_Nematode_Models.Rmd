@@ -105,8 +105,8 @@ fields <- data.frame(
     "Suneca"),
   c("Number of weeks after wheat sowing",
     "Number of days after wheat sowing",
-    "Temperature (˚C) treatment",
-    "Average thermal time degree days above 10 ˚C for four soil depths
+    "Temperature (°C) treatment",
+    "Average thermal time degree days above 10 °C for four soil depths
     (8, 15, 30 and 60 cm)",
     paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in
     the control treatment with no wheat planted"),
@@ -175,7 +175,7 @@ ggplot(nema_long,
                         italic("P. thornei"),
                         "/kg soil) + 1"),
                   sep = "")) +
-  xlab("Thermal Time (˚C Days Above 10˚C)") +
+  xlab("Thermal Time (°C Days Above 10°C)") +
   theme_minimal() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
@@ -269,7 +269,7 @@ nema_long %>%
                         italic("P. thornei"),
                         "/kg soil) + 1"),
                   sep = "")) +
-  xlab("Thermal Time (˚C Days Above 10˚C)") +
+  xlab("Thermal Time (°C Days Above 10°C)") +
   theme_minimal() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
@@ -337,7 +337,7 @@ nema_long %>%
                         italic("P. thornei"),
                         "/kg soil) + 1"),
                   sep = "")) +
-  xlab("Thermal Time (˚C Days Above 10˚C)") +
+  xlab("Thermal Time (°C Days Above 10°C)") +
   theme_minimal() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
@@ -392,7 +392,7 @@ nema_long %>%
                         italic("P. thornei"),
                         "/kg soil) + 1"),
                   sep = "")) +
-  xlab("Thermal Time (˚C Days Above 10˚C)") +
+  xlab("Thermal Time (°C Days Above 10°C)") +
   theme_minimal() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
@@ -481,7 +481,7 @@ ggplot(nema_long,
   theme_minimal()
 ```
 
-The boxplots show that there is a wide range of values with the 25 ˚C temperature populations close to zero with others having quite large ranges, this could indicate heteroscedasticity.
+The boxplots show that there is a wide range of values with the 25 °C temperature populations close to zero with others having quite large ranges, this could indicate heteroscedasticity.
 
 Also, looking at the qq-plots it is apparent that the original data do not meet the assumptions of normally distributed errors for a linear model.
 See the [Further Reading] section for suggested reading on interpreting qq-plots.
@@ -565,7 +565,7 @@ nema_long %>%
                         italic("P. thornei"),
                         "/kg soil) + 1"),
                   sep = "")) +
-  xlab("Thermal Time (˚C Days Above 10˚C)") +
+  xlab("Thermal Time (°C Days Above 10°C)") +
   theme_minimal() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
