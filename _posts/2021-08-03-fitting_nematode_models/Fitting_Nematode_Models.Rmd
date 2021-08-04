@@ -16,6 +16,7 @@ slug: nematode_modelling
 citation_url: https://openplantpathology.org/nematode_modelling
 categories: 
   - R4PlantPath
+  - Reproducible Research
 bibliography: bibliography.bib
 repository_url: https://github.com/adamhsparks/Modelling_Nematode_Populations
 compare_updates_url: https://github.com/adamhsparks/Modelling_Nematode_Populations/compare/v0.0.1...main
