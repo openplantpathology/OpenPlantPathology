@@ -50,7 +50,8 @@ This post will illustrate how to fit the original linear and quadratic models us
 Using the _tidyverse_, [-@TIDYVERSE2017] package simplifies the libraries used in this work.
 It is a collection of packages designed to work together for data science, <https://www.tidyverse.org/>.
 The _tidyverse_ includes, _readr_ [-@READR2017], used to import the data; _tidyr_
-[-@TIDYR2018], used to format the data; _dplyr_ [-@DPLYR2017], used to subset the data; and _ggplot2_ [-@GGPLOT22009], used for visualising the data and model fits. _viridis_ [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.
+[-@TIDYR2018], used to format the data; _dplyr_ [-@DPLYR2017], used to subset the data; and _ggplot2_ [-@GGPLOT22009], used for visualising the data and model fits.
+_viridis_ [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.
 
 The following code chunk checks first to see if you have _tidyverse_ and _viridis_ installed, if not, it will automatically install them and then load them.
 
@@ -136,7 +137,8 @@ Wide data are commonly found in spreadsheets but do not lend themselves easily t
 To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R.
 The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table [@TIDY-DATA2014].
 
-In order to use _ggplot2_ for visualising the data, they need to be converted from wide to long. Using `pivot_longer()` from the _tidyr_ package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
+In order to use _ggplot2_ for visualising the data, they need to be converted from wide to long.
+Using `pivot_longer()` from the _tidyr_ package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
 
 ```{r gather_data, echo=TRUE}
 nema_long <- nema %>%
@@ -154,7 +156,7 @@ As we see, the original `nema` data had only `r {nrow(nema)}` rows and the long 
 ## Data Visualisation
 
 Now that the data are in the format that _ggplot2_ uses, take a look at the data first to see what it looks like.
-Here we fit a smoothed line for each variety's nematode population to the raw data. 
+Here we fit a smoothed line for each variety's nematode population to the raw data.
 The individual temperature treatments are shown here by shape, the variety by colour.
 
 ```{r raw_data_scatterplots, echo=TRUE, message=FALSE}
@@ -407,7 +409,8 @@ nema_long %>%
 
 ## Discussion and Conclusions
 
-As in the original paper, the model equations can be derived from these models as well. The derived regression equations are:
+As in the original paper, the model equations can be derived from these models as well.
+The derived regression equations are:
 
 Gatcher (Susceptible): $$ln(P. thornei + 1) = -0.000003(0.0000009)T^2 + 0.009(0.0019)T + 5.4671(0.904)$$
 
@@ -438,7 +441,8 @@ _This is necessary with these data to avoid taking `log(0)`._
 _Try it in R to see what happens if you are not familiar._
 
 First, plot the data for each of the four temperatures and the four varieties, plus the unplanted control converting from the natural log value back to the original actual count values to see what the population numbers look like.
-Note the use of `exp() - 1` in the `y` aesthetic, to transform the values from the `ln() + 1` values. Doing this shows us the original data's values and helps demonstrate why the data were log transformed for analysis.
+Note the use of `exp() - 1` in the `y` aesthetic, to transform the values from the `ln() + 1` values.
+Doing this shows us the original data's values and helps demonstrate why the data were log transformed for analysis.
 To examine the data, first we will use boxplots and then quantile-quantile (qq) plots.
 
 ```{r boxplots_original}
@@ -598,7 +602,8 @@ Therefore, without more data to distinguish the models it appears that either mo
 ### Tidy Data
 
 Wickham [-@TIDY-DATA2014] introduced the idea of tidy data for analysis.
-As you work with raw data from many sources, it is useful to understand what this means and why it is useful. In this example, _tidyr_ was used to convert the data from wide to long format.
+As you work with raw data from many sources, it is useful to understand what this means and why it is useful.
+In this example, _tidyr_ was used to convert the data from wide to long format.
 For a more in-depth look at using _tidyr_ see:
 
 - [Introducing tidyr](https://blog.rstudio.com/2014/07/22/introducing-tidyr/)
@@ -622,8 +627,7 @@ Prof. Faraway has more recent books on the subject as well that you might wish t
 
 Selecting good colour schemes is essential for communicating your message.
 The _viridis_ package makes this much easier to do.
-Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is
-useful to use a package like this for your colour palettes, [Using the new ‘viridis’ colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
+Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, [Using the new ‘viridis’ colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
 Other colour palettes for R exist as well.
 Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Colour Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.
 
