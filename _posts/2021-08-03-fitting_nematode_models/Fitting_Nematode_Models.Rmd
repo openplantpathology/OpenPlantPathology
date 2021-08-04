@@ -69,7 +69,8 @@ if (!require("viridis")) {
 
 ## Data Wrangling
 
-The data are located in the `data` sub-folder. Import the data using `read_csv()` function from _readr_  and view them.
+The data are located in the `data` sub-folder.
+Import the data using `read_csv()` function from _readr_  and view them.
 
 ```{r data_import, echo=TRUE, message=FALSE}
 nema <- read_csv("data/Nematode_Data.csv")
@@ -134,11 +135,13 @@ Wide data are commonly found in spreadsheets but do not lend themselves easily t
 To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R.
 The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table [@TIDY-DATA2014].
 
-In order to use _ggplot2_ for visualising the data, they need to be converted from wide to long. Using `gather()` from the _tidyr_ package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
+In order to use _ggplot2_ for visualising the data, they need to be converted from wide to long. Using `pivot_longer()` from the _tidyr_ package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
 
 ```{r gather_data, echo=TRUE}
 nema_long <- nema %>%
-  gather(Variety, Log_pop, Unplanted:Suneca)
+  pivot_longer(cols = Unplanted:Suneca,
+               names_to = "Variety",
+               values_to = "Log_pop")
 
 nema_long
 
