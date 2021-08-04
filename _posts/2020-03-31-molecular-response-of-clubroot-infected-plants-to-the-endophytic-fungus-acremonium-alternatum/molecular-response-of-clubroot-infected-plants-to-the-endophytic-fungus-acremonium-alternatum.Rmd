@@ -11,7 +11,7 @@ output:
     self_contained: false
 preview: seminar-susann.png
 categories:
-  - Virtual seminars
+  - Virtual Seminars
 doi: "10.17605/OSF.IO/HSN53"
 ---
 
@@ -20,11 +20,16 @@ doi: "10.17605/OSF.IO/HSN53"
 Presenter: Dr. Susann Auer \
 Institution: Technische Universität Dresden\
 Date: March 31, 2020 \
-Host: Benjamin Schwessinger \
+Host: Dr. Benjamin Schwessinger \
 Links: [Video](https://youtu.be/vcNz5qatqaE) \| [Slides](https://doi.org/10.17605/OSF.IO/HSN53)
 
 ### Abstract
 
-Clubroot disease (*Plasmodiophora brassicae*) continues to cause economic losses in Brassica crops worldwide, sustainable control measures are not in sight. The clubroot pathogen persists in soils in the form of durable resting spores which infect new crops every consecutive year. Integrated pest management with biocontrol agents could work against this disease. We study one potential antagonist against clubroot, the endophytic fungus *Acremonium alternatum*. This fungus colonizes plant tissues and shows a consistent partial control of clubroot symptoms. Colonized plants have a better survival rate and suffer less from clubroot symptoms. In this seminar I will present a few highlights of our research including recent insights from -omics approaches and classic plant pathogen interaction studies for this specific tripartite interaction.<br><br>
+Clubroot disease (*Plasmodiophora brassicae*) continues to cause economic losses in Brassica crops worldwide, sustainable control measures are not in sight.
+The clubroot pathogen persists in soils in the form of durable resting spores which infect new crops every consecutive year.
+Integrated pest management with biocontrol agents could work against this disease.
+We study one potential antagonist against clubroot, the endophytic fungus *Acremonium alternatum*.
+This fungus colonizes plant tissues and shows a consistent partial control of clubroot symptoms. Colonized plants have a better survival rate and suffer less from clubroot symptoms.
+In this seminar I will present a few highlights of our research including recent insights from -omics approaches and classic plant pathogen interaction studies for this specific tripartite interaction.
 
 ![](seminar-susann.png)

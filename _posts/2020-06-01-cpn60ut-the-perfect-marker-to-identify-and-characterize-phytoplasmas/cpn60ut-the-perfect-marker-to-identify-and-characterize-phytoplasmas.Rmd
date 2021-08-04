@@ -11,7 +11,7 @@ output:
     self_contained: false
 preview: seminar-edel.png
 categories:
-  - Virtual seminars
+  - Virtual Seminars
 ---
 
 ### About

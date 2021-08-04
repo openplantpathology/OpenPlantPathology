@@ -11,7 +11,7 @@ author:
   - name: Adam Sparks
     url: https://adamhsparks.com/
 categories:
-  - Virtual seminars
+  - Virtual Seminars
 doi: "10.17605/OSF.IO/69PBA"
 ---
 

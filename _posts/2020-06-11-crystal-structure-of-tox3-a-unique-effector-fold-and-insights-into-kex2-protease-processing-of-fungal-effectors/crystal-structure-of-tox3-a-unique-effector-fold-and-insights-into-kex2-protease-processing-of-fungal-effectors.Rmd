@@ -11,7 +11,7 @@ output:
     self_contained: false
 preview: seminar-simon.png
 categories:
-  - Virtual seminars
+  - Virtual Seminars
 doi: "10.17605/OSF.IO/V435Z"
 ---
 
