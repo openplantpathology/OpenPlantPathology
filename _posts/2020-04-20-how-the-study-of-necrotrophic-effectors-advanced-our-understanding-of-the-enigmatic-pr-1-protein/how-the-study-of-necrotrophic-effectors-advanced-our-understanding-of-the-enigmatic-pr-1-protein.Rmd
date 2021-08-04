@@ -17,7 +17,8 @@ doi: "0.17605/OSF.IO/DNJSC"
 
 ### About
 
-Presenter: Dr. Peter Solomon - The Australian National University \
+Presenter: Dr. Peter Solomon\
+Institution: The Australian National University\
 Date: April 20, 2020 \
 Host: Dr. Benjamin Schwessinger \
 Links: [Video](https://www.youtube.com/watch?v=7Kcrb5Q8CVo) \| [Slides](https://doi.org/0.17605/OSF.IO/DNJSC/)
