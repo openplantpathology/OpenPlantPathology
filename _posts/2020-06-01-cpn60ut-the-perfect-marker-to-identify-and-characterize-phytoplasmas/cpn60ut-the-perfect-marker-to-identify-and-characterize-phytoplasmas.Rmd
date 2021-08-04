@@ -17,10 +17,11 @@ doi: "10.17605/OSF.IO/QS29R"
 
 ### About
 
-Presenter: Dr. Edel Pèrez-Lòpez - Université Laval\
+Presenter: Dr. Edel Pèrez-Lòpez\
+Institution: Université Laval\
 Date: June 1, 2020\
 Host: Dr. Lisa Rothmann\
-Watch: [Video](https://www.youtube.com/watch?v=T4vA0HJ7rlg) \| [Slides](https://doi.org/10.17605/OSF.IO/QS29R)
+Links: [Video](https://www.youtube.com/watch?v=T4vA0HJ7rlg) \| [Slides](https://doi.org/10.17605/OSF.IO/QS29R)
 
 ### Abstract
 
