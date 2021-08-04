@@ -11,7 +11,7 @@ output:
     self_contained: false
 preview: epifitter.png
 categories: 
-  - R packages
+  - R Packages
   - R4PlantPath
 bibliography: references.bib
 ---

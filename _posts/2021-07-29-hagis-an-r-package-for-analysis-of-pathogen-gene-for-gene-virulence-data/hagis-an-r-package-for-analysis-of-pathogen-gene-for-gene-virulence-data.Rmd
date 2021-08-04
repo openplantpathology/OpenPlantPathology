@@ -9,7 +9,7 @@ output:
   distill::distill_article:
     self_contained: false
 categories: 
-  - R packages
+  - R Packages
   - R4PlantPath
 ---
 
