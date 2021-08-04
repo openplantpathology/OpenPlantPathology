@@ -21,7 +21,7 @@ bibliography: bibliography.bib
 repository_url: https://github.com/adamhsparks/Modelling_Nematode_Populations
 compare_updates_url: https://github.com/adamhsparks/Modelling_Nematode_Populations/compare/v0.0.1...main
 csl: phytopathology.csl
-draft: true
+draft: false
 ---
 
 
@@ -631,8 +631,19 @@ Bob Rudis has a nice blog post when the package was first introduced that demons
 Other colour palettes for R exist as well.
 Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Color Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.
 
+## A Note on This Article
+
+This article was original published in 2018 on Open Plant Pathology shortly after we launched.
+Since then it has been updated with minor changes to the R code to bring it up-to-date with the latest libraries and present cleaner figures and integrate into the new website framework that OPP now uses.
+Changes since the original can be viewed using the link below that compares the original article with this version.
+_The message and scientific contents remain the same._
+
+AHS, 2021.08.04
+
 ## Reproducibility
 
 ```{r reproducibility, echo=FALSE}
 sessioninfo::session_info()
 ```
+
+
