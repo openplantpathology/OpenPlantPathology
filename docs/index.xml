@@ -12,19 +12,7 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
-      <dc:creator>Adam H. Sparks</dc:creator>
-      <dc:creator>John P. Thompson</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling</link>
-      <description>_Pratylenchus thornei_, the root-lesion nematode, is widely distributed in wheat (_Triticum aestivum_) growing areas of many countries and is of particular concern in sub-tropical environments [@THOMPSON2015]. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress [@THOMPSON2015]. In the original paper the population response of _P. thornei_ in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations. The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of _P. thornei_ as described in the original paper.</description>
-      <category>R4PlantPath</category>
-      <category>Reproducible Research</category>
-      <guid>https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling</guid>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling/nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
+    <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
       <dc:creator>Adam Sparks</dc:creator>
