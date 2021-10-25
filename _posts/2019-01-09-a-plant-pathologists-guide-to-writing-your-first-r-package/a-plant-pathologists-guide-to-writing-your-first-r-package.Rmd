@@ -20,7 +20,7 @@ So you want to write your first R package, but you don't know where to
 start? We can help with that! Writing an R package is not difficult *per
 se*, but it can be intimidating for a first timer.
 Why would you want to write an R package? Well, as
-[@PhytophthoraLab](https://twitter.com/phytophthoralab) says, if you have
+[\@PhytophthoraLab](https://twitter.com/phytophthoralab) says, if you have
 more than two functions, you have a package, plus it means you can get
 citations! Yes, if you write a nice R package that people like and use and you
 have provided the proper information, it can (and should) lead to citations for
