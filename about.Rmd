@@ -1,5 +1,5 @@
 ---
-title: "About us"
+title: "Mission"
 description: |
   Our mission 
 ---
@@ -10,14 +10,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Mission
 
-The Open Plant Pathology (OPP) initiative supports and promotes openness, transparency and reproducibility of scientific research data and methods applied to plant pathological research and applications. We strongly believe that building a social infrastructure through a welcoming, engaged and diverse community is key for sharing knowledge and supporting others for adoption of a new culture.
+The Open Plant Pathology (OPP) initiative supports and promotes openness, transparency and reproducibility of scientific research data and methods applied to plant pathological research and applications.
+We strongly believe that building a social infrastructure through a welcoming, engaged and diverse community is key for sharing knowledge and supporting others for adoption of a new culture.
 
 ## Benefits
 
 There may be several benefits from either following us or engaging and promoting OPP:
 
--   Learn about open science/education and reproducible research in the context of plant pathology
+- Learn about open science/education and reproducible research in the context of plant pathology
 
--   Meet new colleagues (who can become your future collaborators) by [joining our Slack  workspace](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) who can help you out with any question
+- Meet new colleagues (who can become your future collaborators) by [joining our Slack  workspace](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) who can help you out with any question
 
--   Academic and scientific exchange via freely available Virtual Seminars on our [YouTube channel](https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA)
+- Academic and scientific exchange via freely available Virtual Seminars on our [YouTube channel](https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA)
