@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Wikipedia describes [Julia](https://julialang.org) by saying, it "is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science."^[https://en.wikipedia.org/wiki/Julia_(programming_language)]
 In short, it can be scripted like R, which many of us are likely to be more familiar with.
-But provides efficiency gains, being much faster than R to execute code.
+But provides efficiency gains, being much faster than R to execute code^[https://julialang.org/benchmarks/].
 While this may not matter much in day-to-day work for you, if you have a large set of data to work with, _e.g._, large geographic or temporal sets of data covering country or global areas for many years, Julia may be useful to you in performing the analysis.
 Alternatively, maybe you're just curious and want to try something new.
 Even though it's not as mature, Julia does have some features that R does not like [multiple dispatch](https://miguelraz.github.io/blog/dispatch/index.html), which may be of interest to more advanced users.
@@ -205,6 +205,9 @@ The AUDPC values match!
 ## Conclusion
 
 This is just a quick example of how you can use Julia in plant pathology to show new users how it compares with R with a commonly used function.
+If you're curious to know more, the [Julia docs](https://docs.julialang.org) are a great place to start.
+In particular, the [noteworthy differences](https://docs.julialang.org/en/v1/manual/noteworthy-differences/#Noteworthy-differences-from-R) is a useful bit to refer to if you're familiar with R.
+
 For a more detailed comparison of complete Julia and R packages that offer an existing plant disease model, EPIRICE [@Savary2012], see [Epicrop.jl](https://adamhsparks.github.io/Epicrop.jl/stable/) [@Epicrop.jl-2022], a port of [epicrop](https://adamhsparks.github.io/epicrop/) [@Sparks2021] to Julia, which has demonstrated faster speeds in benchmarking tests for the same rice disease predictions.
 
 ## Colophon
