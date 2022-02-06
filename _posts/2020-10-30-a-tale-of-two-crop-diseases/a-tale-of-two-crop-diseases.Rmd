@@ -4,7 +4,7 @@ description: |
   Seminar given by Dr. Araz Solman from the Queensland Department of Agriculture and Fisheries. Short abstract: Research into plant-pathogen interactions has historically taken a simplified approach involving a single host and a single disease. However, in natural and agroecosystems, plants are frequently co-infected with several pathogen species or genotypes, exhibiting complexities not captured by the widely used single disease approach. In this seminar, I will address the complex dynamics of plant co-infection by focusing mainly on a tripartite pathosystem consisting of wheat as the host and two major fungal pathogens: _Pyrenophora tritici-repentis_ (Ptr) and _Parastagonospora nodorum_ (Pan).
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
 date: 10-30-2020
 output:
   distill::distill_article:

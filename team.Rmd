@@ -8,7 +8,7 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-OpenPlantPathology is a not for-profit initiative founded in January 2018 by [Emerson Del Ponte](emersondelponte.netlify.app) and [Adam Sparks](https://adamhsparks.netlify.app/) to facilitate communication among computational plant pathologists and promote open science and reproducible research practices in plant pathology.
+OpenPlantPathology is a not for-profit initiative founded in January 2018 by [Emerson Del Ponte](https://emersondelponte.netlify.app) and [Adam Sparks](https://adamhsparks.netlify.app) to facilitate communication among computational plant pathologists and promote open science and reproducible research practices in plant pathology.
 Of course, this would not be possible without the support from several colleagues who helped spread the initiative and the culture of open science.
 Currently, our team is composed of the following leaders.
 

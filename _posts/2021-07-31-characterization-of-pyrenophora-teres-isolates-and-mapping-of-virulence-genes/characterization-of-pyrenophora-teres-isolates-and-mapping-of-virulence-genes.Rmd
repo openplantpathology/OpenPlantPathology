@@ -4,7 +4,7 @@ description: |
   Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
 date: 07-31-2021
 output:
   distill::distill_article:

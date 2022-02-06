@@ -4,7 +4,7 @@ description: |
   We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
   - name: Emerson Del Ponte
     url: https://emersondelponte.netlify.app
 date: 08-21-2019

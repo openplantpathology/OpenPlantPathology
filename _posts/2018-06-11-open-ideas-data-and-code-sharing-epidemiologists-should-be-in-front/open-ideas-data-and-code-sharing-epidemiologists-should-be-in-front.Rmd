@@ -4,7 +4,7 @@ description: |
   Talk given by OPP Founder, Emerson M. Del Ponte, at the 12 International Epidemiology Workshop on June 12 2018 (Lillehammer, Norway) to promote the initiative among plant disease epidemiologits
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
   - name: Emerson Del Ponte
     url: https://emersondelponte.netlify.app
 date: 06-12-2018

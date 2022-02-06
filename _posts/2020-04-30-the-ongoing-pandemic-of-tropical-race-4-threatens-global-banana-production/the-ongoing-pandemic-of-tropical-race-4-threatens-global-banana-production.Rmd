@@ -9,7 +9,7 @@ output:
 preview: seminar-kema.png
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com/
+    url: adamhsparks.netlify.app/
 categories:
   - Virtual Seminars
 doi: "10.17605/OSF.IO/69PBA"

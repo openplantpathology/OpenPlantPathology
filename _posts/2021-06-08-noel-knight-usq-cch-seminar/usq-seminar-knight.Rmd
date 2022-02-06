@@ -4,7 +4,7 @@ description: |
   Noel Knight began his research career at the University of Southern Queensland in Toowoomba in 2007, investigating pathotypes of the spot blotch pathogen of barley and describing disease symptoms of Fusarium crown rot on wheat. He subsequently spent two years at Cornell University in New York State researching leaf diseases of beetroot. Noel joined the Fungicide Resistance Group in the Centre for Crop and Disease Management at Curtin University in 2020, undertaking projects involved in detecting and characterising fungicide resistance in the barley net blotch pathogens.
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
 date: 2021-06-04
 output:
   distill::distill_article:

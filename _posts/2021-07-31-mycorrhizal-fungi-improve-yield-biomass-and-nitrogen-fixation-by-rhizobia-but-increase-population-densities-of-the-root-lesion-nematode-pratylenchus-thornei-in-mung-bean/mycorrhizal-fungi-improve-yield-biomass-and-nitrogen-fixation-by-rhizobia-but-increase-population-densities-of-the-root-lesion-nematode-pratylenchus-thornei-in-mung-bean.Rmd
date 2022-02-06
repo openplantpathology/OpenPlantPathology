@@ -4,7 +4,7 @@ description: |
   Mung bean is a short-season, high-value legume crop in eastern Australia that is susceptible to the plant-parasitic root-lesion nematode _Pratylenchus thornei_. It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates. Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and Pratylenchus population density in crops. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).
 author:
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
 date: 07-31-2021
 output:
   distill::distill_article:

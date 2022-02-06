@@ -4,7 +4,7 @@ description: |
   Adam Sparks and Paul Melloy recently joined CHaBits (Consortium for Heat and Biotic Stresses) to discuss the effects of climate change on plant disease. CHaBits have graciously hosted the seminar recording on their YouTube.
 author:  
   - name: Adam Sparks
-    url: https://adamhsparks.com
+    url: adamhsparks.netlify.app
 date: 07-01-2021
 output:
   distill::distill_article:
@@ -32,7 +32,7 @@ Links: [Video](https://youtu.be/PO958Vhdiss) \| [Slides](https://speakerdeck.com
 
 !["CHaBits logo. Provided by CHaBits"](chabits.png)
 
-Recently [Adam Sparks](https://adamhsparks.com/) and [Paul Melloy](https://staffprofile.usq.edu.au/Profile/Paul-Melloy) joined the CHaBits, Consortium for Heat and Biotic Stress, to discuss the effects of climate change on plant disease.
+Recently [Adam Sparks](adamhsparks.netlify.app/) and [Paul Melloy](https://staffprofile.usq.edu.au/Profile/Paul-Melloy) joined the CHaBits, Consortium for Heat and Biotic Stress, to discuss the effects of climate change on plant disease.
 They covered the basic pathogen groups and the plant disease triangle to give participants a good background on how and why climate change will affect plant disease by affecting the host, pathogen and environment.
 Their message was that climate change will not affect all plant diseases equally, some diseases are likely to become more predominant while others will become less important.
 Check out the [video](https://youtu.be/PO958Vhdiss) on YouTube to learn more.

@@ -1,0 +1,212 @@
+---
+title: "Introducing Julia to Plant Pathologists"
+description: |
+  Do you feel the need for speed?
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.netlify.app
+bibliography: bibliography.bib
+date: 2022-02-06
+output:
+  distill::distill_article:
+    self_contained: false
+preview: Julia_Programming_Language_Logo.svg
+csl: phytopathology.csl
+categories: 
+  - Julia4PlantPath
+  - R4PlantPath
+  - Reproducible Research
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](Julia_Programming_Language_Logo.svg)
+
+Wikipedia describes [Julia](https://julialang.org) by saying, it "is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science."^[https://en.wikipedia.org/wiki/Julia_(programming_language)]
+In short, it can be scripted like R, which many of us are likely to be more familiar with.
+But provides efficiency gains, being much faster than R to execute code.
+While this may not matter much in day-to-day work for you, if you have a large set of data to work with, _e.g._, large geographic or temporal sets of data covering country or global areas for many years, Julia may be useful to you in performing the analysis.
+Alternatively, maybe you're just curious and want to try something new.
+Even though it's not as mature, Julia does have some features that R does not like [multiple dispatch](https://miguelraz.github.io/blog/dispatch/index.html), which may be of interest to more advanced users.
+
+To introduce you to Julia, I will demonstrate how to calculate area under the disease progress curve (AUDPC) [@Shaner1977] in R and then in Julia.
+
+## Installation
+
+If you've ever installed R then you'll be able to install and use Julia as well.
+Simply head over to <https://julialang.org/downloads/> and download the proper version for your computer's OS and processor.
+Then follow the directions from <https://julialang.org/downloads/platform/> to install it for your platform.
+
+## Calculating AUDPC
+
+### Using R
+
+In the "Disease Progress Over Time" module of the "Epidemiology and Ecology in R", Sparks et al. [-@Sparks2008] demonstrate how to write an R function to calculate AUDPC as follows.
+
+```r
+# Build a function for AUDPC calculation
+# the left curly bracket indicates the beginning
+# of the function
+audpc <- function(disease.severity, time.period) {
+  #n is the length of time.period, or
+  #  the total number of sample dates
+  n <- length(time.period)
+  
+  # meanvec is the vector (matrix with one dimension)
+  # that will contain the mean percent infection
+  # it is initialized containing -1 for all entries
+  # this sort of initialization is sometimes useful
+  # for debugging
+  meanvec <- matrix(-1, (n - 1))
+  
+  # intvec is the vector that will contain the length of
+  # time between sampling dates
+  intvec <- matrix(-1, (n - 1))
+  
+  # the loop goes from the first to the penultimate entry
+  # the left curly bracket indicates the beginning of
+  # commands in the loop
+  for (i in 1:(n - 1)) {
+    #the ith entry in meanvec is replaced with the
+    #   mean percent infection
+    #between sample time i and sample time i+1
+    meanvec[i] <- mean(c(disease.severity[i],
+                         disease.severity[i + 1]))
+    
+    #the ith entry in intvec is replaced with the length
+    # of the time interval between time i and time i+1
+    intvec[i] <- time.period[i + 1] - time.period[i]
+    
+    #the right curly bracket ends the loop
+  }
+  
+  # the two vectors are multiplied together
+  # one entry at a time
+  infprod <- meanvec * intvec
+  
+  # the sum of the entries in the resulting vector
+  # gives the AUDPC
+  sum(infprod)
+  
+  #the right curly bracket ends the function
+}
+```
+
+This function in R can be improved for efficiency as follows.
+
+```{r, echo=TRUE}
+r_audpc <- function(disease.severity, time.period) {
+  # only calculate n-1 once
+  n <- length(time.period) - 1
+  
+  # set up vectors, not matrices, as double precision to contain the mean
+  # percent infection (meanvec) and difference between obs times (intvec)
+  meanvec <- vector(mode = "double", length = n)
+  intvec <- vector(mode = "double", length = n)
+  
+  # using `seq_len()` is safer than 1:n, if n = 0
+  for (i in seq_len(n)) {
+    
+    # double brackets for assigning values in a vector are preferred
+    # using `sum()` in place of `+` for `i + 1` is faster
+    meanvec[[i]] <-
+      mean(c(disease.severity[[i]], disease.severity[[sum(i, 1)]]))
+    intvec[[i]] <- time.period[sum(i, 1)] - time.period[[i]]
+  }
+  
+  # save a step and put everything on one line, returning the AUDPC value
+  return(sum(meanvec * intvec))
+}
+```
+
+Or, if you prefer, you can install libraries from CRAN that provide functions for calculating AUDPC rather than writing your own.
+The R packages [_agricolae_](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [_epifitter_](https://cran.r-project.org/package=epifitter) [@Alves2021] provide easy to use functions to calculate AUDPC, `audpc()` and `AUDPC()`, respectively.
+Following uses an example from _agricolae's_ help showing how to calculate AUDPC in R using our own function, `r_audpc()`.
+
+```r
+> dates <- c(14, 21, 28) # days
+> evaluation <- c(40, 80, 90)
+> r_audpc(evaluation, dates)
+```
+
+```{r agricolae, echo=FALSE}
+dates <- c(14, 21, 28) # days
+dates
+# example 1: evaluation - vector
+evaluation <- c(40, 80, 90)
+evaluation
+r_audpc(evaluation, dates)
+```
+
+### Using Julia
+
+Currently I'm unaware of any packages for Julia offering this functionality.
+However, we can easily duplicate `r_audpc()` from R to Julia but need to make a few minor changes for differences in the languages.
+Most of the following function should look familiar.
+The first thing is that we cannot have a `.` in the function argument names, so we'll just use a single word here for clarity.
+The second is that we cannot use `<-` for assigning values as in R.
+We must use `=` to assign in Julia, however you can use `=` in R as well if you wish.
+Functions are written in roughly the same manner as in R and they are called in the same way, `fn_name(arg1, arg2, ...)`.
+
+```{julia audpc, echo=TRUE}
+function j_audpc(evaluation, dates)
+    
+    n = length(evaluation) - 1
+    
+    # again we preallocate vectors to hold the values but also create a third
+    # object, out, since it will be inside our for loop unlike in R
+    meanvec = Base.zeros(n)
+    intvec = Base.zeros(n)
+    out = 0.0
+
+    # the for loop looks roughly the same but here we just use 1:n
+    for i in 1:n
+        # rather than using a mean() we just divide by 2 here
+        meanvec[i] = (evaluation[i] + evaluation[i + 1]) / 2
+        
+        # this is the same
+        intvec[i] = dates[i + 1] - dates[i]
+        
+        # here we sum the values in the loop as Julia will compile this and it
+        # will run more quickly. In R this is undesireable behaviour so we
+        # performed this outside of the loop.
+        
+        # also note here that before the `*` we have a `.`, this means to
+        # "broadcast" across the vector. In R this automatically happens, in
+        # Julia to perform operations to all values in a vector you must
+        # broadcast
+        out = sum(meanvec .* intvec)
+    end
+  
+    # return the object, `out` from the for loop
+    return out
+
+# end the function (no curly brackets!)
+end
+```
+
+```julia
+julia> dates = [14, 21, 28] # days
+julia> evaulation = [40, 80, 90]
+julia> j_audpc(evaulation, dates)
+```
+
+```{julia run-audpc, echo=FALSE}
+dates = [14, 21, 28] # days
+evaulation = [40, 80, 90]
+j_audpc(evaulation, dates)
+```
+
+The AUDPC values match!
+
+## Conclusion
+
+This is just a quick example of how you can use Julia in plant pathology to show new users how it compares with R with a commonly used function.
+For a more detailed comparison of complete Julia and R packages that offer an existing plant disease model, EPIRICE [@Savary2012], see [Epicrop.jl](https://adamhsparks.github.io/Epicrop.jl/stable/) [@Epicrop.jl-2022], a port of [epicrop](https://adamhsparks.github.io/epicrop/) [@Sparks2021] to Julia, which has demonstrated faster speeds in benchmarking tests for the same rice disease predictions.
+
+## Colophon
+
+This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@RCore2021] and Julia Version ```r JuliaCall::julia_eval("VERSION")``` [@Bezanson2017] using _JuliaCall_ Pull Request [#174](https://github.com/Non-Contradiction/JuliaCall/pull/174).
