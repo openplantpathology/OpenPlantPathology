@@ -21,6 +21,23 @@
     "input_file": {}
   },
   {
+    "path": "posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/",
+    "title": "Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia",
+    "description": "Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-02-03",
+    "categories": [],
+    "contents": "\nAbout\nPresenter: Dr. Ido Bar\nInstitution: Centre for Planetary Health and Food Security, Griffith University\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nIdo obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture genetics and breeding. In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna. After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security. His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches. He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.\nAbstract\nAscochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University. The identified patterns suggest that A. rabiei displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.\n\n\n\n",
+    "preview": "posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/Qld_APPS_Bar.jpg",
+    "last_modified": "2022-02-09T15:03:22+08:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/",
     "title": "RNAi vaccines for sustainable plant protection",
     "description": "RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.",
@@ -37,24 +54,26 @@
     "contents": "\nAbout\nPresenter: Dr. Anne Sawyer\nInstitution: Advance Queensland Fellow, School of Chemistry and Molecular Biosciences, The University of Queensland\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nFollowing her PhD at the Institute for Molecular Bioscience, The University of Queensland in 2014, Anne carried out a three-year postdoc at Ruhr-University Bochum, Germany, where in collaboration with researchers at Oxford University, UK, and CEA Cadarache, France, she engineered microalgae to overproduce hydrogen gas as a renewable energy. In 2018, Anne returned to The University of Queensland to work with Prof Bernie Carroll, an expert in RNA interference in plants, and Prof Neena Mitter, Director of the Centre for Horticultural Science at the Queensland Alliance for Agriculture and Food Innovation, on gene silencing in plants and fungi. Under their mentorship she gained immense experience of RNA interference, which led to being awarded an Advance Queensland Industry Research Fellowship to develop RNA vaccines against fungal diseases threatening Queensland crops and native plants. Anne is now working closely with partners at the Queensland Department of Agriculture and Fisheries, Nufarm Australia, Tropical Pines, Howe Farming Enterprises and New England BioLabs to translate her research into a technology that can be used by Australian farmers as an alternative to broad-spectrum pesticides.\nAbstract\nRNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay™, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops. We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries. We have synthesised dsRNA targeting essential Phytophthora cinnamomi and Austropuccinia psidii genes which have fungicidal activity against the respective pathogens in vitro and in planta and are now investigating the mechanism of RNAi vaccine-induced protection. Our ultimate goal is to develop a clean green safe control strategy for these invasive diseases to safeguard Australian horticulture, forestry and native plant industries, with long-term benefits for conservation and biodiversity.\n\n\n\n",
     "preview": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg",
     "last_modified": "2022-02-09T13:18:44+08:00",
-    "input_file": "rnai-vaccines-for-sustainable-plant-protection.knit.md"
+    "input_file": {}
   },
   {
-    "path": "posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/",
-    "title": "Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia",
-    "description": "Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.",
+    "path": "posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/",
+    "title": "Characterization of Pyrenophora teres isolates and mapping of virulence genes",
+    "description": "Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).",
     "author": [
       {
         "name": "Adam Sparks",
-        "url": "https://adamhsparks.netlify.app"
+        "url": "adamhsparks.netlify.app"
       }
     ],
-    "date": "2022-02-03",
-    "categories": [],
-    "contents": "\nAbout\nPresenter: Dr. Ido Bar\nInstitution: Centre for Planetary Health and Food Security, Griffith University\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nIdo obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture genetics and breeding. In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna. After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security. His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches. He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.\nAbstract\nAscochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University. The identified patterns suggest that A. rabiei displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-02-09T13:19:55+08:00",
-    "input_file": "adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia.knit.md"
+    "date": "2021-07-31",
+    "categories": [
+      "Qld-APPS Seminars"
+    ],
+    "contents": "\nAbout\nPresenter: Buddhika Amarasinghe Dahanayaka\nInstitution: University of Southern Queensland, Centre for Crop Health\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nLinks: Video\nBiography\nBuddhika Amarasinghe Dahanayaka is a third year PhD student in the Centre for Crop Health at the University of Southern Queensland. Her PhD research is based on genetic characterisation and identification of virulence genes of a barley fungal pathogen, Pyrenophora teres. She completed her Master of Philosophy at Wayamba University of Sri Lanka on identifying genes responsible for salinity tolerance in rice and her research interests include QTL mapping, population genetics, phylogenetics and bioinformatics. Her recent publications based on her PhD project, “Population structure of Pyrenophora teres f. teres barley pathogens from different continents” and “Investigating in vitro mating preference between or within the two forms of Pyrenophora teres and its hybrids”, are available at Phytopathology (Firstlook).\nAbstract\nCharacterization of Pyrenophora teres isolates and mapping of virulence genes Pyrenophora teres is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. My PhD study addressed some of the research gaps involving the P. teres-barley pathosystem: 1) Pyrenophora teres f. teres (Ptt) populations collected from different continents were genetically characterised and revealed recent/ongoing gene migration among/within different continents. Two field hybrids were also identified. 2) The mating preference between the two forms of P. teres and its hybrids were investigated by crossing different sets of Ptt and Pyrenophora teres f. maculata (Ptm) isolates. This indicated that Ptm did not have a mating preference for the same form but mostly hybridised with Ptt isolates. Ptt isolates had greater reproduction vigour than Ptm isolates under the given laboratory conditions. 3) Quantitative trait loci (QTL) mapping of a Ptt/Ptm cross detected nine QTL associated with virulence and leaf symptoms on five different linkage groups/chromosomes.\n\n\n\n",
+    "preview": "posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg",
+    "last_modified": "2022-02-09T12:47:32+08:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-07-31-diagnosis-of-african-citrus-greening/",
@@ -93,25 +112,6 @@
     "preview": "posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean/qld-apps-seminar-gough.jpg",
     "last_modified": "2022-02-07T07:54:10+08:00",
     "input_file": {}
-  },
-  {
-    "path": "posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/",
-    "title": "Characterization of Pyrenophora teres isolates and mapping of virulence genes",
-    "description": "Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).",
-    "author": [
-      {
-        "name": "Adam Sparks",
-        "url": "adamhsparks.netlify.app"
-      }
-    ],
-    "date": "2021-07-31",
-    "categories": [
-      "Qld-APPS Seminars"
-    ],
-    "contents": "\nAbout\nPresenter: Buddhika Amarasinghe Dahanayaka\nInstitution: University of Southern Queensland, Centre for Crop Health\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nLinks: Video\nBiography\nBuddhika Amarasinghe Dahanayaka is a third year PhD student in the Centre for Crop Health at the University of Southern Queensland. Her PhD research is based on genetic characterisation and identification of virulence genes of a barley fungal pathogen, Pyrenophora teres. She completed her Master of Philosophy at Wayamba University of Sri Lanka on identifying genes responsible for salinity tolerance in rice and her research interests include QTL mapping, population genetics, phylogenetics and bioinformatics. Her recent publications based on her PhD project, “Population structure of Pyrenophora teres f. teres barley pathogens from different continents” and “Investigating in vitro mating preference between or within the two forms of Pyrenophora teres and its hybrids”, are available at Phytopathology (Firstlook).\nAbstract\nCharacterization of Pyrenophora teres isolates and mapping of virulence genes Pyrenophora teres is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. My PhD study addressed some of the research gaps involving the P. teres-barley pathosystem: 1) Pyrenophora teres f. teres (Ptt) populations collected from different continents were genetically characterised and revealed recent/ongoing gene migration among/within different continents. Two field hybrids were also identified. 2) The mating preference between the two forms of P. teres and its hybrids were investigated by crossing different sets of Ptt and Pyrenophora teres f. maculata (Ptm) isolates. This indicated that Ptm did not have a mating preference for the same form but mostly hybridised with Ptt isolates. Ptt isolates had greater reproduction vigour than Ptm isolates under the given laboratory conditions. 3) Quantitative trait loci (QTL) mapping of a Ptt/Ptm cross detected nine QTL associated with virulence and leaf symptoms on five different linkage groups/chromosomes.\n\n\n\n",
-    "preview": "posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg",
-    "last_modified": "2022-02-09T12:47:32+08:00",
-    "input_file": "characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes.knit.md"
   },
   {
     "path": "posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data/",
@@ -192,7 +192,7 @@
     "contents": "\nAbout\nPresenter: Dr. Noel Knight\nInstitution: Curtin University, Centre for Crop and Disease Management, Fungicide Resistance Group\nDate: June 8, 2021\nTime: 11:00AM - 12:00PM AEST\nHost: USQ CCH\nLinks: Video | Slides\nAbstract\nPCR is a useful tool for detecting and quantifying DNA sequences of specific species or alleles. A comprehensive design strategy is essential for allowing target DNA to be detected and non-target DNA to be avoided. Examples of design strategies and research applications will be discussed for two topics. Firstly, specific detection of the barley leaf pathogen Ramularia collo-cygni in Australia. And secondly, genotyping alleles associated with fungicide sensitivity, reduced sensitivity and resistance in the barley net blotch pathogens Pyrenophora teres f. teres and P. teres f. maculata. The development of detection workflows for these pathosystems provides a robust process for investigating the presence and frequency of pathogens and fungicide resistance.\n\n\n\n",
     "preview": "posts/2021-06-08-noel-knight-usq-cch-seminar/usq-seminar-knight.jpg",
     "last_modified": "2022-02-09T12:47:05+08:00",
-    "input_file": "usq-seminar-knight.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/2021-05-31-measuring-plant-disease-severity-using-the-pliman-r-package/",

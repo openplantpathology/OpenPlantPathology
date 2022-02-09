@@ -26,6 +26,15 @@
       <media:content url="https://www.openplantpathology.org/posts/2022-02-06-introducing-julia/Julia_Programming_Language_Logo.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
+      <title>Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</link>
+      <description>Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.</description>
+      <guid>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</guid>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/Qld_APPS_Bar.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>RNAi vaccines for sustainable plant protection</title>
       <dc:creator>Adam Sparks</dc:creator>
       <link>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</link>
@@ -36,12 +45,14 @@
       <media:content url="https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
-      <title>Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia</title>
+      <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
       <dc:creator>Adam Sparks</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</link>
-      <description>Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.</description>
-      <guid>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</guid>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <link>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</link>
+      <description>Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Diagnosis of African Citrus Greening</title>
@@ -62,16 +73,6 @@
       <guid>https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean</guid>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean/qld-apps-seminar-gough.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
-      <dc:creator>Adam Sparks</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</link>
-      <description>Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
-      <category>Qld-APPS Seminars</category>
-      <guid>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</guid>
-      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>'hagis', an R package for analysis of pathogen gene-for-gene virulence data</title>

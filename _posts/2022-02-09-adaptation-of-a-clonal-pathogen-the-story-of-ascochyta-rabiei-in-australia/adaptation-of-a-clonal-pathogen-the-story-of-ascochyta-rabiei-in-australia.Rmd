@@ -7,7 +7,7 @@ author:
     url: https://adamhsparks.netlify.app
 date: 2022-02-03
 doi: "10.17605/OSF.IO/4N7ZD"
-preview-image: Qld_APPS_Bar.jpg
+preview: Qld_APPS_Bar.jpg
 output:
   distill::distill_article:
     self_contained: false
