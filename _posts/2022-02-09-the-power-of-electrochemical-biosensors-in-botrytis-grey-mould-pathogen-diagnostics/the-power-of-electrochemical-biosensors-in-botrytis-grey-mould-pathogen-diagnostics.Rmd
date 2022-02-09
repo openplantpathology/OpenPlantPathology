@@ -1,0 +1,46 @@
+---
+title: "The power of electrochemical biosensors in Botrytis Grey Mould pathogen diagnostics"
+description: |
+  Plant pathogens cause enormous economic loss and potential unintended environmental impacts through excessive or off-target chemical management practices. Thus, early diagnosis and quantitation of the causal pathogen species for accurate and timely disease control is crucial. Botrytis Grey Mould (BGM), caused by Botrytis cinerea and B. fabae, can seriously impact production of temperate grain legumes separately or within a complex. Accordingly, several immunogenic and molecular probe-type protocols have been developed for their diagnosis, but these have varying levels of species-specificity, sensitivity, and consequent usefulness within the paddock. To substantially improve speed, accuracy and sensitivity, advanced nanoparticle-based biosensor approaches have been employed and through translation of human biomedical diagnostics tools. These new tools provide accurate and quantitative diagnosis in the field and long before visual symptoms appear. This presentation will outline progress towards the development and validation of BGM species-specific molecular-electrochemical coupled diagnostics, and next steps towards their incorporation in IDM strategy.
+
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.netlify.app
+date: 2022-02-03
+output:
+  distill::distill_article:
+    self_contained: false
+preview: Qld_APPS_Ford.jpg
+doi: "10.17605/OSF.IO/MNPXG"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About
+
+Presenter: Prof. Rebecca Ford \
+Institution: Griffith Sciences, Griffith University \
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Date: February 3, 2022 \
+Links: [Video](https://youtu.be/WZOt2Aji4oM)
+
+## Biography
+
+Professor Rebecca Ford is a highly collaborative, interdisciplinary and outcome focused research leader.
+She is driven to ensure that university-based research and research training is of the very highest quality and that the outcomes have clear articulation pathways for transfer and uptake of new knowledge and tools generated.
+Her broad research focus is on improving the sustainability of food production systems, specifically in developing and implementing novel tools for informed crop disease management and selective breeding.
+Her collaborative research has aided in the production of new varieties with resistance to major fungal pathogens. She has also developed molecular diagnostic tools to detect and quantify pathogens and provided new knowledge about their evolution and to inform disease management practices.
+This has directly led to the training of the next generation of agricultural industry professionals, and increased productivity and economic returns to the growers, as well as improved environmental impacts through reduced chemical use.
+She recently participated in the UN Food Systems Summit Dialogue: Multi-stakeholder partnerships for scaling agricultural innovation and is a strong advocate for women in science, particularly in mentoring the progression of ECR women to more senior science career levels within academia and industry.
+
+## Abstract
+
+Plant pathogens cause enormous economic loss and potential unintended environmental impacts through excessive or off-target chemical management practices.
+Thus, early diagnosis and quantitation of the causal pathogen species for accurate and timely disease control is crucial. Botrytis Grey Mould (BGM), caused by _Botrytis cinerea_ and _B. fabae_, can seriously impact production of temperate grain legumes separately or within a complex.
+Accordingly, several immunogenic and molecular probe-type protocols have been developed for their diagnosis, but these have varying levels of species-specificity, sensitivity, and consequent usefulness within the paddock.
+To substantially improve speed, accuracy and sensitivity, advanced nanoparticle-based biosensor approaches have been employed and through translation of human biomedical diagnostics tools.
+These new tools provide accurate and quantitative diagnosis in the field and long before visual symptoms appear.
+This presentation will outline progress towards the development and validation of BGM species-specific molecular-electrochemical coupled diagnostics, and next steps towards their incorporation in IDM strategy.
