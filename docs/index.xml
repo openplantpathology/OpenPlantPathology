@@ -12,7 +12,17 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>RNAi vaccines for sustainable plant protection</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</link>
+      <description>RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&amp;trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</guid>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Introducing Julia to Plant Pathologists</title>
       <dc:creator>Adam Sparks</dc:creator>
@@ -24,28 +34,6 @@
       <guid>https://www.openplantpathology.org/posts/2022-02-06-introducing-julia</guid>
       <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2022-02-06-introducing-julia/Julia_Programming_Language_Logo.svg" medium="image" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>Linear modelling of soil temperature effects on root lesion nematode population densities in R</title>
-      <dc:creator>Adam H. Sparks</dc:creator>
-      <dc:creator>John P. Thompson</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling</link>
-      <description>Pratylenchus thornei, the root-lesion nematode, is widely distributed in wheat (Triticum aestivum) growing areas of many countries and is of particular concern in sub-tropical environments. These nematodes penetrate roots to feed and reproduce in the root cortex leading to loss of root function, which affects nutrient and water uptake of nutrients and water causing nutrient deficiency and water stress. In the original paper the population response of P. thornei in Queensland, Australia wheat to temperature is modelled using a linear and quadratic equations by Thompson (2015). The study aimed to investigate the effects of soil profile temperatures after different sowing dates on reproduction of the nematodes in susceptible and moderately resistant wheat cultivars in the subtropical grain region of eastern Australia. This document recreates the models for population densities of P. thornei as described in the original paper.</description>
-      <category>R4PlantPath</category>
-      <category>Reproducible Research</category>
-      <guid>https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling</guid>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.openplantpathology.org/posts/2021-08-04-nematodemodelling/nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
-    <item>
-      <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
-      <dc:creator>Adam Sparks</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</link>
-      <description>Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
-      <category>Qld-APPS Seminars</category>
-      <guid>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</guid>
-      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Diagnosis of African Citrus Greening</title>
@@ -66,6 +54,16 @@
       <guid>https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean</guid>
       <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean/qld-apps-seminar-gough.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Characterization of Pyrenophora teres isolates and mapping of virulence genes</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</link>
+      <description>Characterization of _Pyrenophora teres_ isolates and mapping of virulence genes _Pyrenophora teres_ is the causative agent of net blotch of barley and one of the most economically important fungal pathogens affecting the Australian barley industry. Buddhika discusses her PhD researsch on genetic characterisation and identification of virulence genes of a barley fungal pathogen, _Pyrenophora teres_. Presented for the Queensland Chapter of the Australasian Plant Pathology Society (APPS).</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes</guid>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2021-07-31-characterization-of-pyrenophora-teres-isolates-and-mapping-of-virulence-genes/qld-apps-seminar-dahanayaka.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>'hagis', an R package for analysis of pathogen gene-for-gene virulence data</title>

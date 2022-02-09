@@ -1,0 +1,43 @@
+---
+title: "RNAi vaccines for sustainable plant protection"
+description: |
+  RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.netlify.app
+date: 2022-02-09
+preview: Qld_APPS_Sawyer.jpg
+categories:
+  - Qld-APPS Seminars
+output:
+  distill::distill_article:
+    self_contained: false
+doi: "10.17605/OSF.IO/V5X3B"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About
+
+Presenter: Dr. Anne Sawyer \
+Institution: Advance Queensland  Fellow,  School of Chemistry and Molecular Biosciences, The University of Queensland \
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Date: February 3, 2022 \
+Links: [Video](https://youtu.be/lx7gaj5D-3Y)
+
+## Biography
+
+Following her PhD at the Institute for Molecular Bioscience, The University of Queensland in 2014, Anne carried out a three-year postdoc at Ruhr-University Bochum, Germany, where in collaboration with researchers at Oxford University, UK, and CEA Cadarache, France, she engineered microalgae to overproduce hydrogen gas as a renewable energy.
+In 2018, Anne returned to The University of Queensland to work with Prof Bernie Carroll, an expert in RNA interference in plants, and Prof Neena Mitter, Director of the Centre for Horticultural Science at the Queensland Alliance for Agriculture and Food Innovation, on gene silencing in plants and fungi.
+Under their mentorship she gained immense experience of RNA interference, which led to being awarded an Advance Queensland Industry Research Fellowship to develop RNA vaccines against fungal diseases threatening Queensland crops and native plants.
+Anne is now working closely with partners at the Queensland Department of Agriculture and Fisheries, Nufarm Australia, Tropical Pines, Howe Farming Enterprises and New England BioLabs to translate her research into a technology that can be used by Australian farmers as an alternative to broad-spectrum pesticides.
+
+## Abstract
+
+RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens.
+The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.
+We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries. We have synthesised dsRNA targeting essential _Phytophthora cinnamomi_ and _Austropuccinia psidii_ genes which have fungicidal activity against the respective pathogens _in vitro_ and _in planta_ and are now investigating the mechanism of RNAi vaccine-induced protection.
+Our ultimate goal is to develop a clean green safe control strategy for these invasive diseases to safeguard Australian horticulture, forestry and native plant industries, with long-term benefits for conservation and biodiversity.
