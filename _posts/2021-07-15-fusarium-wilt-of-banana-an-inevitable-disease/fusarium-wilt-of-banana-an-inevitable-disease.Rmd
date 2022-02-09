@@ -19,14 +19,14 @@ doi: "10.17605/OSF.IO/XGTQV"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-### About
+## About
 
 Presenter: Prof. Elizabeth Aitken \
 Institution: The University of Queensland, School of Agriculture and Food Sciences \
 Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
 Links: [Video](https://youtu.be/kbRoZublp1M)
 
-### Biography
+## Biography
 
 Professor Elizabeth Aitken has been an academic at UQ since 1993 lecturing plant pathology and fungal biology at undergraduate and postgraduate level.
 Over that period much of her research has focused on diseases of tropical crops in particular banana, ginger, cotton and sunflower.
