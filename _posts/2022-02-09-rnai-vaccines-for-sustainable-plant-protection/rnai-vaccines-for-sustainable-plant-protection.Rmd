@@ -5,7 +5,7 @@ description: |
 author:
   - name: Adam Sparks
     url: https://adamhsparks.netlify.app
-date: 2022-02-09
+date: 2022-02-03
 preview: Qld_APPS_Sawyer.jpg
 categories:
   - Qld-APPS Seminars

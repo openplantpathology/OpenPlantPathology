@@ -12,17 +12,7 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>RNAi vaccines for sustainable plant protection</title>
-      <dc:creator>Adam Sparks</dc:creator>
-      <link>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</link>
-      <description>RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&amp;trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.</description>
-      <category>Qld-APPS Seminars</category>
-      <guid>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</guid>
-      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
-      <media:content url="https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg" medium="image" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Introducing Julia to Plant Pathologists</title>
       <dc:creator>Adam Sparks</dc:creator>
@@ -34,6 +24,24 @@
       <guid>https://www.openplantpathology.org/posts/2022-02-06-introducing-julia</guid>
       <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2022-02-06-introducing-julia/Julia_Programming_Language_Logo.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>RNAi vaccines for sustainable plant protection</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</link>
+      <description>RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&amp;trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.</description>
+      <category>Qld-APPS Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection</guid>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</link>
+      <description>Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.</description>
+      <guid>https://www.openplantpathology.org/posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia</guid>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Diagnosis of African Citrus Greening</title>

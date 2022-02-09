@@ -1,24 +1,5 @@
 [
   {
-    "path": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/",
-    "title": "RNAi vaccines for sustainable plant protection",
-    "description": "RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.",
-    "author": [
-      {
-        "name": "Adam Sparks",
-        "url": "https://adamhsparks.netlify.app"
-      }
-    ],
-    "date": "2022-02-09",
-    "categories": [
-      "Qld-APPS Seminars"
-    ],
-    "contents": "\nAbout\nPresenter: Dr. Anne Sawyer\nInstitution: Advance Queensland Fellow, School of Chemistry and Molecular Biosciences, The University of Queensland\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nFollowing her PhD at the Institute for Molecular Bioscience, The University of Queensland in 2014, Anne carried out a three-year postdoc at Ruhr-University Bochum, Germany, where in collaboration with researchers at Oxford University, UK, and CEA Cadarache, France, she engineered microalgae to overproduce hydrogen gas as a renewable energy. In 2018, Anne returned to The University of Queensland to work with Prof Bernie Carroll, an expert in RNA interference in plants, and Prof Neena Mitter, Director of the Centre for Horticultural Science at the Queensland Alliance for Agriculture and Food Innovation, on gene silencing in plants and fungi. Under their mentorship she gained immense experience of RNA interference, which led to being awarded an Advance Queensland Industry Research Fellowship to develop RNA vaccines against fungal diseases threatening Queensland crops and native plants. Anne is now working closely with partners at the Queensland Department of Agriculture and Fisheries, Nufarm Australia, Tropical Pines, Howe Farming Enterprises and New England BioLabs to translate her research into a technology that can be used by Australian farmers as an alternative to broad-spectrum pesticides.\nAbstract\nRNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay™, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops. We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries. We have synthesised dsRNA targeting essential Phytophthora cinnamomi and Austropuccinia psidii genes which have fungicidal activity against the respective pathogens in vitro and in planta and are now investigating the mechanism of RNAi vaccine-induced protection. Our ultimate goal is to develop a clean green safe control strategy for these invasive diseases to safeguard Australian horticulture, forestry and native plant industries, with long-term benefits for conservation and biodiversity.\n\n\n\n",
-    "preview": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg",
-    "last_modified": "2022-02-09T12:48:15+08:00",
-    "input_file": "rnai-vaccines-for-sustainable-plant-protection.knit.md"
-  },
-  {
     "path": "posts/2022-02-06-introducing-julia/",
     "title": "Introducing Julia to Plant Pathologists",
     "description": "Do you feel the need for speed?",
@@ -38,6 +19,42 @@
     "preview": "posts/2022-02-06-introducing-julia/Julia_Programming_Language_Logo.svg",
     "last_modified": "2022-02-07T07:54:10+08:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/",
+    "title": "RNAi vaccines for sustainable plant protection",
+    "description": "RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-02-03",
+    "categories": [
+      "Qld-APPS Seminars"
+    ],
+    "contents": "\nAbout\nPresenter: Dr. Anne Sawyer\nInstitution: Advance Queensland Fellow, School of Chemistry and Molecular Biosciences, The University of Queensland\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nFollowing her PhD at the Institute for Molecular Bioscience, The University of Queensland in 2014, Anne carried out a three-year postdoc at Ruhr-University Bochum, Germany, where in collaboration with researchers at Oxford University, UK, and CEA Cadarache, France, she engineered microalgae to overproduce hydrogen gas as a renewable energy. In 2018, Anne returned to The University of Queensland to work with Prof Bernie Carroll, an expert in RNA interference in plants, and Prof Neena Mitter, Director of the Centre for Horticultural Science at the Queensland Alliance for Agriculture and Food Innovation, on gene silencing in plants and fungi. Under their mentorship she gained immense experience of RNA interference, which led to being awarded an Advance Queensland Industry Research Fellowship to develop RNA vaccines against fungal diseases threatening Queensland crops and native plants. Anne is now working closely with partners at the Queensland Department of Agriculture and Fisheries, Nufarm Australia, Tropical Pines, Howe Farming Enterprises and New England BioLabs to translate her research into a technology that can be used by Australian farmers as an alternative to broad-spectrum pesticides.\nAbstract\nRNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens. The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay™, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops. We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries. We have synthesised dsRNA targeting essential Phytophthora cinnamomi and Austropuccinia psidii genes which have fungicidal activity against the respective pathogens in vitro and in planta and are now investigating the mechanism of RNAi vaccine-induced protection. Our ultimate goal is to develop a clean green safe control strategy for these invasive diseases to safeguard Australian horticulture, forestry and native plant industries, with long-term benefits for conservation and biodiversity.\n\n\n\n",
+    "preview": "posts/2022-02-09-rnai-vaccines-for-sustainable-plant-protection/Qld_APPS_Sawyer.jpg",
+    "last_modified": "2022-02-09T13:18:44+08:00",
+    "input_file": "rnai-vaccines-for-sustainable-plant-protection.knit.md"
+  },
+  {
+    "path": "posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/",
+    "title": "Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia",
+    "description": "Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-02-03",
+    "categories": [],
+    "contents": "\nAbout\nPresenter: Dr. Ido Bar\nInstitution: Centre for Planetary Health and Food Security, Griffith University\nHost: Queensland Chapter Australasian Plant Pathology Society, @qldapps\nDate: February 3, 2022\nLinks: Video\nBiography\nIdo obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture genetics and breeding. In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna. After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security. His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches. He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.\nAbstract\nAscochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University. The identified patterns suggest that A. rabiei displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-02-09T13:19:55+08:00",
+    "input_file": "adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia.knit.md"
   },
   {
     "path": "posts/2021-07-31-diagnosis-of-african-citrus-greening/",
