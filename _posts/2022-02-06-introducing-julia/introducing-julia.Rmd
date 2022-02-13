@@ -124,7 +124,7 @@ r_audpc <- function(disease.severity, time.period) {
 
 Or, if you prefer, you can install libraries from CRAN that provide functions for calculating AUDPC rather than writing your own.
 The R packages [_agricolae_](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [_epifitter_](https://cran.r-project.org/package=epifitter) [@Alves2021] provide easy to use functions to calculate AUDPC, `audpc()` and `AUDPC()`, respectively.
-Following uses an example from _agricolae's_ help showing how to calculate AUDPC in R using our own function, `r_audpc()`.
+The following code an example from _agricolae's_ help showing how to calculate AUDPC in R using our own function, `r_audpc()`.
 
 ```r
 > dates <- c(14, 21, 28) # days

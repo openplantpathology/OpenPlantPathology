@@ -12,7 +12,19 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Calculating AUDPS using Julia</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-02-13-calculating-audps-using-julia</link>
+      <description>Calculating AUDPS in R and Julia.</description>
+      <category>Julia4PlantPath</category>
+      <category>R4PlantPath</category>
+      <category>Reproducible Research</category>
+      <guid>https://www.openplantpathology.org/posts/2022-02-13-calculating-audps-using-julia</guid>
+      <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2022-02-13-calculating-audps-using-julia/Julia_Programming_Language_Logo.svg" medium="image" type="image/svg+xml"/>
+    </item>
     <item>
       <title>Introducing Julia to Plant Pathologists</title>
       <dc:creator>Adam Sparks</dc:creator>
@@ -22,7 +34,7 @@
       <category>R4PlantPath</category>
       <category>Reproducible Research</category>
       <guid>https://www.openplantpathology.org/posts/2022-02-06-introducing-julia</guid>
-      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2022-02-06-introducing-julia/Julia_Programming_Language_Logo.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>

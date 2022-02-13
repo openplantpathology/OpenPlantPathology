@@ -70,7 +70,7 @@
 @Manual{RCore2021,
   title        = {{R}: A Language and Environment for Statistical Computing},
   address      = {Vienna, Austria},
-  author       = {{{R} Core Team}},
+  author       = {{R Core Team}},
   organization = {R Foundation for Statistical Computing},
   year         = {2021},
   url          = {https://www.R-project.org/},

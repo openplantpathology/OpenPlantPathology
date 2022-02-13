@@ -1,0 +1,121 @@
+---
+title: "Calculating AUDPS using Julia"
+description: |
+  Calculating AUDPS in R and Julia.
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.netlify.app
+date: 2022-02-13
+bibliography: bibliography.bib
+output:
+  distill::distill_article:
+    self_contained: false
+preview: Julia_Programming_Language_Logo.svg
+csl: phytopathology.csl
+categories: 
+  - Julia4PlantPath
+  - R4PlantPath
+  - Reproducible Research
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](Julia_Programming_Language_Logo.svg)
+
+Previously we introduced Julia, a programming language that is similar to R or Python and demonstrated how AUDPC can be calculated using the trapezoidal method in R as shown in the "Disease Progress Over Time" module of the "Epidemiology and Ecology in R", Sparks et al. [-@Sparks2008].
+Then we looked at how the function could be optimised in R before writing a Julia function to calculate the same value.
+
+Now we will take a look at a similar calculation, Area Under the Disease Stairs (AUDPS) [@Simko2012].
+AUDPS can give better estimates of the disease progress by giving a weight closer to the optimal first and last observations.
+
+This function is not the fully optimised version like what we showed for AUDPC, using `sum()` would help make this faster but possibly at the expense of readability so we'll stick with using the regular `+` and `-` here for readability.
+
+```{r, echo=TRUE}
+r_audps <-
+  function(evaluation, dates) {
+    n <- length(dates)
+    n_1 <- length(dates) - 1
+    
+    x <- 0
+    for (i in seq_len(n_1)) {
+      x <- x + evaluation[[i]] * (dates[[i + 1]] - dates[[i]])
+    }
+    audps <- x + evaluation[[n]] * (dates[[n]] - dates[[n_1]])
+    return(audps)
+  }
+```
+
+Both of the R packages that were previously discussed when showing how to calculate AUDPC, [_agricolae_](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [_epifitter_](https://cran.r-project.org/package=epifitter) [@Alves2021], provide easy to use functions to calculate AUDPS, `audps()` and `AUDPS()`, respectively.
+The following code uses an example from _agricolae's_ help showing how to calculate AUDPS in R using our own function, `r_audps()`.
+
+```r
+> dates <- c(14, 21, 28) # days
+> evaluation <- c(40, 80, 90)
+> r_audps(evaluation, dates)
+```
+
+```{r, echo=FALSE}
+dates <- c(14, 21, 28) # days
+dates
+# example 1: evaluation - vector
+evaluation <- c(40, 80, 90)
+evaluation
+r_audps(evaluation, dates)
+```
+
+### Using Julia
+
+Since we've already introduced Julia, here we'll just build an AUDPS function in Julia to illustrate how it can be done.
+
+```{julia audps, echo=TRUE}
+function j_audps(evaluation, dates)
+    
+    # find how many observations there are and calculate that minus 1 as well
+    n = length(dates)
+    n_1 = length(dates) - 1
+
+    # initialise our objects outside the loop
+    i = 0
+    out = 0
+    # the for loop looks roughly the same but here we just use 1:n
+    for j in 1:n_1
+        i = i + evaluation[j] * (dates[j + 1] - dates[j])
+        
+        out = i + evaluation[n] * (dates[n] - dates[n_1])
+    end
+  
+    # return the object, `out` from the for loop
+    return out
+
+# end the function (no curly brackets!)
+end
+```
+
+```julia
+julia> dates = [14, 21, 28] # days
+julia> evaulation = [40, 80, 90]
+julia> j_audps(evaulation, dates)
+```
+
+```{julia run-audps, echo=FALSE}
+dates = [14, 21, 28] # days
+evaulation = [40, 80, 90]
+j_audps(evaulation, dates)
+```
+
+The AUDPS values match!
+
+## Conclusion
+
+This is just a quick follow-up example of how you can use Julia in plant pathology to show new users how it compares with R with a another commonly used function.
+If you're curious to know more, the [Julia docs](https://docs.julialang.org) are a great place to start.
+In particular, the [noteworthy differences](https://docs.julialang.org/en/v1/manual/noteworthy-differences/#Noteworthy-differences-from-R) is a useful bit to refer to if you're familiar with R.
+
+For a more detailed comparison of complete Julia and R packages that offer an existing plant disease model, EPIRICE [@Savary2012], see [Epicrop.jl](https://adamhsparks.github.io/Epicrop.jl/stable/) [@Epicrop.jl-2022], a port of [epicrop](https://adamhsparks.github.io/epicrop/) [@Sparks2021] to Julia, which has demonstrated faster speeds in benchmarking tests for the same rice disease predictions.
+
+## Colophon
+
+This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@RCore2021] and Julia Version ```r JuliaCall::julia_eval("VERSION")``` [@Bezanson2017] using _JuliaCall_ Pull Request [#174](https://github.com/Non-Contradiction/JuliaCall/pull/174).
