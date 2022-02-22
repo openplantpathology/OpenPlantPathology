@@ -2767,17 +2767,17 @@ Residuals:
 -0.66053 -0.25811 -0.05683  0.21123  0.98511 
 
 Coefficients:
-             Estimate Std. Error t value             Pr(&gt;|t|)    
-(Intercept) 5.4150643  0.1929731  28.061 &lt; 0.0000000000000002 ***
-Degree_days 0.0012950  0.0001823   7.103          0.000000401 ***
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 5.4150643  0.1929731  28.061  &lt; 2e-16 ***
+Degree_days 0.0012950  0.0001823   7.103 4.01e-07 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 0.3847 on 22 degrees of freedom
 Multiple R-squared:  0.6964,    Adjusted R-squared:  0.6826 
-F-statistic: 50.45 on 1 and 22 DF,  p-value: 0.0000004006</code></pre>
+F-statistic: 50.45 on 1 and 22 DF,  p-value: 4.006e-07</code></pre>
 </div>
-<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of the Unplanted linear model was 0.7, we can see here that agrees: 0.7. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0.0000004, which also agrees.</p>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of the Unplanted linear model was 0.7, we can see here that agrees: 0.7. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 4.0063827^{-7}, which also agrees.</p>
 <h4 id="visualising-the-model-fit-to-the-data">Visualising the Model Fit to the Data</h4>
 <p>Using <em>ggplot2</em>’s <code>geom_smooth()</code> we can fit the same model above and graph the resulting line.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2855,18 +2855,18 @@ Residuals:
 -1.80668 -0.58936  0.07297  0.58228  1.14866 
 
 Coefficients:
-                      Estimate    Std. Error t value   Pr(&gt;|t|)    
-(Intercept)       5.4761040479  0.9043328406   6.055 0.00000521 ***
-Degree_days       0.0089612116  0.0019093749   4.693   0.000124 ***
-I(Degree_days^2) -0.0000026117  0.0000009008  -2.899   0.008579 ** 
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       5.476e+00  9.043e-01   6.055 5.21e-06 ***
+Degree_days       8.961e-03  1.909e-03   4.693 0.000124 ***
+I(Degree_days^2) -2.612e-06  9.008e-07  -2.899 0.008579 ** 
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 0.8631 on 21 degrees of freedom
 Multiple R-squared:  0.7998,    Adjusted R-squared:  0.7808 
-F-statistic: 41.96 on 2 and 21 DF,  p-value: 0.00000004621</code></pre>
+F-statistic: 41.96 on 2 and 21 DF,  p-value: 4.621e-08</code></pre>
 </div>
-<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of Gatcher’s quadratic model was 0.80, we can see here that agrees: 0.8. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0.000124, which also agrees.</p>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of Gatcher’s quadratic model was 0.80, we can see here that agrees: 0.8. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 1.2403635^{-4}, which also agrees.</p>
 <h5 id="visualise-susceptible-variety-model">Visualise Susceptible Variety Model</h5>
 <p>The model visualisation is the same for the quadratic models as the linear model, however you will note that the line has a downward curve at higher temperatures.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2933,18 +2933,18 @@ Residuals:
 -1.11285 -0.39845  0.02889  0.45494  1.18598 
 
 Coefficients:
-                      Estimate    Std. Error t value    Pr(&gt;|t|)    
-(Intercept)       5.1568938178  0.6779132266   7.607 0.000000183 ***
-Degree_days       0.0062744146  0.0014313209   4.384     0.00026 ***
-I(Degree_days^2) -0.0000016089  0.0000006753  -2.383     0.02672 *  
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       5.157e+00  6.779e-01   7.607 1.83e-07 ***
+Degree_days       6.274e-03  1.431e-03   4.384  0.00026 ***
+I(Degree_days^2) -1.609e-06  6.753e-07  -2.383  0.02672 *  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 0.647 on 21 degrees of freedom
 Multiple R-squared:  0.8233,    Adjusted R-squared:  0.8065 
-F-statistic: 48.92 on 2 and 21 DF,  p-value: 0.00000001248</code></pre>
+F-statistic: 48.92 on 2 and 21 DF,  p-value: 1.248e-08</code></pre>
 </div>
-<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of GS50a’s quadratic model was 0.82, we can see here that agrees: 0.82. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 0.0002596, which also agrees.</p>
+<p>From the original paper, the <span class="math inline">\(R^2\)</span> value of GS50a’s quadratic model was 0.82, we can see here that agrees: 0.82. In the original paper, <span class="math inline">\(P\)</span> &lt; 0.001, R reports <span class="math inline">\(p-value:\)</span> 2.5961473^{-4}, which also agrees.</p>
 <h5 id="visualising-the-model-fit-to-the-data-1">Visualising the Model Fit to the Data</h5>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -3109,20 +3109,16 @@ Residuals:
 -0.48697 -0.23865 -0.08038  0.19211  0.97466 
 
 Coefficients:
-                      Estimate    Std. Error t value        Pr(&gt;|t|)
-(Intercept)       5.0616148511  0.4031249658  12.556 0.0000000000314
-Degree_days       0.0021252138  0.0008511431   2.497          0.0209
-I(Degree_days^2) -0.0000004010  0.0000004016  -0.999          0.3293
-                    
-(Intercept)      ***
-Degree_days      *  
-I(Degree_days^2)    
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       5.062e+00  4.031e-01  12.556 3.14e-11 ***
+Degree_days       2.125e-03  8.511e-04   2.497   0.0209 *  
+I(Degree_days^2) -4.010e-07  4.016e-07  -0.999   0.3293    
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 0.3848 on 21 degrees of freedom
 Multiple R-squared:  0.7101,    Adjusted R-squared:  0.6825 
-F-statistic: 25.72 on 2 and 21 DF,  p-value: 0.000002255</code></pre>
+F-statistic: 25.72 on 2 and 21 DF,  p-value: 2.255e-06</code></pre>
 </div>
 <p>By this information, the <span class="math inline">\(R^2\)</span> value is a bit better from the <code>unplanted_poly_model</code>, 0.7101253, than the original <code>unplanted_model</code>’s, 0.6963592. Using the same code from above it is easy to visualise the new model’s fit using <em>ggplot2</em>.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -3200,101 +3196,101 @@ F-statistic: 25.72 on 2 and 21 DF,  p-value: 0.000002255</code></pre>
 <pre><code>─ Session info ─────────────────────────────────────────────────────
  setting  value
  version  R version 4.1.2 (2021-11-01)
- os       macOS Monterey 12.2
+ os       macOS Monterey 12.2.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_AU.UTF-8
  ctype    en_AU.UTF-8
  tz       Australia/Perth
- date     2022-02-06
+ date     2022-02-22
  pandoc   2.14.0.3 @ /Applications/RStudio.app/Contents/MacOS/pandoc/ (via rmarkdown)
 
 ─ Packages ─────────────────────────────────────────────────────────
  package     * version    date (UTC) lib source
  assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.1.0)
- backports     1.4.1      2021-12-13 [1] CRAN (R 4.1.2)
- bit           4.0.4      2020-08-04 [1] CRAN (R 4.1.1)
+ backports     1.4.1      2021-12-13 [1] CRAN (R 4.1.1)
+ bit           4.0.4      2020-08-04 [1] CRAN (R 4.1.0)
  bit64         4.0.5      2020-08-30 [1] CRAN (R 4.1.0)
- broom         0.7.12     2022-01-28 [1] CRAN (R 4.1.2)
+ broom         0.7.12     2022-01-28 [1] CRAN (R 4.1.1)
  bslib         0.3.1      2021-10-06 [1] CRAN (R 4.1.1)
  cachem        1.0.6      2021-08-19 [1] CRAN (R 4.1.1)
  cellranger    1.1.0      2016-07-27 [1] CRAN (R 4.1.0)
- cli           3.1.1.9000 2022-02-05 [1] Github (r-lib/cli@515a7ce)
- colorspace    2.0-2      2021-06-24 [1] CRAN (R 4.1.1)
- crayon        1.4.2      2021-10-29 [1] CRAN (R 4.1.1)
- DBI           1.1.2      2021-12-20 [1] CRAN (R 4.1.2)
+ cli           3.2.0      2022-02-14 [1] CRAN (R 4.1.2)
+ colorspace    2.0-3      2022-02-21 [1] CRAN (R 4.1.1)
+ crayon        1.5.0      2022-02-14 [1] CRAN (R 4.1.2)
+ DBI           1.1.2      2021-12-20 [1] CRAN (R 4.1.1)
  dbplyr        2.1.1      2021-04-06 [1] CRAN (R 4.1.0)
  digest        0.6.29     2021-12-01 [1] CRAN (R 4.1.2)
  distill       1.3        2021-10-13 [1] CRAN (R 4.1.1)
  downlit       0.4.0      2021-10-29 [1] CRAN (R 4.1.1)
- dplyr       * 1.0.7      2021-06-18 [1] CRAN (R 4.1.0)
+ dplyr       * 1.0.8      2022-02-08 [1] CRAN (R 4.1.2)
  ellipsis      0.3.2      2021-04-29 [1] CRAN (R 4.1.0)
- evaluate      0.14       2019-05-28 [1] CRAN (R 4.1.0)
+ evaluate      0.15       2022-02-18 [1] CRAN (R 4.1.1)
  fansi         1.0.2      2022-01-14 [1] CRAN (R 4.1.1)
  farver        2.1.0      2021-02-28 [1] CRAN (R 4.1.0)
  fastmap       1.1.0      2021-01-25 [1] CRAN (R 4.1.0)
- forcats     * 0.5.1      2021-01-27 [1] CRAN (R 4.1.1)
- fs            1.5.2      2021-12-08 [1] CRAN (R 4.1.1)
+ forcats     * 0.5.1      2021-01-27 [1] CRAN (R 4.1.0)
+ fs            1.5.2      2021-12-08 [1] CRAN (R 4.1.2)
  generics      0.1.2      2022-01-31 [1] CRAN (R 4.1.1)
  ggplot2     * 3.3.5      2021-06-25 [1] CRAN (R 4.1.1)
  glue          1.6.1      2022-01-22 [1] CRAN (R 4.1.2)
- gridExtra     2.3        2017-09-09 [1] CRAN (R 4.1.1)
- gtable        0.3.0      2019-03-25 [1] CRAN (R 4.1.1)
- haven         2.4.3      2021-08-04 [1] CRAN (R 4.1.1)
+ gridExtra     2.3        2017-09-09 [1] CRAN (R 4.1.0)
+ gtable        0.3.0      2019-03-25 [1] CRAN (R 4.1.0)
+ haven         2.4.3      2021-08-04 [1] CRAN (R 4.1.0)
  highr         0.9        2021-04-16 [1] CRAN (R 4.1.0)
  hms           1.1.1      2021-09-26 [1] CRAN (R 4.1.1)
  htmltools     0.5.2      2021-08-25 [1] CRAN (R 4.1.1)
  httr          1.4.2      2020-07-20 [1] CRAN (R 4.1.0)
  jquerylib     0.1.4      2021-04-26 [1] CRAN (R 4.1.0)
  jsonlite      1.7.3      2022-01-17 [1] CRAN (R 4.1.2)
- kableExtra  * 1.3.4      2021-02-20 [1] CRAN (R 4.1.1)
+ kableExtra  * 1.3.4      2021-02-20 [1] CRAN (R 4.1.0)
  knitr         1.37       2021-12-16 [1] CRAN (R 4.1.1)
  labeling      0.4.2      2020-10-20 [1] CRAN (R 4.1.0)
  lattice       0.20-45    2021-09-22 [1] CRAN (R 4.1.2)
  lifecycle     1.0.1      2021-09-24 [1] CRAN (R 4.1.1)
- lubridate     1.8.0      2021-10-07 [1] CRAN (R 4.1.2)
- magrittr      2.0.2      2022-01-26 [1] CRAN (R 4.1.1)
- Matrix        1.4-0      2021-12-08 [1] CRAN (R 4.1.1)
- memoise       2.0.1      2021-11-26 [1] CRAN (R 4.1.2)
+ lubridate     1.8.0      2021-10-07 [1] CRAN (R 4.1.1)
+ magrittr      2.0.2      2022-01-26 [1] CRAN (R 4.1.2)
+ Matrix        1.3-4      2021-06-01 [1] CRAN (R 4.1.2)
+ memoise       2.0.1      2021-11-26 [1] CRAN (R 4.1.1)
  mgcv          1.8-38     2021-10-06 [1] CRAN (R 4.1.2)
  modelr        0.1.8      2020-05-19 [1] CRAN (R 4.1.0)
  munsell       0.5.0      2018-06-12 [1] CRAN (R 4.1.0)
- nlme          3.1-155    2022-01-13 [1] CRAN (R 4.1.1)
+ nlme          3.1-153    2021-09-07 [1] CRAN (R 4.1.2)
  pillar        1.7.0      2022-02-01 [1] CRAN (R 4.1.1)
  pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 4.1.0)
- purrr       * 0.3.4      2020-04-17 [1] CRAN (R 4.1.2)
+ purrr       * 0.3.4      2020-04-17 [1] CRAN (R 4.1.0)
  R6            2.5.1      2021-08-19 [1] CRAN (R 4.1.1)
  Rcpp          1.0.8      2022-01-13 [1] CRAN (R 4.1.1)
- readr       * 2.1.2      2022-01-30 [1] CRAN (R 4.1.1)
+ readr       * 2.1.2      2022-01-30 [1] CRAN (R 4.1.2)
  readxl        1.3.1      2019-03-13 [1] CRAN (R 4.1.0)
- reprex        2.0.1      2021-08-05 [1] CRAN (R 4.1.1)
+ reprex        2.0.1      2021-08-05 [1] CRAN (R 4.1.0)
  rlang         1.0.1      2022-02-03 [1] CRAN (R 4.1.1)
  rmarkdown     2.11       2021-09-14 [1] CRAN (R 4.1.1)
  rstudioapi    0.13       2020-11-12 [1] CRAN (R 4.1.0)
  rvest         1.0.2      2021-10-16 [1] CRAN (R 4.1.1)
- sass          0.4.0.9000 2021-12-05 [1] Github (rstudio/sass@f7a9540)
+ sass          0.4.0.9000 2021-12-18 [1] Github (rstudio/sass@f7a9540)
  scales        1.1.1      2020-05-11 [1] CRAN (R 4.1.0)
  sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.1.1)
  stringi       1.7.6      2021-11-29 [1] CRAN (R 4.1.2)
- stringr     * 1.4.0      2019-02-10 [1] CRAN (R 4.1.1)
+ stringr     * 1.4.0      2019-02-10 [1] CRAN (R 4.1.0)
  svglite       2.1.0      2022-02-03 [1] CRAN (R 4.1.1)
- systemfonts   1.0.3      2021-10-13 [1] CRAN (R 4.1.1)
+ systemfonts   1.0.4      2022-02-11 [1] CRAN (R 4.1.1)
  tibble      * 3.1.6      2021-11-07 [1] CRAN (R 4.1.1)
  tidyr       * 1.2.0      2022-02-01 [1] CRAN (R 4.1.1)
- tidyselect    1.1.1      2021-04-30 [1] CRAN (R 4.1.0)
+ tidyselect    1.1.2      2022-02-21 [1] CRAN (R 4.1.1)
  tidyverse   * 1.3.1      2021-04-15 [1] CRAN (R 4.1.0)
  tzdb          0.2.0      2021-10-27 [1] CRAN (R 4.1.1)
  utf8          1.2.2      2021-07-24 [1] CRAN (R 4.1.0)
  vctrs         0.3.8      2021-04-29 [1] CRAN (R 4.1.0)
- viridis     * 0.6.2      2021-10-13 [1] CRAN (R 4.1.2)
+ viridis     * 0.6.2      2021-10-13 [1] CRAN (R 4.1.1)
  viridisLite * 0.4.0      2021-04-13 [1] CRAN (R 4.1.0)
  vroom         1.5.7      2021-11-30 [1] CRAN (R 4.1.2)
  webshot       0.5.2      2019-11-22 [1] CRAN (R 4.1.0)
  withr         2.4.3      2021-11-30 [1] CRAN (R 4.1.2)
  xfun          0.29       2021-12-14 [1] CRAN (R 4.1.1)
  xml2          1.3.3      2021-11-30 [1] CRAN (R 4.1.2)
- yaml          2.2.2      2022-01-25 [1] CRAN (R 4.1.2)
+ yaml          2.3.5      2022-02-21 [1] CRAN (R 4.1.1)
 
  [1] /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library
 
