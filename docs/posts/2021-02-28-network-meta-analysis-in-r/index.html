@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,12 +77,34 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -136,7 +158,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["apa-numeric-superscript-brackets.csl","network-meta-analysis-in-r_files/anchor-4.2.2/anchor.min.js","network-meta-analysis-in-r_files/bowser-1.9.3/bowser.min.js","network-meta-analysis-in-r_files/distill-2.2.21/template.v2.js","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-14-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-15-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-16-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-17-1.png","network-meta-analysis-in-r_files/header-attrs-2.6.6/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.7/header-attrs.js","network-meta-analysis-in-r_files/jquery-1.11.3/jquery.min.js","network-meta-analysis-in-r_files/popper-2.6.0/popper.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-light-border.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.umd.min.js","network-meta-analysis-in-r_files/webcomponents-2.0.0/webcomponents.js","network1.png","references.bib","wheat.xlsx"]}
+  {"type":"character","attributes":{},"value":["apa-numeric-superscript-brackets.csl","network-meta-analysis-in-r_files/anchor-4.2.2/anchor.min.js","network-meta-analysis-in-r_files/bowser-1.9.3/bowser.min.js","network-meta-analysis-in-r_files/distill-2.2.21/template.v2.js","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-14-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-15-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-16-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-17-1.png","network-meta-analysis-in-r_files/header-attrs-2.11/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.6.6/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.7/header-attrs.js","network-meta-analysis-in-r_files/jquery-1.11.3/jquery.min.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.map","network-meta-analysis-in-r_files/popper-2.6.0/popper.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-light-border.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.umd.min.js","network-meta-analysis-in-r_files/webcomponents-2.0.0/webcomponents.js","network1.png","references.bib","wheat.xlsx"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2374,8 +2396,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2459,14 +2481,14 @@ gtag('config', 'UA-112255011-1');
 <h3 id="why-and-who-is-this-post-for">Why and who is this post for?</h3>
 <p>Meta-analysis (MA) has gained popularity in Plant Pathology. Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in <em>Phytopathology</em>.<span class="citation" data-cites="madden2016"><sup>[<a href="#ref-madden2016" role="doc-biblioref">1</a>]</sup></span></p>
 <p>Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest. Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.</p>
-<p>Specifically, multiple treatment comparison (e.g. fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated. Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.</p>
-<p>Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes,<span class="citation" data-cites="madden2016"><sup>[<a href="#ref-madden2016" role="doc-biblioref">1</a>]</sup></span> using an MA-specific package of R (metafor). Here I fitted the same model, the arm-based or unconditional, similar to the original paper. In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).</p>
+<p>Specifically, multiple treatment comparison (<em>e.g.</em>, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated. Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.</p>
+<p>Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes,<span class="citation" data-cites="madden2016"><sup>[<a href="#ref-madden2016" role="doc-biblioref">1</a>]</sup></span> using an MA-specific package of R (<code>metafor</code>). Here I fitted the same model, the arm-based or unconditional, similar to the original paper. In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).</p>
 <p>I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called <code>metafor</code>. I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper. Anyone should be able to reproduce the analysis below by copying and pasting into R. To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results. <a href="https://rstudio.cloud/project/2250558">Click here to get access to the R project in the cloud</a></p>
 <h3 id="data-preparation">Data preparation</h3>
 <p>The data were obtained from the supplemental <a href="https://apsjournals.apsnet.org/doi/suppl/10.1094/PHYTO-12-15-0342-RVW/suppl_file/PHYTO-12-15-0342-RVW.s1.sas">FileS1</a>, a SAS file that contains the documented code and the data. Here, the data were organized in one MS Excel file following the same original structure and content, excepting that missing data was represented by an empty cell. Let’s load some packages for data importing and wrangling.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span> <span class='co'># load several useful pkgs</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span> <span class='co'># load several useful pkgs</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readxl.tidyverse.org'>readxl</a></span><span class='op'>)</span> <span class='co'># import excel data</span>
 </code></pre>
 </div>
@@ -2475,11 +2497,9 @@ gtag('config', 'UA-112255011-1');
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>wheat0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a></span><span class='op'>(</span><span class='st'>"wheat.xlsx"</span><span class='op'>)</span>
-<span class='va'>wheat</span> <span class='op'>&lt;-</span> <span class='va'>wheat0</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>
-    varyld <span class='op'>=</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>/</span> <span class='va'>wtyield</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>0.0628</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>,
-    yield <span class='op'>=</span> <span class='va'>yield</span> <span class='op'>*</span> <span class='fl'>0.0628</span>
-  <span class='op'>)</span> <span class='op'>%&gt;%</span>
+<span class='va'>wheat</span> <span class='op'>&lt;-</span> <span class='va'>wheat0</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>varyld <span class='op'>=</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>/</span> <span class='va'>wtyield</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>0.0628</span> <span class='op'>^</span> <span class='fl'>2</span><span class='op'>)</span>,
+         yield <span class='op'>=</span> <span class='va'>yield</span> <span class='op'>*</span> <span class='fl'>0.0628</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
   <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='op'>)</span> <span class='co'># here we omit the rows with missing data</span>
 </code></pre>
 </div>
@@ -2487,33 +2507,35 @@ gtag('config', 'UA-112255011-1');
 <p>Let’s replace the names of the levels of the treatment factor from numbers to the fungicide treatment acronym.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>wheat</span> <span class='op'>&lt;-</span> <span class='va'>wheat</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='st'>"CTRL"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>2</span>, <span class='st'>"TEBU"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>3</span>, <span class='st'>"PROP"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>4</span>, <span class='st'>"PROT"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>5</span>, <span class='st'>"TEBU+PROT"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>6</span>, <span class='st'>"MET"</span><span class='op'>)</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>wheat</span> <span class='op'>&lt;-</span> <span class='va'>wheat</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>10</span>, <span class='st'>"CTRL"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>2</span>, <span class='st'>"TEBU"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>3</span>, <span class='st'>"PROP"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>4</span>, <span class='st'>"PROT"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>5</span>, <span class='st'>"TEBU+PROT"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>trt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/replace.html'>replace</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>trt</span> <span class='op'>==</span> <span class='fl'>6</span>, <span class='st'>"MET"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <h3 id="meta-analytic-arm-based-model">Meta-analytic (arm-based) model</h3>
 <p>I use here the <a href="http://www.metafor-project.org/doku.php">metafor</a> package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R. I followed the example for fitting the arm-based network MA as shown in <a href="http://www.wvbauer.com/lib/exe/fetch.php/talks:2016_viechtbauer_goettingen_multilevel_multivariate_network_ma.pdf">this presentation</a> and this <a href="https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html">documentation</a> by the author of the package.</p>
-<p>In the original NMA paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN). These can be informed directly in the <code>rma.mv</code> function. Ok, let’s load <code>metafor</code> package now.</p>
+<p>In the original NMA paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN). These can be informed directly in the <code>rma.mv()</code> function. Ok, let’s load <code>metafor</code> package now.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://www.metafor-project.org'>metafor</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://www.metafor-project.org'>metafor</a></span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix.<span class="citation" data-cites="madden2016"><sup>[<a href="#ref-madden2016" role="doc-biblioref">1</a>]</sup></span> This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance.<span class="citation" data-cites="madden2016"><sup>[<a href="#ref-madden2016" role="doc-biblioref">1</a>]</sup></span></p>
-<p>We use the <code>rma.mv</code> function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is <code>yield</code> (means of the treatment of interest across replicates within the same trial) and the sampling variance <code>varyld</code> (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment <code>trt</code>. The <code>method</code> is the maximum likelihood. The <code>random</code> component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random. The <code>struct</code> is CS and the <code>data</code> is wheat.</p>
+<p>We use the <code>rma.mv()</code> function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is <code>yield</code> (means of the treatment of interest across replicates within the same trial) and the sampling variance <code>varyld</code> (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment <code>trt</code>. The <code>method</code> is the maximum likelihood. The <code>random</code> component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random. The <code>struct</code> is CS and the <code>data</code> is wheat.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net_arm_CS</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>varyld</span>,
-  mods <span class='op'>=</span> <span class='op'>~</span><span class='va'>trt</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net_arm_CS</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span>
+  <span class='va'>yield</span>,
+  <span class='va'>varyld</span>,
+  mods <span class='op'>=</span> <span class='op'>~</span> <span class='va'>trt</span>,
   method <span class='op'>=</span> <span class='st'>"ML"</span>,
-  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
+  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
   struct <span class='op'>=</span> <span class='st'>"CS"</span>,
   data <span class='op'>=</span> <span class='va'>wheat</span>
 <span class='op'>)</span>
@@ -2565,11 +2587,14 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Be patient. The model fit may take more than a minute to finish running</span>
-<span class='va'>net_arm_HCS</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>varyld</span>,
-  mods <span class='op'>=</span> <span class='op'>~</span><span class='va'>trt</span>,
+<span class='va'>net_arm_HCS</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span>
+  <span class='va'>yield</span>,
+  <span class='va'>varyld</span>,
+  mods <span class='op'>=</span> <span class='op'>~</span> <span class='va'>trt</span>,
   method <span class='op'>=</span> <span class='st'>"ML"</span>,
-  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
-  struct <span class='op'>=</span> <span class='st'>"HCS"</span>, data <span class='op'>=</span> <span class='va'>wheat</span>
+  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
+  struct <span class='op'>=</span> <span class='st'>"HCS"</span>,
+  data <span class='op'>=</span> <span class='va'>wheat</span>
 <span class='op'>)</span>
 </code></pre>
 </div>
@@ -2624,10 +2649,12 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Be more patient. This may take much longer to complete run.</span>
-<span class='va'>net_arm_UN</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>varyld</span>,
-  mods <span class='op'>=</span> <span class='op'>~</span><span class='va'>trt</span>,
+<span class='va'>net_arm_UN</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span>
+  <span class='va'>yield</span>,
+  <span class='va'>varyld</span>,
+  mods <span class='op'>=</span> <span class='op'>~</span> <span class='va'>trt</span>,
   method <span class='op'>=</span> <span class='st'>"ML"</span>,
-  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
+  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
   struct <span class='op'>=</span> <span class='st'>"UN"</span>,
   control <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>optimizer <span class='op'>=</span> <span class='st'>"nlm"</span><span class='op'>)</span>,
   data <span class='op'>=</span> <span class='va'>wheat</span>
@@ -2714,8 +2741,10 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>table1</span> <span class='op'>&lt;-</span>
   <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>R1_mean</span>, <span class='va'>R1_se</span>, <span class='va'>R2_mean</span>, <span class='va'>R2_se</span>, <span class='va'>R3_mean</span>, <span class='va'>R3_se</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>table1</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"R1_mean"</span>, <span class='st'>"R1_se"</span>, <span class='st'>"R2_mean"</span>, <span class='st'>"R2_se"</span>, <span class='st'>"R3_mean"</span>, <span class='st'>"R3_se"</span><span class='op'>)</span>
-<span class='va'>table1</span><span class='op'>$</span><span class='va'>Treat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"CTRL"</span>, <span class='st'>"MET"</span>, <span class='st'>"PROP"</span>, <span class='st'>"PROT"</span>, <span class='st'>"TEBU"</span>, <span class='st'>"TEBU+PROT"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>table1</span><span class='op'>)</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"R1_mean"</span>, <span class='st'>"R1_se"</span>, <span class='st'>"R2_mean"</span>, <span class='st'>"R2_se"</span>, <span class='st'>"R3_mean"</span>, <span class='st'>"R3_se"</span><span class='op'>)</span>
+<span class='va'>table1</span><span class='op'>$</span><span class='va'>Treat</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"CTRL"</span>, <span class='st'>"MET"</span>, <span class='st'>"PROP"</span>, <span class='st'>"PROT"</span>, <span class='st'>"TEBU"</span>, <span class='st'>"TEBU+PROT"</span><span class='op'>)</span>
 <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>table1</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2790,11 +2819,11 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </table>
 </div>
 <p><img src="https://apsjournals.apsnet.org/cms/10.1094/PHYTO-12-15-0342-RVW/asset/images/medium/phyto-12-15-0342-rvw_t3.gif" /></p>
-<p><a href="https://apsjournals.apsnet.org/doi/10.1094/PHYTO-12-15-0342-RVW">Source of the figure</a></p>
-<p>As in the original paper, we will compare all three models based on the LRT test (using the <code>anova</code> function). The full model uses the UN variance-covariance matrix. Agreeing with the original study, the UN provided a better fit to the data based on the lowest AIC.</p>
+<p><a href="https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-12-15-0342-RVW">Source of the figure</a></p>
+<p>As in the original paper, we will compare all three models based on the LRT test (using the <code>anova()</code> function). The full model uses the UN variance-covariance matrix. Agreeing with the original study, the UN provided a better fit to the data based on the lowest AIC.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_HCS</span>, <span class='va'>net_arm_CS</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://wviechtb.github.io/metafor/reference/anova.rma.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_HCS</span>, <span class='va'>net_arm_CS</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>
@@ -2805,7 +2834,7 @@ Reduced  8 583.0105 617.6054 583.2728 -283.5052 10.3190 0.0667
 Full    55024.7841 
 Reduced 55024.7841 </code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_CS</span>, <span class='va'>net_arm_UN</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://wviechtb.github.io/metafor/reference/anova.rma.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_CS</span>, <span class='va'>net_arm_UN</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>
@@ -2816,7 +2845,7 @@ Reduced  8 583.0105 617.6054 583.2728 -283.5052 82.8347 &lt;.0001
 Full    55024.7841 
 Reduced 55024.7841 </code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_HCS</span>, <span class='va'>net_arm_UN</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://wviechtb.github.io/metafor/reference/anova.rma.html'>anova</a></span><span class='op'>(</span><span class='va'>net_arm_HCS</span>, <span class='va'>net_arm_UN</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>
@@ -2831,23 +2860,21 @@ Reduced 55024.7841 </code></pre>
 <p>With the results in hand, a dot and error plot with treatments ordered from highest to lowest yield difference is a nice way to visualize the results - not identical but similar to a traditional forest plots. For such, we make the size of the dots proportional to the inverse of the standard error.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>table1</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Treat</span> <span class='op'>!=</span> <span class='st'>"CTRL"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>Treat</span>, <span class='va'>R3_mean</span><span class='op'>)</span>, <span class='va'>R3_mean</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>geom_point</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>1</span> <span class='op'>/</span> <span class='va'>R3_se</span><span class='op'>)</span>, shape <span class='op'>=</span> <span class='fl'>15</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>geom_errorbar</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>
-    ymin <span class='op'>=</span> <span class='va'>R3_mean</span> <span class='op'>-</span> <span class='va'>R3_se</span>,
-    ymax <span class='op'>=</span> <span class='va'>R3_mean</span> <span class='op'>+</span> <span class='va'>R3_se</span>
-  <span class='op'>)</span>, width <span class='op'>=</span> <span class='fl'>0.01</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.window.html'>ylim</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>0.6</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>labs</span><span class='op'>(</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>table1</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Treat</span> <span class='op'>!=</span> <span class='st'>"CTRL"</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>Treat</span>, <span class='va'>R3_mean</span><span class='op'>)</span>, <span class='va'>R3_mean</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>1</span> <span class='op'>/</span> <span class='va'>R3_se</span><span class='op'>)</span>, shape <span class='op'>=</span> <span class='fl'>15</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_linerange.html'>geom_errorbar</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>ymin <span class='op'>=</span> <span class='va'>R3_mean</span> <span class='op'>-</span> <span class='va'>R3_se</span>,
+                    ymax <span class='op'>=</span> <span class='va'>R3_mean</span> <span class='op'>+</span> <span class='va'>R3_se</span><span class='op'>)</span>, width <span class='op'>=</span> <span class='fl'>0.01</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>ylim</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>0.6</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>
     y <span class='op'>=</span> <span class='st'>"Yield difference (ton/ha)"</span>,
     x <span class='op'>=</span> <span class='st'>""</span>,
     title <span class='op'>=</span> <span class='st'>"Yield response to fungicides"</span>,
     caption <span class='op'>=</span> <span class='st'>"Data source: Madden et al. (2016)"</span>
   <span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>coord_flip</span><span class='op'>(</span><span class='op'>)</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/coord_flip.html'>coord_flip</a></span><span class='op'>(</span><span class='op'>)</span>
 </code></pre>
 </div>
 <p><img src="network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-14-1.png" width="384" /></p>
@@ -2857,7 +2884,11 @@ Reduced 55024.7841 </code></pre>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://multcomp.R-forge.R-project.org'>multcomp</a></span><span class='op'>)</span>
-<span class='va'>net_arm_UN_comp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/multcomp/man/glht.html'>glht</a></span><span class='op'>(</span><span class='va'>net_arm_UN</span>, linfct <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/multcomp/man/contrMat.html'>contrMat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>6</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>"Tukey"</span><span class='op'>)</span><span class='op'>)</span>, test <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/multcomp/man/methods.html'>adjusted</a></span><span class='op'>(</span><span class='st'>"none"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>net_arm_UN_comp</span> <span class='op'>&lt;-</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/multcomp/man/glht.html'>glht</a></span><span class='op'>(</span>
+    model <span class='op'>=</span> <span class='va'>net_arm_UN</span>,
+    linfct <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/multcomp/man/contrMat.html'>contrMat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>6</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>"Tukey"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>)</span><span class='op'>)</span>
 <span class='va'>net_arm_UN_comp</span>
 </code></pre>
 </div>
@@ -2869,22 +2900,22 @@ Fit: rma.mv(yi = yield, V = varyld, mods = ~trt, random = list(~trt |
     control = list(optimizer = &quot;nlm&quot;))
 
 Linear Hypotheses:
-           Estimate Std. Error z value Pr(&gt;|z|)    
-2 - 1 == 0 -3.08506    0.12678  -24.33   &lt;0.001 ***
-3 - 1 == 0 -3.33612    0.12244  -27.25   &lt;0.001 ***
-4 - 1 == 0 -3.11604    0.12574  -24.78   &lt;0.001 ***
-5 - 1 == 0 -3.26277    0.12119  -26.92   &lt;0.001 ***
-6 - 1 == 0 -3.09079    0.12709  -24.32   &lt;0.001 ***
-3 - 2 == 0 -0.25106    0.03419   -7.34   &lt;0.001 ***
-4 - 2 == 0 -0.03098    0.02712   -1.14     0.84    
-5 - 2 == 0 -0.17771    0.02761   -6.44   &lt;0.001 ***
-6 - 2 == 0 -0.00573    0.02476   -0.23     1.00    
-4 - 3 == 0  0.22008    0.03881    5.67   &lt;0.001 ***
-5 - 3 == 0  0.07334    0.03092    2.37     0.14    
-6 - 3 == 0  0.24532    0.03830    6.41   &lt;0.001 ***
-5 - 4 == 0 -0.14673    0.03185   -4.61   &lt;0.001 ***
-6 - 4 == 0  0.02525    0.02788    0.91     0.93    
-6 - 5 == 0  0.17198    0.02810    6.12   &lt;0.001 ***
+            Estimate Std. Error z value Pr(&gt;|z|)    
+2 - 1 == 0 -3.085058   0.126778 -24.334   &lt;1e-04 ***
+3 - 1 == 0 -3.336116   0.122440 -27.247   &lt;1e-04 ***
+4 - 1 == 0 -3.116038   0.125742 -24.781   &lt;1e-04 ***
+5 - 1 == 0 -3.262772   0.121188 -26.923   &lt;1e-04 ***
+6 - 1 == 0 -3.090792   0.127090 -24.320   &lt;1e-04 ***
+3 - 2 == 0 -0.251058   0.034194  -7.342   &lt;1e-04 ***
+4 - 2 == 0 -0.030980   0.027119  -1.142    0.840    
+5 - 2 == 0 -0.177714   0.027605  -6.438   &lt;1e-04 ***
+6 - 2 == 0 -0.005734   0.024757  -0.232    1.000    
+4 - 3 == 0  0.220078   0.038807   5.671   &lt;1e-04 ***
+5 - 3 == 0  0.073344   0.030924   2.372    0.141    
+6 - 3 == 0  0.245325   0.038301   6.405   &lt;1e-04 ***
+5 - 4 == 0 -0.146734   0.031853  -4.607   &lt;1e-04 ***
+6 - 4 == 0  0.025247   0.027883   0.905    0.934    
+6 - 5 == 0  0.171981   0.028104   6.119   &lt;1e-04 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 (Adjusted p values reported -- single-step method)</code></pre>
@@ -2901,10 +2932,15 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <p>In the original paper, two models were expanded to include the effect of wheat class (S = Spring wheat and W = Winter wheat) as moderator. Let’s fit the CS model as in the paper and add this moderator factor in interaction with the treatment factor. The rest is the same.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net_arm_CS_class</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>varyld</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>net_arm_CS_class</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wviechtb.github.io/metafor/reference/rma.mv.html'>rma.mv</a></span><span class='op'>(</span>
+  <span class='va'>yield</span>,
+  <span class='va'>varyld</span>,
   mods <span class='op'>=</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trt</span><span class='op'>)</span> <span class='op'>*</span> <span class='va'>class</span>,
   method <span class='op'>=</span> <span class='st'>"ML"</span>,
-  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trt</span><span class='op'>)</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>, struct <span class='op'>=</span> <span class='st'>"HCS"</span>, data <span class='op'>=</span> <span class='va'>wheat</span>
+  random <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trt</span><span class='op'>)</span> <span class='op'>|</span>
+                   <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>trial</span><span class='op'>)</span><span class='op'>)</span>,
+  struct <span class='op'>=</span> <span class='st'>"HCS"</span>,
+  data <span class='op'>=</span> <span class='va'>wheat</span>
 <span class='op'>)</span>
 </code></pre>
 </div>
@@ -2939,7 +2975,7 @@ Test for Residual Heterogeneity:
 QE(df = 546) = 45668.0682, p-val &lt; .0001
 
 Test of Moderators (coefficients 2:12):
-QM(df = 11) = 337.5308, p-val &lt; .0001
+QM(df = 11) = 337.5307, p-val &lt; .0001
 
 Model Results:
 
@@ -2992,8 +3028,8 @@ Reduced 55024.7841 </code></pre>
 <h3 id="useful-links-and-other-papers">Useful links and other papers</h3>
 <ul>
 <li><p>Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!). You may want to check these repositories of code and data from work published in my lab using these methods:,<span class="citation" data-cites="barro2021"><sup>[<a href="#ref-barro2021" role="doc-biblioref">2</a>]</sup></span>,<span class="citation" data-cites="barro2020"><sup>[<a href="#ref-barro2020" role="doc-biblioref">3</a>]</sup></span> <a href="https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/">Machado et al. (2017)</a></p></li>
-<li><p>Other papers using network models:,<span class="citation" data-cites="yellareddygari2019"><sup>[<a href="#ref-yellareddygari2019" role="doc-biblioref">4</a>]</sup></span>,<span class="citation" data-cites="edwardsmolina2018"><sup>[<a href="#ref-edwardsmolina2018" role="doc-biblioref">5</a>]</sup></span>,<span class="citation" data-cites="paul2018"><sup>[<a href="#ref-paul2018" role="doc-biblioref">6</a>]</sup></span><span class="citation" data-cites="paul2008"><sup>[<a href="#ref-paul2008" role="doc-biblioref">7</a>]</sup></span></p></li>
-<li><p>Fitting <a href="https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html">arm-based meta-analysis</a>with metafor</p></li>
+<li><p>Other papers using network models,<span class="citation" data-cites="yellareddygari2019"><sup>[<a href="#ref-yellareddygari2019" role="doc-biblioref">4</a>]</sup></span>,<span class="citation" data-cites="edwardsmolina2018"><sup>[<a href="#ref-edwardsmolina2018" role="doc-biblioref">5</a>]</sup></span>,<span class="citation" data-cites="paul2018"><sup>[<a href="#ref-paul2018" role="doc-biblioref">6</a>]</sup></span><span class="citation" data-cites="paul2008"><sup>[<a href="#ref-paul2008" role="doc-biblioref">7</a>]</sup></span></p></li>
+<li><p>Fitting <a href="https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html">arm-based meta-analysis</a> with metafor</p></li>
 </ul>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
@@ -3010,7 +3046,7 @@ Reduced 55024.7841 </code></pre>
 4. Yellareddygari, S. K. R., Taylor, R. J., Pasche, J. S., &amp; Gudmestad, N. C. (2019). Quantifying Control Efficacy of Fungicides Commonly Applied for Potato Early Blight Management. <em>Plant Disease</em>, <em>103</em>(11), 2821–2824. <a href="https://doi.org/10.1094/pdis-03-19-0670-re">https://doi.org/10.1094/pdis-03-19-0670-re</a>
 </div>
 <div id="ref-edwardsmolina2018" class="csl-entry" role="doc-biblioentry">
-5. Edwards Molina, J. P., Paul, P. A., Amorim, L., Silva, L. H. C. P., Siqueri, F. V., Borges, E. P., Campos, H. D., Nunes Junior, J., Meyer, M. C., Martins, M. C., Balardin, R. S., Carlin, V. J., Grigolli, J. F. J., Belufi, L. M. de R., &amp; Godoy, C. V. (2018). Meta<span>-</span>analysis of fungicide efficacy on soybean target spot and cost<span><span></span></span>benefit assessment. <em>Plant Pathology</em>, <em>68</em>(1), 94–106. <a href="https://doi.org/10.1111/ppa.12925">https://doi.org/10.1111/ppa.12925</a>
+5. Edwards Molina, J. P., Paul, P. A., Amorim, L., Silva, L. H. C. P., Siqueri, F. V., Borges, E. P., Campos, H. D., Nunes Junior, J., Meyer, M. C., Martins, M. C., Balardin, R. S., Carlin, V. J., Grigolli, J. F. J., Belufi, L. M. de R., &amp; Godoy, C. V. (2018). Meta<span>-</span>analysis of fungicide efficacy on soybean target spot and cost<span></span>benefit assessment. <em>Plant Pathology</em>, <em>68</em>(1), 94–106. <a href="https://doi.org/10.1111/ppa.12925">https://doi.org/10.1111/ppa.12925</a>
 </div>
 <div id="ref-paul2018" class="csl-entry" role="doc-biblioentry">
 6. Paul, P. A., Bradley, C. A., Madden, L. V., Lana, F. D., Bergstrom, G. C., Dill-Macky, R., Esker, P. D., Wise, K. A., McMullen, M., Grybauskas, A., Kirk, W. W., Milus, E., &amp; Ruden, K. (2018). Meta-Analysis of the Effects of QoI and DMI Fungicide Combinations on Fusarium Head Blight and Deoxynivalenol in Wheat. <em>Plant Disease</em>, <em>102</em>(12), 2602–2615. <a href="https://doi.org/10.1094/pdis-02-18-0211-re">https://doi.org/10.1094/pdis-02-18-0211-re</a>

@@ -19,34 +19,44 @@ preview: network1.png
 
 ### Why and who is this post for?
 
-Meta-analysis (MA) has gained popularity in Plant Pathology. Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in *Phytopathology* @madden2016.
+Meta-analysis (MA) has gained popularity in Plant Pathology.
+Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in *Phytopathology* @madden2016.
 
-Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest. Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.
+Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest.
+Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.
 
-Specifically, multiple treatment comparison (e.g. fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated. Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.
+Specifically, multiple treatment comparison (_e.g._, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated.
+Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.
 
-Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R (metafor). Here I fitted the same model, the arm-based or unconditional, similar to the original paper. In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).
+Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R (`metafor`).
+Here I fitted the same model, the arm-based or unconditional, similar to the original paper.
+In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).
 
-I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`. I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper. Anyone should be able to reproduce the analysis below by copying and pasting into R. To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results. [Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558)
+I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`.
+I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
+Anyone should be able to reproduce the analysis below by copying and pasting into R.
+To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results.
+[Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558)
 
 ### Data preparation
 
-The data were obtained from the supplemental [FileS1](https://apsjournals.apsnet.org/doi/suppl/10.1094/PHYTO-12-15-0342-RVW/suppl_file/PHYTO-12-15-0342-RVW.s1.sas), a SAS file that contains the documented code and the data. Here, the data were organized in one MS Excel file following the same original structure and content, excepting that missing data was represented by an empty cell. Let's load some packages for data importing and wrangling.
+The data were obtained from the supplemental [FileS1](https://apsjournals.apsnet.org/doi/suppl/10.1094/PHYTO-12-15-0342-RVW/suppl_file/PHYTO-12-15-0342-RVW.s1.sas), a SAS file that contains the documented code and the data.
+Here, the data were organized in one MS Excel file following the same original structure and content, excepting that missing data was represented by an empty cell.
+Let's load some packages for data importing and wrangling.
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse) # load several useful pkgs
 library(readxl) # import excel data
 ```
 
-Now we are ready to import the data and convert both yield and variance to metric unit as performed in the paper. Note: we do not need to create the weight variable as in the SAS code because this is handled in the meta-analysis specific R packages.
+Now we are ready to import the data and convert both yield and variance to metric unit as performed in the paper.
+Note: we do not need to create the weight variable as in the SAS code because this is handled in the meta-analysis specific R packages.
 
 ```{r}
 wheat0 <- read_excel("wheat.xlsx")
 wheat <- wheat0 %>%
-  mutate(
-    varyld = (1 / wtyield) * (0.0628^2),
-    yield = yield * 0.0628
-  ) %>%
+  mutate(varyld = (1 / wtyield) * (0.0628 ^ 2),
+         yield = yield * 0.0628) %>%
   na.omit() # here we omit the rows with missing data
 ```
 
@@ -64,29 +74,41 @@ wheat <- wheat %>%
 
 ### Meta-analytic (arm-based) model
 
-I use here the [metafor](http://www.metafor-project.org/doku.php) package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R. I followed the example for fitting the arm-based network MA as shown in [this presentation](http://www.wvbauer.com/lib/exe/fetch.php/talks:2016_viechtbauer_goettingen_multilevel_multivariate_network_ma.pdf) and this [documentation](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) by the author of the package.
+I use here the [metafor](http://www.metafor-project.org/doku.php) package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R.
+I followed the example for fitting the arm-based network MA as shown in [this presentation](http://www.wvbauer.com/lib/exe/fetch.php/talks:2016_viechtbauer_goettingen_multilevel_multivariate_network_ma.pdf) and this [documentation](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) by the author of the package.
 
-In the original NMA paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN). These can be informed directly in the `rma.mv` function. Ok, let's load `metafor` package now.
+In the original NMA paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN).
+These can be informed directly in the `rma.mv()` function.
+Ok, let's load `metafor` package now.
 
 ```{r message=FALSE, warning=FALSE}
 library(metafor)
 ```
 
-Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016. This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
+Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016.
+This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
 
-We use the `rma.mv` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model). Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood. The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random. The `struct` is CS and the `data` is wheat.
+We use the `rma.mv()` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model).
+Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood.
+The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random.
+The `struct` is CS and the `data` is wheat.
 
-```{r, cache = TRUE}
-net_arm_CS <- rma.mv(yield, varyld,
-  mods = ~trt,
+```{r}
+net_arm_CS <- rma.mv(
+  yield,
+  varyld,
+  mods = ~ trt,
   method = "ML",
-  random = list(~ trt | factor(trial)),
+  random = list( ~ trt | factor(trial)),
   struct = "CS",
   data = wheat
 )
 ```
 
-We call the summary results of the model. Let's jump straight to model results where we can check the estimates for each treatment which are the differences to the intercept, defined as the untreated check. We can see that MET (0.436 ton) and PROP (0.20 ton) provided the highest and lowest numerical yield difference relative to the untreated (intercept). We should also look at the 95% confidence intervals.
+We call the summary results of the model.
+Let's jump straight to model results where we can check the estimates for each treatment which are the differences to the intercept, defined as the untreated check.
+We can see that MET (0.436 ton) and PROP (0.20 ton) provided the highest and lowest numerical yield difference relative to the untreated (intercept).
+We should also look at the 95% confidence intervals.
 
 ```{r}
 summary(net_arm_CS)
@@ -94,15 +116,20 @@ summary(net_arm_CS)
 
 #### Heterogeneous CS
 
-Alternatively, between-study variance can be considered unequal when there is an overall random study effect. In this model, there is a constant between-study correlation for all pairs of treatments with unequal between-study total variances, and this matrix is called heterogeneous compound symmetry (HCS). This the R2 model in @madden2016.
+Alternatively, between-study variance can be considered unequal when there is an overall random study effect.
+In this model, there is a constant between-study correlation for all pairs of treatments with unequal between-study total variances, and this matrix is called heterogeneous compound symmetry (HCS).
+This the R2 model in @madden2016.
 
-```{r, cache=TRUE}
+```{r}
 # Be patient. The model fit may take more than a minute to finish running
-net_arm_HCS <- rma.mv(yield, varyld,
-  mods = ~trt,
+net_arm_HCS <- rma.mv(
+  yield,
+  varyld,
+  mods = ~ trt,
   method = "ML",
-  random = list(~ trt | factor(trial)),
-  struct = "HCS", data = wheat
+  random = list( ~ trt | factor(trial)),
+  struct = "HCS",
+  data = wheat
 )
 ```
 
@@ -114,14 +141,18 @@ summary(net_arm_HCS)
 
 #### Unstructured matrix
 
-Finally, we fit now the model with an unstructured (UN) variance-covariance matrix. Here, we allow the matrix to be completely unstructured, with different variance for each treatment or different covariance (correlation) for each pair of treatments. Note: I needed to use an optimizer (see the `control` argument) for convergence.
+Finally, we fit now the model with an unstructured (UN) variance-covariance matrix.
+Here, we allow the matrix to be completely unstructured, with different variance for each treatment or different covariance (correlation) for each pair of treatments.
+Note: I needed to use an optimizer (see the `control` argument) for convergence.
 
-```{r, cache = TRUE}
+```{r}
 # Be more patient. This may take much longer to complete run.
-net_arm_UN <- rma.mv(yield, varyld,
-  mods = ~trt,
+net_arm_UN <- rma.mv(
+  yield,
+  varyld,
+  mods = ~ trt,
   method = "ML",
-  random = list(~ trt | factor(trial)),
+  random = list( ~ trt | factor(trial)),
   struct = "UN",
   control = list(optimizer = "nlm"),
   data = wheat
@@ -149,21 +180,26 @@ R2_se <- tidy(round(net_arm_HCS$se, 3))
 R3_se <- tidy(round(net_arm_UN$se, 3))
 ```
 
-And now we prepare a table for displaying the statistics and can compare with the original paper. We can notice that the results are very similar, although not identical.
+And now we prepare a table for displaying the statistics and can compare with the original paper.
+We can notice that the results are very similar, although not identical.
 
 ```{r}
 table1 <-
   data.frame(R1_mean, R1_se, R2_mean, R2_se, R3_mean, R3_se)
-colnames(table1) <- c("R1_mean", "R1_se", "R2_mean", "R2_se", "R3_mean", "R3_se")
-table1$Treat <- c("CTRL", "MET", "PROP", "PROT", "TEBU", "TEBU+PROT")
+colnames(table1) <-
+  c("R1_mean", "R1_se", "R2_mean", "R2_se", "R3_mean", "R3_se")
+table1$Treat <-
+  c("CTRL", "MET", "PROP", "PROT", "TEBU", "TEBU+PROT")
 knitr::kable(table1)
 ```
 
 ![](https://apsjournals.apsnet.org/cms/10.1094/PHYTO-12-15-0342-RVW/asset/images/medium/phyto-12-15-0342-rvw_t3.gif)
 
-[Source of the figure](https://apsjournals.apsnet.org/doi/10.1094/PHYTO-12-15-0342-RVW)
+[Source of the figure](https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-12-15-0342-RVW)
 
-As in the original paper, we will compare all three models based on the LRT test (using the `anova` function). The full model uses the UN variance-covariance matrix. Agreeing with the original study, the UN provided a better fit to the data based on the lowest AIC.
+As in the original paper, we will compare all three models based on the LRT test (using the `anova()` function).
+The full model uses the UN variance-covariance matrix.
+Agreeing with the original study, the UN provided a better fit to the data based on the lowest AIC.
 
 ```{r}
 anova(net_arm_HCS, net_arm_CS)
@@ -173,17 +209,16 @@ anova(net_arm_HCS, net_arm_UN)
 
 ### Forest plot
 
-With the results in hand, a dot and error plot with treatments ordered from highest to lowest yield difference is a nice way to visualize the results - not identical but similar to a traditional forest plots. For such, we make the size of the dots proportional to the inverse of the standard error.
+With the results in hand, a dot and error plot with treatments ordered from highest to lowest yield difference is a nice way to visualize the results - not identical but similar to a traditional forest plots.
+For such, we make the size of the dots proportional to the inverse of the standard error.
 
 ```{r fig.height=3.5, fig.width=4}
 table1 %>%
   filter(Treat != "CTRL") %>%
   ggplot(aes(reorder(Treat, R3_mean), R3_mean)) +
   geom_point(aes(size = 1 / R3_se), shape = 15) +
-  geom_errorbar(aes(
-    ymin = R3_mean - R3_se,
-    ymax = R3_mean + R3_se
-  ), width = 0.01) +
+  geom_errorbar(aes(ymin = R3_mean - R3_se,
+                    ymax = R3_mean + R3_se), width = 0.01) +
   ylim(0.1, 0.6) +
   labs(
     y = "Yield difference (ton/ha)",
@@ -197,11 +232,16 @@ table1 %>%
 
 ### Head to head comparison
 
-Using the best model (or any model, in fact) we can perform a head-to-head comparison based on the network model results. We can do it using `multcomp` package.
+Using the best model (or any model, in fact) we can perform a head-to-head comparison based on the network model results.
+We can do it using `multcomp` package.
 
 ```{r message=FALSE, warning=FALSE}
 library(multcomp)
-net_arm_UN_comp <- summary(glht(net_arm_UN, linfct = cbind(contrMat(rep(1, 6), type = "Tukey")), test = adjusted("none")))
+net_arm_UN_comp <-
+  summary(glht(
+    model = net_arm_UN,
+    linfct = cbind(contrMat(rep(1, 6), type = "Tukey"))
+  ))
 net_arm_UN_comp
 ```
 
@@ -213,14 +253,19 @@ plot(net_arm_UN_comp)
 
 ### Moderator effects
 
-In the original paper, two models were expanded to include the effect of wheat class (S = Spring wheat and W = Winter wheat) as moderator. Let's fit the CS model as in the paper and add this moderator factor in interaction with the treatment factor. The rest is the same.
+In the original paper, two models were expanded to include the effect of wheat class (S = Spring wheat and W = Winter wheat) as moderator.
+Let's fit the CS model as in the paper and add this moderator factor in interaction with the treatment factor. The rest is the same.
 
-```{r, cache=TRUE}
-
-net_arm_CS_class <- rma.mv(yield, varyld,
+```{r}
+net_arm_CS_class <- rma.mv(
+  yield,
+  varyld,
   mods = ~ factor(trt) * class,
   method = "ML",
-  random = list(~ factor(trt) | factor(trial)), struct = "HCS", data = wheat
+  random = list( ~ factor(trt) |
+                   factor(trial)),
+  struct = "HCS",
+  data = wheat
 )
 ```
 
@@ -230,7 +275,9 @@ As usual, we look at the model summary and check the estimates for each combinat
 summary(net_arm_CS_class)
 ```
 
-We can check whether the full model with the moderator is a better fit than the reduced (without moderator) model. The P-value of the LRT test suggests that indeed wheat class has a strong effect on treatment effects. This agrees with the results using SAS.
+We can check whether the full model with the moderator is a better fit than the reduced (without moderator) model.
+The P-value of the LRT test suggests that indeed wheat class has a strong effect on treatment effects.
+This agrees with the results using SAS.
 
 ```{r}
 anova(net_arm_CS, net_arm_CS_class)
@@ -238,12 +285,14 @@ anova(net_arm_CS, net_arm_CS_class)
 
 ### Wrapping up
 
-We fitted three network models to the means of wheat yields under the effect of fungicide treatments. These models have different variance-covariance matrix. Results of these three models and, of the one expanded to include the effect of wheat class, are not identical to those obtained in @madden2016, but they are all very similar.
+We fitted three network models to the means of wheat yields under the effect of fungicide treatments.
+These models have different variance-covariance matrix.
+Results of these three models and, of the one expanded to include the effect of wheat class, are not identical to those obtained in @madden2016, but they are all very similar.
 
 ### Useful links and other papers
 
 -   Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!). You may want to check these repositories of code and data from work published in my lab using these methods: @barro2021, @barro2020, [Machado et al. (2017)](https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/)
 
--   Other papers using network models: [@yellareddygari2019], [@edwardsmolina2018], [@paul2018], [@paul2008]
+-   Other papers using network models [@yellareddygari2019], [@edwardsmolina2018], [@paul2018], [@paul2008]
 
 -   Fitting [arm-based meta-analysis](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) with metafor
