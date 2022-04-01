@@ -12,7 +12,18 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Estimating leaf temperatures for spatial eppidemiolgy</title>
+      <dc:creator>Paul Melloy</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2022-04-01-powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures</link>
+      <description>How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.</description>
+      <category>R4PlantPath</category>
+      <category>Reproducible Research</category>
+      <guid>https://www.openplantpathology.org/posts/2022-04-01-powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures</guid>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2022-04-01-powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures/powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/figure-html5/plot_tleaf-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Calculating AUDPS using Julia</title>
       <dc:creator>Adam Sparks</dc:creator>
