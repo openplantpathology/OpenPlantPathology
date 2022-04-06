@@ -4,7 +4,8 @@ description: |
   How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.
 author:
   - name: Paul Melloy
-date: 2022-04-01
+    url: https://twitter.com/paulmelloy
+date: 2022-04-07
 output:
   distill::distill_article:
     self_contained: false
@@ -25,10 +26,16 @@ and the micro-environment of the plant canopy.
 
 When modelling plant disease outbreaks, being able to more accurately estimate the 
 conditions which lead to localised plant disease epidemics can be very useful. 
-This led me to the R package [_tealeaves_](https://CRAN.R-project.org/package=tealeaves)[@Muir2019], 
+This led me to the R package [_tealeaves_](https://CRAN.R-project.org/package=tealeaves) [@Muir2019], 
 which provides functions for calculating leaf temperatures from ambient environmental inputs.  
   
 If you have not already, install the packages _tealeaves_ and _nasapower_ with `install.packages(c("tealeaves", "nasapower"))`.  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+require("nasapower")
+require("tealeaves")
+```
+
 
 ## `tealeaves`
 
@@ -36,11 +43,19 @@ If you have not already, install the packages _tealeaves_ and _nasapower_ with `
 library(tealeaves)
 ```
 
-Before I begin, it is worth noting _tealeaves_ uses the package [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html) to format the inputs and outputs.
-More detail about the package _tealeaves_ and it's functions can be found in Muir's
+Before I begin, it is worth noting _tealeaves_ uses the package [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html) to 
+format the inputs and outputs [@Pebesma_etal2016].
+Detail about the package _tealeaves_ and it's functions can be found in Muir's
 publication [@Muir2020], and in the vignettes which can be obtained by running the 
-following commands in R `vignette("tealeaves-introduction")` or `vignette("tealeaves-intermediate")`. 
-Therefore I will not go in too much depth here, but show the briefest example.  
+following commands in R:  
+ - `vignette("tealeaves-introduction")`  
+ - `vignette("tealeaves-intermediate")`  
+
+For brevity, I will not go in depth into _tealeaves_ but provide a simple
+example using default parameters, then how to change default environmental parameters with 
+ones obtained from the _nasapower_ package.  
+
+> First, a brief _tealeaf_ example.  
 
 ```{r simple_example}
 lf_par <- make_leafpar()
@@ -56,28 +71,32 @@ Tm_leaf[, c("T_leaf","E")]
 ```
 
 
-The function `tleaf()` calculates leaf temperature and other leaf functions by solving
-an energy budget equation. This equation requires a number of parameter inputs which 
-are created or altered through the package functions:  
+The function `tleaf()` calculates leaf temperature and evapotranspiration by solving
+an energy budget equation from incoming solar radiation, air temperatures, reflectance, 
+and heat loss to wind and evapotranspiration for a leaf with certain characteristics 
+[@Muir2019]. 
+This equation requires these parameter inputs which describe this energy budget for 
+calculating leaf temperature.
+The parameters are created or altered through the package functions:  
 
   - `make_leafpar()` defines the leaf parameters and characteristics.  
   - `make_enviropar()` sets environmental parameters.  
   - `make_constants()` defines the constants used in the `tleaf()` equation.  
 <br>  
 
-The `tleaf()` returns an output containing details of the thermal energy absorbed
+The `tleaf()` function returns an output containing details of the thermal energy absorbed
 and emitted, including an estimate of evapotranspiration (`"E"`), which assists in 
-defining the estimated leaf temperature (`"T_leaf"`).  
+defining the estimated leaf temperature (`"T_leaf"`), given in Kelvin.  
 
 We can replace the default environmental parameters with values parsed from a 
 weather station or remote sensing satellite data retrieved by using the R package
-_nasapower_.  
+_nasapower_ [@Sparks2022].  
 
 ## `nasapower`
 
-Lets download some hourly data using the _nasapower_ package. 
+Lets download some hourly data using the _nasapower_ [@Sparks2022] package. 
 More information on using the _nasapower_ package can be found by calling the vignette
-as follows `vignette(nasapower)`.  
+`vignette(nasapower)`.  
 
 ```{r get_power}
 library(nasapower)
@@ -93,17 +112,20 @@ np <- get_power(
     "ALLSKY_SRF_ALB" # Surface albedo
   ),
   temporal_api = "hourly",
-  lonlat = c(150.884226, -26.826118),
-  dates = c("2021-06-01", "2021-06-08")
+  lonlat = c(150.88, -26.83),
+  dates = c("2021-02-01", "2021-02-08")
 )
 
 ```
 
-In the `get_power()` function above, I have requested "NASA POWER" data from the
-agricultural weather data collection (`"ag"`). These data contain all the energy
-balance input data needed from a 1 degree grid cell at the given `latlong` coordinates.
-In addition I have requested hourly data for the first week in June 2021 with the 
+In the `get_power()` function above, I have requested data from the [NASA "POWER" project](https://power.larc.nasa.gov/) from the agricultural weather data collection 
+(`"ag"`). These data contain all the energy balance inputs needed from a 1° grid 
+cell at the specified latitude and longitude (`latlong`). The coordinates I have 
+used are just north of Dalby in Queensland, Australia.
+In addition I have requested hourly data for the first week in February 2021 with the 
 `"temporal_api"` argument.  
+
+<br>  
 
 ```{r print_data}
 np
@@ -119,18 +141,19 @@ a single time point into the `tleaf()`.
 ```{r make_new_par}
 env_par <- make_enviropar(
   replace = list(
-    P = set_units(np$PS[1], "kPa"),
-    r = set_units(np$ALLSKY_SRF_ALB[1]),
-    RH = set_units(np$RH2M[1]/100), # needs to be specified as a proportion
-    S_sw = set_units(np$ALLSKY_SFC_SW_DWN[1], "W/m^2"),
+    P = set_units(np$PS[1], "kPa"),                # Air pressure
+    r = set_units(np$ALLSKY_SRF_ALB[1]),           # Albedo 
+    RH = set_units(np$RH2M[1]/100),                # Relative Humidity (as a proportion)
+    S_sw = set_units(np$ALLSKY_SFC_SW_DWN[1], "W/m^2"), # Short wave radiation
     T_air = set_units(
       set_units(np$T2M[1], "DegC"),
-      "K"),# convert from degrees to Kelvin
-    wind = set_units(np$WS2M[1], "m/s")
+      "K"),                                     # Air temperature, converted from degrees to Kelvin
+    wind = set_units(np$WS2M[1], "m/s")         # Wind speed
     )
 )
 ```
 
+<br>  
 <br>  
 
 Now I can run the `tleaf()` function again with the updated environmental parameters.  
@@ -157,8 +180,10 @@ set_units(Tm_leaf$T_leaf, "DegC")
 
 ## Leaf temperature gradients
 
-The _tealeaves_ vignette describes how the input of multiple values will return permutations
-of the environmental parameters to describe leaf temperature over a gradient.  
+Imputing vectors as parameters returns leaf temperature gradients across the supplied
+parameter permutations and not a vector of times. Below is an example of the permutations
+`t_leaves()` processes from a vector of environmental parameters. 
+This is described further in the _tealeaves_ vignette.  
 
 ```{r leaf_grad}
 env_par <- make_enviropar(
@@ -182,9 +207,12 @@ Tm_leaves <-
 dim(Tm_leaves)
 head(Tm_leaves[, c("T_leaf","E")])
 ```
-We can see that the `tleaves()` function expects multiple values specified in the 
-environmental parameters would indicate a gradient of different values. 
-As such all 64 (`2^6`) permutations of these values are returned.  
+We can see that the `tleaves()` function uses the multiple values specified in the 
+environmental parameters to calculate all possible gradients. 
+As such 64 values are returned ($2^6$), permutations of the input environmental 
+parameters.  
+
+> However in this example we want leaf temperature estimates over time, not space.  
 
 ## Leaf temperature time-series
 
