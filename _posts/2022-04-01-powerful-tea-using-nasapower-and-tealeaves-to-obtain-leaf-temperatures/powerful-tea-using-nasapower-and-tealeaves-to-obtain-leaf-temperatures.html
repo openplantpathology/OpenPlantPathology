@@ -114,8 +114,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-04-01"/>
-  <meta property="article:created" itemprop="dateCreated" content="2022-04-01"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-04-07"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-04-07"/>
   <meta name="article:author" content="Paul Melloy"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -133,10 +133,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   <meta name="citation_reference" content="citation_title=Tealeaves: An R package for modelling leaf temperature using energy budgets;citation_publication_date=2020;citation_author=Christopher D Muir"/>
   <meta name="citation_reference" content="citation_title=Tealeaves: An r package for modelling leaf temperature using energy budgets;citation_publication_date=2019;citation_volume=11;citation_doi=10.1093/aobpla/plz054;citation_issn=2041-2851;citation_author=Christopher D Muir"/>
+  <meta name="citation_reference" content="citation_title=Measurement units in R;citation_publication_date=2016;citation_volume=8;citation_doi=10.32614/RJ-2016-061;citation_author=Edzer Pebesma;citation_author=Thomas Mailund;citation_author=James Hiebert"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Estimating leaf temperatures for spatial eppidemiolgy"]},{"type":"character","attributes":{},"value":["How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Paul Melloy"]}]}]},{"type":"character","attributes":{},"value":["2022-04-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R4PlantPath","Reproducible Research"]},{"type":"character","attributes":{},"value":["bibliography.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Estimating leaf temperatures for spatial eppidemiolgy"]},{"type":"character","attributes":{},"value":["How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Paul Melloy"]},{"type":"character","attributes":{},"value":["https://twitter.com/paulmelloy"]}]}]},{"type":"character","attributes":{},"value":["2022-04-07"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R4PlantPath","Reproducible Research"]},{"type":"character","attributes":{},"value":["bibliography.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1483,7 +1484,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Estimating leaf temperatures for spatial eppidemiolgy","description":"How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.","authors":[{"author":"Paul Melloy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-01T00:00:00.000+10:00","citationText":"Melloy, 2022"}
+{"title":"Estimating leaf temperatures for spatial eppidemiolgy","description":"How to obtain leaf temperature estimates world-wide using R packages `tealeaves` and `nasapower`.","authors":[{"author":"Paul Melloy","authorURL":"https://twitter.com/paulmelloy","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-07T00:00:00.000+10:00","citationText":"Melloy, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1504,16 +1505,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-byline">
-  Paul Melloy  
+  Paul Melloy <a href="https://twitter.com/paulmelloy" class="uri">https://twitter.com/paulmelloy</a> 
   
-<br/>2022-04-01
+<br/>2022-04-07
 </div>
 
 <div class="d-article">
 <h2 id="introduction">Introduction</h2>
 <p>The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the <a href="https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx">disease triangle</a>. Arguably the effect of temperature on disease can be the most important of environmental influences. One problem with evaluating the effect of temperatures on disease incidence and severity is the difference between air temperatures measured at weather station and the micro-environment of the plant canopy.</p>
-<p>When modelling plant disease outbreaks, being able to more accurately estimate the conditions which lead to localised plant disease epidemics can be very useful. This led me to the R package <a href="https://CRAN.R-project.org/package=tealeaves"><em>tealeaves</em></a><span class="citation" data-cites="Muir2019">(<a href="#ref-Muir2019" role="doc-biblioref">Muir 2019</a>)</span>, which provides functions for calculating leaf temperatures from ambient environmental inputs.</p>
+<p>When modelling plant disease outbreaks, being able to more accurately estimate the conditions which lead to localised plant disease epidemics can be very useful. This led me to the R package <a href="https://CRAN.R-project.org/package=tealeaves"><em>tealeaves</em></a> <span class="citation" data-cites="Muir2019">(<a href="#ref-Muir2019" role="doc-biblioref">Muir 2019</a>)</span>, which provides functions for calculating leaf temperatures from ambient environmental inputs.</p>
 <p>If you have not already, install the packages <em>tealeaves</em> and <em>nasapower</em> with <code>install.packages(c("tealeaves", "nasapower"))</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <h2 id="tealeaves"><code>tealeaves</code></h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1521,7 +1525,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 </div>
-<p>Before we begin, it is worth noting <em>tealeaves</em> uses the package <a href="https://cran.r-project.org/web/packages/units/vignettes/units.html"><em>units</em></a> to format the inputs and outputs. More detail about the package <em>tealeaves</em> and it’s functions can be found in Muir’s publication <span class="citation" data-cites="Muir2020">(<a href="#ref-Muir2020" role="doc-biblioref">Muir 2020</a>)</span>, and in the vignettes which can be obtained by running the following commands in R <code>vignette("tealeaves-introduction")</code> or <code>vignette("tealeaves-intermediate")</code>. Therefore I will not go in too much depth here, but show the briefest example.</p>
+<p>Before I begin, it is worth noting <em>tealeaves</em> uses the package <a href="https://cran.r-project.org/web/packages/units/vignettes/units.html"><em>units</em></a> to format the inputs and outputs <span class="citation" data-cites="Pebesma_etal2016">(<a href="#ref-Pebesma_etal2016" role="doc-biblioref">Pebesma, Mailund, and Hiebert 2016</a>)</span>. Detail about the package <em>tealeaves</em> and it’s functions can be found in Muir’s publication <span class="citation" data-cites="Muir2020">(<a href="#ref-Muir2020" role="doc-biblioref">Muir 2020</a>)</span>, and in the vignettes which can be obtained by running the following commands in R:<br />
+- <code>vignette("tealeaves-introduction")</code><br />
+- <code>vignette("tealeaves-intermediate")</code></p>
+<p>For brevity, I will not go in depth into <em>tealeaves</em> but provide a simple example using default parameters, then how to change default environmental parameters with ones obtained from the <em>nasapower</em> package.</p>
+<blockquote>
+<p>First, a brief <em>tealeaf</em> example.</p>
+</blockquote>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>lf_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_leafpar</a></span><span class='op'>(</span><span class='op'>)</span>
@@ -1539,7 +1549,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre><code>        T_leaf                      E
 1 301.4181 [K] 0.00794791 [mol/m^2/s]</code></pre>
 </div>
-<p>The function <code>tleaf()</code> calculates leaf temperature and other leaf functions by solving an energy budget equation. This equation requires a number of parameter inputs which are created or altered through the package functions:</p>
+<p>The function <code>tleaf()</code> calculates leaf temperature and evapotranspiration by solving an energy budget equation from incoming solar radiation, air temperatures, reflectance, and heat loss to wind and evapotranspiration for a leaf with certain characteristics <span class="citation" data-cites="Muir2019">(<a href="#ref-Muir2019" role="doc-biblioref">Muir 2019</a>)</span>. This equation requires these parameter inputs which describe this energy budget for calculating leaf temperature. The parameters are created or altered through the package functions:</p>
 <ul>
 <li><code>make_leafpar()</code> defines the leaf parameters and characteristics.<br />
 </li>
@@ -1548,10 +1558,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><code>make_constants()</code> defines the constants used in the <code>tleaf()</code> equation.<br />
 <br></li>
 </ul>
-<p>The <code>tleaf()</code> returns an output containing details of the thermal energy absorbed and emitted, including an estimate of evapotranspiration (<code>"E"</code>), which assists in defining the estimated leaf temperature (<code>"T_leaf"</code>).</p>
-<p>We can replace the default environmental parameters with values parsed from a weather station or remote sensing satellite data retrieved by using the R package <em>nasapower</em>.</p>
+<p>The <code>tleaf()</code> function returns an output containing details of the thermal energy absorbed and emitted, including an estimate of evapotranspiration (<code>"E"</code>), which assists in defining the estimated leaf temperature (<code>"T_leaf"</code>), given in Kelvin.</p>
+<p>We can replace the default environmental parameters with values parsed from a weather station or remote sensing satellite data retrieved by using the R package <em>nasapower</em> <span class="citation" data-cites="Sparks2022">(<a href="#ref-Sparks2022" role="doc-biblioref">Sparks 2022</a>)</span>.</p>
 <h2 id="nasapower"><code>nasapower</code></h2>
-<p>Lets download some hourly data using the <em>nasapower</em> package. More information on using the <em>nasapower</em> package can be found by calling the vignette as follows <code>vignette(nasapower)</code>.</p>
+<p>Lets download some hourly data using the <em>nasapower</em> <span class="citation" data-cites="Sparks2022">(<a href="#ref-Sparks2022" role="doc-biblioref">Sparks 2022</a>)</span> package. More information on using the <em>nasapower</em> package can be found by calling the vignette <code>vignette(nasapower)</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://docs.ropensci.org/nasapower/'>nasapower</a></span><span class='op'>)</span>
@@ -1567,21 +1577,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     <span class='st'>"ALLSKY_SRF_ALB"</span> <span class='co'># Surface albedo</span>
   <span class='op'>)</span>,
   temporal_api <span class='op'>=</span> <span class='st'>"hourly"</span>,
-  lonlat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>150.884226</span>, <span class='op'>-</span><span class='fl'>26.826118</span><span class='op'>)</span>,
-  dates <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2021-06-01"</span>, <span class='st'>"2021-06-08"</span><span class='op'>)</span>
+  lonlat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>150.88</span>, <span class='op'>-</span><span class='fl'>26.83</span><span class='op'>)</span>,
+  dates <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2021-02-01"</span>, <span class='st'>"2021-02-08"</span><span class='op'>)</span>
 <span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<p>In the <code>get_power()</code> function above, we have requested “NASA POWER” data from the agricultural weather data collection (<code>"ag"</code>). These data contain all the energy balance input data needed from a 1 degree grid cell at the given <code>latlong</code> coordinates. In addition we have requested hourly data for the first week in June 2021 with the <code>"temporal_api"</code> argument.</p>
+<p>In the <code>get_power()</code> function above, I have requested data from the <a href="https://power.larc.nasa.gov/">NASA “POWER” project</a> from the agricultural weather data collection (<code>"ag"</code>). These data contain all the energy balance inputs needed from a 1° grid cell at the specified latitude and longitude (<code>latlong</code>). The coordinates I have used are just north of Dalby in Queensland, Australia. In addition I have requested hourly data for the first week in February 2021 with the <code>"temporal_api"</code> argument.</p>
+<p><br></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>np</span>
 </code></pre>
 </div>
 <pre><code>NASA/POWER CERES/MERRA2 Native Resolution Hourly Data  
- Dates (month/day/year): 06/01/2021 through 06/08/2021  
- Location: Latitude  -26.8261   Longitude 150.8842  
+ Dates (month/day/year): 02/01/2021 through 02/08/2021  
+ Location: Latitude  -26.83   Longitude 150.88  
  Elevation from MERRA-2: Average for 0.5 x 0.625 degree lat/lon region = 336.69 meters 
  The value for missing source data that cannot be computed or is outside of the sources availability range: NA  
  Parameter(s):  
@@ -1598,42 +1609,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 # A tibble: 192 x 13
      LON   LAT  YEAR    MO    DY    HR  RH2M   T2M  WS2M
    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1  151. -26.8  2021     6     1    10  48.4  20.4  2.09
- 2  151. -26.8  2021     6     1    11  43.6  21.7  1.7 
- 3  151. -26.8  2021     6     1    12  40.2  22.6  1.59
- 4  151. -26.8  2021     6     1    13  37.9  23.0  1.65
- 5  151. -26.8  2021     6     1    14  37    23.0  1.63
- 6  151. -26.8  2021     6     1    15  37.9  22.4  1.51
- 7  151. -26.8  2021     6     1    16  54.9  20.3  0.75
- 8  151. -26.8  2021     6     1    17  56.9  17.8  0.95
- 9  151. -26.8  2021     6     1    18  60.6  16.5  1.08
-10  151. -26.8  2021     6     1    19  66.8  15.0  1.19
+ 1  151. -26.8  2021     2     1    10  39.8  30.9  3.72
+ 2  151. -26.8  2021     2     1    11  34.1  32.6  3.51
+ 3  151. -26.8  2021     2     1    12  30.5  33.8  3.37
+ 4  151. -26.8  2021     2     1    13  28.3  34.5  3.39
+ 5  151. -26.8  2021     2     1    14  27.3  34.6  3.6 
+ 6  151. -26.8  2021     2     1    15  27.7  33.8  3.9 
+ 7  151. -26.8  2021     2     1    16  29.1  32.6  4.13
+ 8  151. -26.8  2021     2     1    17  31.9  30.9  4.08
+ 9  151. -26.8  2021     2     1    18  38.5  28.3  3.38
+10  151. -26.8  2021     2     1    19  43    26.3  4.13
 # ... with 182 more rows, and 4 more variables:
 #   ALLSKY_SFC_SW_DWN &lt;dbl&gt;, ALLSKY_SFC_LW_DWN &lt;dbl&gt;, PS &lt;dbl&gt;,
 #   ALLSKY_SRF_ALB &lt;dbl&gt;</code></pre>
 </div>
 <p><br></p>
 <h2 id="estimate-leaf-temperatures">Estimate leaf temperatures</h2>
-<p>Next we will characterise the environmental parameters using the <code>np</code> data at a single time point into the <code>tleaf()</code>.</p>
+<p>Next I will characterise the environmental parameters using the <code>np</code> data at a single time point into the <code>tleaf()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>env_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_enviropar</a></span><span class='op'>(</span>
   replace <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-    P <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,
-    r <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>,
-    RH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span>, <span class='co'># needs to be specified as a proportion</span>
-    S_sw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>,
+    P <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,                <span class='co'># Air pressure</span>
+    r <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>,           <span class='co'># Albedo </span>
+    RH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span>,                <span class='co'># Relative Humidity (as a proportion)</span>
+    S_sw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>, <span class='co'># Short wave radiation</span>
     T_air <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span>
       <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>T2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,
-      <span class='st'>"K"</span><span class='op'>)</span>,<span class='co'># convert from degrees to Kelvin</span>
-    wind <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span>
+      <span class='st'>"K"</span><span class='op'>)</span>,                                     <span class='co'># Air temperature, converted from degrees to Kelvin</span>
+    wind <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span>         <span class='co'># Wind speed</span>
     <span class='op'>)</span>
 <span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<p><br></p>
-<p>Now we can run the <code>tleaf()</code> function again with the updated environmental parameters.</p>
+<p><br><br />
+<br></p>
+<p>Now I can run the <code>tleaf()</code> function again with the updated environmental parameters.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Tm_leaf</span> <span class='op'>&lt;-</span> 
@@ -1645,20 +1657,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 <pre><code>        T_leaf                       E
-1 290.5635 [K] 0.002988952 [mol/m^2/s]</code></pre>
+1 299.5096 [K] 0.006604466 [mol/m^2/s]</code></pre>
 </div>
 <p><br></p>
-<p>Because the outputs are specified using the <em>units</em> package we can easily convert from Kelvin back to degrees Celsius using the <code>set_units()</code> function again.</p>
+<p>Because the outputs are specified using the <em>units</em> package I can easily convert from Kelvin back to degrees Celsius using the <code>set_units()</code> function again.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>Tm_leaf</span><span class='op'>$</span><span class='va'>T_leaf</span>, <span class='st'>"DegC"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>17.41351 [°C]</code></pre>
+<pre><code>26.35956 [°C]</code></pre>
 </div>
 <p><br></p>
 <h2 id="leaf-temperature-gradients">Leaf temperature gradients</h2>
-<p>The <em>tealeaves</em> vignette describes how the input of multiple values will return permutations of the environmental parameters to describe leaf temperature over a gradient.</p>
+<p>Imputing vectors as parameters returns leaf temperature gradients across the supplied parameter permutations and not a vector of times. Below is an example of the permutations <code>t_leaves()</code> processes from a vector of environmental parameters. This is described further in the <em>tealeaves</em> vignette.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>env_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_enviropar</a></span><span class='op'>(</span>
@@ -1690,17 +1702,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre><code># A tibble: 6 x 2
   T_leaf           E
      [K] [mol/m^2/s]
-1   290.     0.00305
-2   290.     0.00327
-3   291.     0.00324
-4   291.     0.00348
-5   290.     0.00305
-6   290.     0.00327</code></pre>
+1   299.     0.00710
+2   299.     0.00724
+3   300.     0.00760
+4   300.     0.00775
+5   299.     0.00710
+6   299.     0.00724</code></pre>
 </div>
-<p>We can see that the <code>tleaves()</code> function expects multiple values specified in the environmental parameters would indicate a gradient of different values. As such all 64 (<code>2^6</code>) permutations of these values are returned.</p>
+<p>We can see that the <code>tleaves()</code> function uses the multiple values specified in the environmental parameters to calculate all possible gradients. As such 64 values are returned (<span class="math inline">\(2^6\)</span>), permutations of the input environmental parameters.</p>
+<blockquote>
+<p>However in this example we want leaf temperature estimates over time, not space.</p>
+</blockquote>
 <h2 id="leaf-temperature-time-series">Leaf temperature time-series</h2>
-<p>To obtain a time series we can use the <code>apply</code> function to parse the environmental parameters to <code>tleaf</code> one time point at a time.</p>
-<p>First we need to clean up the data a little by substituting <code>NA</code> albedo values generated by night-time measurements. Here I have substituted it with the mean.</p>
+<p>To obtain a time series I can use the <code>apply</code> function to parse the environmental parameters to <code>tleaf</code> one time point at a time.</p>
+<p>First I need to clean up the data a little by substituting <code>NA</code> albedo values generated by night-time measurements. Here I have substituted it with the mean.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span>
@@ -1741,19 +1756,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 <pre><code>         T_leaf                       E
-1  290.5635 [K] 0.002988952 [mol/m^2/s]
-2  291.2713 [K] 0.003236848 [mol/m^2/s]
-3  291.7135 [K] 0.003479333 [mol/m^2/s]
-4  291.9714 [K] 0.003739368 [mol/m^2/s]
-5  291.8990 [K] 0.003779374 [mol/m^2/s]
-6  291.3986 [K] 0.003526808 [mol/m^2/s]
-7  290.4059 [K] 0.001759303 [mol/m^2/s]
-8  288.4277 [K] 0.001654905 [mol/m^2/s]
-9  287.4974 [K] 0.001491769 [mol/m^2/s]
-10 286.4673 [K] 0.001210364 [mol/m^2/s]</code></pre>
+1  299.5096 [K] 0.006604466 [mol/m^2/s]
+2  300.3629 [K] 0.007602218 [mol/m^2/s]
+3  300.9245 [K] 0.008296177 [mol/m^2/s]
+4  301.2553 [K] 0.008803558 [mol/m^2/s]
+5  301.3194 [K] 0.009132864 [mol/m^2/s]
+6  300.9297 [K] 0.009061479 [mol/m^2/s]
+7  300.2532 [K] 0.008639131 [mol/m^2/s]
+8  299.0727 [K] 0.007694088 [mol/m^2/s]
+9  297.1887 [K] 0.005870064 [mol/m^2/s]
+10 296.0459 [K] 0.005306279 [mol/m^2/s]</code></pre>
 </div>
 <p><br></p>
-<p>We can now pair up the time and air temperature data from the NASA power data with the leaf temperature data. Also we will convert temperature in Kelvin to degrees Celsius.</p>
+<p>I can now pair up the time and air temperature data from the NASA power data with the leaf temperature data. Also I will convert temperature in Kelvin to degrees Celsius.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Leaf_temperatures</span><span class='op'>$</span><span class='va'>air_temp</span> <span class='op'>&lt;-</span>
@@ -1771,8 +1786,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <p><br></p>
-<h2 id="ploting-leaf-temperature">Ploting leaf temperature</h2>
-<p>Finally we can visualise the change in air temperature and leaf temperatures over time.</p>
+<h2 id="plotting-leaf-temperature">Plotting leaf temperature</h2>
+<p>Finally I can visualise the change in air temperature and leaf temperatures over time.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
@@ -1803,6 +1818,12 @@ Muir, Christopher D. 2019. <span>“Tealeaves: An r Package for Modelling Leaf T
 <div id="ref-Muir2020" class="csl-entry" role="doc-biblioentry">
 ———. 2020. <span>“Tealeaves: An <span>R</span> Package for Modelling Leaf Temperature Using Energy Budgets.”</span> <a href="https://CRAN.R-project.org/package=tealeaves">https://CRAN.R-project.org/package=tealeaves</a>.
 </div>
+<div id="ref-Pebesma_etal2016" class="csl-entry" role="doc-biblioentry">
+Pebesma, Edzer, Thomas Mailund, and James Hiebert. 2016. <span>“Measurement Units in <span>R</span>.”</span> <em>R Journal</em> 8 (2): 486–94. <a href="https://doi.org/10.32614/RJ-2016-061">https://doi.org/10.32614/RJ-2016-061</a>.
+</div>
+<div id="ref-Sparks2022" class="csl-entry" role="doc-biblioentry">
+Sparks, Adam. 2022. <em><span class="nocase">nasapower</span>: NASA-POWER Data from r</em>. <a href="https://doi.org/10.5281/zenodo.1040727">https://doi.org/10.5281/zenodo.1040727</a>.
+</div>
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -1811,6 +1832,15 @@ Muir, Christopher D. 2019. <span>“Tealeaves: An r Package for Modelling Leaf T
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
