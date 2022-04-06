@@ -36,7 +36,7 @@ If you have not already, install the packages _tealeaves_ and _nasapower_ with `
 library(tealeaves)
 ```
 
-Before we begin, it is worth noting _tealeaves_ uses the package [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html) to format the inputs and outputs.
+Before I begin, it is worth noting _tealeaves_ uses the package [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html) to format the inputs and outputs.
 More detail about the package _tealeaves_ and it's functions can be found in Muir's
 publication [@Muir2020], and in the vignettes which can be obtained by running the 
 following commands in R `vignette("tealeaves-introduction")` or `vignette("tealeaves-intermediate")`. 
@@ -99,10 +99,10 @@ np <- get_power(
 
 ```
 
-In the `get_power()` function above, we have requested "NASA POWER" data from the
+In the `get_power()` function above, I have requested "NASA POWER" data from the
 agricultural weather data collection (`"ag"`). These data contain all the energy
 balance input data needed from a 1 degree grid cell at the given `latlong` coordinates.
-In addition we have requested hourly data for the first week in June 2021 with the 
+In addition I have requested hourly data for the first week in June 2021 with the 
 `"temporal_api"` argument.  
 
 ```{r print_data}
@@ -113,7 +113,7 @@ np
 
 ## Estimate leaf temperatures  
 
-Next we will characterise the environmental parameters using the `np` data at 
+Next I will characterise the environmental parameters using the `np` data at 
 a single time point into the `tleaf()`.  
 
 ```{r make_new_par}
@@ -133,7 +133,7 @@ env_par <- make_enviropar(
 
 <br>  
 
-Now we can run the `tleaf()` function again with the updated environmental parameters.  
+Now I can run the `tleaf()` function again with the updated environmental parameters.  
 
 ```{r leaf_data}
 Tm_leaf <- 
@@ -146,7 +146,7 @@ Tm_leaf[, c("T_leaf","E")]
 
 <br>  
 
-Because the outputs are specified using the _units_ package we can easily convert
+Because the outputs are specified using the _units_ package I can easily convert
 from Kelvin back to degrees Celsius using the `set_units()` function again.  
 
 ```{r leaf_temp}
@@ -188,10 +188,10 @@ As such all 64 (`2^6`) permutations of these values are returned.
 
 ## Leaf temperature time-series
 
-To obtain a time series we can use the `apply` function to parse the environmental
+To obtain a time series I can use the `apply` function to parse the environmental
 parameters to `tleaf` one time point at a time.  
 
-First we need to clean up the data a little by substituting `NA` albedo values generated 
+First I need to clean up the data a little by substituting `NA` albedo values generated 
 by night-time measurements. Here I have substituted it with the mean.  
 
 ```{r sub_na}
@@ -233,8 +233,8 @@ Leaf_temperatures[1:10,c("T_leaf","E")]
 
 <br>  
 
-We can now pair up the time and air temperature data from the NASA power data with 
-the leaf temperature data. Also we will convert temperature in Kelvin to degrees
+I can now pair up the time and air temperature data from the NASA power data with 
+the leaf temperature data. Also I will convert temperature in Kelvin to degrees
 Celsius.  
 
 ```{r tidy_tleaf}
@@ -254,9 +254,9 @@ Leaf_temperatures$T_leaf <-
 
 <br>  
 
-## Ploting leaf temperature
+## Plotting leaf temperature
 
-Finally we can visualise the change in air temperature and leaf temperatures over
+Finally I can visualise the change in air temperature and leaf temperatures over
 time.  
 
 ```{r plot_tleaf}
