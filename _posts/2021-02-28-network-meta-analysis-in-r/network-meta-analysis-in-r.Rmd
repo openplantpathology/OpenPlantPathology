@@ -11,7 +11,7 @@ output:
     self_contained: false
 draft: FALSE
 bibliography: references.bib
-csl: apa-numeric-superscript-brackets.csl
+csl: phytopathology.csl
 categories: 
   - R4PlantPath
 preview: network1.png
@@ -19,7 +19,7 @@ preview: network1.png
 
 ### Why and who is this post for?
 
-Meta-analysis (MA) has gained popularity in Plant Pathology.
+Meta-analysis (MA) has gained popularity in plant pathology.
 Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in *Phytopathology* @madden2016.
 
 Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest.
@@ -28,15 +28,15 @@ Although this is a VERY small number of studies compared with other fields (medi
 Specifically, multiple treatment comparison (_e.g._, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated.
 Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.
 
-Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R (`metafor`).
+Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R (_metafor_).
 Here I fitted the same model, the arm-based or unconditional, similar to the original paper.
 In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).
 
-I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called `metafor`.
+I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called _metafor_.
 I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
 Anyone should be able to reproduce the analysis below by copying and pasting into R.
 To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results.
-[Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558)
+[Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558).
 
 ### Data preparation
 
