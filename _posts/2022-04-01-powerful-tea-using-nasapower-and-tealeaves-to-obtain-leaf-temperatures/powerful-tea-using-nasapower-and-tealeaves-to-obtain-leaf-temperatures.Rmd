@@ -19,7 +19,7 @@ preview: tealeaveslogo.png
 
 ## Introduction
 
-The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the [disease triangle](https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx).
+The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the [disease triangle](https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx) [@Francl_2001].
 Arguably the effect of temperature on disease can be the most important of environmental influences.
 One problem with evaluating the effect of temperatures on disease incidence and severity is the difference between air temperatures measured at a weather station and the micro-environment of the plant canopy.
 

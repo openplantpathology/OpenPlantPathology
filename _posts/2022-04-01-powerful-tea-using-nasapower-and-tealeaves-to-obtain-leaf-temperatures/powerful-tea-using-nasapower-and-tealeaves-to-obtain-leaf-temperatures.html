@@ -134,6 +134,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="citation_reference" content="citation_title=tealeaves: An R package for modelling leaf temperature using energy budgets;citation_publication_date=2020;citation_author=Christopher D. Muir"/>
   <meta name="citation_reference" content="citation_title=tealeaves: an R package for modelling leaf temperature using energy budgets;citation_publication_date=2019;citation_volume=11;citation_doi=10.1093/aobpla/plz054;citation_issn=2041-2851;citation_author=Christopher D. Muir"/>
   <meta name="citation_reference" content="citation_title=Measurement units in R;citation_publication_date=2016;citation_volume=8;citation_doi=10.32614/RJ-2016-061;citation_author=Edzer Pebesma;citation_author=Thomas Mailund;citation_author=James Hiebert"/>
+  <meta name="citation_reference" content="citation_title=The disease triangle: A plant pathological paradigm revisited;citation_publication_date=2001;citation_publisher=Scientific Societies;citation_doi=10.1094/phi-t-2001-0517-01;citation_author=L. J. Francl"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -1512,7 +1513,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="introduction">Introduction</h2>
-<p>The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the <a href="https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx">disease triangle</a>. Arguably the effect of temperature on disease can be the most important of environmental influences. One problem with evaluating the effect of temperatures on disease incidence and severity is the difference between air temperatures measured at a weather station and the micro-environment of the plant canopy.</p>
+<p>The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the <a href="https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx">disease triangle</a> <span class="citation" data-cites="Francl_2001">(<a href="#ref-Francl_2001" role="doc-biblioref">Francl 2001</a>)</span>. Arguably the effect of temperature on disease can be the most important of environmental influences. One problem with evaluating the effect of temperatures on disease incidence and severity is the difference between air temperatures measured at a weather station and the micro-environment of the plant canopy.</p>
 <p>When modelling plant disease outbreaks, being able to accurately estimate the conditions which lead to localised plant disease epidemics can be very useful. This led me to the R package <a href="https://CRAN.R-project.org/package=tealeaves"><em>tealeaves</em></a> <span class="citation" data-cites="Muir2019">(<a href="#ref-Muir2019" role="doc-biblioref">Muir 2019</a>)</span>, which provides functions for calculating leaf temperatures from ambient environmental inputs.</p>
 <p>If you have not already, install the packages <em>tealeaves</em> and <em>nasapower</em> with <code>install.packages(c("tealeaves", "nasapower"))</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1800,6 +1801,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Hopefully this will help get you started for using these two packages to estimate leaf and canopy temperatures. However, further parameterisation would be necessary prior to any in-depth analyses. Leaf parameters, such as leaf size, reflectance, absorbance, stomatal conductance and ratio should be carefully considered in addition to vertical environmental gradients across the height of the plant. Shading in the canopy is known to effect pathogen infection, colonisation and sporulation in addition to leaf wetness.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Francl_2001" class="csl-entry" role="doc-biblioentry">
+Francl, L. J. 2001. The disease triangle: A plant pathological paradigm revisited. The Plant Health Instructor.
+</div>
 <div id="ref-Muir2019" class="csl-entry" role="doc-biblioentry">
 Muir, C. D. 2019. <span class="nocase">tealeaves: an R package for modelling leaf temperature using energy budgets</span>. AoB PLANTS. 11 Available at: <a href="https://academic.oup.com/aobpla/article/11/6/plz054/5666155">https://academic.oup.com/aobpla/article/11/6/plz054/5666155</a>.
 </div>
