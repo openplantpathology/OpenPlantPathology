@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2022-04-28-advances-in-understanding-the-host-mediated-defence-mechanism-in-wheat-against-rust-infections/",
+    "title": "Advances in understanding the host-mediated defence mechanism in wheat against rust infections",
+    "description": "Sambasivam (Sam) Periyannan is a Scientist at the Agriculture and Food division of CSIRO and an Adjunct Associate Professor at the University of Queensland, Australia. After completing his PhD (Agriculture) at the University of Sydney in 2011, Sam started his scientific career as a postdoctoral fellow (2011-2016) at CSIRO, where he eventually became an independent scientist in 2016. Between 2017-2019, Sam took a secondment position at the Australian National University (ANU) to complete his ARC DECRA project. He also served as the “Crop Resistance Genes” team leader at CSIRO from 2019 to 2021. Sam’s research interest is centred on molecular genetics and pathology, focusing on cereal crops and rust pathogens. Apart from publications in top journals such as Science and Nature Biotechnology, Sam is the recipient of prestigious awards such as the Goldacre award from the Australian Society of Plant Scientists and Chairman’s Medal from CSIRO. Currently he is a Senior Editor for Plant Disease and Associate Editor for BMC Biology and Frontiers in Plant Science.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-04-22",
+    "categories": [
+      "CCH-USQ Seminars"
+    ],
+    "contents": "\nAbout\nPresenter: Dr. Sambasavam Periyannan\nInstitution: CSIRO and University of Queensland\nDate: April 22, 2022\nTime: 10:00AM - 11:00PM AEST\nHost: USQ CCH\nLinks: Video\nAbstract\nRust fungi belonging to the genus Puccinia have an important\nimpact on wheat cultivation and human food security worldwide. Routinely\nrust infections are managed through the effective use of genetic\nresistance, an innate ability in plants to resist pests and pathogens.\nWhile the modern wheat cultivars are prone to attack by the recently\nevolved rust strains, the historical collection of domesticated wheat\nand its wild relatives are resilient due to enriched genetic diversity.\nWe mapped, identified, and characterised a few rust resistance genes\nfrom wheat and its progenitor and wild relatives through map-based\ncloning. However, due to the large and complex nature of the wheat\ngenome, this conventional process is tedious and time-consuming. But\nwith the near-complete sequencing of the wheat genome and advancements\nin DNA capture and sequencing, we have developed robust strategies to\naccelerate resistance gene cloning. Further, through gene cassette\ntechnology, we combined and introduced multiple and diverse rust\nresistance genes in a common wheat cultivar. In parallel, we have made\nprogress in accelerating rust pathogen surveillance through effective\nintegration of DNA sequencing techniques that will ensure precise\nselection of resistance genes to protect wheat from the newly emerged\nrust strains.\n\n\n\n",
+    "preview": "posts/2022-04-28-advances-in-understanding-the-host-mediated-defence-mechanism-in-wheat-against-rust-infections/USQ-CCH_Periyannan.png",
+    "last_modified": "2022-04-28T09:32:24+08:00",
+    "input_file": {},
+    "preview_width": 157,
+    "preview_height": 174
+  },
+  {
     "path": "posts/2022-04-01-powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures/",
     "title": "Estimating leaf temperatures for spatial epidemiology",
     "description": "How to obtain leaf temperature estimates world-wide using the R packages, tealeaves and nasapower.",
