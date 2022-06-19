@@ -1027,10 +1027,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1860,6 +1856,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1874,6 +1876,31 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1973,6 +2000,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1995,7 +2024,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2544,6 +2573,22 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption=""></h1>
+<a href="posts/2022-06-19-understanding-plant-microbe-soil-interactions-to-improve-plant-conservation-and-restoration-outcomes/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["CCH-USQ Seminars"]}</script>
+<div class="metadata">
+<div class="publishedDate">June 3, 2022</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2022-06-19-understanding-plant-microbe-soil-interactions-to-improve-plant-conservation-and-restoration-outcomes/USQ-CCH_Birnbaum.jpg"/>
+</div>
+<div class="description">
+<h2>Understanding plant-microbe- soil interactions to improve plant conservation and restoration outcomes</h2>
+<div class="dt-tags">
+<div class="dt-tag">CCH-USQ Seminars</div>
+</div>
+<p>Although soil microbial communities, e.g., fungi and bacteria, are still largely considered a “black box”, their central role in ecosystem processes and function is indisputable. Despite the important role they play in carbon and nitrogen cycling, decomposition, and plant health there have been few attempts to incorporate soil microbial communities into conservation and restoration practice. In this talk, I will give an overview of my research pertaining plant- microbe interactions and how it has the potential to improve our understanding of plant-microbial dynamics in diverse ecosystems. Better understanding plant-microbial dynamics will also inform about the ecosystem-level processes and ecosystem health, e.g., decomposition rate, nutrient cycling, and plant nutrient acquisition. Finally, I will bring examples of our work that has practical applications for improving plant conservation and restoration outcomes.</p>
+</div>
+</a>
 <a href="posts/2022-04-28-advances-in-understanding-the-host-mediated-defence-mechanism-in-wheat-against-rust-infections/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["CCH-USQ Seminars"]}</script>
 <div class="metadata">
@@ -2619,7 +2664,7 @@ function init_posts_list() {
 <div class="publishedDate">Feb. 3, 2022</div>
 </div>
 <div class="thumbnail">
-<img src="posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/Qld_APPS_Bar.jpg"/>
+<img data-src="posts/2022-02-09-adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia/Qld_APPS_Bar.jpg"/>
 </div>
 <div class="description">
 <h2>Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia</h2>
@@ -3703,7 +3748,7 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(72)</span>
+<span class="category-count">(73)</span>
 </li>
 <li>
 <a href="#category:BPP_Seminars">BPP Seminars</a>
@@ -3711,7 +3756,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:CCH-USQ_Seminars">CCH-USQ Seminars</a>
-<span class="category-count">(6)</span>
+<span class="category-count">(7)</span>
 </li>
 <li>
 <a href="#category:Databases">Databases</a>
