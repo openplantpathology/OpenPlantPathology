@@ -1,5 +1,41 @@
 [
   {
+    "path": "posts/2022-10-07-polyphagous-shot-hole-borer-in-western-australia-emergency-response-at-the-urban-interface/",
+    "title": "Polyphagous shot-hole borer in Western Australia – emergency response at the urban interface",
+    "description": "Polyphagous shot-hole borer (PSHB; Euwallacea fornicatus) was detected in August 2021 by the Department of Primary Industries and Regional Development (DPIRD) in the Perth metropolitan area of Western Australia (WA). PSHB is an agricultural and environmental pest, with a wide host range (>400 amenity, fruit and nut tree species). This presentation will summarise PSHB biology and DPIRD response activities and explore some of the challenges and opportunities present at the urban forest- residential interface. Kylie will also speak to what it is like to work as a subject matter expert during a plant pest incursion.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-10-07",
+    "categories": [
+      "CCH-USQ Seminars"
+    ],
+    "contents": "\nAbout\nPresenter: Dr. Kylie Ireland\nInstitution: Department of Primary Industries and Regional Development (DPIRD), Perth, WA, Australia\nHost: University of Southern Queensland Centre for Crop Health\nDate: September 22, 2022\nLinks: Video\nBiography\nKylie Ireland is plant pathologist in the DPIRD Plant Biosecurity Team, subject matter expert on the PSHB response, and an adjunct research fellow at Curtin University. She loves plant biosecurity, the science-management/policy nexus and agricultural extension.\nWith a PhD in plant biosecurity from Murdoch University, Kylie has worked on a diverse range of projects, including pest risk modelling, Myrtle rust ecology, plant pathology capacity building in Laos, plant pest impacts, weed biocontrol and fungicide resistance extension.\nKylie is a director of the Australian Plant Biosecurity Science Foundation and leads the editorial team of the APPS Newsletter.\nAbstract\nPolyphagous shot-hole borer (PSHB; Euwallacea fornicatus) was detected in August 2021 by the Department of Primary Industries and Regional Development (DPIRD) in the Perth metropolitan area of Western Australia (WA).\nPSHB is an agricultural and environmental pest, with a wide host range (more than 400 amenity, fruit and nut tree species).\nThe beetle bores into living mature trees and can cause limb dieback and tree death.\nPSHB lives in close association with a symbiotic fungus, an ambrosia clade Fusarium species (Fusarium sp. [AF-18] in WA), that it farms as a food source.\nA Quarantine Area has been established to prevent spread of the pest and DPIRD is actively managing infested trees.\nThe response has impacted residents, local governments, green-waste operators and numerous plant and wood-based industries.\nThis presentation will summarise PSHB biology and DPIRD response activities and explore some of the challenges and opportunities present at the urban forest- residential interface.\nKylie will also speak to what it is like to work as a subject matter expert during a plant pest incursion.\n\n\n\n",
+    "preview": "posts/2022-10-07-polyphagous-shot-hole-borer-in-western-australia-emergency-response-at-the-urban-interface/USQ-CCH_Ireland.jpg",
+    "last_modified": "2022-10-07T15:58:39+08:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-08-18-tracking-changes-from-rmdqmd-output-across-word-document-versions/",
+    "title": "Tracking changes from Rmd/Qmd Rendered Files Across Word Document Versions",
+    "description": "Writing your manuscripts in RMarkdown or Quarto and rendering to Word for review? Do you need to be able to track your changes in Word in your response to reviews but don't know how to? Read on for how you can still use Rmd/Qmd and satisfy the requirements for tracked changes in your responses when resubmiting to journals for review.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2022-08-18",
+    "categories": [],
+    "contents": "\nWhile most plant pathologists are likely to write their manuscripts\ncollaboratively in Microsoft Word, what if you instead prefer to harness\nRMarkdown or Quarto and Git for your collaborative writing? Often times\njournal submissions require the response to have a Word Document with\nchanges tracked to be resubmitted for the editor and reviewers to\nevaluate and track the changes that were made in the manuscript. The\ncombination of these two approaches may make it seem that they aren’t\ncompatible. However, with the right combination of both tools, it’s\npossible to use the best of both of these tools and meet the needs of\nthe authors and the journals.\nThe first step is to use Git effectively. When you submit your\nmanuscript, create a release that corresponds with the version of the\nmanuscript that you have submitted. This way you have a good record of\nwhat changes were made in your Rmd/Qmd file up to that point and know\nthat you can accurately recreate the Word document as submitted for\nreview. This will be used as your basis for tracking the changes that\nwere made in response to the review.\nSecond, when you receive the response from the review process, create\na new branch to work from leaving the original branch untouched so that\nyou can still reknit your original Word document as submitted for the\ninitial review.\nThird, make your edits with your co-authors to the Rmd/Qmd file\ntracking the changes in Git using the new branch for the response to the\nreview.\nFourth, once you are ready to resubmit your manuscript, knit the new\nversion and save the Word document locally.\nFifth, if you have the original Word document as submitted you can\nuse this or you can check out your original Git branch and reknit the\nWord document as submitted. If necessary, save this file locally as\nwell.\nSixth, while using Word, go to “Tools” > “Combine Documents”.\nUsing this tool, select your original document as “Original document:”\nand your newly edited document as “Revised document:”. I suggest using\nthe default approach to combine them together in a new document.\nThe “Combine documents” workflow tool in\nWord for Mac.Seventh, check that the changes have been accurately tracked and add\nany necessary comments to respond to the reviewers.\nEighth, save the new document and use this for your response to the\nreview with the changes tracked.\nLastly, once you have prepared your response, merge the new branch\nback into the main and create another release to correspond with the\nresponse to review submission. This way you have releases that\ncorrespond to the entire process along the way and you can easily track\nyour changes with greater detail in Git than what the Word document\noffers, while still offering the necessary information for the editor\nand reviewers to see the changes that were made.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-18T16:37:14+08:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-06-19-understanding-plant-microbe-soil-interactions-to-improve-plant-conservation-and-restoration-outcomes/",
     "title": "Understanding plant-microbe- soil interactions to improve plant conservation and restoration outcomes",
     "description": "Although soil microbial communities, e.g., fungi and bacteria, are still largely considered a “black box”, their central role in ecosystem processes and function is indisputable. Despite the important role they play in carbon and nitrogen cycling, decomposition, and plant health there have been few attempts to incorporate soil microbial communities into conservation and restoration practice. In this talk, I will give an overview of my research pertaining plant- microbe interactions and how it has the potential to improve our understanding of plant-microbial dynamics in diverse ecosystems. Better understanding plant-microbial dynamics will also inform about the ecosystem-level processes and ecosystem health, e.g., decomposition rate, nutrient cycling, and plant nutrient acquisition. Finally, I will bring examples of our work that has practical applications for improving plant conservation and restoration outcomes.",
