@@ -1,7 +1,7 @@
 ---
 title: "Fitting temperature- and moisture-based models to infection data"
 description: |
-  In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta function model to temperature and an asymptotic regression model to moisture duration data. 
+  In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration. 
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/emdelponte
