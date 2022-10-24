@@ -185,16 +185,16 @@ validation <- data.frame(t, HW, dis)
 
 Now the countour plot can be visualized using *ggplot2* and *geomtextpath* packages.
 
-```{r fig.height=5, fig.width=6}
+```{r fig.height=5, fig.width=8}
 library(ggplot2)
 library(geomtextpath)
 ggplot(validation, aes(t, HW, z = dis)) + 
   geom_contour_filled(bins = 8, alpha = 0.7) + 
   geom_textcontour(bins = 8, size = 2.5, padding = unit(0.05, "in")) + 
   theme_minimal() +
-  theme(legend.position = "none")+
+  theme(legend.position = "right")+
   ylim(0, 40)+
-  labs(y = "Wetness duration (hours)", x = "Temperature (Celcius)")
+  labs(y = "Wetness duration (hours)", fill = "Severity", x = "Temperature (Celcius)")
 ```
 
 Tha't it. Fell free to [reach me](delponte@ufv.br) in case of questions!
