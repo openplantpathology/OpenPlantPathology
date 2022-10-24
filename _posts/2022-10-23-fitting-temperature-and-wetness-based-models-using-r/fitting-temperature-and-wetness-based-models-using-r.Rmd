@@ -197,4 +197,4 @@ ggplot(validation, aes(t, HW, z = dis)) +
   labs(y = "Wetness duration (hours)", fill = "Severity", x = "Temperature (Celcius)")
 ```
 
-Tha't it. Fell free to [reach](delponte@ufv.br) me in case of questions!
+That's it. Fell free to [reach](delponte@ufv.br) me in case of questions!
