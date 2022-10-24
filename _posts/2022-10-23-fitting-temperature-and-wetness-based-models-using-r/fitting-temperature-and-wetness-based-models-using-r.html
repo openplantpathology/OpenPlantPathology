@@ -108,9 +108,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Fitting temperature- and moisture-based models to infection data</title>
+  <title>Fitting temperature- and moisture-based models to infection data using R</title>
 
-  <meta property="description" itemprop="description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
+  <meta property="description" itemprop="description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
 
 
   <!--  https://schema.org/Article -->
@@ -119,15 +119,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Emerson Del Ponte"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Fitting temperature- and moisture-based models to infection data"/>
+  <meta property="og:title" content="Fitting temperature- and moisture-based models to infection data using R"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
+  <meta property="og:description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Fitting temperature- and moisture-based models to infection data"/>
-  <meta property="twitter:description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
+  <meta property="twitter:title" content="Fitting temperature- and moisture-based models to infection data using R"/>
+  <meta property="twitter:description" content="In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration."/>
 
   <!--/radix_placeholder_meta_tags-->
   
@@ -143,7 +143,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["Fitting temperature- and moisture-based models to infection data"]},{"type":"character","attributes":{},"value":["In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/emdelponte"]}]}]},{"type":"character","attributes":{},"value":["10-23-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["phytopathology.csl"]},{"type":"character","attributes":{},"value":["cover2.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","csl","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["Fitting temperature- and moisture-based models to infection data using R"]},{"type":"character","attributes":{},"value":["In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/emdelponte"]}]}]},{"type":"character","attributes":{},"value":["10-23-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["phytopathology.csl"]},{"type":"character","attributes":{},"value":["cover2.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1490,7 +1490,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Fitting temperature- and moisture-based models to infection data","description":"In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/emdelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-10-23T00:00:00.000-03:00","citationText":"Ponte, 2022"}
+{"title":"Fitting temperature- and moisture-based models to infection data using R","description":"In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/emdelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-10-23T00:00:00.000-03:00","citationText":"Ponte, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1500,7 +1500,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Fitting temperature- and moisture-based models to infection data</h1>
+<h1>Fitting temperature- and moisture-based models to infection data using R</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt=tag">R4PlantPath</div>
@@ -1510,9 +1510,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 the most critical components for disease forecasting - the interaction
 between temperature and the duration of moisture determine the amount of
 succesful infection sites and resulting disease severity. This post
-shows how to fit a form of the Analytis beta model to infection data as
-a function of temperature and an asymptotic regression model to
-infection as a function of moisture duration.</p></p>
+shows how to fit, in R language, a form of the Analytis beta model to
+infection data as a function of temperature and an asymptotic regression
+model to infection as a function of moisture duration.</p></p>
 </div>
 
 <div class="d-byline">

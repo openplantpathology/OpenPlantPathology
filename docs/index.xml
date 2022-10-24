@@ -14,10 +14,10 @@
     <generator>Distill</generator>
     <lastBuildDate>Sun, 23 Oct 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Fitting temperature- and moisture-based models to infection data</title>
+      <title>Fitting temperature- and moisture-based models to infection data using R</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2022-10-23-fitting-temperature-and-wetness-based-models-using-r</link>
-      <description>In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.</description>
+      <description>In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2022-10-23-fitting-temperature-and-wetness-based-models-using-r</guid>
       <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
