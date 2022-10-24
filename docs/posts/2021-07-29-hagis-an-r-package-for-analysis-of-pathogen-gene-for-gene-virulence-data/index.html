@@ -806,7 +806,6 @@ d-title .dt-tags {
 d-article table.gt_table td,
 d-article table.gt_table th {
   border-bottom: none;
-  font-size: 100%;
 }
 
 .html-widget {
@@ -1048,6 +1047,10 @@ figure img.external {
   position: relative;
   margin-bottom: 2.5em;
   margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
 }
 
 .figure .caption {
@@ -1879,21 +1882,9 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      const citeChild = $(this).children()[0]
-      // Do not process if @xyz has been used without escaping and without bibliography activated
-      // https://github.com/rstudio/distill/issues/466
-      if (citeChild === undefined) return true
-
-      if (citeChild.nodeName == "D-FOOTNOTE") {
-        var fn = citeChild
-        $(this).html(fn.shadowRoot.querySelector("sup"))
-        $(this).id = fn.id
-        fn.remove()
-      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
-        // Could use CSS.escape too here, we insure backward compatibility in navigator
-        return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
       }).join("\n");
       window.tippy(this, {
         allowHTML: true,
@@ -1905,31 +1896,6 @@ function init_distill() {
         placement: 'bottom-start'
       });
     });
-
-    // fix footnotes in tables (#411)
-    // replacing broken distill.pub feature
-    $('table d-footnote').each(function() {
-      // we replace internal showAtNode methode which is triggered when hovering a footnote
-      this.hoverBox.showAtNode = function(node) {
-        // ported from https://github.com/distillpub/template/pull/105/files
-        calcOffset = function(elem) {
-            let x = elem.offsetLeft;
-            let y = elem.offsetTop;
-            // Traverse upwards until an `absolute` element is found or `elem`
-            // becomes null.
-            while (elem = elem.offsetParent && elem.style.position != 'absolute') {
-                x += elem.offsetLeft;
-                y += elem.offsetTop;
-            }
-
-            return { left: x, top: y };
-        }
-        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
-        const bbox = node.getBoundingClientRect();
-        const offset = calcOffset(node);
-        this.show([offset.left + bbox.width, offset.top + bbox.height]);
-      }
-    })
 
     // clear polling timer
     clearInterval(tid);
@@ -2029,8 +1995,6 @@ function init_common() {
   // mark non-body figures created by knitr chunks as 100% width
   $('.layout-chunk').each(function(i, val) {
     var figures = $(this).find('img, .html-widget');
-    // ignore leaflet img layers (#106)
-    figures = figures.filter(':not(img[class*="leaflet"])')
     if ($(this).attr('data-layout') !== "l-body") {
       figures.css('width', '100%');
     } else {
@@ -2053,7 +2017,7 @@ function init_common() {
   // get rid of index.html references in header
   if (window.location.protocol !== "file:") {
     $('.distill-site-header a[href]').each(function(i,val) {
-      $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
     });
   }
 
@@ -2431,7 +2395,7 @@ gtag('config', 'UA-112255011-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"'hagis', an R package for analysis of pathogen gene-for-gene virulence data","description":"'hagis' is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.","authors":[{"author":"Austin McCoy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-07-29T00:00:00.000+08:00","citationText":"McCoy, 2021"}
+{"title":"'hagis', an R package for analysis of pathogen gene-for-gene virulence data","description":"'hagis' is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.","authors":[{"author":"Austin McCoy","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-07-29T00:00:00.000-03:00","citationText":"McCoy, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->

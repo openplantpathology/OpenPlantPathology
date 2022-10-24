@@ -18,9 +18,7 @@ categories:
 
 ## 2022/02/06 Note
 
-This post has been modified from its original content to work with the latest version of pliman at the current time, v1.1.0.
-Some minor changes in the flow of the code were necessitated by changes in the output of functions in pliman and changes in the function names.
-The results should remain the same.
+This post has been modified from its original content to work with the latest version of pliman at the current time, v1.1.0. Some minor changes in the flow of the code were necessitated by changes in the output of functions in pliman and changes in the function names. The results should remain the same.
 
 ## Introduction
 
@@ -165,4 +163,4 @@ The most critical step, as I mentioned, is the definition of the reference color
 
 ## Colophon
 
-This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@RCore2021] pliman version `r packageVersion("pliman")`.
+This post was constructed using R Version `r paste(R.Version()[c("major", "minor")], collapse = ".")` [@RCore2021] pliman version `r packageVersion("pliman")`.
