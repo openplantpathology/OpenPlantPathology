@@ -92,7 +92,7 @@ y <- a*((t - b )^d)*((c - t)^e)
 dat <- data.frame(t, y)
 ```
 
-Plot the observed and predicted data using **ggplot2** package.
+Plot the observed and predicted data using *ggplot2* package.
 
 ```{r warning=FALSE}
 library(tidyverse)
@@ -183,7 +183,7 @@ dis <- (a*(t - b )^d)*((c - t)^e) * (c1 + (d1-c1)*(1-exp(-HW/e1)))
 validation <- data.frame(t, HW, dis)
 ```
 
-Now the countour plot can be visualized using *ggplot2* and *geomtextpath* packages.
+Now the contour plot can be visualized using *ggplot2* and *geomtextpath* packages.
 
 ```{r fig.height=5, fig.width=8}
 library(ggplot2)
@@ -197,4 +197,4 @@ ggplot(validation, aes(t, HW, z = dis)) +
   labs(y = "Wetness duration (hours)", fill = "Severity", x = "Temperature (Celcius)")
 ```
 
-That's it. Fell free to [reach](mailto: delponte@ufv.br) me in case of questions!
+That's it. Feel free to [reach](mailto: delponte@ufv.br) me in case of questions!

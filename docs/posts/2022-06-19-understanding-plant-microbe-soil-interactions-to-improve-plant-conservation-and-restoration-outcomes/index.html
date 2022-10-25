@@ -803,6 +803,7 @@ d-title .dt-tags {
 d-article table.gt_table td,
 d-article table.gt_table th {
   border-bottom: none;
+  font-size: 100%;
 }
 
 .html-widget {
@@ -1044,10 +1045,6 @@ figure img.external {
   position: relative;
   margin-bottom: 2.5em;
   margin-top: 1.5em;
-}
-
-.figure img {
-  width: 100%;
 }
 
 .figure .caption {
@@ -1879,9 +1876,21 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
+      const citeChild = $(this).children()[0]
+      // Do not process if @xyz has been used without escaping and without bibliography activated
+      // https://github.com/rstudio/distill/issues/466
+      if (citeChild === undefined) return true
+
+      if (citeChild.nodeName == "D-FOOTNOTE") {
+        var fn = citeChild
+        $(this).html(fn.shadowRoot.querySelector("sup"))
+        $(this).id = fn.id
+        fn.remove()
+      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
-        return "<p>" + $('#ref-' + ref).html() + "</p>";
+        // Could use CSS.escape too here, we insure backward compatibility in navigator
+        return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
       }).join("\n");
       window.tippy(this, {
         allowHTML: true,
@@ -1893,6 +1902,31 @@ function init_distill() {
         placement: 'bottom-start'
       });
     });
+
+    // fix footnotes in tables (#411)
+    // replacing broken distill.pub feature
+    $('table d-footnote').each(function() {
+      // we replace internal showAtNode methode which is triggered when hovering a footnote
+      this.hoverBox.showAtNode = function(node) {
+        // ported from https://github.com/distillpub/template/pull/105/files
+        calcOffset = function(elem) {
+            let x = elem.offsetLeft;
+            let y = elem.offsetTop;
+            // Traverse upwards until an `absolute` element is found or `elem`
+            // becomes null.
+            while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                x += elem.offsetLeft;
+                y += elem.offsetTop;
+            }
+
+            return { left: x, top: y };
+        }
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+        const bbox = node.getBoundingClientRect();
+        const offset = calcOffset(node);
+        this.show([offset.left + bbox.width, offset.top + bbox.height]);
+      }
+    })
 
     // clear polling timer
     clearInterval(tid);
@@ -1992,6 +2026,8 @@ function init_common() {
   // mark non-body figures created by knitr chunks as 100% width
   $('.layout-chunk').each(function(i, val) {
     var figures = $(this).find('img, .html-widget');
+    // ignore leaflet img layers (#106)
+    figures = figures.filter(':not(img[class*="leaflet"])')
     if ($(this).attr('data-layout') !== "l-body") {
       figures.css('width', '100%');
     } else {
@@ -2014,7 +2050,7 @@ function init_common() {
   // get rid of index.html references in header
   if (window.location.protocol !== "file:") {
     $('.distill-site-header a[href]').each(function(i,val) {
-      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
     });
   }
 
@@ -2392,7 +2428,7 @@ gtag('config', 'UA-112255011-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Understanding plant-microbe- soil interactions to improve plant conservation and restoration outcomes","description":"Although soil microbial communities, e.g., fungi and bacteria, are still largely considered a “black box”, their central role in ecosystem processes and function is indisputable. Despite the important role they play in carbon and nitrogen cycling, decomposition, and plant health there have been few attempts to incorporate soil microbial communities into conservation and restoration practice. In this talk, I will give an overview of my research pertaining plant- microbe interactions and how it has the potential to improve our understanding of plant-microbial dynamics in diverse ecosystems. Better understanding plant-microbial dynamics will also inform about the ecosystem-level processes and ecosystem health, e.g., decomposition rate, nutrient cycling, and plant nutrient acquisition. Finally, I will bring examples of our work that has practical applications for improving plant conservation and restoration outcomes.","doi":"DOI 10.17605/OSF.IO/FBJZY","authors":[{"author":"Adam Sparks","authorURL":"https://adamhsparks.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-06-03T00:00:00.000-03:00","citationText":"Sparks, 2022"}
+{"title":"Understanding plant-microbe- soil interactions to improve plant conservation and restoration outcomes","description":"Although soil microbial communities, e.g., fungi and bacteria, are still largely considered a “black box”, their central role in ecosystem processes and function is indisputable. Despite the important role they play in carbon and nitrogen cycling, decomposition, and plant health there have been few attempts to incorporate soil microbial communities into conservation and restoration practice. In this talk, I will give an overview of my research pertaining plant- microbe interactions and how it has the potential to improve our understanding of plant-microbial dynamics in diverse ecosystems. Better understanding plant-microbial dynamics will also inform about the ecosystem-level processes and ecosystem health, e.g., decomposition rate, nutrient cycling, and plant nutrient acquisition. Finally, I will bring examples of our work that has practical applications for improving plant conservation and restoration outcomes.","doi":"DOI 10.17605/OSF.IO/FBJZY","authors":[{"author":"Adam Sparks","authorURL":"https://adamhsparks.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-06-03T00:00:00.000+08:00","citationText":"Sparks, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->

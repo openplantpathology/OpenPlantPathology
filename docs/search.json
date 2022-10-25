@@ -5,23 +5,23 @@
       "title": "Mission",
       "description": "Our mission ",
       "author": [],
-      "contents": "\n\nContents\nMission\nBenefits\n\nMission\nThe Open Plant Pathology (OPP) initiative supports and promotes\nopenness, transparency and reproducibility of scientific research data\nand methods applied to plant pathological research and applications. We\nstrongly believe that building a social infrastructure through a\nwelcoming, engaged and diverse community is key for sharing knowledge\nand supporting others for adoption of a new culture.\nBenefits\nThere may be several benefits from either following us or engaging\nand promoting OPP:\nLearn about open science/education and reproducible research in\nthe context of plant pathology\nMeet new colleagues (who can become your future collaborators) by\njoining\nour Slack workspace who can help you out with any question\nAcademic and scientific exchange via freely available Virtual\nSeminars on our YouTube\nchannel\n\n\n\n",
-      "last_modified": "2022-10-23T21:02:57-03:00"
+      "contents": "\n\nContents\nMission\nBenefits\n\nMission\nThe Open Plant Pathology (OPP) initiative supports and promotes openness, transparency and reproducibility of scientific research data and methods applied to plant pathological research and applications.\nWe strongly believe that building a social infrastructure through a welcoming, engaged and diverse community is key for sharing knowledge and supporting others for adoption of a new culture.\nBenefits\nThere may be several benefits from either following us or engaging and promoting OPP:\nLearn about open science/education and reproducible research in the context of plant pathology\nMeet new colleagues (who can become your future collaborators) by joining our Slack workspace who can help you out with any question\nAcademic and scientific exchange via freely available Virtual Seminars on our YouTube channel\n\n\n\n",
+      "last_modified": "2022-10-25T09:11:58+08:00"
     },
     {
       "path": "index.html",
       "title": "",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-23T21:02:59-03:00"
+      "last_modified": "2022-10-25T09:11:59+08:00"
     },
     {
       "path": "team.html",
       "title": "Team",
       "description": "Get to know who has worked to make this possible",
       "author": [],
-      "contents": "\nOpenPlantPathology is a not for-profit initiative founded in January\n2018 by Emerson Del\nPonte and Adam Sparks\nto facilitate communication among computational plant pathologists and\npromote open science and reproducible research practices in plant\npathology. Of course, this would not be possible without the support\nfrom several colleagues who helped spread the initiative and the culture\nof open science. Currently, our team is composed of the following\nleaders.\nAdam\nSparks\nFounder. Webmaster\nSenior Research Scientist, Bioeconomic Modeller\nDepartment of Primary Industries and Regional Development (DPIRD),\nWestern Australia, Australia\nEmerson Del\nPonte\nFounder. Webdesigner\nPlant Pathologist\nUniversidade Federal de Viçosa, Brazil\nLisa\nRothmann\nSci-comm Editor\nPlant Pathologist\nUniversity of the Free State, Bloemfontein South Africa\nFernando\nGarcía-Bastidas\nDigital media Editor\nPlant Pathologist\nKeygen, Netherlands\nZhian\nKamvar\nEditor for Reproducibility\nPlant Pathologist\nThe Carpentries, USA\nSusann\nAuer\nEditor for Reproducibility\nPlant Pathologist\nTechnische Universität Dresden, Germany\n\n\n\n",
-      "last_modified": "2022-10-23T21:03:00-03:00"
+      "contents": "\nOpenPlantPathology is a not for-profit initiative founded in January 2018 by Emerson Del Ponte and Adam Sparks to facilitate communication among computational plant pathologists and promote open science and reproducible research practices in plant pathology.\nOf course, this would not be possible without the support from several colleagues who helped spread the initiative and the culture of open science.\nCurrently, our team is composed of the following leaders.\nAdam Sparks\nFounder. Webmaster\nSenior Research Scientist, Bioeconomic Modeller\nDepartment of Primary Industries and Regional Development (DPIRD), Western Australia, Australia\nEmerson Del Ponte\nFounder. Webdesigner\nPlant Pathologist\nUniversidade Federal de Viçosa, Brazil\nLisa Rothmann\nSci-comm Editor\nPlant Pathologist\nUniversity of the Free State, Bloemfontein South Africa\nFernando García-Bastidas\nDigital media Editor\nPlant Pathologist\nKeygen, Netherlands\nZhian Kamvar\nEditor for Reproducibility\nPlant Pathologist\nThe Carpentries, USA\nSusann Auer\nEditor for Reproducibility\nPlant Pathologist\nTechnische Universität Dresden, Germany\n\n\n\n",
+      "last_modified": "2022-10-25T09:11:59+08:00"
     }
   ],
   "collections": ["posts/posts.json"]
