@@ -1,7 +1,7 @@
 ---
 title: "Fitting temperature- and moisture-based models to infection data using R"
 description: |
-  In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration. 
+  In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis Beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration. 
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/emdelponte
@@ -20,7 +20,7 @@ categories:
 
 Studies on the relationship between environmental variables and disease in the field are fundamental to develop **empirical** (statistical) disease prediction models [@delponte2006]. On the other hand, relationships studied in the controlled environment (laboratory or greenhouse) provide a basis to develop **fundamental** models or sub-models that describe specific processes such as sporulation, dispersal, infection and incubation [@magarey2005; @krause1975]. These submodels can be further incorporated into mechanistic models that mimic advance of the disease cycle [@rossi2008], or directly into predictive systems where the infection submodel is the most critical information for disease occurrence [@machardy1989]. The infection models are based on regression equations of various forms [@magarey2005; @biggs1988; @dewolf2007; @dallapria2006].
 
-Here, we will fit a beta generalized model [@hau1990] to data on the response to temperature and an asymptotic regression model to data on the response to wetness duration. The integration of the two models can be used to develop contour or surface-response plots.
+Here, we will fit a Beta generalized model [@hau1990] to data on the response to temperature and an asymptotic regression model to data on the response to wetness duration. The integration of the two models can be used to develop contour or surface-response plots.
 
 ## Data source
 
@@ -50,7 +50,7 @@ temp <- tibble::tribble(
 
 ```
 
-Fit the beta generalized model [@hau1990]. The model can be written as:
+Fit the Beta generalized model [@hau1990]. The model can be written as:
 
 $$
 y = a*((t - b )^d)*((c - t)^e)
