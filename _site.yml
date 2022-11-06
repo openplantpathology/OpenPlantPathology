@@ -22,6 +22,8 @@ navbar:
       href: https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA
     - icon: fab fa-mastodon
       href: https://scicomm.xyz/@openplantpathology
+    - icon: fab fa-twitter
+      href: https://www.twitter.com/openplantpathology
     - icon: fab fa-slack fa-lg
       href: https://communityinviter.com/apps/openplantpathology/open-plant-pathology
     
