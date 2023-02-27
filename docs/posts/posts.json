@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2023-02-14-how-open-are-we/",
+    "title": "How Much Do We (Plant Pathologists) Value Openness and Transparency?",
+    "description": "Our most recent paper examines code and data sharing practices in plant pathology and shares some ideas for what we can do to improve.",
+    "author": [
+      {
+        "name": "Adam Sparks",
+        "url": "https://adamhsparks.netlify.app"
+      }
+    ],
+    "date": "2023-02-14",
+    "categories": [
+      "R4PlantPath",
+      "Reproducible Research"
+    ],
+    "contents": "\nEmerson and I started this initiative (Open Plant Pathology) in 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.\nA few years before that, we’d started working on analysis of papers published in plant pathology journals from 2013 until 2021 with Nik Grünwald and Zachary Foster, which was published in Phytopathology® in January (Sparks et al. 2023).\nWhat we were finding as we looked at papers across 21 journals that were dedicated to plant pathology research or published specialised sections or articles in the field of plant pathology was not surprising, but still disappointing.\nAs a discipline, we simply do not make much, if any, effort to help ensure that others can easily reproduce our work after it is published.\nI get it.\nIt’s just one (or more) things that you have to do when you’re prepping that paper for submission.\nI mean, why bother ensuring that your code and data are available.\nThe paper describes everything and if anyone has any questions they can just contact you, right?\nExcept it isn’t that easy.\nAt least not for the readers.\nA 2018 study by -Stodden et al. (2018) found that from\n\n“a random sample of 204 scientific papers published in the journal Science after the implementation of their policy in February 2011. We found that we were able to obtain artifacts from 44% of our sample and were able to reproduce the findings for 26%. We find this policy—author remission of data and code postpublication upon request—an improvement over no policy, but currently insufficient for reproducibility.”\n\nThe whole article is available from PNAS, https://www.pnas.org/doi/10.1073/pnas.1708290115, it’s worth a read if you’re at all interested, and I assume that you are if you’re reading this blog post.\nIn fact, Tedersoo et al. (2021) published “Data sharing practices and data availability upon request differ across scientific disciplines” saying “We observed that statements of data availability upon (reasonable) request are inefficient and should not be allowed by journals.”\nIt’s not that we don’t want to or intend to or at least “we say that we want to but then we don’t” (Watson 2022).\nColophon\nThis post was constructed using R Version 4.2.2 (R Core Team 2022).\n\n\n\nR Core Team. 2022. R: A language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. Available at: https://www.R-project.org/.\n\n\nSparks, A. H., Ponte, E. M. D., Alves, K., Foster, Z. S. L., and Grünwald, N. 2023. Openness and computational reproducibility in plant pathology: Where we stand and a way forward. Phytopathology.\n\n\nStodden, V., Seiler, J., and Ma, Z. 2018. An empirical analysis of journal policy effectiveness for computational reproducibility. Proceedings of the National Academy of Sciences. 115:2584–2589.\n\n\nTedersoo, L., Küngas, R., Oras, E., Köster, K., Eenmaa, H., Leijen, Ä., et al. 2021. Data sharing practices and data availability upon request differ across scientific disciplines. Scientific Data. 8.\n\n\nWatson, C. 2022. Many researchers say they’ll share data  but don’t. Nature. 606:853–853.\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2023-02-27T20:19:24+08:00",
+    "input_file": "how-open-are-we.knit.md"
+  },
+  {
     "path": "posts/2022-10-23-fitting-temperature-and-wetness-based-models-using-r/",
     "title": "Fitting temperature- and moisture-based models to infection data using R",
     "description": "In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis Beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.",

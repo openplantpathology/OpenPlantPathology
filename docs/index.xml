@@ -12,7 +12,17 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 23 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How Much Do We (Plant Pathologists) Value Openness and Transparency?</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we</link>
+      <description>Our most recent paper examines code and data sharing practices in plant pathology and shares some ideas for what we can do to improve.</description>
+      <category>R4PlantPath</category>
+      <category>Reproducible Research</category>
+      <guid>https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we</guid>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Fitting temperature- and moisture-based models to infection data using R</title>
       <dc:creator>Emerson Del Ponte</dc:creator>

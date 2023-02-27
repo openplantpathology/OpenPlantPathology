@@ -1,0 +1,55 @@
+---
+title: "How Much Do We (Plant Pathologists) Value Openness and Transparency?"
+description: |
+  Our most recent paper examines code and data sharing practices in plant pathology and shares some ideas for what we can do to improve.
+author:
+  - name: Adam Sparks
+    url: https://adamhsparks.netlify.app
+date: 2023-02-14
+bibliography: bibliography.bib
+output:
+  distill::distill_article:
+    self_contained: false
+preview: 
+csl: phytopathology.csl
+categories: 
+  - R4PlantPath
+  - Reproducible Research
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+[Emerson](https://emersondelponte.netlify.app) and I started this initiative (Open Plant Pathology) in 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.
+A few years before that, we'd started working on analysis of papers published in plant pathology journals from 2013 until 2021 with Kaique Alves, Zachary Foster and Nik Grünwald, which was published in Phytopathology® in January [@Sparks2023].
+What we were finding as we looked at papers across 21 journals that were dedicated to plant pathology research or published specialised sections or articles in the field of plant pathology was not surprising, but still disappointing.
+As a discipline, we simply do not make much, if any, effort to help ensure that others can easily reproduce our work after it is published [@Sparks2023].
+
+We found that most articles were not reproducible according to our scoring system and failed to take advantage of open science and reproduciblity methods that would benefit both the authors and the readers.
+
+<!-- Insert Figure 1 from Sparks et al. 2023 here -->
+
+I get it.
+It's just one (or more) things that you have to do when you're prepping that paper for submission.
+I mean, why bother ensuring that your code and data are available.
+The paper describes everything and if anyone has any questions they can just contact you, right?
+
+Except it isn't that easy.
+At least not for the readers.
+A 2018 study by -@Stodden2018 found that from 
+
+> "a random sample of 204 scientific papers published in the journal Science after the implementation of their policy in February 2011. We found that we were able to obtain artifacts from 44% of our sample and were able to reproduce the findings for 26%. We find this policy—author remission of data and code postpublication upon request—an improvement over no policy, but currently insufficient for reproducibility."
+
+The whole article is available from PNAS, <https://www.pnas.org/doi/10.1073/pnas.1708290115>, it's worth a read if you're at all interested, and I assume that you are if you're reading this blog post.
+But going farther, @Tedersoo2021 published "_Data sharing practices and data availability upon request differ across scientific disciplines_" saying "_We observed that statements of data availability upon (reasonable) request are inefficient and should not be allowed by journals._"
+
+In fact, it seems that it's not that we don't want to or intend to or at least "[we say that we want to but then we don't](https://www.nature.com/articles/d41586-022-01692-1)" [@Watson2022].
+
+So what is it then?
+
+## Colophon
+
+This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@R2022].
+
