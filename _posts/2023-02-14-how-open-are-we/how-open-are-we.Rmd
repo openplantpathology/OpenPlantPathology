@@ -5,6 +5,8 @@ description: |
 author:
   - name: Adam Sparks
     url: https://adamhsparks.netlify.app
+  - name: Emerson Del Ponte
+    url: https://emersondelponte.netlify.app/
 date: 2023-02-14
 bibliography: bibliography.bib
 output:
