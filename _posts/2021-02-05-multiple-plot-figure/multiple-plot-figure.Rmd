@@ -42,7 +42,7 @@ Please refer to several other good tutorials on the web on how to code using [{t
 ## Would you like some coffee?
 
 Using a plant pathology data set - Yay!
-No [iris](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/iris) or [penguins](https://allisonhorst.github.io/palmerpenguins/index.html) allowed here!
+No [iris](https://www.rdocumentation.org/packages/data sets/versions/3.6.2/topics/iris) or [penguins](https://allisonhorst.github.io/palmerpenguins/index.html) allowed here!
 I may be biased (as coauthor of the paper) but the data set we are going to use is very rich to explore and demonstrate many ways to produce {ggplot2} figures and different analyses (we will look at these in future posts!).
 Plant disease data sets may be more interesting for plant pathologists than for other botanists, biologists and other scientists in general interested in playing with data sets for learning R.
 

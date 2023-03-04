@@ -2435,7 +2435,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.17/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2486,9 +2486,6 @@ gtag('config', 'UA-112255011-1');
 <a href="https://scicomm.xyz/@openplantpathology">
 <i class="fab fa-mastodon" aria-hidden="true"></i>
 </a>
-<a href="https://www.twitter.com/openplantpathology">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
 <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">
 <i class="fab fa-slack fa-lg" aria-hidden="true"></i>
 </a>
@@ -2521,15 +2518,23 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="introduction">Introduction</h2>
-<p>Studies on the relationship between environmental variables and disease in the field are fundamental to develop <strong>empirical</strong> (statistical) disease prediction models <span class="citation" data-cites="delponte2006">(<a href="#ref-delponte2006" role="doc-biblioref">Del Ponte et al. 2006</a>)</span>. On the other hand, relationships studied in the controlled environment (laboratory or greenhouse) provide a basis to develop <strong>fundamental</strong> models or sub-models that describe specific processes such as sporulation, dispersal, infection and incubation <span class="citation" data-cites="magarey2005 krause1975">(<a href="#ref-magarey2005" role="doc-biblioref">Magarey et al. 2005</a>; <a href="#ref-krause1975" role="doc-biblioref">Krause and Massie 1975</a>)</span>. These submodels can be further incorporated into mechanistic models that mimic advance of the disease cycle <span class="citation" data-cites="rossi2008">(<a href="#ref-rossi2008" role="doc-biblioref">Rossi et al. 2008</a>)</span>, or directly into predictive systems where the infection submodel is the most critical information for disease occurrence <span class="citation" data-cites="machardy1989">(<a href="#ref-machardy1989" role="doc-biblioref">MacHardy 1989</a>)</span>. The infection models are based on regression equations of various forms <span class="citation" data-cites="magarey2005 biggs1988 dewolf2007 dallapria2006">(<a href="#ref-magarey2005" role="doc-biblioref">Magarey et al. 2005</a>; <a href="#ref-biggs1988" role="doc-biblioref">Biggs 1988</a>; <a href="#ref-dewolf2007" role="doc-biblioref">De Wolf and Isard 2007</a>; <a href="#ref-dallapria2006" role="doc-biblioref">Dalla Pria et al. 2006</a>)</span>.</p>
-<p>Here, we will fit a Beta generalized model <span class="citation" data-cites="hau1990">(<a href="#ref-hau1990" role="doc-biblioref">Hau and Kranz 1990</a>)</span> to data on the response to temperature and an asymptotic regression model to data on the response to wetness duration. The integration of the two models can be used to develop contour or surface-response plots.</p>
+<p>Studies on the relationship between environmental variables and disease in the field are fundamental to develop <strong>empirical</strong> (statistical) disease prediction models <span class="citation" data-cites="delponte2006">(<a href="#ref-delponte2006" role="doc-biblioref">Del Ponte et al. 2006</a>)</span>.
+On the other hand, relationships studied in the controlled environment (laboratory or greenhouse) provide a basis to develop <strong>fundamental</strong> models or sub-models that describe specific processes such as sporulation, dispersal, infection and incubation <span class="citation" data-cites="magarey2005 krause1975">(<a href="#ref-magarey2005" role="doc-biblioref">Magarey et al. 2005</a>; <a href="#ref-krause1975" role="doc-biblioref">Krause and Massie 1975</a>)</span>.
+These submodels can be further incorporated into mechanistic models that mimic advance of the disease cycle <span class="citation" data-cites="rossi2008">(<a href="#ref-rossi2008" role="doc-biblioref">Rossi et al. 2008</a>)</span>, or directly into predictive systems where the infection submodel is the most critical information for disease occurrence <span class="citation" data-cites="machardy1989">(<a href="#ref-machardy1989" role="doc-biblioref">MacHardy 1989</a>)</span>.
+The infection models are based on regression equations of various forms <span class="citation" data-cites="magarey2005 biggs1988 dewolf2007 dallapria2006">(<a href="#ref-magarey2005" role="doc-biblioref">Magarey et al. 2005</a>; <a href="#ref-biggs1988" role="doc-biblioref">Biggs 1988</a>; <a href="#ref-dewolf2007" role="doc-biblioref">De Wolf and Isard 2007</a>; <a href="#ref-dallapria2006" role="doc-biblioref">Dalla Pria et al. 2006</a>)</span>.</p>
+<p>Here, we will fit a Beta generalized model <span class="citation" data-cites="hau1990">(<a href="#ref-hau1990" role="doc-biblioref">Hau and Kranz 1990</a>)</span> to data on the response to temperature and an asymptotic regression model to data on the response to wetness duration.
+The integration of the two models can be used to develop contour or surface-response plots.</p>
 <h2 id="data-source">Data source</h2>
 <p>We will use a subset of the data obtained from a study conducted under controlled conditions that aimed to assess the influence of temperature and leaf wetness duration on infection and subsequent symptom development of citrus canker in sweet orange <span class="citation" data-cites="dallapria2006">(<a href="#ref-dallapria2006" role="doc-biblioref">Dalla Pria et al. 2006</a>)</span>.</p>
-<p>The data used here is only for severity on the cultivar Hamlin. The mean value was extracted from Figures 1 and 2 (see below). The left plot is for the response to temperature and the right plot is for the response wetness duration. The response is severity of infection.</p>
+<p>The data used here is only for severity on the cultivar Hamlin.
+The mean value was extracted from Figures 1 and 2 (see below).
+The left plot is for the response to temperature and the right plot is for the response wetness duration.
+The response is severity of infection.</p>
 <p><img src="wet_temp.png" /></p>
 <p>The data was extracted using the R package digitize as shown <a href="https://twitter.com/edelponte/status/1580320409794539520?s=20&amp;t=KqjJPmwzFVKm8Gu7Ss-P6A">here on this tweet</a>.</p>
 <h2 id="modelling-the-effect-of-temperature">Modelling the effect of temperature</h2>
-<p>Let’s enter the data manually. t is the temperature and y is the severity on leaves.</p>
+<p>Let’s enter the data manually.
+Where <span class="math inline">\(t\)</span> is the temperature and <span class="math inline">\(y\)</span> is the severity on leaves.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>temp</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></span><span class='op'>(</span></span>
@@ -2544,22 +2549,28 @@ gtag('config', 'UA-112255011-1');
 <span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Fit the Beta generalized model <span class="citation" data-cites="hau1990">(<a href="#ref-hau1990" role="doc-biblioref">Hau and Kranz 1990</a>)</span>. The model can be written as:</p>
+<p>Fit the Beta generalized model <span class="citation" data-cites="hau1990">(<a href="#ref-hau1990" role="doc-biblioref">Hau and Kranz 1990</a>)</span>.
+The model can be written as:</p>
 <p><span class="math display">\[
 y = a*((t - b )^d)*((c - t)^e)
 \]</span></p>
-<p>where b and d represent minimum and maximum temperatures, respectively, for the development of the disease, a, c and e are parameters to be estimated, t is the temperature and y is disease severity. We need the <em>minpack.lm</em> library to avoid parameterization issues.</p>
+<p>where <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> represent minimum and maximum temperatures, respectively, for the development of the disease, <span class="math inline">\(a\)</span>, <span class="math inline">\(c\)</span> and <span class="math inline">\(e\)</span> are parameters to be estimated, <span class="math inline">\(t\)</span> is the temperature and <span class="math inline">\(y\)</span> is disease severity.
+We need the {minpack.lm} library to avoid parameterization issues.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>minpack.lm</span><span class='op'>)</span></span>
-<span><span class='va'>fit_temp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/minpack.lm/man/nlsLM.html'>nlsLM</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>a</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span> <span class='op'>)</span><span class='op'>^</span><span class='va'>d</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span><span class='op'>^</span><span class='va'>e</span><span class='op'>)</span>,</span>
-<span>             start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='fl'>0</span>,</span>
-<span>                          b <span class='op'>=</span> <span class='fl'>10</span>, </span>
-<span>                          c <span class='op'>=</span> <span class='fl'>40</span>, </span>
-<span>                          d <span class='op'>=</span> <span class='fl'>1.5</span>, </span>
-<span>                          e <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>,</span>
-<span>             algorithm <span class='op'>=</span> <span class='st'>"port"</span>,</span>
-<span>             data <span class='op'>=</span> <span class='va'>temp</span><span class='op'>)</span></span>
+<span><span class='va'>fit_temp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/minpack.lm/man/nlsLM.html'>nlsLM</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>y</span> <span class='op'>~</span> <span class='va'>a</span> <span class='op'>*</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>d</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>e</span><span class='op'>)</span>,</span>
+<span>  start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
+<span>    a <span class='op'>=</span> <span class='fl'>0</span>,</span>
+<span>    b <span class='op'>=</span> <span class='fl'>10</span>,</span>
+<span>    c <span class='op'>=</span> <span class='fl'>40</span>,</span>
+<span>    d <span class='op'>=</span> <span class='fl'>1.5</span>,</span>
+<span>    e <span class='op'>=</span> <span class='fl'>1</span></span>
+<span>  <span class='op'>)</span>,</span>
+<span>  algorithm <span class='op'>=</span> <span class='st'>"port"</span>,</span>
+<span>  data <span class='op'>=</span> <span class='va'>temp</span></span>
+<span><span class='op'>)</span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>fit_temp</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>
@@ -2602,55 +2613,57 @@ Algorithm &quot;port&quot;, convergence message: Relative error between `par&#39
 <p>Create a data frame for predictions at each temperature unit from 10 to 45 degree Celsius.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>45</span>, <span class='fl'>0.1</span><span class='op'>)</span></span>
-<span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>a</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span> <span class='op'>)</span><span class='op'>^</span><span class='va'>d</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span><span class='op'>^</span><span class='va'>e</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>10</span>, <span class='fl'>45</span>, <span class='fl'>0.1</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>a</span> <span class='op'>*</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>d</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>e</span><span class='op'>)</span></span>
 <span><span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>y</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Plot the observed and predicted data using <em>ggplot2</em> package.</p>
+<p>Plot the observed and predicted data using {ggplot2} package.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='va'>dat</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>temp</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Temperature"</span>, y <span class='op'>=</span> <span class='st'>"Severity"</span> <span class='op'>)</span></span></code></pre>
+<span><span class='va'>dat</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>temp</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Temperature"</span>, y <span class='op'>=</span> <span class='st'>"Severity"</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <h2 id="modelling-the-effect-of-wetness-duration">Modelling the effect of wetness duration</h2>
-<p>Again, we enter the data manually. The x is wetness duration in hours and y is severity.</p>
+<p>Again, we enter the data manually.
+The <span class="math inline">\(x\)</span> is wetness duration in hours and <span class="math inline">\(y\)</span> is severity.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>wet</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></span><span class='op'>(</span></span>
-<span>  <span class='op'>~</span><span class='va'>x</span>, <span class='op'>~</span><span class='va'>y</span>,</span>
-<span><span class='fl'>0</span> ,  <span class='fl'>0</span>,</span>
-<span><span class='fl'>4</span> ,  <span class='fl'>0.50</span>,</span>
-<span><span class='fl'>8</span> ,  <span class='fl'>0.81</span>,</span>
-<span><span class='fl'>12</span>,  <span class='fl'>1.50</span>,</span>
-<span><span class='fl'>16</span>,  <span class='fl'>1.26</span>,</span>
-<span><span class='fl'>20</span>,  <span class='fl'>2.10</span>,</span>
-<span><span class='fl'>24</span>,  <span class='fl'>1.45</span></span>
-<span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>wet</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>x</span>, <span class='op'>~</span> <span class='va'>y</span>,</span>
+<span>                       <span class='fl'>0</span> ,  <span class='fl'>0</span>,</span>
+<span>                       <span class='fl'>4</span> ,  <span class='fl'>0.50</span>,</span>
+<span>                       <span class='fl'>8</span> ,  <span class='fl'>0.81</span>,</span>
+<span>                       <span class='fl'>12</span>,  <span class='fl'>1.50</span>,</span>
+<span>                       <span class='fl'>16</span>,  <span class='fl'>1.26</span>,</span>
+<span>                       <span class='fl'>20</span>,  <span class='fl'>2.10</span>,</span>
+<span>                       <span class='fl'>24</span>,  <span class='fl'>1.45</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Now we fit a three-parameter asymptotic regression model. These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity. This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law. See this <a href="https://www.statforbiology.com/nonlinearregression/usefulequations">tutorial</a> for comprehensive information about fitting several non-linear regression models in R.</p>
+<p>Now we fit a three-parameter asymptotic regression model.
+These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity. This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law.
+See this <a href="https://www.statforbiology.com/nonlinearregression/usefulequations">tutorial</a> for comprehensive information about fitting several non-linear regression models in R.</p>
 <p>The model can be written as</p>
 <p><span class="math display">\[
 y = c1 + (d1-c1)*(1-exp(-x/e1))
 \]</span></p>
-<p>Where c is the lower limit (at x = 0), the parameter d is the upper limit and the parameter and e (greater than 0) is determining the steepness of the increase as x.</p>
-<p>We will solve the model again using the <code>nlsLM</code> function. We should provide initial values for the three parameters.</p>
+<p>where <span class="math inline">\(c\)</span> is the lower limit (at <span class="math inline">\(x = 0\)</span>), the parameter d is the upper limit and the parameter and <span class="math inline">\(e\)</span> (greater than 0) is determining the steepness of the increase as <span class="math inline">\(x\)</span>.</p>
+<p>We will solve the model again using the <code>nlsLM</code> function.
+We should provide initial values for the three parameters.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>minpack.lm</span><span class='op'>)</span></span>
-<span><span class='va'>fit_wet</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/minpack.lm/man/nlsLM.html'>nlsLM</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span><span class='op'>-</span><span class='va'>c1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>x</span><span class='op'>/</span><span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span>, </span>
-<span>              start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>c1 <span class='op'>=</span> <span class='fl'>0.5</span>,</span>
-<span>                           d1 <span class='op'>=</span> <span class='fl'>3</span>,</span>
-<span>                           e1 <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>,</span>
-<span>                           data <span class='op'>=</span> <span class='va'>wet</span><span class='op'>)</span></span>
+<span><span class='va'>fit_wet</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/minpack.lm/man/nlsLM.html'>nlsLM</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span> <span class='op'>-</span> <span class='va'>c1</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>x</span> <span class='op'>/</span> <span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span>,</span>
+<span>                 start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>c1 <span class='op'>=</span> <span class='fl'>0.5</span>,</span>
+<span>                              d1 <span class='op'>=</span> <span class='fl'>3</span>,</span>
+<span>                              e1 <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>,</span>
+<span>                 data <span class='op'>=</span> <span class='va'>wet</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>fit_wet</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -2678,11 +2691,11 @@ Achieved convergence tolerance: 0.0000000149</code></pre>
 <p>Store the value of the parameters in the respective object.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>HW</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>24</span>, <span class='fl'>0.1</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>HW</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>24</span>, <span class='fl'>0.1</span><span class='op'>)</span></span>
 <span><span class='va'>c1</span> <span class='op'>&lt;-</span>  <span class='va'>fit_wet</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span></span>
 <span><span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='va'>fit_wet</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span></span>
 <span><span class='va'>e1</span> <span class='op'>&lt;-</span> <span class='va'>fit_wet</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span></span>
-<span><span class='va'>y</span> <span class='op'>&lt;-</span>  <span class='op'>(</span><span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span><span class='op'>-</span><span class='va'>c1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>HW</span><span class='op'>/</span><span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>&lt;-</span>  <span class='op'>(</span><span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span> <span class='op'>-</span> <span class='va'>c1</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>HW</span> <span class='op'>/</span> <span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
 <span><span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>HW</span>, <span class='va'>y</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
@@ -2690,68 +2703,76 @@ Achieved convergence tolerance: 0.0000000149</code></pre>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='va'>dat2</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>HW</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>wet</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Wetness duration"</span>, y <span class='op'>=</span> <span class='st'>"Severity"</span> <span class='op'>)</span></span></code></pre>
+<span><span class='va'>dat2</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>HW</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>wet</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_classic</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Wetness duration"</span>, y <span class='op'>=</span> <span class='st'>"Severity"</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <h2 id="integrate-the-models">Integrate the models</h2>
-<p>Integrate the two equations to create a contour plot. We need a data frame for the interaction between t and hours of wetness. Then, we obtain the disease value for each combination of t and HW.</p>
+<p>Integrate the two equations to create a contour plot.
+We need a data frame for the interaction between <span class="math inline">\(t\)</span> and hours of wetness.
+Then, we obtain the disease value for each combination of <span class="math inline">\(t\)</span> and <span class="math inline">\(HW\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>40</span>,<span class='fl'>40</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>40</span>, <span class='fl'>40</span><span class='op'>)</span></span>
 <span><span class='va'>HW</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>40</span>, each <span class='op'>=</span> <span class='fl'>40</span><span class='op'>)</span></span>
-<span><span class='va'>dis</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>a</span><span class='op'>*</span><span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span> <span class='op'>)</span><span class='op'>^</span><span class='va'>d</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span><span class='op'>^</span><span class='va'>e</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span><span class='op'>-</span><span class='va'>c1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>HW</span><span class='op'>/</span><span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>dis</span> <span class='op'>&lt;-</span></span>
+<span>  <span class='op'>(</span><span class='va'>a</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>t</span> <span class='op'>-</span> <span class='va'>b</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>d</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>c</span> <span class='op'>-</span> <span class='va'>t</span><span class='op'>)</span> <span class='op'>^</span> <span class='va'>e</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>c1</span> <span class='op'>+</span> <span class='op'>(</span><span class='va'>d1</span> <span class='op'>-</span> <span class='va'>c1</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>HW</span> <span class='op'>/</span> <span class='va'>e1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
 <span><span class='va'>validation</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>HW</span>, <span class='va'>dis</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Now the contour plot can be visualized using <em>ggplot2</em> and <em>geomtextpath</em> packages.</p>
+<p>Now the contour plot can be visualized using {ggplot2} and {geomtextpath} packages.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://allancameron.github.io/geomtextpath/'>geomtextpath</a></span><span class='op'>)</span></span>
-<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>validation</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>HW</span>, z <span class='op'>=</span> <span class='va'>dis</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_contour.html'>geom_contour_filled</a></span><span class='op'>(</span>bins <span class='op'>=</span> <span class='fl'>8</span>, alpha <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://allancameron.github.io/geomtextpath/reference/geom_textcontour.html'>geom_textcontour</a></span><span class='op'>(</span>bins <span class='op'>=</span> <span class='fl'>8</span>, size <span class='op'>=</span> <span class='fl'>2.5</span>, padding <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/grid/unit.html'>unit</a></span><span class='op'>(</span><span class='fl'>0.05</span>, <span class='st'>"in"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"right"</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>ylim</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>40</span><span class='op'>)</span><span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Wetness duration (hours)"</span>, fill <span class='op'>=</span> <span class='st'>"Severity"</span>, x <span class='op'>=</span> <span class='st'>"Temperature (Celcius)"</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>validation</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>HW</span>, z <span class='op'>=</span> <span class='va'>dis</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_contour.html'>geom_contour_filled</a></span><span class='op'>(</span>bins <span class='op'>=</span> <span class='fl'>8</span>, alpha <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://allancameron.github.io/geomtextpath/reference/geom_textcontour.html'>geom_textcontour</a></span><span class='op'>(</span>bins <span class='op'>=</span> <span class='fl'>8</span>,</span>
+<span>                   size <span class='op'>=</span> <span class='fl'>2.5</span>,</span>
+<span>                   padding <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/grid/unit.html'>unit</a></span><span class='op'>(</span><span class='fl'>0.05</span>, <span class='st'>"in"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"right"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>ylim</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>40</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Wetness duration (hours)"</span>,</span>
+<span>       fill <span class='op'>=</span> <span class='st'>"Severity"</span>,</span>
+<span>       x <span class='op'>=</span> <span class='st'>"Temperature (Celcius)"</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-11-1.png" width="768" /></p>
 </div>
-<p>That’s it. Feel free to <a href="mailto:%20delponte@ufv.br">reach</a> me in case of questions!</p>
+<p>That’s it.
+Feel free to <a href="mailto:%20delponte@ufv.br">reach</a> me in case of questions!</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-biggs1988" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-biggs1988" class="csl-entry" role="listitem">
 Biggs, A. R. 1988. Influence of temperature and wetness duration on infection of peach and sweet cherry fruits by<span><em>Monilinia fructicola</em></span>. Phytopathology. 78:1352 Available at: <a href="http://dx.doi.org/10.1094/phyto-78-1352">http://dx.doi.org/10.1094/phyto-78-1352</a>.
 </div>
-<div id="ref-dallapria2006" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dallapria2006" class="csl-entry" role="listitem">
 Dalla Pria, M., Christiano, R. C. S., Furtado, E. L., Amorim, L., and Bergamin Filho, A. 2006. Effect of temperature and leaf wetness duration on infection of sweet oranges by Asiatic citrus canker. Plant Pathology. 55:657–663 Available at: <a href="http://dx.doi.org/10.1111/j.1365-3059.2006.01393.x">http://dx.doi.org/10.1111/j.1365-3059.2006.01393.x</a>.
 </div>
-<div id="ref-dewolf2007" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dewolf2007" class="csl-entry" role="listitem">
 De Wolf, E. D., and Isard, S. A. 2007. Disease Cycle Approach to Plant Disease Prediction. Annual Review of Phytopathology. 45:203–220 Available at: <a href="http://dx.doi.org/10.1146/annurev.phyto.44.070505.143329">http://dx.doi.org/10.1146/annurev.phyto.44.070505.143329</a>.
 </div>
-<div id="ref-delponte2006" class="csl-entry" role="doc-biblioentry">
+<div id="ref-delponte2006" class="csl-entry" role="listitem">
 Del Ponte, E. M., Godoy, C. V., Li, X., and Yang, X. B. 2006. Predicting Severity of Asian Soybean Rust Epidemics with Empirical Rainfall Models. Phytopathology®. 96:797–803 Available at: <a href="http://dx.doi.org/10.1094/phyto-96-0797">http://dx.doi.org/10.1094/phyto-96-0797</a>.
 </div>
-<div id="ref-hau1990" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hau1990" class="csl-entry" role="listitem">
 Hau, B., and Kranz, J. 1990. Mathematics and statistics for analyses in epidemiology. In Springer Berlin Heidelberg, p. 12–52. Available at: <a href="http://dx.doi.org/10.1007/978-3-642-75398-5_2">http://dx.doi.org/10.1007/978-3-642-75398-5_2</a>.
 </div>
-<div id="ref-krause1975" class="csl-entry" role="doc-biblioentry">
+<div id="ref-krause1975" class="csl-entry" role="listitem">
 Krause, R. A., and Massie, L. B. 1975. Predictive Systems: Modern Approaches to Disease Control. Annual Review of Phytopathology. 13:31–47 Available at: <a href="http://dx.doi.org/10.1146/annurev.py.13.090175.000335">http://dx.doi.org/10.1146/annurev.py.13.090175.000335</a>.
 </div>
-<div id="ref-machardy1989" class="csl-entry" role="doc-biblioentry">
+<div id="ref-machardy1989" class="csl-entry" role="listitem">
 MacHardy, W. E. 1989. A revision of mills’s criteria for predicting apple scab infection periods. Phytopathology. 79:304 Available at: <a href="http://dx.doi.org/10.1094/phyto-79-304">http://dx.doi.org/10.1094/phyto-79-304</a>.
 </div>
-<div id="ref-magarey2005" class="csl-entry" role="doc-biblioentry">
+<div id="ref-magarey2005" class="csl-entry" role="listitem">
 Magarey, R. D., Sutton, T. B., and Thayer, C. L. 2005. A Simple Generic Infection Model for Foliar Fungal Plant Pathogens. Phytopathology®. 95:92–100 Available at: <a href="http://dx.doi.org/10.1094/PHYTO-95-0092">http://dx.doi.org/10.1094/PHYTO-95-0092</a>.
 </div>
-<div id="ref-rossi2008" class="csl-entry" role="doc-biblioentry">
+<div id="ref-rossi2008" class="csl-entry" role="listitem">
 Rossi, V., Caffi, T., Giosuè, S., and Bugiani, R. 2008. A mechanistic model simulating primary infections of downy mildew in grapevine. Ecological Modelling. 212:480–491 Available at: <a href="http://dx.doi.org/10.1016/j.ecolmodel.2007.10.046">http://dx.doi.org/10.1016/j.ecolmodel.2007.10.046</a>.
 </div>
 </div>

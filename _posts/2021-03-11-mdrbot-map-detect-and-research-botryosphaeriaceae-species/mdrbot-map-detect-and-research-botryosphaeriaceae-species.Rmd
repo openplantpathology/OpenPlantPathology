@@ -17,15 +17,15 @@ categories:
 
 ## Database summary
 
-This dataset is freely available through an interactive and online application. The current release (version 1.0) contains 14,405 cured isolates and 2989 literature references of 12,121 different host--fungus interactions with 1692 different plant species from 149 countries.
+This data set is freely available through an interactive and online application. The current release (version 1.0) contains 14,405 cured isolates and 2989 literature references of 12,121 different host--fungus interactions with 1692 different plant species from 149 countries.
 
 ## Background
 
-Botryosphaeriaceae-related diseases occur worldwide in a wide variety of plant hosts. The number of studies targeting the distribution, diversity, ecology, and pathogenicity of Botryosphaeriaceae species are consistently increasing. However, with the lack of consistency in species delimitation, the name of hosts, and the locations of studies, it is almost impossible to quantify the presence of these species worldwide, or the number of different host--fungus interactions that occur. In a recently published paper [@batista2021], we collected and organized Botryosphaeriaceae occurrences in a single cured dataset, allowing us to obtain for the first time a complete perspective on species' global diversity, dispersion, host association, ecological niches, pathogenicity, communication efficiency of new occurrences, and new host--fungus associations.
+Botryosphaeriaceae-related diseases occur worldwide in a wide variety of plant hosts. The number of studies targeting the distribution, diversity, ecology, and pathogenicity of Botryosphaeriaceae species are consistently increasing. However, with the lack of consistency in species delimitation, the name of hosts, and the locations of studies, it is almost impossible to quantify the presence of these species worldwide, or the number of different host--fungus interactions that occur. In a recently published paper [@batista2021], we collected and organized Botryosphaeriaceae occurrences in a single cured data set, allowing us to obtain for the first time a complete perspective on species' global diversity, dispersion, host association, ecological niches, pathogenicity, communication efficiency of new occurrences, and new host--fungus associations.
 
 ## What is the database for?
 
-The MDRBOT database was built using R 3.6.0 with a web shiny interface. The website includes a search engine to find the cured Botryosphaeriaceae isolates from the Nucleotide---NCBI database and for the host--fungus interaction dataset, where the user can perform multiple field search and download the output in an excel format file (.xlsx).
+The MDRBOT database was built using R 3.6.0 with a web shiny interface. The website includes a search engine to find the cured Botryosphaeriaceae isolates from the Nucleotide---NCBI database and for the host--fungus interaction data set, where the user can perform multiple field search and download the output in an excel format file (.xlsx).
 
 A worldwide map generator tool for species occurrence is available, where the user can select an input species and generate a world occurrence map. A climate data analysis is included, where the user can select an input species and observe isolates with valid geographical information and evaluate the main climate variables associated with these records (minimum, average and maximum annual temperature, and minimum, average, and maximum annual precipitation). The option to download the output maps as a portable network graphics file (.png) for both occurrence and climate data analyses is also available.
 
@@ -47,7 +47,7 @@ A query was performed by genus (Alanphillipsia, Barriopsis, Botryobambusa, Botry
 
 ### MDRBOT Database and Shiny Interface
 
-A literature review was performed, and both datasets were analyzed to fill missing information. Several extra organization-level features were built to allow different filter functions. A shiny interface was created to allow easy access to both datasets.
+A literature review was performed, and both data sets were analyzed to fill missing information. Several extra organization-level features were built to allow different filter functions. A shiny interface was created to allow easy access to both data sets.
 
 ![](bot2.png)
 

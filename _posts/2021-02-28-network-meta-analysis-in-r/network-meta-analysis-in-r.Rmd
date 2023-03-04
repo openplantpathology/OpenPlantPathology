@@ -25,14 +25,14 @@ Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, als
 Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest.
 Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.
 
-Specifically, multiple treatment comparison (_e.g._, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated.
+Specifically, multiple treatment comparison (*e.g.*, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated.
 Hence, this post is for those interest in learning how to fit network meta-analysis models, in particular the frequentist and arm-based approach (as opposed to contrast-based) using open source tools, as alternative to SAS and other commercial software.
 
-Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R (_metafor_).
+Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes @madden2016, using an MA-specific package of R, {metafor}.
 Here I fitted the same model, the arm-based or unconditional, similar to the original paper.
 In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).
 
-I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called _metafor_.
+I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called {metafor}.
 I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
 Anyone should be able to reproduce the analysis below by copying and pasting into R.
 To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results.
@@ -74,12 +74,12 @@ wheat <- wheat %>%
 
 ### Meta-analytic (arm-based) model
 
-I use here the [metafor](http://www.metafor-project.org/doku.php) package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R.
+I use here the [{metafor}](http://www.metafor-project.org/doku.php) package, a free and open-source add-on for conducting meta-analyses with the statistical software environment R.
 I followed the example for fitting the arm-based network MA as shown in [this presentation](http://www.wvbauer.com/lib/exe/fetch.php/talks:2016_viechtbauer_goettingen_multilevel_multivariate_network_ma.pdf) and this [documentation](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) by the author of the package.
 
 In the original NMA paper, the authors compared three different variance-covariance matrix for a random-effects model: compound symmetry (CS), heterogeneous CS (HCS) and unstructured (UN).
 These can be informed directly in the `rma.mv()` function.
-Ok, let's load `metafor` package now.
+OK, let's load {metafor} package now.
 
 ```{r message=FALSE, warning=FALSE}
 library(metafor)
@@ -88,8 +88,10 @@ library(metafor)
 Now we can fit the first model, model R1 in the paper, with compound symmetry (CS) structure for the variance-covariance matrix @madden2016.
 This is used because all treatments within a study share the same random effect, all treatments are correlated, with a covariance for pairs of treatments given by the between-study variance @madden2016.
 
-We use the `rma.mv()` function that allows fitting mixed effects model for multivariate and multi-treatment situations. The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (e.g. the residual variance obtained from the fit of an anova like model).
-Our moderators is the factor of interest, in our case treatment `trt`. The `method` is the maximum likelihood.
+We use the `rma.mv()` function that allows fitting mixed effects model for multivariate and multi-treatment situations.
+The first two arguments are the effect of interest, which is `yield` (means of the treatment of interest across replicates within the same trial) and the sampling variance `varyld` (*e.g.*, the residual variance obtained from the fit of an ANOVA like model).
+Our moderators is the factor of interest, in our case treatment `trt`.
+The `method` is the maximum likelihood.
 The `random` component will be treatment and trial, meaning a random intercept for treatments within trials, which are also random.
 The `struct` is CS and the `data` is wheat.
 
@@ -233,7 +235,7 @@ table1 %>%
 ### Head to head comparison
 
 Using the best model (or any model, in fact) we can perform a head-to-head comparison based on the network model results.
-We can do it using `multcomp` package.
+We can do it using {multcomp} package.
 
 ```{r message=FALSE, warning=FALSE}
 library(multcomp)
@@ -254,7 +256,8 @@ plot(net_arm_UN_comp)
 ### Moderator effects
 
 In the original paper, two models were expanded to include the effect of wheat class (S = Spring wheat and W = Winter wheat) as moderator.
-Let's fit the CS model as in the paper and add this moderator factor in interaction with the treatment factor. The rest is the same.
+Let's fit the CS model as in the paper and add this moderator factor in interaction with the treatment factor.
+The rest is the same.
 
 ```{r}
 net_arm_CS_class <- rma.mv(
@@ -295,4 +298,4 @@ Results of these three models and, of the one expanded to include the effect of 
 
 -   Other papers using network models [@yellareddygari2019], [@edwardsmolina2018], [@paul2018], [@paul2008]
 
--   Fitting [arm-based meta-analysis](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) with metafor
+-   Fitting [arm-based meta-analysis](https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html) with {metafor}

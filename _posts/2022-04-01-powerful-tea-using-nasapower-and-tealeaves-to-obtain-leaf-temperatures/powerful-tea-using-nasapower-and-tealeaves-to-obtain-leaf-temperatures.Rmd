@@ -19,14 +19,14 @@ preview: tealeaveslogo.png
 
 ## Introduction
 
-The incidence and severity of plant diseases are dependant on environmental effects which is emphasised by the [disease triangle](https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx) [@Francl_2001].
+The incidence and severity of plant diseases are dependent on environmental effects which is emphasised by the [disease triangle](https://www.apsnet.org/edcenter/foreducators/TeachingNotes/Pages/DiseaseTriangle.aspx) [@Francl_2001].
 Arguably the effect of temperature on disease can be the most important of environmental influences.
 One problem with evaluating the effect of temperatures on disease incidence and severity is the difference between air temperatures measured at a weather station and the micro-environment of the plant canopy.
 
 When modelling plant disease outbreaks, being able to accurately estimate the conditions which lead to localised plant disease epidemics can be very useful.
-This led me to the R package [_tealeaves_](https://CRAN.R-project.org/package=tealeaves) [@Muir2019], which provides functions for calculating leaf temperatures from ambient environmental inputs.
+This led me to the R package [{tealeaves}](https://CRAN.R-project.org/package=tealeaves) [@Muir2019], which provides functions for calculating leaf temperatures from ambient environmental inputs.
 
-If you have not already, install the packages _tealeaves_ and _nasapower_ with `install.packages(c("tealeaves", "nasapower"))`.
+If you have not already, install the packages {tealeaves} and {nasapower} with `install.packages(c("tealeaves", "nasapower"))`.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library("nasapower")
@@ -34,21 +34,21 @@ library("tealeaves")
 ```
 
 
-## _tealeaves_ <img src="tealeaveslogo.png" align="right" /> 
+## {tealeaves} <img src="tealeaveslogo.png" align="right" /> 
 
 ```{r load_library}
 library(tealeaves)
 ```
 
-Before I begin, it is worth noting _tealeaves_ uses the package, [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html), to format the inputs and outputs [@Pebesma_etal2016].
-Detail about the package _tealeaves_ and it's functions can be found in Muir's publication [@Muir2020], and in the vignettes which can be obtained by running the following commands in R:
+Before I begin, it is worth noting {tealeaves} uses the package, [_units_](https://cran.r-project.org/web/packages/units/vignettes/units.html), to format the inputs and outputs [@Pebesma_etal2016].
+Detail about the package {tealeaves} and it's functions can be found in Muir's publication [@Muir2020], and in the vignettes which can be obtained by running the following commands in R:
 
   - `vignette("tealeaves-introduction")`,
   - `vignette("tealeaves-intermediate")`  
 
-For brevity, I will not go in depth into _tealeaves_ but provide a simple example using default parameters, then how to change default environmental parameters with ones obtained from the _nasapower_ package.
+For brevity, I will not go in depth into {tealeaves} but provide a simple example using default parameters, then how to change default environmental parameters with ones obtained from the {nasapower} package.
 
-### First, a brief _tealeaves_ example
+### First, a brief {tealeaves} example
 
 ```{r simple_example}
 lf_par <- make_leafpar()
@@ -74,12 +74,12 @@ The parameters are created or altered through the package functions:
 
 The `tleaf()` function returns an output containing details of the thermal energy absorbed and emitted, including an estimate of evapotranspiration (`"E"`), which assists in defining the estimated leaf temperature (`"T_leaf"`), given in Kelvin.
 
-We can replace the default environmental parameters with values parsed from a weather station or remote sensing satellite data retrieved by using the R package _nasapower_ [@Sparks2018; @Sparks2022].
+We can replace the default environmental parameters with values parsed from a weather station or remote sensing satellite data retrieved by using the R package {nasapower} [@Sparks2018; @Sparks2022].
 
-## _nasapower_ <img src="POWERlogo.png" align="right" /> 
+## {nasapower} <img src="POWERlogo.png" align="right" /> 
 
-Let's download some hourly data using the _nasapower_ [@Sparks2018; @Sparks2022] package.
-More information on using the _nasapower_ package can be found by calling the vignette `vignette(nasapower)`.
+Let's download some hourly data using the {nasapower} [@Sparks2018; @Sparks2022] package.
+More information on using the {nasapower} package can be found by calling the vignette `vignette(nasapower)`.
 
 ```{r get_power}
 library(nasapower)
@@ -140,7 +140,7 @@ Tm_leaf <-
 Tm_leaf[, c("T_leaf", "E")]
 ```
 
-Because the outputs are specified using the _units_ package I can easily convert from Kelvin back to degrees Celsius using the `set_units()` function again.
+Because the outputs are specified using the {units} package I can easily convert from Kelvin back to degrees Celsius using the `set_units()` function again.
 
 ```{r leaf_temp}
 set_units(Tm_leaf$T_leaf, "DegC")
@@ -150,7 +150,7 @@ set_units(Tm_leaf$T_leaf, "DegC")
 
 Imputing vectors as parameters returns leaf temperature gradients across the supplied parameter permutations and not a vector of times.
 Below is an example of the permutations `t_leaves()` processes from a vector of environmental parameters.
-This is described further in the _tealeaves_ vignette.
+This is described further in the {tealeaves} vignette.
 
 ```{r leaf_grad}
 env_par <- make_enviropar(
@@ -227,8 +227,7 @@ I can now pair up the time and air temperature data from the NASA power data wit
 Also, I will convert temperature in Kelvin to degrees Celsius.
 
 ```{r tidy_tleaf}
-Leaf_temperatures$air_temp <-
-  np$T2M
+Leaf_temperatures$air_temp <- np$T2M
 
 Leaf_temperatures$times <-
   as.POSIXct(paste0(np$YEAR, "-",
@@ -254,7 +253,7 @@ ggplot(Leaf_temperatures,
                 colour = "forestgreen"), size = 1) +
   labs(y = "Temperature (Degrees Celcius)",
        color = "Estimates") +
-  theme_minimal() +
+  theme_light() +
   scale_color_manual(
     values = c("darkblue", "forestgreen"),
     labels = c("Air Tm",

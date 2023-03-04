@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!</title>
@@ -123,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!"]},{"type":"character","attributes":{},"value":["We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Adam Sparks"]},{"type":"character","attributes":{},"value":["https://adamsparks.com"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://emersondelponte.netlify.app"]}]}]},{"type":"character","attributes":{},"value":["08-21-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["survey1.png"]},{"type":"character","attributes":{},"value":["General"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!"]},{"type":"character","attributes":{},"value":["We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Adam Sparks"]},{"type":"character","attributes":{},"value":["https://adamhsparks.netlify.app"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://emersondelponte.netlify.app"]}]}]},{"type":"character","attributes":{},"value":["08-21-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["survey1.png"]},{"type":"character","attributes":{},"value":["General"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2019-08-20-are-you-getting-ready-for-ensuring-reproducibility-in-plant-pathology-we-want-to-hear/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2402,8 +2405,12 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.5/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2426,7 +2433,7 @@ gtag('config', 'UA-112255011-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!","description":"We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.","authors":[{"author":"Adam Sparks","authorURL":"https://adamsparks.com","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Emerson Del Ponte","authorURL":"https://emersondelponte.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2019-08-21T00:00:00.000+08:00","citationText":"Sparks & Ponte, 2019"}
+{"title":"Are you getting ready for ensuring reproducibility in Plant Pathology? We want to hear!","description":"We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.","authors":[{"author":"Adam Sparks","authorURL":"https://adamhsparks.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Emerson Del Ponte","authorURL":"https://emersondelponte.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2019-08-21T00:00:00.000+08:00","citationText":"Sparks & Ponte, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2448,9 +2455,6 @@ gtag('config', 'UA-112255011-1');
 </a>
 <a href="https://scicomm.xyz/@openplantpathology">
 <i class="fab fa-mastodon" aria-hidden="true"></i>
-</a>
-<a href="https://www.twitter.com/openplantpathology">
-<i class="fab fa-twitter" aria-hidden="true"></i>
 </a>
 <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">
 <i class="fab fa-slack fa-lg" aria-hidden="true"></i>
@@ -2477,7 +2481,7 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-byline">
-  Adam Sparks <a href="https://adamsparks.com" class="uri">https://adamsparks.com</a> 
+  Adam Sparks <a href="https://adamhsparks.netlify.app" class="uri">https://adamhsparks.netlify.app</a> 
   
 ,   Emerson Del Ponte <a href="https://emersondelponte.netlify.app" class="uri">https://emersondelponte.netlify.app</a> 
   
@@ -2485,11 +2489,18 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-article">
-<p>The adoption of open science practices has been highlighted as essential to promote accessibility, transparency and reproducibility in science. Documenting, storing and sharing of protocols, raw data and computational code are essential for ensuring reproducibility. Plant pathology is strongly founded on observational and experimental approaches where the collection of data enables us to understand and analyze plant disease phenomena supported by statistics. However, adoption of these practices has been considered slow in many fields and the current status of our discipline has not been evaluated.</p>
+<p>The adoption of open science practices has been highlighted as essential to promote accessibility, transparency and reproducibility in science.
+Documenting, storing and sharing of protocols, raw data and computational code are essential for ensuring reproducibility.
+Plant pathology is strongly founded on observational and experimental approaches where the collection of data enables us to understand and analyze plant disease phenomena supported by statistics.
+However, adoption of these practices has been considered slow in many fields and the current status of our discipline has not been evaluated.</p>
 <p><img src="survey1.png" style="text-align: center; width: 50%;  display: block; margin: 0 auto;" /></p>
-<p>We have conducted a study to gain understanding of the status of reproducible research practices among plant pathologists and so data collection are essential! The first component of our study involves collecting <a href="https://speakerdeck.com/adamhsparks/whats-so-open-about-plant-pathology">data from the literature</a>, which is about to be completed. The second component is a survey questionnaire targeting plant pathologists with the aim of obtaining data the current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.</p>
-<p>We would love to have your participation by answering 16 multiple-choice questions that won’t require more than 5 minutes of your time to complete an anonymous survey - no name or any identifying information will be collected. However, once you take part of the survey, the data will remain as part of the records and could be used by OPP leaders in presentations, blog posts and scientific articles.</p>
-<p>We are calling for participation in a survey that will help us identify areas that need attention to improve and disseminate reproducible research practices in our field. If you have any questions about this survey, please contact us at <a href="mailto:openplantpathology@gmail.com" class="email">openplantpathology@gmail.com</a></p>
+<p>We have conducted a study to gain understanding of the status of reproducible research practices among plant pathologists and so data collection are essential!
+The first component of our study involves collecting <a href="https://speakerdeck.com/adamhsparks/whats-so-open-about-plant-pathology">data from the literature</a>, which is about to be completed.
+The second component is a survey questionnaire targeting plant pathologists with the aim of obtaining data the current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.</p>
+<p>We would love to have your participation by answering 16 multiple-choice questions that won’t require more than 5 minutes of your time to complete an anonymous survey - no name or any identifying information will be collected.
+However, once you take part of the survey, the data will remain as part of the records and could be used by OPP leaders in presentations, blog posts and scientific articles.</p>
+<p>We are calling for participation in a survey that will help us identify areas that need attention to improve and disseminate reproducible research practices in our field.
+If you have any questions about this survey, please contact us at <a href="mailto:openplantpathology@gmail.com" class="email">openplantpathology@gmail.com</a></p>
 <p>Click <a href="https://forms.gle/yyzQmp5qwfYR6TFm6">here to take the survey</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

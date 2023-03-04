@@ -95,3 +95,6 @@ Feel free to contact [any of us](https://openplantpathology.org/team.html) direc
 
 This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@R2022].
 
+```{r reproducibility, echo=FALSE}
+sessioninfo::session_info()
+```

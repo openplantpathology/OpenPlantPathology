@@ -12,16 +12,18 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate>
     <item>
       <title>How Much Do We (Plant Pathologists) Value Openness and Transparency?</title>
       <dc:creator>Adam Sparks</dc:creator>
+      <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we</link>
       <description>Our most recent paper examines code and data sharing practices in plant pathology and shares some ideas for what we can do to improve.</description>
       <category>R4PlantPath</category>
       <category>Reproducible Research</category>
       <guid>https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we</guid>
-      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we/how-open-are-we_files/figure-html5/articleScores-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>Fitting temperature- and moisture-based models to infection data using R</title>
@@ -195,10 +197,10 @@
       <media:content url="https://www.openplantpathology.org/posts/2021-07-31-mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean/qld-apps-seminar-gough.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
-      <title>'hagis', an R package for analysis of pathogen gene-for-gene virulence data</title>
+      <title>{hagis}, an R package for analysis of pathogen gene-for-gene virulence data</title>
       <dc:creator>Austin McCoy</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</link>
-      <description>'hagis' is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.</description>
+      <description>{hagis} is a new R package, designed for analysis of pathogen gene-for-gene virulence data that is collected from pathogen surveys or experiments. This package provides users with tools to explore their virulence data and identify the distribution of susceptible reactions, pathotype complexity, pathotype frequency as well as alpha and beta-diversity measurements in an easy-to-use format. Austin shares how this package came into being and how it's being used in this guest post.</description>
       <category>R Packages</category>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-07-29-hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data</guid>
@@ -267,7 +269,7 @@
       <media:content url="https://www.openplantpathology.org/posts/2021-05-23-johanna-westerdijk-curating-culture-in-the-discipline-of-plant-pathology/Westerdijk-preview.png" medium="image" type="image/png" width="400" height="355"/>
     </item>
     <item>
-      <title>The Togashi Dataset, an open database of fungal and oomycete cardinal temperatures</title>
+      <title>The Togashi data set, an open database of fungal and oomycete cardinal temperatures</title>
       <dc:creator>Daniel Bebber</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-04-09-the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures</link>
       <description>An open database providing cardinal temperatures (minimum, optimum and maximum) for various physiological and growth processes of plant pathogenic fungi and oomycetes reported in Togashi (1949).</description>
@@ -359,10 +361,10 @@
       <media:content url="https://www.openplantpathology.org/posts/2021-03-08-fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes/fgsc.png" medium="image" type="image/png" width="575" height="443"/>
     </item>
     <item>
-      <title>'epifitter', a tool for analysing plant disease epidemics</title>
+      <title>{epifitter}, a tool for analysing plant disease epidemics</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</link>
-      <description>'epifitter' is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
+      <description>{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</description>
       <category>R Packages</category>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-03-06-epifitter-a-tool-for-analysing-plant-disease-epidemics</guid>
@@ -400,10 +402,10 @@
       <media:content url="https://www.openplantpathology.org/posts/2021-02-19-interview-dr-bananaman-garcia/ferchucky.png" medium="image" type="image/png" width="499" height="499"/>
     </item>
     <item>
-      <title>A multi panel figure for coffee leaf rust</title>
+      <title>A multi-panel figure for coffee leaf rust</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure</link>
-      <description>In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers.</description>
+      <description>In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure</guid>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>

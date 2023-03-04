@@ -4,7 +4,7 @@ description: |
   We are calling for participation in a survey. Please donate only five minutes of your time to answer a survey questionnaire with 16 multiple choice questions about your current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.
 author:
   - name: Adam Sparks
-    url: adamhsparks.netlify.app
+    url: https://adamhsparks.netlify.app
   - name: Emerson Del Ponte
     url: https://emersondelponte.netlify.app
 date: 08-21-2019
@@ -20,15 +20,22 @@ categories:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The adoption of open science practices has been highlighted as essential to promote accessibility, transparency and reproducibility in science. Documenting, storing and sharing of protocols, raw data and computational code are essential for ensuring reproducibility. Plant pathology is strongly founded on observational and experimental approaches where the collection of data enables us to understand and analyze plant disease phenomena supported by statistics. However, adoption of these practices has been considered slow in many fields and the current status of our discipline has not been evaluated.
+The adoption of open science practices has been highlighted as essential to promote accessibility, transparency and reproducibility in science.
+Documenting, storing and sharing of protocols, raw data and computational code are essential for ensuring reproducibility.
+Plant pathology is strongly founded on observational and experimental approaches where the collection of data enables us to understand and analyze plant disease phenomena supported by statistics.
+However, adoption of these practices has been considered slow in many fields and the current status of our discipline has not been evaluated.
 
 
 ![](survey1.png){style="text-align: center; width: 50%;  display: block; margin: 0 auto;"}
 
-We have conducted a study to gain understanding of the status of reproducible research practices among plant pathologists and so data collection are essential! The first component of our study involves collecting [data from the literature](https://speakerdeck.com/adamhsparks/whats-so-open-about-plant-pathology), which is about to be completed. The second component is a survey questionnaire targeting plant pathologists with the aim of obtaining data the current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.
+We have conducted a study to gain understanding of the status of reproducible research practices among plant pathologists and so data collection are essential!
+The first component of our study involves collecting [data from the literature](https://speakerdeck.com/adamhsparks/whats-so-open-about-plant-pathology), which is about to be completed.
+The second component is a survey questionnaire targeting plant pathologists with the aim of obtaining data the current practices related to organisational procedures, data management, analytical workflows and sharing of scientific information.
 
-We would love to have your participation by answering 16 multiple-choice questions that won't require more than 5 minutes of your time to complete an anonymous survey - no name or any identifying information will be collected. However, once you take part of the survey, the data will remain as part of the records and could be used by OPP leaders in presentations, blog posts and scientific articles.
+We would love to have your participation by answering 16 multiple-choice questions that won't require more than 5 minutes of your time to complete an anonymous survey - no name or any identifying information will be collected.
+However, once you take part of the survey, the data will remain as part of the records and could be used by OPP leaders in presentations, blog posts and scientific articles.
 
-We are calling for participation in a survey that will help us identify areas that need attention to improve and disseminate reproducible research practices in our field. If you have any questions about this survey, please contact us at [openplantpathology\@gmail.com](mailto:openplantpathology@gmail.com){.email}
+We are calling for participation in a survey that will help us identify areas that need attention to improve and disseminate reproducible research practices in our field.
+If you have any questions about this survey, please contact us at [openplantpathology\@gmail.com](mailto:openplantpathology@gmail.com){.email}
 
 Click [ here to take the survey](https://forms.gle/yyzQmp5qwfYR6TFm6)
