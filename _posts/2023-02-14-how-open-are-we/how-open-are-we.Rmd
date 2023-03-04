@@ -60,7 +60,6 @@ p
 
 That's a pretty shocking, but unsurprising figure.
 
-
 I get it.
 It's just one (or more) things that you have to do when you're prepping that paper for submission.
 I mean, why bother ensuring that your code and data are available.
@@ -74,7 +73,7 @@ A 2018 study by -@Stodden2018 found that from
 
 The whole article is available from [PNAS](https://www.pnas.org/doi/10.1073/pnas.1708290115) and it's well worth a read if you're at all interested, which I assume that you are if you're reading this blog post.
 But going farther, @Tedersoo2021 published "_Data sharing practices and data availability upon request differ across scientific disciplines_" saying "_We observed that statements of data availability upon (reasonable) request are inefficient and should not be allowed by journals._"
-I, personally, know this too well having tried and failed to get additional data missing from papers to reproduce work or models that I was interested in.
+I, personally, know this too well having tried and failed to get additional data missing from papers to reproduce work or models that I was interested in and authors didn't respond or if they did, were dismissive and didn't or weren't able to provide the details I was looking for.
 
 In fact, it seems that it's not that we don't want to or intend to or at least "[we say that we want to but then we don't](https://www.nature.com/articles/d41586-022-01692-1)" [@Watson2022].
 
