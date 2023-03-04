@@ -73,7 +73,7 @@ A 2018 study by -@Stodden2018 found that from
 
 The whole article is available from [PNAS](https://www.pnas.org/doi/10.1073/pnas.1708290115) and it's well worth a read if you're at all interested, which I assume that you are if you're reading this blog post.
 But going farther, @Tedersoo2021 published "_Data sharing practices and data availability upon request differ across scientific disciplines_" saying "_We observed that statements of data availability upon (reasonable) request are inefficient and should not be allowed by journals._"
-I, personally, know this too well having tried and failed to get additional data missing from papers to reproduce work or models that I was interested in and authors didn't respond or if they did, were dismissive and didn't or weren't able to provide the details I was looking for.
+I, personally, know this too well having tried and failed to get additional data missing from papers to reproduce work or models that I was interested in and authors didn't respond or if they did, were dismissive and didn't or weren't able to provide what I was looking for.
 
 In fact, it seems that it's not that we don't want to or intend to or at least "[we say that we want to but then we don't](https://www.nature.com/articles/d41586-022-01692-1)" [@Watson2022].
 
@@ -82,7 +82,12 @@ But looking at Figure \@ref(fig:articleScores), it looks like we don't even ment
 So what is it then?
 Just no time?
 Lack of know-how?
+We just don't care?
+Or maybe, we haven't been provided with enough training to use the tools and enough information to realise how beneficial it really is.
+There are some examples in the community though, [Open Wheat Blast](http://openwheatblast.net/) is a great example of what can be achieved when scientists collaborate openly.
 
+Now that we've quantified the problem, we would like to see more of these and we're here to help.
+Feel free to contact [any of us](https://openplantpathology.org/team.html) directly or through [Mastodon](https://scicomm.xyz/@openplantpathology), [Twitter](https://www.twitter.com/openplantpathology), [Slack](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) (an open invite) or [GitHub](https://github.com/openplantpathology?type=source), we're here to help, after all, it's [our mission](https://openplantpathology.org/about.html).
 
 ## Colophon
 
