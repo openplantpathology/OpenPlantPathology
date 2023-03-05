@@ -1553,7 +1553,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <h3 id="why-and-who-is-this-post-for">Why and who is this post for?</h3>
 <p>Meta-analysis (MA) has gained popularity in plant pathology.
-Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in <em>Phytopathology</em> <span class="citation" data-cites="madden2016">Madden et al. (<a href="#ref-madden2016" role="doc-biblioref">2016</a>)</span>.</p>
+Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in <em>Phytopathology®</em> <span class="citation" data-cites="madden2016">Madden et al. (<a href="#ref-madden2016" role="doc-biblioref">2016</a>)</span>.</p>
 <p>Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest.
 Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.</p>
 <p>Specifically, multiple treatment comparison (<em>e.g.</em>, fungicides and biocontrol agents) is usually of interest and these treatments are usually compared with a common treatment, the untreated check, with their effects (relative control) thus being correlated.
@@ -1561,11 +1561,11 @@ Hence, this post is for those interest in learning how to fit network meta-analy
 <p>Here, I reproduce the analysis shown in a paper where the authors made available all the data (wheat yield response to fungicides), as well as SAS codes <span class="citation" data-cites="madden2016">Madden et al. (<a href="#ref-madden2016" role="doc-biblioref">2016</a>)</span>, using an MA-specific package of R, {metafor}.
 Here I fitted the same model, the arm-based or unconditional, similar to the original paper.
 In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).</p>
-<p>I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called {metafor}.
+<p>I will reproduce some, not all, of the arm-based models presented in the original paper using {metafor}.
 I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
 Anyone should be able to reproduce the analysis below by copying and pasting into R.
 To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results.
-<a href="https://rstudio.cloud/project/2250558">Click here to get access to the R project in the cloud</a>.</p>
+<a href="https://rstudio.cloud/project/2250558">Click here to get access to the RStudio project in the cloud</a>.</p>
 <h3 id="data-preparation">Data preparation</h3>
 <p>The data were obtained from the supplemental <a href="https://apsjournals.apsnet.org/doi/suppl/10.1094/PHYTO-12-15-0342-RVW/suppl_file/PHYTO-12-15-0342-RVW.s1.sas">FileS1</a>, a SAS file that contains the documented code and the data.
 Here, the data were organized in one MS Excel file following the same original structure and content, excepting that missing data was represented by an empty cell.

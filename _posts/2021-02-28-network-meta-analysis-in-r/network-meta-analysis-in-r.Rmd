@@ -20,7 +20,7 @@ preview: network1.png
 ### Why and who is this post for?
 
 Meta-analysis (MA) has gained popularity in plant pathology.
-Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in *Phytopathology* @madden2016.
+Among the several meta-analytic methods, Network Meta-Analysis (NMA) models, also known as Mixed Treatment Comparison (MTC), has been thoroughly presented to plant pathologists in a recent review paper published in *Phytopathology®* @madden2016.
 
 Results of a recent survey (Del Ponte, unpublished) showed that more than 50 meta-analysis articles have been published using plant disease-related data, mainly to test treatment effects on disease severity and yield, but also their relationship, among other effects of interest.
 Although this is a VERY small number of studies compared with other fields (medicine and psychology), a trend towards increasing its use in our field is evident.
@@ -32,11 +32,11 @@ Here, I reproduce the analysis shown in a paper where the authors made available
 Here I fitted the same model, the arm-based or unconditional, similar to the original paper.
 In that case, his approach the effect sizes are directly the treatment means and not the difference or ratio as traditionally performed in meta-analysis).
 
-I will reproduce some, not all, of the arm-based models presented in the original paper using a meta-analysis-specific package called {metafor}.
+I will reproduce some, not all, of the arm-based models presented in the original paper using {metafor}.
 I will explain most of the important details about how to prepare the data, visualize the responses, fit the models and compare results with the original paper.
 Anyone should be able to reproduce the analysis below by copying and pasting into R.
 To facilitate instant access and reproducibility, I created an RStudio project in the cloud where anyone can run this code and get the same results.
-[Click here to get access to the R project in the cloud](https://rstudio.cloud/project/2250558).
+[Click here to get access to the RStudio project in the cloud](https://rstudio.cloud/project/2250558).
 
 ### Data preparation
 
