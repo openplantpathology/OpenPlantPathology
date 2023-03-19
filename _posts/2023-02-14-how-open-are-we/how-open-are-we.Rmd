@@ -22,9 +22,9 @@ categories:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-[Emerson](https://emersondelponte.netlify.app) and I started this initiative (Open Plant Pathology) in 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.
+[Emerson](https://emersondelponte.netlify.app) and I started this initiative (Open Plant Pathology) in early January 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.
 A few years before that, we'd started working on analysis of papers published in plant pathology journals from 2013 until 2021 with Kaique Alves, Zachary Foster and Nik Grünwald, which was published in Phytopathology® in January [@Sparks2023].
-What we were finding as we looked at papers across 21 journals that were dedicated to plant pathology research or published specialised sections or articles in the field of plant pathology was not surprising, but still disappointing.
+What we were finding as we looked at 450 papers across 21 journals that were dedicated to plant pathology research or published specialised sections or articles in the field of plant pathology was not surprising, but still disappointing.
 As a discipline, we simply do not make much, if any, effort to help ensure that others can easily reproduce our work after it is published [@Sparks2023].
 
 We found that most articles were not reproducible according to our scoring system and failed to take advantage of open science and reproduciblity methods that would benefit both the authors and the readers.
