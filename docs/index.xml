@@ -12,7 +12,7 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate>
     <item>
       <title>How Much Do We (Plant Pathologists) Value Openness and Transparency?</title>
       <dc:creator>Adam Sparks</dc:creator>
@@ -22,7 +22,7 @@
       <category>R4PlantPath</category>
       <category>Reproducible Research</category>
       <guid>https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we</guid>
-      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2023-02-14-how-open-are-we/how-open-are-we_files/figure-html5/articleScores-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
@@ -378,7 +378,7 @@
       <description>Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r</guid>
-      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2021-02-28-network-meta-analysis-in-r/network1.png" medium="image" type="image/png" width="509" height="407"/>
     </item>
     <item>
