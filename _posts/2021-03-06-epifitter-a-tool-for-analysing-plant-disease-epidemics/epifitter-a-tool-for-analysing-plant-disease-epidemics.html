@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,11 +74,11 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,10 +86,32 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-  <!--radix_placeholder_meta_tags-->
-  <title>'epifitter', a tool for analysing plant disease epidemics</title>
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
-  <meta property="description" itemprop="description" content="&#39;epifitter&#39; is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
+  <!--radix_placeholder_meta_tags-->
+  <title>{epifitter}, a tool for analysing plant disease epidemics</title>
+
+  <meta property="description" itemprop="description" content="{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
 
 
   <!--  https://schema.org/Article -->
@@ -97,23 +120,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Emerson Del Ponte"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="&#39;epifitter&#39;, a tool for analysing plant disease epidemics"/>
+  <meta property="og:title" content="{epifitter}, a tool for analysing plant disease epidemics"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="&#39;epifitter&#39; is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
+  <meta property="og:description" content="{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="&#39;epifitter&#39;, a tool for analysing plant disease epidemics"/>
-  <meta property="twitter:description" content="&#39;epifitter&#39; is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
+  <meta property="twitter:title" content="{epifitter}, a tool for analysing plant disease epidemics"/>
+  <meta property="twitter:description" content="{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data."/>
 
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=CHAPTER 4: Temporal analysis i: Quantifying and comparing epidemics;citation_publication_date=2017;citation_publisher=The American Phytopathological Society;citation_doi=10.1094/9780890545058.004"/>
+  <meta name="citation_reference" content="citation_title=CHAPTER 4: Temporal analysis i: Quantifying and comparing epidemics;citation_publisher=The American Phytopathological Society;citation_doi=10.1094/9780890545058.004"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["'epifitter', a tool for analysing plant disease epidemics"]},{"type":"character","attributes":{},"value":["'epifitter' is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["03-06-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["epifitter.png"]},{"type":"character","attributes":{},"value":["R Packages","R4PlantPath"]},{"type":"character","attributes":{},"value":["references.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["{epifitter}, a tool for analysing plant disease epidemics"]},{"type":"character","attributes":{},"value":["{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["03-06-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["epifitter.png"]},{"type":"character","attributes":{},"value":["R Packages","R4PlantPath"]},{"type":"character","attributes":{},"value":["references.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -189,6 +212,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -430,10 +454,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1265,7 +1285,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1276,6 +1311,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1375,6 +1435,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1397,7 +1459,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1436,8 +1498,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.9/header-attrs.js"></script>
-  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.20/header-attrs.js"></script>
+  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/popper-2.6.0/popper.min.js"></script>
   <link href="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1457,7 +1519,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"'epifitter', a tool for analysing plant disease epidemics","description":"'epifitter' is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-06T00:00:00.000+00:00","citationText":"Ponte, 2021"}
+{"title":"{epifitter}, a tool for analysing plant disease epidemics","description":"{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-06T00:00:00.000+08:00","citationText":"Ponte, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1467,14 +1529,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>‘epifitter,’ a tool for analysing plant disease epidemics</h1>
+<h1>{epifitter}, a tool for analysing plant disease epidemics</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">R Packages</div>
-<div class="dt=tag">R4PlantPath</div>
+<div class="dt-tag">R Packages</div>
+<div class="dt-tag">R4PlantPath</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>‘epifitter’ is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</p></p>
+<p><p>{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.</p></p>
 </div>
 
 <div class="d-byline">
@@ -1485,56 +1547,75 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="background">Background</h2>
-<p>Inevitably, pathogens spread throughout plant populations - some rapidly and more effectively when crops are intensively grown and man fails to control the situation. Even more so, when Mother Nature is very kind to the pathogen with the provision of the right meteorological conditions for epidemic onset, development and spread.</p>
-<p>The progress of epidemics over time, described by disease progress curves (DPCs), is central in the field of plant disease epidemiology and has roots with its birth as a discipline during the early 1960’s. In fact, JE Vanderplank and other important scientists who followed a couple decades thereafter provided and shaped the tools that we have available for the study of the temporal progress of epidemics.</p>
-<p>The subject is broad and can be complex, but relatively simple approaches may provide sufficient and important knowledge and tools for making inferences and testing hypotheses, depending on the question and scale of the application. When dealing with data collected at the population level (disease intensity in a group of individuals), the fit of simple two-parameter population dynamics models (<em>e.g.</em> Gompertz, logistic, monomolecular) is an effective way to understand, compare and predict epidemics.</p>
-<p>These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation. The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics. The mathematics behind model fitting is straightforward and can be done using linear regression as far as the original data is transformed to linearize the pattern of the curve. Alternatively, non-linear approaches can also be used, but require computational resources.</p>
-<h2 id="how-did-epifitter-happen">How did ‘epifitter’ happen?</h2>
-<p>During my journey teaching a graduate course in plant disease epidemiology since late 2007 I have used different approaches when teaching the fitting of models to DPC data. In the beginning, I made use of SAS codes, a DOS-based software and a spreadsheet. In 2014, I became an <a href="https://www.r-project.org/">R</a> and <a href="https://rstudio.com">RStudio</a> user and since then never looked back and abandoned all other software. I was trying to use only R for teaching and analysing epidemic data, which was quite possible for most, but not all, my epidemiological analyses at the time.</p>
-<p>I have been writing my teaching notes in R and improving (as well as shortening!) my codes each year since. In 2018, my MSc student, Kaique Alves, started to program in R after he joined my lab and attended my epidemiology class. I was providing the codes for the class and, at some point when explaining an exercise on model fitting. During that course, I challenged Kaique to implement functions for automating the process of model fitting, selection and plotting. One year after Kaique completed the course, ‘epifitter’ was born and it took a few more months to be delivered on <a href="https://github.com/AlvesKS/&#39;epifitter&#39;">GitHub</a> and finally on <a href="https://cran.r-project.org/web/packages/&#39;epifitter&#39;/index.html">CRAN</a> in October 2020.</p>
+<p>Inevitably, pathogens spread throughout plant populations - some rapidly and more effectively when crops are intensively grown and man fails to control the situation.
+Even more so, when Mother Nature is very kind to the pathogen with the provision of the right meteorological conditions for epidemic onset, development and spread.</p>
+<p>The progress of epidemics over time, described by disease progress curves (DPCs), is central in the field of plant disease epidemiology and has roots with its birth as a discipline during the early 1960’s.
+In fact, JE Vanderplank and other important scientists who followed a couple decades thereafter provided and shaped the tools that we have available for the study of the temporal progress of epidemics.</p>
+<p>The subject is broad and can be complex, but relatively simple approaches may provide sufficient and important knowledge and tools for making inferences and testing hypotheses, depending on the question and scale of the application.
+When dealing with data collected at the population level (disease intensity in a group of individuals), the fit of simple two-parameter population dynamics models (<em>e.g.</em>, Gompertz, logistic, monomolecular) is an effective way to understand, compare and predict epidemics.</p>
+<p>These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation. The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics.
+The mathematics behind model fitting is straightforward and can be done using linear regression as far as the original data is transformed to linearize the pattern of the curve.
+Alternatively, non-linear approaches can also be used, but require computational resources.</p>
+<h2 id="how-did-epifitter-happen">How did {epifitter} happen?</h2>
+<p>During my journey teaching a graduate course in plant disease epidemiology since late 2007 I have used different approaches when teaching the fitting of models to DPC data.
+In the beginning, I made use of SAS codes, a DOS-based software and a spreadsheet.
+In 2014, I became an <a href="https://www.r-project.org/">R</a> and <a href="https://rstudio.com">RStudio</a> user and since then never looked back and abandoned all other software.
+I was trying to use only R for teaching and analysing epidemic data, which was quite possible for most, but not all, my epidemiological analyses at the time.</p>
+<p>I have been writing my teaching notes in R and improving (as well as shortening!) my codes each year since.
+In 2018, my MSc student, Kaique Alves, started to program in R after he joined my lab and attended my epidemiology class.
+I was providing the codes for the class and, at some point when explaining an exercise on model fitting.
+During that course, I challenged Kaique to implement functions for automating the process of model fitting, selection and plotting.
+One year after Kaique completed the course, {epifitter} was born and it took a few more months to be delivered on <a href="https://github.com/AlvesKS/%7Bepifitter%7D">GitHub</a> and finally on <a href="https://cran.r-project.org/web/packages/%7Bepifitter%7D/index.html">CRAN</a> in October 2020.</p>
 <h2 id="how-is-it-being-used">How is it being used?</h2>
-<p>‘epifitter’ is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments. It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data. The models fitted to data are the “classic” population dynamics models (<em>e.g.</em>, Gompertz, logistic, monomolecular) using both the data linearization and the non-linear approaches for both single or multiple epidemics, making this package useful for both research and teaching purposes.</p>
-<p>As of March the 3rd, the package has been downloaded 2,321 times (~600 downloads/month). Recently, I used ‘epifitter’ in my graduate (online inter-institutional) epidemiology class with great success. The few functions optimized to simplify model fitting and selection shorten the learning curve because students need to learn just a few R functions compared with my original codes. This is also valid for visualizing model results. Additionally, we have used the package in ongoing research in the lab that deals with disease progress data. The chapter on model fitting of my “<a href="https://emdelponte.github.io/epidemiology-R/fitting-models.html">R4 Plant Disease Epidemiology</a>” book (which is in the making) is based solely on ‘epifitter.’ Finally, it has also been used in a vignette of the <a href="https://adamhsparks.github.io/epicrop/">epicrop</a> package and other research projects associated with the use of the latter package to calculate area under the disease progress curve (AUDPC).</p>
+<p>{epifitter} is a very young package, targeting students and researchers dealing with simulated or empirically-derived data collected from surveys or experiments.
+It provides a set of tools for aiding in the visualization and description of DPCs as well as fitting and comparing epidemic models and simulating epidemic data.
+The models fitted to data are the “classic” population dynamics models (<em>e.g.</em>, Gompertz, logistic, monomolecular) using both the data linearization and the non-linear approaches for both single or multiple epidemics, making this package useful for both research and teaching purposes.</p>
+<p>As of March the 3rd, the package has been downloaded 2,321 times (~600 downloads/month).
+Recently, I used {epifitter} in my graduate (online inter-institutional) epidemiology class with great success.
+The few functions optimized to simplify model fitting and selection shorten the learning curve because students need to learn just a few R functions compared with my original codes.
+This is also valid for visualizing model results. Additionally, we have used the package in ongoing research in the lab that deals with disease progress data.
+The chapter on model fitting of my “<a href="https://emdelponte.github.io/epidemiology-R/fitting-models.html">R4 Plant Disease Epidemiology</a>” book (which is in the making) is based solely on {epifitter}.
+Finally, it has also been used in a vignette of the <a href="https://adamhsparks.github.io/epicrop/">epicrop</a> package and other research projects associated with the use of the latter package to calculate area under the disease progress curve (AUDPC).</p>
 <h3 id="what-is-next">What is next?</h3>
-<p>The plan is to keep maintaining and expanding by creating a few other functions. We are gathering information for developing functions for comparing epidemic parameters obtained from epidemic data coming from different experimental designs, such as randomized blocks design. Furthermore, we plan to create functions to fit disease gradient models, add datasets and expand the documentation (via blog posts and screencast tutorials) to facilitate the understanding of package use and provide more examples.</p>
+<p>The plan is to keep maintaining and expanding by creating a few other functions.
+We are gathering information for developing functions for comparing epidemic parameters obtained from epidemic data coming from different experimental designs, such as randomized blocks design.
+Furthermore, we plan to create functions to fit disease gradient models, add data sets and expand the documentation (via blog posts and screencast tutorials) to facilitate the understanding of package use and provide more examples.</p>
 <h2 id="where-to-get-the-package">Where to get the package?</h2>
-<p>‘epifitter’ can be downloaded from CRAN and its development version from GitHub.<br />
-CRAN: <a href="https://cran.r-project.org/web/packages/&#39;epifitter&#39;/index.html" class="uri">&lt;https://cran.r-project.org/web/packages/‘epifitter’/index.html&gt;</a><br />
-GH: <a href="https://github.com/AlvesKS/&#39;epifitter&#39;" class="uri">&lt;https://github.com/AlvesKS/‘epifitter’&gt;</a></p>
-<p>Package documentation: <a href="https://alvesks.github.io/&#39;epifitter&#39;/" class="uri">https://alvesks.github.io/'epifitter'/</a><br />
+<p>{epifitter} can be downloaded from CRAN and its development version from GitHub.<br />
+CRAN: <a href="https://cran.r-project.org/web/packages/%7Bepifitter%7D/index.html" class="uri">&lt;https://cran.r-project.org/web/packages/{epifitter}/index.html&gt;</a><br />
+GH: <a href="https://github.com/AlvesKS/%7Bepifitter%7D" class="uri">&lt;https://github.com/AlvesKS/{epifitter}&gt;</a></p>
+<p>Package documentation: <a href="https://alvesks.github.io/%7Bepifitter%7D/" class="uri">https://alvesks.github.io/{epifitter}/</a><br />
 R4PDE: <a href="https://emdelponte.github.io/epidemiology-R/fitting-models.html" class="uri">&lt;https://emdelponte.github.io/epidemiology-R/fitting-models.html&gt;</a></p>
 <p><strong>Authors</strong><br />
 Kaique dos Santos Alves<br />
 Emerson Medeiros Del Ponte</p>
 <h2 id="examples">Examples</h2>
-<p>Create the pepper dataset available from the book “The Study of Plant Disease Epidemics” <span class="citation" data-cites="chapter2017e"><a href="#ref-chapter2017e" role="doc-biblioref">Madden, Hughes, and van den Bosch</a> (<a href="#ref-chapter2017e" role="doc-biblioref">2017</a>)</span> chapter 4, page 93.</p>
+<p>Create the pepper data set available from the book “The Study of Plant Disease Epidemics” <span class="citation" data-cites="chapter2017e">Madden, Hughes, and van den Bosch (<a href="#ref-chapter2017e" role="doc-biblioref">2017</a>)</span> chapter 4, page 93.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/AlvesKS/epifitter'>'epifitter'</a></span><span class='op'>)</span>
-<span class='va'>pepper</span> <span class='op'>&lt;-</span>
-  <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></span><span class='op'>(</span>
-    <span class='op'>~</span><span class='va'>t</span>, <span class='op'>~</span><span class='va'>`1`</span>, <span class='op'>~</span><span class='va'>`2`</span>, <span class='op'>~</span><span class='va'>`3`</span>,
-    <span class='fl'>0</span>, <span class='fl'>0.08</span>, <span class='fl'>0.001</span>, <span class='fl'>0.001</span>,
-    <span class='fl'>7</span>, <span class='fl'>0.13</span>, <span class='fl'>0.01</span>, <span class='fl'>0.001</span>,
-    <span class='fl'>14</span>, <span class='fl'>0.78</span>, <span class='fl'>0.09</span>, <span class='fl'>0.01</span>,
-    <span class='fl'>21</span>, <span class='fl'>0.92</span>, <span class='fl'>0.25</span>, <span class='fl'>0.05</span>,
-    <span class='fl'>28</span>, <span class='fl'>0.99</span>, <span class='fl'>0.8</span>, <span class='fl'>0.18</span>,
-    <span class='fl'>35</span>, <span class='fl'>0.995</span>, <span class='fl'>0.98</span>, <span class='fl'>0.34</span>,
-    <span class='fl'>42</span>, <span class='fl'>0.999</span>, <span class='fl'>0.99</span>, <span class='fl'>0.48</span>,
-    <span class='fl'>49</span>, <span class='fl'>0.999</span>, <span class='fl'>0.999</span>, <span class='fl'>0.74</span>
-  <span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/AlvesKS/epifitter'>epifitter</a></span><span class='op'>)</span></span>
+<span><span class='va'>pepper</span> <span class='op'>&lt;-</span></span>
+<span>  <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></span><span class='op'>(</span></span>
+<span>    <span class='op'>~</span><span class='va'>t</span>, <span class='op'>~</span><span class='va'>`1`</span>, <span class='op'>~</span><span class='va'>`2`</span>, <span class='op'>~</span><span class='va'>`3`</span>,</span>
+<span>    <span class='fl'>0</span>, <span class='fl'>0.08</span>, <span class='fl'>0.001</span>, <span class='fl'>0.001</span>,</span>
+<span>    <span class='fl'>7</span>, <span class='fl'>0.13</span>, <span class='fl'>0.01</span>, <span class='fl'>0.001</span>,</span>
+<span>    <span class='fl'>14</span>, <span class='fl'>0.78</span>, <span class='fl'>0.09</span>, <span class='fl'>0.01</span>,</span>
+<span>    <span class='fl'>21</span>, <span class='fl'>0.92</span>, <span class='fl'>0.25</span>, <span class='fl'>0.05</span>,</span>
+<span>    <span class='fl'>28</span>, <span class='fl'>0.99</span>, <span class='fl'>0.8</span>, <span class='fl'>0.18</span>,</span>
+<span>    <span class='fl'>35</span>, <span class='fl'>0.995</span>, <span class='fl'>0.98</span>, <span class='fl'>0.34</span>,</span>
+<span>    <span class='fl'>42</span>, <span class='fl'>0.999</span>, <span class='fl'>0.99</span>, <span class='fl'>0.48</span>,</span>
+<span>    <span class='fl'>49</span>, <span class='fl'>0.999</span>, <span class='fl'>0.999</span>, <span class='fl'>0.74</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Plot curve 1</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>pepper</span>, <span class='fu'>aes</span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>`1`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_point</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>pepper</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>t</span>, <span class='va'>`1`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
@@ -1542,19 +1623,15 @@ Emerson Medeiros Del Ponte</p>
 <p>Using data linearization approach with the <code>fit_lin()</code> function</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>epi1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/fit_lin.html'>fit_lin</a></span><span class='op'>(</span>
-  time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>,
-  y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>
-<span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>epi1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/fit_lin.html'>fit_lin</a></span><span class='op'>(</span>time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>,</span>
+<span>                y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <h3 id="inspect-model-parameter-estimates">Inspect model parameter estimates</h3>
-<p>The models are ranked from highest to lowest CCC. The epi1$Stas_all give the complete results.</p>
+<p>The models are ranked from highest to lowest CCC. The <code>epi1\$Stas_all</code> give the complete results.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>epi1</span><span class='op'>$</span><span class='va'>Stats</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>epi1</span><span class='op'>$</span><span class='va'>Stats</span></span></code></pre>
 </div>
 <pre><code>                 CCC r_squared    RSE
 Gompertz      0.9848    0.9700 0.5911
@@ -1565,15 +1642,14 @@ Exponential   0.7839    0.6447 0.6705</code></pre>
 <p>Fit a non-linear regression model to one epidemic at a time.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>epi2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/fit_nlin.html'>fit_nlin</a></span><span class='op'>(</span>
-  time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>,
-  y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>,
-  starting_par <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>y0 <span class='op'>=</span> <span class='fl'>0.001</span>, r <span class='op'>=</span> <span class='fl'>0.03</span><span class='op'>)</span>,
-  maxiter <span class='op'>=</span> <span class='fl'>1024</span>
-<span class='op'>)</span>
-
-<span class='va'>epi2</span><span class='op'>$</span><span class='va'>Stats</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>epi2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/fit_nlin.html'>fit_nlin</a></span><span class='op'>(</span></span>
+<span>  time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>,</span>
+<span>  y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>,</span>
+<span>  starting_par <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>y0 <span class='op'>=</span> <span class='fl'>0.001</span>, r <span class='op'>=</span> <span class='fl'>0.03</span><span class='op'>)</span>,</span>
+<span>  maxiter <span class='op'>=</span> <span class='fl'>1024</span></span>
+<span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>epi2</span><span class='op'>$</span><span class='va'>Stats</span></span></code></pre>
 </div>
 <pre><code>                 CCC r_squared    RSE
 Gompertz      0.9963    0.9956 0.0381
@@ -1584,19 +1660,17 @@ Exponential   0.7161    0.5903 0.2770</code></pre>
 <h3 id="audpc-or-audps">AUDPC or AUDPS</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/AUDPC.html'>AUDPC</a></span><span class='op'>(</span>time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>, y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>, y_proportion <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/AUDPC.html'>AUDPC</a></span><span class='op'>(</span>time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>, y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>, y_proportion <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 37.47</code></pre>
+<pre><code>[1] 37.4745</code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/AUDPS.html'>AUDPS</a></span><span class='op'>(</span>time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>, y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>, y_proportion <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/epifitter/man/AUDPS.html'>AUDPS</a></span><span class='op'>(</span>time <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>t</span>, y <span class='op'>=</span> <span class='va'>pepper</span><span class='op'>$</span><span class='va'>`1`</span>, y_proportion <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 41.25</code></pre>
+<pre><code>[1] 41.251</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-chapter2017e" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-chapter2017e" class="csl-entry" role="listitem">
 Madden, Laurence V., Gareth Hughes, and Frank van den Bosch, eds. 2017. <span>“CHAPTER 4: Temporal Analysis i: Quantifying and Comparing Epidemics.”</span> In, 63–116. The American Phytopathological Society. <a href="https://doi.org/10.1094/9780890545058.004">https://doi.org/10.1094/9780890545058.004</a>.
 </div>
 </div>

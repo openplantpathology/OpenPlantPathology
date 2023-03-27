@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>The fall of an empire</title>
@@ -115,7 +118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["post-fall-empire.png","the-fall-of-an-empire_files/anchor-4.2.2/anchor.min.js","the-fall-of-an-empire_files/bowser-1.9.3/bowser.min.js","the-fall-of-an-empire_files/distill-2.2.21/template.v2.js","the-fall-of-an-empire_files/header-attrs-2.6.6/header-attrs.js","the-fall-of-an-empire_files/jquery-1.11.3/jquery.min.js","the-fall-of-an-empire_files/popper-2.6.0/popper.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-light-border.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.umd.min.js","the-fall-of-an-empire_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-8-1.png","unnamed-chunk-9-1.gif"]}
+  {"type":"character","attributes":{},"value":["post-fall-empire.png","the-fall-of-an-empire_files/anchor-4.2.2/anchor.min.js","the-fall-of-an-empire_files/bowser-1.9.3/bowser.min.js","the-fall-of-an-empire_files/distill-2.2.21/template.v2.js","the-fall-of-an-empire_files/header-attrs-2.20/header-attrs.js","the-fall-of-an-empire_files/header-attrs-2.6.6/header-attrs.js","the-fall-of-an-empire_files/jquery-1.11.3/jquery.min.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.map","the-fall-of-an-empire_files/popper-2.6.0/popper.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-light-border.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.umd.min.js","the-fall-of-an-empire_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-8-1.png","unnamed-chunk-9-1.gif"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -186,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -427,10 +431,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1262,7 +1262,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1273,6 +1288,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1372,6 +1412,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1394,7 +1436,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1433,8 +1475,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="the-fall-of-an-empire_files/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="the-fall-of-an-empire_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="the-fall-of-an-empire_files/header-attrs-2.20/header-attrs.js"></script>
+  <script src="the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="the-fall-of-an-empire_files/popper-2.6.0/popper.min.js"></script>
   <link href="the-fall-of-an-empire_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="the-fall-of-an-empire_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1454,7 +1496,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"The fall of an empire","description":"I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-05-25T00:00:00.000+00:00","citationText":"Ponte, 2018"}
+{"title":"The fall of an empire","description":"I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-05-25T00:00:00.000+08:00","citationText":"Ponte, 2018"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1467,7 +1509,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>The fall of an empire</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">R4PlantPath</div>
+<div class="dt-tag">R4PlantPath</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state). The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others’ presentations.</p></p>
@@ -1483,18 +1525,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
-This is what happens when one fungicide (DMI in this case) is massively used over many years in a large soybean-growing region. Life finds a way. Showed this in my talk this AM “To spray or not to spray”. <a href="https://t.co/uFf6VbSieb">pic.twitter.com/uFf6VbSieb</a>
+This is what happens when one fungicide (DMI in this case) is massively used over many years in a large soybean-growing region. Life finds a way. Showed this in my talk this AM "To spray or not to spray". <a href="https://t.co/uFf6VbSieb">pic.twitter.com/uFf6VbSieb</a>
 </p>
 — Emerson Del Ponte (<span class="citation" data-cites="edelponte">@edelponte</span>) <a href="https://twitter.com/edelponte/status/1131633376182579207?ref_src=twsrc%5Etfw">May 23, 2019</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>The Asian rust is the most damaging disease of soybean in Brazil since it was discovered in 2004, for which no other method than fungicides is available for effective control. The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others’ presentations.</p>
-<p>The data used here are from a more complete set obtained from a meta-regression study where the effect of year was tested as moderator variable (<a href="https://apsjournals.apsnet.org/doi/abs/10.1094/PDIS-03-17-0408-RE">Dalla Lana et al. 2018</a>). The data of that study have been made available (<a href="https://osf.io/7d3ch/">Del Ponte et al. 2017</a>), which makes it possible to reuse them!</p>
-<p>We will start by importing, inspecting and preparing the data for visualization. I like the tidyverse tools and programming style, so this package is essentially the first to load. The data are available in one of my <a href="https://osf.io/7d3ch/">OSF project</a> as an <code>csv</code> file. In the files panel, look for the <code>sev_data.csv</code> file within the data subfolder. Let’s import the web-hosted file into R using <code>read_csv</code> function. You need Internet connection, but you may want to save the data frame locally.</p>
+<p>The Asian rust is the most damaging disease of soybean in Brazil since it was discovered in 2004, for which no other method than fungicides is available for effective control.
+The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data.
+So I decided to share the R code use to produce the animation for others’ presentations.</p>
+<p>The data used here are from a more complete set obtained from a meta-regression study where the effect of year was tested as moderator variable (<a href="https://apsjournals.apsnet.org/doi/abs/10.1094/PDIS-03-17-0408-RE">Dalla Lana et al. 2018</a>).
+The data of that study have been made available (<a href="https://osf.io/7d3ch/">Del Ponte et al.2017</a>), which makes it possible to reuse them!</p>
+<p>We will start by importing, inspecting and preparing the data for visualization. I like the tidyverse tools and programming style, so this package is essentially the first to load.
+The data are available in one of my <a href="https://osf.io/7d3ch/">OSF project</a> as an <code>csv</code> file.
+In the files panel, look for the <code>sev_data.csv</code> file within the data subfolder.
+Let’s import the web-hosted file into R using <code>read_csv</code> function.
+You need an Internet connection, and you may want to save the data frame locally.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    fungicide <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://osf.io/rp7nb/download&quot;</span>)</span></code></pre></div>
 <h2 id="data-inspection">Data inspection</h2>
-<p>Let’s see how many treatments and the number of entries per treatment. These are the different levels of the <code>active_ingredient</code> column, including the non-treated check. I like to use the <code>tabyl()</code> function of the <em>janitor</em> package as substitute for <code>table()</code>, so you can do the same using the latter base function if you prefer.</p>
+<p>Let’s see how many treatments and the number of entries per treatment.
+These are the different levels of the <code>active_ingredient</code> column, including the non-treated check. I like to use the <code>tabyl()</code> function of the {janitor} package as substitute for <code>table()</code>, so you can do the same using the latter base function if you prefer.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(janitor)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="do">## </span></span>
@@ -1518,7 +1568,8 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 7         trif_prot 109 0.07579972</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 8         pyra_metc  96 0.06675939</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 9              azox  79 0.05493741</span></span></code></pre></div>
-<p>And now we can make a pivot table for active ingredient versus year to check those used for longer time and lower gaps. The values represent the number of trials where the fungicide was evaluated within a specific year.</p>
+<p>And now we can make a pivot table for active ingredient versus year to check those used for longer time and lower gaps.
+The values represent the number of trials where the fungicide was evaluated within a specific year.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    fungicide <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tabyl</span>(active_ingredient, year) <span class="sc">%&gt;%</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(active_ingredient)</span>
@@ -1533,12 +1584,15 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 7         pyra_metc    0    0    0    0   28   27   21    0    0   20</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 8              tebu   19   19   37   11   53   28   21   17   23   20</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 9         trif_prot    0    0    0    0   28    0   21   17   23   20</span></span></code></pre></div>
-<p>Besides the non-treated check with the largest sample size (250 independent experiments), the fungicides evaluated in most years were <strong>tebu</strong> and <strong>azox+cypro</strong>, or eight years (2007 to 2014). We will need the check treatment as well. I like to subset the data using the <code>filter()</code> function so we keep only the relevant data to work further.</p>
+<p>Besides the non-treated check with the largest sample size (250 independent experiments), the fungicides evaluated in most years were <strong>tebu</strong> and <strong>azox+cypro</strong>, or eight years (2007 to 2014).
+We will need the check treatment as well.
+I like to subset the data using the <code>filter()</code> function so we keep only the relevant data to work further.</p>
 <h2 id="data-preparation">Data preparation</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    tebu_mix <span class="ot">&lt;-</span> fungicide <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(active_ingredient <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;check&quot;</span>, <span class="st">&quot;tebu&quot;</span>, <span class="st">&quot;azox_cypr&quot;</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">arrange</span>(trial) <span class="co"># ordered by trial</span></span></code></pre></div>
-<p>The trials were conducted at several states in Brazil. Let’s see how many trials per state and year.</p>
+<p>The trials were conducted at several states in Brazil.
+Let’s see how many trials per state and year.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    fungicide <span class="sc">%&gt;%</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tabyl</span>(state, year)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1555,7 +1609,8 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">##     SC    0    0    0    0    0    7   16    8    0    0</span></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="do">##     SP   15    9   16    0   25   14    8   16   15   18</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="do">##     TO    0    0    8    0    0    0    0    0    0    0</span></span></code></pre></div>
-<p>I want to eliminate states from our analysis with too many gaps in the years and group states by climatic region or geographical proximity. I split all six remaining states into three groups as follows.</p>
+<p>I want to eliminate states from our analysis with too many gaps in the years and group states by climatic region or geographical proximity.
+I split all six remaining states into three groups as follows.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    tebu_mix1 <span class="ot">&lt;-</span> tebu_mix <span class="sc">%&gt;%</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(<span class="sc">!</span>state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;SC&quot;</span>, <span class="st">&quot;TO&quot;</span>, <span class="st">&quot;MA&quot;</span>, <span class="st">&quot;MG&quot;</span>, <span class="st">&quot;BA&quot;</span>, <span class="st">&quot;DF&quot;</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">case_when</span>(</span>
@@ -1563,7 +1618,14 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;SP&quot;</span>, <span class="st">&quot;MS&quot;</span>) <span class="sc">~</span> <span class="st">&quot;SP+MS&quot;</span>,</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;PR&quot;</span>, <span class="st">&quot;RS&quot;</span>) <span class="sc">~</span> <span class="st">&quot;PR+RS&quot;</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      ))</span></code></pre></div>
-<p>Now we need to create our variable of interest, or the percent reduction in disease severity relative to the non-treated check, commonly referred to control efficacy. This can be done by first reshaping data to the wide format using the <code>spread()</code> function. Then, with the three response variables in separate columns, we can create the new variable of interest using the <code>mutate()</code> function. The efficacy is obtained from the ratio of fungicide-treated and non-treated subtracted from one. Hence, the larger the efficacy (zero to 100%), the better is the fungicide. Note that <code>selection()</code> was used to preserve only the columns that are relevant. Also note that negative values can be calculated in rare situations where disease severity in the fungicide-treated plot is higher than in the non-treated check of the same experiment.</p>
+<p>Now we need to create our variable of interest, or the percent reduction in disease severity relative to the non-treated check, commonly referred to control efficacy.
+This can be done by first reshaping data to the wide format using the <code>spread()</code> function.
+Then, with the three response variables in separate columns, we can create the new variable of interest using the <code>mutate()</code> function.
+The efficacy is obtained from the ratio of fungicide-treated and non-treated subtracted from one.
+Hence, the larger the efficacy (zero to 100%), the better is the fungicide.
+Note that <code>selection()</code> was used to preserve only the columns that are relevant.
+Also note that negative values can be calculated in rare situations where disease severity in the fungicide-treated plot is
+higher than in the non-treated check of the same experiment.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    tebu_mix2 <span class="ot">&lt;-</span> tebu_mix1 <span class="sc">%&gt;%</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(trial, year, state, region, active_ingredient, severity) <span class="sc">%&gt;%</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">spread</span>(active_ingredient, severity) <span class="sc">%&gt;%</span></span>
@@ -1584,7 +1646,9 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 5     7  2005 GO    MT+GO      99.0          99.0</span></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="do">## 6     8  2005 PR    PR+RS      98.7          98.7</span></span></code></pre></div>
 <h2 id="data-visualization">Data visualization</h2>
-<p>Now that our dataset is ready, let’s make a static plot just for quick visualization. First we want to reshape the data back to the long format using <code>gather()</code> for producing side by side plots by another variable using <code>facet_wrap()</code>.</p>
+<p>Now that our data set is ready, let’s make a static plot just for quick visualization.
+First we want to reshape the data back to the long format using <code>gather()</code> for producing side by side plots by another variable
+using <code>facet_wrap()</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># reorder levels of the region factor</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    tebu_mix2<span class="sc">$</span>region2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tebu_mix2<span class="sc">$</span>region, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;MT+GO&quot;</span>, <span class="st">&quot;SP+MS&quot;</span>, <span class="st">&quot;PR+RS&quot;</span>))</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1601,40 +1665,43 @@ This is what happens when one fungicide (DMI in this case) is massively used ove
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Warning: Removed 32 rows containing missing values (geom_point).</span></span></code></pre></div>
 <p><img src="unnamed-chunk-8-1.png" /></p>
 <h2 id="gganimate-plots">gganimate plots</h2>
-<p>Now the fun plots! We will use the <em>gganimate</em> package to produce a GIF animation. There is no trouble here as we just need to add <code>year</code> variable in the <code>transition_time()</code> function. Further details in official <a href="https://gganimate.com/articles/gganimate.html">package documentation</a>. I learnt that in my example year should be transformed to an integer to prevent it from displaying several decimal places.</p>
-<p>Three other functions I found interesting to add to the animation (see after <code>transition_time*()</code>, <code>ease_aes()</code>, <code>exit_fade()</code> and <code>shadow_trail()</code>). More tricks on using <em>gganimate</em> can be found <a href="https://www.listendata.com/2019/05/create-animation-in-r-learn-with.html?m=1">here</a>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(gganimate)</span>
+<p>Now the fun plots! We will use the {gganimate} package to produce a GIF animation.
+There is no trouble here as we just need to add <code>year</code> variable in the <code>transition_time()</code> function.
+Further details in official <a href="https://gganimate.com/articles/gganimate.html">package documentation</a>.
+I learnt that in my example year should be transformed to an integer to prevent it from displaying several decimal places.</p>
+<p>Three other functions I found interesting to add to the animation (see after <code>transition_time*()</code>, <code>ease_aes()</code>, <code>exit_fade()</code> and <code>shadow_trail()</code>).
+More tricks on using {gganimate} can be found <a href="https://www.listendata.com/2019/05/create-animation-in-r-learn-with.html?m=1">here</a>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    tebu_decline <span class="ot">&lt;-</span> tebu_mix2 <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(year, region2, tebu_eff, azox_cypr_eff) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">gather</span>(<span class="at">key =</span> treatment, <span class="at">value =</span> efficacy, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(efficacy <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>tebu_decline <span class="ot">&lt;-</span> tebu_mix2 <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, region2, tebu_eff, azox_cypr_eff) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(<span class="at">key =</span> treatment, <span class="at">value =</span> efficacy, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(efficacy <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    tebu_anima <span class="ot">&lt;-</span> tebu_decline <span class="sc">%&gt;%</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggplot</span>(<span class="fu">aes</span>(year, efficacy, <span class="at">color =</span> region2)) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_jitter</span>(</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">size =</span> <span class="dv">3</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">alpha =</span> <span class="fl">0.5</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">2005</span>, <span class="dv">2006</span>, <span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>, <span class="dv">2010</span>, <span class="dv">2011</span>, <span class="dv">2012</span>, <span class="dv">2013</span>, <span class="dv">2014</span>, <span class="dv">2015</span>)) <span class="sc">+</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">transition_time</span>(<span class="fu">as.integer</span>(year)) <span class="sc">+</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ease_aes</span>(<span class="st">&quot;linear&quot;</span>) <span class="sc">+</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">exit_fade</span>() <span class="sc">+</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">shadow_trail</span>(<span class="at">max_frames =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">&quot;Efficacy ot fungicides for soybean rust control&quot;</span>,</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;Each dot is one experiment. Year: {frame_time}&quot;</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">&quot;Harvest year&quot;</span>,</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">&quot;Disease reduction relative to non-treated (%)&quot;</span>,</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="st">&quot;Source: Dalla Lana (2018)&quot;</span>,</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">&quot;States&quot;</span></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">facet_grid</span>(region2 <span class="sc">~</span> treatment)</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">animate</span>(tebu_anima, <span class="at">width =</span> <span class="dv">600</span>, <span class="at">height =</span> <span class="dv">500</span>)</span></code></pre></div>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>tebu_anima <span class="ot">&lt;-</span> tebu_decline <span class="sc">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(year, efficacy, <span class="at">color =</span> region2)) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">2005</span>, <span class="dv">2006</span>, <span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>, <span class="dv">2010</span>, <span class="dv">2011</span>, <span class="dv">2012</span>, <span class="dv">2013</span>, <span class="dv">2014</span>, <span class="dv">2015</span>)) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_time</span>(<span class="fu">as.integer</span>(year)) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ease_aes</span>(<span class="st">&quot;linear&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">exit_fade</span>() <span class="sc">+</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shadow_trail</span>(<span class="at">max_frames =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Efficacy ot fungicides for soybean rust control&quot;</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Each dot is one experiment. Year: {frame_time}&quot;</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Harvest year&quot;</span>,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Disease reduction relative to non-treated (%)&quot;</span>,</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Source: Dalla Lana (2018)&quot;</span>,</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;States&quot;</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(region2 <span class="sc">~</span> treatment)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">animate</span>(tebu_anima, <span class="at">width =</span> <span class="dv">600</span>, <span class="at">height =</span> <span class="dv">500</span>)</span></code></pre></div>
 <p><img src="unnamed-chunk-9-1.gif" /></p>
-<p>This is it! Don’t forget to save this current animation to GIF using:</p>
+<p>This is it!
+Don’t forget to save this current animation to GIF using:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">anim_save</span>(<span class="st">&quot;tebuconazole-decline.gif&quot;</span>, <span class="fu">last_animation</span>())</span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

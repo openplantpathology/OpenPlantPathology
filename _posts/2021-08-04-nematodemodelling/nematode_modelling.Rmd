@@ -47,13 +47,13 @@ This post will illustrate how to fit the original linear and quadratic models us
 
 ## Packages
 
-Using the _tidyverse_, [-@TIDYVERSE2017] package simplifies the libraries used in this work.
+Using the {tidyverse}, [-@TIDYVERSE2017] package simplifies the libraries used in this work.
 It is a collection of packages designed to work together for data science, <https://www.tidyverse.org/>.
-The _tidyverse_ includes, _readr_ [-@READR2017], used to import the data; _tidyr_
-[-@TIDYR2018], used to format the data; _dplyr_ [-@DPLYR2017], used to subset the data; and _ggplot2_ [-@GGPLOT22009], used for visualising the data and model fits.
-_viridis_ [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.
+The {tidyverse} includes, {readr} [-@READR2017], used to import the data; {tidyr}
+[-@TIDYR2018], used to format the data; {dplyr} [-@DPLYR2017], used to subset the data; and {ggplot2} [-@GGPLOT22009], used for visualising the data and model fits.
+{viridis} [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.
 
-The following code chunk checks first to see if you have _tidyverse_ and _viridis_ installed, if not, it will automatically install them and then load them.
+The following code chunk checks first to see if you have{tidyverse} and {viridis} installed, if not, it will automatically install them and then load them.
 
 ```{r libraries_and_seed, message=FALSE}
 if (!require("tidyverse")) {
@@ -72,7 +72,7 @@ if (!require("viridis")) {
 ## Data Wrangling
 
 The data are located in the `data` sub-folder.
-Import the data using `read_csv()` function from _readr_  and view them.
+Import the data using `read_csv()` function from {readr}  and view them.
 
 ```{r data_import, echo=TRUE, message=FALSE}
 nema <- read_csv("data/Nematode_Data.csv")
@@ -88,13 +88,14 @@ There are nine columns in the `nema` data described here in the following table.
 
 ```{r table, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 if (!require("kableExtra")) {
-  install.packages("kableExtra", 
+  install.packages("kableExtra",
                    repos = c(CRAN = "https://cloud.r-project.org/"))
   library("kableExtra")
 }
 
 fields <- data.frame(
-  c("Weeks",
+  c(
+    "Weeks",
     "Days",
     "Temperature",
     "Degree_Days",
@@ -102,22 +103,46 @@ fields <- data.frame(
     "Gatcher",
     "GS50a",
     "Potam",
-    "Suneca"),
-  c("Number of weeks after wheat sowing",
+    "Suneca"
+  ),
+  c(
+    "Number of weeks after wheat sowing",
     "Number of days after wheat sowing",
     "Temperature (°C) treatment",
     "Average thermal time degree days above 10 °C for four soil depths
     (8, 15, 30 and 60 cm)",
-    paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in
-    the control treatment with no wheat planted"),
-    paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in a
-    susceptible wheat cultivar"),
-    paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in a
-    moderately resistant wheat cultivar"),
-    paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in a
-    susceptible wheat cultivar"),
-    paste0("Log", footnote_marker_symbol(1), ", `log()`, nematode population in a
-    susceptible wheat cultivar")))
+    paste0(
+      "Log",
+      footnote_marker_symbol(1),
+      ", `log()`, nematode population in
+    the control treatment with no wheat planted"
+    ),
+    paste0(
+      "Log",
+      footnote_marker_symbol(1),
+      ", `log()`, nematode population in a
+    susceptible wheat cultivar"
+    ),
+    paste0(
+      "Log",
+      footnote_marker_symbol(1),
+      ", `log()`, nematode population in a
+    moderately resistant wheat cultivar"
+    ),
+    paste0(
+      "Log",
+      footnote_marker_symbol(1),
+      ", `log()`, nematode population in a
+    susceptible wheat cultivar"
+    ),
+    paste0(
+      "Log",
+      footnote_marker_symbol(1),
+      ", `log()`, nematode population in a
+    susceptible wheat cultivar"
+    )
+  )
+)
 
 names(fields) <- c("Field", "Data Description")
 
@@ -127,7 +152,8 @@ fields %>%
                                       "hover",
                                       "condensed",
                                       "responsive")) %>%
-  footnote(symbol = "For an exploration into the reasons why the data were transformed using the natural log `log()`, see the [Exploring Why the Data Were Log Transformed] in the [Bonus Material] section")
+  footnote(symbol = "For an exploration into the reasons why the data were transformed using the natural log `log()`, see the [Exploring Why the Data Were Log Transformed] in the [Bonus Material] section"
+  )
 ```
 
 ### Wide to Long Data
@@ -135,10 +161,10 @@ fields %>%
 You can see that each of the varieties have their own column in the original data format, this is commonly called wide data.
 Wide data are commonly found in spreadsheets but do not lend themselves easily to data analysis, modelling and visualisation.
 To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R.
-The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table [@TIDY-DATA2014].
+The advantage of a tidy data set is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table [@TIDY-DATA2014].
 
-In order to use _ggplot2_ for visualising the data, they need to be converted from wide to long.
-Using `pivot_longer()` from the _tidyr_ package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
+In order to use {ggplot2} for visualising the data, they need to be converted from wide to long.
+Using `pivot_longer()` from the {tidyr} package to convert from wide to long format where the varieties are all listed in a single column, `Variety`.
 
 ```{r gather_data, echo=TRUE}
 nema_long <- nema %>%
@@ -155,7 +181,7 @@ As we see, the original `nema` data had only `r {nrow(nema)}` rows and the long 
 
 ## Data Visualisation
 
-Now that the data are in the format that _ggplot2_ uses, take a look at the data first to see what it looks like.
+Now that the data are in the format that {ggplot2} uses, take a look at the data first to see what it looks like.
 Here we fit a smoothed line for each variety's nematode population to the raw data.
 The individual temperature treatments are shown here by shape, the variety by colour.
 
@@ -176,7 +202,7 @@ ggplot(nema_long,
                         "/kg soil) + 1"),
                   sep = "")) +
   xlab("Thermal Time (°C Days Above 10°C)") +
-  theme_minimal() +
+  theme_light() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
     title.position = "top",
@@ -187,7 +213,7 @@ ggplot(nema_long,
   scale_colour_viridis("Temperature (°C)") +
   coord_cartesian(clip = "off",
                   expand = FALSE) +
-  facet_wrap(~ Variety, ncol = 2)
+  facet_wrap( ~ Variety, ncol = 2)
 ```
 
 ## Modelling
@@ -214,7 +240,7 @@ linear_model <- function(df) {
 }
 ```
 
-Now check the model fit, using `filter()` from _dplyr_ to select only Unplanted data from the data set for the model and fit the linear model to the data.
+Now check the model fit, using `filter()` from {dplyr} to select only Unplanted data from the data set for the model and fit the linear model to the data.
 
 ```{r check_model}
 unplanted_model <- nema_long %>%
@@ -223,7 +249,7 @@ unplanted_model <- nema_long %>%
 ```
 
 Using `par(mfrow = c(2, 2))` creates a four-panel graph rather than four individual graphs, which the next function will create by default when using R base graphics.
-If you want to arrange _ggplot2_ graphs, see [A multi panel figure for coffee leaf rust](https://openplantpathology.org/posts/2021-02-05-multiple-plot-figure/) for examples of this.
+If you want to arrange {ggplot2} graphs, see [A multi panel figure for coffee leaf rust](https://openplantpathology.org/posts/2021-02-05-multiple-plot-figure/) for examples of this.
 
 Using the `plot()` function with any `lm()` object will create four diagnostic plots for your inspection.
 
@@ -247,7 +273,7 @@ In the original paper, $P$ < 0.001, R reports $p-value:$ `r {summary(unplanted_m
 
 #### Visualising the Model Fit to the Data
 
-Using _ggplot2_'s `geom_smooth()` we can fit the same model above and graph the resulting line.
+Using {ggplot2}'s `geom_smooth()` we can fit the same model above and graph the resulting line.
 
 ```{r visualise_linear}
 nema_long %>%
@@ -270,11 +296,11 @@ nema_long %>%
                         "/kg soil) + 1"),
                   sep = "")) +
   xlab("Thermal Time (°C Days Above 10°C)") +
-  theme_minimal() +
+  theme_light() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
     title.position = "top",
-    title.hjust = .5,
+    title.hjust = 0.5,
     barwidth = unit(20, "lines"),
     barheight = unit(0.5, "lines")
   )) +
@@ -290,8 +316,8 @@ In the original paper, the quadratic model best described Gatcher and GS50a data
 
 ```{r quadratic_models, echo=TRUE}
 quadratic_model <- function(df) {
-  lm(Log_pop ~ Degree_days + I(Degree_days^2),
-      data = df)
+  lm(Log_pop ~ Degree_days + I(Degree_days ^ 2),
+     data = df)
 }
 ```
 
@@ -338,7 +364,7 @@ nema_long %>%
                         "/kg soil) + 1"),
                   sep = "")) +
   xlab("Thermal Time (°C Days Above 10°C)") +
-  theme_minimal() +
+  theme_light() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
     title.position = "top",
@@ -393,7 +419,7 @@ nema_long %>%
                         "/kg soil) + 1"),
                   sep = "")) +
   xlab("Thermal Time (°C Days Above 10°C)") +
-  theme_minimal() +
+  theme_light() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
     title.position = "top",
@@ -467,18 +493,18 @@ ggplot(nema_long,
   ggtitle("Untransformed Data") +
   coord_cartesian(clip = "off",
                   expand = FALSE) +
-  theme_minimal()
+  theme_light()
 ```
 
 ```{r qq_original}
 ggplot(nema_long,
        aes(sample = exp(Log_pop) - 1)) +
   stat_qq() +
-  facet_wrap(~ Variety,
-             ncol = 2) +
+  facet_wrap( ~ Variety,
+              ncol = 2) +
   coord_cartesian(clip = "off",
                   expand = FALSE) +
-  theme_minimal()
+  theme_light()
 ```
 
 The boxplots show that there is a wide range of values with the 25 °C temperature populations close to zero with others having quite large ranges, this could indicate heteroscedasticity.
@@ -501,12 +527,12 @@ ggplot(nema_long,
     "/kg soil) + 1)"
   ),
   sep = "")) +
-  facet_wrap( ~ Variety,
-              ncol = 2) +
+  facet_wrap(~ Variety,
+             ncol = 2) +
   ggtitle("Log Transformed Data") +
   coord_cartesian(clip = "off",
                   expand = FALSE) +
-  theme_minimal()
+  theme_light()
 ```
 
 ```{r qq_ln}
@@ -517,7 +543,7 @@ ggplot(nema_long,
              ncol = 2) +
   coord_cartesian(clip = "off",
                   expand = FALSE) +
-  theme_minimal()
+  theme_light()
 ```
 
 Here we see that the `log()` transformed data's boxplots show fewer outliers and tighter range of values.
@@ -533,7 +559,7 @@ Since the `unplanted_model` object already exists as a product of the linear mod
 
 ```{r unplanted_poly}
 unplanted_poly_model <- nema_long %>%
-  filter(Variety == "Unplanted") %>% 
+  filter(Variety == "Unplanted") %>%
   quadratic_model()
 
 par(mfrow = c(2, 2))
@@ -543,7 +569,7 @@ summary(unplanted_poly_model)
 ```
 
 By this information, the $R^2$ value is a bit better from the `unplanted_poly_model`, `r {summary(unplanted_poly_model)$r.squared}`, than the original `unplanted_model`'s, `r {summary(unplanted_model)$r.squared}`.
-Using the same code from above it is easy to visualise the new model's fit using _ggplot2_.
+Using the same code from above it is easy to visualise the new model's fit using {ggplot2}.
 
 ```{r visualise_unplanted_poly_model}
 nema_long %>%
@@ -551,7 +577,7 @@ nema_long %>%
   filter(Variety == "Unplanted") %>%
   ggplot(aes(x = Degree_days,
              y = Log_pop,
-             colour = Temperature, )) +
+             colour = Temperature,)) +
   geom_point(size = 3.5) +
   geom_smooth(
     method = "lm",
@@ -566,11 +592,11 @@ nema_long %>%
                         "/kg soil) + 1"),
                   sep = "")) +
   xlab("Thermal Time (°C Days Above 10°C)") +
-  theme_minimal() +
+  theme_light() +
   theme(legend.position = "top") +
   guides(color = guide_colorbar(
     title.position = "top",
-    title.hjust = .5,
+    title.hjust = 0.5,
     barwidth = unit(20, "lines"),
     barheight = unit(0.5, "lines")
   )) +
@@ -603,8 +629,8 @@ Therefore, without more data to distinguish the models it appears that either mo
 
 Wickham [-@TIDY-DATA2014] introduced the idea of tidy data for analysis.
 As you work with raw data from many sources, it is useful to understand what this means and why it is useful.
-In this example, _tidyr_ was used to convert the data from wide to long format.
-For a more in-depth look at using _tidyr_ see:
+In this example, {tidyr} was used to convert the data from wide to long format.
+For a more in-depth look at using {tidyr} see:
 
 - [Introducing tidyr](https://blog.rstudio.com/2014/07/22/introducing-tidyr/)
 
@@ -626,7 +652,7 @@ Prof. Faraway has more recent books on the subject as well that you might wish t
 ### Selecting the Right Colour Scheme
 
 Selecting good colour schemes is essential for communicating your message.
-The _viridis_ package makes this much easier to do.
+The {viridis} package makes this much easier to do.
 Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, [Using the new 'viridis' colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
 Other colour palettes for R exist as well.
 Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Color Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.

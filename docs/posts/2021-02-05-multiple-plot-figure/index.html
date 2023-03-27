@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,11 +74,11 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -84,10 +86,11 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-  <!--radix_placeholder_meta_tags-->
-<title>Open Plant Pathology: A multi panel figure for coffee leaf rust</title>
 
-<meta property="description" itemprop="description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers."/>
+  <!--radix_placeholder_meta_tags-->
+<title>Open Plant Pathology: A multi-panel figure for coffee leaf rust</title>
+
+<meta property="description" itemprop="description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers."/>
 
 <link rel="canonical" href="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/"/>
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
@@ -99,9 +102,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Emerson Del Ponte"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Open Plant Pathology: A multi panel figure for coffee leaf rust"/>
+<meta property="og:title" content="Open Plant Pathology: A multi-panel figure for coffee leaf rust"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers."/>
+<meta property="og:description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers."/>
 <meta property="og:url" content="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/"/>
 <meta property="og:image" content="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/multipanel1.png"/>
 <meta property="og:image:width" content="1554"/>
@@ -111,8 +114,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Open Plant Pathology: A multi panel figure for coffee leaf rust"/>
-<meta property="twitter:description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers."/>
+<meta property="twitter:title" content="Open Plant Pathology: A multi-panel figure for coffee leaf rust"/>
+<meta property="twitter:description" content="In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers."/>
 <meta property="twitter:url" content="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/"/>
 <meta property="twitter:image" content="https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/multipanel1.png"/>
 <meta property="twitter:image:width" content="1554"/>
@@ -122,12 +125,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["A multi panel figure for coffee leaf rust"]},{"type":"character","attributes":{},"value":["In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://emersondelponte.netlify.app"]}]}]},{"type":"character","attributes":{},"value":["02-11-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["multipanel1.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["A multi-panel figure for coffee leaf rust"]},{"type":"character","attributes":{},"value":["In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://emersondelponte.netlify.app"]}]}]},{"type":"character","attributes":{},"value":["02-11-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["multipanel1.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2021-02-05-multiple-plot-figure/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/anchor-4.2.2/anchor.min.js","multiple-plot-figure_files/bowser-1.9.3/bowser.min.js","multiple-plot-figure_files/distill-2.2.21/template.v2.js","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js","multiple-plot-figure_files/header-attrs-2.7/header-attrs.js","multiple-plot-figure_files/jquery-1.11.3/jquery.min.js","multiple-plot-figure_files/popper-2.6.0/popper.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-bundle.umd.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-light-border.css","multiple-plot-figure_files/tippy-6.2.7/tippy.css","multiple-plot-figure_files/tippy-6.2.7/tippy.umd.min.js","multiple-plot-figure_files/webcomponents-2.0.0/webcomponents.js","mymultipanel1.png","mymultipanel2.png"]}
+  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/anchor-4.2.2/anchor.min.js","multiple-plot-figure_files/bowser-1.9.3/bowser.min.js","multiple-plot-figure_files/distill-2.2.21/template.v2.js","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","multiple-plot-figure_files/header-attrs-2.20/header-attrs.js","multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js","multiple-plot-figure_files/header-attrs-2.7/header-attrs.js","multiple-plot-figure_files/jquery-1.11.3/jquery.min.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.min.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.min.map","multiple-plot-figure_files/popper-2.6.0/popper.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-bundle.umd.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-light-border.css","multiple-plot-figure_files/tippy-6.2.7/tippy.css","multiple-plot-figure_files/tippy-6.2.7/tippy.umd.min.js","multiple-plot-figure_files/webcomponents-2.0.0/webcomponents.js","mymultipanel1.png","mymultipanel2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2401,8 +2404,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2429,7 +2432,7 @@ gtag('config', 'UA-112255011-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"A multi panel figure for coffee leaf rust","description":"In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://emersondelponte.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-11T00:00:00.000+08:00","citationText":"Ponte, 2021"}
+{"title":"A multi-panel figure for coffee leaf rust","description":"In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://emersondelponte.netlify.app","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-11T00:00:00.000+08:00","citationText":"Ponte, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2452,9 +2455,6 @@ gtag('config', 'UA-112255011-1');
 <a href="https://scicomm.xyz/@openplantpathology">
 <i class="fab fa-mastodon" aria-hidden="true"></i>
 </a>
-<a href="https://www.twitter.com/openplantpathology">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
 <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">
 <i class="fab fa-slack fa-lg" aria-hidden="true"></i>
 </a>
@@ -2470,13 +2470,13 @@ gtag('config', 'UA-112255011-1');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>A multi panel figure for coffee leaf rust</h1>
+<h1>A multi-panel figure for coffee leaf rust</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi panel figures, using the R package patchwork to produce the most common multi panel figures for scientific papers.</p></p>
+<p><p>In scientific publishing, it is a good visualization practice to present more than one plot (graph, chart or images) in the same figure, not only to improve communication and comparison but also decrease the number of total figures referenced in papers. I use a coffee leaf rust data set to demonstrate how to make these multi-panel figures, using the R package patchwork to produce the most common multi-panel figures for scientific papers.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2487,134 +2487,151 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="todays-topic">Today’s topic</h2>
-<p>Hello! this is our inaugural post for the <a href="https://emdelponte.github.io/OPP-distill/#category:R4PlantPath">#R4PlantPath</a> blog post category. Every week or so we will be <strong>sharing one piece of R code</strong> that (we hope!) you will find useful for analyzing or communicating plant pathology research and data more effectively and in a reproducible manner, using R.</p>
+<p>Hello! this is our inaugural post for the <a href="https://emdelponte.github.io/OPP-distill/#category:R4PlantPath">#R4PlantPath</a> blog post category.
+Every week or so we will be <strong>sharing one piece of R code</strong> that (we hope!) you will find useful for analyzing or communicating plant pathology research and data more effectively and in a reproducible manner, using R.</p>
 <p><img src="multipanel1.png" /></p>
-<p>I will start with a technique that has been very useful, at least for me, and that many people usually make use of multiple software to prepare: the multi panel plot figure. This was the past me, not so many years ago. After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).</p>
-<p>This approach works, of course, but it can be counterproductive every time the plot is updated (or a colleague requests a change) and the whole figure should be re-designed. It can be even more complicated and laborious if the manual tweaking is extensive. In brief, it is neither time-effective nor reproducible.</p>
-<p>My multi panel plotting game changed when I discovered the <code>plot_grid</code> function of the <a href="https://wilkelab.org/cowplot/"><em>cowplot</em></a> package (or in short, pkg). I used it until I discovered another game changer, the <a href="https://patchwork.data-imaginist.com/index.html"><em>patchwork</em></a> package. Both packages are great options and it is really a matter of preference. I like the simplicity of the patchwork syntax.</p>
+<p>I will start with a technique that has been very useful, at least for me, and that many people usually make use of multiple software to prepare: the multi-panel plot figure.
+This was the past me, not so many years ago. After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).</p>
+<p>This approach works, of course, but it can be counterproductive every time the plot is updated (or a colleague requests a change) and the whole figure should be re-designed.
+It can be even more complicated and laborious if the manual tweaking is extensive.
+In brief, it is neither time-effective nor reproducible.</p>
+<p>My multi-panel plotting game changed when I discovered the <code>plot_grid</code> function of the <a href="https://wilkelab.org/cowplot/">{cowplot}</a> package (or in short, pkg).
+I used it until I discovered another game changer, the <a href="https://patchwork.data-imaginist.com/index.html">{patchwork}</a> pkg.
+Both packages are great options and it is really a matter of preference.
+I like the simplicity of the patchwork syntax.</p>
 <h2 id="who-is-this-post-for">Who is this post for?</h2>
-<p>I assume that you are an R (read Rstudio and tidyverse here) user and are capable of producing a ggplot object. I will focus mainly on the specifics of how to use the patchwork package to produce the most common type of figures and save them in the PNG format. Please refer to several other good tutorials on the web on how to code using <a href="https://www.tidyverse.org/">tidyverse</a> and create great <a href="https://r4ds.had.co.nz/data-visualisation.html">visualizations using ggplot</a>.</p>
+<p>I assume that you are an R (read RStudio and {tidyverse} here) user and are capable of producing a {ggplot2} object.
+I will focus mainly on the specifics of how to use the patchwork pkg to produce the most common type of figures and save them in the PNG format.
+Please refer to several other good tutorials on the web on how to code using <a href="https://www.tidyverse.org/">{tidyverse}</a> and create great <a href="https://r4ds.had.co.nz/data-visualisation.html">visualizations using ggplot</a>.</p>
 <h2 id="would-you-like-some-coffee">Would you like some coffee?</h2>
-<p>Using a plant pathology data set - Yay! No <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/iris">iris</a> or <a href="https://allisonhorst.github.io/palmerpenguins/index.html">penguins</a> allowed here!. I may be biased (as coauthor of the paper) but the data set we are going to use is very rich to explore and demonstrate many ways to produce ggplots and different analyses (we will look at these in future posts!). Plant disease datasets may be more interesting for plant pathologists than for other botanists, biologists and other scientists in general interested in playing with datasets for learning R.</p>
-<p>The data set was gathered from a survey for one of the most important diseases globally, coffee leaf rust, caused by <em>Hemileia vastatrix</em>. A large survey was conducted in Ethiopia to map the incidence and severity of the disease during one season. You can head over to the <a href="https://link.springer.com/article/10.1007/s40858-020-00383-4">paper</a> for more details if you would like to understand the work at an advance level.</p>
-<p>The data set is available online, in a github repo, as a <code>csv</code> file. We will import the coffee leaf rust data into the R environment and store this as a data frame object named <code>mycoffee</code>.</p>
+<p>Using a plant pathology data set - Yay!
+No <a href="https://www.rdocumentation.org/packages/data sets/versions/3.6.2/topics/iris">iris</a> or <a href="https://allisonhorst.github.io/palmerpenguins/index.html">penguins</a> allowed here!
+I may be biased (as coauthor of the paper) but the data set we are going to use is very rich to explore and demonstrate many ways to produce {ggplot2} figures and different analyses (we will look at these in future posts!).
+Plant disease data sets may be more interesting for plant pathologists than for other botanists, biologists and other scientists in general interested in playing with data sets for learning R.</p>
+<p>The data set was gathered from a survey for one of the most important diseases globally, coffee leaf rust, caused by <em>Hemileia vastatrix</em>.
+A large survey was conducted in Ethiopia to map the incidence and severity of the disease during one season.
+You can head over to the <a href="https://link.springer.com/article/10.1007/s40858-020-00383-4">paper</a> for more details if you would like to understand the work at an advance level.</p>
+<p>The data set is available online, in a github repo, as a <code>csv</code> file.
+We will import the coffee leaf rust data into the R environment and store this as a data frame object named <code>mycoffee</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span>
-<span class='va'>url</span> <span class='op'>&lt;-</span> <span class='st'>"https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv"</span> <span class='co'>#this allows us to import the data from the online github repo</span>
-<span class='va'>mycoffee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='va'>url</span><span class='op'>)</span> <span class='co'>#and store it as a data frame object in our R environmnet</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='va'>url</span> <span class='op'>&lt;-</span></span>
+<span>  <span class='st'>"https://raw.githubusercontent.com/emdelponte/paper-coffee-rust-Ethiopia/master/data/survey_clean.csv"</span> <span class='co'>#this allows us to import the data from the online github repo</span></span>
+<span><span class='va'>mycoffee</span> <span class='op'>&lt;-</span></span>
+<span>  <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='va'>url</span><span class='op'>)</span> <span class='co'>#and store it as a data frame object in our R environment</span></span></code></pre>
 </div>
 </div>
 <h2 id="single-plots-first">Single plots first</h2>
 <p>In the <code>mycoffee</code> data frame, there are two coffee rust-related variables (responses) of interest for our investigation, <code>inc</code> and <code>sev2</code>, incidence and severity, both are measured as a percentage; and there is a strong <strong>association</strong> between them.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>theme_set</span><span class='op'>(</span><span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># for a global ggplot theme</span>
-
-<span class='va'>p_cor</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>inc</span>, <span class='va'>sev2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_point</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>p_cor</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme_get.html'>theme_set</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># for a global ggplot theme</span></span>
+<span></span>
+<span><span class='va'>p_cor</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>inc</span>, <span class='va'>sev2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>p_cor</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
-<p>Let’s make two other plots, one for <code>cultivar</code> (factor variable) and other for <code>altitude</code> (numeric variable), relating each with <code>inc</code>. As we did for the first plots, we need to assign each plot to a ggplot object before we can produce the multi panel figure.</p>
+<p>Let’s make two other plots, one for <code>cultivar</code> (factor variable) and other for <code>altitude</code> (numeric variable), relating each with <code>inc</code>.
+As we did for the first plots, we need to assign each plot to a {ggplot2} object before we can produce the multi-panel figure.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cult</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>cultivar</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_boxplot</span><span class='op'>(</span><span class='op'>)</span>
-
-<span class='va'>p_cult</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_cult</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>cultivar</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_boxplot.html'>geom_boxplot</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>p_cult</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_alt</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'>%&gt;%</span> 
-  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span><span class='va'>altitude</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_point</span><span class='op'>(</span><span class='op'>)</span>
-  
-<span class='va'>p_alt</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_alt</span> <span class='op'>&lt;-</span> <span class='va'>mycoffee</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>altitude</span>, <span class='va'>inc</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>p_alt</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <h2 id="two-panel-plot">Two-panel plot</h2>
-<p>Now that we have the two ggplot objects, we can use the patchwork pkg to produce a two-plot panel - the easiest way I’ve seen with the simplest layout, side by side.</p>
+<p>Now that we have the two {ggplot2} objects, we can use the {patchwork} pkg to produce a two-plot panel - the easiest way I’ve seen with the simplest layout, side by side.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span>
-<span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span></span>
+<span><span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
-<p>Is that it? Yes! just load the package and the <code>|</code> character will do the magic when connecting the two ggplot objects. But there is more, actually much more if you look at the documentation of the package. Let’s keep exploring a few cool features for our nice coffee rust data set. Now we switch to the <code>/</code> character to see one plot on top of another.</p>
+<p>Is that it?
+Yes!
+Just load the pkg and the <code>|</code> character will do the magic when connecting the two {ggplot2} objects.
+But there is more, actually much more if you look at the documentation of the pkg
+Let’s keep exploring a few cool features for our nice coffee rust data set.
+Now we switch to the <code>/</code> character to see one plot on top of another.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cult</span> <span class='op'>/</span> <span class='va'>p_alt</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_cult</span> <span class='op'>/</span> <span class='va'>p_alt</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <h2 id="three-panel-plot">Three-panel plot</h2>
-<p>What about a three-panel plot… can we also do this? Yes, just follow the same logic.</p>
+<p>What about a three-panel plot… can we also do this?
+Yes, just follow the same logic.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cor</span> <span class='op'>/</span>
-  <span class='op'>(</span><span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span> <span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_cor</span> <span class='op'>/</span></span>
+<span>  <span class='op'>(</span><span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span><span class='op'>)</span></span></code></pre>
 </div>
 <img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png" width="624" />
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># try yourself:</span>
-<span class='co'># p_cor | p_cult | p_alt </span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># try yourself:</span></span>
+<span><span class='co'># p_cor | p_cult | p_alt </span></span></code></pre>
 </div>
 </div>
 <h2 id="plot-annotation">Plot annotation</h2>
-<p>For scientific publishing, we need to refer to each plot by using a tag, usually using letters of the alphabet. The <code>plot_annotation</code> function comes in handy to have the tag_levels defined.</p>
+<p>For scientific publishing, we need to refer to each plot by using a tag, usually using letters of the alphabet.
+The <code>plot_annotation</code> function comes in handy to have the tag_levels defined.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span>
-<span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>p_cult</span> <span class='op'>|</span> <span class='va'>p_alt</span></span>
+<span><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span></span></code></pre>
 </div>
 <img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png" width="624" />
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Try yourself these alternatives:</span>
-<span class='co'># p1 + plot_annotation(tag_levels = 'a')</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Try yourself these alternatives:</span></span>
+<span><span class='co'># p1 + plot_annotation(tag_levels = 'a')</span></span></code></pre>
 </div>
 </div>
-<p>Is the default font size too small? This is no problem, we can customize the text size element of the theme.</p>
+<p>Is the default font size too small?
+This is no problem, we can customize the text size element of the theme.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span> <span class='op'>&amp;</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.tag <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span><span class='op'>)</span> 
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>'A'</span><span class='op'>)</span> <span class='op'>&amp;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>plot.tag <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span><span class='op'>)</span> </span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <h2 id="plot-layout">Plot layout</h2>
-<p>By default, each plot occupies the same space in the panel. Sometimes we want them to occupy different spaces, right… This can be handled using the <code>plot_layout</code> function and the width argument. Let’s say we want the scatter plot to be double the width of the boxplot. The logic is similar when arranging the plots in a single column and two rows, but using the <code>height</code> argument.</p>
+<p>By default, each plot occupies the same space in the panel.
+Sometimes we want them to occupy different spaces, right…
+This can be handled using the <code>plot_layout</code> function and the width argument.
+Let’s say we want the scatter plot to be double the width of the boxplot.
+The logic is similar when arranging the plots in a single column and two rows, but using the <code>height</code> argument.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p1</span> <span class='op'>+</span> <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://patchwork.data-imaginist.com/reference/wrap_elements.html'>wrap_elements</a></span><span class='op'>(</span><span class='fu'>grid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.text.html'>textGrob</a></span><span class='op'>(</span><span class='st'>'Text on top side'</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>p1</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://patchwork.data-imaginist.com/reference/wrap_elements.html'>wrap_elements</a></span><span class='op'>(</span><span class='fu'>grid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.text.html'>textGrob</a></span><span class='op'>(</span><span class='st'>'Text on top side'</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>p1</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
 </div>
@@ -2622,30 +2639,39 @@ gtag('config', 'UA-112255011-1');
 <p>Finally, we want to display a large plot, but the other plot should be an inset of this one.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p_cor</span> <span class='op'>+</span>
-    <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/inset_element.html'>inset_element</a></span><span class='op'>(</span><span class='va'>p_cult</span>, 
-                      left <span class='op'>=</span> <span class='fl'>0</span>, 
-                      bottom <span class='op'>=</span> <span class='fl'>0.4</span>, 
-                      right <span class='op'>=</span> <span class='fl'>0.4</span>, 
-                      top <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>theme_light</span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
- <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p_cor</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/inset_element.html'>inset_element</a></span><span class='op'>(</span></span>
+<span>    <span class='va'>p_cult</span>,</span>
+<span>    left <span class='op'>=</span> <span class='fl'>0</span>,</span>
+<span>    bottom <span class='op'>=</span> <span class='fl'>0.4</span>,</span>
+<span>    right <span class='op'>=</span> <span class='fl'>0.4</span>,</span>
+<span>    top <span class='op'>=</span> <span class='fl'>1</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span></span></code></pre>
 </div>
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
 <h2 id="saving-the-plots">Saving the plots</h2>
-<p>Saving is the same as with any ggplot, using the <code>ggsave</code> function and setting the <code>width</code> and <code>height</code>, as well as the <code>dpi</code> argument. Everything working, the PNG file should appear in the working directory. If the figure is not at the desired size at first, I keep modifying the width and height, until you are happy with your visualization.</p>
+<p>Saving is the same as with any {ggplot2} object, using the <code>ggsave</code> function and setting the <code>width</code> and <code>height</code>, as well as the <code>dpi</code> argument.
+Everything working, the PNG file should appear in the working directory.
+If the figure is not at the desired size at first, I keep modifying the width and height, until you are happy with your visualization.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>ggsave</span><span class='op'>(</span><span class='st'>"mymultipanel1.png"</span>, width <span class='op'>=</span> <span class='fl'>8</span>, height <span class='op'>=</span> <span class='fl'>3</span>, dpi <span class='op'>=</span> <span class='fl'>300</span> <span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='va'>p1</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span></span>
+<span>  filename <span class='op'>=</span> <span class='st'>"mymultipanel1.png"</span>,</span>
+<span>  plot <span class='op'>=</span> <span class='va'>p2</span>,</span>
+<span>  width <span class='op'>=</span> <span class='fl'>8</span>,</span>
+<span>  height <span class='op'>=</span> <span class='fl'>3</span>,</span>
+<span>  dpi <span class='op'>=</span> <span class='fl'>300</span></span>
+<span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png" width="624" /></p>
 </div>
-<p>That is it, we hope you find this useful, and of course these are very basic plots that can be heavily customized, but this is beyond my intent with this post, keep an eye our for future posts. Here is a list of suggested tutorials on patchwork.</p>
+<p>That is it, we hope you find this useful, and of course these are very basic plots that can be heavily customized, but this is beyond my intent with this post, keep an eye our for future posts.
+Here is a list of suggested tutorials on patchwork.</p>
 <ul>
 <li><p><a href="https://patchwork.data-imaginist.com/">The composer of plots - patchwork</a></p></li>
 <li><p><a href="https://www.littlemissdata.com/blog/patchwork">Patchwork R package goes nerd viral</a></p></li>
@@ -2653,25 +2679,27 @@ gtag('config', 'UA-112255011-1');
 </ul>
 <h2 id="post-publication-updates">Post-publication updates</h2>
 <h3 id="plotting-raster-image-march-11-2021">Plotting raster image (March 11 2021)</h3>
-<p>For the purpose of plotting raster images I found that the cowplot provides a neat solution. Let’s load an image using the <code>draw_image()</code> function of cowplot (which requires the magick package to work). We will download an <a href="https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg">image of coffee leaf rust from the internet</a> and create the <code>clr_photo</code> object.</p>
+<p>For the purpose of plotting raster images, I found that {cowplot} provides a neat solution.
+Let’s load an image using the <code>draw_image()</code> function of {cowplot} (which requires the {magick} pkg to work).
+We will download an <a href="https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg">image of coffee leaf rust from the internet</a> and create the <code>clr_photo</code> object.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wilkelab.org/cowplot/'>cowplot</a></span><span class='op'>)</span>
-<span class='va'>clr_photo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wilkelab.org/cowplot/reference/ggdraw.html'>ggdraw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://wilkelab.org/cowplot/reference/draw_image.html'>draw_image</a></span><span class='op'>(</span><span class='st'>"https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg"</span><span class='op'>)</span> 
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wilkelab.org/cowplot/'>cowplot</a></span><span class='op'>)</span></span>
+<span><span class='va'>clr_photo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wilkelab.org/cowplot/reference/ggdraw.html'>ggdraw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://wilkelab.org/cowplot/reference/draw_image.html'>draw_image</a></span><span class='op'>(</span></span>
+<span>    <span class='st'>"https://emerycoffee.files.wordpress.com/2013/04/1024px-hemileia_vastatrix_-_coffee_leaf_rust.jpg"</span></span>
+<span>  <span class='op'>)</span> </span></code></pre>
 </div>
 </div>
-<p>Ok, now we can use it as any other object in patchwork.</p>
+<p>OK, now we can use it as any other object in patchwork.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='op'>(</span><span class='va'>p_cor</span> <span class='op'>|</span> <span class='va'>clr_photo</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span><span class='op'>+</span>
-<span class='fu'>ggsave</span><span class='op'>(</span><span class='st'>"mymultipanel2.png"</span>, width <span class='op'>=</span> <span class='fl'>10</span>, height <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='op'>(</span><span class='va'>p_cor</span> <span class='op'>|</span> <span class='va'>clr_photo</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>widths <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_annotation.html'>plot_annotation</a></span><span class='op'>(</span>tag_levels <span class='op'>=</span> <span class='st'>"A"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"mymultipanel2.png"</span>, width <span class='op'>=</span> <span class='fl'>10</span>, height <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
 </div>
 <p>Here is the image as saved.</p>
 <p><img src="mymultipanel2.png" /></p>

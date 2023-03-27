@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -117,7 +118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["a-plant-pathologists-guide-to-writing-your-first-r-package_files/anchor-4.2.2/anchor.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/bowser-1.9.3/bowser.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/distill-2.2.21/template.v2.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.6.6/header-attrs.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.7/header-attrs.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-1.11.3/jquery.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/popper-2.6.0/popper.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy-bundle.umd.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy-light-border.css","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy.css","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy.umd.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/webcomponents-2.0.0/webcomponents.js","post-rpackage.png"]}
+  {"type":"character","attributes":{},"value":["a-plant-pathologists-guide-to-writing-your-first-r-package_files/anchor-4.2.2/anchor.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/bowser-1.9.3/bowser.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/distill-2.2.21/template.v2.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.11/header-attrs.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.6.6/header-attrs.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.7/header-attrs.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-1.11.3/jquery.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-3.6.0/jquery-3.6.0.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-3.6.0/jquery-3.6.0.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-3.6.0/jquery-3.6.0.min.map","a-plant-pathologists-guide-to-writing-your-first-r-package_files/popper-2.6.0/popper.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy-bundle.umd.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy-light-border.css","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy.css","a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy.umd.min.js","a-plant-pathologists-guide-to-writing-your-first-r-package_files/webcomponents-2.0.0/webcomponents.js","post-rpackage.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -188,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -429,10 +431,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1264,9 +1262,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1278,6 +1288,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1377,6 +1412,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1399,7 +1436,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1438,7 +1475,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="a-plant-pathologists-guide-to-writing-your-first-r-package_files/header-attrs-2.20/header-attrs.js"></script>
   <script src="a-plant-pathologists-guide-to-writing-your-first-r-package_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="a-plant-pathologists-guide-to-writing-your-first-r-package_files/popper-2.6.0/popper.min.js"></script>
   <link href="a-plant-pathologists-guide-to-writing-your-first-r-package_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1472,7 +1509,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>A Plant Pathologist’s Guide to Writing Your First R Package</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">R4PlantPath</div>
+<div class="dt-tag">R4PlantPath</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>So you want to write your first R package, but you don’t know where to start? We can help with that! Writing an R package is not difficult, but it can be intimidating for a first timer. Why would you want to write an R package? Read more to find out!</p></p>
@@ -1486,8 +1523,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="so-you-want-to-write-an-r-package">So You Want to Write an R Package?</h2>
-<p>So you want to write your first R package, but you don’t know where to start? We can help with that! Writing an R package is not difficult <em>per se</em>, but it can be intimidating for a first timer. Why would you want to write an R package? Well, as <a href="https://twitter.com/phytophthoralab">@PhytophthoraLab</a> says, if you have more than two functions, you have a package, plus it means you can get citations! Yes, if you write a nice R package that people like and use and you have provided the proper information, it can (and should) lead to citations for you.</p>
-<p>Before we proceed. I have made some basic assumptions here.</p>
+<p>So you want to write your first R package, but you don’t know where to start?
+We can help with that! Writing an R package is not difficult <em>per se</em>, but it can be intimidating for a first timer.
+Why would you want to write an R package?
+Well, as <a href="https://twitter.com/phytophthoralab">@PhytophthoraLab</a> says, if you have more than two functions, you have a package, plus it means you can get citations!
+Yes, if you write a nice R package that people like and use and you have provided the proper information, it can (and should) lead to citations for you.</p>
+<p>Before we proceed.
+I have made some basic assumptions here.</p>
 <ol type="1">
 <li><p>You are familiar enough with R to write your own <a href="http://adv-r.had.co.nz/Functions.html">functions</a>.</p></li>
 <li><p>You have <a href="https://www.rstudio.org">RStudio</a> installed.</p></li>
@@ -1496,29 +1538,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ol>
 <h2 id="resources">Resources</h2>
 <p>Rather than writing another lengthy blog post about how to create an R package, I’ll just point to some of the resources that are available to get you started and fill in what I see as some gaps.</p>
-<p>First, <a href="https://hadley.nz">Hadley Wickham</a> has written a book on this topic, “<a href="https://r-pkgs.had.co.nz">R Packages</a>’’, which is free from his website or available from <a href="https://www.amazon.com/R-Packages-Hadley-Wickham-2015-04-13/dp/B017YC91HO/">Amazon</a>. That book has everything you need to get started with writing an R package.</p>
-<p>Second, I used <a href="https://hilaryparker.com/">Hilary Parker’s</a> tutorial, “<a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Writing an R package from scratch</a>’’ when I wrote <a href="https://adamhsparks.github.io/EddyCleanR/">my first R package</a>. I can recommend this one for getting started.</p>
+<p>First, <a href="https://hadley.nz">Hadley Wickham</a> has written a book on this topic, “<a href="https://r-pkgs.had.co.nz">R Packages</a>’’, which is free from his website or available from <a href="https://www.amazon.com/R-Packages-Hadley-Wickham-2015-04-13/dp/B017YC91HO/">Amazon</a>.
+That book has everything you need to get started with writing an R package.</p>
+<p>Second, I used <a href="https://hilaryparker.com/">Hilary Parker’s</a> tutorial, “<a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Writing an R package from scratch</a>” when I wrote <a href="https://adamhsparks.github.io/EddyCleanR/">my first R package</a>.
+I can recommend this one for getting started.</p>
 <p>But if that’s not enough, Karl Broman has put together a <a href="https://kbroman.org/pkg_primer">fantastic primer</a> where he even states that there is value in a diversity of resources, hence this blog post.</p>
-<p>The aforementioned resources will help you get your package set up and working. I will not spend too much time covering the ground they cover already. Rather, I will spend some time covering areas that I have found useful, but that they do not cover like CITATION files (and why you need one), setting up a <a href="https://pkgdown.r-lib.org"><strong>pkgdown</strong></a> website or how to get a DOI for the package.</p>
+<p>The aforementioned resources will help you get your package set up and working.
+I will not spend too much time covering the ground they cover already.
+Rather, I will spend some time covering areas that I have found useful, but that they do not cover like CITATION files (and why you need one), setting up a <a href="https://pkgdown.r-lib.org">{pkgdown}</a> website or how to get a DOI for the package.</p>
 <h3 id="getting-started">Getting Started</h3>
-<p>The easiest way to get started is with RStudio and the <a href="https://usethis.r-lib.org"><strong>usethis</strong></a> and <a href="https://devtools.r-lib.org"><strong>devtools</strong></a> packages.</p>
-<p>Two other packages that you will want to use are <a href="https://github.com/ropenscilabs/available"><strong>available</strong></a>, which you can use to check the availability of your package name and <strong>pkgdown</strong> for building a documentation website for your package.</p>
-<p>If you have not already installed these packages, install them now. They can be installed as follows.</p>
+<p>The easiest way to get started is with RStudio and the <a href="https://usethis.r-lib.org">{usethis}</a> and <a href="https://devtools.r-lib.org">{devtools}</a> packages.</p>
+<p>Two other packages that you will want to use are <a href="https://github.com/ropenscilabs/available">{available}</a>, which you can
+use to check the availability of your package name and {pkgdown} for building a documentation website for your package.</p>
+<p>If you have not already installed these packages, install them now.
+They can be installed as follows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"devtools"</span>, <span class='st'>"usethis"</span>, <span class='st'>"available"</span>, <span class='st'>"pkgdown"</span>, <span class='st'>"goodpractice"</span><span class='op'>)</span>,
-     dependencies <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"devtools"</span>,</span>
+<span>                   <span class='st'>"usethis"</span>,</span>
+<span>                   <span class='st'>"available"</span>,</span>
+<span>                   <span class='st'>"pkgdown"</span>,</span>
+<span>                   <span class='st'>"goodpractice"</span><span class='op'>)</span>,</span>
+<span>                 dependencies <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <h3 id="naming">Naming</h3>
-<p>Once you are set up and going, first things first. You need a good name for your new package. Hadley offers his advice here: <a href="http://r-pkgs.had.co.nz/package.html#naming" class="uri">http://r-pkgs.had.co.nz/package.html#naming</a> While there is no real consensus on naming R packages CRAN does offer a few guidelines that you need to follow.</p>
+<p>Once you are set up and going, first things first.
+You need a good name for your new package. Hadley offers his advice here: <a href="http://r-pkgs.had.co.nz/package.html#naming" class="uri">http://r-pkgs.had.co.nz/package.html#naming</a>.
+While there is no real consensus on naming R packages CRAN does offer a few guidelines that you need to follow.</p>
 <blockquote>
 <p>The mandatory ‘Package’ field gives the name of the package. This should contain only (ASCII) letters, numbers and dot, have at least two characters and start with a letter and not end in a dot.</p>
 </blockquote>
 <p>Also note, that the use of an underscore, “_”, is not allowed in package names.</p>
 <p>It is best to keep it short and informative.</p>
-<p>Once you have picked a good name, check that it is available and does not have any connotations you might want to convey using <strong>available</strong>, <code>available::available("spiffypkgname")</code>.</p>
+<p>Once you have picked a good name, check that it is available and does not have any connotations you might want to convey using {available}, <code>available::available("spiffypkgname")</code>.</p>
 <h3 id="package-structure">Package Structure</h3>
 <p>The easiest way to set up your package structure is to either use RStudio’s capability to make an R package when creating a new project (with your spiffy new package name) or use <code>usethis::create_package("spiffypkgname")</code>, which will set up the directories you need go get started and add the skeleton of an R package for you to start filling in.</p>
 <h3 id="what-goes-where">What Goes Where?</h3>
@@ -1529,22 +1582,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   | - R/
   | - man/</code></pre>
 <p>There, you’ve created an R package!</p>
-<p>The DESCRIPTION holds the author information, a description of the package itself, and other information on what packages are necessary for yours to work (Imports). There are specific rules about formatting in the DESCRIPTION file that must be followed. Hadley gives a good overview, <a href="http://r-pkgs.had.co.nz/description.html" class="uri">http://r-pkgs.had.co.nz/description.html</a>, but I suggested that you see <a href="https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file" class="uri">https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file</a> for a much more in-depth guide as well.</p>
-<p>Most of the time you will not need to edit the NAMESPACE file directly. The <strong>devtools</strong> package provides tools that will help maintain that for you. This file ensures that your package plays nice with the others in R.</p>
-<p>The R subdirectory is where you put your R scripts. Typically these would be scripts of functions that you wish to share with others.</p>
-<p>The man directory is where the help files are stored. Once you start documenting the scripts in R, this will populate.</p>
+<p>The DESCRIPTION holds the author information, a description of the package itself, and other information on what packages are necessary for yours to work (Imports).
+There are specific rules about formatting in the DESCRIPTION file that must be followed. Hadley gives a good overview,
+<a href="http://r-pkgs.had.co.nz/description.html" class="uri">http://r-pkgs.had.co.nz/description.html</a>, but I suggested that you see <a href="https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file" class="uri">https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file</a> for a much more in-depth guide as well.</p>
+<p>Most of the time you will not need to edit the NAMESPACE file directly.
+The {devtools} package provides tools that will help maintain that for you.
+This file ensures that your package plays nice with the others in R.</p>
+<p>The R subdirectory is where you put your R scripts.
+Typically these would be scripts of functions that you wish to share with others.</p>
+<p>The man directory is where the help files are stored.
+Once you start documenting the scripts in R, this will populate.</p>
 <h3 id="documenting">Documenting</h3>
 <p>A properly documented package will make it much easier for the end user, which means it is more likely to be used.</p>
-<p>Documenting your package is easiest done using <a href="https://github.com/klutometis/roxygen"><strong>Roxygen2</strong></a>. For each function or dataset that the end user can use you must document it. See <a href="http://r-pkgs.had.co.nz/man.html" class="uri">http://r-pkgs.had.co.nz/man.html</a> and <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html" class="uri">https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html</a> for how to write the documentation. As you start getting more advanced in your package development I would refer you to the official “Writing R Extensions” section on documenting your package, <a href="https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files" class="uri">https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files</a>.</p>
+<p>Documenting your package is easiest done using <a href="https://github.com/klutometis/roxygen">{Roxygen2}</a>.
+For each function or data set that the end user can use you must document it.
+See <a href="http://r-pkgs.had.co.nz/man.html" class="uri">http://r-pkgs.had.co.nz/man.html</a> and <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html" class="uri">https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html</a> for how to write the documentation.
+As you start getting more advanced in your package development I would refer you to the official “Writing R Extensions” section on documenting your package, <a href="https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files" class="uri">https://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files</a>.</p>
 <h3 id="licensing">Licensing</h3>
-<p>There are several resources available for helping you pick a license. For my packages I default to the MIT license, but you may chose to use the GPL 2 or 3 or some other license depending on your specific needs and goals.</p>
-<p>To generate a license file, again use <strong>usethis</strong>. <code>?usethis::use_mit_license()</code> describes both how to use the function, but also gives a quick description of four popular licenses and when they might be used. To generate your LICENSE file type <code>usethis::use_mit_license("Your Name Here")</code>.</p>
+<p>There are several resources available for helping you pick a license.
+For my packages I default to the MIT license, but you may chose to use the GPL 2 or 3 or some other license depending on your specific needs and goals.</p>
+<p>To generate a license file, use <code>usethis::use_mit_license()</code>.
+<code>?usethis::use_mit_license()</code> describes both how to use the function, but also gives a quick description
+of four popular licenses and when they might be used.
+To generate your LICENSE file type <code>usethis::use_mit_license("Your Name Here")</code>.</p>
 <h3 id="vignettes">Vignettes</h3>
-<p>Of course you will want to give detailed information on how users can use your spiffy new package, right? That’s where a vignette comes in. Vignettes are long- form documentation that describe how to use the functions in the package in greater detail than the help files or perhaps contain a use case for illustration. You can set up a vignette that’s written using <a href="https://rmarkdown.rstudio.com"><strong>RMarkdown</strong></a> by typing <code>usethis::use_vignette("spiffypkgname")</code>, which creates a vignette simply named “spiffypkgname”, corresponding to your package name and sets up a template for you to edit with your examples.</p>
+<p>Of course you will want to give detailed information on how users can use your spiffy new package, right?
+That’s where a vignette comes in. Vignettes are long-form documentation that describe how to use the functions in the package in greater detail than the help files or perhaps contain a use case for illustration.
+You can set up a vignette that’s written using <a href="https://rmarkdown.rstudio.com">{RMarkdown}</a> by typing <code>usethis::use_vignette("spiffypkgname")</code>, which creates a vignette simply named “spiffypkgname”, corresponding to your package name and sets up a template for you to edit with your examples.</p>
 <h3 id="example-data">Example Data</h3>
-<p>If you have example data that you wish to include in your package, you may do so. Most of the time you will want to use <code>inst/exdata</code> to include example files to show how to parse data using the package. See Hadley’s <a href="http://r-pkgs.had.co.nz/data.html">book section on data</a> for a thorough discussion on the different ways data can be incorporated and when you might wish to use them.</p>
+<p>If you have example data that you wish to include in your package, you may do so.
+Most of the time you will want to use <code>inst/exdata</code> to include example files to show how to parse data using the package.
+See Hadley’s <a href="http://r-pkgs.had.co.nz/data.html">book section on data</a> for a thorough discussion on the different ways data can be incorporated and when you might wish to use them.</p>
 <h3 id="citation">Citation</h3>
-<p>I did mention citations at the beginning. Ideally your package should be easy to cite when your users type <code>citation("spiffypkgname")</code> they’ll get a nicely formatted example of how to cite your package. To do this you need to create a CITATION file with no file extension in the <code>inst</code> subdirectory of your package. The contents of the CITATION file should look something like what follows here. You don’t need to change <code>year</code> or <code>note</code>, these are autofilled with the values taken from the first two lines. The <code>bibtype</code> will always be “Manual” as well.</p>
+<p>I did mention citations at the beginning. Ideally your package should be easy to cite when your users type <code>citation("spiffypkgname")</code> they’ll get a nicely formatted example of how to cite your package.
+To do this you need to create a CITATION file with no file extension in the <code>inst</code> subdirectory of your package.
+The contents of the CITATION file should look something like what follows here.
+You don’t need to change <code>year</code> or <code>note</code>, these are autofilled with the values taken from the first two lines.
+The <code>bibtype</code> will always be “Manual” as well unless you have a paper associated with the R package.</p>
 <pre><code>year &lt;- sub(&quot;-.*&quot;, &quot;&quot;, meta$Date)
 note &lt;- sprintf(&quot;R package version %s&quot;, meta$Version)
 
@@ -1555,19 +1629,30 @@ bibentry(bibtype = &quot;Manual&quot;,
          note = note,
          DOI = &quot;DOI goes here&quot;,
          url = &quot;spiffypkgname website address goes here&quot;)</code></pre>
-<p>Wait you say! I don’t have a DOI and I don’t know how to make a website! Fear not, for if you are using GitHub you can easily get a DOI to put in that DOI field in your CITATION file. And by using the <strong>pkgdown</strong> package you can easily create a website for your package that tells users about it.</p>
+<p>Wait you say! I don’t have a DOI and I don’t know how to make a website!
+Fear not, for if you are using GitHub you can easily get a DOI to put in that DOI field in your CITATION and DESCRIPTION files.
+And by using the {pkgdown} package you can easily create a website for your package that tells users about it.</p>
 <h3 id="doi">DOI</h3>
-<p>GitHub has teamed up with Zenodo to offer DOIs to help make your package more citeable. Head over to the GitHub Guides and have a read over the <a href="https://guides.github.com/activities/citable-code/">Making Your Code Citeable</a>.</p>
+<p>GitHub has teamed up with Zenodo to offer DOIs to help make your package more citeable.
+Head over to the GitHub Guides and have a read over the <a href="https://guides.github.com/activities/citable-code/">Making Your Code Citeable</a>.</p>
 <p>Using <a href="https://osf.io">OSF (Open Science Framework)</a> is also an option but this does not offer DOIs for individual releases like Zenodo does, which will offer a project DOI and a newly minted DOI for each release, e.g. v1.0.0, v1.0.2, etc.</p>
 <h3 id="website">Website</h3>
-<p><strong>pkgdown</strong> makes deploying a website a very simple exercise. It takes your README file and your documentation (including your vignette) and creates a nicely organised website for users to browse and learn all about <strong>spiffypkgname</strong>. Simply use <code>usethis::use_pkgdown()</code> once you commit your changes to GitHub, in the repository settings, set the webpage to “master branch/docs folder” in the GitHub Pages section of the Settings.</p>
-<p>The link will appear once it is set. Copy and paste that in the repository webpage field next to the title for your repository (use the “Edit” button on the main page of your repository to fill this field in).</p>
+<p>{pkgdown} makes deploying a website a very simple exercise.
+It takes your README file and your documentation (including your vignette) and creates a nicely organised website for users to browse and learn all about {spiffypkgname}.
+Simply use <code>usethis::use_pkgdown()</code> once you commit your changes to GitHub, in the repository settings, set the webpage to
+“master branch/docs folder” in the GitHub Pages section of the Settings.</p>
+<p>The link will appear once it is set.
+Copy and paste that in the repository webpage field next to the title for your repository (use the “Edit” button
+on the main page of your repository to fill this field in).</p>
 <h3 id="other-miscellaneous-items">Other Miscellaneous Items</h3>
 <p>Insert the GitHub links for the repository and for users to file Issues into the DESCRIPTION file, <code>usethis::use_github_links()</code>.</p>
-<p>Use <a href="http://mangothecat.github.io/goodpractice/"><strong>goodpractice</strong></a> to help you find issues with your package’s code, <code>goodpractice::gp()</code>.</p>
+<p>Use <a href="http://mangothecat.github.io/goodpractice/">{goodpractice}</a> to help you find issues with your package’s code, <code>goodpractice::gp()</code>.</p>
 <h1 id="wrapping-up">Wrapping Up</h1>
-<p>This post was not meant to be all-inclusive. There are plenty of other great resources for getting started with making your own R package. My intention here was to specifically point out items that I think are useful for an academic that might be writing an R package for sharing with others and to highlight some of the newer tools that are now available for getting started.</p>
-<p>Of course you are free to join our <a href="https://openplantpathology.slack.com/">Slack workgroup</a> as well and ask questions. A few of us have experience with different types of R packages and are happy to offer support. If you wish to join, flick us an e-mail at <a href="mailto:openplantpathology@gmail.com" class="email">openplantpathology@gmail.com</a> and we will send you an invite link.</p>
+<p>This post was not meant to be all-inclusive.
+There are plenty of other great resources for getting started with making your own R package.
+My intention here was to specifically point out items that I think are useful for an academic that might be writing an R package for sharing with others and to highlight some of the newer tools that are now available for getting started.</p>
+<p>Of course you are free to join our <a href="https://openplantpathology.slack.com/">Slack workgroup</a> as well and ask questions.
+A few of us have experience with different types of R packages and are happy to offer support.</p>
 <h1 id="acknowledgements">Acknowledgements</h1>
 <p>Thanks to <a href="https://twitter.com/mladencucak">mladencucak</a> for his thoughtful comments and suggestions on this article.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

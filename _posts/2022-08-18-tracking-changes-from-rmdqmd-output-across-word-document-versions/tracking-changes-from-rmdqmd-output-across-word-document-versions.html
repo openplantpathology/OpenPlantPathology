@@ -189,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1261,15 +1262,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1468,7 +1475,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="tracking-changes-from-rmdqmd-output-across-word-document-versions_files/header-attrs-2.15/header-attrs.js"></script>
+  <script src="tracking-changes-from-rmdqmd-output-across-word-document-versions_files/header-attrs-2.20/header-attrs.js"></script>
   <script src="tracking-changes-from-rmdqmd-output-across-word-document-versions_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="tracking-changes-from-rmdqmd-output-across-word-document-versions_files/popper-2.6.0/popper.min.js"></script>
   <link href="tracking-changes-from-rmdqmd-output-across-word-document-versions_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1502,74 +1509,41 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Tracking changes from Rmd/Qmd Rendered Files Across Word Document Versions</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Writing your manuscripts in RMarkdown or Quarto and rendering to
-Word for review? Do you need to be able to track your changes in Word in
-your response to reviews but don’t know how to? Read on for how you can
-still use Rmd/Qmd and satisfy the requirements for tracked changes in
-your responses when resubmiting to journals for review.</p></p>
+<p><p>Writing your manuscripts in RMarkdown or Quarto and rendering to Word for review? Do you need to be able to track your changes in Word in your response to reviews but don’t know how to? Read on for how you can still use Rmd/Qmd and satisfy the requirements for tracked changes in your responses when resubmiting to journals for review.</p></p>
 </div>
 
 <div class="d-byline">
-  Adam Sparks <a href="https://adamhsparks.netlify.app"
-class="uri">https://adamhsparks.netlify.app</a> 
+  Adam Sparks <a href="https://adamhsparks.netlify.app" class="uri">https://adamhsparks.netlify.app</a> 
   
 <br/>2022-08-18
 </div>
 
 <div class="d-article">
-<p>While most plant pathologists are likely to write their manuscripts
-collaboratively in Microsoft Word, what if you instead prefer to harness
-RMarkdown or Quarto and Git for your collaborative writing? Often times
-journal submissions require the response to have a Word Document with
-changes tracked to be resubmitted for the editor and reviewers to
-evaluate and track the changes that were made in the manuscript. The
-combination of these two approaches may make it seem that they aren’t
-compatible. However, with the right combination of both tools, it’s
-possible to use the best of both of these tools and meet the needs of
-the authors and the journals.</p>
-<p>The first step is to use Git effectively. When you submit your
-manuscript, create a release that corresponds with the version of the
-manuscript that you have submitted. This way you have a good record of
-what changes were made in your Rmd/Qmd file up to that point and know
-that you can accurately recreate the Word document as submitted for
-review. This will be used as your basis for tracking the changes that
-were made in response to the review.</p>
-<p>Second, when you receive the response from the review process, create
-a new branch to work from leaving the original branch untouched so that
-you can still reknit your original Word document as submitted for the
-initial review.</p>
-<p>Third, make your edits with your co-authors to the Rmd/Qmd file
-tracking the changes in Git using the new branch for the response to the
-review.</p>
-<p>Fourth, once you are ready to resubmit your manuscript, knit the new
-version and save the Word document locally.</p>
-<p>Fifth, if you have the original Word document as submitted you can
-use this or you can check out your original Git branch and reknit the
-Word document as submitted. If necessary, save this file locally as
-well.</p>
+<p>While most plant pathologists are likely to write their manuscripts collaboratively in Microsoft Word, what if you instead prefer to harness RMarkdown or Quarto and Git for your collaborative writing?
+Often times journal submissions require the response to have a Word Document with changes tracked to be resubmitted for the editor and reviewers to evaluate and track the changes that were made in the manuscript.
+The combination of these two approaches may make it seem that they aren’t compatible.
+However, with the right combination of both tools, it’s possible to use the best of both of these tools and meet the needs of the authors and the journals.</p>
+<p>The first step is to use Git effectively.
+When you submit your manuscript, create a release that corresponds with the version of the manuscript that you have submitted.
+This way you have a good record of what changes were made in your Rmd/Qmd file up to that point and know that you can accurately recreate the Word document as submitted for review.
+This will be used as your basis for tracking the changes that were made in response to the review.</p>
+<p>Second, when you receive the response from the review process, create a new branch to work from leaving the original branch untouched so that you can still reknit your original Word document as submitted for the initial review.</p>
+<p>Third, make your edits with your co-authors to the Rmd/Qmd file tracking the changes in Git using the new branch for the response to the review.</p>
+<p>Fourth, once you are ready to resubmit your manuscript, knit the new version and save the Word document locally.</p>
+<p>Fifth, if you have the original Word document as submitted you can use this or you can check out your original Git branch and reknit the Word document as submitted.
+If necessary, save this file locally as well.</p>
 <p>Sixth, while using Word, go to “Tools” &gt; “Combine Documents”.
-Using this tool, select your original document as “Original document:”
-and your newly edited document as “Revised document:”. I suggest using
-the default approach to combine them together in a new document.</p>
+Using this tool, select your original document as “Original document:” and your newly edited document as “Revised document:”.
+I suggest using the default approach to combine them together in a new document.</p>
 <figure>
-<img src="combine_docs.png"
-alt="The “Combine documents” workflow tool in Word for Mac." />
-<figcaption aria-hidden="true">The “Combine documents” workflow tool in
-Word for Mac.</figcaption>
+<img src="combine_docs.png" alt="The “Combine documents” workflow tool in Word for Mac." />
+<figcaption aria-hidden="true">The “Combine documents” workflow tool in Word for Mac.</figcaption>
 </figure>
-<p>Seventh, check that the changes have been accurately tracked and add
-any necessary comments to respond to the reviewers.</p>
-<p>Eighth, save the new document and use this for your response to the
-review with the changes tracked.</p>
-<p>Lastly, once you have prepared your response, merge the new branch
-back into the main and create another release to correspond with the
-response to review submission. This way you have releases that
-correspond to the entire process along the way and you can easily track
-your changes with greater detail in Git than what the Word document
-offers, while still offering the necessary information for the editor
-and reviewers to see the changes that were made.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Seventh, check that the changes have been accurately tracked and add any necessary comments to respond to the reviewers.</p>
+<p>Eighth, save the new document and use this for your response to the review with the changes tracked.</p>
+<p>Lastly, once you have prepared your response, merge the new branch back into the main and create another release to correspond with the response to review submission.
+This way you have releases that correspond to the entire process along the way and you can easily track your changes with greater detail in Git than what the Word document offers, while still offering the necessary information for the editor and reviewers to see the changes that were made.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
