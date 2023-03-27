@@ -24,8 +24,8 @@ categories:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-We started this initiative (Open Plant Pathology) in 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.
-One of the reasons for this was that a few years before that, we'd started working on analysis of randomly selected plant pathology papers published from 2012 until 2021 with Kaique Alves, Zachary Foster and Nik Grünwald, which was published in *Phytopathology*® in January [@Sparks2023].
+We (Emerson Del Ponte and Adam Sparks) started this initiative (Open Plant Pathology) in early January 2018 with the idea that we would create a community in which plant pathologists could come together and share resources and ideas and encourage a freer exchange of information, code and data.
+One of the reasons for this was that a few years before that, we'd started working on analysis of randomly selected plant pathology papers, initially we looked at 300 published from 2012 until 2018, but it grew to 450 papers published from 2012 until 2021, with Kaique Alves, Zachary Foster and Nik Grünwald, which was published in *Phytopathology*® in January [@Sparks2023].
 What we were finding as we looked at papers across 21 journals that were dedicated to plant pathology research or published specialised sections or articles in the field of plant pathology was not surprising, but still disappointing.
 As a discipline, we simply do not make much, if any, effort to help ensure that others can easily reproduce our work after it is published [@Sparks2023].
 
