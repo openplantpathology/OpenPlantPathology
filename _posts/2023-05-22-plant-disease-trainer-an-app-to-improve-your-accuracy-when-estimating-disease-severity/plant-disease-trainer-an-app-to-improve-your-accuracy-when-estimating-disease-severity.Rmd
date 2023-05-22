@@ -1,0 +1,38 @@
+---
+title: "Plant Disease TraineR: a new app to improve accuracy of severity estimates"
+description: |
+  Plant Disease TraineR is a shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.
+author:
+  - name: Emerson Del Ponte
+    url: https://twitter.com/emdelponte
+date: 05-22-2023
+output:
+  distill::distill_article:
+    self_contained: false
+preview: trainer2.png
+csl: phytopathology.csl
+categories:
+  - R4PlantPath
+bibliography: references.bib
+---
+
+## Background
+
+Training session in the assessment of disease severity has been used in the past and proven useful to improve rater's precision and accuracy when visually assessing disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task [@bock2022]. In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity. For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ. After each rated image, the actual value is displayed and that is when the training begins!
+
+Research on this topic began during the mid-1980s with the arrival of personal computers, which were used to develop computerized images of specific and measured disease severity. Those software, running on DOS or Windows system, included AREAGRAM, DISTRAIN, DISEASE.PRO, ESTIMATE, and SEVERITY.PRO (See review by @bock2022a).
+
+## What is this app for?
+
+The goal of Plant Disease TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (eg. leaf, fruit) and lesions of varying number, shape and color. Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage. When clicking on `show % severity`, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.
+
+## How was it developed?
+
+The app was developed in R + shiny and was made available at the shinyapps.io pages.
+
+## What is next?
+
+The app has currently some limitations such as no lesion overlapping and maximum severity of around 60%. It is also limited to generate ellipsoidal shapes. Future efforts could focus on the generation of organs and lesions of different shape such as polygonal. It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment. There are no current plans for implementing these features.
+
+**Project website**: <https://edelponte.shinyapps.io/traineR/>\
+**Author and maintainer**: Emerson M. Del Ponte
