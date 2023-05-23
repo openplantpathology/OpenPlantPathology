@@ -1,7 +1,7 @@
 ---
-title: "Plant Disease TraineR: a new app to improve accuracy of severity estimates"
+title: "TraineR: a new app for improving accuracy of severity estimates"
 description: |
-  Plant Disease TraineR is a shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.
+  TraineR is a Shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/emdelponte
@@ -18,17 +18,17 @@ bibliography: references.bib
 
 ## Background
 
-Training session in the assessment of disease severity has been used in the past and proven useful to improve rater's precision and accuracy when visually assessing disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task [@bock2022]. In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity. For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ. After each rated image, the actual value is displayed and that is when the training begins!
+Training session for the assessment of disease severity has been used in the past and proven useful to improve rater's precision and accuracy when visually quantifying disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task [@bock2022]. In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity. For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ. After each rated image, the actual value is displayed and that is when the training begins!
 
 Research on this topic began during the mid-1980s with the arrival of personal computers, which were used to develop computerized images of specific and measured disease severity. Those software, running on DOS or Windows system, included AREAGRAM, DISTRAIN, DISEASE.PRO, ESTIMATE, and SEVERITY.PRO (See review by @bock2022a).
 
 ## What is this app for?
 
-The goal of Plant Disease TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (eg. leaf, fruit) and lesions of varying number, shape and color. Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage. When clicking on `show % severity`, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.
+The goal of TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (eg. leaf, fruit) and lesions of varying number, shape and color. Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage. When clicking on `show % severity`, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.
 
 ## How was it developed?
 
-The app was developed in R + shiny and was made available at the shinyapps.io pages.
+The app was developed in R + Shiny and was made available at the shinyapps.io pages.
 
 ## What is next?
 

@@ -14,10 +14,10 @@
     <generator>Distill</generator>
     <lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Plant Disease TraineR: a new app to improve accuracy of severity estimates</title>
+      <title>TraineR: a new app for improving accuracy of severity estimates</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity</link>
-      <description>Plant Disease TraineR is a shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.</description>
+      <description>TraineR is a Shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity</guid>
       <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
