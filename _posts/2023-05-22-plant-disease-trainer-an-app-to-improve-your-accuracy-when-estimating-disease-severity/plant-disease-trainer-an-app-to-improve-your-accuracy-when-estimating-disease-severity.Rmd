@@ -32,7 +32,11 @@ The app was developed in R + Shiny and was made available at the shinyapps.io pa
 
 ## What is next?
 
-The app has currently some limitations such as no lesion overlapping and maximum severity of around 60%. It is also limited to generate ellipsoidal shapes. Future efforts could focus on the generation of organs and lesions of different shape such as polygonal. It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment. There are no current plans for implementing these features.
+The app has currently some limitations such as no lesion overlapping and maximum severity of around 60%. It is also limited to generate ellipsoidal shapes. Future efforts could focus on the generation of organs and lesions of different shape such as polygonal. It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment. ~~There are no current plans for implementing these features.~~
+
+## Post update 
+
+Since the publication of this post, significant updates have been made to the app. It can now create a training session, with the maximum number of attempts determined by the user. Upon the session's completion, the user is shown the calculated accuracy, represented by Lin's concordance correlation coefficient. Moreover, the user can now view all previous estimates alongside their actual values, a crucial feature that enables training. The app includes two tabs: one that displays a scatter plot correlating estimates and actual severity, and another that provides comprehensive statistics of the concordance analysis.
 
 **Project website**: <https://edelponte.shinyapps.io/traineR/>\
 **Author and maintainer**: Emerson M. Del Ponte

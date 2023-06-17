@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2023-06-17-trainer2-an-evolutin-of-trainer-that-uses-actual-photos/",
+    "title": "TraineR2: an evolution of TraineR that uses actual photos",
+    "description": "TraineR2 is another Shiny app developed to train users in assessing disease severity, expressed as the percentage of the organ (leaf or fruit) affected by lesions. However, this app distinguishes itself by basing its assessments on actual photographs of disease symptoms.",
+    "author": [
+      {
+        "name": "Emerson Del Ponte",
+        "url": "https://twitter.com/emdelponte"
+      }
+    ],
+    "date": "2023-06-17",
+    "categories": [
+      "R4PlantPath"
+    ],
+    "contents": "\nBackground\nTraineR2 is an enhancement of TraineR (see context here), sharing the same goal - facilitating the training of plant pathologists in estimating plant disease severity. The primary distinction lies in TraineR2’s utilization of actual photographs of disease symptoms, offering a more authentic representation compared to the computer-generated imagery used in TraineR. Additionally, the duration of the training session in TraineR2 is determined by the number of images available in the collection, presenting another noteworthy difference.\nWhat is this app for?\nThe objective of TraineR is to enhance the accuracy of prospective raters in estimating disease severity, based on the perceived percentage of the diseased area. At present, the app houses images of six plant diseases: Apple Glomerella leaf spot, citrus canker, eucalyptus Calonectria blight, gerbera Botrytis leaf blight, pecan scab, soybean rust, peanut leaf spot, and peach leaf rust. These images have been generously provided by colleagues in the plant pathology community and have been utilized in scientific papers for the validation of standard area diagram sets (SADs).\nHow was it developed?\nThe app was developed in R + Shiny and was made available at the shinyapps.io pages.\nFuture plans\nThis project is open to contributions of images from the community. Anyone interested in contributing should reach out to the app developer.\nProject website: https://delponte.shinyapps.io/traineR2/Author and maintainer: Emerson M. Del Ponte\n\n\n\n",
+    "preview": "posts/2023-06-17-trainer2-an-evolutin-of-trainer-that-uses-actual-photos/trainer2_opp.png",
+    "last_modified": "2023-06-17T12:39:30-03:00",
+    "input_file": {},
+    "preview_width": 686,
+    "preview_height": 674
+  },
+  {
     "path": "posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity/",
     "title": "TraineR: a new app for improving accuracy of severity estimates",
     "description": "TraineR is a Shiny app designed to train users in the assessment of disease severity expressed as the percent area of the organ (leaf or fruit) affected by lesions.",
@@ -15,8 +36,8 @@
     ],
     "contents": "\nBackground\nTraining session for the assessment of disease severity has been used in the past and proven useful to improve rater’s precision and accuracy when visually quantifying disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task (Bock et al. 2022b). In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity. For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ. After each rated image, the actual value is displayed and that is when the training begins!\nResearch on this topic began during the mid-1980s with the arrival of personal computers, which were used to develop computerized images of specific and measured disease severity. Those software, running on DOS or Windows system, included AREAGRAM, DISTRAIN, DISEASE.PRO, ESTIMATE, and SEVERITY.PRO (See review by Bock et al. (2022a)).\nWhat is this app for?\nThe goal of TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (eg. leaf, fruit) and lesions of varying number, shape and color. Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage. When clicking on show % severity, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.\nHow was it developed?\nThe app was developed in R + Shiny and was made available at the shinyapps.io pages.\nWhat is next?\nThe app has currently some limitations such as no lesion overlapping and maximum severity of around 60%. It is also limited to generate ellipsoidal shapes. Future efforts could focus on the generation of organs and lesions of different shape such as polygonal. It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment. There are no current plans for implementing these features.\nProject website: https://edelponte.shinyapps.io/traineR/Author and maintainer: Emerson M. Del Ponte\n\n\n\nBock, C. H., Chiang, K.-S., and Del Ponte, E. M. 2022a. Plant disease severity estimated visually: A century of research, best practices, and opportunities for improving methods and practices to maximize accuracy. Tropical Plant Pathology. 47:25–42 Available at: https://www.scopus.com/inward/record.uri?eid=2-s2.0-85113926454&doi=10.1007%2fs40858-021-00439-z&partnerID=40&md5=35399328923085bd0bd70c09110d3746.\n\n\nBock, C. H., Pethybridge, S. J., Barbedo, J. G. A., Esker, P. D., Mahlein, A.-K., and Del Ponte, E. M. 2022b. A phytopathometry glossary for the twenty-first century: Towards consistency and precision in intra- and inter-disciplinary dialogues. Tropical Plant Pathology. 47:14–24 Available at: https://www.scopus.com/inward/record.uri?eid=2-s2.0-85111898454&doi=10.1007%2fs40858-021-00454-0&partnerID=40&md5=c854cea57f00b2d3951ff8595a243f10.\n\n\n\n\n",
     "preview": "posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity/trainer2.png",
-    "last_modified": "2023-05-23T18:10:24-03:00",
-    "input_file": "plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity.knit.md",
+    "last_modified": "2023-05-23T18:10:26-03:00",
+    "input_file": {},
     "preview_width": 811,
     "preview_height": 845
   },

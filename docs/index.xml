@@ -12,7 +12,17 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>TraineR2: an evolution of TraineR that uses actual photos</title>
+      <dc:creator>Emerson Del Ponte</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2023-06-17-trainer2-an-evolutin-of-trainer-that-uses-actual-photos</link>
+      <description>TraineR2 is another Shiny app developed to train users in assessing disease severity, expressed as the percentage of the organ (leaf or fruit) affected by lesions. However, this app distinguishes itself by basing its assessments on actual photographs of disease symptoms.</description>
+      <category>R4PlantPath</category>
+      <guid>https://www.openplantpathology.org/posts/2023-06-17-trainer2-an-evolutin-of-trainer-that-uses-actual-photos</guid>
+      <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2023-06-17-trainer2-an-evolutin-of-trainer-that-uses-actual-photos/trainer2_opp.png" medium="image" type="image/png" width="686" height="674"/>
+    </item>
     <item>
       <title>TraineR: a new app for improving accuracy of severity estimates</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
