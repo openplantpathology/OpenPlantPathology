@@ -64,7 +64,7 @@ $$
 y = a*((t - b )^d)*((c - t)^e)
 $$
 
-where $b$ and $d$ represent minimum and maximum temperatures, respectively, for the development of the disease, $a$, $c$ and $e$ are parameters to be estimated, $t$ is the temperature and $y$ is disease severity.
+where $b$ and $c$ represent minimum and maximum temperatures, respectively, for the development of the disease, $a$, $d$ and $e$ are parameters to be estimated, $t$ is the temperature and $y$ is disease severity.
 We need the {minpack.lm} library to avoid parameterization issues.
 
 ```{r}
