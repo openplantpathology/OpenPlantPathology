@@ -12,7 +12,7 @@ OpenPlantPathology is a not for-profit initiative founded in January 2018 by [Em
 Of course, this would not be possible without the support from several colleagues who helped spread the initiative and the culture of open science.
 Currently, our team is composed of the following leaders.
 
-[**Adam Sparks**](https://www.adamhsparks.netlify.app/)\
+[**Adam Sparks**](https://adamhsparks.netlify.app/)\
 Founder. Webmaster\
 Professor of Biometry and Agriculture Data Analysis\
 Curtin Biometry and Agriculture Data Analytics, Curtin University, Western Australia, Australia 
