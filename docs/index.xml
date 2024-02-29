@@ -12,7 +12,17 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 17 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Dieback-free gravel for road construction</title>
+      <dc:creator>Adam Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2024-02-16-dieback-free-gravel-for-road-construction</link>
+      <description>Phytophthora cinnamomi (the dieback ‘fungus’) is an introduced soilborne pathogen associated with the death of native plants. It is spread in infested soil, including gravel. Main Roads WA (MRWA) only uses dieback free gravel for road construction and repair; this is in short supply. One option is to treat gravel to kill Phytophthora.</description>
+      <category>CCDM Seminars</category>
+      <guid>https://www.openplantpathology.org/posts/2024-02-16-dieback-free-gravel-for-road-construction</guid>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2024-02-16-dieback-free-gravel-for-road-construction/CCDM_Davison.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>TraineR2: an evolution of TraineR that uses actual photos</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
@@ -793,7 +803,7 @@
       <description>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire</guid>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
       <media:content url="https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire/post-fall-empire.png" medium="image" type="image/png" width="632" height="628"/>
     </item>
     <item>
