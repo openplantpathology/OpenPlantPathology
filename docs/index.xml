@@ -12,7 +12,18 @@
       <link>https://www.openplantpathology.org/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Using Reproducible Research to Revisit Published Results</title>
+      <dc:creator>Adam H. Sparks</dc:creator>
+      <link>https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results</link>
+      <description>In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model.</description>
+      <category>R4PlantPath</category>
+      <category>Reproducible Research</category>
+      <guid>https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results</guid>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-org-1.png" medium="image" type="image/png" width="1248" height="1152"/>
+    </item>
     <item>
       <title>Dieback-free gravel for road construction</title>
       <dc:creator>Adam Sparks</dc:creator>

@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -90,7 +90,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
-      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -175,7 +174,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","data/Nematode_Data.csv","LICENSE","nematode_modelling_files/anchor-4.2.2/anchor.min.js","nematode_modelling_files/bowser-1.9.3/bowser.min.js","nematode_modelling_files/distill-2.2.21/template.v2.js","nematode_modelling_files/figure-html5/boxplots_ln-1.png","nematode_modelling_files/figure-html5/boxplots_original-1.png","nematode_modelling_files/figure-html5/moderately_resistant_model-1.png","nematode_modelling_files/figure-html5/plot_model-1.png","nematode_modelling_files/figure-html5/qq_ln-1.png","nematode_modelling_files/figure-html5/qq_original-1.png","nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png","nematode_modelling_files/figure-html5/susceptible_model-1.png","nematode_modelling_files/figure-html5/unplanted_poly-1.png","nematode_modelling_files/figure-html5/visualise_linear-1.png","nematode_modelling_files/figure-html5/visualise_mr_model-1.png","nematode_modelling_files/figure-html5/visualise_s_model-1.png","nematode_modelling_files/figure-html5/visualise_unplanted_poly_model-1.png","nematode_modelling_files/header-attrs-2.11/header-attrs.js","nematode_modelling_files/header-attrs-2.20/header-attrs.js","nematode_modelling_files/header-attrs-2.9/header-attrs.js","nematode_modelling_files/jquery-1.11.3/jquery.min.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.min.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.min.map","nematode_modelling_files/kePrint-0.0.1/kePrint.js","nematode_modelling_files/lightable-0.0.1/lightable.css","nematode_modelling_files/popper-2.6.0/popper.min.js","nematode_modelling_files/tippy-6.2.7/tippy-bundle.umd.min.js","nematode_modelling_files/tippy-6.2.7/tippy-light-border.css","nematode_modelling_files/tippy-6.2.7/tippy.css","nematode_modelling_files/tippy-6.2.7/tippy.umd.min.js","nematode_modelling_files/webcomponents-2.0.0/webcomponents.js","phytopathology.csl"]}
+  {"type":"character","attributes":{},"value":["bibliography.bib","data/Nematode_Data.csv","LICENSE","nematode_modelling_files/anchor-4.2.2/anchor.min.js","nematode_modelling_files/bowser-1.9.3/bowser.min.js","nematode_modelling_files/distill-2.2.21/template.v2.js","nematode_modelling_files/figure-html5/boxplots_ln-1.png","nematode_modelling_files/figure-html5/boxplots_original-1.png","nematode_modelling_files/figure-html5/moderately_resistant_model-1.png","nematode_modelling_files/figure-html5/plot_model-1.png","nematode_modelling_files/figure-html5/qq_ln-1.png","nematode_modelling_files/figure-html5/qq_original-1.png","nematode_modelling_files/figure-html5/raw_data_scatterplots-1.png","nematode_modelling_files/figure-html5/susceptible_model-1.png","nematode_modelling_files/figure-html5/unplanted_poly-1.png","nematode_modelling_files/figure-html5/visualise_linear-1.png","nematode_modelling_files/figure-html5/visualise_mr_model-1.png","nematode_modelling_files/figure-html5/visualise_s_model-1.png","nematode_modelling_files/figure-html5/visualise_unplanted_poly_model-1.png","nematode_modelling_files/header-attrs-2.11/header-attrs.js","nematode_modelling_files/header-attrs-2.9/header-attrs.js","nematode_modelling_files/jquery-1.11.3/jquery.min.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.min.js","nematode_modelling_files/jquery-3.6.0/jquery-3.6.0.min.map","nematode_modelling_files/kePrint-0.0.1/kePrint.js","nematode_modelling_files/lightable-0.0.1/lightable.css","nematode_modelling_files/popper-2.6.0/popper.min.js","nematode_modelling_files/tippy-6.2.7/tippy-bundle.umd.min.js","nematode_modelling_files/tippy-6.2.7/tippy-light-border.css","nematode_modelling_files/tippy-6.2.7/tippy.css","nematode_modelling_files/tippy-6.2.7/tippy.umd.min.js","nematode_modelling_files/webcomponents-2.0.0/webcomponents.js","phytopathology.csl"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2474,11 +2473,9 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
   <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-  <link href="../../site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-  <script src="../../site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2545,7 +2542,6 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Linear modelling of soil temperature effects on root lesion nematode population densities in R</h1>
-
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
@@ -2602,20 +2598,20 @@ Import the data using <code>read_csv()</code> function from {readr} and view the
 <span><span class='va'>nema</span></span></code></pre>
 </div>
 <pre><code># A tibble: 24 × 9
-   Weeks  Days Temperature Degree_days Unplanted Gatcher GS50a Potam
-   &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1     8    56        15           280      5.75    6.77  6.69  7.61
- 2     8    56        20           560      5.92    9.51  7.42  9.28
- 3     8    56        22.5         700      6.38    9.96  8.21  9.02
- 4     8    56        25           840      6.51    9.35  8.25  9.73
- 5    10    70        15           350      5.85    7.44  6.04  5.97
- 6    10    70        20           700      6.16   10.3   8.91 10.3 
- 7    10    70        22.5         875      6.19   10.4   9.18 10.7 
- 8    10    70        25          1050      6.36   10.6   9.04 10.5 
- 9    12    84        15           420      5.76    9.93  8.19  8.74
-10    12    84        20           840      6.98   11.7   9.85 11.3 
-# ℹ 14 more rows
-# ℹ 1 more variable: Suneca &lt;dbl&gt;</code></pre>
+   Weeks  Days Temperature Degree…¹ Unpla…² Gatcher GS50a Potam Suneca
+   &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+ 1     8    56        15        280    5.75    6.77  6.69  7.61   6.70
+ 2     8    56        20        560    5.92    9.51  7.42  9.28   9.12
+ 3     8    56        22.5      700    6.38    9.96  8.21  9.02  10.0 
+ 4     8    56        25        840    6.51    9.35  8.25  9.73   9.20
+ 5    10    70        15        350    5.85    7.44  6.04  5.97   6.85
+ 6    10    70        20        700    6.16   10.3   8.91 10.3   10.2 
+ 7    10    70        22.5      875    6.19   10.4   9.18 10.7   10.1 
+ 8    10    70        25       1050    6.36   10.6   9.04 10.5   10.3 
+ 9    12    84        15        420    5.76    9.93  8.19  8.74   9.57
+10    12    84        20        840    6.98   11.7   9.85 11.3   11.7 
+# … with 14 more rows, and abbreviated variable names ¹​Degree_days,
+#   ²​Unplanted</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>nema</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -2624,7 +2620,7 @@ Import the data using <code>read_csv()</code> function from {readr} and view the
 <h3 id="description-of-fields-in-the-data">Description of Fields in the Data</h3>
 <p>There are nine columns in the <code>nema</code> data described here in the following table.</p>
 <div class="layout-chunk" data-layout="l-body">
-<table class="table table-striped table-hover table-condensed table-responsive" style="color: black; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -2728,7 +2724,7 @@ susceptible wheat cultivar
 <p>You can see that each of the varieties have their own column in the original data format, this is commonly called wide data.
 Wide data are commonly found in spreadsheets but do not lend themselves easily to data analysis, modelling and visualisation.
 To make it easier to do these things it is common to convert the data from wide to long format, commonly referred to as tidying, when using R.
-The advantage of a tidy data set is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table <span class="citation" data-cites="TIDY-DATA2014">(<a href="#ref-TIDY-DATA2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
+The advantage of a tidy dataset is that it is easy to manipulate, model and visualize, and always has a specific structure where each variable is a column, each observation is a row, and each type of observational unit is a table <span class="citation" data-cites="TIDY-DATA2014">(<a href="#ref-TIDY-DATA2014" role="doc-biblioref">Wickham 2014</a>)</span>.</p>
 <p>In order to use {ggplot2} for visualising the data, they need to be converted from wide to long.
 Using <code>pivot_longer()</code> from the {tidyr} package to convert from wide to long format where the varieties are all listed in a single column, <code>Variety</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2753,7 +2749,7 @@ Using <code>pivot_longer()</code> from the {tidyr} package to convert from wide 
  8     8    56          20         560 GS50a        7.42
  9     8    56          20         560 Potam        9.28
 10     8    56          20         560 Suneca       9.12
-# ℹ 110 more rows</code></pre>
+# … with 110 more rows</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>nema_long</span><span class='op'>)</span></span></code></pre>
 </div>
@@ -3304,98 +3300,104 @@ Changes since the original can be viewed using the link below that compares the 
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>─ Session info ─────────────────────────────────────────────────────
  setting  value
- version  R version 4.3.2 (2023-10-31)
- os       macOS Sonoma 14.3
+ version  R version 4.2.2 (2022-10-31)
+ os       macOS Ventura 13.2.1
  system   aarch64, darwin20
  ui       X11
  language (EN)
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       Australia/Perth
- date     2024-01-29
- pandoc   3.1.11.1 @ /opt/homebrew/bin/ (via rmarkdown)
+ date     2023-03-04
+ pandoc   3.1 @ /opt/homebrew/bin/ (via rmarkdown)
 
 ─ Packages ─────────────────────────────────────────────────────────
- ! package     * version date (UTC) lib source
- P bit           4.0.5   2022-11-15 [?] CRAN (R 4.3.0)
- P bit64         4.0.5   2020-08-30 [?] CRAN (R 4.3.0)
- P bslib         0.6.1   2023-11-28 [?] CRAN (R 4.3.1)
- P cachem        1.0.8   2023-05-01 [?] CRAN (R 4.3.0)
- P cli           3.6.2   2023-12-11 [?] CRAN (R 4.3.1)
- P colorspace    2.1-0   2023-01-23 [?] CRAN (R 4.3.0)
- P crayon        1.5.2   2022-09-29 [?] CRAN (R 4.3.0)
- P digest        0.6.34  2024-01-11 [?] CRAN (R 4.3.1)
- P distill       1.6     2023-10-06 [?] CRAN (R 4.3.1)
- P downlit       0.4.3   2023-06-29 [?] CRAN (R 4.3.0)
- P dplyr       * 1.1.4   2023-11-17 [?] CRAN (R 4.3.1)
- P evaluate      0.23    2023-11-01 [?] CRAN (R 4.3.1)
- P fansi         1.0.6   2023-12-08 [?] CRAN (R 4.3.1)
- P farver        2.1.1   2022-07-06 [?] CRAN (R 4.3.0)
- P fastmap       1.1.1   2023-02-24 [?] CRAN (R 4.3.0)
- P forcats     * 1.0.0   2023-01-29 [?] CRAN (R 4.3.0)
- P generics      0.1.3   2022-07-05 [?] CRAN (R 4.3.0)
- P ggplot2     * 3.4.4   2023-10-12 [?] CRAN (R 4.3.1)
- P glue          1.7.0   2024-01-09 [?] CRAN (R 4.3.1)
- P gridExtra     2.3     2017-09-09 [?] CRAN (R 4.3.0)
- P gtable        0.3.4   2023-08-21 [?] CRAN (R 4.3.0)
- P highr         0.10    2022-12-22 [?] CRAN (R 4.3.0)
- P hms           1.1.3   2023-03-21 [?] CRAN (R 4.3.0)
- P htmltools     0.5.7   2023-11-03 [?] CRAN (R 4.3.1)
- P jquerylib     0.1.4   2021-04-26 [?] CRAN (R 4.3.0)
- P jsonlite      1.8.8   2023-12-04 [?] CRAN (R 4.3.1)
- P kableExtra  * 1.4.0   2024-01-24 [?] CRAN (R 4.3.1)
- P knitr         1.45    2023-10-30 [?] CRAN (R 4.3.1)
- P labeling      0.4.3   2023-08-29 [?] CRAN (R 4.3.0)
- P lattice       0.22-5  2023-10-24 [?] CRAN (R 4.3.1)
- P lifecycle     1.0.4   2023-11-07 [?] CRAN (R 4.3.1)
- P lubridate   * 1.9.3   2023-09-27 [?] CRAN (R 4.3.1)
- P magrittr      2.0.3   2022-03-30 [?] CRAN (R 4.3.0)
- P Matrix        1.6-5   2024-01-11 [?] CRAN (R 4.3.1)
- P memoise       2.0.1   2021-11-26 [?] CRAN (R 4.3.0)
- P mgcv          1.9-1   2023-12-21 [?] CRAN (R 4.3.1)
- P munsell       0.5.0   2018-06-12 [?] CRAN (R 4.3.0)
- P nlme          3.1-164 2023-11-27 [?] CRAN (R 4.3.1)
- P pillar        1.9.0   2023-03-22 [?] CRAN (R 4.3.0)
- P pkgconfig     2.0.3   2019-09-22 [?] CRAN (R 4.3.0)
- P purrr       * 1.0.2   2023-08-10 [?] CRAN (R 4.3.0)
- P R6            2.5.1   2021-08-19 [?] CRAN (R 4.3.0)
- P readr       * 2.1.5   2024-01-10 [?] CRAN (R 4.3.1)
- P rlang         1.1.3   2024-01-10 [?] CRAN (R 4.3.1)
- P rmarkdown     2.25    2023-09-18 [?] CRAN (R 4.3.1)
- P rstudioapi    0.15.0  2023-07-07 [?] CRAN (R 4.3.0)
- P sass          0.4.8   2023-12-06 [?] CRAN (R 4.3.1)
- P scales        1.3.0   2023-11-28 [?] CRAN (R 4.3.1)
- P sessioninfo   1.2.2   2021-12-06 [?] CRAN (R 4.3.0)
- P stringi       1.8.3   2023-12-11 [?] CRAN (R 4.3.1)
- P stringr     * 1.5.1   2023-11-14 [?] CRAN (R 4.3.1)
- P svglite       2.1.3   2023-12-08 [?] CRAN (R 4.3.1)
- P systemfonts   1.0.5   2023-10-09 [?] CRAN (R 4.3.1)
- P tibble      * 3.2.1   2023-03-20 [?] CRAN (R 4.3.0)
- P tidyr       * 1.3.1   2024-01-24 [?] CRAN (R 4.3.1)
- P tidyselect    1.2.0   2022-10-10 [?] CRAN (R 4.3.0)
- P tidyverse   * 2.0.0   2023-02-22 [?] CRAN (R 4.3.0)
- P timechange    0.3.0   2024-01-18 [?] CRAN (R 4.3.1)
- P tzdb          0.4.0   2023-05-12 [?] CRAN (R 4.3.0)
- P utf8          1.2.4   2023-10-22 [?] CRAN (R 4.3.1)
- P vctrs         0.6.5   2023-12-01 [?] CRAN (R 4.3.1)
- P viridis     * 0.6.4   2023-07-22 [?] CRAN (R 4.3.0)
- P viridisLite * 0.4.2   2023-05-02 [?] CRAN (R 4.3.0)
- P vroom         1.6.5   2023-12-05 [?] CRAN (R 4.3.1)
- P withr         3.0.0   2024-01-16 [?] CRAN (R 4.3.1)
- P xfun          0.41    2023-11-01 [?] CRAN (R 4.3.1)
- P xml2          1.3.6   2023-12-04 [?] CRAN (R 4.3.1)
- P yaml          2.3.8   2023-12-11 [?] CRAN (R 4.3.1)
+ package     * version date (UTC) lib source
+ askpass       1.1     2019-01-13 [1] CRAN (R 4.2.2)
+ bit           4.0.5   2022-11-15 [1] CRAN (R 4.2.2)
+ bit64         4.0.5   2020-08-30 [1] CRAN (R 4.2.2)
+ bslib         0.4.2   2022-12-16 [1] CRAN (R 4.2.2)
+ cachem        1.0.7   2023-02-24 [1] CRAN (R 4.2.0)
+ cli           3.6.0   2023-01-09 [1] CRAN (R 4.2.2)
+ colorout      1.2-2   2023-01-08 [1] Github (jalvesaq/colorout@79931fd)
+ colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.2.0)
+ crayon        1.5.2   2022-09-29 [1] CRAN (R 4.2.2)
+ credentials   1.3.2   2021-11-29 [1] CRAN (R 4.2.0)
+ digest        0.6.31  2022-12-11 [1] CRAN (R 4.2.2)
+ distill       1.5     2022-09-07 [1] CRAN (R 4.2.0)
+ downlit       0.4.2   2022-07-05 [1] CRAN (R 4.2.2)
+ dplyr       * 1.1.0   2023-01-29 [1] CRAN (R 4.2.0)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 4.2.2)
+ evaluate      0.20    2023-01-17 [1] CRAN (R 4.2.2)
+ fansi         1.0.4   2023-01-22 [1] CRAN (R 4.2.0)
+ farver        2.1.1   2022-07-06 [1] CRAN (R 4.2.2)
+ fastmap       1.1.1   2023-02-24 [1] CRAN (R 4.2.0)
+ forcats     * 1.0.0   2023-01-29 [1] CRAN (R 4.2.0)
+ generics      0.1.3   2022-07-05 [1] CRAN (R 4.2.2)
+ ggplot2     * 3.4.1   2023-02-10 [1] CRAN (R 4.2.0)
+ glue          1.6.2   2022-02-24 [1] CRAN (R 4.2.2)
+ gridExtra     2.3     2017-09-09 [1] CRAN (R 4.2.2)
+ gtable        0.3.1   2022-09-01 [1] CRAN (R 4.2.2)
+ highr         0.10    2022-12-22 [1] CRAN (R 4.2.2)
+ hms           1.1.2   2022-08-19 [1] CRAN (R 4.2.2)
+ htmltools     0.5.4   2022-12-07 [1] CRAN (R 4.2.2)
+ httr          1.4.5   2023-02-24 [1] CRAN (R 4.2.0)
+ jquerylib     0.1.4   2021-04-26 [1] CRAN (R 4.2.2)
+ jsonlite      1.8.4   2022-12-06 [1] CRAN (R 4.2.2)
+ kableExtra  * 1.3.4   2021-02-20 [1] CRAN (R 4.2.0)
+ knitr         1.42    2023-01-25 [1] CRAN (R 4.2.0)
+ labeling      0.4.2   2020-10-20 [1] CRAN (R 4.2.2)
+ lattice       0.20-45 2021-09-22 [2] CRAN (R 4.2.2)
+ lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.2.2)
+ lubridate   * 1.9.2   2023-02-10 [1] CRAN (R 4.2.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.2.2)
+ Matrix        1.5-1   2022-09-13 [2] CRAN (R 4.2.2)
+ memoise       2.0.1   2021-11-26 [1] CRAN (R 4.2.2)
+ mgcv          1.8-41  2022-10-21 [2] CRAN (R 4.2.2)
+ munsell       0.5.0   2018-06-12 [1] CRAN (R 4.2.2)
+ nlme          3.1-160 2022-10-10 [2] CRAN (R 4.2.2)
+ openssl       2.0.5   2022-12-06 [1] CRAN (R 4.2.2)
+ pillar        1.8.1   2022-08-19 [1] CRAN (R 4.2.2)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.2.2)
+ purrr       * 1.0.1   2023-01-10 [1] CRAN (R 4.2.2)
+ R6            2.5.1   2021-08-19 [1] CRAN (R 4.2.2)
+ readr       * 2.1.4   2023-02-10 [1] CRAN (R 4.2.0)
+ rlang         1.0.6   2022-09-24 [1] CRAN (R 4.2.2)
+ rmarkdown     2.20    2023-01-19 [1] CRAN (R 4.2.2)
+ rstudioapi    0.14    2022-08-22 [1] CRAN (R 4.2.2)
+ rvest         1.0.3   2022-08-19 [1] CRAN (R 4.2.2)
+ sass          0.4.5   2023-01-24 [1] CRAN (R 4.2.0)
+ scales        1.2.1   2022-08-20 [1] CRAN (R 4.2.2)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.2.2)
+ stringi       1.7.12  2023-01-11 [1] CRAN (R 4.2.2)
+ stringr     * 1.5.0   2022-12-02 [1] CRAN (R 4.2.2)
+ svglite       2.1.1   2023-01-10 [1] CRAN (R 4.2.0)
+ sys           3.4.1   2022-10-18 [1] CRAN (R 4.2.2)
+ systemfonts   1.0.4   2022-02-11 [1] CRAN (R 4.2.2)
+ tibble      * 3.1.8   2022-07-22 [1] CRAN (R 4.2.2)
+ tidyr       * 1.3.0   2023-01-24 [1] CRAN (R 4.2.0)
+ tidyselect    1.2.0   2022-10-10 [1] CRAN (R 4.2.2)
+ tidyverse   * 2.0.0   2023-02-22 [1] CRAN (R 4.2.2)
+ timechange    0.2.0   2023-01-11 [1] CRAN (R 4.2.2)
+ tzdb          0.3.0   2022-03-28 [1] CRAN (R 4.2.2)
+ utf8          1.2.3   2023-01-31 [1] CRAN (R 4.2.0)
+ vctrs         0.5.2   2023-01-23 [1] CRAN (R 4.2.0)
+ viridis     * 0.6.2   2021-10-13 [1] CRAN (R 4.2.2)
+ viridisLite * 0.4.1   2022-08-22 [1] CRAN (R 4.2.2)
+ vroom         1.6.1   2023-01-22 [1] CRAN (R 4.2.0)
+ webshot       0.5.4   2022-09-26 [1] CRAN (R 4.2.2)
+ withr         2.5.0   2022-03-03 [1] CRAN (R 4.2.2)
+ xfun          0.37    2023-01-31 [1] CRAN (R 4.2.0)
+ xml2          1.3.3   2021-11-30 [1] CRAN (R 4.2.2)
+ yaml          2.3.7   2023-01-23 [1] CRAN (R 4.2.0)
 
- [1] /Users/283204f/Developer/GitHub/OpenPlantPathology/OpenPlantPathology/renv/library/R-4.3/aarch64-apple-darwin20
- [2] /Users/283204f/Library/Caches/org.R-project.R/R/renv/sandbox/R-4.3/aarch64-apple-darwin20/ac5c2659
- [3] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
-
- P ── Loaded and on-disk path mismatch.
+ [1] /Users/adamsparks/Library/R/arm64/4.2/library
+ [2] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
 
 ────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body" role="list">
 <div id="ref-FARAWAY2002" class="csl-entry" role="listitem">
 Faraway, J. J. 2002. <em><span class="nocase">Practical Regression and Anova using R</span></em>. [University of Bath]. Available at: <a href="https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf">https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf</a>.
 </div>

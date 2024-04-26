@@ -1,0 +1,160 @@
+---
+title: "Using Reproducible Research to Revisit Published Results"
+description: |
+  In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model.
+author:
+  - name: Adam H. Sparks
+    url: "https://rstats.me/@adamhsparks"
+date: 2024-04-27
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: bibliography.bib
+categories: 
+  - R4PlantPath
+  - Reproducible Research
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library("scales")
+```
+
+I've recently just wrapped up an analysis with co-authors looking at the aerial dispersal of peanut smut spores from infested fields in Argentina [@Paredes2024; @EdwardsMolina2022].
+In this paper, we used a Generalised Additive Model (GAM) to [describe how far the spores spread and what was linked with this](https://epifito.github.io/peanut_smut_aerial/gam_model.html) in the R programming environment.
+This model was particularly difficult for me to fit initially due to spatial autocorrelation effects due to the spore trap locations and time-slices that were used to collect the spore counts.
+It also had six different fields where data were collected.
+So there were lots of things going on here, six fields, traps on transects in four directions from the centroid with traps located four distances on the transect and the time in which spores were collected overlapped from 0-90, 0-180 and 0-270 minutes.
+
+To deal with all of this I spent lots of time [reading up on fitting GAMs](https://fromthebottomoftheheap.net/2021/02/02/random-effects-in-gams/), but this time, I was reading about using random effects in the GAM, which is something I'd not done in the past.
+I used GAMs in the past for work in my [PhD dissertation](https://codeberg.org/adamhsparks/Global_Potato_LB_Metamodelling) [@Sparks2014; @Sparks2024] and in "The role of conidia in the dispersal of *Ascochyta rabiei*" [@Khaliq2020; @Khaliq2020a], which brings me to today's post.
+
+To handle all of the issues with multiple field sites and the spatio-temporal autocorrelation, I used random effects in my GAM for @Paredes2024.
+However, I realised I'd not used random effects for [this work](https://adamhsparks.github.io/ChickpeaAscoDispersal/articles/a05_GAM.html/) [@Khaliq2020; @Khaliq2020a].
+So, to rectify this, I thought I'd go back to the published work and see if I could improve my model's fit to the data using random effects.
+
+As we set up the research compendium as an R package, it's easy enough to install it and get started working with the data and reproduce the work published in @Khaliq2020.
+We assume that you have the R package [{devtools}](https://devtools.r-lib.org/) installed, if not, use `install.packages("devtools")`.
+
+## Getting Started
+
+```{r, eval=FALSE, echo=TRUE}
+library("devtools")
+install_github("https://github.com/adamhsparks/ChickpeaAscoDispersal")
+```
+
+Now we can load the data, `lesion_counts` and `summary_weather`, from {ChickpeaAscoDispersal} and create the `dat` object used to fit the GAM in the original paper.
+
+We will use `set.seed()` here to ensure that the same results are obtained when checking the model fits.^[I also learned something new by writing this blog post. When I started I didn't realise that `gam.check()` used random draws to check the fit. In the case of these models, it can make a difference in the significance of the "distance" term. In most cases it's not significant when checking the fit of the new model, but in some cases it remains significant as with the original model. The seed chosen (at random) does make it insignificant.]
+
+```{r load-data, echo=TRUE}
+library("tidyverse")
+library("ChickpeaAscoDispersal")
+
+set.seed(27)
+
+dat <-
+  left_join(lesion_counts, summary_weather, by = c("site", "rep"))
+
+summary(dat)
+```
+
+## Fitting the GAMs
+
+With the data now loaded in our R session, we can fit the original GAM as published for us to compare against and see if we can't improve it.
+
+First, fit the original model as published.
+
+```{r org-gam, echo=TRUE}
+library("mgcv")
+
+mod_org <-
+  gam(
+    m_lesions ~ s(distance, k = 5) +
+      s(mws, k = 5) +
+      s(sum_rain, k = 5),
+    data = dat,
+    family = tw()
+  )
+
+summary(mod_org)
+```
+
+Now fit a model with random effects for the site (Curyo or Horsham), rep (3) and station (10 per each of 10 transects) to see if it improves the model fit to the data.
+
+```{r new-gam, echo=TRUE}
+mod_new <-
+  gam(
+    m_lesions ~ s(distance, k = 5) +
+      s(mws, k = 5) +
+      s(sum_rain, k = 5) +
+      s(site, rep, station, bs = "re"),
+    data = dat,
+    family = tw()
+  )
+
+summary(mod_new)
+```
+
+Here we've added a new line, `s(site, rep, station, bs = "re")` for the random effects.
+This indicates that we now have a smoothed term for 'site', 'rep' (replicate), and 'station' with `bs = "re"`, where the basis (`bs`) for the smooth is a random effect (`re`).
+
+We can see that the $R^2$ value has increased, `r  summary(mod_new)$r.sq` vs `r summary(mod_org)$r.sq` and that the deviance explained has also increased, `r percent(summary(mod_new)$dev.expl, accuracy = 0.1)` vs `r percent(summary(mod_org)$dev.expl, accuracy = 0.1)`.
+
+In the original paper, we used AIC to compare models to ensure we didn't over fit and used the most parsimonious model possible.
+As we've added new terms it's best to check to ensure that we've not added unnecessary complexity to the model.
+
+### Compare AIC Values
+
+```{r compare-aic, echo=TRUE}
+library("broom")
+
+models <- list(mod_org = mod_org,
+               mod_new = mod_new
+               )
+
+mod_aic <- map_df(models, glance,
+                  .id = "model") %>%
+   arrange(AIC)
+
+mod_aic
+```
+
+The AIC does improve with the new model, `r round(mod_aic$AIC[1], 0)` to the original's, `r round(mod_aic$AIC[2], 0)`, enough to likely warrant the added complexity to the model I'd say.
+It is of note that the BIC is larger for the new model, `r round(mod_aic$BIC[1], 0)`, to the original's, `r round(mod_aic$BIC[2], 0)`, so further diagnostics should be used as we did in the paper.
+
+### Check Using Model Fit With Descriptive Statistics and Figures
+
+Lastly, we can use `gam.check()` as in the paper to evaluate the models fitness.
+
+#### Original Khaliq _et al._ Model
+
+```{r gam-check-org, echo=TRUE, fig.height=6}
+gam.check(mod_org)
+```
+
+#### Updated Model With Random Effects
+
+```{r gam-check-new, echo=TRUE, fig.height=6}
+gam.check(mod_new)
+```
+The original model's "distance" term $k-index$ was a bit iffy as it was indicated to be significant, but otherwise acceptable for what we wanted as we weren't forward predicting, just explaining what happened at our trial sites.
+It indicated that the $k$ value was too low, which is fair, we only had $k = 5$ due to a lack of degrees of freedom.
+Adding the random effects increased the estimated degrees of freedom available and resulted in a better fitting model in the new model's form with random effects included.
+
+The qq-plot and other diagnostics for the new model also show a slight visual improvement over the original model.
+Especially the response vs. predicted variables showing much less of a pattern.
+
+## Conclusion
+
+In conclusion, this was a fun little exercise that allowed me to explore some new things I've learned along the way and apply them to some older work very easily.
+This isn't worth going back to the original paper and making any changes as it doesn't change the story one bit.
+However, it is nice to see that I was able to take the original work and so easily reproduce it and then upgrade it and confirm what I thought and will be useful information for future work.
+
+## Further Resources
+
+Here's a few more resources that are useful for GAMs.
+
+- [A Free, Interactive Course using mgcv](https://noamross.github.io/gams-in-r-course/) from Noam Ross, highly recommended, great exercises and examples.
+- [GAMbler](https://ecogambler.netlify.app/blog/) from Nick Clark, ecology focus but has great support for GAMs.
+- [From the bottom of the heap](https://fromthebottomoftheheap.net/blog/) from Ben Bolker, I already mentioned this blog at the beginning of the post, but it's worth mentioning again for the great materials that Ben has put together and shared.
