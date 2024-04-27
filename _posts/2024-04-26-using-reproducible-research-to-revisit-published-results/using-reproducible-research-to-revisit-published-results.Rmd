@@ -156,5 +156,5 @@ However, it is nice to see that I was able to take the original work and so easi
 Here's a few more resources that are useful for GAMs.
 
 - [A Free, Interactive Course using mgcv](https://noamross.github.io/gams-in-r-course/) from Noam Ross, highly recommended, great exercises and examples.
-- [GAMbler](https://ecogambler.netlify.app/blog/) from Nick Clark, ecology focus but has great support for GAMs.
-- [From the bottom of the heap](https://fromthebottomoftheheap.net/blog/) from Ben Bolker, I already mentioned this blog at the beginning of the post, but it's worth mentioning again for the great materials that Ben has put together and shared.
+- [GAMbler](https://ecogambler.netlify.app/blog/) from Nicholas Clark, ecology focus but has great support for GAMs.
+- [From the bottom of the heap](https://fromthebottomoftheheap.net/blog/) from Gavin Simpson, I already mentioned this blog at the beginning of the post, but it's worth mentioning again for the great materials that Ben has put together and shared.
