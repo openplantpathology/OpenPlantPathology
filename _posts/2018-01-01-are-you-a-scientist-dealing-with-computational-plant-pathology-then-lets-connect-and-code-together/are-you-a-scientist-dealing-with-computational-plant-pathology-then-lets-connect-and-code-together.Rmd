@@ -4,7 +4,7 @@ description: |
  We propose to develop a community that values the sharing of knowledge, ideas and data; building capacity; and promotes open and reproducible research to benefit plant pathologists. 
 author:
   - name: Adam Sparks
-    url: adamhsparks.netlify.app
+    url: https://adamhsparks.netlify.app
   - name: Emerson Del Ponte
     url: https://emersondelponte.netlify.app
 date: 01-01-2018
