@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Using Reproducible Research to Revisit Published Results</title>
 
-<meta property="description" itemprop="description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model."/>
+<meta property="description" itemprop="description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data."/>
 
 <link rel="canonical" href="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/"/>
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
@@ -126,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Open Plant Pathology: Using Reproducible Research to Revisit Published Results"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model."/>
+<meta property="og:description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data."/>
 <meta property="og:url" content="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/"/>
 <meta property="og:image" content="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-org-1.png"/>
 <meta property="og:image:width" content="1248"/>
@@ -137,7 +137,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="Open Plant Pathology: Using Reproducible Research to Revisit Published Results"/>
-<meta property="twitter:description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model."/>
+<meta property="twitter:description" content="In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data."/>
 <meta property="twitter:url" content="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/"/>
 <meta property="twitter:image" content="https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-org-1.png"/>
 <meta property="twitter:image:width" content="1248"/>
@@ -154,7 +154,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Using Reproducible Research to Revisit Published Results"]},{"type":"character","attributes":{},"value":["In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Adam H. Sparks"]},{"type":"character","attributes":{},"value":["https://rstats.me/@adamhsparks"]}]}]},{"type":"character","attributes":{},"value":["2024-04-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["R4PlantPath","Reproducible Research"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","bibliography","categories","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Using Reproducible Research to Revisit Published Results"]},{"type":"character","attributes":{},"value":["In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Adam H. Sparks"]},{"type":"character","attributes":{},"value":["https://rstats.me/@adamhsparks"]}]}]},{"type":"character","attributes":{},"value":["2024-04-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["R4PlantPath","Reproducible Research"]},{"type":"character","attributes":{},"value":["https://www.openplantpathology.org/posts/2024-04-26-using-reproducible-research-to-revisit-published-results/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2486,7 +2486,7 @@ gtag('config', 'UA-112255011-1');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Using Reproducible Research to Revisit Published Results","description":"In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model.","authors":[{"author":"Adam H. Sparks","authorURL":"https://rstats.me/@adamhsparks","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2024-04-27T00:00:00.000+08:00","citationText":"Sparks, 2024"}
+{"title":"Using Reproducible Research to Revisit Published Results","description":"In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data.","authors":[{"author":"Adam H. Sparks","authorURL":"https://rstats.me/@adamhsparks","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2024-04-27T00:00:00.000+08:00","citationText":"Sparks, 2024"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2532,7 +2532,7 @@ gtag('config', 'UA-112255011-1');
   <a href="../../index.html#category:Reproducible_Research" class="dt-tag">Reproducible Research</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model.</p></p>
+<p><p>In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2542,6 +2542,10 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-article">
+<h2 id="note-on-further-refinement">Note on Further Refinement</h2>
+<p>I realised I neglected to explore including the pots at each station and the plants in each pot for the random effects.
+The <code>mod_new</code> now includes these and the model fit is further improved with their inclusion. -ahs 2024-04-28</p>
+<h2 id="introduction">Introduction</h2>
 <p>I’ve recently just wrapped up an analysis with co-authors looking at the aerial dispersal of peanut smut spores from infested fields in Argentina <span class="citation" data-cites="Paredes2024 EdwardsMolina2022">(<a href="#ref-Paredes2024" role="doc-biblioref">Paredes et al. 2024</a>; <a href="#ref-EdwardsMolina2022" role="doc-biblioref">Edwards Molina, Sparks, and Paredes 2022</a>)</span>.
 In this paper, we used a Generalised Additive Model (GAM) to <a href="https://epifito.github.io/peanut_smut_aerial/gam_model.html">describe how far the spores spread and what was linked with this</a> in the R programming environment.
 This model was particularly difficult for me to fit initially due to spatial autocorrelation effects due to the spore trap locations and time-slices that were used to collect the spore counts.
@@ -2667,7 +2671,7 @@ R-sq.(adj) =  0.674   Deviance explained = 61.2%
 <span>    <span class='va'>m_lesions</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/s.html'>s</a></span><span class='op'>(</span><span class='va'>distance</span>, k <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>      <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/s.html'>s</a></span><span class='op'>(</span><span class='va'>mws</span>, k <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>      <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/s.html'>s</a></span><span class='op'>(</span><span class='va'>sum_rain</span>, k <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>      <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/s.html'>s</a></span><span class='op'>(</span><span class='va'>site</span>, <span class='va'>rep</span>, <span class='va'>station</span>, bs <span class='op'>=</span> <span class='st'>"re"</span><span class='op'>)</span>,</span>
+<span>      <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/s.html'>s</a></span><span class='op'>(</span><span class='va'>site</span>, <span class='va'>rep</span>, <span class='va'>station</span>, <span class='va'>pot_no</span>, <span class='va'>plant_no</span>, bs <span class='op'>=</span> <span class='st'>"re"</span><span class='op'>)</span>,</span>
 <span>    data <span class='op'>=</span> <span class='va'>dat</span>,</span>
 <span>    family <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/mgcv/man/Tweedie.html'>tw</a></span><span class='op'>(</span><span class='op'>)</span></span>
 <span>  <span class='op'>)</span></span>
@@ -2680,27 +2684,32 @@ Link function: log
 
 Formula:
 m_lesions ~ s(distance, k = 5) + s(mws, k = 5) + s(sum_rain, 
-    k = 5) + s(site, rep, station, bs = &quot;re&quot;)
+    k = 5) + s(site, rep, station, pot_no, plant_no, bs = &quot;re&quot;)
 
 Parametric coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)
-(Intercept) -0.05538    0.07043  -0.786    0.432
+(Intercept) -0.08424    0.06155  -1.369    0.172
 
 Approximate significance of smooth terms:
-                      edf Ref.df      F              p-value    
-s(distance)         3.641  3.921 88.518 &lt; 0.0000000000000002 ***
-s(mws)              1.859  2.003  2.001             0.171288    
-s(sum_rain)         2.738  2.837  4.239             0.004961 ** 
-s(site,rep,station) 4.549  6.000  3.136             0.000329 ***
+                                      edf Ref.df      F
+s(distance)                         3.650  3.924 65.908
+s(mws)                              1.919  2.049  1.997
+s(sum_rain)                         2.797  2.878  5.440
+s(site,rep,station,pot_no,plant_no) 4.924  6.000  4.058
+                                                 p-value    
+s(distance)                         &lt; 0.0000000000000002 ***
+s(mws)                                           0.29429    
+s(sum_rain)                                      0.00125 ** 
+s(site,rep,station,pot_no,plant_no)            0.0000601 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-R-sq.(adj) =  0.697   Deviance explained = 63.7%
--REML = 304.72  Scale est. = 0.36201   n = 334</code></pre>
+R-sq.(adj) =   0.71   Deviance explained = 64.5%
+-REML = 301.99  Scale est. = 0.36131   n = 334</code></pre>
 </div>
-<p>Here we’ve added a new line, <code>s(site, rep, station, bs = "re")</code> for the random effects.
+<p>Here we’ve added a new line, <code>s(site, rep, station, pot_no, plant_no, bs = "re")</code> for the random effects.
 This indicates that we now have a smoothed term for ‘site’, ‘rep’ (replicate), and ‘station’ with <code>bs = "re"</code>, where the basis (<code>bs</code>) for the smooth is a random effect (<code>re</code>).</p>
-<p>We can see that the <span class="math inline">\(R^2\)</span> value has increased, 0.6968826 vs 0.6737655 and that the deviance explained has also increased, 63.7% vs 61.2%.</p>
+<p>We can see that the <span class="math inline">\(R^2\)</span> value has increased, 0.7099145 vs 0.6737655 and that the deviance explained has also increased, 64.5% vs 61.2%.</p>
 <p>In the original paper, we used AIC to compare models to ensure we didn’t over fit and used the most parsimonious model possible.
 As we’ve added new terms it’s best to check to ensure that we’ve not added unnecessary complexity to the model.</p>
 <h3 id="compare-aic-values">Compare AIC Values</h3>
@@ -2721,11 +2730,11 @@ As we’ve added new terms it’s best to check to ensure that we’ve not added
 <pre><code># A tibble: 2 × 8
   model      df logLik   AIC   BIC deviance df.residual  nobs
   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt; &lt;int&gt;
-1 mod_new 13.8   -275.  585.  651.     131.        320.   334
+1 mod_new 14.3   -271.  578.  645.     129.        320.   334
 2 mod_org  9.30  -288.  599.  644.     141.        325.   334</code></pre>
 </div>
-<p>The AIC does improve with the new model, 585 to the original’s, 599, enough to likely warrant the added complexity to the model I’d say.
-It is of note that the BIC is larger for the new model, 651, to the original’s, 644, so further diagnostics should be used as we did in the paper.</p>
+<p>The AIC does improve with the new model, 578 to the original’s, 599, enough to likely warrant the added complexity to the model I’d say.
+It is of note that the BIC is larger for the new model, 645, to the original’s, 644, so further diagnostics should be used as we did in the paper.</p>
 <h3 id="check-using-model-fit-with-descriptive-statistics-and-figures">Check Using Model Fit With Descriptive Statistics and Figures</h3>
 <p>Lastly, we can use <code>gam.check()</code> as in the paper to evaluate the models fitness.</p>
 <h4 id="original-khaliq-et-al.-model">Original Khaliq <em>et al.</em> Model</h4>
@@ -2760,20 +2769,20 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <p><img src="using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-new-1.png" width="624" /></p>
 <pre><code>
 Method: REML   Optimizer: outer newton
-full convergence after 12 iterations.
-Gradient range [-0.00008332753,0.00001218484]
-(score 304.7206 &amp; scale 0.3620074).
-Hessian positive definite, eigenvalue range [0.2297037,2963.814].
+full convergence after 10 iterations.
+Gradient range [-0.00007401781,0.00003895846]
+(score 301.9894 &amp; scale 0.3613127).
+Hessian positive definite, eigenvalue range [0.3078677,2958.934].
 Model rank =  22 / 22 
 
 Basis dimension (k) checking results. Low p-value (k-index&lt;1) may
 indicate that k is too low, especially if edf is close to k&#39;.
 
-                      k&#39;  edf k-index p-value
-s(distance)         4.00 3.64    0.90    0.10
-s(mws)              4.00 1.86    1.04    0.87
-s(sum_rain)         4.00 2.74    1.05    0.90
-s(site,rep,station) 9.00 4.55      NA      NA</code></pre>
+                                      k&#39;  edf k-index p-value
+s(distance)                         4.00 3.65    0.91    0.13
+s(mws)                              4.00 1.92    1.04    0.88
+s(sum_rain)                         4.00 2.80    1.05    0.91
+s(site,rep,station,pot_no,plant_no) 9.00 4.92      NA      NA</code></pre>
 </div>
 <p>The original model’s “distance” term <span class="math inline">\(k-index\)</span> was a bit iffy as it was indicated to be significant, but otherwise acceptable for what we wanted as we weren’t forward predicting, just explaining what happened at our trial sites.
 It indicated that the <span class="math inline">\(k\)</span> value was too low, which is fair, we only had <span class="math inline">\(k = 5\)</span> due to a lack of degrees of freedom.

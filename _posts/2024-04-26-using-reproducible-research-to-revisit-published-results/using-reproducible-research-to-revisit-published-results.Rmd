@@ -1,7 +1,7 @@
 ---
 title: "Using Reproducible Research to Revisit Published Results"
 description: |
-  In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to improve the model.
+  In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data.
 author:
   - name: Adam H. Sparks
     url: "https://rstats.me/@adamhsparks"
@@ -19,6 +19,13 @@ categories:
 knitr::opts_chunk$set(echo = FALSE)
 library("scales")
 ```
+
+## Note on Further Refinement
+
+I realised I neglected to explore including the pots at each station and the plants in each pot for the random effects.
+The `mod_new` now includes these and the model fit is further improved with their inclusion. -ahs 2024-04-28
+
+## Introduction
 
 I've recently just wrapped up an analysis with co-authors looking at the aerial dispersal of peanut smut spores from infested fields in Argentina [@Paredes2024; @EdwardsMolina2022].
 In this paper, we used a Generalised Additive Model (GAM) to [describe how far the spores spread and what was linked with this](https://epifito.github.io/peanut_smut_aerial/gam_model.html) in the R programming environment.
@@ -88,7 +95,7 @@ mod_new <-
     m_lesions ~ s(distance, k = 5) +
       s(mws, k = 5) +
       s(sum_rain, k = 5) +
-      s(site, rep, station, bs = "re"),
+      s(site, rep, station, pot_no, plant_no, bs = "re"),
     data = dat,
     family = tw()
   )
@@ -96,7 +103,7 @@ mod_new <-
 summary(mod_new)
 ```
 
-Here we've added a new line, `s(site, rep, station, bs = "re")` for the random effects.
+Here we've added a new line, `s(site, rep, station, pot_no, plant_no, bs = "re")` for the random effects.
 This indicates that we now have a smoothed term for 'site', 'rep' (replicate), and 'station' with `bs = "re"`, where the basis (`bs`) for the smooth is a random effect (`re`).
 
 We can see that the $R^2$ value has increased, `r  summary(mod_new)$r.sq` vs `r summary(mod_org)$r.sq` and that the deviance explained has also increased, `r percent(summary(mod_new)$dev.expl, accuracy = 0.1)` vs `r percent(summary(mod_org)$dev.expl, accuracy = 0.1)`.
