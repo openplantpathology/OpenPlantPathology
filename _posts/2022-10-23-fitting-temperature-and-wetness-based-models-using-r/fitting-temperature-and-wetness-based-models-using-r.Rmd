@@ -134,7 +134,8 @@ wet <- tibble::tribble(~ x, ~ y,
 ```
 
 Now we fit a three-parameter asymptotic regression model.
-These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity. This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law.
+These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity.
+This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law.
 See this [tutorial](https://www.statforbiology.com/nonlinearregression/usefulequations) for comprehensive information about fitting several non-linear regression models in R.
 
 The model can be written as
@@ -218,4 +219,4 @@ ggplot(validation, aes(t, HW, z = dis)) +
 ```
 
 That's it.
-Feel free to [reach](mailto: delponte@ufv.br) me in case of questions!
+Feel free to [reach](mailto:%20delponte@ufv.br) me in case of questions!

@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -130,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/anchor-4.2.2/anchor.min.js","multiple-plot-figure_files/bowser-1.9.3/bowser.min.js","multiple-plot-figure_files/distill-2.2.21/template.v2.js","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-13-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-15-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","multiple-plot-figure_files/header-attrs-2.20/header-attrs.js","multiple-plot-figure_files/header-attrs-2.6.6/header-attrs.js","multiple-plot-figure_files/header-attrs-2.7/header-attrs.js","multiple-plot-figure_files/jquery-1.11.3/jquery.min.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.min.js","multiple-plot-figure_files/jquery-3.6.0/jquery-3.6.0.min.map","multiple-plot-figure_files/popper-2.6.0/popper.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-bundle.umd.min.js","multiple-plot-figure_files/tippy-6.2.7/tippy-light-border.css","multiple-plot-figure_files/tippy-6.2.7/tippy.css","multiple-plot-figure_files/tippy-6.2.7/tippy.umd.min.js","multiple-plot-figure_files/webcomponents-2.0.0/webcomponents.js","mymultipanel1.png","mymultipanel2.png"]}
+  {"type":"character","attributes":{},"value":["multipanel1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-10-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-11-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-12-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-2-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-3-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-4-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-5-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-7-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-8-1.png","multiple-plot-figure_files/figure-html5/unnamed-chunk-9-1.png","mymultipanel1.png","mymultipanel2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2429,7 +2429,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2496,6 +2496,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>A multi-panel figure for coffee leaf rust</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
@@ -2512,11 +2513,13 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="todays-topic">Today’s topic</h2>
-<p>Hello! this is our inaugural post for the <a href="https://emdelponte.github.io/OPP-distill/#category:R4PlantPath">#R4PlantPath</a> blog post category.
+<p>Hello!
+this is our inaugural post for the <a href="https://emdelponte.github.io/OPP-distill/#category:R4PlantPath">#R4PlantPath</a> blog post category.
 Every week or so we will be <strong>sharing one piece of R code</strong> that (we hope!) you will find useful for analyzing or communicating plant pathology research and data more effectively and in a reproducible manner, using R.</p>
 <p><img src="multipanel1.png" /></p>
 <p>I will start with a technique that has been very useful, at least for me, and that many people usually make use of multiple software to prepare: the multi-panel plot figure.
-This was the past me, not so many years ago. After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).</p>
+This was the past me, not so many years ago.
+After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).</p>
 <p>This approach works, of course, but it can be counterproductive every time the plot is updated (or a colleague requests a change) and the whole figure should be re-designed.
 It can be even more complicated and laborious if the manual tweaking is extensive.
 In brief, it is neither time-effective nor reproducible.</p>
@@ -2530,7 +2533,7 @@ I will focus mainly on the specifics of how to use the patchwork pkg to produce 
 Please refer to several other good tutorials on the web on how to code using <a href="https://www.tidyverse.org/">{tidyverse}</a> and create great <a href="https://r4ds.had.co.nz/data-visualisation.html">visualizations using ggplot</a>.</p>
 <h2 id="would-you-like-some-coffee">Would you like some coffee?</h2>
 <p>Using a plant pathology data set - Yay!
-No <a href="https://www.rdocumentation.org/packages/data sets/versions/3.6.2/topics/iris">iris</a> or <a href="https://allisonhorst.github.io/palmerpenguins/index.html">penguins</a> allowed here!
+No <a href="https://www.rdocumentation.org/packages/data%20sets/versions/3.6.2/topics/iris">iris</a> or <a href="https://allisonhorst.github.io/palmerpenguins/index.html">penguins</a> allowed here!
 I may be biased (as coauthor of the paper) but the data set we are going to use is very rich to explore and demonstrate many ways to produce {ggplot2} figures and different analyses (we will look at these in future posts!).
 Plant disease data sets may be more interesting for plant pathologists than for other botanists, biologists and other scientists in general interested in playing with data sets for learning R.</p>
 <p>The data set was gathered from a survey for one of the most important diseases globally, coffee leaf rust, caused by <em>Hemileia vastatrix</em>.
@@ -2595,8 +2598,7 @@ As we did for the first plots, we need to assign each plot to a {ggplot2} object
 <p>Is that it?
 Yes!
 Just load the pkg and the <code>|</code> character will do the magic when connecting the two {ggplot2} objects.
-But there is more, actually much more if you look at the documentation of the pkg
-Let’s keep exploring a few cool features for our nice coffee rust data set.
+But there is more, actually much more if you look at the documentation of the pkg Let’s keep exploring a few cool features for our nice coffee rust data set.
 Now we switch to the <code>/</code> character to see one plot on top of another.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2605,7 +2607,8 @@ Now we switch to the <code>/</code> character to see one plot on top of another.
 <p><img src="multiple-plot-figure_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <h2 id="three-panel-plot">Three-panel plot</h2>
-<p>What about a three-panel plot… can we also do this?
+<p>What about a three-panel plot…
+can we also do this?
 Yes, just follow the same logic.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">

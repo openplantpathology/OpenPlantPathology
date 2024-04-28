@@ -13,24 +13,24 @@ output:
 doi: "10.17605/OSF.IO/K632P"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
 
-Presenter: Mr. Kandeeparoopan Prasannath \
-Institution: Queensland Alliance for Agriculture and Food Innovation (QAAFI), The University of Queensland \
-Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Date: February 3, 2022 \
+Presenter: Mr. Kandeeparoopan Prasannath\
+Institution: Queensland Alliance for Agriculture and Food Innovation (QAAFI), The University of Queensland\
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps)\
+Date: February 3, 2022\
 Links: [Video](https://youtu.be/Z5Hfc9rZCqs)
 
 ## Biography
 
 Kandeeparoopan Prasannath is a third year PhD student in the Queensland Alliance for Agriculture and Food Innovation at The University of Queensland.
-His PhD research under the supervision of Assoc. Prof Femi Akinsanmi and Prof Vic Galea, investigates the aetiology and epidemiology of the flower blight diseases of macadamia.
-Prasannath has so far published four research articles from his PhD. 
+His PhD research under the supervision of Assoc.
+Prof Femi Akinsanmi and Prof Vic Galea, investigates the aetiology and epidemiology of the flower blight diseases of macadamia.
+Prasannath has so far published four research articles from his PhD.
 
 ## Abstract
 
@@ -39,8 +39,8 @@ Flower blights reduce fruit set and control measures are limited.\
 Knowledge of the disease cycle and epidemiological parameters is required.
 Therefore, the potential sources of inoculum for the three forms of flower blights of macadamia in Australia were investigated.
 Relative abundance of the inoculum (Ri) in remnant racemes and yellow halo leaf spot in macadamia canopy was quantified and the pathogenicity of the fungal isolates obtained from the plant materials was assessed on developing flowers.
-Ri >90% was recorded for _Neopestalotiopsis_ species from both the remnant racemes and leaf spot, which indicates the materials are a source of inoculum for dry flower disease.
-Whereas, Ri <40% was recorded for Botrytis species, the causal agent of grey mould, and Ri = 70% for _Cladosporium_ species, the causal agent of green mould, only from remnant racemes.
-Conidial suspensions and direct incubation with the plant materials resulted in severe flower blights on developing macadamia flowers. Disease severity using inocula from remnant racemes was significantly (P > 0.001) higher than inocula from leaf spot.
+Ri \>90% was recorded for *Neopestalotiopsis* species from both the remnant racemes and leaf spot, which indicates the materials are a source of inoculum for dry flower disease.
+Whereas, Ri \<40% was recorded for Botrytis species, the causal agent of grey mould, and Ri = 70% for *Cladosporium* species, the causal agent of green mould, only from remnant racemes.
+Conidial suspensions and direct incubation with the plant materials resulted in severe flower blights on developing macadamia flowers.
+Disease severity using inocula from remnant racemes was significantly (P \> 0.001) higher than inocula from leaf spot.
 This information is critical for flower blights control in macadamia orchards.
-

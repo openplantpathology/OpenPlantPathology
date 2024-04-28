@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,7 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>The fall of an empire</title>
 
-  <meta property="description" itemprop="description" content="I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
+  <meta property="description" itemprop="description" content="I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
 
 
   <!--  https://schema.org/Article -->
@@ -101,24 +101,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="The fall of an empire"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
+  <meta property="og:description" content="I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="The fall of an empire"/>
-  <meta property="twitter:description" content="I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
+  <meta property="twitter:description" content="I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others&#39; presentations."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["The fall of an empire"]},{"type":"character","attributes":{},"value":["I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["05-25-2018"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["post-fall-empire.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["The fall of an empire"]},{"type":"character","attributes":{},"value":["I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["05-25-2018"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["post-fall-empire.png"]},{"type":"character","attributes":{},"value":["R4PlantPath"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["post-fall-empire.png","the-fall-of-an-empire_files/anchor-4.2.2/anchor.min.js","the-fall-of-an-empire_files/bowser-1.9.3/bowser.min.js","the-fall-of-an-empire_files/distill-2.2.21/template.v2.js","the-fall-of-an-empire_files/header-attrs-2.20/header-attrs.js","the-fall-of-an-empire_files/header-attrs-2.6.6/header-attrs.js","the-fall-of-an-empire_files/jquery-1.11.3/jquery.min.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.map","the-fall-of-an-empire_files/popper-2.6.0/popper.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-light-border.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.umd.min.js","the-fall-of-an-empire_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-8-1.png","unnamed-chunk-9-1.gif"]}
+  {"type":"character","attributes":{},"value":["post-fall-empire.png","the-fall-of-an-empire_files/anchor-4.2.2/anchor.min.js","the-fall-of-an-empire_files/bowser-1.9.3/bowser.min.js","the-fall-of-an-empire_files/distill-2.2.21/template.v2.js","the-fall-of-an-empire_files/header-attrs-2.26/header-attrs.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.js","the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.map","the-fall-of-an-empire_files/popper-2.6.0/popper.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-fall-of-an-empire_files/tippy-6.2.7/tippy-light-border.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.css","the-fall-of-an-empire_files/tippy-6.2.7/tippy.umd.min.js","the-fall-of-an-empire_files/webcomponents-2.0.0/webcomponents.js","unnamed-chunk-8-1.png","unnamed-chunk-9-1.gif"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1500,7 +1500,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="the-fall-of-an-empire_files/header-attrs-2.25/header-attrs.js"></script>
+  <script src="the-fall-of-an-empire_files/header-attrs-2.26/header-attrs.js"></script>
   <script src="the-fall-of-an-empire_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="the-fall-of-an-empire_files/popper-2.6.0/popper.min.js"></script>
   <link href="the-fall-of-an-empire_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1521,7 +1521,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"The fall of an empire","description":"I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-05-25T00:00:00.000+08:00","citationText":"Ponte, 2018"}
+{"title":"The fall of an empire","description":"I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-05-25T00:00:00.000+08:00","citationText":"Ponte, 2018"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1538,7 +1538,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="dt-tag">R4PlantPath</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state). The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others’ presentations.</p></p>
+<p><p>I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state). The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others’ presentations.</p></p>
 </div>
 
 <div class="d-byline">

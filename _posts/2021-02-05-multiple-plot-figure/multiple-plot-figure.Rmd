@@ -16,13 +16,15 @@ categories:
 
 ## Today's topic
 
-Hello! this is our inaugural post for the [\#R4PlantPath](https://emdelponte.github.io/OPP-distill/#category:R4PlantPath) blog post category.
+Hello!
+this is our inaugural post for the [#R4PlantPath](https://emdelponte.github.io/OPP-distill/#category:R4PlantPath) blog post category.
 Every week or so we will be **sharing one piece of R code** that (we hope!) you will find useful for analyzing or communicating plant pathology research and data more effectively and in a reproducible manner, using R.
 
 ![](multipanel1.png)
 
 I will start with a technique that has been very useful, at least for me, and that many people usually make use of multiple software to prepare: the multi-panel plot figure.
-This was the past me, not so many years ago. After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).
+This was the past me, not so many years ago.
+After learning how to produce plots in R, the next step was to combine them in an image editor software (sounds familiar to you?).
 
 This approach works, of course, but it can be counterproductive every time the plot is updated (or a colleague requests a change) and the whole figure should be re-designed.
 It can be even more complicated and laborious if the manual tweaking is extensive.
@@ -42,7 +44,7 @@ Please refer to several other good tutorials on the web on how to code using [{t
 ## Would you like some coffee?
 
 Using a plant pathology data set - Yay!
-No [iris](https://www.rdocumentation.org/packages/data sets/versions/3.6.2/topics/iris) or [penguins](https://allisonhorst.github.io/palmerpenguins/index.html) allowed here!
+No [iris](https://www.rdocumentation.org/packages/data%20sets/versions/3.6.2/topics/iris) or [penguins](https://allisonhorst.github.io/palmerpenguins/index.html) allowed here!
 I may be biased (as coauthor of the paper) but the data set we are going to use is very rich to explore and demonstrate many ways to produce {ggplot2} figures and different analyses (we will look at these in future posts!).
 Plant disease data sets may be more interesting for plant pathologists than for other botanists, biologists and other scientists in general interested in playing with data sets for learning R.
 
@@ -106,8 +108,7 @@ p_cult | p_alt
 Is that it?
 Yes!
 Just load the pkg and the `|` character will do the magic when connecting the two {ggplot2} objects.
-But there is more, actually much more if you look at the documentation of the pkg
-Let's keep exploring a few cool features for our nice coffee rust data set.
+But there is more, actually much more if you look at the documentation of the pkg Let's keep exploring a few cool features for our nice coffee rust data set.
 Now we switch to the `/` character to see one plot on top of another.
 
 ```{r}
@@ -116,7 +117,8 @@ p_cult / p_alt
 
 ## Three-panel plot
 
-What about a three-panel plot... can we also do this?
+What about a three-panel plot...
+can we also do this?
 Yes, just follow the same logic.
 
 ```{r}

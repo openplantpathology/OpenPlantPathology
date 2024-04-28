@@ -32,12 +32,15 @@ The data published in Togashi (1949) are old, and many experimental studies on p
 New estimates of cardinal temperatures can be estimated from published thermal performance curves [@bebber2019].
 Future work will involve collating TPCs and estimating cardinal temperatures from the literature.
 
-## Further information 
+## Further information
 
 ![Screenshot of Togashi data set repository available from Dryad.](togashi2.png)
 
-Data source: [@bebber2020]
+Data source: [@Bebber2020]
 
-Togashi, K. (1949). Biological characters of plant pathogens: Temperature relations. Meibundo.
+Togashi, K.
+(1949).
+Biological characters of plant pathogens: Temperature relations.
+Meibundo.
 
 Contact: Dan Bebber

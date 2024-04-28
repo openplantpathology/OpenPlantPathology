@@ -15,17 +15,16 @@ output:
 doi: "10.17605/OSF.IO/V5X3B"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
 
-Presenter: Dr. Anne Sawyer \
-Institution: Advance Queensland  Fellow,  School of Chemistry and Molecular Biosciences, The University of Queensland \
-Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Date: February 3, 2022 \
+Presenter: Dr. Anne Sawyer\
+Institution: Advance Queensland Fellow, School of Chemistry and Molecular Biosciences, The University of Queensland\
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps)\
+Date: February 3, 2022\
 Links: [Video](https://youtu.be/lx7gaj5D-3Y)
 
 ## Biography
@@ -38,6 +37,8 @@ Anne is now working closely with partners at the Queensland Department of Agricu
 ## Abstract
 
 RNA interference (RNAi) vaccines are an emerging environmentally-friendly crop protection platform that are effective against agricultural pests and pathogens.
-The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant. When applied as BioClay&trade;, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.
-We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries. We have synthesised dsRNA targeting essential _Phytophthora cinnamomi_ and _Austropuccinia psidii_ genes which have fungicidal activity against the respective pathogens _in vitro_ and _in planta_ and are now investigating the mechanism of RNAi vaccine-induced protection.
+The approach involves applying pathogen-specific double-stranded RNA (dsRNA) to the host plant to trigger RNAi and silence targeted pathogen genes, inactivating the pathogen and protecting the plant.
+When applied as BioClay™, in combination with clay particles that bind dsRNA, RNAi vaccines can provide plants with protection for more than 20 days, making a single spray a commercially feasible and lasting approach to protect crops.
+We have been exploring RNAi vaccines as a novel control for Phytophthora root rot and myrtle rust, two aggressive diseases which are destroying natural plant populations across Australia and causing significant economic losses to horticulture, forestry and native plant industries.
+We have synthesised dsRNA targeting essential *Phytophthora cinnamomi* and *Austropuccinia psidii* genes which have fungicidal activity against the respective pathogens *in vitro* and *in planta* and are now investigating the mechanism of RNAi vaccine-induced protection.
 Our ultimate goal is to develop a clean green safe control strategy for these invasive diseases to safeguard Australian horticulture, forestry and native plant industries, with long-term benefits for conservation and biodiversity.

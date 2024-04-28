@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -142,12 +143,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","bibliography","csl","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Network meta-analysis in R"]},{"type":"character","attributes":{},"value":["Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["02-28-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["phytopathology.csl"]},{"type":"character","attributes":{},"value":["R4PlantPath"]},{"type":"character","attributes":{},"value":["network1.png"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","bibliography","csl","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Network meta-analysis in R"]},{"type":"character","attributes":{},"value":["Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["02-28-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["phytopathology.csl"]},{"type":"character","attributes":{},"value":["R4PlantPath"]},{"type":"character","attributes":{},"value":["network1.png"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["network-meta-analysis-in-r_files/anchor-4.2.2/anchor.min.js","network-meta-analysis-in-r_files/bowser-1.9.3/bowser.min.js","network-meta-analysis-in-r_files/distill-2.2.21/template.v2.js","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-14-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-15-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-16-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-17-1.png","network-meta-analysis-in-r_files/header-attrs-2.11/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.13/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.20/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.6.6/header-attrs.js","network-meta-analysis-in-r_files/header-attrs-2.7/header-attrs.js","network-meta-analysis-in-r_files/jquery-1.11.3/jquery.min.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.map","network-meta-analysis-in-r_files/popper-2.6.0/popper.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-light-border.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.umd.min.js","network-meta-analysis-in-r_files/webcomponents-2.0.0/webcomponents.js","network1.png","phytopathology.csl","references.bib","wheat.xlsx"]}
+  {"type":"character","attributes":{},"value":["network-meta-analysis-in-r_files/anchor-4.2.2/anchor.min.js","network-meta-analysis-in-r_files/bowser-1.9.3/bowser.min.js","network-meta-analysis-in-r_files/distill-2.2.21/template.v2.js","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-14-1.png","network-meta-analysis-in-r_files/figure-html5/unnamed-chunk-16-1.png","network-meta-analysis-in-r_files/header-attrs-2.26/header-attrs.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.js","network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.map","network-meta-analysis-in-r_files/popper-2.6.0/popper.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","network-meta-analysis-in-r_files/tippy-6.2.7/tippy-light-border.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.css","network-meta-analysis-in-r_files/tippy-6.2.7/tippy.umd.min.js","network-meta-analysis-in-r_files/webcomponents-2.0.0/webcomponents.js","network1.png","phytopathology.csl","references.bib","wheat.xlsx"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -259,9 +260,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -356,6 +369,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1117,6 +1135,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1194,8 +1218,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1221,12 +1246,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1504,7 +1530,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="network-meta-analysis-in-r_files/header-attrs-2.20/header-attrs.js"></script>
+  <script src="network-meta-analysis-in-r_files/header-attrs-2.26/header-attrs.js"></script>
   <script src="network-meta-analysis-in-r_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="network-meta-analysis-in-r_files/popper-2.6.0/popper.min.js"></script>
   <link href="network-meta-analysis-in-r_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1536,6 +1562,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Network meta-analysis in R</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt-tag">R4PlantPath</div>
@@ -1763,7 +1790,7 @@ Note: I needed to use an optimizer (see the <code>control</code> argument) for c
 Multivariate Meta-Analysis Model (k = 558; method: ML)
 
     logLik    Deviance         AIC         BIC        AICc   
--2161.8323   5466.7791   4377.6646   4494.4223   4380.5175   
+-2038.9199   5220.9543   4131.8398   4248.5975   4134.6926   
 
 Variance Components:
 
@@ -1771,20 +1798,20 @@ outer factor: factor(trial) (nlvls = 136)
 inner factor: trt           (nlvls = 6)
 
                estim     sqrt  k.lvl  fixed      level 
-tau^2.1    2026.0759  45.0120    136     no       CTRL 
-tau^2.2    1078.5412  32.8412     86     no        MET 
-tau^2.3     557.8729  23.6193     57     no       PROP 
-tau^2.4     453.8729  21.3043     56     no       PROT 
-tau^2.5    2443.9082  49.4359    136     no       TEBU 
-tau^2.6     492.9330  22.2021     87     no  TEBU+PROT 
+tau^2.1     160.1408  12.6547    136     no       CTRL 
+tau^2.2     338.3926  18.3955     86     no        MET 
+tau^2.3     350.8132  18.7300     57     no       PROP 
+tau^2.4     245.2883  15.6617     56     no       PROT 
+tau^2.5    3776.2881  61.4515    136     no       TEBU 
+tau^2.6    2297.4669  47.9319     87     no  TEBU+PROT 
 
            rho.CTRL  rho.MET  rho.PROP  rho.PROT  rho.TEBU  rho.TEBU+ 
 CTRL              1                                                   
-MET          0.9193        1                                          
-PROP         0.8580   0.9357         1                                
-PROT         0.8221   0.8897    0.9125         1                      
-TEBU         0.8060   0.8674    0.9056    0.9411         1            
-TEBU+PROT    0.4117   0.5540    0.5471    0.5945    0.5635          1 
+MET          0.9231        1                                          
+PROP         0.7073   0.8633         1                                
+PROT         0.7456   0.8586    0.8759         1                      
+TEBU         0.6108   0.7034    0.7469    0.7785         1            
+TEBU+PROT    0.4600   0.5795    0.6658    0.6956    0.8977          1 
              CTRL  MET  PROP  PROT  TEBU  TEBU+ 
 CTRL            -   86    57    56   136     87 
 MET            no    -    42    41    86     74 
@@ -1797,17 +1824,17 @@ Test for Residual Heterogeneity:
 QE(df = 552) = 55024.7841, p-val &lt; .0001
 
 Test of Moderators (coefficients 2:6):
-QM(df = 5) = 0.1049, p-val = 0.9998
+QM(df = 5) = 0.3999, p-val = 0.9953
 
 Model Results:
 
-              estimate      se    zval    pval    ci.lb    ci.ub    
-intrcpt         3.5388  3.8598  0.9168  0.3592  -4.0262  11.1038    
-trtMET          0.4397  1.8054  0.2435  0.8076  -3.0989   3.9782    
-trtPROP         0.2620  2.4810  0.1056  0.9159  -4.6008   5.1247    
-trtPROT         0.4974  2.6605  0.1870  0.8517  -4.7171   5.7120    
-trtTEBU         0.2661  2.5482  0.1044  0.9168  -4.7282   5.2605    
-trtTEBU+PROT    0.5101  3.7118  0.1374  0.8907  -6.7648   7.7850    
+              estimate      se    zval    pval    ci.lb   ci.ub     
+intrcpt         3.5387  1.0852  3.2608  0.0011   1.4117  5.6657  ** 
+trtMET          0.3857  0.7938  0.4859  0.6270  -1.1701  1.9415     
+trtPROP         0.2935  1.4195  0.2067  0.8362  -2.4886  3.0755     
+trtPROT         0.4529  1.1501  0.3938  0.6937  -1.8013  2.7070     
+trtTEBU         0.2663  4.6861  0.0568  0.9547  -8.9183  9.4508     
+trtTEBU+PROT    0.5113  3.9592  0.1291  0.8973  -7.2486  8.2711     
 
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
@@ -1857,7 +1884,7 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">3.538</td>
 <td style="text-align: right;">0.111</td>
 <td style="text-align: right;">3.539</td>
-<td style="text-align: right;">3.860</td>
+<td style="text-align: right;">1.085</td>
 <td style="text-align: left;">CTRL</td>
 </tr>
 <tr class="even">
@@ -1865,8 +1892,8 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">0.031</td>
 <td style="text-align: right;">0.433</td>
 <td style="text-align: right;">0.031</td>
-<td style="text-align: right;">0.440</td>
-<td style="text-align: right;">1.805</td>
+<td style="text-align: right;">0.386</td>
+<td style="text-align: right;">0.794</td>
 <td style="text-align: left;">MET</td>
 </tr>
 <tr class="odd">
@@ -1874,8 +1901,8 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">0.036</td>
 <td style="text-align: right;">0.195</td>
 <td style="text-align: right;">0.036</td>
-<td style="text-align: right;">0.262</td>
-<td style="text-align: right;">2.481</td>
+<td style="text-align: right;">0.293</td>
+<td style="text-align: right;">1.419</td>
 <td style="text-align: left;">PROP</td>
 </tr>
 <tr class="even">
@@ -1883,8 +1910,8 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">0.036</td>
 <td style="text-align: right;">0.426</td>
 <td style="text-align: right;">0.036</td>
-<td style="text-align: right;">0.497</td>
-<td style="text-align: right;">2.661</td>
+<td style="text-align: right;">0.453</td>
+<td style="text-align: right;">1.150</td>
 <td style="text-align: left;">PROT</td>
 </tr>
 <tr class="odd">
@@ -1893,7 +1920,7 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">0.269</td>
 <td style="text-align: right;">0.026</td>
 <td style="text-align: right;">0.266</td>
-<td style="text-align: right;">2.548</td>
+<td style="text-align: right;">4.686</td>
 <td style="text-align: left;">TEBU</td>
 </tr>
 <tr class="even">
@@ -1901,8 +1928,8 @@ We can notice that the results are very similar, although not identical.</p>
 <td style="text-align: right;">0.031</td>
 <td style="text-align: right;">0.429</td>
 <td style="text-align: right;">0.031</td>
-<td style="text-align: right;">0.510</td>
-<td style="text-align: right;">3.712</td>
+<td style="text-align: right;">0.511</td>
+<td style="text-align: right;">3.959</td>
 <td style="text-align: left;">TEBU+PROT</td>
 </tr>
 </tbody>
@@ -1929,7 +1956,7 @@ Reduced 55024.7841 </code></pre>
 </div>
 <pre><code>
         df       AIC       BIC      AICc     logLik    LRT   pval 
-Full    27 4377.6646 4494.4223 4380.5175 -2161.8323               
+Full    27 4131.8398 4248.5975 4134.6926 -2038.9199               
 Reduced  8  583.0105  617.6054  583.2728  -283.5052 0.0000 1.0000 
                 QE 
 Full    55024.7841 
@@ -1939,7 +1966,7 @@ Reduced 55024.7841 </code></pre>
 </div>
 <pre><code>
         df       AIC       BIC      AICc     logLik    LRT   pval 
-Full    27 4377.6646 4494.4223 4380.5175 -2161.8323               
+Full    27 4131.8398 4248.5975 4134.6926 -2038.9199               
 Reduced 13  582.6915  638.9082  583.3606  -278.3457 0.0000 1.0000 
                 QE 
 Full    55024.7841 
@@ -1989,22 +2016,24 @@ Fit: rma.mv(yi = yield, V = varyld, mods = ~trt, random = list(~trt |
     control = list(optimizer = &quot;nlm&quot;))
 
 Linear Hypotheses:
-            Estimate Std. Error z value Pr(&gt;|z|)
-2 - 1 == 0 -3.099135   5.288489  -0.586    0.985
-3 - 1 == 0 -3.276845   6.118313  -0.536    0.990
-4 - 1 == 0 -3.041372   6.338596  -0.480    0.994
-5 - 1 == 0 -3.272693   4.981167  -0.657    0.976
-6 - 1 == 0 -3.028717   7.240205  -0.418    0.997
-3 - 2 == 0 -0.177709   1.481099  -0.120    1.000
-4 - 2 == 0  0.057764   1.710301   0.034    1.000
-5 - 2 == 0 -0.173558   2.367919  -0.073    1.000
-6 - 2 == 0  0.070418   2.653802   0.027    1.000
-4 - 3 == 0  0.235473   1.299443   0.181    1.000
-5 - 3 == 0  0.004152   2.663079   0.002    1.000
-6 - 3 == 0  0.248128   2.313985   0.107    1.000
-5 - 4 == 0 -0.231322   2.677580  -0.086    1.000
-6 - 4 == 0  0.012655   2.103377   0.006    1.000
-6 - 5 == 0  0.243976   3.715404   0.066    1.000
+           Estimate Std. Error z value Pr(&gt;|z|)  
+2 - 1 == 0 -3.15296    1.00162  -3.148    0.015 *
+3 - 1 == 0 -3.24522    1.75576  -1.848    0.361  
+4 - 1 == 0 -3.08580    1.63790  -1.884    0.340  
+5 - 1 == 0 -3.27244    4.30201  -0.761    0.961  
+6 - 1 == 0 -3.02742    3.88653  -0.779    0.957  
+3 - 2 == 0 -0.09227    1.18739  -0.078    1.000  
+4 - 2 == 0  0.06715    1.11835   0.060    1.000  
+5 - 2 == 0 -0.11948    4.32271  -0.028    1.000  
+6 - 2 == 0  0.12554    3.69407   0.034    1.000  
+4 - 3 == 0  0.15942    1.33705   0.119    1.000  
+5 - 3 == 0 -0.02722    4.29265  -0.006    1.000  
+6 - 3 == 0  0.21780    3.61545   0.060    1.000  
+5 - 4 == 0 -0.18664    4.36651  -0.043    1.000  
+6 - 4 == 0  0.05839    3.62534   0.016    1.000  
+6 - 5 == 0  0.24502    2.73558   0.090    1.000  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 (Adjusted p values reported -- single-step method)</code></pre>
 </div>
 <p>We plot the results for more easily checking which differences are statistically significant (not embracing zero).</p>
@@ -2054,14 +2083,14 @@ tau^2.2    1.2939  1.1375     86     no        MET
 tau^2.3    1.3777  1.1738     57     no       PROP 
 tau^2.4    1.3796  1.1746     56     no       PROT 
 tau^2.5    1.3820  1.1756    136     no       TEBU 
-tau^2.6    1.3500  1.1619     87     no  TEBU+PROT 
+tau^2.6    1.3501  1.1619     87     no  TEBU+PROT 
 rho        0.9834                    no            
 
 Test for Residual Heterogeneity:
 QE(df = 546) = 45668.0682, p-val &lt; .0001
 
 Test of Moderators (coefficients 2:12):
-QM(df = 11) = 337.5307, p-val &lt; .0001
+QM(df = 11) = 337.5311, p-val &lt; .0001
 
 Model Results:
 
@@ -2116,12 +2145,13 @@ These models have different variance-covariance matrix.
 Results of these three models and, of the one expanded to include the effect of wheat class, are not identical to those obtained in <span class="citation" data-cites="madden2016">Madden et al. (<a href="#ref-madden2016" role="doc-biblioref">2016</a>)</span>, but they are all very similar.</p>
 <h3 id="useful-links-and-other-papers">Useful links and other papers</h3>
 <ul>
-<li><p>Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!). You may want to check these repositories of code and data from work published in my lab using these methods: <span class="citation" data-cites="barro2021">Barro et al. (<a href="#ref-barro2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="barro2020">Barro et al. (<a href="#ref-barro2020" role="doc-biblioref">2020</a>)</span>, <a href="https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/">Machado et al. (2017)</a></p></li>
+<li><p>Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!).
+You may want to check these repositories of code and data from work published in my lab using these methods: <span class="citation" data-cites="barro2021">Barro et al. (<a href="#ref-barro2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="barro2020">Barro et al. (<a href="#ref-barro2020" role="doc-biblioref">2020</a>)</span>, <a href="https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/">Machado et al. (2017)</a></p></li>
 <li><p>Other papers using network models <span class="citation" data-cites="yellareddygari2019">(<a href="#ref-yellareddygari2019" role="doc-biblioref">Yellareddygari et al. 2019</a>)</span>, <span class="citation" data-cites="edwardsmolina2018">(<a href="#ref-edwardsmolina2018" role="doc-biblioref">Edwards Molina et al. 2018</a>)</span>, <span class="citation" data-cites="paul2018">(<a href="#ref-paul2018" role="doc-biblioref">Paul et al. 2018</a>)</span>, <span class="citation" data-cites="paul2008">(<a href="#ref-paul2008" role="doc-biblioref">Paul et al. 2008</a>)</span></p></li>
 <li><p>Fitting <a href="https://wviechtb.github.io/metafor/reference/dat.hasselblad1998.html">arm-based meta-analysis</a> with {metafor}</p></li>
 </ul>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="list">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-barro2021" class="csl-entry" role="listitem">
 Barro, J., Alves, K., and Del Ponte, E. 2021. Temporal and regional performance of dual and triple premixes for soybean rust management in <span>Brazil</span>: A meta-analysis update. Open Science Framework. Available at: <a href="https://osf.io/zjfyg/">https://osf.io/zjfyg/</a>.
 </div>
@@ -2135,7 +2165,7 @@ Edwards Molina, J. P., Paul, P. A., Amorim, L., Silva, L. H. C. P., Siqueri, F. 
 Madden, L. V., Piepho, H.-P., and Paul, P. A. 2016. <a href="https://doi.org/10.1094/phyto-12-15-0342-rvw">Statistical Models and Methods for Network Meta-Analysis</a>. Phytopathology. 106:792–806.
 </div>
 <div id="ref-paul2018" class="csl-entry" role="listitem">
-Paul, P. A., Bradley, C. A., Madden, L. V., Lana, F. D., Bergstrom, G. C., Dill-Macky, R., et al. 2018. <a href="https://doi.org/10.1094/pdis-02-18-0211-re">Meta-Analysis of the Effects of <span>QoI and DMI </span>Fungicide Combinations on Fusarium Head Blight and Deoxynivalenol in Wheat</a>. Plant Disease. 102:2602–2615.
+Paul, P. A., Bradley, C. A., Madden, L. V., Lana, F. D., Bergstrom, G. C., Dill-Macky, R., et al. 2018. <a href="https://doi.org/10.1094/pdis-02-18-0211-re">Meta-Analysis of the Effects of <span>QoI and DMI</span> Fungicide Combinations on Fusarium Head Blight and Deoxynivalenol in Wheat</a>. Plant Disease. 102:2602–2615.
 </div>
 <div id="ref-paul2008" class="csl-entry" role="listitem">
 Paul, P. A., Lipps, P. E., Hershman, D. E., McMullen, M. P., Draper, M. A., and Madden, L. V. 2008. <a href="https://doi.org/10.1094/phyto-98-9-0999">Efficacy of Triazole-Based Fungicides for Fusarium Head Blight and Deoxynivalenol Control in Wheat: A Multivariate Meta-Analysis</a>. Phytopathology. 98:999–1011.

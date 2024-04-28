@@ -1,7 +1,7 @@
 ---
 title: "The fall of an empire"
 description: |
-  I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.
+  I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/edelponte

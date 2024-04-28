@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -125,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Qld_APPS_Prasannath.jpg","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/anchor-4.2.2/anchor.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/bowser-1.9.3/bowser.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/distill-2.2.21/template.v2.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/header-attrs-2.11/header-attrs.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/jquery-3.6.0/jquery-3.6.0.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/jquery-3.6.0/jquery-3.6.0.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/jquery-3.6.0/jquery-3.6.0.min.map","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/popper-2.6.0/popper.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/tippy-6.2.7/tippy-bundle.umd.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/tippy-6.2.7/tippy-light-border.css","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/tippy-6.2.7/tippy.css","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/tippy-6.2.7/tippy.umd.min.js","sources-and-quantification-of-flower-blight-pathogens-in-macadamia_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["Qld_APPS_Prasannath.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2424,7 +2425,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2491,6 +2492,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Sources and quantification of flower blight pathogens in macadamia</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Raceme blights also known as flower blights are used to describe diseases and disorders of macadamia inflorescence worldwide. Flower blights reduce fruit set and control measures are limited. Knowledge of the disease cycle and epidemiological parameters is required.</p></p>
@@ -2510,10 +2512,21 @@ Host: Queensland Chapter Australasian Plant Pathology Society, <a href="https://
 Date: February 3, 2022<br />
 Links: <a href="https://youtu.be/Z5Hfc9rZCqs">Video</a></p>
 <h2 id="biography">Biography</h2>
-<p>Kandeeparoopan Prasannath is a third year PhD student in the Queensland Alliance for Agriculture and Food Innovation at The University of Queensland. His PhD research under the supervision of Assoc. Prof Femi Akinsanmi and Prof Vic Galea, investigates the aetiology and epidemiology of the flower blight diseases of macadamia. Prasannath has so far published four research articles from his PhD.</p>
+<p>Kandeeparoopan Prasannath is a third year PhD student in the Queensland Alliance for Agriculture and Food Innovation at The University of Queensland.
+His PhD research under the supervision of Assoc.
+Prof Femi Akinsanmi and Prof Vic Galea, investigates the aetiology and epidemiology of the flower blight diseases of macadamia.
+Prasannath has so far published four research articles from his PhD.</p>
 <h2 id="abstract">Abstract</h2>
-<p>Raceme blights also known as flower blights are used to describe diseases and disorders of macadamia inflorescence worldwide. Flower blights reduce fruit set and control measures are limited.<br />
-Knowledge of the disease cycle and epidemiological parameters is required. Therefore, the potential sources of inoculum for the three forms of flower blights of macadamia in Australia were investigated. Relative abundance of the inoculum (Ri) in remnant racemes and yellow halo leaf spot in macadamia canopy was quantified and the pathogenicity of the fungal isolates obtained from the plant materials was assessed on developing flowers. Ri &gt;90% was recorded for <em>Neopestalotiopsis</em> species from both the remnant racemes and leaf spot, which indicates the materials are a source of inoculum for dry flower disease. Whereas, Ri &lt;40% was recorded for Botrytis species, the causal agent of grey mould, and Ri = 70% for <em>Cladosporium</em> species, the causal agent of green mould, only from remnant racemes. Conidial suspensions and direct incubation with the plant materials resulted in severe flower blights on developing macadamia flowers. Disease severity using inocula from remnant racemes was significantly (P &gt; 0.001) higher than inocula from leaf spot. This information is critical for flower blights control in macadamia orchards.</p>
+<p>Raceme blights also known as flower blights are used to describe diseases and disorders of macadamia inflorescence worldwide.
+Flower blights reduce fruit set and control measures are limited.<br />
+Knowledge of the disease cycle and epidemiological parameters is required.
+Therefore, the potential sources of inoculum for the three forms of flower blights of macadamia in Australia were investigated.
+Relative abundance of the inoculum (Ri) in remnant racemes and yellow halo leaf spot in macadamia canopy was quantified and the pathogenicity of the fungal isolates obtained from the plant materials was assessed on developing flowers.
+Ri &gt;90% was recorded for <em>Neopestalotiopsis</em> species from both the remnant racemes and leaf spot, which indicates the materials are a source of inoculum for dry flower disease.
+Whereas, Ri &lt;40% was recorded for Botrytis species, the causal agent of grey mould, and Ri = 70% for <em>Cladosporium</em> species, the causal agent of green mould, only from remnant racemes.
+Conidial suspensions and direct incubation with the plant materials resulted in severe flower blights on developing macadamia flowers.
+Disease severity using inocula from remnant racemes was significantly (P &gt; 0.001) higher than inocula from leaf spot.
+This information is critical for flower blights control in macadamia orchards.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

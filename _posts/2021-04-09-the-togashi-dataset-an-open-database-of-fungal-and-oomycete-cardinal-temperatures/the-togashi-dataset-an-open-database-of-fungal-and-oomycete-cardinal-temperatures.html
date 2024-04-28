@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -135,7 +136,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="citation_reference" content="citation_title=Climate change effects on Black Sigatoka disease of banana;citation_volume=374;citation_doi=10.1098/rstb.2018.0269;citation_author=Daniel P. Bebber"/>
   <meta name="citation_reference" content="citation_title=Geometry and evolution of the ecological niche in plant-associated microbes;citation_volume=11;citation_doi=10.1038/s41467-020-16778-5;citation_author=Thomas M. Chaloner;citation_author=Sarah J. Gurr;citation_author=Daniel P. Bebber"/>
   <meta name="citation_reference" content="citation_title=A Simple Generic Infection Model for Foliar Fungal Plant Pathogens;citation_volume=95;citation_doi=10.1094/phyto-95-0092;citation_author=R. D. Magarey;citation_author=T. B. Sutton;citation_author=C. L. Thayer"/>
-  <meta name="citation_reference" content="citation_title=Fungal and Oomycete cardinal temperatures (the Togashi data set);citation_publisher=Dryad;citation_doi=10.5061/DRYAD.TQJQ2BVW6"/>
+  <meta name="citation_reference" content="citation_title=Fungal and oomycete cardinal temperatures (the togashi dataset);citation_publisher=Dryad;citation_doi=10.5061/DRYAD.TQJQ2BVW6;citation_author=Daniel Bebber;citation_author=Thomas Chaloner;citation_author=Sarah Gurr"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -144,7 +145,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["references.bib","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/anchor-4.2.2/anchor.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/bowser-1.9.3/bowser.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/distill-2.2.21/template.v2.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/header-attrs-2.7.4/header-attrs.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/header-attrs-2.7/header-attrs.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/jquery-1.11.3/jquery.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/popper-2.6.0/popper.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy-light-border.css","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.css","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.umd.min.js","the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/webcomponents-2.0.0/webcomponents.js","togashi.png","togashi2.png"]}
+  {"type":"character","attributes":{},"value":["references.bib","togashi.png","togashi2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -256,9 +257,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -353,6 +366,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1114,6 +1132,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1191,8 +1215,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1218,12 +1243,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1501,16 +1527,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/header-attrs-2.20/header-attrs.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/popper-2.6.0/popper.min.js"></script>
-  <link href="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="the-togashi-data set-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/distill-2.2.21/template.v2.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/header-attrs-2.26/header-attrs.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/popper-2.6.0/popper.min.js"></script>
+  <link href="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="the-togashi-dataset-an-open-database-of-fungal-and-oomycete-cardinal-temperatures_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -1533,6 +1559,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>The Togashi data set, an open database of fungal and oomycete cardinal temperatures</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt-tag">Databases</div>
@@ -1553,30 +1580,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 The cardinal temperatures are the minimum temperature (Tmin) below which a process will not occur, the optimal temperature (Topt) at which the process occurs most rapidly, and the maximum temperature (Tmax) above which the process ceases.
 A large collection of experimentally-determined cardinal temperatures for hundreds of plant pathogens was published by Togashi (1949) and <a href="https://doi.org/10.5061/dryad.tqjq2bvw6">has now been digitized</a>.</p>
 <h2 id="what-is-the-database-for">What is the database for?</h2>
-<p>Cardinal temperatures can be useful for epidemiological models of plant disease <span class="citation" data-cites="bebber2019">(<a href="#ref-bebber2019" role="doc-biblioref">Bebber 2019</a>)</span>.
+<p>Cardinal temperatures can be useful for epidemiological models of plant disease <span class="citation" data-cites="bebber2019">(<a href="#ref-bebber2019" role="doc-biblioref">D. P. Bebber 2019</a>)</span>.
 Cardinal temperatures can help to understand the ecological niche of plant pathogens <span class="citation" data-cites="chaloner2020">(<a href="#ref-chaloner2020" role="doc-biblioref">Chaloner, Gurr, and Bebber 2020</a>)</span> and how temperature physiology evolves under climate change, for example.</p>
 <h2 id="whats-next">What’s next?</h2>
 <p>The data published in Togashi (1949) are old, and many experimental studies on plant pathogen temperature responses have been published since (examples in <span class="citation" data-cites="magarey2005">(<a href="#ref-magarey2005" role="doc-biblioref">Magarey, Sutton, and Thayer 2005</a>)</span>).
-New estimates of cardinal temperatures can be estimated from published thermal performance curves <span class="citation" data-cites="bebber2019">(<a href="#ref-bebber2019" role="doc-biblioref">Bebber 2019</a>)</span>.
+New estimates of cardinal temperatures can be estimated from published thermal performance curves <span class="citation" data-cites="bebber2019">(<a href="#ref-bebber2019" role="doc-biblioref">D. P. Bebber 2019</a>)</span>.
 Future work will involve collating TPCs and estimating cardinal temperatures from the literature.</p>
 <h2 id="further-information">Further information</h2>
 <figure>
 <img src="togashi2.png" alt="Screenshot of Togashi data set repository available from Dryad." />
 <figcaption aria-hidden="true">Screenshot of Togashi data set repository available from Dryad.</figcaption>
 </figure>
-<p>Data source: <span class="citation" data-cites="bebber2020">(<a href="#ref-bebber2020" role="doc-biblioref"><span>“Fungal and Oomycete Cardinal Temperatures (the Togashi data set)”</span> 2020</a>)</span></p>
-<p>Togashi, K. (1949). Biological characters of plant pathogens: Temperature relations. Meibundo.</p>
+<p>Data source: <span class="citation" data-cites="Bebber2020">(<a href="#ref-Bebber2020" role="doc-biblioref">D. Bebber, Chaloner, and Gurr 2020</a>)</span></p>
+<p>Togashi, K.
+(1949).
+Biological characters of plant pathogens: Temperature relations.
+Meibundo.</p>
 <p>Contact: Dan Bebber</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bebber2019" class="csl-entry" role="listitem">
 Bebber, Daniel P. 2019. <span>“Climate Change Effects on Black Sigatoka Disease of Banana.”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 374 (1775): 20180269. <a href="https://doi.org/10.1098/rstb.2018.0269">https://doi.org/10.1098/rstb.2018.0269</a>.
 </div>
+<div id="ref-Bebber2020" class="csl-entry" role="listitem">
+Bebber, Daniel, Thomas Chaloner, and Sarah Gurr. 2020. <span>“Fungal and Oomycete Cardinal Temperatures (the Togashi Dataset).”</span> Dryad. <a href="https://doi.org/10.5061/DRYAD.TQJQ2BVW6">https://doi.org/10.5061/DRYAD.TQJQ2BVW6</a>.
+</div>
 <div id="ref-chaloner2020" class="csl-entry" role="listitem">
 Chaloner, Thomas M., Sarah J. Gurr, and Daniel P. Bebber. 2020. <span>“Geometry and Evolution of the Ecological Niche in Plant-Associated Microbes.”</span> <em>Nature Communications</em> 11 (1). <a href="https://doi.org/10.1038/s41467-020-16778-5">https://doi.org/10.1038/s41467-020-16778-5</a>.
-</div>
-<div id="ref-bebber2020" class="csl-entry" role="listitem">
-<span>“Fungal and Oomycete Cardinal Temperatures (the Togashi data set).”</span> 2020. Dryad. <a href="https://doi.org/10.5061/DRYAD.TQJQ2BVW6">https://doi.org/10.5061/DRYAD.TQJQ2BVW6</a>.
 </div>
 <div id="ref-magarey2005" class="csl-entry" role="listitem">
 Magarey, R. D., T. B. Sutton, and C. L. Thayer. 2005. <span>“A Simple Generic Infection Model for Foliar Fungal Plant Pathogens.”</span> <em>Phytopathology®</em> 95 (1): 92–100. <a href="https://doi.org/10.1094/phyto-95-0092">https://doi.org/10.1094/phyto-95-0092</a>.

@@ -4,7 +4,7 @@ description: |
   Seminar given by Prof. Levente Kiss (University of Southern Queensland). Powdery mildews are widespread obligate biotrophic fungal plant pathogens, comprising over 900 species that infect more than 10,000 plant species globally. The symptoms caused by these fungi are easy to spot, but the fungi themselves are difficult to handle, and some are difficult to identify. 
 author:
   - name: Adam Sparks
-    url: adamhsparks.netlify.app/
+    url: https://adamhsparks.netlify.app/
 date: 11-27-2020
 output:
   distill::distill_article:
@@ -20,7 +20,7 @@ doi: "10.17605/OSF.IO/THG7N"
 Presenter: Prof. Levente Kiss\
 Institution: University of Southern Queensland, Centre for Crop Health\
 Date: November 27, 2020\
-Host: USQ CCH \
+Host: USQ CCH\
 Links: [Video](https://youtu.be/5rug_0Tr6Ew) \| [Slides](https://doi.org/10.17605/OSF.IO/THG7N)
 
 ### Abstract

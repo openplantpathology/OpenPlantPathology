@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -130,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/anchor-4.2.2/anchor.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/bowser-1.9.3/bowser.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/distill-2.2.21/template.v2.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-complexities-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-complexities-2.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-2.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/unnamed-chunk-5-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/unnamed-chunk-5-2.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/unnamed-chunk-9-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/unnamed-chunk-9-2.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/header-attrs-2.11/header-attrs.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/header-attrs-2.9/header-attrs.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/jquery-1.11.3/jquery.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/jquery-3.6.0/jquery-3.6.0.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/jquery-3.6.0/jquery-3.6.0.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/jquery-3.6.0/jquery-3.6.0.min.map","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/popper-2.6.0/popper.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/tippy-6.2.7/tippy-bundle.umd.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/tippy-6.2.7/tippy-light-border.css","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/tippy-6.2.7/tippy.css","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/tippy-6.2.7/tippy.umd.min.js","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-complexities-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-complexities-2.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-1.png","hagis-an-r-package-for-analysis-of-pathogen-gene-for-gene-virulence-data_files/figure-html5/autoplot-summaries-2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2429,7 +2429,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2496,6 +2496,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>{hagis}, an R package for analysis of pathogen gene-for-gene virulence data</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R_Packages" class="dt-tag">R Packages</a>
@@ -2560,6 +2561,7 @@ We will identify effective resistance genes tested, the average pathotype comple
 <p>First lets load the {hagis} package and look at the built-in data set <code>P_sojae_survey</code> that comes with the package using <code>head()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>   Isolate         Line         Rps Total HR (1) Lesion (2)
+     &lt;int&gt;       &lt;char&gt;      &lt;char&gt; &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
 1:       1     Williams susceptible    10      0          0
 2:       1       Harlon      Rps 1a    10      4          0
 3:       1 Harosoy 13xx      Rps 1b     8      0          0
@@ -2567,6 +2569,7 @@ We will identify effective resistance genes tested, the average pathotype comple
 5:       1    PI 103091      Rps 1d     9      2          0
 6:       1  Williams 82      Rps 1k    10      0          0
    Lesion to cotyledon (3) Dead (4) total.susc total.resis perc.susc
+                     &lt;int&gt;    &lt;int&gt;      &lt;int&gt;       &lt;int&gt;     &lt;int&gt;
 1:                       0       10         10           0       100
 2:                       0        6          6           4        60
 3:                       0        8          8           0       100
@@ -2574,6 +2577,7 @@ We will identify effective resistance genes tested, the average pathotype comple
 5:                       1        6          7           2        78
 6:                       0       10         10           0       100
    perc.resis
+        &lt;int&gt;
 1:          0
 2:         40
 3:          0
@@ -2585,6 +2589,7 @@ We will identify effective resistance genes tested, the average pathotype comple
 To do this we will use <code>gsub()</code> to identify the pattern “Rps” and remove it <code>pattern = 'Rps', replacement = ""</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>   Isolate         Line         Rps Total HR (1) Lesion (2)
+     &lt;int&gt;       &lt;char&gt;      &lt;char&gt; &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
 1:       1     Williams susceptible    10      0          0
 2:       1       Harlon          1a    10      4          0
 3:       1 Harosoy 13xx          1b     8      0          0
@@ -2592,6 +2597,7 @@ To do this we will use <code>gsub()</code> to identify the pattern “Rps” and
 5:       1    PI 103091          1d     9      2          0
 6:       1  Williams 82          1k    10      0          0
    Lesion to cotyledon (3) Dead (4) total.susc total.resis perc.susc
+                     &lt;int&gt;    &lt;int&gt;      &lt;int&gt;       &lt;int&gt;     &lt;int&gt;
 1:                       0       10         10           0       100
 2:                       0        6          6           4        60
 3:                       0        8          8           0       100
@@ -2599,6 +2605,7 @@ To do this we will use <code>gsub()</code> to identify the pattern “Rps” and
 5:                       1        6          7           2        78
 6:                       0       10         10           0       100
    perc.resis
+        &lt;int&gt;
 1:          0
 2:         40
 3:          0
@@ -2607,7 +2614,9 @@ To do this we will use <code>gsub()</code> to identify the pattern “Rps” and
 6:          0</code></pre>
 </div>
 <p>Now that we know the data set has loaded correctly and extra information in columns removed, let set up the central argument for {hagis} to run on.
-To do this we can make the argument a <code>list()</code> to be used with all functions in {hagis}, named <code>hagis_args</code>. <code>x =</code> denotes the data set you want to use, in this example we will use the practice data set <code>P_sojae_survey</code>. <code>cutoff =</code> sets the cutoff for susceptible reactions.
+To do this we can make the argument a <code>list()</code> to be used with all functions in {hagis}, named <code>hagis_args</code>.
+<code>x =</code> denotes the data set you want to use, in this example we will use the practice data set <code>P_sojae_survey</code>.
+<code>cutoff =</code> sets the cutoff for susceptible reactions.
 For example a value of <code>cutoff = 60</code> indicates that any isolate-plant interaction that results in 60% or more of a susceptible phenotype will be considered susceptible for analyses.
 <code>sample =</code> indicates the column in your data set in which the Isolate identifier is contained (<em>i.e.</em>, unique isolate identifier), in this case we will use <code>Isolate</code>.
 <code>gene = Rps</code> identifies the column in which the genes tested are contained, in the practice data that column is named <code>Rps</code>.
@@ -2617,7 +2626,8 @@ Users can change the <code>cutoff</code> value for their individual analysis nee
 
 </div>
 <h3 id="determining-effective-resistance-genes">Determining effective resistance genes</h3>
-<p>We can use the <code>summarize_gene()</code> function in {hagis} to identify which resistance genes tested were effective at managing the tested population. Using <code>pander()</code> we can make the table output much more visually appealing to readers.</p>
+<p>We can use the <code>summarize_gene()</code> function in {hagis} to identify which resistance genes tested were effective at managing the tested population.
+Using <code>pander()</code> we can make the table output much more visually appealing to readers.</p>
 <div class="layout-chunk" data-layout="l-body">
 <table style="width:81%;">
 <colgroup>
@@ -2859,6 +2869,7 @@ A table will be output that contains all isolates pathotype, regardless of if th
 <pre><code>
 Grouped Complexities
     complexity frequency distribution
+        &lt;fctr&gt;     &lt;int&gt;        &lt;int&gt;
  1:          1         0            0
  2:          2         0            0
  3:          3         0            0
@@ -2876,6 +2887,7 @@ Grouped Complexities
 
 Individual Complexities
     sample N_samp
+    &lt;char&gt;  &lt;num&gt;
  1:      1     10
  2:      2     10
  3:      3     10
@@ -2929,8 +2941,7 @@ Individual Complexities
 </div>
 <p>Further examples and documentation can be found on the {hagis} documentation website, <a href="https://openplantpathology.github.io/hagis/" class="uri">https://openplantpathology.github.io/hagis/</a>.
 If you are using {hagis}, please get in touch.
-You can share it in the <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">Open Plant Pathology Slack Workgroup</a> or drop us an e-mail,
-<a href="mailto:OpenPlantPathology@gmail.com" class="email">OpenPlantPathology@gmail.com</a>, we’d love to hear about it!</p>
+You can share it in the <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">Open Plant Pathology Slack Workgroup</a> or drop us an e-mail, <a href="mailto:OpenPlantPathology@gmail.com" class="email">OpenPlantPathology@gmail.com</a>, we’d love to hear about it!</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

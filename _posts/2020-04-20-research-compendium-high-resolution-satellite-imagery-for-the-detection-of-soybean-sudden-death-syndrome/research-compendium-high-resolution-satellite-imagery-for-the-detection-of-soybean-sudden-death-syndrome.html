@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Research Compendium: High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome</title>
@@ -116,7 +118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["post-mohsin.png","post-raza-diagram.png","post-raza-photo.png","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/anchor-4.2.2/anchor.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/bowser-1.9.3/bowser.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/distill-2.2.21/template.v2.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/header-attrs-2.6.6/header-attrs.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/jquery-1.11.3/jquery.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/popper-2.6.0/popper.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy-bundle.umd.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy-light-border.css","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy.css","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy.umd.min.js","research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["post-mohsin.png","post-raza-diagram.png","post-raza-photo.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -187,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -227,9 +230,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -324,6 +339,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -428,10 +448,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1089,6 +1105,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1166,8 +1188,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1193,12 +1216,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1263,7 +1287,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1274,6 +1313,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1373,6 +1437,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1395,7 +1461,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1434,8 +1500,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/header-attrs-2.9/header-attrs.js"></script>
-  <script src="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/header-attrs-2.26/header-attrs.js"></script>
+  <script src="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/popper-2.6.0/popper.min.js"></script>
   <link href="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="research-compendium-high-resolution-satellite-imagery-for-the-detection-of-soybean-sudden-death-syndrome_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1455,7 +1521,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Research Compendium: High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome","description":"In this inaugural post, we showcase a reproducible example of research conducted by Dr. Muhammad Mohsin Raza, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work. His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings.","authors":[{"author":"Lisa Rothman","authorURL":"https://twitter.com/LandbouLisa","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-04-20T00:00:00.000+00:00","citationText":"Rothman, 2020"}
+{"title":"Research Compendium: High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome","description":"In this inaugural post, we showcase a reproducible example of research conducted by Dr. Muhammad Mohsin Raza, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work. His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings.","authors":[{"author":"Lisa Rothman","authorURL":"https://twitter.com/LandbouLisa","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-04-20T00:00:00.000+08:00","citationText":"Rothman, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1466,9 +1532,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Research Compendium: High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Research Compendia</div>
+<div class="dt-tag">Research Compendia</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>In this inaugural post, we showcase a reproducible example of research conducted by Dr. Muhammad Mohsin Raza, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work. His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings.</p></p>
@@ -1481,28 +1548,63 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>We are happy to kick start a new blog section called <strong>OPP Research Compendia</strong>. We aim to encourage plant pathologists to engage in reproducible research practices by providing examples developed by the plant pathology community. Briefly, the importance of the research and the main steps of the workflow is summarized and links are provided to data, scripts and other research outcomes that help to understand, reproduce and communicate the research findings.</p>
+<p>We are happy to kick start a new blog section called <strong>OPP Research Compendia</strong>.
+We aim to encourage plant pathologists to engage in reproducible research practices by providing examples developed by the plant pathology community.
+Briefly, the importance of the research and the main steps of the workflow is summarized and links are provided to data, scripts and other research outcomes that help to understand, reproduce and communicate the research findings.</p>
 <h3 id="meet-the-researcher"><i class="fa fa-user"></i> Meet the researcher</h3>
-<p>In this inaugural post, we showcase a reproducible example of research conducted by Dr. <a href="https://mohsinraza.netlify.app/">Muhammad Mohsin Raza</a>, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work. His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings. These efforts help us Plant Pathologists (interdisciplinary researchers at our core) shape the impact we have on society by the data we convert to information which can be implemented in reality.</p>
+<p>In this inaugural post, we showcase a reproducible example of research conducted by Dr. <a href="https://mohsinraza.netlify.app/">Muhammad Mohsin Raza</a>, a recent graduate from Iowa State who worked under the supervision of Dr. Leonor Leandro, describes his research, the tools he used and how to reproduce his work.
+His project is a wonderful narrative, and one of many ways to build a research compendium to encourage reproducibility of the analysis and communication of the findings.
+These efforts help us Plant Pathologists (interdisciplinary researchers at our core) shape the impact we have on society by the data we convert to information which can be implemented in reality.</p>
 <p><img src="post-raza-photo.png" /></p>
 <h3 id="disease-on-target"><i class="fa fa-leaf"></i> Disease on target</h3>
-<p>Sudden death syndrome (SDS) is a disease of significant economic importance to soybeans, especially in the United States where it is distributed across 23 of the 28 U.S. states producing soybean, and substantially affecting soybean yield. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231141">A recent study</a> on the economic impacts of soybean diseases in the U.S. estimated that from 1996 to 2016, the country had suffered 6.75 billion dollars loss due to SDC. A key component for an effective management of SDS includes early and accurate detection in soybean fields. Traditional scouting methods, based on ground based visual assessments, are time-consuming, labor-intensive, and often destructive, hence, a more time and cost-effective alternative method for monitoring and quantifying the distribution of SDS in soybean fields is needed. With this in mind, we hypothesized that SDS can be detected before symptoms are observed visually in large soybean plots through high-resolution (3 m) satellite imagery. After 3 years of research, a paper titled “Exploring the Potential of High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome” was recently published as <a href="https://www.mdpi.com/2072-4292/12/7/1213/htm">open access</a> in the Remote Sensing Journal. The general research workflow, tools and outcomes are shown in the figure below:</p>
+<p>Sudden death syndrome (SDS) is a disease of significant economic importance to soybeans, especially in the United States where it is distributed across 23 of the 28 U.S. states producing soybean, and substantially affecting soybean yield.
+<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231141">A recent study</a> on the economic impacts of soybean diseases in the U.S. estimated that from 1996 to 2016, the country had suffered 6.75 billion dollars loss due to SDC.
+A key component for an effective management of SDS includes early and accurate detection in soybean fields.
+Traditional scouting methods, based on ground based visual assessments, are time-consuming, labor-intensive, and often destructive, hence, a more time and cost-effective alternative method for monitoring and quantifying the distribution of SDS in soybean fields is needed.
+With this in mind, we hypothesized that SDS can be detected before symptoms are observed visually in large soybean plots through high-resolution (3 m) satellite imagery.
+After 3 years of research, a paper titled “Exploring the Potential of High-Resolution Satellite Imagery for the Detection of Soybean Sudden Death Syndrome” was recently published as <a href="https://www.mdpi.com/2072-4292/12/7/1213/htm">open access</a> in the Remote Sensing Journal.
+The general research workflow, tools and outcomes are shown in the figure below:</p>
 <p><img src="post-raza-diagram.png"/></p>
 <h3 id="the-data"><i class="fa fa-table"></i> The data</h3>
 <p><em>Download the data:</em> <a href="https://iastate.figshare.com/articles/GIS_data_and_juptyer_Notebook_for_Random_Forest_models_for_soybean_Sudden_Death_Syndrome_SDS_/11356430">Figshare</a></p>
-<p>We collected both ground truth and remote sensing data from a soybean field experiment conducted at Iowa State University’s Marsden Farm located in Boone County, Iowa. We chose this site because of a <a href="https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-16-1660-RE">wide range of SDS</a> foliar incidence since 2010. This site is thus representative of a field-level soybean production system which has the potential to develop SDS symptoms significant enough to ensure a successful monitoring campaign.</p>
-<p>The ground truth data were obtained as foliar disease incidence, visually rated in-field. SDS is rated on the whole plant, to ensure accuracy and precision we conducted inter and intra-rater agreement tests, as a training exercise with experienced raters. PlanetScope (PS) satellite images were acquired from <a href="https://www.planet.com/">Planet Labs Inc</a>, a private imaging company based in San Francisco, CA, USA. Planet Labs provides a free subscription to students and researchers working in academia. PS satellite provides 4-band images with red, green, blue (RGB) and near-infrared (NIR) bands at 3-m spatial resolution daily. Besides that, PS provided images are geo-rectified (i.e., processed to remove distortions caused by tilt and terrain), radiometrically and atmospherically corrected, and projected.</p>
+<p>We collected both ground truth and remote sensing data from a soybean field experiment conducted at Iowa State University’s Marsden Farm located in Boone County, Iowa.
+We chose this site because of a <a href="https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-16-1660-RE">wide range of SDS</a> foliar incidence since 2010.
+This site is thus representative of a field-level soybean production system which has the potential to develop SDS symptoms significant enough to ensure a successful monitoring campaign.</p>
+<p>The ground truth data were obtained as foliar disease incidence, visually rated in-field.
+SDS is rated on the whole plant, to ensure accuracy and precision we conducted inter and intra-rater agreement tests, as a training exercise with experienced raters.
+PlanetScope (PS) satellite images were acquired from <a href="https://www.planet.com/">Planet Labs Inc</a>, a private imaging company based in San Francisco, CA, USA. Planet Labs provides a free subscription to students and researchers working in academia.
+PS satellite provides 4-band images with red, green, blue (RGB) and near-infrared (NIR) bands at 3-m spatial resolution daily.
+Besides that, PS provided images are geo-rectified (i.e., processed to remove distortions caused by tilt and terrain), radiometrically and atmospherically corrected, and projected.</p>
 <h3 id="the-analytical-approach"><i class="fa fa-code"></i> The analytical approach</h3>
 <p><em>Download the scripts:</em> <a href="https://iastate.figshare.com/articles/GIS_data_and_juptyer_Notebook_for_Random_Forest_models_for_soybean_Sudden_Death_Syndrome_SDS_/11356430">Figshare</a></p>
-<p>For classification, we used a <a href="https://towardsdatascience.com/understanding-random-forest-58381e0602d2?gi=27a01517ab14">Random Forest</a> method, i.e., a powerful and robust machine learning algorithm. Random Forest works by generating dozens of decision trees and aggregating their results to make final predictions. We chose this method because it can handle massive, multidimensional data sets, and it is robust to multicollinearity and over-fitting. Additionally, Random Forest evaluates the predictive importance of input features, such as reflectance wavebands in our study, hence supporting feature selection for subsequent analysis.</p>
-<p>We performed Random Forest classification using open source libraries in R <a href="https://cran.r-project.org/web/packages/randomForest/randomForest.pdf">randomForest</a> and <a href="https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf">randomForestSRC</a> and Python <a href="https://scikit-learn.org/stable/">Scikit-learn</a>. For mapping, we used <a href="https://pro.arcgis.com/en/pro-app/get-started/get-started.htm">ArcGIS Pro</a>, the professional desktop GIS application from Esri (Environmental Systems Research Institute based in Redland, CA, USA).</p>
+<p>For classification, we used a <a href="https://towardsdatascience.com/understanding-random-forest-58381e0602d2?gi=27a01517ab14">Random Forest</a> method, i.e., a powerful and robust machine learning algorithm.
+Random Forest works by generating dozens of decision trees and aggregating their results to make final predictions.
+We chose this method because it can handle massive, multidimensional data sets, and it is robust to multicollinearity and over-fitting.
+Additionally, Random Forest evaluates the predictive importance of input features, such as reflectance wavebands in our study, hence supporting feature selection for subsequent analysis.</p>
+<p>We performed Random Forest classification using open source libraries in R <a href="https://cran.r-project.org/web/packages/randomForest/randomForest.pdf">randomForest</a> and <a href="https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf">randomForestSRC</a> and Python <a href="https://scikit-learn.org/stable/">Scikit-learn</a>.
+For mapping, we used <a href="https://pro.arcgis.com/en/pro-app/get-started/get-started.htm">ArcGIS Pro</a>, the professional desktop GIS application from Esri (Environmental Systems Research Institute based in Redland, CA, USA).</p>
 <h3 id="community-impacts-and-contribution"><i class="fa fa-bullhorn"></i> Community impacts and contribution</h3>
-<p>We obtained promising results indicating that high-resolution satellite imagery and Random Forest algorithm have the potential to detect SDS in soybean fields even before visible foliar symptom onset, i.e. detection via manual scouting. This approach may facilitate large-scale monitoring of SDS (and possibly other economically important soybean diseases). This information is useful for guiding recommendations for site-specific management in current and future seasons.</p>
-<p>To better communicate the overall approach and the findings, I used ArcGIS <a href="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f">story map</a> to build an interactive tour of the problem statement and the workflow of data collection, automated data processing and analysis for SDS detection. Story maps can be developed for free.</p>
+<p>We obtained promising results indicating that high-resolution satellite imagery and Random Forest algorithm have the potential to detect SDS in soybean fields even before visible foliar symptom onset, i.e. detection via manual scouting.
+This approach may facilitate large-scale monitoring of SDS (and possibly other economically important soybean diseases).
+This information is useful for guiding recommendations for site-specific management in current and future seasons.</p>
+<p>To better communicate the overall approach and the findings, I used ArcGIS <a href="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f">story map</a> to build an interactive tour of the problem statement and the workflow of data collection, automated data processing and analysis for SDS detection.
+Story maps can be developed for free.</p>
 <h3 id="motivation-for-reproducible-research"><i class="fa fa-cube"></i> Motivation for reproducible research</h3>
-<p>I started my <em>PhD</em> with a passion for Epidemiology, Remote Sensing and Geographic Information System (GIS). I was thrilled to learn Big Data analytics tools and explore their application in Plant Pathology. In this journey, my adviser and other lab members fully supported me, although it was a new research venture for our lab. Learning new skills are essential for personal development and for creating and achieving new goals. Plus, sharing these skills with others not only fosters vision in others but also deepens our knowledge and gives rise to new opportunities and collaborations.</p>
-<p>While reviewing the literature, I was always fascinated by the techniques and tools researchers used to collect and analyze data. However, their methods and analysis were irreproducible due to the lack of data and code sharing. I realized the need for reproducibility early during my <em>PhD</em>. I pledged to publicize my data and code so that others can also run and learn the tools I used for data analysis. Thus, along with writing my dissertation, I deposited all of my data and code in Iowa State University’s data repository on figshare. Thus, making all the components of data extraction from satellite images, training, tuning and testing Random Forest models and evaluating the quality of SDS predictions in soybean plots available for our (future) selves, research communities and the public.</p>
-<p>Communication is a crucial component when describing scientific findings to the general public. I am enthusiastic about presenting my research in an interactive and visually enriched way so that the audience can understand it fully. Therefore, I presented my research as two <a href="https://crops.extension.iastate.edu/video/detecting-soybean-sudden-death-syndrome-using-remote-sensing">extension videos</a> and a <a href="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f">story map</a> so that the layperson can also know what I am doing and the importance thereof for society. I urge other students and researchers to also believe in reproducibility and make their data and code public so that we can see and learn the tools researchers are using.</p>
+<p>I started my <em>PhD</em> with a passion for Epidemiology, Remote Sensing and Geographic Information System (GIS).
+I was thrilled to learn Big Data analytics tools and explore their application in Plant Pathology.
+In this journey, my adviser and other lab members fully supported me, although it was a new research venture for our lab.
+Learning new skills are essential for personal development and for creating and achieving new goals.
+Plus, sharing these skills with others not only fosters vision in others but also deepens our knowledge and gives rise to new opportunities and collaborations.</p>
+<p>While reviewing the literature, I was always fascinated by the techniques and tools researchers used to collect and analyze data.
+However, their methods and analysis were irreproducible due to the lack of data and code sharing.
+I realized the need for reproducibility early during my <em>PhD</em>.
+I pledged to publicize my data and code so that others can also run and learn the tools I used for data analysis.
+Thus, along with writing my dissertation, I deposited all of my data and code in Iowa State University’s data repository on figshare.
+Thus, making all the components of data extraction from satellite images, training, tuning and testing Random Forest models and evaluating the quality of SDS predictions in soybean plots available for our (future) selves, research communities and the public.</p>
+<p>Communication is a crucial component when describing scientific findings to the general public.
+I am enthusiastic about presenting my research in an interactive and visually enriched way so that the audience can understand it fully.
+Therefore, I presented my research as two <a href="https://crops.extension.iastate.edu/video/detecting-soybean-sudden-death-syndrome-using-remote-sensing">extension videos</a> and a <a href="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f">story map</a> so that the layperson can also know what I am doing and the importance thereof for society.
+I urge other students and researchers to also believe in reproducibility and make their data and code public so that we can see and learn the tools researchers are using.</p>
 <h3 id="story-map">Story map</h3>
 <center>
 <iframe width="100%" height="600px" src="https://storymaps.arcgis.com/stories/4762d4a43fa0400f98d2658e2985eb1f?play=true&amp;speed=slow">

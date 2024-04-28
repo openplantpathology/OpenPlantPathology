@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -141,7 +142,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["epifitter-a-tool-for-analysing-plant-disease-epidemics_files/anchor-4.2.2/anchor.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/bowser-1.9.3/bowser.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/distill-2.2.21/template.v2.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/figure-html5/unnamed-chunk-2-1.png","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.6.6/header-attrs.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.7/header-attrs.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.9/header-attrs.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/jquery-1.11.3/jquery.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/popper-2.6.0/popper.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy-bundle.umd.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy-light-border.css","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy.css","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy.umd.min.js","epifitter-a-tool-for-analysing-plant-disease-epidemics_files/webcomponents-2.0.0/webcomponents.js","epifitter.png","references.bib"]}
+  {"type":"character","attributes":{},"value":["epifitter-a-tool-for-analysing-plant-disease-epidemics_files/figure-html5/unnamed-chunk-2-1.png","epifitter.png","references.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -253,9 +254,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -350,6 +363,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1111,6 +1129,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1188,8 +1212,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1215,12 +1240,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1498,7 +1524,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.20/header-attrs.js"></script>
+  <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/header-attrs-2.26/header-attrs.js"></script>
   <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/popper-2.6.0/popper.min.js"></script>
   <link href="epifitter-a-tool-for-analysing-plant-disease-epidemics_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1530,6 +1556,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>{epifitter}, a tool for analysing plant disease epidemics</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt-tag">R Packages</div>
@@ -1553,7 +1580,8 @@ Even more so, when Mother Nature is very kind to the pathogen with the provision
 In fact, JE Vanderplank and other important scientists who followed a couple decades thereafter provided and shaped the tools that we have available for the study of the temporal progress of epidemics.</p>
 <p>The subject is broad and can be complex, but relatively simple approaches may provide sufficient and important knowledge and tools for making inferences and testing hypotheses, depending on the question and scale of the application.
 When dealing with data collected at the population level (disease intensity in a group of individuals), the fit of simple two-parameter population dynamics models (<em>e.g.</em>, Gompertz, logistic, monomolecular) is an effective way to understand, compare and predict epidemics.</p>
-<p>These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation. The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics.
+<p>These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation.
+The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics.
 The mathematics behind model fitting is straightforward and can be done using linear regression as far as the original data is transformed to linearize the pattern of the curve.
 Alternatively, non-linear approaches can also be used, but require computational resources.</p>
 <h2 id="how-did-epifitter-happen">How did {epifitter} happen?</h2>
@@ -1573,7 +1601,8 @@ The models fitted to data are the “classic” population dynamics models (<em>
 <p>As of March the 3rd, the package has been downloaded 2,321 times (~600 downloads/month).
 Recently, I used {epifitter} in my graduate (online inter-institutional) epidemiology class with great success.
 The few functions optimized to simplify model fitting and selection shorten the learning curve because students need to learn just a few R functions compared with my original codes.
-This is also valid for visualizing model results. Additionally, we have used the package in ongoing research in the lab that deals with disease progress data.
+This is also valid for visualizing model results.
+Additionally, we have used the package in ongoing research in the lab that deals with disease progress data.
 The chapter on model fitting of my “<a href="https://emdelponte.github.io/epidemiology-R/fitting-models.html">R4 Plant Disease Epidemiology</a>” book (which is in the making) is based solely on {epifitter}.
 Finally, it has also been used in a vignette of the <a href="https://adamhsparks.github.io/epicrop/">epicrop</a> package and other research projects associated with the use of the latter package to calculate area under the disease progress curve (AUDPC).</p>
 <h3 id="what-is-next">What is next?</h3>
@@ -1584,7 +1613,7 @@ Furthermore, we plan to create functions to fit disease gradient models, add dat
 <p>{epifitter} can be downloaded from CRAN and its development version from GitHub.<br />
 CRAN: <a href="https://cran.r-project.org/web/packages/%7Bepifitter%7D/index.html" class="uri">&lt;https://cran.r-project.org/web/packages/{epifitter}/index.html&gt;</a><br />
 GH: <a href="https://github.com/AlvesKS/%7Bepifitter%7D" class="uri">&lt;https://github.com/AlvesKS/{epifitter}&gt;</a></p>
-<p>Package documentation: <a href="https://alvesks.github.io/%7Bepifitter%7D/" class="uri">https://alvesks.github.io/{epifitter}/</a><br />
+<p>Package documentation: <a href="https://alvesks.github.io/%7Bepifitter%7D/" class="uri">https://alvesks.github.io/%7Bepifitter%7D/</a><br />
 R4PDE: <a href="https://emdelponte.github.io/epidemiology-R/fitting-models.html" class="uri">&lt;https://emdelponte.github.io/epidemiology-R/fitting-models.html&gt;</a></p>
 <p><strong>Authors</strong><br />
 Kaique dos Santos Alves<br />
@@ -1628,7 +1657,8 @@ Emerson Medeiros Del Ponte</p>
 </div>
 </div>
 <h3 id="inspect-model-parameter-estimates">Inspect model parameter estimates</h3>
-<p>The models are ranked from highest to lowest CCC. The <code>epi1\$Stas_all</code> give the complete results.</p>
+<p>The models are ranked from highest to lowest CCC.
+The <code>epi1\$Stas_all</code> give the complete results.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>epi1</span><span class='op'>$</span><span class='va'>Stats</span></span></code></pre>
@@ -1669,7 +1699,7 @@ Exponential   0.7161    0.5903 0.2770</code></pre>
 <pre><code>[1] 41.251</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-chapter2017e" class="csl-entry" role="listitem">
 Madden, Laurence V., Gareth Hughes, and Frank van den Bosch, eds. 2017. <span>“CHAPTER 4: Temporal Analysis i: Quantifying and Comparing Epidemics.”</span> In, 63–116. The American Phytopathological Society. <a href="https://doi.org/10.1094/9780890545058.004">https://doi.org/10.1094/9780890545058.004</a>.
 </div>

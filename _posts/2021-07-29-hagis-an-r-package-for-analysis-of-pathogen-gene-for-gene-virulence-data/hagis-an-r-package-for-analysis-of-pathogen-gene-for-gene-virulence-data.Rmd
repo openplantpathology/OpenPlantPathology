@@ -13,7 +13,6 @@ categories:
   - R4PlantPath
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -24,20 +23,20 @@ Pathogens can, and have been observed to, overcome deployed genetic resistance i
 Adaptation of pathogen populations to genetic resistance is an ongoing “arms race” between the pathogen and pathologists to deploy effective resistance genes before the pathogen population can adapt and overcome them.
 Identifying where and when these adaptations occur in a growing area is pivotal to successful management of disease.
 
-Performing pathogen virulence surveys, as is done for _Phytophthora sojae_ on soybean, is critical for identifying effective resistance genes to a pathogen population.
-In the case of _P. sojae_, resistance genes (_Rps_ in this example) have been shown to be effective for 8-20 years, depending on gene deployed and location.
-Regular surveys are therefore conducted to sample and identify effective _Rps_ genes in the sampled population.
+Performing pathogen virulence surveys, as is done for *Phytophthora sojae* on soybean, is critical for identifying effective resistance genes to a pathogen population.
+In the case of *P. sojae*, resistance genes (*Rps* in this example) have been shown to be effective for 8-20 years, depending on gene deployed and location.
+Regular surveys are therefore conducted to sample and identify effective *Rps* genes in the sampled population.
 
-In previous _P. sojae_ surveys Excel spreadsheets, commonly the [Habgood-Gilmour Spreadsheet, "HaGiS"](https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-3059.1999.00325.x) Excel spread sheet, were used to perform calculation on distribution of susceptible reactions, pathotype complexity, pathotype frequency, as well as alpha diversity indices.
-This limited the analyses that could be performed to compare between different sampled populations virulence to identify trends in effective resistance genes, _i.e._, beta-diversity.
+In previous *P. sojae* surveys Excel spreadsheets, commonly the [Habgood-Gilmour Spreadsheet, "HaGiS"](https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-3059.1999.00325.x) Excel spread sheet, were used to perform calculation on distribution of susceptible reactions, pathotype complexity, pathotype frequency, as well as alpha diversity indices.
+This limited the analyses that could be performed to compare between different sampled populations virulence to identify trends in effective resistance genes, *i.e.*, beta-diversity.
 Using these Excel sheets makes it difficult to not only compare between fields, states or countries pathogen virulence, but also makes reproducibility of these analyses very difficult if not impossible.
 
-While {hagis} was made and validated using _Phytophthora sojae_ virulence data, this package can be used with any pathosystem where plant resistance is conferred in a gene-for-gene fashion.
+While {hagis} was made and validated using *Phytophthora sojae* virulence data, this package can be used with any pathosystem where plant resistance is conferred in a gene-for-gene fashion.
 
 ## How did {hagis} come to be?
 
-I (Austin McCoy) started my PhD in 2017 with absolutely no experience in R or RStudio, and started performing a pathotype (virulence) survey of _Phytophthora sojae_ in Michigan to identify effective resistance genes to manage _P. sojae_ in the state.
-At the time the HaGiS Excel sheet was the primary way research groups were analyzing their _P. sojae_ virulence data, however, it was cumbersome and error prone with few ways to look at the large amounts of data we were generating.
+I (Austin McCoy) started my PhD in 2017 with absolutely no experience in R or RStudio, and started performing a pathotype (virulence) survey of *Phytophthora sojae* in Michigan to identify effective resistance genes to manage *P. sojae* in the state.
+At the time the HaGiS Excel sheet was the primary way research groups were analyzing their *P. sojae* virulence data, however, it was cumbersome and error prone with few ways to look at the large amounts of data we were generating.
 By 2019 I had produced quite a bit of isolate virulence data and had started using R, mainly for visualizing other experimental data and performing statistical analysis, while still trying to use the HaGiS Excel sheet.
 Thankfully another PhD student at the time, Dr. Zachary Noel, brought up the idea of me performing the HaGiS analyses in R.
 
@@ -53,13 +52,13 @@ It provides all analyses that have been used historically to identify effective 
 
 Currently, as of July 21st, 2021, {hagis} has been downloaded 10,664 times.
 Research groups from many states in the United States, as well as South America have published using this package in their own pathogen virulence surveys.
-The majority of these studies have been with _P. sojae_, but there has also been some use in other pathosystems, such as frog-eye leaf spot in soybean caused by _Cercospora sojina_.
+The majority of these studies have been with *P. sojae*, but there has also been some use in other pathosystems, such as frog-eye leaf spot in soybean caused by *Cercospora sojina*.
 We are excited to see how this package is used going forward!
 
 ## What is next?
 
 We plan to keep maintaining the {hagis} package as is, but are open to recommendations from users and researchers on future expansions.
-Currently we are using the package to investigate trends in _Rps_ gene efficacy on a global scale, mining data from previously published _P. sojae_ pathotype surveys.
+Currently we are using the package to investigate trends in *Rps* gene efficacy on a global scale, mining data from previously published *P. sojae* pathotype surveys.
 
 ## Where do I get the package and more information?
 
@@ -87,7 +86,7 @@ Martin Chilvers
 
 ## Examples
 
-{hagis} has a built in data set of 21 _P. sojae_ isolates virulence data from Michigan.
+{hagis} has a built in data set of 21 *P. sojae* isolates virulence data from Michigan.
 We will identify effective resistance genes tested, the average pathotype complexity of the data set, individual isolates pathotypes and the distribution of pathotype complexities using this practice data set below.
 
 First lets load the {hagis} package and look at the built-in data set `P_sojae_survey` that comes with the package using `head()`.
@@ -110,12 +109,14 @@ head(P_sojae_survey)
 ```
 
 Now that we know the data set has loaded correctly and extra information in columns removed, let set up the central argument for {hagis} to run on.
-To do this we can make the argument a `list()` to be used with all functions in {hagis}, named `hagis_args`. `x = ` denotes the data set you want to use, in this example we will use the practice data set `P_sojae_survey`. `cutoff = ` sets the cutoff for susceptible reactions.
+To do this we can make the argument a `list()` to be used with all functions in {hagis}, named `hagis_args`.
+`x =` denotes the data set you want to use, in this example we will use the practice data set `P_sojae_survey`.
+`cutoff =` sets the cutoff for susceptible reactions.
 For example a value of `cutoff = 60` indicates that any isolate-plant interaction that results in 60% or more of a susceptible phenotype will be considered susceptible for analyses.
-`sample = ` indicates the column in your data set in which the Isolate identifier is contained (_i.e._, unique isolate identifier), in this case we will use `Isolate`.
+`sample =` indicates the column in your data set in which the Isolate identifier is contained (*i.e.*, unique isolate identifier), in this case we will use `Isolate`.
 `gene = Rps` identifies the column in which the genes tested are contained, in the practice data that column is named `Rps`.
 The final argument, `perc_susc =` refers to the column in which your calculated percent susceptible reactions for each isolate-gene interaction is contained.
-Users can change the `cutoff` value for their individual analysis needs. 
+Users can change the `cutoff` value for their individual analysis needs.
 
 ```{r create-args-list}
 hagis_args <- list(
@@ -130,7 +131,8 @@ hagis_args <- list(
 
 ### Determining effective resistance genes
 
-We can use the `summarize_gene()` function in {hagis} to identify which resistance genes tested were effective at managing the tested population. Using `pander()` we can make the table output much more visually appealing to readers.
+We can use the `summarize_gene()` function in {hagis} to identify which resistance genes tested were effective at managing the tested population.
+Using `pander()` we can make the table output much more visually appealing to readers.
 
 ```{r summarize-gene}
 library("pander") # this will allow use to make a more aesthetically pleasing table below
@@ -149,7 +151,7 @@ autoplot(Rps.summary, type = "count") + theme_light()
 
 ### Individual isolates virulence formula
 
-If you are interested in identifying a certain isolates virulence formula (referred to as "pathotype" with _P. sojae_), you can also do that using the functions `calculate_diversities()` and `individual_pathotypes()`.
+If you are interested in identifying a certain isolates virulence formula (referred to as "pathotype" with *P. sojae*), you can also do that using the functions `calculate_diversities()` and `individual_pathotypes()`.
 `calculate_complexities()` will also calculate multiple diversity indices from the virulence data.
 `Sample` refers to the unique isolate identifier that you gave each isolate prior to analysis.
 A table will be output that contains all isolates pathotype, regardless of if they are unique or not within your study.
@@ -188,5 +190,4 @@ autoplot(complexities, type = "count") + theme_light()
 
 Further examples and documentation can be found on the {hagis} documentation website, <https://openplantpathology.github.io/hagis/>.
 If you are using {hagis}, please get in touch.
-You can share it in the [Open Plant Pathology Slack Workgroup](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) or drop us an e-mail, 
-<OpenPlantPathology@gmail.com>, we'd love to hear about it!
+You can share it in the [Open Plant Pathology Slack Workgroup](https://communityinviter.com/apps/openplantpathology/open-plant-pathology) or drop us an e-mail, [OpenPlantPathology\@gmail.com](mailto:OpenPlantPathology@gmail.com){.email}, we'd love to hear about it!

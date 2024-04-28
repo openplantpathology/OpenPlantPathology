@@ -15,11 +15,10 @@ categories:
   - U.K. Seminars
 ---
 
-
 ### About
 
-Presenter: Dr. F. Murilo Zerbini \
-Institution: Universidade Federal de Viçosa, Viçosa, Brazil \
-Date: 29 March 2021 \
-Host: Department of Plant Pathology, University of Kentucky \
-Links: [Video](https://www.youtube.com/watch?v=eyMqWP98vic)  
+Presenter: Dr. F. Murilo Zerbini\
+Institution: Universidade Federal de Viçosa, Viçosa, Brazil\
+Date: 29 March 2021\
+Host: Department of Plant Pathology, University of Kentucky\
+Links: [Video](https://www.youtube.com/watch?v=eyMqWP98vic)

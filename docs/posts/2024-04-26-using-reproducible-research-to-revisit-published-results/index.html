@@ -159,7 +159,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","using-reproducible-research-to-revisit-published-results_files/anchor-4.2.2/anchor.min.js","using-reproducible-research-to-revisit-published-results_files/bowser-1.9.3/bowser.min.js","using-reproducible-research-to-revisit-published-results_files/distill-2.2.21/template.v2.js","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-1.png","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-2.png","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-new-1.png","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-org-1.png","using-reproducible-research-to-revisit-published-results_files/header-attrs-2.26/header-attrs.js","using-reproducible-research-to-revisit-published-results_files/jquery-3.6.0/jquery-3.6.0.js","using-reproducible-research-to-revisit-published-results_files/jquery-3.6.0/jquery-3.6.0.min.js","using-reproducible-research-to-revisit-published-results_files/jquery-3.6.0/jquery-3.6.0.min.map","using-reproducible-research-to-revisit-published-results_files/popper-2.6.0/popper.min.js","using-reproducible-research-to-revisit-published-results_files/tippy-6.2.7/tippy-bundle.umd.min.js","using-reproducible-research-to-revisit-published-results_files/tippy-6.2.7/tippy-light-border.css","using-reproducible-research-to-revisit-published-results_files/tippy-6.2.7/tippy.css","using-reproducible-research-to-revisit-published-results_files/tippy-6.2.7/tippy.umd.min.js","using-reproducible-research-to-revisit-published-results_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["bibliography.bib","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-new-1.png","using-reproducible-research-to-revisit-published-results_files/figure-html5/gam-check-org-1.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2544,7 +2544,8 @@ gtag('config', 'UA-112255011-1');
 <div class="d-article">
 <h2 id="note-on-further-refinement">Note on Further Refinement</h2>
 <p>I realised I neglected to explore including the pots at each station and the plants in each pot for the random effects.
-The <code>mod_new</code> now includes these and the model fit is further improved with their inclusion. -ahs 2024-04-28</p>
+The <code>mod_new</code> now includes these and the model fit is further improved with their inclusion.
+-ahs 2024-04-28</p>
 <h2 id="introduction">Introduction</h2>
 <p>I’ve recently just wrapped up an analysis with co-authors looking at the aerial dispersal of peanut smut spores from infested fields in Argentina <span class="citation" data-cites="Paredes2024 EdwardsMolina2022">(<a href="#ref-Paredes2024" role="doc-biblioref">Paredes et al. 2024</a>; <a href="#ref-EdwardsMolina2022" role="doc-biblioref">Edwards Molina, Sparks, and Paredes 2022</a>)</span>.
 In this paper, we used a Generalised Additive Model (GAM) to <a href="https://epifito.github.io/peanut_smut_aerial/gam_model.html">describe how far the spores spread and what was linked with this</a> in the R programming environment.
@@ -2562,7 +2563,7 @@ We assume that you have the R package <a href="https://devtools.r-lib.org/">{dev
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://devtools.r-lib.org/'>"devtools"</a></span><span class='op'>)</span></span>
-<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"https://github.com/adamhsparks/ChickpeaAscoDispersal"</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>install_github</span><span class='op'>(</span><span class='st'>"https://github.com/adamhsparks/ChickpeaAscoDispersal"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Now we can load the data, <code>lesion_counts</code> and <code>summary_weather</code>, from {ChickpeaAscoDispersal} and create the <code>dat</code> object used to fit the GAM in the original paper.</p>
@@ -2824,7 +2825,11 @@ Sparks, Adam H., Gregory A. Forbes, Robert J. Hijmans, and Karen A. Garrett. 201
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>I also learned something new by writing this blog post. When I started I didn’t realise that <code>gam.check()</code> used random draws to check the fit. In the case of these models, it can make a difference in the significance of the “distance” term. In most cases it’s not significant when checking the fit of the new model, but in some cases it remains significant as with the original model. The seed chosen (at random) does make it insignificant.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>I also learned something new by writing this blog post.
+When I started I didn’t realise that <code>gam.check()</code> used random draws to check the fit.
+In the case of these models, it can make a difference in the significance of the “distance” term.
+In most cases it’s not significant when checking the fit of the new model, but in some cases it remains significant as with the original model.
+The seed chosen (at random) does make it insignificant.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

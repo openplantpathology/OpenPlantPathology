@@ -17,21 +17,27 @@ bibliography: references.bib
 
 ## Background
 
-Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae*, putting at risk Brassicas worldwide. The clubroot pathogen, as final step of its life cycle, releases resting spores to the soil where they can remain viable for up to 20 years [@peng2015], making the management of the disease very difficult. For growers, to know the distribution of the pathogen is key to avoid the introduction of infested soil and to perform the proper disinfestation if machinery from fellow farmers is used in their lands.
+Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae*, putting at risk Brassicas worldwide.
+The clubroot pathogen, as final step of its life cycle, releases resting spores to the soil where they can remain viable for up to 20 years [@peng2015], making the management of the disease very difficult.
+For growers, to know the distribution of the pathogen is key to avoid the introduction of infested soil and to perform the proper disinfestation if machinery from fellow farmers is used in their lands.
 
 ## What is the database for?
 
-ClubrootTracker is an open database to record the presence of clubroot disease. This project was published as a Resource Announcement in Plant Health Progress [@muirhead2020], and a full article will be published once new locations are recorded.
+ClubrootTracker is an open database to record the presence of clubroot disease.
+This project was published as a Resource Announcement in Plant Health Progress [@muirhead2020], and a full article will be published once new locations are recorded.
 
 ## How it is developed?
 
-ClubrootTracker is an interactive map tool written in the Bootstrap version 3.3.7 web framework using leaflet.js (<https://leafletjs.com>) and a JavaScript library for the interactive map user interface. Using Python, GPS data was converted into a GeoJSON file, allowing to render the data points of the areas affected by clubroot.
+ClubrootTracker is an interactive map tool written in the Bootstrap version 3.3.7 web framework using leaflet.js (<https://leafletjs.com>) and a JavaScript library for the interactive map user interface.
+Using Python, GPS data was converted into a GeoJSON file, allowing to render the data points of the areas affected by clubroot.
 
 ![Screenshots of the ClubrootTracker tool showing the start page, menu and a selected location](clubroot2.png)
 
 ## What's next?
 
-We would like to include worldwide clubroot distribution data. Due to confidentiality concerns expressed by some government officials and growers we are now working in a way to display the distribution of the pathogen without data points. We are also working with scientists from Europe and Latin America to start recording clubroot distribution.
+We would like to include worldwide clubroot distribution data.
+Due to confidentiality concerns expressed by some government officials and growers we are now working in a way to display the distribution of the pathogen without data points.
+We are also working with scientists from Europe and Latin America to start recording clubroot distribution.
 
 Project website: <http://clubroottracker.ca/>\
 Data source: <https://github.com/kevmu/ClubrootTracker>\

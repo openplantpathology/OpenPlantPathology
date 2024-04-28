@@ -606,7 +606,7 @@
       <title>What are Brazilian plant pathologists doing? A text-analysis of scientific poster titles</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles</link>
-      <description>A short description of the post.</description>
+      <description>A text analysis in R to look more closely at what areas Brazilian plant pathologists are working in based on posters at the Brazilian Society of Plant Pathology meeting.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2020-04-16-what-are-brazilian-plant-pathologists-doing-a-text-analysis-of-scientific-poster-titles</guid>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
@@ -740,7 +740,7 @@
       <title>OPP Interviews: Sophien Kamoun</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun</link>
-      <description>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.</description>
+      <description>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.</description>
       <category>Interviews</category>
       <guid>https://www.openplantpathology.org/posts/2018-11-13-opp-interviews-sophien-kamoun</guid>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
@@ -811,7 +811,7 @@
       <title>The fall of an empire</title>
       <dc:creator>Emerson Del Ponte</dc:creator>
       <link>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire</link>
-      <description>I recently tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.</description>
+      <description>I recently Tweeted an animated GIF that depicted the yearly variation in efficacy of tebuconazole, a DMI fungicide, evaluated in field trials, for the control of soybean rust in a major soybean region of Brazil (Mato Grosso state).  The Tweet got a lot of attention, not only because of the important issue, but I think also because of the nice way to visualize the data. So I decided to share the R code use to produce the animation for others' presentations.</description>
       <category>R4PlantPath</category>
       <guid>https://www.openplantpathology.org/posts/2018-05-25-the-fall-of-an-empire</guid>
       <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>

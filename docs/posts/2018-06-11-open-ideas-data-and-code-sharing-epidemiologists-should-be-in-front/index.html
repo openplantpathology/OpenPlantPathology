@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Open ideas, data and code sharing: epidemiologists should be in front!</title>
@@ -128,7 +131,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/anchor-4.2.2/anchor.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/bowser-1.9.3/bowser.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/distill-2.2.21/template.v2.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/header-attrs-2.5/header-attrs.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/header-attrs-2.6.6/header-attrs.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/jquery-1.11.3/jquery.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/popper-2.6.0/popper.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/tippy-6.2.7/tippy-bundle.umd.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/tippy-6.2.7/tippy-light-border.css","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/tippy-6.2.7/tippy.css","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/tippy-6.2.7/tippy.umd.min.js","open-ideas-data-and-code-sharing-epidemiologists-should-be-in-front_files/webcomponents-2.0.0/webcomponents.js","talk_opp1.png"]}
+  {"type":"character","attributes":{},"value":["talk_opp1.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2427,8 +2430,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2494,6 +2497,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Open ideas, data and code sharing: epidemiologists should be in front!</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Talks" class="dt-tag">Talks</a>
@@ -2503,7 +2507,7 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-byline">
-  Adam Sparks <a href="adamhsparks.netlify.app" class="uri">adamhsparks.netlify.app</a> 
+  Adam Sparks adamhsparks.netlify.app 
   
 ,   Emerson Del Ponte <a href="https://emersondelponte.netlify.app" class="uri">https://emersondelponte.netlify.app</a> 
   

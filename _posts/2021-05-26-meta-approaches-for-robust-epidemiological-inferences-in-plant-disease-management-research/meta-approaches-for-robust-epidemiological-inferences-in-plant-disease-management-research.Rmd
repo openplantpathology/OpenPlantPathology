@@ -14,11 +14,10 @@ categories:
   - BPP Seminars
 ---
 
-
 ### About
 
-Presenter: Dr. Emerson Del Ponte \
-Instutution: Universidade Federal de Viçosa, Brazil \
-Date: 20 May 2021 \
-Host: Department of Botany and Plant Pathology, Oregon State University \
-Links: [Video](https://www.youtube.com/watch?v=xoIWexJ1alU)  
+Presenter: Dr. Emerson Del Ponte\
+Instutution: Universidade Federal de Viçosa, Brazil\
+Date: 20 May 2021\
+Host: Department of Botany and Plant Pathology, Oregon State University\
+Links: [Video](https://www.youtube.com/watch?v=xoIWexJ1alU)

@@ -1,7 +1,7 @@
 ---
 title: "What are Brazilian plant pathologists doing? A text-analysis of scientific poster titles"
 description: |
-  A short description of the post.
+  A text analysis in R to look more closely at what areas Brazilian plant pathologists are working in based on posters at the Brazilian Society of Plant Pathology meeting.
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/edelponte
@@ -14,22 +14,26 @@ categories:
   - R4PlantPath
 ---
 
-
-
-The  scientific conference promoted by the [Brazilian Society of Plant Pathology](http://sbfitopatologia.org.br/) (SBF) is the primary venue for local scientists to present their research data. Among the different ways of delivering scientific content and receiving feedback, poster presentation is tradition and central at meetings. They might provide the largest amount of the least biased (not by invitation) information on the current and future status of research in the field. Most commonly, summaries of work presented in a conference are based on the number of abstracts per subarea or number of results from a keyword-based search. I have played with text analysis in a [recent research article](https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-02-17-0069-FI#fig2) and thought it could be useful to identify the most frequent research areas to be presented at the [51CBFito meeting](http://cbfito2019.com.br/). I also wanted to learn new coding and, of course, share what I've learned. 
-
+The scientific conference promoted by the [Brazilian Society of Plant Pathology](http://sbfitopatologia.org.br/) (SBF) is the primary venue for local scientists to present their research data.
+Among the different ways of delivering scientific content and receiving feedback, poster presentation is tradition and central at meetings.
+They might provide the largest amount of the least biased (not by invitation) information on the current and future status of research in the field.
+Most commonly, summaries of work presented in a conference are based on the number of abstracts per sub-area or number of results from a keyword-based search.
+I have played with text analysis in a [recent research article](https://apsjournals.apsnet.org/doi/full/10.1094/PHYTO-02-17-0069-FI#fig2) and thought it could be useful to identify the most frequent research areas to be presented at the [51CBFito meeting](http://cbfito2019.com.br/).
+I also wanted to learn new coding and, of course, share what I've learned.
 
 ## Sources of data
 
-I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles organized by sessions. I was not succesful in extracting information from that file using [*pdftools*](https://docs.ropensci.org/pdftools) package the way I would like to. I gave up using that source and asked the organizers if there was another format - different from a spreadsheet. They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese. This source worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package. 
-
+I began looking for the data and found a PDF file with several pages in the preface and a list of poster titles organized by sessions.
+I was not succesful in extracting information from that file using [*pdftools*](https://docs.ropensci.org/pdftools) package the way I would like to.
+I gave up using that source and asked the organizers if there was another format - different from a spreadsheet.
+They sent me a link to a [webpage](http://cbfito2019.com.br/index.php?page=portugues) that mainly displays a two-column table with poster IDs and titles in Portuguese.
+This source worked much better and was a chance for me to learn about scraping (harvesting) data from webpages using the [*rvest*](https://rvest.tidyverse.org/index.html) package.
 
 ## Time to harvest
 
-It was rather easy to follow the examples of codes on how to read data from a table in a webpage and store data in a list, which can to be converted to a dataframe. 
+It was rather easy to follow the examples of codes on how to read data from a table in a webpage and store data in a list, which can to be converted to a dataframe.
 
-
-```r
+``` r
 library(rvest)
 library(tidyverse)
 cbfito <- read_html("http://cbfito2019.com.br/index.php?page=portugues") %>%
@@ -43,17 +47,16 @@ cbfito <- read_csv("cbfito.csv")
 nrow(cbfito) # diplay the total number of posters
 ```
 
-```
+```         
 ## [1] 706
 ```
 
-
 ## Text analysis
 
-Now that I got the titles of 706 posters, a [tidy](https://www.tidyverse.org/) approach was used to analyse the text. The `unnest_tokens()` function allows to extract all words and store them in a new variable.
+Now that I got the titles of 706 posters, a [tidy](https://www.tidyverse.org/) approach was used to analyse the text.
+The `unnest_tokens()` function allows to extract all words and store them in a new variable.
 
-
-```r
+``` r
 library(tidytext)
 library(tidyr)
 cbfito_words <- cbfito %>%
@@ -61,7 +64,7 @@ cbfito_words <- cbfito %>%
 head(cbfito_words)
 ```
 
-```
+```         
 ## # A tibble: 6 x 2
 ##   ID     word       
 ##   <chr>  <chr>      
@@ -73,16 +76,17 @@ head(cbfito_words)
 ## 6 ID 381 vitro
 ```
 
-The dataframe contains the ID variable and a new one called *word* with the individual words. Let's see if there is any numeric string. Rearranging data in the column by `word` variable is one solution. 
+The dataframe contains the ID variable and a new one called *word* with the individual words.
+Let's see if there is any numeric string.
+Rearranging data in the column by `word` variable is one solution.
 
-
-```r
+``` r
 cbfito_words %>%
   arrange(word) %>% 
   head(10)
 ```
 
-```
+```         
 ## # A tibble: 10 x 2
 ##    ID     word 
 ##    <chr>  <chr>
@@ -98,16 +102,15 @@ cbfito_words %>%
 ## 10 ID 219 2016
 ```
 
-As we can see above there are some integers that I want to remove together with the entire ID column. 
+As we can see above there are some integers that I want to remove together with the entire ID column.
 
-
-```r
+``` r
 cbfito_words %>%
   filter(!str_detect(word, "[0-10000]")) %>% 
   select(word)
 ```
 
-```
+```         
 ## # A tibble: 9,757 x 1
 ##    word       
 ##    <chr>      
@@ -124,17 +127,17 @@ cbfito_words %>%
 ## # … with 9,747 more rows
 ```
 
-Now the dataframe is composed of a single column with all words in a different row. Let's view the 20 most frequent words. 
+Now the dataframe is composed of a single column with all words in a different row.
+Let's view the 20 most frequent words.
 
-
-```r
+``` r
 cbfito_words %>%
     count(word, sort = TRUE) %>%
   mutate(word = reorder(word, n)) %>% 
   head(20)
 ```
 
-```
+```         
 ## # A tibble: 20 x 2
 ##    word               n
 ##    <fct>          <int>
@@ -160,11 +163,12 @@ cbfito_words %>%
 ## 20 fungicidas        52
 ```
 
-The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words). There are several of those both in Portuguese and in English, which I do not want them to appear in the analysis as I am interested in the more technical terms. To eliminate them, we need to find a list of stopwords. I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contains the highest number of stop words in Portuguese. 
+The most frequent words in a language are called [stop words](https://en.wikipedia.org/wiki/Stop_words).
+There are several of those both in Portuguese and in English, which I do not want them to appear in the analysis as I am interested in the more technical terms.
+To eliminate them, we need to find a list of stopwords.
+I found a few lists and picked this one set from [this website](http://www.labape.com.br/rprimi/ds/stopwords.txt) that contains the highest number of stop words in Portuguese.
 
-
-
-```r
+``` r
 stopwords_pt <- read_csv(
   file = "http://www.labape.com.br/rprimi/ds/stopwords.txt",
   col_names = FALSE
@@ -174,9 +178,7 @@ names(stopwords_pt) <- "word"
 
 An easy way to remove all stopwords in both languages is using the [anti_join](https://dplyr.tidyverse.org/reference/join.html#join-types) function.
 
-
-
-```r
+``` r
 cbfito_words2 <- cbfito_words %>%
   anti_join(stopwords_pt) %>%
   anti_join(stop_words) # this is a list of English stopwords from the tidytext pkg
@@ -184,12 +186,11 @@ cbfito_words2 <- cbfito_words %>%
 
 Let's have another close look at the list of words and check if there are some field-specific words that I want to eliminate.
 
-
-```r
+``` r
 cbfito_words2
 ```
 
-```
+```         
 ## # A tibble: 6,330 x 2
 ##    ID     word         
 ##    <chr>  <chr>        
@@ -206,9 +207,11 @@ cbfito_words2
 ## # … with 6,320 more rows
 ```
 
-I went through the list and could find a few unwanted words that are not of relevance for this summary. I did it manually considering that I had "only" 2,000 words, but I went through only those cited at least twice. The `filter` function can be used to eliminate those words from the list of words.
+I went through the list and could find a few unwanted words that are not of relevance for this summary.
+I did it manually considering that I had "only" 2,000 words, but I went through only those cited at least twice.
+The `filter` function can be used to eliminate those words from the list of words.
 
-```r
+``` r
 words_freq <- cbfito_words2 %>%
   filter(!word %in% c(
     "spp", "sp", "sob", "sobre", "pv", "uso", "diferentes", "estado", "sob", "brasil", "brazil", "doenças",  "desenvolvimento", "soybean", "pós", "contra", "identification", "diversity", "formas", "hosts")) %>%
@@ -218,7 +221,7 @@ words_freq <- cbfito_words2 %>%
 words_freq
 ```
 
-```
+```         
 ## # A tibble: 2,136 x 2
 ##    word               n
 ##    <fct>          <int>
@@ -239,8 +242,7 @@ words_freq
 
 The barplot gives us an idea of the most common research interests based on the number of posters - assuming that one word is not repeated in the same poster title.
 
-
-```r
+``` r
 words_freq %>% 
   head(40) %>% 
   ggplot(aes(reorder(word, n), n))+
@@ -252,11 +254,12 @@ words_freq %>%
 
 ![](post-text-fig01.png)
 
+Using barplots we have serious limitation in space.
+Also, it does not make sense to show too many words with just a few occurrences, for the case of a barplot.
+A nice solution for more crowded data is to produce a wordcloud.
+In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
 
-Using barplots we have serious limitation in space. Also, it does not make sense to show too many words with just a few occurrences, for the case of a barplot. A nice solution for more crowded data is to produce a wordcloud. In the code below I defined a maximum of 200 words that appeared at least twice to be shown in the plot.
-
-
-```r
+``` r
 library(wordcloud)
 library(RColorBrewer)
 
@@ -273,15 +276,15 @@ words_freq %>%
 
 ![](post-text-fig02.png)
 
-
 ## Conclusion
 
-To answer the original question, my analysis showed that most of the studies by Brazilian pathologists are focused on control methods by fungicides, host resistance or biological agentes (**Trichoderma** and **Bacillus**) both in the field and under in vitro conditions. The most studied crops are soybean, maize, common bean, cowpea and tomato and the most common diseases are caused by fungi (**Colletotrichum**, **Fusarium**) followed by nematodes (**Meloidogyne**) and viruses.
+To answer the original question, my analysis showed that most of the studies by Brazilian pathologists are focused on control methods by fungicides, host resistance or biological agentes (**Trichoderma** and **Bacillus**) both in the field and under in vitro conditions.
+The most studied crops are soybean, maize, common bean, cowpea and tomato and the most common diseases are caused by fungi (**Colletotrichum**, **Fusarium**) followed by nematodes (**Meloidogyne**) and viruses.
 
-Text analysis is an interesting approach and could be expanded further to answer different questions should more information be available. For example, if each poster was associated with a specific session, that could be taken into account in the analysis. Maybe some kind of network analysis could be used to check which words tend to appear more frequently together (same study). For example, for which group of pathogen was identification more common. What are the most common control methods studied in soybean? are they the same for other crops? Trends in research over time could be identified should text data on presentations from previous conference be available.
-
-
-
-
-
-
+Text analysis is an interesting approach and could be expanded further to answer different questions should more information be available.
+For example, if each poster was associated with a specific session, that could be taken into account in the analysis.
+Maybe some kind of network analysis could be used to check which words tend to appear more frequently together (same study).
+For example, for which group of pathogen was identification more common.
+What are the most common control methods studied in soybean?
+are they the same for other crops?
+Trends in research over time could be identified should text data on presentations from previous conference be available.

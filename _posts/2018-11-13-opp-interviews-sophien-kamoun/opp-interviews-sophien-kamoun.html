@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,11 +74,11 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -84,10 +86,11 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+
   <!--radix_placeholder_meta_tags-->
   <title>OPP Interviews: Sophien Kamoun</title>
 
-  <meta property="description" itemprop="description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
+  <meta property="description" itemprop="description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
 
 
   <!--  https://schema.org/Article -->
@@ -98,24 +101,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="OPP Interviews: Sophien Kamoun"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
+  <meta property="og:description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="OPP Interviews: Sophien Kamoun"/>
-  <meta property="twitter:description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
+  <meta property="twitter:description" content="In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["OPP Interviews: Sophien Kamoun"]},{"type":"character","attributes":{},"value":["In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["11-13-2018"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["interview-kamoun.png"]},{"type":"character","attributes":{},"value":["Interviews"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["OPP Interviews: Sophien Kamoun"]},{"type":"character","attributes":{},"value":["In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Emerson Del Ponte"]},{"type":"character","attributes":{},"value":["https://twitter.com/edelponte"]}]}]},{"type":"character","attributes":{},"value":["11-13-2018"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["interview-kamoun.png"]},{"type":"character","attributes":{},"value":["Interviews"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["interview-kamoun.png","opp-interviews-sophien-kamoun_files/anchor-4.2.2/anchor.min.js","opp-interviews-sophien-kamoun_files/bowser-1.9.3/bowser.min.js","opp-interviews-sophien-kamoun_files/distill-2.2.21/template.v2.js","opp-interviews-sophien-kamoun_files/header-attrs-2.6.6/header-attrs.js","opp-interviews-sophien-kamoun_files/jquery-1.11.3/jquery.min.js","opp-interviews-sophien-kamoun_files/popper-2.6.0/popper.min.js","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy-bundle.umd.min.js","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy-light-border.css","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy.css","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy.umd.min.js","opp-interviews-sophien-kamoun_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["interview-kamoun.png","opp-interviews-sophien-kamoun_files/anchor-4.2.2/anchor.min.js","opp-interviews-sophien-kamoun_files/bowser-1.9.3/bowser.min.js","opp-interviews-sophien-kamoun_files/distill-2.2.21/template.v2.js","opp-interviews-sophien-kamoun_files/header-attrs-2.26/header-attrs.js","opp-interviews-sophien-kamoun_files/jquery-3.6.0/jquery-3.6.0.js","opp-interviews-sophien-kamoun_files/jquery-3.6.0/jquery-3.6.0.min.js","opp-interviews-sophien-kamoun_files/jquery-3.6.0/jquery-3.6.0.min.map","opp-interviews-sophien-kamoun_files/popper-2.6.0/popper.min.js","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy-bundle.umd.min.js","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy-light-border.css","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy.css","opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy.umd.min.js","opp-interviews-sophien-kamoun_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -186,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -226,9 +230,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -323,6 +339,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -427,10 +448,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1088,6 +1105,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1165,8 +1188,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1192,12 +1216,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1262,7 +1287,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1273,6 +1313,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1372,6 +1437,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1394,7 +1461,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1433,8 +1500,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="opp-interviews-sophien-kamoun_files/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="opp-interviews-sophien-kamoun_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="opp-interviews-sophien-kamoun_files/header-attrs-2.26/header-attrs.js"></script>
+  <script src="opp-interviews-sophien-kamoun_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="opp-interviews-sophien-kamoun_files/popper-2.6.0/popper.min.js"></script>
   <link href="opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="opp-interviews-sophien-kamoun_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1454,7 +1521,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"OPP Interviews: Sophien Kamoun","description":"In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-11-13T00:00:00.000+00:00","citationText":"Ponte, 2018"}
+{"title":"OPP Interviews: Sophien Kamoun","description":"In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/edelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-11-13T00:00:00.000+08:00","citationText":"Ponte, 2018"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1465,12 +1532,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>OPP Interviews: Sophien Kamoun</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Interviews</div>
+<div class="dt-tag">Interviews</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.</p></p>
+<p><p>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution.</p></p>
 </div>
 
 <div class="d-byline">
@@ -1482,7 +1550,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <p>In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field.</p>
 <p>Prof. <a href="http://www.tsl.ac.uk/staff/sophien-kamoun/">Sophien Kamoun</a>, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific <a href="https://twitter.com/kamounlab?lang=en">Tweeting</a> but, also importantly, for his work with oomycetes <a href="https://twitter.com/hashtag/notafungus">#notafungus</a>, <a href="http://kamounlab.tumblr.com/">effectors, genomics and evolution</a>.</p>
-<p>Prof. Kamoun is well recognized for his efforts to champion data sharing and other open science practices. Recently he was one of the leading scientists who founded <a href="http://s620715531.websitehome.co.uk/owb/">Open Wheat Blast</a>, an initiative with the main goal of providing genomic data and analysis related to wheat blast with open access. The collaborative efforts by several teams allowed to rapidly confirm the source of wheat blast in Bangladesh in early 2016. It is a great pleasure to have Prof. Kamoun as an OPP member and answering a few questions about open science. <br><br></p>
+<p>Prof. Kamoun is well recognized for his efforts to champion data sharing and other open science practices. Recently he was one of the leading scientists who founded <a href="http://s620715531.websitehome.co.uk/owb/">Open Wheat Blast</a>, an initiative with the main goal of providing genomic data and analysis related to wheat blast with open access. The collaborative efforts by several teams allowed to rapidly confirm the source of wheat blast in Bangladesh in early 2016. It is a great pleasure to have Prof. Kamoun as an OPP member and answering a few questions about open science.
+<br><br></p>
 <h3 id="you-have-a-strong-presence-in-social-media-together-with-other-prominent-plant-pathologists-advocating-for-more-open-and-transparent-science-and-data-sharing.-tell-us-a-bit-about-your-background-and-when-you-realized-that-open-science-and-data-sharing-were-important-to-furthering-science">You have a strong presence in social media, together with other prominent plant pathologists, advocating for more open and transparent science and data sharing. Tell us a bit about your background and when you realized that open science and data sharing were important to furthering science</h3>
 <p>I think I have always been tuned to new technologies and tools. I’m also aware of the importance of science communication and networking. Therefore, it’s perhaps no surprise that I quickly became hooked to Twitter and related social media tools such as<a href="https://www.scoop.it/t/mpmi">Scoop.it</a>. Twitter has become an integral part of my daily routine. I use it primarily<a href="https://www.slideshare.net/SophienKamoun/sophien-twitter-2014">to broadcast, gather new information and interact with a wide range of people beyond my immediate colleagues</a>. I love that incessant flow of information we get through Twitter. In some ways, I’m addicted to knowledge and social interactions, and Twitter is my drug.</p>
 <blockquote class="twitter-tweet">
@@ -1492,7 +1561,8 @@ Q: What inspires you about your job? A: Knowledge and people. <a href="https://t
 — Sophien Kamoun (<span class="citation" data-cites="KamounLab">@KamounLab</span>) <a href="https://twitter.com/KamounLab/status/888474137081118721?ref_src=twsrc%5Etfw">July 21, 2017</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>I think I first became aware of the open science movement with the first open access journals. It must have been the PLOS journals around year 2000. The rationale for open science, notably transparency and accountability, seemed evident given that our objective as scientists is to produce robust reproducible science and share it with others. Later, I became interested in open science as applied to genome sequencing of emerging plant pathogens. I still feel that the plant pathology community is too slow in applying the tools of genomics to new plant disease outbreaks.<a href="http://kamounlab.dreamhosters.com/pdfs/MicrobiologyToday_2012.pdf">Too little, too late</a>. <br><br></p>
+<p>I think I first became aware of the open science movement with the first open access journals. It must have been the PLOS journals around year 2000. The rationale for open science, notably transparency and accountability, seemed evident given that our objective as scientists is to produce robust reproducible science and share it with others. Later, I became interested in open science as applied to genome sequencing of emerging plant pathogens. I still feel that the plant pathology community is too slow in applying the tools of genomics to new plant disease outbreaks.<a href="http://kamounlab.dreamhosters.com/pdfs/MicrobiologyToday_2012.pdf">Too little, too late</a>.
+<br><br></p>
 <h3 id="how-do-you-compare-the-overall-field-of-plant-pathology-to-others-in-relation-to-the-level-of-adoption-of-open-science-practices-is-there-any-kind-of-formal-education-and-training-that-graduate-schoolsadvisors-should-be-more-proactive-to-educate-the-new-generation-of-scientists-or-is-this-a-matter-of-individual-efforts">How do you compare the overall field of plant pathology to others in relation to the level of adoption of open science practices? Is there any kind of formal education and training that graduate schools/advisors should be more proactive to educate the new generation of scientists, or is this a matter of individual efforts?</h3>
 <p>I want to start by saying that <a href="http://www.openplantpathology.org">OPP</a> is an absolutely amazing initiative that stands out from the conservative stance of many of our plant pathologist colleagues. My experience is that plant pathologists tend to be too slow in embracing the cultural changes that are sweeping the biological sciences. For example, a few months ago I participated in a [workshop] (<a href="http://kamounlab.dreamhosters.com/storify/RFBellagio_storify.html" class="uri">http://kamounlab.dreamhosters.com/storify/RFBellagio_storify.html</a>) on response to new plant disease outbreaks and some participants argued against open science approaches. There was even opposition to the simple concept of sharing data and biomaterial with experts. Remarkably, our biomedical colleagues manage to do just fine.</p>
 <blockquote class="twitter-tweet">
@@ -1502,7 +1572,8 @@ Q: What inspires you about your job? A: Knowledge and people. <a href="https://t
 — Sophien Kamoun (<span class="citation" data-cites="KamounLab">@KamounLab</span>) <a href="https://twitter.com/KamounLab/status/888474137081118721?ref_src=twsrc%5Etfw">July 21, 2017</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>Another aspect that is directly relevant to the acceptance of open science is the issue of research evaluation. Many seem reluctant to <a href="http://kamounlab.tumblr.com/post/163409024195/whats-up-with-preprints-and-why-im-bothering">embrace preprints</a> because they think that this would not count towards their career progression. Thus, I would encourage everyone to look at the San Francisco Declaration on Research Assessment <a href="https://sfdora.org/">(DORA)</a>, urge their institution to sign up and hold their colleagues to these standards of research evaluation. To sum up, yes, we need more education about open science in plant pathology. OPP fills a critical niche. <br><br></p>
+<p>Another aspect that is directly relevant to the acceptance of open science is the issue of research evaluation. Many seem reluctant to <a href="http://kamounlab.tumblr.com/post/163409024195/whats-up-with-preprints-and-why-im-bothering">embrace preprints</a> because they think that this would not count towards their career progression. Thus, I would encourage everyone to look at the San Francisco Declaration on Research Assessment <a href="https://sfdora.org/">(DORA)</a>, urge their institution to sign up and hold their colleagues to these standards of research evaluation. To sum up, yes, we need more education about open science in plant pathology. OPP fills a critical niche.
+<br><br></p>
 <h3 id="you-are-among-several-scientists-who-strongly-voice-against-the-current-scholarly-publishing-practices.-you-have-even-refused-to-review-and-submit-articles-for-some-journals-because-of-the-publisher.-what-is-your-advice-for-young-scientists-who-expect-recognition-publishing-in-naturecellscience-ncs-journals">You are among several scientists who strongly voice against the current scholarly publishing practices. You have even refused to review and submit articles for some journals because of the publisher. What is your advice for young scientists who expect recognition publishing in Nature/Cell/Science (NCS) journals?</h3>
 <p>Indeed, it’s well established that scientific publishing is broken at several levels. But the onus shouldn’t be on early career scientists to fix the system, although they can create momentum and enable cultural changes by lobbying for DORA principles, embracing preprints and various other open science initiatives. My advice to early career scientists is to be fully aware that <a href="http://kamounlab.tumblr.com/post/121748816600/what-are-world-class-science-outputs">publishing is important</a>. This is our main currency in science. I’m not arguing against that. But to be a successful scientist, it is critical to have a full set of skills.</p>
 <p>I highly recommend checking the [list of competencies] (<a href="https://www.nationalpostdoc.org/page/CoreCompetencies" class="uri">https://www.nationalpostdoc.org/page/CoreCompetencies</a>) developed by the National Postdoc Association. If you have some weakness, such as writing, speaking, networking etc., you will struggle to have a fulfilling career unless you address them. Focusing on improving weaknesses is more important than strengths. Even in a great orchestra, you only <a href="https://twitter.com/GeneticsGSA/status/578654502254993408">hear the bad player</a>. What saddens me the most is to see early career scientists become obsessed with publishing in glam mags, such as Science and Nature. It’s a total fallacy to believe that all you need is a paper in these journals for your career to be made.</p>
@@ -1514,7 +1585,8 @@ The mentality that if I get a CNS paper my career is set is a false narrative th
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Of course, a solid publication record <a href="https://twitter.com/KamounLab/status/985816557170364421">is important</a> but I have seen many prospective faculty candidates falter despite a publication list that includes these glamorous journals. I recall an interviewee for a faculty position who first-authored three (Yes. Three!) Science papers but couldn’t articulate a reasonable response to valid questions from the committee. Needless to say, that interviewee didn’t get the job.</p>
-<p>My advice is spelled out <a href="http://kamounlab.tumblr.com/post/121748816600/what-are-world-class-science-outputs">here</a>. Aim high. But be reasonable. Also, don’t lose the plot. Your job is to produce solid science that stands the test of time, not to squeeze through a wishy-washy paper through reviewers and editors. Trust me, the community knows. Flawed papers get scorned even on <a href="https://twitter.com/search?q=%23arseniclife&amp;src=typd">Twitter</a>. Personally, I’m proud that I got my job as Senior Scientist at The Sainsbury Lab without any Science or Nature papers. At that time, I thought it said a lot about the institution and how they value their scientists. Finally, the current publishing ethos of my lab is described <a href="https://twitter.com/KamounLab/status/1020600779424567296">here</a>. <br></p>
+<p>My advice is spelled out <a href="http://kamounlab.tumblr.com/post/121748816600/what-are-world-class-science-outputs">here</a>. Aim high. But be reasonable. Also, don’t lose the plot. Your job is to produce solid science that stands the test of time, not to squeeze through a wishy-washy paper through reviewers and editors. Trust me, the community knows. Flawed papers get scorned even on <a href="https://twitter.com/search?q=%23arseniclife&amp;src=typd">Twitter</a>. Personally, I’m proud that I got my job as Senior Scientist at The Sainsbury Lab without any Science or Nature papers. At that time, I thought it said a lot about the institution and how they value their scientists. Finally, the current publishing ethos of my lab is described <a href="https://twitter.com/KamounLab/status/1020600779424567296">here</a>.
+<br></p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
 I was hired <a href="https://twitter.com/TheSainsburyLab?ref_src=twsrc%5Etfw"><span class="citation" data-cites="TheSainsburyLab">@TheSainsburyLab</span></a> 10 yrs ago without CNS papers. I've been on many committees that turned down CNS authors…
@@ -1533,7 +1605,8 @@ My take is that it depends on the discovery. The way to see it is that preprints
 — Sophien Kamoun (<span class="citation" data-cites="KamounLab">@KamounLab</span>) <a href="https://twitter.com/KamounLab/status/1057547861376860160?ref_src=twsrc%5Etfw">October 31, 2018</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>To early career scientists, who may not feel confident to post a preprint, do seek input from your mentors, colleagues or even use scientific writing services to improve the draft. My sense is that the younger generation is puzzled by the traditional protracted process of science publishing and [the costs] (<a href="https://twitter.com/KamounLab/status/1009718491832872960" class="uri">https://twitter.com/KamounLab/status/1009718491832872960</a>) associated with it. Preprints are becoming routine in the biological sciences and [the growth of bioRxiv] (<a href="http://www.prepubmed.org/monthly_stats/" class="uri">http://www.prepubmed.org/monthly_stats/</a>) has been phenomenal. More concrete actions, such as accepting preprints in promotion packages, grant and fellowship applications are accelerating the process. All it would take now is for funding bodies to mandate preprints, which they really should if they truly believe in their open science manifesto. <br><br></p>
+<p>To early career scientists, who may not feel confident to post a preprint, do seek input from your mentors, colleagues or even use scientific writing services to improve the draft. My sense is that the younger generation is puzzled by the traditional protracted process of science publishing and [the costs] (<a href="https://twitter.com/KamounLab/status/1009718491832872960" class="uri">https://twitter.com/KamounLab/status/1009718491832872960</a>) associated with it. Preprints are becoming routine in the biological sciences and [the growth of bioRxiv] (<a href="http://www.prepubmed.org/monthly_stats/" class="uri">http://www.prepubmed.org/monthly_stats/</a>) has been phenomenal. More concrete actions, such as accepting preprints in promotion packages, grant and fellowship applications are accelerating the process. All it would take now is for funding bodies to mandate preprints, which they really should if they truly believe in their open science manifesto.
+<br><br></p>
 <h3 id="what-do-you-see-as-the-most-significant-outcome-from-your-work-as-a-result-of-using-open-science-practices">What do you see as the most significant outcome from your work as a result of using open science practices?</h3>
 <p>One amazing anecdote is that when we went public with the [sequences from the wheat blast] (<a href="http://wheatblast.net/" class="uri">http://wheatblast.net/</a>) outbreak in Bangladesh], there was only one (ONE!) genome sequence available of a wheat blast isolate. Obviously, we couldn’t do much in interpreting the Bangladeshi sequences based on a single genome. However, it turned out that several labs had unpublished genome sequences of wheat blast isolates sitting in their computers. Within days, there was over 20 genome sequences available. That goes to show the importance of sharing data and also coming up with processes where depositing data sets is recognized as a scholarly contribution just like any other activity.</p>
 <p>Another aspect that I found enlightening was the poorly appreciated process of live peer-review. This is what happens when you crowdsource analyses, and more than one group gets involved. You get instant validation! In the case of the wheat blast outbreak, we had two independent analyses performed by <a href="https://github.com/crolllab/wheat-blast">Daniel Croll</a> in Zurich and [Pierre Gladieux] (<a href="http://s620715531.websitehome.co.uk/owb/phylogenomic-analyses-reveal-that-the-2016-outbreak-of-wheat-blast-in-bangladesh-is-caused-by-a-south-american-wheat-infecting-lineage-of-magnaporthe-oryzae/" class="uri">http://s620715531.websitehome.co.uk/owb/phylogenomic-analyses-reveal-that-the-2016-outbreak-of-wheat-blast-in-bangladesh-is-caused-by-a-south-american-wheat-infecting-lineage-of-magnaporthe-oryzae/</a>) in Montpellier. They both reached the exact same conclusion that the Bangladeshi strains originated from South America. A great example especially given discussions about the <a href="https://en.wikipedia.org/wiki/Replication_crisis">reproducibility crisis</a>.</p>

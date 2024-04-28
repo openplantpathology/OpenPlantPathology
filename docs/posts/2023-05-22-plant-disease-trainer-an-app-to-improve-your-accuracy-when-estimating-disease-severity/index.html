@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -154,7 +155,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["phytopathology.csl","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/anchor-4.2.2/anchor.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/bowser-1.9.3/bowser.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/distill-2.2.21/template.v2.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/header-attrs-2.21/header-attrs.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.min.map","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/popper-2.6.0/popper.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy-bundle.umd.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy-light-border.css","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy.css","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy.umd.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/webcomponents-2.0.0/webcomponents.js","references.bib","trainer2.png"]}
+  {"type":"character","attributes":{},"value":["phytopathology.csl","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/anchor-4.2.2/anchor.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/bowser-1.9.3/bowser.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/distill-2.2.21/template.v2.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/header-attrs-2.26/header-attrs.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/jquery-3.6.0/jquery-3.6.0.min.map","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/popper-2.6.0/popper.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy-bundle.umd.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy-light-border.css","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy.css","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/tippy-6.2.7/tippy.umd.min.js","plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity_files/webcomponents-2.0.0/webcomponents.js","references.bib","trainer2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2453,7 +2454,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.21/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2520,6 +2521,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>TraineR: a new app for improving accuracy of severity estimates</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
@@ -2536,23 +2538,39 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="background">Background</h2>
-<p>Training session for the assessment of disease severity has been used in the past and proven useful to improve rater’s precision and accuracy when visually quantifying disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task <span class="citation" data-cites="bock2022">(<a href="#ref-bock2022" role="doc-biblioref">Bock et al. 2022b</a>)</span>. In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity. For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ. After each rated image, the actual value is displayed and that is when the training begins!</p>
-<p>Research on this topic began during the mid-1980s with the arrival of personal computers, which were used to develop computerized images of specific and measured disease severity. Those software, running on DOS or Windows system, included AREAGRAM, DISTRAIN, DISEASE.PRO, ESTIMATE, and SEVERITY.PRO (See review by <span class="citation" data-cites="bock2022a">Bock et al. (<a href="#ref-bock2022a" role="doc-biblioref">2022a</a>)</span>).</p>
+<p>Training session for the assessment of disease severity has been used in the past and proven useful to improve raters’ precision and accuracy when visually quantifying disease severity - a variable that is relatively more difficult to assess given the subjectivity of the task <span class="citation" data-cites="bock2022">(<a href="#ref-bock2022" role="doc-biblioref">Bock et al. 2022b</a>)</span>.
+In those sessions, raters are exposed to a series of computerized diagrams or actual images of plant organs displaying disease symptoms, all with known severity.
+For each image, raters need to provide their best estimate based on the perceived percent diseased area of the organ.
+After each rated image, the actual value is displayed and that is when the training begins!</p>
+<p>Research on this topic began during the mid-1980s with the arrival of personal computers, which were used to develop computerized images of specific and measured disease severity.
+Those software, running on DOS or Windows system, included AREAGRAM, DISTRAIN, DISEASE.PRO, ESTIMATE, and SEVERITY.PRO (See review by <span class="citation" data-cites="bock2022a">Bock et al. (<a href="#ref-bock2022a" role="doc-biblioref">2022a</a>)</span>).</p>
 <h2 id="what-is-this-app-for">What is this app for?</h2>
-<p>The goal of TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (eg. leaf, fruit) and lesions of varying number, shape and color. Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage. When clicking on <code>show % severity</code>, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.</p>
+<p>The goal of TraineR is to allow users to generate computerized ellipsoidal images that resemble a plant organ (e.g., leaf, fruit) and lesions of varying number, shape and color.
+Then, users should look at the generated standard area diagram and mentally provide an estimate of disease severity based on the perceived diseased area in percentage.
+When clicking on <code>show % severity</code>, the app calculates the actual disease severity as the percentage of the leaf area covered by the lesions.</p>
 <h2 id="how-was-it-developed">How was it developed?</h2>
 <p>The app was developed in R + Shiny and was made available at the shinyapps.io pages.</p>
 <h2 id="what-is-next">What is next?</h2>
-<p>The app has currently some limitations such as no lesion overlapping and maximum severity of around 60%. It is also limited to generate ellipsoidal shapes. Future efforts could focus on the generation of organs and lesions of different shape such as polygonal. It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment. There are no current plans for implementing these features.</p>
+<p>The app has currently some limitations such as no lesion overlapping and maximum severity of around 60%.
+It is also limited to generate ellipsoidal shapes.
+Future efforts could focus on the generation of organs and lesions of different shape such as polygonal.
+It could also be optimized to record the assessments and calculate the accuracy of the estimates based on a certain number of assessment.
+<del>There are no current plans for implementing these features.</del></p>
+<h2 id="post-update">Post update</h2>
+<p>Since the publication of this post, significant updates have been made to the app.
+It can now create a training session, with the maximum number of attempts determined by the user.
+Upon the session’s completion, the user is shown the calculated accuracy, represented by Lin’s concordance correlation coefficient.
+Moreover, the user can now view all previous estimates alongside their actual values, a crucial feature that enables training.
+The app includes two tabs: one that displays a scatter plot correlating estimates and actual severity, and another that provides comprehensive statistics of the concordance analysis.</p>
 <p><strong>Project website</strong>: <a href="https://edelponte.shinyapps.io/traineR/" class="uri">https://edelponte.shinyapps.io/traineR/</a><br />
 <strong>Author and maintainer</strong>: Emerson M. Del Ponte</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-bock2022a" class="csl-entry" role="doc-biblioentry">
-Bock, C. H., Chiang, K.-S., and Del Ponte, E. M. 2022a. Plant disease severity estimated visually: A century of research, best practices, and opportunities for improving methods and practices to maximize accuracy. Tropical Plant Pathology. 47:25–42 Available at: <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85113926454&amp;doi=10.1007%2fs40858-021-00439-z&amp;partnerID=40&amp;md5=35399328923085bd0bd70c09110d3746">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85113926454&amp;doi=10.1007%2fs40858-021-00439-z&amp;partnerID=40&amp;md5=35399328923085bd0bd70c09110d3746</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-bock2022a" class="csl-entry" role="listitem">
+Bock, C. H., Chiang, K.-S., and Del Ponte, E. M. 2022a. <a href="https://doi.org/10.1007/s40858-021-00439-z">Plant disease severity estimated visually: A century of research, best practices, and opportunities for improving methods and practices to maximize accuracy</a>. Tropical Plant Pathology. 47:25–42.
 </div>
-<div id="ref-bock2022" class="csl-entry" role="doc-biblioentry">
-Bock, C. H., Pethybridge, S. J., Barbedo, J. G. A., Esker, P. D., Mahlein, A.-K., and Del Ponte, E. M. 2022b. A phytopathometry glossary for the twenty-first century: Towards consistency and precision in intra- and inter-disciplinary dialogues. Tropical Plant Pathology. 47:14–24 Available at: <a href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85111898454&amp;doi=10.1007%2fs40858-021-00454-0&amp;partnerID=40&amp;md5=c854cea57f00b2d3951ff8595a243f10">https://www.scopus.com/inward/record.uri?eid=2-s2.0-85111898454&amp;doi=10.1007%2fs40858-021-00454-0&amp;partnerID=40&amp;md5=c854cea57f00b2d3951ff8595a243f10</a>.
+<div id="ref-bock2022" class="csl-entry" role="listitem">
+Bock, C. H., Pethybridge, S. J., Barbedo, J. G. A., Esker, P. D., Mahlein, A.-K., and Del Ponte, E. M. 2022b. <a href="https://doi.org/10.1007/s40858-021-00454-0">A phytopathometry glossary for the twenty-first century: Towards consistency and precision in intra- and inter-disciplinary dialogues</a>. Tropical Plant Pathology. 47:14–24.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

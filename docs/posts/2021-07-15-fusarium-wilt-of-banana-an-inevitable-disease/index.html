@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Fusarium wilt of banana – an inevitable disease</title>
@@ -124,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["fusarium-wilt-of-banana-an-inevitable-disease_files/anchor-4.2.2/anchor.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/bowser-1.9.3/bowser.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/distill-2.2.21/template.v2.js","fusarium-wilt-of-banana-an-inevitable-disease_files/header-attrs-2.9/header-attrs.js","fusarium-wilt-of-banana-an-inevitable-disease_files/jquery-1.11.3/jquery.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/popper-2.6.0/popper.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/tippy-6.2.7/tippy-bundle.umd.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/tippy-6.2.7/tippy-light-border.css","fusarium-wilt-of-banana-an-inevitable-disease_files/tippy-6.2.7/tippy.css","fusarium-wilt-of-banana-an-inevitable-disease_files/tippy-6.2.7/tippy.umd.min.js","fusarium-wilt-of-banana-an-inevitable-disease_files/webcomponents-2.0.0/webcomponents.js","qld-apps-seminar-aitken.jpg"]}
+  {"type":"character","attributes":{},"value":["qld-apps-seminar-aitken.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2423,8 +2425,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2490,6 +2492,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Fusarium wilt of banana – an inevitable disease</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Qld-APPS_Seminars" class="dt-tag">Qld-APPS Seminars</a>
@@ -2505,13 +2508,18 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-article">
-<h3 id="about">About</h3>
+<h2 id="about">About</h2>
 <p>Presenter: Prof. Elizabeth Aitken<br />
 Institution: The University of Queensland, School of Agriculture and Food Sciences<br />
 Host: Queensland Chapter Australasian Plant Pathology Society, <a href="https://twitter.com/qldapps">@qldapps</a><br />
 Links: <a href="https://youtu.be/kbRoZublp1M">Video</a></p>
-<h3 id="biography">Biography</h3>
-<p>Professor Elizabeth Aitken has been an academic at UQ since 1993 lecturing plant pathology and fungal biology at undergraduate and postgraduate level. Over that period much of her research has focused on diseases of tropical crops in particular banana, ginger, cotton and sunflower. Research topics have included the genetics of plant-pathogen interactions, molecular aspects of pathogenicity and disease diagnostics. Currently, her lab is concentrating on Fusarium wilt, particularly on banana where host resistance, pathogen diversity and etiology are being explored. However, none of this work would have happened without the involvement of the numerous postgraduate and Honours students and postdocs, who have been in the Aitken lab over the years, as well as successful collaborations with colleagues. Liz has also taken on significant committee roles in postgraduate student mentoring, biosafety and research integrity within the UQ community.</p>
+<h2 id="biography">Biography</h2>
+<p>Professor Elizabeth Aitken has been an academic at UQ since 1993 lecturing plant pathology and fungal biology at undergraduate and postgraduate level.
+Over that period much of her research has focused on diseases of tropical crops in particular banana, ginger, cotton and sunflower.
+Research topics have included the genetics of plant-pathogen interactions, molecular aspects of pathogenicity and disease diagnostics.
+Currently, her lab is concentrating on Fusarium wilt, particularly on banana where host resistance, pathogen diversity and etiology are being explored.
+However, none of this work would have happened without the involvement of the numerous postgraduate and Honours students and postdocs, who have been in the Aitken lab over the years, as well as successful collaborations with colleagues.
+Liz has also taken on significant committee roles in postgraduate student mentoring, biosafety and research integrity within the UQ community.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

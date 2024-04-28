@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Breaking down barriers between remote sensing and plant pathology</title>
@@ -127,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/anchor-4.2.2/anchor.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/bowser-1.9.3/bowser.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/distill-2.2.21/template.v2.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/header-attrs-2.6.6/header-attrs.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/jquery-1.11.3/jquery.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/popper-2.6.0/popper.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/tippy-6.2.7/tippy-bundle.umd.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/tippy-6.2.7/tippy-light-border.css","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/tippy-6.2.7/tippy.css","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/tippy-6.2.7/tippy.umd.min.js","breaking-down-barriers-between-remote-sensing-and-plant-pathology_files/webcomponents-2.0.0/webcomponents.js","post-remote-sensing-pp.png"]}
+  {"type":"character","attributes":{},"value":["post-remote-sensing-pp.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2426,8 +2429,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2493,6 +2496,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Breaking down barriers between remote sensing and plant pathology</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Preprints" class="dt-tag">Preprints</a>
@@ -2516,32 +2520,95 @@ gtag('config', 'UA-112255011-1');
 <p><strong>Pablo J. Zarco-Tejada</strong><br />
 <em>The University of Melbourne, Australia</em></p>
 <h3 id="introduction">Introduction</h3>
-<p>A critical component for enhancing productivity and quality of food and fiber is the ability to quickly detect and monitor plant diseases in order to prevent or minimize losses to agricultural and forest products (Mahlein 2016). The earlier (prior to or at first symptoms) the diseases can be detected, the lower the risk of control failure or their spread to disease-free areas (Zarco-Tejada et al. 2018). Novel farming methods and tools have been proposed as a way to more precisely (temporally and spatially) deploy agrochemicals at the right dosage to the right target, thus helping to reduce the negative impacts on the environment, but to also reduce the risk of inadvertently developing chemical-resistant strains in the pathogen population due to chemical overuse (Mahlein et al. 2018). Currently, site-specific and advanced farming techniques are increasingly available, and their implementation is necessary to reduce agricultural expansion into native ecosystems and ensure food safety and supply (Foley et al. 2011; Vogel 2017). In the context of pest and diseases, optimizing agricultural practices through the integrated use of remote sensing and plant pathology seems to be a worthwhile enterprise (Gebbers and Adamchuk 2010). Remote sensing (i.e. retrieving information from objects without direct contact) has been a promising discipline since the 1980s and was envisioned to support efforts in agronomic management and in plant pathology, therefore advancing the remote detection of abiotic and biotic stress. Thirty years ago, Jackson (1986) stated that: “continued research at all levels, ground, aircraft, and satellite (goal 1), should build the foundation for a future global stress-detection system (goal 2) that would be readily available to all (goal 3)”. We split Jackson’s vision into three smaller goals in order to explore whether we have achieved the aims he sought three decades ago. We highlight challenges and potential solutions in the context of application of remote sensing in plant pathology.</p>
+<p>A critical component for enhancing productivity and quality of food and fiber is the ability to quickly detect and monitor plant diseases in order to prevent or minimize losses to agricultural and forest products (Mahlein 2016).
+The earlier (prior to or at first symptoms) the diseases can be detected, the lower the risk of control failure or their spread to disease-free areas (Zarco-Tejada et al. 2018).
+Novel farming methods and tools have been proposed as a way to more precisely (temporally and spatially) deploy agrochemicals at the right dosage to the right target, thus helping to reduce the negative impacts on the environment, but to also reduce the risk of inadvertently developing chemical-resistant strains in the pathogen population due to chemical overuse (Mahlein et al. 2018).
+Currently, site-specific and advanced farming techniques are increasingly available, and their implementation is necessary to reduce agricultural expansion into native ecosystems and ensure food safety and supply (Foley et al. 2011; Vogel 2017).
+In the context of pest and diseases, optimizing agricultural practices through the integrated use of remote sensing and plant pathology seems to be a worthwhile enterprise (Gebbers and Adamchuk 2010).
+Remote sensing (i.e. retrieving information from objects without direct contact) has been a promising discipline since the 1980s and was envisioned to support efforts in agronomic management and in plant pathology, therefore advancing the remote detection of abiotic and biotic stress.
+Thirty years ago, Jackson (1986) stated that: “continued research at all levels, ground, aircraft, and satellite (goal 1), should build the foundation for a future global stress-detection system (goal 2) that would be readily available to all (goal 3)”.
+We split Jackson’s vision into three smaller goals in order to explore whether we have achieved the aims he sought three decades ago.
+We highlight challenges and potential solutions in the context of application of remote sensing in plant pathology.</p>
 <h3 id="challenges">Challenges</h3>
-<p>We believe that a major barrier in interdisciplinary science, or more recently known as convergence science, is the complexity of tasks that are often required to solve vexing problems that have a societal component (National Science Foundation 2016). To facilitate the search for solutions, the integration of knowledge, methods, and expertise from different disciplines plays a central role. A new scientific language is thus created by bringing together intellectually-diverse researchers, as collaboration across disciplines requires effective ways of communicating. Both remote sensing and plant pathology interface and depend upon knowledge from other disciplines such as plant physiology, ecology, agronomy, geography, natural conservation, physics, electronics, mathematics and computational sciences. This can be illustrated by several current efforts, reviewed by Mahlein (2016), to develop early - even pre-symptomatic - disease detection systems using different sensor technologies. Commonly, thermal, hyperspectral and chlorophyll fluorescence sensors are applied to isolated pathosystems in controlled environments. As pathogen movement is now facilitated through human transportation systems on a global scale (Willis 2017), single-point, small-scale, data are no longer sufficient. More intercontinental and interdisciplinary efforts are needed to establish functional detection systems of large, preferably global, coverage.</p>
-<p>In the context of large team efforts, people from different worlds (conceptually and technically speaking) will need to work hand-in-hand. However, the potentially narrow and discipline-specific focus within each scientific field bears potential for miscommunication of concepts across disciplines that could hamper an effective research foundation being laid. This may lead to inappropriate or ineffective use of the proposed methods and tools from each discipline. To illustrate this, Liebig’s Law of the Minimum defines ‘stress’, from an agricultural point-of-view, as a situation when plant growth and yield is mainly limited by a constrained resource (Grime 2010). Contrastingly, Harper (1977) defined stress, from an ecological perspective, as the variability in mortality and recruitment rates in plant populations. Concepts are developed and applied in context, and so how can we improve interdisciplinary communication and collaboration in such situations when concepts are defined and interpreted differently across disciplines?</p>
-<p>Remote sensing has been largely ‘oversold’ in the past. It was provocatively defined, 40 years ago, as ‘a solution looking for a problem’. In spite of the advances by those people who pioneered and bravely engaged in this crosstalk, not all of what had been anticipated has been actually incorporated into disease management systems. But successful examples of applicable image-based systems have been demonstrated recently for early detection of harmful field epidemics (Zarco-Tejada et al. 2018) and to quantify disease intensity based on image classification methods (Pethybridge and Nelson 2015). In fact, improved developments in sensor technology over recent years have made use of remote sensing techniques more easily available and affordable. For example, 20 years ago only large organizations could purchase very expensive equipment such as hyperspectral sensors, and almost exclusively for research purposes that justified the investment. In the current age of ‘digital revolution’ and ‘big data’ in agriculture and forestry, remote sensing tools, as well as artificial intelligence, have become more accessible and popular thanks to sensor miniaturization, hardware evolution, reduced costs and more simple operation protocols (Mahlein et al. 2018). Once the usefulness and practicality of such systems are proven and established by researchers, the potential is enormous to integrate them into operational disease management programs and help solve problems from scales varying from plants to landscapes, including disease detection and monitoring. However, continuing interdisciplinary research is needed to advance knowledge and improve our understanding of the subtle plant physiological changes caused by different pathogens. This information can be acquired from remote sensing data and is crucial to discriminate among biotic and abiotic stresses, an issue that remains unsolved and requires further exploration (Mahlein 2016; Zarco-Tejada et al. 2018). We support calls that research should continue to validate methods within and between pathosystems before the approach is offered to farmers as the next ‘silver bullet’. Such validations could be realized by using advanced, physically based approaches like radiative transfer modeling to explore the biological cause of plant stress responses through sensor data. The success of remote sensing-based detection systems should be evaluated in the context of the actual end-user demand, as well as economic and ecological aspects. Establishing feasible and affordable plant disease detection systems will also require the inclusion and understanding of practitioners and policy-maker needs.</p>
+<p>We believe that a major barrier in interdisciplinary science, or more recently known as convergence science, is the complexity of tasks that are often required to solve vexing problems that have a societal component (National Science Foundation 2016).
+To facilitate the search for solutions, the integration of knowledge, methods, and expertise from different disciplines plays a central role.
+A new scientific language is thus created by bringing together intellectually-diverse researchers, as collaboration across disciplines requires effective ways of communicating.
+Both remote sensing and plant pathology interface and depend upon knowledge from other disciplines such as plant physiology, ecology, agronomy, geography, natural conservation, physics, electronics, mathematics and computational sciences.
+This can be illustrated by several current efforts, reviewed by Mahlein (2016), to develop early - even pre-symptomatic - disease detection systems using different sensor technologies.
+Commonly, thermal, hyperspectral and chlorophyll fluorescence sensors are applied to isolated pathosystems in controlled environments.
+As pathogen movement is now facilitated through human transportation systems on a global scale (Willis 2017), single-point, small-scale, data are no longer sufficient.
+More intercontinental and interdisciplinary efforts are needed to establish functional detection systems of large, preferably global, coverage.</p>
+<p>In the context of large team efforts, people from different worlds (conceptually and technically speaking) will need to work hand-in-hand.
+However, the potentially narrow and discipline-specific focus within each scientific field bears potential for miscommunication of concepts across disciplines that could hamper an effective research foundation being laid.
+This may lead to inappropriate or ineffective use of the proposed methods and tools from each discipline.
+To illustrate this, Liebig’s Law of the Minimum defines ‘stress’, from an agricultural point-of-view, as a situation when plant growth and yield is mainly limited by a constrained resource (Grime 2010).
+Contrastingly, Harper (1977) defined stress, from an ecological perspective, as the variability in mortality and recruitment rates in plant populations.
+Concepts are developed and applied in context, and so how can we improve interdisciplinary communication and collaboration in such situations when concepts are defined and interpreted differently across disciplines?</p>
+<p>Remote sensing has been largely ‘oversold’ in the past.
+It was provocatively defined, 40 years ago, as ‘a solution looking for a problem’.
+In spite of the advances by those people who pioneered and bravely engaged in this crosstalk, not all of what had been anticipated has been actually incorporated into disease management systems.
+But successful examples of applicable image-based systems have been demonstrated recently for early detection of harmful field epidemics (Zarco-Tejada et al. 2018) and to quantify disease intensity based on image classification methods (Pethybridge and Nelson 2015).
+In fact, improved developments in sensor technology over recent years have made use of remote sensing techniques more easily available and affordable.
+For example, 20 years ago only large organizations could purchase very expensive equipment such as hyperspectral sensors, and almost exclusively for research purposes that justified the investment.
+In the current age of ‘digital revolution’ and ‘big data’ in agriculture and forestry, remote sensing tools, as well as artificial intelligence, have become more accessible and popular thanks to sensor miniaturization, hardware evolution, reduced costs and more simple operation protocols (Mahlein et al. 2018).
+Once the usefulness and practicality of such systems are proven and established by researchers, the potential is enormous to integrate them into operational disease management programs and help solve problems from scales varying from plants to landscapes, including disease detection and monitoring.
+However, continuing interdisciplinary research is needed to advance knowledge and improve our understanding of the subtle plant physiological changes caused by different pathogens.
+This information can be acquired from remote sensing data and is crucial to discriminate among biotic and abiotic stresses, an issue that remains unsolved and requires further exploration (Mahlein 2016; Zarco-Tejada et al. 2018).
+We support calls that research should continue to validate methods within and between pathosystems before the approach is offered to farmers as the next ‘silver bullet’.
+Such validations could be realized by using advanced, physically based approaches like radiative transfer modeling to explore the biological cause of plant stress responses through sensor data.
+The success of remote sensing-based detection systems should be evaluated in the context of the actual end-user demand, as well as economic and ecological aspects.
+Establishing feasible and affordable plant disease detection systems will also require the inclusion and understanding of practitioners and policy-maker needs.</p>
 <h3 id="potential-solutions">Potential solutions</h3>
-<p>While we acknowledge numerous examples of effective interdisciplinary research solving major global issues challenges have been identified (Brown et al. 2015; Ledford 2015; Van Noorden 2015), pointing to areas that can be improved to develop practical solutions as new issues arise. An auspicious beginning is to encourage engagement and dialogue among researchers based on ethical principles that include respect and the ability to listen and ask questions freely (Brown et al. 2015). One expert should acknowledge that a collaborator, while an expert in her/his field, may be an amateur in the other field and not be able to follow discipline-specific jargon, and thus avoid any uncomfortable debate. Inclusive and open scientific communities, such as Open Plant Pathology, whose vision is “to foster a diverse community culture that values openness, transparency and reproducibility of scientific research data and methods” (<a href="https://openplantpathology.org/" class="uri">https://openplantpathology.org/</a>) is an example of a welcoming environment that is already contributing to enhance the dialogue and break existing barriers.</p>
-<p>To value and recognize mutual efforts, researchers should consider investing time to learn some concepts and methods of the other discipline. Care is needed to ensure that the concepts are not misunderstood, methodologies are not oversimplified, and their effectiveness kept intact, whilst avoiding discipline-specific jargon. This requires all parties to be up-to-date with the relevant literature, which can also be achieved through open platforms or social media interactions. One should be able to expect a minimum level of common knowledge to start collaborating and working on problems that advance both fields of research. The level of detail of the required knowledge depends on the complexity of the research questions and may vary. Building such knowledge should not only depend on an individual’s self-learning ability but also by integrating remote sensing science into the curriculum of many natural and social science disciplines.</p>
+<p>While we acknowledge numerous examples of effective interdisciplinary research solving major global issues challenges have been identified (Brown et al. 2015; Ledford 2015; Van Noorden 2015), pointing to areas that can be improved to develop practical solutions as new issues arise.
+An auspicious beginning is to encourage engagement and dialogue among researchers based on ethical principles that include respect and the ability to listen and ask questions freely (Brown et al. 2015).
+One expert should acknowledge that a collaborator, while an expert in her/his field, may be an amateur in the other field and not be able to follow discipline-specific jargon, and thus avoid any uncomfortable debate.
+Inclusive and open scientific communities, such as Open Plant Pathology, whose vision is “to foster a diverse community culture that values openness, transparency and reproducibility of scientific research data and methods” (<a href="https://openplantpathology.org/" class="uri">https://openplantpathology.org/</a>) is an example of a welcoming environment that is already contributing to enhance the dialogue and break existing barriers.</p>
+<p>To value and recognize mutual efforts, researchers should consider investing time to learn some concepts and methods of the other discipline.
+Care is needed to ensure that the concepts are not misunderstood, methodologies are not oversimplified, and their effectiveness kept intact, whilst avoiding discipline-specific jargon.
+This requires all parties to be up-to-date with the relevant literature, which can also be achieved through open platforms or social media interactions.
+One should be able to expect a minimum level of common knowledge to start collaborating and working on problems that advance both fields of research.
+The level of detail of the required knowledge depends on the complexity of the research questions and may vary.
+Building such knowledge should not only depend on an individual’s self-learning ability but also by integrating remote sensing science into the curriculum of many natural and social science disciplines.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>With growing environmental concerns due to increased pesticide use, the concurrent rise of new pathogens endangering global food production, and the complexities involved in solving some of these issues at global scales, there is a clear need to assimilate remote sensing methods and innovative technology in plant pathology. We discussed potential solutions to realize Jackson’s proposed vision in the late 80s (Jackson 1986). To foster continued research (goal 1) we suggest tackling the complex challenges faced by remote sensing experts and plant pathologists by promoting an open and transparent culture of collaboration and communication, which will potentially lead to advances in stress-detection systems (goal 2) across temporal and spatial scales. In order to make the interdisciplinary research readily and widely (goal 3), we must build trust and cultivate a culture of transparency and openness as this is a fundamental principle of science. Employers and funding bodies can help to achieve this vision by creating a space for interdisciplinary specialists to operate towards reaching their full potential. Funding, intellectual freedom and suitable positions should be provided in order to allow specialists with different cultural, social and educational backgrounds to combine their ideas, to pave new ways toward protecting our natural landscapes and food systems.</p>
+<p>With growing environmental concerns due to increased pesticide use, the concurrent rise of new pathogens endangering global food production, and the complexities involved in solving some of these issues at global scales, there is a clear need to assimilate remote sensing methods and innovative technology in plant pathology.
+We discussed potential solutions to realize Jackson’s proposed vision in the late 80s (Jackson 1986).
+To foster continued research (goal 1) we suggest tackling the complex challenges faced by remote sensing experts and plant pathologists by promoting an open and transparent culture of collaboration and communication, which will potentially lead to advances in stress-detection systems (goal 2) across temporal and spatial scales.
+In order to make the interdisciplinary research readily and widely (goal 3), we must build trust and cultivate a culture of transparency and openness as this is a fundamental principle of science.
+Employers and funding bodies can help to achieve this vision by creating a space for interdisciplinary specialists to operate towards reaching their full potential.
+Funding, intellectual freedom and suitable positions should be provided in order to allow specialists with different cultural, social and educational backgrounds to combine their ideas, to pave new ways toward protecting our natural landscapes and food systems.</p>
 <h3 id="references">References</h3>
-<p>Brown RR, Deletic A, Wong THF (2015) Interdisciplinarity: how to catalyze collaboration. Nature 525:315–317</p>
-<p>Foley JA, Ramankutty N, Brauman KA, Cassidy ES, Gerber JS, Johnston M, Mueller ND, O’Connell C, Ray DK, West PC, Balzer C, Bennett EM, Carpenter SR, Hill J, Monfreda C, Polasky S, Rockström J, Sheehan J, Siebert S, Tilman D, Zaks DPM (2011) Solutions for a cultivated planet. Nature 478:337–342</p>
-<p>Gebbers R, Adamchuk VI (2010) Precision agriculture and food security. Science 327:828–831</p>
-<p>Grime JP (2010) Whole-plant responses to stress in natural and agricultural systems. In: Jones HG, Flowers TJ, Jones MB (eds) Plants under stress biochemistry, physiology and ecology and their application to plant improvement. Cambridge University Press, Cambridge, pp 31–46</p>
-<p>Harper J (1977) Population biology of plants, 1st edn. The Blackburn Press, Caldwell</p>
-<p>Jackson RD (1986) Remote sensing of biotic and abiotic plant stress. Annual Review of Phytopathology 24:265–287</p>
-<p>Ledford H (2015) How to solve the world’s biggest problems. Nature 525:308–311</p>
-<p>Mahlein A-K (2016) Plant disease detection by imaging sensors – parallels and specific demands for precision agriculture and plant phenotyping. Plant Disease 100:241–251</p>
-<p>Mahlein A-K, Kuska MT, Behmann J, Polder G, Walter A (2018) Hyperspectral sensors and imaging Technologies in Phytopathology: state of the art. Annual Review of Phytopathology 56:535–558</p>
-<p>National Science Foundation (2016) Convergence Research at NSF. Available at: <a href="https://www.nsf.gov/od/oia/convergence/index.jsp" class="uri">https://www.nsf.gov/od/oia/convergence/index.jsp</a>. Accessed on April 29, 2019</p>
-<p>Pethybridge SJ, Nelson SC (2015) Leaf doctor: a new portable application for quantifying plant disease severity. Plant Disease 99:1310–1316</p>
-<p>Van Noorden R (2015) Interdisciplinary research by the numbers. Nature 525:306–307</p>
-<p>Vogel G (2017) Where have all the insects gone? Science 356:576–579</p>
-<p>Willis KJ (2017) State of the World’s plants 2017. Royal Botanic Gardens, Kew 84:64–71</p>
-<p>Zarco-Tejada PJ, Camino C, Beck PSA, Calderon R, Hornero A, Hernández-Clemente R, Kattenborn T, Montes-Borrego M, Susca L, Morelli M, Gonzalez-Dugo V, North PRJ, Landa BB, Boscia D, Saponari M, Navas-Cortes JA (2018) Previsual symptoms of <em>Xylella fastidiosa</em> infection revealed in spectral plant-trait alterations. Nature Plants 4:432–439</p>
+<p>Brown RR, Deletic A, Wong THF (2015) Interdisciplinarity: how to catalyze collaboration.
+Nature 525:315–317</p>
+<p>Foley JA, Ramankutty N, Brauman KA, Cassidy ES, Gerber JS, Johnston M, Mueller ND, O’Connell C, Ray DK, West PC, Balzer C, Bennett EM, Carpenter SR, Hill J, Monfreda C, Polasky S, Rockström J, Sheehan J, Siebert S, Tilman D, Zaks DPM (2011) Solutions for a cultivated planet.
+Nature 478:337–342</p>
+<p>Gebbers R, Adamchuk VI (2010) Precision agriculture and food security.
+Science 327:828–831</p>
+<p>Grime JP (2010) Whole-plant responses to stress in natural and agricultural systems.
+In: Jones HG, Flowers TJ, Jones MB (eds) Plants under stress biochemistry, physiology and ecology and their application to plant improvement.
+Cambridge University Press, Cambridge, pp 31–46</p>
+<p>Harper J (1977) Population biology of plants, 1st edn.
+The Blackburn Press, Caldwell</p>
+<p>Jackson RD (1986) Remote sensing of biotic and abiotic plant stress.
+Annual Review of Phytopathology 24:265–287</p>
+<p>Ledford H (2015) How to solve the world’s biggest problems.
+Nature 525:308–311</p>
+<p>Mahlein A-K (2016) Plant disease detection by imaging sensors – parallels and specific demands for precision agriculture and plant phenotyping.
+Plant Disease 100:241–251</p>
+<p>Mahlein A-K, Kuska MT, Behmann J, Polder G, Walter A (2018) Hyperspectral sensors and imaging Technologies in Phytopathology: state of the art.
+Annual Review of Phytopathology 56:535–558</p>
+<p>National Science Foundation (2016) Convergence Research at NSF.
+Available at: <a href="https://www.nsf.gov/od/oia/convergence/index.jsp" class="uri">https://www.nsf.gov/od/oia/convergence/index.jsp</a>.
+Accessed on April 29, 2019</p>
+<p>Pethybridge SJ, Nelson SC (2015) Leaf doctor: a new portable application for quantifying plant disease severity.
+Plant Disease 99:1310–1316</p>
+<p>Van Noorden R (2015) Interdisciplinary research by the numbers.
+Nature 525:306–307</p>
+<p>Vogel G (2017) Where have all the insects gone?
+Science 356:576–579</p>
+<p>Willis KJ (2017) State of the World’s plants 2017.
+Royal Botanic Gardens, Kew 84:64–71</p>
+<p>Zarco-Tejada PJ, Camino C, Beck PSA, Calderon R, Hornero A, Hernández-Clemente R, Kattenborn T, Montes-Borrego M, Susca L, Morelli M, Gonzalez-Dugo V, North PRJ, Landa BB, Boscia D, Saponari M, Navas-Cortes JA (2018) Previsual symptoms of <em>Xylella fastidiosa</em> infection revealed in spectral plant-trait alterations.
+Nature Plants 4:432–439</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

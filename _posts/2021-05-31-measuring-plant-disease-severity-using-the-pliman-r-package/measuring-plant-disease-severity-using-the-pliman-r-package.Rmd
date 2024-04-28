@@ -16,9 +16,10 @@ categories:
   - R4PlantPath
 ---
 
-## 2022/02/06 Note
+## Note 2024-04-28
 
-This post has been modified from its original content to work with the latest version of {pliman} at the current time, v1.1.0. Some minor changes in the flow of the code were necessitated by changes in the output of functions in {pliman} and changes in the function names.
+This post has been modified from its original content to work with the latest version of {pliman} at the current time, v1.1.0.
+Some minor changes in the flow of the code were necessitated by changes in the output of functions in {pliman} and changes in the function names.
 The results should remain the same.
 
 ## Introduction
@@ -41,7 +42,8 @@ I will further compare the measures with ones determined using QUANT software as
 
 The most critical step is the initial step - this avoids garbage in, garbage out, when the user needs to correctly define the color palettes, which in {pliman} are separate images representing each of three classes named background (b), symptomatic (s) and healthy (h).
 
-These reference image palettes can be made simply by manually sampling small areas of the image and producing a composite image. Of course, the results may vary significantly depending on how these areas are chosen, and are subjective in nature due to the researchers experience.
+These reference image palettes can be made simply by manually sampling small areas of the image and producing a composite image.
+Of course, the results may vary significantly depending on how these areas are chosen, and are subjective in nature due to the researchers experience.
 The observation of the processed masks becomes important to create image palettes that are most representative of the respective class.
 
 Here, I cut and pasted several sections of images representative of each class from a few leaves into a Google slide.
@@ -50,7 +52,8 @@ These were named: sbr_b.png, sbr_h.png and sbr_s.png.
 
 ![](pliman1.png)
 
-Now that we have the image palettes, we can start by importing the image palettes into the environment for further analysis. Let's create an image object for each palette named h (healthy), s (symptoms) and b (background).
+Now that we have the image palettes, we can start by importing the image palettes into the environment for further analysis.
+Let's create an image object for each palette named h (healthy), s (symptoms) and b (background).
 
 ```{r message=FALSE, warning=FALSE}
 # install.packages("pliman")
@@ -92,7 +95,7 @@ measure_disease(
   img_healthy = h,
   img_symptoms = s,
   img_background = b,
-  show_image = TRUE
+  plot = TRUE
 )
 ```
 
@@ -105,7 +108,7 @@ To automate the process, {pliman} offers a batch processing approach.
 For such, instead of using `img` argument, one can use `img_pattern` and define the prefix of names of the images.
 In addition, we also need to define the folder where the original files are located.
 
-If the users wants to save the processed masks, the `save_image` argument needs to be set to TRUE and the directory where the images will be saved also should be informed.
+If the users wants to save the processed masks, the `save_image` argument needs to be set to `TRUE` and the directory where the images will be saved also should be informed.
 Check below how to process 10 images of soybean rust symptoms.
 The outcome is a `list` object with the measures of the percent healthy and percent symptomatic area for each leaf in the `severity` object.
 
@@ -118,7 +121,7 @@ pliman <- measure_disease(
   img_healthy = h,
   img_symptoms = s,
   img_background = b,
-  show_image = FALSE
+  plot = FALSE
 )
 severity <- pliman$severity
 severity

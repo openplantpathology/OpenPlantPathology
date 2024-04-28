@@ -18,7 +18,6 @@ categories:
   - Reproducible Research
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
@@ -48,10 +47,10 @@ r_audps <-
   }
 ```
 
-Both of the R packages that were previously discussed when showing how to calculate AUDPC, [_agricolae_](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [_epifitter_](https://cran.r-project.org/package=epifitter) [@Alves2021], provide easy to use functions to calculate AUDPS, `audps()` and `AUDPS()`, respectively.
-The following code uses an example from _agricolae's_ help showing how to calculate AUDPS in R using our own function, `r_audps()`.
+Both of the R packages that were previously discussed when showing how to calculate AUDPC, [*agricolae*](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [*epifitter*](https://cran.r-project.org/package=epifitter) [@Alves2021], provide easy to use functions to calculate AUDPS, `audps()` and `AUDPS()`, respectively.
+The following code uses an example from *agricolae's* help showing how to calculate AUDPS in R using our own function, `r_audps()`.
 
-```r
+``` r
 > dates <- c(14, 21, 28) # days
 > evaluation <- c(40, 80, 90)
 > r_audps(evaluation, dates)
@@ -94,7 +93,7 @@ function j_audps(evaluation, dates)
 end
 ```
 
-```julia
+``` julia
 julia> dates = [14, 21, 28] # days
 julia> evaulation = [40, 80, 90]
 julia> j_audps(evaulation, dates)
@@ -118,4 +117,4 @@ For a more detailed comparison of complete Julia and R packages that offer an ex
 
 ## Colophon
 
-This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@RCore2021] and Julia Version ```r JuliaCall::julia_eval("VERSION")``` [@Bezanson2017] using _JuliaCall_ Pull Request [#174](https://github.com/Non-Contradiction/JuliaCall/pull/174).
+This post was constructed using R Version `r paste(R.Version()[c("major", "minor")], collapse = ".")` [@RCore2021] and Julia Version `r JuliaCall::julia_eval("VERSION")` [@Bezanson2017] using *JuliaCall* Pull Request [#174](https://github.com/Non-Contradiction/JuliaCall/pull/174).

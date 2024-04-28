@@ -17,6 +17,7 @@ bibliography: references.bib
 ---
 
 ## Background
+
 Inevitably, pathogens spread throughout plant populations - some rapidly and more effectively when crops are intensively grown and man fails to control the situation.
 Even more so, when Mother Nature is very kind to the pathogen with the provision of the right meteorological conditions for epidemic onset, development and spread.
 
@@ -26,7 +27,8 @@ In fact, JE Vanderplank and other important scientists who followed a couple dec
 The subject is broad and can be complex, but relatively simple approaches may provide sufficient and important knowledge and tools for making inferences and testing hypotheses, depending on the question and scale of the application.
 When dealing with data collected at the population level (disease intensity in a group of individuals), the fit of simple two-parameter population dynamics models (*e.g.*, Gompertz, logistic, monomolecular) is an effective way to understand, compare and predict epidemics.
 
-These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation. The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics.
+These population growth mathematical models produce curves of different shapes, depending on their mathematical formulation.
+The equations provide a good fit to actual data collected in field populations of both monocyclic and polycyclic epidemics.
 The mathematics behind model fitting is straightforward and can be done using linear regression as far as the original data is transformed to linearize the pattern of the curve.
 Alternatively, non-linear approaches can also be used, but require computational resources.
 
@@ -41,7 +43,7 @@ I have been writing my teaching notes in R and improving (as well as shortening!
 In 2018, my MSc student, Kaique Alves, started to program in R after he joined my lab and attended my epidemiology class.
 I was providing the codes for the class and, at some point when explaining an exercise on model fitting.
 During that course, I challenged Kaique to implement functions for automating the process of model fitting, selection and plotting.
-One year after Kaique completed the course, {epifitter} was born and it took a few more months to be delivered on [GitHub](https://github.com/AlvesKS/{epifitter}) and finally on [CRAN](https://cran.r-project.org/web/packages/{epifitter}/index.html) in October 2020.
+One year after Kaique completed the course, {epifitter} was born and it took a few more months to be delivered on [GitHub](https://github.com/AlvesKS/%7Bepifitter%7D) and finally on [CRAN](https://cran.r-project.org/web/packages/%7Bepifitter%7D/index.html) in October 2020.
 
 ## How is it being used?
 
@@ -52,11 +54,12 @@ The models fitted to data are the "classic" population dynamics models (*e.g.*, 
 As of March the 3rd, the package has been downloaded 2,321 times (\~600 downloads/month).
 Recently, I used {epifitter} in my graduate (online inter-institutional) epidemiology class with great success.
 The few functions optimized to simplify model fitting and selection shorten the learning curve because students need to learn just a few R functions compared with my original codes.
-This is also valid for visualizing model results. Additionally, we have used the package in ongoing research in the lab that deals with disease progress data.
+This is also valid for visualizing model results.
+Additionally, we have used the package in ongoing research in the lab that deals with disease progress data.
 The chapter on model fitting of my "[R4 Plant Disease Epidemiology](https://emdelponte.github.io/epidemiology-R/fitting-models.html)" book (which is in the making) is based solely on {epifitter}.
 Finally, it has also been used in a vignette of the [epicrop](https://adamhsparks.github.io/epicrop/) package and other research projects associated with the use of the latter package to calculate area under the disease progress curve (AUDPC).
 
-### What is next? 
+### What is next?
 
 The plan is to keep maintaining and expanding by creating a few other functions.
 We are gathering information for developing functions for comparing epidemic parameters obtained from epidemic data coming from different experimental designs, such as randomized blocks design.
@@ -64,15 +67,15 @@ Furthermore, we plan to create functions to fit disease gradient models, add dat
 
 ## Where to get the package?
 
-{epifitter} can be downloaded from CRAN and its development version from GitHub. \
-CRAN: [<https://cran.r-project.org/web/packages/{epifitter}/index.html>](https://cran.r-project.org/web/packages/{epifitter}/index.html){.uri} \
-GH: [<https://github.com/AlvesKS/{epifitter}>](https://github.com/AlvesKS/{epifitter}){.uri}
+{epifitter} can be downloaded from CRAN and its development version from GitHub.\
+CRAN: [\<https://cran.r-project.org/web/packages/{epifitter}/index.html\>](https://cran.r-project.org/web/packages/%7Bepifitter%7D/index.html){.uri}\
+GH: [\<https://github.com/AlvesKS/{epifitter}\>](https://github.com/AlvesKS/%7Bepifitter%7D){.uri}
 
-Package documentation: <https://alvesks.github.io/{epifitter}/> \
-R4PDE: [<https://emdelponte.github.io/epidemiology-R/fitting-models.html>](https://emdelponte.github.io/epidemiology-R/fitting-models.html){.uri}
+Package documentation: <https://alvesks.github.io/%7Bepifitter%7D/>\
+R4PDE: [\<https://emdelponte.github.io/epidemiology-R/fitting-models.html\>](https://emdelponte.github.io/epidemiology-R/fitting-models.html){.uri}
 
 **Authors**\
-Kaique dos Santos Alves \
+Kaique dos Santos Alves\
 Emerson Medeiros Del Ponte
 
 ## Examples
@@ -116,7 +119,8 @@ epi1 <- fit_lin(time = pepper$t,
 
 ### Inspect model parameter estimates
 
-The models are ranked from highest to lowest CCC. The `epi1\$Stas_all` give the complete results.
+The models are ranked from highest to lowest CCC.
+The `epi1\$Stas_all` give the complete results.
 
 ```{r}
 epi1$Stats

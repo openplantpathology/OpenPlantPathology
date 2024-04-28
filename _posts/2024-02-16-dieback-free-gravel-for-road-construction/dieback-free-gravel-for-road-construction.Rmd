@@ -15,12 +15,12 @@ output:
 doi: "DOI 10.17605/OSF.IO/BHQW7"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
+
 Presenter: Prof. Elaine Davison\
 Institution: Curtin University, School of Molecular and Life Sciences (MLS)\
 Host: Centre for Crop and Disease Management, School of Molecular Life Sciences, Curtin University\
@@ -29,7 +29,8 @@ Links: [Video](https://youtu.be/oL7mcd1KM58)
 
 ## Biography
 
-Elaine has a B.Sc. and PhD in Botany from the University of Bristol.
+Elaine has a B.Sc.
+and PhD in Botany from the University of Bristol.
 She has worked as a mycologist and plant pathologist mainly in the public service in WA.
 Much of her work has been on root pathogens on native plants and horticultural crops.
 She has been an Adjunct Research Associate in the School of Molecular and Life Sciences at Curtin University since 1996.
@@ -38,12 +39,14 @@ She is a past president of the Australasian Plant Pathology Society.
 
 ## Abstract
 
-_Phytophthora cinnamomi_ (the dieback ‘fungus’^[OPP note: Prof. Davison did acknowledge that _Phytophthora_ is indeed #NotAFungus, but that this was how it was colloquially known in WA.]) is an introduced soilborne pathogen associated with the death of native plants.
-It is spread in infested soil, including gravel. Main Roads WA (MRWA) only uses dieback free gravel for road construction and repair; this is in short supply.
-One option is to treat gravel to kill _Phytophthora_.
-Field trials showed the soil fumigant metham sodium eliminates _Phytophthora_ from gravel.
-A scaled-up experiment using pine plug inoculum in a 1,500 m³ gravel stockpile treated with metham sodium, showed _Phytophthora_ survived in less than 6% of the inoculated plugs.
+*Phytophthora cinnamomi* (the dieback ‘fungus’[^1]) is an introduced soilborne pathogen associated with the death of native plants.
+It is spread in infested soil, including gravel.
+Main Roads WA (MRWA) only uses dieback free gravel for road construction and repair; this is in short supply.
+One option is to treat gravel to kill *Phytophthora*. Field trials showed the soil fumigant metham sodium eliminates *Phytophthora* from gravel.
+A scaled-up experiment using pine plug inoculum in a 1,500 m³ gravel stockpile treated with metham sodium, showed *Phytophthora* survived in less than 6% of the inoculated plugs.
 Modification of stockpile construction and better surface sealing can further reduce survival.
 MRWA (Main Roads Western Australia) source gravel from contractors and need a compliance test to show the gravel they purchase has been treated.
 As direct methods for showing gravel is dieback-free are unsuitable, an indirect method based on microbial diversity is being investigated.
 This assay, together with paper records, can be used in a robust compliance system.
+
+[^1]: OPP note: Prof. Davison did acknowledge that *Phytophthora* is indeed #NotAFungus, but that this was how it was colloquially known in WA.

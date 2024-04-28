@@ -1,7 +1,7 @@
 ---
 title: "Network meta-analysis in R"
 description: |
-  Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar. 
+  Meta-analysis (MA) has gained more popularity in Plant Pathology. Among the methods, network meta-analysis has been thoroughly presented to plant pathologists in a recent paper. In this post, I reproduce part of the analysis shown in that paper which was conducted using SAS. Although the results are not identical, they are very similar.
 author:
   - name: Emerson Del Ponte
     url: https://twitter.com/edelponte
@@ -294,7 +294,8 @@ Results of these three models and, of the one expanded to include the effect of 
 
 ### Useful links and other papers
 
--   Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!). You may want to check these repositories of code and data from work published in my lab using these methods: @barro2021, @barro2020, [Machado et al. (2017)](https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/)
+-   Research compendia: All the codes are made available and anyone should be able to reproduce it after downloading the research compendium and installing all the required packages (RStudio will tell you when you open the Rmd file!).
+    You may want to check these repositories of code and data from work published in my lab using these methods: @barro2021, @barro2020, [Machado et al. (2017)](https://emdelponte.github.io/paper-FHB-Brazil-meta-analysis/)
 
 -   Other papers using network models [@yellareddygari2019], [@edwardsmolina2018], [@paul2018], [@paul2008]
 

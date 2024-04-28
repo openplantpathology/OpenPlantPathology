@@ -18,11 +18,15 @@ bibliography: references.bib
 
 ## Background
 
-TraineR2 is an enhancement of TraineR ([see context here](https://openplantpathology.org/posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity/)), sharing the same goal - facilitating the training of plant pathologists in estimating plant disease severity. The primary distinction lies in TraineR2's utilization of actual photographs of disease symptoms, offering a more authentic representation compared to the computer-generated imagery used in TraineR. Additionally, the duration of the training session in TraineR2 is determined by the number of images available in the collection, presenting another noteworthy difference.
+TraineR2 is an enhancement of TraineR ([see context here](https://openplantpathology.org/posts/2023-05-22-plant-disease-trainer-an-app-to-improve-your-accuracy-when-estimating-disease-severity/)), sharing the same goal - facilitating the training of plant pathologists in estimating plant disease severity.
+The primary distinction lies in TraineR2's utilization of actual photographs of disease symptoms, offering a more authentic representation compared to the computer-generated imagery used in TraineR.
+Additionally, the duration of the training session in TraineR2 is determined by the number of images available in the collection, presenting another noteworthy difference.
 
 ## What is this app for?
 
-The objective of TraineR is to enhance the accuracy of prospective raters in estimating disease severity, based on the perceived percentage of the diseased area. At present, the app houses images of six plant diseases: Apple Glomerella leaf spot, citrus canker, eucalyptus Calonectria blight, gerbera Botrytis leaf blight, pecan scab, soybean rust, peanut leaf spot, and peach leaf rust. These images have been generously provided by colleagues in the plant pathology community and have been utilized in scientific papers for the validation of standard area diagram sets (SADs).
+The objective of TraineR is to enhance the accuracy of prospective raters in estimating disease severity, based on the perceived percentage of the diseased area.
+At present, the app houses images of six plant diseases: Apple Glomerella leaf spot, citrus canker, eucalyptus Calonectria blight, gerbera Botrytis leaf blight, pecan scab, soybean rust, peanut leaf spot, and peach leaf rust.
+These images have been generously provided by colleagues in the plant pathology community and have been utilized in scientific papers for the validation of standard area diagram sets (SADs).
 
 ## How was it developed?
 
@@ -30,7 +34,8 @@ The app was developed in R + Shiny and was made available at the shinyapps.io pa
 
 ## Future plans
 
-This project is open to contributions of images from the community. Anyone interested in contributing should reach out to the app developer.
+This project is open to contributions of images from the community.
+Anyone interested in contributing should reach out to the app developer.
 
 **Project website**: <https://delponte.shinyapps.io/traineR2/>\
 **Author and maintainer**: Emerson M. Del Ponte

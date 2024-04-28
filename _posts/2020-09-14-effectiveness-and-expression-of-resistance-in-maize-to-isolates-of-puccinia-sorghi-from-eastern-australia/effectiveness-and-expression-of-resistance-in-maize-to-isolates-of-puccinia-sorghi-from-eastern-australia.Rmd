@@ -18,16 +18,16 @@ doi: "10.17605/OSF.IO/FESVY"
 ### About
 
 Presenter: Ms. Aurelie Quade\
-Institution: University of Southern Queensland, Centre for Crop Health \
-Date: September 14, 2020 \
+Institution: University of Southern Queensland, Centre for Crop Health\
+Date: September 14, 2020\
 Host: Associate Professor Adam Sparks\
 Links: [Video](https://youtu.be/gYfPN4pNZjM) \| [Slides](https://doi.org/10.17605/OSF.IO/FESVY)
 
 ### Abstract
 
-The vulnerability of the Australian maize industry to _Puccina sorghi_ is currently unknown.
+The vulnerability of the Australian maize industry to *Puccina sorghi* is currently unknown.
 Maize is grown across a range of agro-ecological regions in Australia and the effectiveness and stability of deployed Rp genes has not been examined.
-Further to this, assessments of the _P. sorghi_ population to determine pathotype diversity have not been conducted for many years.
+Further to this, assessments of the *P. sorghi* population to determine pathotype diversity have not been conducted for many years.
 The current study was undertaken to assess phenotypic, genetic and physiological resistance to common rust and provide support for maize breeding programs in Australia.
 
 ![](seminar-aurelie.png)

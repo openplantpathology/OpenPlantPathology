@@ -5,7 +5,7 @@ description: |
 
 author:
   - name: Adam Sparks
-    url: https://twitter.com/adamhsparks
+    url: https://adamhsparks.netlify.app/
 date: 02-22-2021
 output:
   distill::distill_article:
@@ -18,10 +18,10 @@ doi: "10.17605/OSF.IO/TRFC2"
 
 ### About
 
-Presenter: Dr. Anthony Young \
-Institution: The University of Queensland, School of Agriculture and Food Sciences \
-Date: 23 Feb 2021 \
-Host: USQ CCH \
+Presenter: Dr. Anthony Young\
+Institution: The University of Queensland, School of Agriculture and Food Sciences\
+Date: 23 Feb 2021\
+Host: USQ CCH\
 Links: [Video](https://youtu.be/mxSiEFcgLak)
 
 ### Abstract
@@ -30,5 +30,4 @@ Links: [Video](https://youtu.be/mxSiEFcgLak)
 We come to think of diseases as always being associated with a pathogen, and we almost invariably consider the pathogen as the 'cause' of the disease.
 Of course, this contravenes the central tenet of the disease triangle: ignoring the role of the environment limits our understanding of the disease presentation.
 Furthermore, given a climate that is changing in front of our eyes, there is the strong prospect that the role of the pathogen will likewise change through the prism of the disease triangle.
-In this presentation, Dr. Young will explore the epidemiology of rubber (_Hevea brasiliensis_) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term 'disease.'
-During this presentation he will explore the case against the foliar pathogen Pestalotiopsis in relation to rubber leaf drop and discuss more generally the principles of plant pathology.
+In this presentation, Dr. Young will explore the epidemiology of rubber (*Hevea brasiliensis*) leaf drop in Sumatra and Malaysia, presenting field work undertaken in 2019 and with reference to real-world examples of the role of climate in what we term 'disease.' During this presentation he will explore the case against the foliar pathogen Pestalotiopsis in relation to rubber leaf drop and discuss more generally the principles of plant pathology.

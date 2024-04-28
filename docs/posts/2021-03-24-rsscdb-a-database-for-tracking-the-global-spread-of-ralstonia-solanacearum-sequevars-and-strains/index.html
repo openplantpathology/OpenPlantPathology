@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: RSSCdb, a database for tracking the global spread of Ralstonia solanacearum sequevars and strains </title>
@@ -127,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["rssc.png","rssc2.png","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/anchor-4.2.2/anchor.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/bowser-1.9.3/bowser.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/distill-2.2.21/template.v2.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/header-attrs-2.7/header-attrs.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/jquery-1.11.3/jquery.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/popper-2.6.0/popper.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/tippy-6.2.7/tippy-bundle.umd.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/tippy-6.2.7/tippy-light-border.css","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/tippy-6.2.7/tippy.css","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/tippy-6.2.7/tippy.umd.min.js","rsscdb-a-database-for-tracking-the-global-spread-of-ralstonia-solanacearum-sequevars-and-strains_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["rssc.png","rssc2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2426,8 +2429,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2493,6 +2496,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>RSSCdb, a database for tracking the global spread of Ralstonia solanacearum sequevars and strains</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Databases" class="dt-tag">Databases</a>
@@ -2509,20 +2513,32 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="background">Background</h2>
-<p>Bacterial wilt pathogens in the <em>Ralstonia solanacearum</em> species complex (RSSC) are destructive pathogens, especially in tropical and sub-tropical climates with year-round precipitation. Most strains in this species complex are soil-borne pathogens that cause persistant infestations once introduced. Tomato, potato, tobacco, banana, ginger, and peanut are crops that are well-recognized hosts of <em>Ralstonia</em>. In 2005, Mark Fegan and Philippe Prior formalized a DNA-based taxonomy for the RSSC called a “phylotype-sequevar” system . Since their publication, hundreds of plant pathologists around the world have classified the population diversity of the RSSC on specific crops or in geographic regions.</p>
+<p>Bacterial wilt pathogens in the <em>Ralstonia solanacearum</em> species complex (RSSC) are destructive pathogens, especially in tropical and sub-tropical climates with year-round precipitation.
+Most strains in this species complex are soil-borne pathogens that cause persistant infestations once introduced.
+Tomato, potato, tobacco, banana, ginger, and peanut are crops that are well-recognized hosts of <em>Ralstonia</em>.
+In 2005, Mark Fegan and Philippe Prior formalized a DNA-based taxonomy for the RSSC called a “phylotype-sequevar” system .
+Since their publication, hundreds of plant pathologists around the world have classified the population diversity of the RSSC on specific crops or in geographic regions.</p>
 <h2 id="what-is-the-database-for">What is the database for?</h2>
-<p>RSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar). This strain metadata is available in the main text or supplemental material of the publication. The project was developed to provide UC Davis undergraduate researchers with a remote research experience. The data will be supplemental material for a systematic review article to be submitted for publication after data collection is finalized (Lowe-Power et al. unpublished). In the interim, the data is released on BioRxiv and GitHub after UC Davis students complete their thesis (<a href="https://www.biorxiv.org/content/10.1101/2020.07.13.189936v1" class="uri">https://www.biorxiv.org/content/10.1101/2020.07.13.189936v1</a>).</p>
+<p>RSSCdb is a database of characterized strains of Ralstonia solanacearum species complex strains whose data have extracted from the peer-reviewed articles that include the geographic, host of origin, year, and phylogenetic classification (phylotype/sequevar).
+This strain metadata is available in the main text or supplemental material of the publication.
+The project was developed to provide UC Davis undergraduate researchers with a remote research experience.
+The data will be supplemental material for a systematic review article to be submitted for publication after data collection is finalized (Lowe-Power et al. unpublished).
+In the interim, the data is released on BioRxiv and GitHub after UC Davis students complete their thesis (<a href="https://www.biorxiv.org/content/10.1101/2020.07.13.189936v1" class="uri">https://www.biorxiv.org/content/10.1101/2020.07.13.189936v1</a>).</p>
 <h2 id="how-is-it-developed">How is it developed?</h2>
 <p>The database is organized in an Excel spreadsheet, a format that facilitates regular curation of data entry.</p>
 <h2 id="whats-next">What’s next?</h2>
 <p>Emerson M. Del Ponte will advise a student on creating an interactive dashboard to view the data, similar to his FGSCdb for tracking species and chemotypes of the Fusarium graminearum species complex: <a href="https://fgsc.netlify.app/" class="uri">https://fgsc.netlify.app/</a></p>
-<p>We would like to extend the utility of the Ralstonia diversity project by allowing other researches to contribute raw data to populate the global map. Get in touch (<a href="mailto:tlowepower@ucdavis.edu" class="email">tlowepower@ucdavis.edu</a>) to receive instructions on how to submit your data.</p>
+<p>We would like to extend the utility of the Ralstonia diversity project by allowing other researches to contribute raw data to populate the global map.
+Get in touch (<a href="mailto:tlowepower@ucdavis.edu" class="email">tlowepower@ucdavis.edu</a>) to receive instructions on how to submit your data.</p>
 <figure>
-<img src="rssc2.png" alt="Example of the global distribution map for Ralstonia pseudosolanacearum" /><figcaption aria-hidden="true">Example of the global distribution map for Ralstonia pseudosolanacearum</figcaption>
+<img src="rssc2.png" alt="Example of the global distribution map for Ralstonia pseudosolanacearum" />
+<figcaption aria-hidden="true">Example of the global distribution map for Ralstonia pseudosolanacearum</figcaption>
 </figure>
 <p>Data source: <a href="https://github.com/lowepowerlab/Ralstonia_Global_Diversity" class="uri">https://github.com/lowepowerlab/Ralstonia_Global_Diversity</a></p>
 <p>Author and maintainer: Tiffany Lowe-Power and Emerson M. Del Ponte</p>
-<p>Reference: Fegan, M., &amp; Prior, P. (2005). How complex is the Ralstonia solanacearum species complex. <em>Bacterial wilt disease and the Ralstonia solanacearum species complex</em>, <em>1</em>, 449-61.</p>
+<p>Reference: Fegan, M., &amp; Prior, P. (2005).
+How complex is the Ralstonia solanacearum species complex.
+<em>Bacterial wilt disease and the Ralstonia solanacearum species complex</em>, <em>1</em>, 449-61.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -156,7 +157,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","phytopathology.csl","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/anchor-4.2.2/anchor.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/bowser-1.9.3/bowser.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/distill-2.2.21/template.v2.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/figure-html5/plot_tleaf-1.png","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/figure-html5/unnamed-chunk-9-1.png","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/header-attrs-2.11/header-attrs.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/header-attrs-2.13/header-attrs.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/jquery-3.6.0/jquery-3.6.0.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/jquery-3.6.0/jquery-3.6.0.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/jquery-3.6.0/jquery-3.6.0.min.map","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/popper-2.6.0/popper.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/tippy-6.2.7/tippy-bundle.umd.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/tippy-6.2.7/tippy-light-border.css","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/tippy-6.2.7/tippy.css","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/tippy-6.2.7/tippy.umd.min.js","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/webcomponents-2.0.0/webcomponents.js","POWERlogo.png","tealeaveslogo.png"]}
+  {"type":"character","attributes":{},"value":["bibliography.bib","phytopathology.csl","powerful-tea-using-nasapower-and-tealeaves-to-obtain-leaf-temperatures_files/figure-html5/plot_tleaf-1.png","POWERlogo.png","tealeaveslogo.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2455,7 +2456,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2522,6 +2523,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Estimating leaf temperatures for spatial epidemiology</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:R4PlantPath" class="dt-tag">R4PlantPath</a>
@@ -2636,21 +2638,21 @@ Additionally, I have requested hourly data for the first week in February 2021 w
  ALLSKY_SRF_ALB        CERES SYN1deg All Sky Surface Albedo (dimensionless)  
  
 # A tibble: 192 × 13
-     LON   LAT  YEAR    MO    DY    HR  RH2M   T2M  WS2M ALLSKY_SFC_…¹
-   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt;
- 1  151. -26.8  2021     2     1    10  39.8  30.9  3.72          2.63
- 2  151. -26.8  2021     2     1    11  34.1  32.6  3.51          3.11
- 3  151. -26.8  2021     2     1    12  30.5  33.8  3.37          3.06
- 4  151. -26.8  2021     2     1    13  28.3  34.5  3.39          2.94
- 5  151. -26.8  2021     2     1    14  27.3  34.6  3.6           2.54
- 6  151. -26.8  2021     2     1    15  27.7  33.8  3.9           2.01
- 7  151. -26.8  2021     2     1    16  29.1  32.6  4.13          1.3 
- 8  151. -26.8  2021     2     1    17  31.9  30.9  4.08          0.74
- 9  151. -26.8  2021     2     1    18  38.5  28.3  3.38          0.14
-10  151. -26.8  2021     2     1    19  43    26.3  4.13          0   
-# … with 182 more rows, 3 more variables: ALLSKY_SFC_LW_DWN &lt;dbl&gt;,
-#   PS &lt;dbl&gt;, ALLSKY_SRF_ALB &lt;dbl&gt;, and abbreviated variable name
-#   ¹​ALLSKY_SFC_SW_DWN</code></pre>
+     LON   LAT  YEAR    MO    DY    HR  RH2M   T2M  WS2M
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1  151. -26.8  2021     2     1    10  39.8  30.9  3.72
+ 2  151. -26.8  2021     2     1    11  34.1  32.6  3.51
+ 3  151. -26.8  2021     2     1    12  30.5  33.8  3.37
+ 4  151. -26.8  2021     2     1    13  28.3  34.5  3.39
+ 5  151. -26.8  2021     2     1    14  27.3  34.6  3.6 
+ 6  151. -26.8  2021     2     1    15  27.7  33.8  3.9 
+ 7  151. -26.8  2021     2     1    16  29.1  32.6  4.13
+ 8  151. -26.8  2021     2     1    17  31.9  30.9  4.08
+ 9  151. -26.8  2021     2     1    18  38.5  28.3  3.38
+10  151. -26.8  2021     2     1    19  43    26.3  4.13
+# ℹ 182 more rows
+# ℹ 4 more variables: ALLSKY_SFC_SW_DWN &lt;dbl&gt;,
+#   ALLSKY_SFC_LW_DWN &lt;dbl&gt;, PS &lt;dbl&gt;, ALLSKY_SRF_ALB &lt;dbl&gt;</code></pre>
 </div>
 <h2 id="estimate-leaf-temperatures">Estimate leaf temperatures</h2>
 <p>Next, I will characterise the environmental parameters using the <code>np</code> data at a single time point into the <code>tleaf()</code>.</p>
@@ -2658,15 +2660,15 @@ Additionally, I have requested hourly data for the first week in February 2021 w
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>env_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_enviropar</a></span><span class='op'>(</span></span>
 <span>  replace <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
-<span>    P <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,             <span class='co'># Air pressure</span></span>
-<span>    r <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>,        <span class='co'># Albedo </span></span>
-<span>    RH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span>,             <span class='co'># Relative Humidity (as a proportion)</span></span>
-<span>    S_sw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,</span>
+<span>    P <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,             <span class='co'># Air pressure</span></span>
+<span>    r <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>,        <span class='co'># Albedo </span></span>
+<span>    RH <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span>,             <span class='co'># Relative Humidity (as a proportion)</span></span>
+<span>    S_sw <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,</span>
 <span>                     <span class='st'>"W/m^2"</span><span class='op'>)</span>,                  <span class='co'># Short wave radiation</span></span>
-<span>    T_air <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span></span>
-<span>      <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>T2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
+<span>    T_air <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span></span>
+<span>      <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>T2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
 <span>      <span class='st'>"K"</span><span class='op'>)</span>,                                     <span class='co'># Air temperature, converted from Celsius to Kelvin</span></span>
-<span>    wind <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span>         <span class='co'># Wind speed</span></span>
+<span>    wind <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span>         <span class='co'># Wind speed</span></span>
 <span>    <span class='op'>)</span></span>
 <span><span class='op'>)</span></span></code></pre>
 </div>
@@ -2687,7 +2689,7 @@ Additionally, I have requested hourly data for the first week in February 2021 w
 <p>Because the outputs are specified using the {units} package I can easily convert from Kelvin back to degrees Celsius using the <code>set_units()</code> function again.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>Tm_leaf</span><span class='op'>$</span><span class='va'>T_leaf</span>, <span class='st'>"DegC"</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>Tm_leaf</span><span class='op'>$</span><span class='va'>T_leaf</span>, <span class='st'>"DegC"</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>26.35956 [°C]</code></pre>
 </div>
@@ -2699,13 +2701,13 @@ This is described further in the {tealeaves} vignette.</p>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>env_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_enviropar</a></span><span class='op'>(</span></span>
 <span>  replace <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
-<span>    P <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,</span>
-<span>    r <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>,</span>
-<span>    RH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>/</span> <span class='fl'>100</span><span class='op'>)</span>, <span class='co'># needs to be specified as a proportion</span></span>
-<span>    S_sw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>,</span>
-<span>    T_air <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>T2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
+<span>    P <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>PS</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,</span>
+<span>    r <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SRF_ALB</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>,</span>
+<span>    RH <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>RH2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>/</span> <span class='fl'>100</span><span class='op'>)</span>, <span class='co'># needs to be specified as a proportion</span></span>
+<span>    S_sw <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>ALLSKY_SFC_SW_DWN</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>,</span>
+<span>    T_air <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>T2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
 <span>                      <span class='st'>"K"</span><span class='op'>)</span>,             <span class='co'># convert from degrees to Kelvin</span></span>
-<span>    wind <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span></span>
+<span>    wind <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>np</span><span class='op'>$</span><span class='va'>WS2M</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span></span>
 <span>  <span class='op'>)</span></span>
 <span><span class='op'>)</span></span>
 <span></span>
@@ -2749,13 +2751,13 @@ Here I have substituted it with the mean.</p>
 <span>  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>np</span>, <span class='fl'>1</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>)</span> <span class='op'>{</span></span>
 <span>    <span class='va'>env_par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/tealeaves/man/make_parameters.html'>make_enviropar</a></span><span class='op'>(</span></span>
 <span>      replace <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
-<span>        P <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"PS"</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,</span>
-<span>        r <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"ALLSKY_SRF_ALB"</span><span class='op'>]</span><span class='op'>)</span>,</span>
-<span>        RH <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"RH2M"</span><span class='op'>]</span> <span class='op'>/</span> <span class='fl'>100</span><span class='op'>)</span>, <span class='co'># needs to be specified as a proportion</span></span>
-<span>        S_sw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"ALLSKY_SFC_SW_DWN"</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>,</span>
-<span>        T_air <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"T2M"</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
+<span>        P <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"PS"</span><span class='op'>]</span>, <span class='st'>"kPa"</span><span class='op'>)</span>,</span>
+<span>        r <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"ALLSKY_SRF_ALB"</span><span class='op'>]</span><span class='op'>)</span>,</span>
+<span>        RH <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"RH2M"</span><span class='op'>]</span> <span class='op'>/</span> <span class='fl'>100</span><span class='op'>)</span>, <span class='co'># needs to be specified as a proportion</span></span>
+<span>        S_sw <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"ALLSKY_SFC_SW_DWN"</span><span class='op'>]</span>, <span class='st'>"W/m^2"</span><span class='op'>)</span>,</span>
+<span>        T_air <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"T2M"</span><span class='op'>]</span>, <span class='st'>"DegC"</span><span class='op'>)</span>,</span>
 <span>                          <span class='st'>"K"</span><span class='op'>)</span>,               <span class='co'># convert from degrees to Kelvin</span></span>
-<span>        wind <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"WS2M"</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span></span>
+<span>        wind <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>nasa_p</span><span class='op'>[</span><span class='st'>"WS2M"</span><span class='op'>]</span>, <span class='st'>"m/s"</span><span class='op'>)</span></span>
 <span>      <span class='op'>)</span></span>
 <span>    <span class='op'>)</span></span>
 <span>    </span>
@@ -2799,7 +2801,7 @@ Also, I will convert temperature in Kelvin to degrees Celsius.</p>
 <span>                    <span class='va'>np</span><span class='op'>$</span><span class='va'>HR</span>, <span class='st'>":00:00"</span><span class='op'>)</span>,</span>
 <span>             tz <span class='op'>=</span> <span class='st'>"Australia/Brisbane"</span><span class='op'>)</span></span>
 <span><span class='va'>Leaf_temperatures</span><span class='op'>$</span><span class='va'>T_leaf</span> <span class='op'>&lt;-</span></span>
-<span>  <span class='fu'><a href='https://rdrr.io/pkg/units/man/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>Leaf_temperatures</span><span class='op'>$</span><span class='va'>T_leaf</span>, <span class='st'>"DegC"</span><span class='op'>)</span></span></code></pre>
+<span>  <span class='fu'><a href='https://r-quantities.github.io/units/reference/units.html'>set_units</a></span><span class='op'>(</span><span class='va'>Leaf_temperatures</span><span class='op'>$</span><span class='va'>T_leaf</span>, <span class='st'>"DegC"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <h2 id="plotting-leaf-temperature">Plotting leaf temperature</h2>
@@ -2811,7 +2813,7 @@ Also, I will convert temperature in Kelvin to degrees Celsius.</p>
 <span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>Leaf_temperatures</span>,</span>
 <span>       <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>times</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>air_temp</span>, colour <span class='op'>=</span> <span class='st'>"darkblue"</span><span class='op'>)</span>, size <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/units/man/drop_units.html'>drop_units</a></span><span class='op'>(</span><span class='va'>T_leaf</span><span class='op'>)</span>,</span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='fu'><a href='https://r-quantities.github.io/units/reference/drop_units.html'>drop_units</a></span><span class='op'>(</span><span class='va'>T_leaf</span><span class='op'>)</span>,</span>
 <span>                colour <span class='op'>=</span> <span class='st'>"forestgreen"</span><span class='op'>)</span>, size <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Temperature (Degrees Celcius)"</span>,</span>
 <span>       color <span class='op'>=</span> <span class='st'>"Estimates"</span><span class='op'>)</span> <span class='op'>+</span></span>
@@ -2831,7 +2833,7 @@ However, further parameterisation would be necessary prior to any in-depth analy
 Leaf parameters, such as leaf size, reflectance, absorbance, stomatal conductance and ratio should be carefully considered in addition to vertical environmental gradients across the height of the plant.
 Shading in the canopy is known to effect pathogen infection, colonisation and sporulation in addition to leaf wetness.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="list">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-Francl_2001" class="csl-entry" role="listitem">
 Francl, L. J. 2001. <a href="https://doi.org/10.1094/phi-t-2001-0517-01">The disease triangle: A plant pathological paradigm revisited</a>. The Plant Health Instructor.
 </div>

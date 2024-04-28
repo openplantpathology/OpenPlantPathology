@@ -15,12 +15,12 @@ output:
 doi: "10.17605/OSF.IO/DKJS8"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
+
 Presenter: Dr. Kylie Ireland\
 Institution: Department of Primary Industries and Regional Development (DPIRD), Perth, WA, Australia\
 Host: University of Southern Queensland Centre for Crop Health\
@@ -29,16 +29,17 @@ Links: [Video](https://youtu.be/fiktST8454w)
 
 ## Biography
 
-Kylie Ireland is plant pathologist in the DPIRD Plant Biosecurity Team, subject matter expert on the PSHB response, and an adjunct research fellow at Curtin University. She loves plant biosecurity, the science-management/policy nexus and agricultural extension.
+Kylie Ireland is plant pathologist in the DPIRD Plant Biosecurity Team, subject matter expert on the PSHB response, and an adjunct research fellow at Curtin University.
+She loves plant biosecurity, the science-management/policy nexus and agricultural extension.
 With a PhD in plant biosecurity from Murdoch University, Kylie has worked on a diverse range of projects, including pest risk modelling, Myrtle rust ecology, plant pathology capacity building in Laos, plant pest impacts, weed biocontrol and fungicide resistance extension.
 Kylie is a director of the Australian Plant Biosecurity Science Foundation and leads the editorial team of the APPS Newsletter.
 
 ## Abstract
 
-Polyphagous shot-hole borer (PSHB; _Euwallacea fornicatus_) was detected in August 2021 by the Department of Primary Industries and Regional Development (DPIRD) in the Perth metropolitan area of Western Australia (WA).
+Polyphagous shot-hole borer (PSHB; *Euwallacea fornicatus*) was detected in August 2021 by the Department of Primary Industries and Regional Development (DPIRD) in the Perth metropolitan area of Western Australia (WA).
 PSHB is an agricultural and environmental pest, with a wide host range (more than 400 amenity, fruit and nut tree species).
 The beetle bores into living mature trees and can cause limb dieback and tree death.
-PSHB lives in close association with a symbiotic fungus, an ambrosia clade _Fusarium_ species (_Fusarium sp_. [AF-18] in WA), that it farms as a food source.
+PSHB lives in close association with a symbiotic fungus, an ambrosia clade *Fusarium* species (*Fusarium sp*. [AF-18] in WA), that it farms as a food source.
 A Quarantine Area has been established to prevent spread of the pest and DPIRD is actively managing infested trees.
 The response has impacted residents, local governments, green-waste operators and numerous plant and wood-based industries.
 This presentation will summarise PSHB biology and DPIRD response activities and explore some of the challenges and opportunities present at the urban forest- residential interface.

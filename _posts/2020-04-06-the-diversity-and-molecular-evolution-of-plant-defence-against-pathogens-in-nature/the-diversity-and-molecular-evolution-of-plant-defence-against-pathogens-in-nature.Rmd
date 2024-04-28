@@ -26,7 +26,8 @@ Links: [Video](https://youtu.be/xaUz_68jwHk) \| [Slides](https://doi.org/10.1760
 ### Abstract
 
 Plant pathogen defence responses are often studied in model systems or in agricultural settings.
-However, in nature plants also encounter a large variety of pathogens. Interestingly, in natural systems this seldom leads to epidemics.
+However, in nature plants also encounter a large variety of pathogens.
+Interestingly, in natural systems this seldom leads to epidemics.
 One possible reason for this is the high amount of genetic variation that can be found in natural plant populations.
 In my lab we combine population genetics, genomics and molecular biology to unravel such variation and understand the evolutionary pressures that shape it.
 We study the genetic diversity of pathogen defence associated genes in a wild tomato species, *Solanum chilense* as well as its natural pathogens.

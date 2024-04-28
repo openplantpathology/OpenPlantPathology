@@ -14,16 +14,15 @@ categories:
 doi: "10.17605/OSF.IO/XGTQV"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
 
-Presenter: Prof. Elizabeth Aitken \
-Institution: The University of Queensland, School of Agriculture and Food Sciences \
-Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Presenter: Prof. Elizabeth Aitken\
+Institution: The University of Queensland, School of Agriculture and Food Sciences\
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps)\
 Links: [Video](https://youtu.be/kbRoZublp1M)
 
 ## Biography

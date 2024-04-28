@@ -13,17 +13,16 @@ output:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
 
-Presenter: Dr. Ido Bar \
-Institution: Centre for Planetary Health and Food Security, Griffith University \
-Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
-Date: February 3, 2022 \
+Presenter: Dr. Ido Bar\
+Institution: Centre for Planetary Health and Food Security, Griffith University\
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps)\
+Date: February 3, 2022\
 Links: [Video](https://youtu.be/gD84BPDDEZM)
 
 ## Biography
@@ -32,10 +31,10 @@ Ido obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture
 In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna.
 After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security.
 His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches.
-He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security. 
+He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.
 
 ## Abstract
 
-_Ascochyta rabiei_, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type.
+*Ascochyta rabiei*, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type.
 This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.
-The identified patterns suggest that _A. rabiei_ displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.
+The identified patterns suggest that *A. rabiei* displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.

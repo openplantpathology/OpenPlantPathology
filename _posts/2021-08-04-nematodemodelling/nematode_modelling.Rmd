@@ -24,7 +24,6 @@ csl: phytopathology.csl
 draft: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = TRUE,
@@ -39,8 +38,7 @@ knitr::opts_chunk$set(
 ## Objectives
 
 There are two types of models described in the paper, the first model is a linear model used to describe the unplanted control and two quadratic models fit Gatcher (Susceptible) and GS50a (Moderately Resistant) wheat cultivars.
-For a more detailed discussion on fitting plant disease models in R, please see the
-"[Linear Regression](http://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/LinearRegression.aspx)" module in the "[Ecology and Epidemiology in R](https://www.apsnet.org/edcenter/disimpactmngmnt/topc/EcologyAndEpidemiologyInR/Pages/default.aspx)" documents available in the American Phytopathological Society's (APS) Education Center.
+For a more detailed discussion on fitting plant disease models in R, please see the "[Linear Regression](http://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/LinearRegression.aspx)" module in the "[Ecology and Epidemiology in R](https://www.apsnet.org/edcenter/disimpactmngmnt/topc/EcologyAndEpidemiologyInR/Pages/default.aspx)" documents available in the American Phytopathological Society's (APS) Education Center.
 For an even more in-depth discussion on linear models in R, how to fit and how to interpret the diagnostics that R provides the reader should refer to Faraway [-@FARAWAY2002].
 
 This post will illustrate how to fit the original linear and quadratic models using the original data in R [@R2017].
@@ -49,8 +47,7 @@ This post will illustrate how to fit the original linear and quadratic models us
 
 Using the {tidyverse}, [-@TIDYVERSE2017] package simplifies the libraries used in this work.
 It is a collection of packages designed to work together for data science, <https://www.tidyverse.org/>.
-The {tidyverse} includes, {readr} [-@READR2017], used to import the data; {tidyr}
-[-@TIDYR2018], used to format the data; {dplyr} [-@DPLYR2017], used to subset the data; and {ggplot2} [-@GGPLOT22009], used for visualising the data and model fits.
+The {tidyverse} includes, {readr} [-@READR2017], used to import the data; {tidyr} [-@TIDYR2018], used to format the data; {dplyr} [-@DPLYR2017], used to subset the data; and {ggplot2} [-@GGPLOT22009], used for visualising the data and model fits.
 {viridis} [-@VIRIDIS2018] is a selection of colour pallets that are widely accessible for people with colour-blindness and printing in black and white.
 
 The following code chunk checks first to see if you have{tidyverse} and {viridis} installed, if not, it will automatically install them and then load them.
@@ -72,7 +69,7 @@ if (!require("viridis")) {
 ## Data Wrangling
 
 The data are located in the `data` sub-folder.
-Import the data using `read_csv()` function from {readr}  and view them.
+Import the data using `read_csv()` function from {readr} and view them.
 
 ```{r data_import, echo=TRUE, message=FALSE}
 nema <- read_csv("data/Nematode_Data.csv")
@@ -222,8 +219,7 @@ ggplot(nema_long,
 
 The paper uses a linear model for the unplanted control.
 Here we will write a function to use in modelling the unplanted population data.
-I have wrapped the model in a function which makes it pipe-able, `%>%` and has other advantages
-when it comes to fitting the same model to several sets of data.
+I have wrapped the model in a function which makes it pipe-able, `%>%` and has other advantages when it comes to fitting the same model to several sets of data.
 
 In the linear equation for the Unplanted control treatment, the rate of population increase can be expressed as:
 
@@ -269,7 +265,7 @@ summary(unplanted_model)
 ```
 
 From the original paper, the $R^2$ value of the Unplanted linear model was 0.7, we can see here that agrees: `r {round(summary(unplanted_model)$r.squared, 2)}`.
-In the original paper, $P$ < 0.001, R reports $p-value:$ `r {summary(unplanted_model)$coefficients[2, 4]}`, which also agrees.
+In the original paper, $P$ \< 0.001, R reports $p-value:$ `r {summary(unplanted_model)$coefficients[2, 4]}`, which also agrees.
 
 #### Visualising the Model Fit to the Data
 
@@ -337,7 +333,7 @@ summary(s_model)
 ```
 
 From the original paper, the $R^2$ value of Gatcher's quadratic model was 0.80, we can see here that agrees: `r {round(summary(s_model)$r.squared, 2)}`.
-In the original paper, $P$ < 0.001, R reports $p-value:$ `r {summary(s_model)$coefficients[2, 4]}`, which also agrees.
+In the original paper, $P$ \< 0.001, R reports $p-value:$ `r {summary(s_model)$coefficients[2, 4]}`, which also agrees.
 
 ##### Visualise Susceptible Variety Model
 
@@ -380,7 +376,7 @@ nema_long %>%
 
 #### Moderately Resistant Cultiver
 
-GS50a, moderately resistant to _P. thornei_, also fits a quadratic model but the coefficients are slightly different due to different responses to the variety and temperature.
+GS50a, moderately resistant to *P. thornei*, also fits a quadratic model but the coefficients are slightly different due to different responses to the variety and temperature.
 
 ```{r moderately_resistant_model, echo=TRUE}
 mr_model <- nema_long %>%
@@ -394,7 +390,7 @@ summary(mr_model)
 ```
 
 From the original paper, the $R^2$ value of GS50a's quadratic model was 0.82, we can see here that agrees: `r {round(summary(mr_model)$r.squared, 2)}`.
-In the original paper, $P$ < 0.001, R reports $p-value:$ `r {summary(mr_model)$coefficients[2, 4]}`, which also agrees.
+In the original paper, $P$ \< 0.001, R reports $p-value:$ `r {summary(mr_model)$coefficients[2, 4]}`, which also agrees.
 
 ##### Visualising the Model Fit to the Data
 
@@ -450,8 +446,7 @@ Gatcher and GS50a have similar phenologies, but differ in resistance to root les
 The original paper goes on to test the effect of sowing date based on degree days.
 [@THOMPSON2015] reported a 61% increase in yield on average from sowing the susceptible, intolerant cultivar Gatcher at the end of May than sowing it in the third week of June.
 By June the soil temperatures and nematode populations were both greater, leading to lower wheat yield.
-The effects were less pronounced in the moderately resistant cultivar, GS50a, but were similar
-with a reduction in nematode population densities occurring due to earlier planting.
+The effects were less pronounced in the moderately resistant cultivar, GS50a, but were similar with a reduction in nematode population densities occurring due to earlier planting.
 
 The models illustrated here for Gatcher and GS50a were able to accurately reflect the changes in nematode population as a result of degree days, which affected the nematodes' ability to damage the crop and reduce yield [@THOMPSON2015].
 
@@ -462,9 +457,7 @@ The models illustrated here for Gatcher and GS50a were able to accurately reflec
 In the paper the the natural log, `ln() +1`, of the nematode population counts were used to fit the models.
 Here we will explore a bit further why this was necessary.
 
-_A note about using `log() + 1` rather than just `log()`._
-_This is necessary with these data to avoid taking `log(0)`._
-_Try it in R to see what happens if you are not familiar._
+*A note about using `log() + 1` rather than just `log()`.* *This is necessary with these data to avoid taking `log(0)`.* *Try it in R to see what happens if you are not familiar.*
 
 First, plot the data for each of the four temperatures and the four varieties, plus the unplanted control converting from the natural log value back to the original actual count values to see what the population numbers look like.
 Note the use of `exp() - 1` in the `y` aesthetic, to transform the values from the `ln() + 1` values.
@@ -607,7 +600,7 @@ nema_long %>%
 ```
 
 Checking the model fit visually, we can see that it fits the data nicely.
-To get a better feel for how these models compare, AIC can be used to determine the relative quality of a model for a _given set of data_.
+To get a better feel for how these models compare, AIC can be used to determine the relative quality of a model for a *given set of data*.
 That is, you cannot compare models for other data using AIC.
 
 Checking the AIC is quite simple in R, just `AIC()`.
@@ -619,8 +612,7 @@ AIC(unplanted_poly_model)
 ```
 
 Ideally when fitting models, you look for the least complex model that provides the best explanation of the variation in the data.
-In this case the original linear model has a lower AIC, `r {AIC(unplanted_model)}`, than that of the
-polynomial model, `r {AIC(unplanted_poly_model)}`, but they are extremely close and the $R^2$ value of the polynomial model, `r {summary(unplanted_poly_model)$r.squared}`, is a bit better than the linear model's $R^2$, `r {summary(unplanted_model)$r.squared}`, as well.
+In this case the original linear model has a lower AIC, `r {AIC(unplanted_model)}`, than that of the polynomial model, `r {AIC(unplanted_poly_model)}`, but they are extremely close and the $R^2$ value of the polynomial model, `r {summary(unplanted_poly_model)$r.squared}`, is a bit better than the linear model's $R^2$, `r {summary(unplanted_model)$r.squared}`, as well.
 Therefore, without more data to distinguish the models it appears that either model suffices for the data provided.
 
 ## Further Reading
@@ -632,22 +624,22 @@ As you work with raw data from many sources, it is useful to understand what thi
 In this example, {tidyr} was used to convert the data from wide to long format.
 For a more in-depth look at using {tidyr} see:
 
-- [Introducing tidyr](https://blog.rstudio.com/2014/07/22/introducing-tidyr/)
+-   [Introducing tidyr](https://blog.rstudio.com/2014/07/22/introducing-tidyr/)
 
-- ["Lengthen columns" into key-value pairs](https://tidyr.tidyverse.org/reference/pivot_longer.html).
+-   ["Lengthen columns" into key-value pairs](https://tidyr.tidyverse.org/reference/pivot_longer.html).
 
 ### Interpreting Linear Models in R
 
 The University of Georgia has a nice, easy to understand set of materials that demonstrate how to interpret diagnostic plot outputs from `plot(lm.object)`, [Regression diagnostic plots](http://strata.uga.edu/8370/rtips/regressionPlots.html) on their Data Analysis in the Geosciences page.
 For even more, this Cross Validated question has an excellent discussion on [Interpreting plot.lm()](https://stats.stackexchange.com/questions/58141/interpreting-plot-lm).
 
-The University of Montana provides an on-line text, "_Statistics With R_", that includes a section on [ANOVA model diagnostics including QQ-plots](https://arc.lib.montana.edu/book/statistics-with-r-textbook/item/57).
+The University of Montana provides an on-line text, "*Statistics With R*", that includes a section on [ANOVA model diagnostics including QQ-plots](https://arc.lib.montana.edu/book/statistics-with-r-textbook/item/57).
 Since ANOVA uses `lm()` in R, the tools and descriptions here are applicable to the qq-plots we have generated here in this illustration.
 
 For a detailed look at how to interpret the output from `summary()` for linear models, see The YHAT Blog post, [Fitting & Interpreting Linear Models in R](http://blog.yhat.com/posts/r-lm-summary.html).
 
-Faraway [-@FARAWAY2002], "[_Practical Regression and Anova using R_](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)" is an excellent free resource that goes into detail about fitting linear models using R and how to interpret the diagnostics.
-Prof. Faraway has more recent books on the subject as well that you might wish to borrow from your library or purchase, see [http://www.maths.bath.ac.uk/~jjf23/LMR/](http://www.maths.bath.ac.uk/~jjf23/LMR/) for more details.
+Faraway [-@FARAWAY2002], "[*Practical Regression and Anova using R*](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)" is an excellent free resource that goes into detail about fitting linear models using R and how to interpret the diagnostics.
+Prof. Faraway has more recent books on the subject as well that you might wish to borrow from your library or purchase, see <http://www.maths.bath.ac.uk/~jjf23/LMR/> for more details.
 
 ### Selecting the Right Colour Scheme
 
@@ -655,14 +647,14 @@ Selecting good colour schemes is essential for communicating your message.
 The {viridis} package makes this much easier to do.
 Bob Rudis has a nice blog post when the package was first introduced that demonstrates why it is useful to use a package like this for your colour palettes, [Using the new 'viridis' colormap in R (thanks to Simon Garnier)](https://rud.is/b/2015/07/20/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/).
 Other colour palettes for R exist as well.
-Notably the _RColorBrewer_ package provides an easy-to-use interface for the fantastic Color Brewer palettes [http://colorbrewer2.org/](http://colorbrewer2.org/) commonly used for cartography but also useful for graphs.
+Notably the *RColorBrewer* package provides an easy-to-use interface for the fantastic Color Brewer palettes <http://colorbrewer2.org/> commonly used for cartography but also useful for graphs.
 
 ## A Note on This Article
 
 This article was original published in 2018 on Open Plant Pathology shortly after we launched.
 Since then it has been updated with minor changes to the R code to bring it up-to-date with the latest libraries and present cleaner figures and integrate into the new website framework that OPP now uses.
 Changes since the original can be viewed using the link below that compares the original article with this version.
-_The message and scientific contents remain the same._
+*The message and scientific contents remain the same.*
 
 AHS, 2021.08.04
 
@@ -671,5 +663,3 @@ AHS, 2021.08.04
 ```{r reproducibility, echo=FALSE}
 sessioninfo::session_info()
 ```
-
-

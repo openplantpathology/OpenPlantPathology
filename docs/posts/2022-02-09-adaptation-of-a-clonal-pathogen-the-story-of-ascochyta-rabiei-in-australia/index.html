@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -125,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/anchor-4.2.2/anchor.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/bowser-1.9.3/bowser.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/distill-2.2.21/template.v2.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/header-attrs-2.11/header-attrs.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/jquery-3.6.0/jquery-3.6.0.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/jquery-3.6.0/jquery-3.6.0.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/jquery-3.6.0/jquery-3.6.0.min.map","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/popper-2.6.0/popper.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/tippy-6.2.7/tippy-bundle.umd.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/tippy-6.2.7/tippy-light-border.css","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/tippy-6.2.7/tippy.css","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/tippy-6.2.7/tippy.umd.min.js","adaptation-of-a-clonal-pathogen-the-story-of-ascochyta-rabiei-in-australia_files/webcomponents-2.0.0/webcomponents.js","Qld_APPS_Bar.jpg"]}
+  {"type":"character","attributes":{},"value":["Qld_APPS_Bar.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2424,7 +2425,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2491,6 +2492,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Adaptation of a clonal pathogen - The story of Ascochyta rabiei in Australia</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Ascochyta rabiei, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.</p></p>
@@ -2510,9 +2512,15 @@ Host: Queensland Chapter Australasian Plant Pathology Society, <a href="https://
 Date: February 3, 2022<br />
 Links: <a href="https://youtu.be/gD84BPDDEZM">Video</a></p>
 <h2 id="biography">Biography</h2>
-<p>Ido obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture genetics and breeding. In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna. After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security. His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches. He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.</p>
+<p>Ido obtained his BSc (2007) and MSc (2011) in Israel with a focus on aquaculture genetics and breeding.
+In 2012, he moved to Australia to continue in this field and take on a PhD candidature at the University of the Sunshine Coast in QLD, applying novel inter-species surrogate biotechnology to breed Southern Bluefin Tuna.
+After his PhD, Ido took a postdoctoral position at Griffith University, which led to his current lecturer (Biosciences) and researcher position in affiliation with the Centre for Planetary Health and Food Security.
+His research foci are crop genomics, crop-pathogen molecular interactions and development of novel pathogen diagnostics methods, which he investigates using molecular biology, genomics and bioinformatics approaches.
+He aspires to develop applied research solutions in tight collaboration with the agriculture and aquaculture industries to overcome diseases and other production bottlenecks to help future food security.</p>
 <h2 id="abstract">Abstract</h2>
-<p><em>Ascochyta rabiei</em>, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type. This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University. The identified patterns suggest that <em>A. rabiei</em> displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.</p>
+<p><em>Ascochyta rabiei</em>, a pathogenic fungus and the causing agent of Ascochyta blight of chickpea, is represented by a highly clonal population in Australia, due to the presence of only a single mating type.
+This presentation will summarise the current knowledge of the patterns and trends found in this unique population structure, as discovered by genetic analysis of isolates collected between 2013-2020 as part of ongoing monitoring studies led by Prof. Rebecca Ford at Griffith University.
+The identified patterns suggest that <em>A. rabiei</em> displays micro-evolution in local regions, probably driven by founder effects, along with cross-regional gene flow, most likely due to anthropogenic activities.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

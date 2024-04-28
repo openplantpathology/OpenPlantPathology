@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -89,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -139,13 +141,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Ecology and epidemiology in R: Disease progress over time;citation_publication_date=2008;citation_publisher=Scientific Societies;citation_doi=10.1094/phi-a-2008-0129-02;citation_author=A. Sparks;citation_author=P. D. Esker;citation_author=M. Bates;citation_author=W. Dall’Acqua;citation_author=Z. Guo;citation_author=V. Segovia;citation_author=S. D. Silwal;citation_author=S. Tolos;citation_author=K. A. Garrett"/>
-  <meta name="citation_reference" content="citation_title=Modeling and mapping potential epidemics of rice diseases globally;citation_publication_date=2012;citation_publisher=Elsevier;citation_volume=34;citation_author=Serge Savary;citation_author=Andrew Nelson;citation_author=Laetitia Willocquet;citation_author=Ireneo Pangga;citation_author=Jorrel Aunario"/>
-  <meta name="citation_reference" content="citation_title=Simulation modelling of crop diseases using a healthy-latent-infectious-postinfectious (HLIP) model in Julia;citation_publication_date=2022;citation_doi=10.5281/zenodo.5889579;citation_author=Adam Sparks"/>
-  <meta name="citation_reference" content="citation_title=epicrop: Simulation modelling of crop diseases using a susceptible-exposed-infectious-removed (SEIR) model;citation_publication_date=2021;citation_doi=10.5281/zenodo.5070395;citation_author=Adam H. Sparks;citation_author=Robert Hijmans;citation_author=Serge Savary;citation_author=Ireno Pangga;citation_author=Jorel Aunario"/>
-  <meta name="citation_reference" content="citation_title=The effect of nitrogen fertilization on the expression of slow-mildewing resistance in Knox wheat;citation_publication_date=1977;citation_publisher=St. Paul;citation_volume=67;citation_author=Gregory Shaner;citation_author=R. E. Finney"/>
-  <meta name="citation_reference" content="citation_title=R: A language and environment for statistical computing;citation_publication_date=2021;citation_publisher=R Foundation for Statistical Computing;citation_author=R: A language and environment for statistical computing"/>
-  <meta name="citation_reference" content="citation_title=Julia: A fresh approach to numerical computing;citation_publication_date=2017;citation_publisher=SIAM;citation_volume=59;citation_doi=10.1137/141000671;citation_author=Jeff Bezanson;citation_author=Alan Edelman;citation_author=Stefan Karpinski;citation_author=Viral B. Shah"/>
+  <meta name="citation_reference" content="citation_title=Ecology and epidemiology in R: Disease progress over time;citation_publisher=Scientific Societies;citation_doi=10.1094/phi-a-2008-0129-02;citation_author=A. Sparks;citation_author=P. D. Esker;citation_author=M. Bates;citation_author=W. Dall’Acqua;citation_author=Z. Guo;citation_author=V. Segovia;citation_author=S. D. Silwal;citation_author=S. Tolos;citation_author=K. A. Garrett"/>
+  <meta name="citation_reference" content="citation_title=Modeling and mapping potential epidemics of rice diseases globally;citation_publisher=Elsevier;citation_volume=34;citation_author=Serge Savary;citation_author=Andrew Nelson;citation_author=Laetitia Willocquet;citation_author=Ireneo Pangga;citation_author=Jorrel Aunario"/>
+  <meta name="citation_reference" content="citation_title=Simulation modelling of crop diseases using a healthy-latent-infectious-postinfectious (HLIP) model in Julia;citation_doi=10.5281/zenodo.5889579;citation_author=Adam Sparks"/>
+  <meta name="citation_reference" content="citation_title=epicrop: Simulation modelling of crop diseases using a susceptible-exposed-infectious-removed (SEIR) model;citation_doi=10.5281/zenodo.5070395;citation_author=Adam H. Sparks;citation_author=Robert Hijmans;citation_author=Serge Savary;citation_author=Ireno Pangga;citation_author=Jorel Aunario"/>
+  <meta name="citation_reference" content="citation_title=The effect of nitrogen fertilization on the expression of slow-mildewing resistance in Knox wheat;citation_publisher=St. Paul;citation_volume=67;citation_author=Gregory Shaner;citation_author=R. E. Finney"/>
+  <meta name="citation_reference" content="citation_title=R: A language and environment for statistical computing;citation_publisher=R Foundation for Statistical Computing;citation_author=R: A language and environment for statistical computing"/>
+  <meta name="citation_reference" content="citation_title=Julia: A fresh approach to numerical computing;citation_publisher=SIAM;citation_volume=59;citation_doi=10.1137/141000671;citation_author=Jeff Bezanson;citation_author=Alan Edelman;citation_author=Stefan Karpinski;citation_author=Viral B. Shah"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -154,7 +156,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bibliography.bib","bibliography.bib.bak","introducing-julia_files/anchor-4.2.2/anchor.min.js","introducing-julia_files/bowser-1.9.3/bowser.min.js","introducing-julia_files/distill-2.2.21/template.v2.js","introducing-julia_files/header-attrs-2.11/header-attrs.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.min.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.min.map","introducing-julia_files/popper-2.6.0/popper.min.js","introducing-julia_files/tippy-6.2.7/tippy-bundle.umd.min.js","introducing-julia_files/tippy-6.2.7/tippy-light-border.css","introducing-julia_files/tippy-6.2.7/tippy.css","introducing-julia_files/tippy-6.2.7/tippy.umd.min.js","introducing-julia_files/webcomponents-2.0.0/webcomponents.js","Julia_Programming_Language_Logo.svg","phytopathology.csl"]}
+  {"type":"character","attributes":{},"value":["bibliography.bib","introducing-julia_files/anchor-4.2.2/anchor.min.js","introducing-julia_files/bowser-1.9.3/bowser.min.js","introducing-julia_files/distill-2.2.21/template.v2.js","introducing-julia_files/header-attrs-2.26/header-attrs.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.min.js","introducing-julia_files/jquery-3.6.0/jquery-3.6.0.min.map","introducing-julia_files/popper-2.6.0/popper.min.js","introducing-julia_files/tippy-6.2.7/tippy-bundle.umd.min.js","introducing-julia_files/tippy-6.2.7/tippy-light-border.css","introducing-julia_files/tippy-6.2.7/tippy.css","introducing-julia_files/tippy-6.2.7/tippy.umd.min.js","introducing-julia_files/webcomponents-2.0.0/webcomponents.js","Julia_Programming_Language_Logo.svg","phytopathology.csl"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2453,7 +2455,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2520,6 +2522,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Introducing Julia to Plant Pathologists</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Julia4PlantPath" class="dt-tag">Julia4PlantPath</a>
@@ -2538,13 +2541,20 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <p><img src="Julia_Programming_Language_Logo.svg" /></p>
-<p>Wikipedia describes <a href="https://julialang.org">Julia</a> by saying, it “is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In short, it can be scripted like R, which many of us are likely to be more familiar with. But provides efficiency gains, being much faster than R to execute code<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. While this may not matter much in day-to-day work for you, if you have a large set of data to work with, <em>e.g.</em>, large geographic or temporal sets of data covering country or global areas for many years, Julia may be useful to you in performing the analysis. Alternatively, maybe you’re just curious and want to try something new. Even though it’s not as mature, Julia does have some features that R does not like <a href="https://miguelraz.github.io/blog/dispatch/index.html">multiple dispatch</a>, which may be of interest to more advanced users.</p>
+<p>Wikipedia describes <a href="https://julialang.org">Julia</a> by saying, it “is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
+In short, it can be scripted like R, which many of us are likely to be more familiar with.
+But provides efficiency gains, being much faster than R to execute code<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.
+While this may not matter much in day-to-day work for you, if you have a large set of data to work with, <em>e.g.</em>, large geographic or temporal sets of data covering country or global areas for many years, Julia may be useful to you in performing the analysis.
+Alternatively, maybe you’re just curious and want to try something new.
+Even though it’s not as mature, Julia does have some features that R does not like <a href="https://miguelraz.github.io/blog/dispatch/index.html">multiple dispatch</a>, which may be of interest to more advanced users.</p>
 <p>To introduce you to Julia, I will demonstrate how to calculate area under the disease progress curve (AUDPC) <span class="citation" data-cites="Shaner1977">(<a href="#ref-Shaner1977" role="doc-biblioref">Shaner and Finney 1977</a>)</span> in R and then in Julia.</p>
 <h2 id="installation">Installation</h2>
-<p>If you’ve ever installed R then you’ll be able to install and use Julia as well. Simply head over to <a href="https://julialang.org/downloads/" class="uri">https://julialang.org/downloads/</a> and download the proper version for your computer’s OS and processor. Then follow the directions from <a href="https://julialang.org/downloads/platform/" class="uri">https://julialang.org/downloads/platform/</a> to install it for your platform.</p>
+<p>If you’ve ever installed R then you’ll be able to install and use Julia as well.
+Simply head over to <a href="https://julialang.org/downloads/" class="uri">https://julialang.org/downloads/</a> and download the proper version for your computer’s OS and processor.
+Then follow the directions from <a href="https://julialang.org/downloads/platform/" class="uri">https://julialang.org/downloads/platform/</a> to install it for your platform.</p>
 <h2 id="calculating-audpc">Calculating AUDPC</h2>
 <h3 id="using-r">Using R</h3>
-<p>In the “Disease Progress Over Time” module of the “Epidemiology and Ecology in R,” Sparks et al. <span class="citation" data-cites="Sparks2008">(<a href="#ref-Sparks2008" role="doc-biblioref">2008</a>)</span> demonstrate how to write an R function to calculate AUDPC as follows.</p>
+<p>In the “Disease Progress Over Time” module of the “Epidemiology and Ecology in R”, Sparks et al. <span class="citation" data-cites="Sparks2008">(<a href="#ref-Sparks2008" role="doc-biblioref">2008</a>)</span> demonstrate how to write an R function to calculate AUDPC as follows.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a function for AUDPC calculation</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the left curly bracket indicates the beginning</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of the function</span></span>
@@ -2594,32 +2604,33 @@ gtag('config', 'UA-112255011-1');
 <p>This function in R can be improved for efficiency as follows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>r_audpc</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>disease.severity</span>, <span class='va'>time.period</span><span class='op'>)</span> <span class='op'>{</span>
-  <span class='co'># only calculate n-1 once</span>
-  <span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>time.period</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span>
-  
-  <span class='co'># set up vectors, not matrices, as double precision to contain the mean</span>
-  <span class='co'># percent infection (meanvec) and difference between obs times (intvec)</span>
-  <span class='va'>meanvec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"double"</span>, length <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span>
-  <span class='va'>intvec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"double"</span>, length <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span>
-  
-  <span class='co'># using `seq_len()` is safer than 1:n, if n = 0</span>
-  <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_len</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
-    
-    <span class='co'># double brackets for assigning values in a vector are preferred</span>
-    <span class='co'># using `sum()` in place of `+` for `i + 1` is faster</span>
-    <span class='va'>meanvec</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span>
-      <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>disease.severity</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span>, <span class='va'>disease.severity</span><span class='op'>[[</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>i</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
-    <span class='va'>intvec</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>time.period</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>i</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>time.period</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span>
-  <span class='op'>}</span>
-  
-  <span class='co'># save a step and put everything on one line, returning the AUDPC value</span>
-  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>meanvec</span> <span class='op'>*</span> <span class='va'>intvec</span><span class='op'>)</span><span class='op'>)</span>
-<span class='op'>}</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>r_audpc</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>disease.severity</span>, <span class='va'>time.period</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='co'># only calculate n-1 once</span></span>
+<span>  <span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>time.period</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span></span>
+<span>  </span>
+<span>  <span class='co'># set up vectors, not matrices, as double precision to contain the mean</span></span>
+<span>  <span class='co'># percent infection (meanvec) and difference between obs times (intvec)</span></span>
+<span>  <span class='va'>meanvec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"double"</span>, length <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span></span>
+<span>  <span class='va'>intvec</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='op'>(</span>mode <span class='op'>=</span> <span class='st'>"double"</span>, length <span class='op'>=</span> <span class='va'>n</span><span class='op'>)</span></span>
+<span>  </span>
+<span>  <span class='co'># using `seq_len()` is safer than 1:n, if n = 0</span></span>
+<span>  <span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_len</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>    </span>
+<span>    <span class='co'># double brackets for assigning values in a vector are preferred</span></span>
+<span>    <span class='co'># using `sum()` in place of `+` for `i + 1` is faster</span></span>
+<span>    <span class='va'>meanvec</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span></span>
+<span>      <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>disease.severity</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span>, <span class='va'>disease.severity</span><span class='op'>[[</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>i</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>    <span class='va'>intvec</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>time.period</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>i</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>time.period</span><span class='op'>[[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>]</span></span>
+<span>  <span class='op'>}</span></span>
+<span>  </span>
+<span>  <span class='co'># save a step and put everything on one line, returning the AUDPC value</span></span>
+<span>  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>meanvec</span> <span class='op'>*</span> <span class='va'>intvec</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
 </div>
-<p>Or, if you prefer, you can install libraries from CRAN that provide functions for calculating AUDPC rather than writing your own. The R packages <a href="https://cran.r-project.org/package=agricolae"><em>agricolae</em></a> <span class="citation" data-cites="deMendiburu2021">(<a href="#ref-deMendiburu2021" role="doc-biblioref">de Mendiburu 2021</a>)</span> and <a href="https://cran.r-project.org/package=epifitter"><em>epifitter</em></a> <span class="citation" data-cites="Alves2021">(<a href="#ref-Alves2021" role="doc-biblioref">Alves and Del Ponte 2021</a>)</span> provide easy to use functions to calculate AUDPC, <code>audpc()</code> and <code>AUDPC()</code>, respectively. The following code an example from <em>agricolae’s</em> help showing how to calculate AUDPC in R using our own function, <code>r_audpc()</code>.</p>
+<p>Or, if you prefer, you can install libraries from CRAN that provide functions for calculating AUDPC rather than writing your own.
+The R packages <a href="https://cran.r-project.org/package=agricolae"><em>agricolae</em></a> <span class="citation" data-cites="deMendiburu2021">(<a href="#ref-deMendiburu2021" role="doc-biblioref">de Mendiburu 2021</a>)</span> and <a href="https://cran.r-project.org/package=epifitter"><em>epifitter</em></a> <span class="citation" data-cites="Alves2021">(<a href="#ref-Alves2021" role="doc-biblioref">Alves and Del Ponte 2021</a>)</span> provide easy to use functions to calculate AUDPC, <code>audpc()</code> and <code>AUDPC()</code>, respectively.
+The following code an example from <em>agricolae’s</em> help showing how to calculate AUDPC in R using our own function, <code>r_audpc()</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> dates <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">14</span>, <span class="dv">21</span>, <span class="dv">28</span>) <span class="co"># days</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> evaluation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">80</span>, <span class="dv">90</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">r_audpc</span>(evaluation, dates)</span></code></pre></div>
@@ -2629,20 +2640,26 @@ gtag('config', 'UA-112255011-1');
 <pre><code>[1] 1015</code></pre>
 </div>
 <h3 id="using-julia">Using Julia</h3>
-<p>Currently I’m unaware of any packages for Julia offering this functionality. However, we can easily duplicate <code>r_audpc()</code> from R to Julia but need to make a few minor changes for differences in the languages. Most of the following function should look familiar. The first thing is that we cannot have a <code>.</code> in the function argument names, so we’ll just use a single word here for clarity. The second is that we cannot use <code>&lt;-</code> for assigning values as in R. We must use <code>=</code> to assign in Julia, however you can use <code>=</code> in R as well if you wish. Functions are written in roughly the same manner as in R and they are called in the same way, <code>fn_name(arg1, arg2, ...)</code>.</p>
+<p>Currently I’m unaware of any packages for Julia offering this functionality.
+However, we can easily duplicate <code>r_audpc()</code> from R to Julia but need to make a few minor changes for differences in the languages.
+Most of the following function should look familiar.
+The first thing is that we cannot have a <code>.</code> in the function argument names, so we’ll just use a single word here for clarity.
+The second is that we cannot use <code>&lt;-</code> for assigning values as in R.
+We must use <code>=</code> to assign in Julia, however you can use <code>=</code> in R as well if you wish.
+Functions are written in roughly the same manner as in R and they are called in the same way, <code>fn_name(arg1, arg2, ...)</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb6"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> j_audpc(evaluation<span class="op">,</span> dates)</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">j_audpc</span>(evaluation, dates)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> length(evaluation) <span class="op">-</span> <span class="fl">1</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="fu">length</span>(evaluation) <span class="op">-</span> <span class="fl">1</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># again we preallocate vectors to hold the values but also create a third</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># object, out, since it will be inside our for loop unlike in R</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    meanvec <span class="op">=</span> <span class="bu">Base</span>.zeros(n)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    intvec <span class="op">=</span> <span class="bu">Base</span>.zeros(n)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    meanvec <span class="op">=</span> <span class="bu">Base</span>.<span class="fu">zeros</span>(n)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    intvec <span class="op">=</span> <span class="bu">Base</span>.<span class="fu">zeros</span>(n)</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> <span class="fl">0.0</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the for loop looks roughly the same but here we just use 1:n</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>n</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># rather than using a mean() we just divide by 2 here</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        meanvec[i] <span class="op">=</span> (evaluation[i] <span class="op">+</span> evaluation[i <span class="op">+</span> <span class="fl">1</span>]) <span class="op">/</span> <span class="fl">2</span></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        </span>
@@ -2650,26 +2667,26 @@ gtag('config', 'UA-112255011-1');
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        intvec[i] <span class="op">=</span> dates[i <span class="op">+</span> <span class="fl">1</span>] <span class="op">-</span> dates[i]</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># here we sum the values in the loop as Julia will compile this and it</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># will run more quickly. In R this is undesireable behaviour so we</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># will run more quickly. In R this is undesirable behaviour so we</span></span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># performed this outside of the loop.</span></span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># also note here that before the `*` we have a `.`, this means to</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># &quot;broadcast&quot; across the vector. In R this automatically happens, in</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Julia to perform operations to all values in a vector you must</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># broadcast</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> sum(meanvec <span class="op">.*</span> intvec)</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> <span class="fu">sum</span>(meanvec <span class="op">.*</span> intvec)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># return the object, `out` from the for loop</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> out</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># end the function (no curly brackets!)</span></span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 <pre><code>j_audpc (generic function with 1 method)</code></pre>
 </div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> dates <span class="op">=</span> [<span class="fl">14</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">28</span>] <span class="co"># days</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> evaulation <span class="op">=</span> [<span class="fl">40</span><span class="op">,</span> <span class="fl">80</span><span class="op">,</span> <span class="fl">90</span>]</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> j_audpc(evaulation<span class="op">,</span> dates)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> dates <span class="op">=</span> [<span class="fl">14</span>, <span class="fl">21</span>, <span class="fl">28</span>] <span class="co"># days</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> evaulation <span class="op">=</span> [<span class="fl">40</span>, <span class="fl">80</span>, <span class="fl">90</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>julia<span class="op">&gt;</span> <span class="fu">j_audpc</span>(evaulation, dates)</span></code></pre></div>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>3-element Vector{Int64}:
  14
@@ -2683,45 +2700,47 @@ gtag('config', 'UA-112255011-1');
 </div>
 <p>The AUDPC values match!</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This is just a quick example of how you can use Julia in plant pathology to show new users how it compares with R with a commonly used function. If you’re curious to know more, the <a href="https://docs.julialang.org">Julia docs</a> are a great place to start. In particular, the <a href="https://docs.julialang.org/en/v1/manual/noteworthy-differences/#Noteworthy-differences-from-R">noteworthy differences</a> is a useful bit to refer to if you’re familiar with R.</p>
+<p>This is just a quick example of how you can use Julia in plant pathology to show new users how it compares with R with a commonly used function.
+If you’re curious to know more, the <a href="https://docs.julialang.org">Julia docs</a> are a great place to start.
+In particular, the <a href="https://docs.julialang.org/en/v1/manual/noteworthy-differences/#Noteworthy-differences-from-R">noteworthy differences</a> is a useful bit to refer to if you’re familiar with R.</p>
 <p>For a more detailed comparison of complete Julia and R packages that offer an existing plant disease model, EPIRICE <span class="citation" data-cites="Savary2012">(<a href="#ref-Savary2012" role="doc-biblioref">Savary et al. 2012</a>)</span>, see <a href="https://adamhsparks.github.io/Epicrop.jl/stable/">Epicrop.jl</a> <span class="citation" data-cites="Epicrop.jl-2022">(<a href="#ref-Epicrop.jl-2022" role="doc-biblioref">Sparks 2022</a>)</span>, a port of <a href="https://adamhsparks.github.io/epicrop/">epicrop</a> <span class="citation" data-cites="Sparks2021">(<a href="#ref-Sparks2021" role="doc-biblioref">Sparks et al. 2021</a>)</span> to Julia, which has demonstrated faster speeds in benchmarking tests for the same rice disease predictions.</p>
 <h2 id="colophon">Colophon</h2>
-<p>This post was constructed using R Version <code>4.1.2</code> <span class="citation" data-cites="RCore2021">(<a href="#ref-RCore2021" role="doc-biblioref">R Core Team 2021</a>)</span> and Julia Version <code>1.7.1</code> <span class="citation" data-cites="Bezanson2017">(<a href="#ref-Bezanson2017" role="doc-biblioref">Bezanson et al. 2017</a>)</span> using <em>JuliaCall</em> Pull Request <a href="https://github.com/Non-Contradiction/JuliaCall/pull/174">#174</a>.</p>
+<p>This post was constructed using R Version 4.4.0 <span class="citation" data-cites="RCore2021">(<a href="#ref-RCore2021" role="doc-biblioref">R Core Team 2021</a>)</span> and Julia Version 1.10.2 <span class="citation" data-cites="Bezanson2017">(<a href="#ref-Bezanson2017" role="doc-biblioref">Bezanson et al. 2017</a>)</span> using <em>JuliaCall</em> <span class="citation" data-cites="Li2019">(<a href="#ref-Li2019" role="doc-biblioref"><strong>Li2019?</strong></a>)</span>.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-Alves2021" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Alves2021" class="csl-entry" role="listitem">
 Alves, K. dos S., and Del Ponte, E. M. 2021. <em><span class="nocase">epifitter: Analysis and Simulation of Plant Disease Progress Curves</span></em>. Available at: <a href="https://CRAN.R-project.org/package=epifitter">https://CRAN.R-project.org/package=epifitter</a>.
 </div>
-<div id="ref-Bezanson2017" class="csl-entry" role="doc-biblioentry">
-Bezanson, J., Edelman, A., Karpinski, S., and Shah, V. B. 2017. Julia: A fresh approach to numerical computing. SIAM review. 59:65–98.
+<div id="ref-Bezanson2017" class="csl-entry" role="listitem">
+Bezanson, J., Edelman, A., Karpinski, S., and Shah, V. B. 2017. <a href="https://doi.org/10.1137/141000671">Julia: A fresh approach to numerical computing</a>. SIAM review. 59:65–98.
 </div>
-<div id="ref-deMendiburu2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-deMendiburu2021" class="csl-entry" role="listitem">
 de Mendiburu, F. 2021. <em><span class="nocase">agricolae: Statistical Procedures for Agricultural Research</span></em>. Available at: <a href="https://CRAN.R-project.org/package=agricolae">https://CRAN.R-project.org/package=agricolae</a>.
 </div>
-<div id="ref-RCore2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-RCore2021" class="csl-entry" role="listitem">
 R Core Team. 2021. <em><span>R</span>: A language and environment for statistical computing</em>. Vienna, Austria: R Foundation for Statistical Computing. Available at: <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
-<div id="ref-Savary2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Savary2012" class="csl-entry" role="listitem">
 Savary, S., Nelson, A., Willocquet, L., Pangga, I., and Aunario, J. 2012. Modeling and mapping potential epidemics of rice diseases globally. Crop Protection. 34:6–17.
 </div>
-<div id="ref-Shaner1977" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Shaner1977" class="csl-entry" role="listitem">
 Shaner, G., and Finney, R. E. 1977. The effect of nitrogen fertilization on the expression of slow-mildewing resistance in <span>Knox</span> wheat. Phytopathology. 67:1051–1056.
 </div>
-<div id="ref-Epicrop.jl-2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Epicrop.jl-2022" class="csl-entry" role="listitem">
 Sparks, A. 2022. <em>Simulation modelling of crop diseases using a healthy-latent-infectious-postinfectious (<span>HLIP</span>) model in <span>Julia</span></em>. Available at: <a href="https://github.com/adamhsparks/Epicrop.jl">https://github.com/adamhsparks/Epicrop.jl</a>.
 </div>
-<div id="ref-Sparks2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Sparks2021" class="csl-entry" role="listitem">
 Sparks, A. H., Hijmans, R., Savary, S., Pangga, I., and Aunario, J. 2021. <em><span class="nocase">epicrop</span>: Simulation modelling of crop diseases using a susceptible-exposed-infectious-removed (SEIR) model</em>. Available at: <a href="https://github.com/adamhsparks/epicrop">https://github.com/adamhsparks/epicrop</a>.
 </div>
-<div id="ref-Sparks2008" class="csl-entry" role="doc-biblioentry">
-Sparks, A., Esker, P. D., Bates, M., Dall’Acqua, W., Guo, Z., Segovia, V., et al. 2008. Ecology and epidemiology in <span>R</span>: Disease progress over time. The Plant Health Instructor.
+<div id="ref-Sparks2008" class="csl-entry" role="listitem">
+Sparks, A., Esker, P. D., Bates, M., Dall’Acqua, W., Guo, Z., Segovia, V., et al. 2008. <a href="https://doi.org/10.1094/phi-a-2008-0129-02">Ecology and epidemiology in <span>R</span>: Disease progress over time</a>. The Plant Health Instructor.
 </div>
 </div>
-<section class="footnotes" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p><a href="https://en.wikipedia.org/wiki/Julia_(programming_language)" class="uri">https://en.wikipedia.org/wiki/Julia_(programming_language)</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p><a href="https://julialang.org/benchmarks/" class="uri">https://julialang.org/benchmarks/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Julia_(programming_language)" class="uri">https://en.wikipedia.org/wiki/Julia_(programming_language)</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://julialang.org/benchmarks/" class="uri">https://julialang.org/benchmarks/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

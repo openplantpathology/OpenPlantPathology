@@ -15,16 +15,15 @@ categories:
 doi: "10.17605/OSF.IO/J5KXM"
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## About
 
-Presenter: Ms Elaine Gough \
-Institution: University of Southern Queensland, Centre for Crop Health \
-Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps) \
+Presenter: Ms Elaine Gough\
+Institution: University of Southern Queensland, Centre for Crop Health\
+Host: Queensland Chapter Australasian Plant Pathology Society, [\@qldapps](https://twitter.com/qldapps)\
 Links: [Video](https://youtu.be/V28QN7l_enw)
 
 ## Biography
@@ -34,17 +33,17 @@ I have a keen interest in sustainable agriculture and soil micro-biology and am 
 
 ## Abstract
 
-Mung bean (_Vigna radiata_) is a short-season high-value legume integrated into grain cropping sequences in the sub-tropical grain region of eastern Australia.
-It benefits crop rotations through its ability to fix nitrogen (N) from inoculation with _Bradyrhizobium_.
+Mung bean (*Vigna radiata*) is a short-season high-value legume integrated into grain cropping sequences in the sub-tropical grain region of eastern Australia.
+It benefits crop rotations through its ability to fix nitrogen (N) from inoculation with *Bradyrhizobium*.
 It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates.
 
-Mung bean also hosts the plant-parasitic root-lesion nematode _Pratylenchus thornei_.
-Multiplication of _P. thornei)_ in roots can reduce yield of mung bean and subsequent intolerant crops in the sequence.
-Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and _Pratylenchus_ population density in crops.
+Mung bean also hosts the plant-parasitic root-lesion nematode *Pratylenchus thornei*.
+Multiplication of *P. thornei)* in roots can reduce yield of mung bean and subsequent intolerant crops in the sequence.
+Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and *Pratylenchus* population density in crops.
 
-Our research demonstrated that co-inoculation with AMF and _Bradyrhizobium_ synergistically increased (_P_<0.001) seed yield, shoot biomass, nodulation, biological N fixation and plant nutrition of mung bean cv Jade-AU in glasshouse experiments in a pasteurised vertisol.
-However, AMF also significantly increased (_P_<0.05) the population density of _P. thornei_ in mung bean roots, which was not correlated with increased root biomass or improved plant nutrition.
-_Pratylenchus thornei_ also reduced P and Zn concentration, while increasing N concentration in mycorrhizal shoots.
+Our research demonstrated that co-inoculation with AMF and *Bradyrhizobium* synergistically increased (*P*\<0.001) seed yield, shoot biomass, nodulation, biological N fixation and plant nutrition of mung bean cv Jade-AU in glasshouse experiments in a pasteurised vertisol.
+However, AMF also significantly increased (*P*\<0.05) the population density of *P. thornei* in mung bean roots, which was not correlated with increased root biomass or improved plant nutrition.
+*Pratylenchus thornei* also reduced P and Zn concentration, while increasing N concentration in mycorrhizal shoots.
 
-Integrated management to prevent increases in _P. thornei_ in farming systems is imperative so that we can harness the benefits of AMF to improve mung bean yield and nutrition.
-Rotations with crops that reduce _P. thornei_ populations while increasing AMF inoculum levels in the soils is warranted.
+Integrated management to prevent increases in *P. thornei* in farming systems is imperative so that we can harness the benefits of AMF to improve mung bean yield and nutrition.
+Rotations with crops that reduce *P. thornei* populations while increasing AMF inoculum levels in the soils is warranted.

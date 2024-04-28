@@ -16,12 +16,16 @@ categories:
 
 [Slides](https://speakerdeck.com/emdelponte/article-organized-shareable-and-reproducible-using-r-and-friends)
 
-Workshop taught by Dr. Emerson Del Ponte at the APS Plant Health 2019 \
-Sat, Aug 3, 2019 - 1:00 PM --- 5:00 PM \
+Workshop taught by Dr. Emerson Del Ponte at the APS Plant Health 2019\
+Sat, Aug 3, 2019 - 1:00 PM --- 5:00 PM\
 Cleveland, United States
 
 ### Abstract
 
-The importance of sharing data and computational code has been highlighted extensively to promote transparency and replication of scientific results. Data and code sharing practices are rare in the plant pathology, but is expect to increase in the near future. It is urgent that plant pathologists get training in how to organize their research in a way that promotes effective project management, reproducibility, collaboration and sharing of results. Standardized procedures for the collection and systematic organization of research outcomes (data files, codes, graphs, manuscript, etc.), known as research compendium, has been proposed and tools are available to facilitate its production. Participants will learn how to use existing R tools for producing a research compendium for optimizing workflow and enhancing the efficiency of analysis, re-analysis and sharing.
+The importance of sharing data and computational code has been highlighted extensively to promote transparency and replication of scientific results.
+Data and code sharing practices are rare in the plant pathology, but is expect to increase in the near future.
+It is urgent that plant pathologists get training in how to organize their research in a way that promotes effective project management, reproducibility, collaboration and sharing of results.
+Standardized procedures for the collection and systematic organization of research outcomes (data files, codes, graphs, manuscript, etc.), known as research compendium, has been proposed and tools are available to facilitate its production.
+Participants will learn how to use existing R tools for producing a research compendium for optimizing workflow and enhancing the efficiency of analysis, re-analysis and sharing.
 
 ![](workshop-emerson-aps.png){width="60%"}

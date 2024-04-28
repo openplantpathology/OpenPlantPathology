@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,16 +74,39 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+      margin-bottom: 0em;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -120,7 +145,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=A european database of fusarium graminearum and f. Culmorum trichothecene genotypes;citation_publication_date=2016;citation_volume=7;citation_doi=10.3389/fmicb.2016.00406;citation_author=Matias Pasquali;citation_author=Marco Beyer;citation_author=Antonio Logrieco;citation_author=Kris Audenaert;citation_author=Virgilio Balmas;citation_author=Ryan Basler;citation_author=Anne-Laure Boutigny;citation_author=Jana Chrpová;citation_author=Elżbieta Czembor;citation_author=Tatiana Gagkaeva;citation_author=María T. González-Jaén;citation_author=Ingerd S. Hofgaard;citation_author=Nagehan D. Köycü;citation_author=Lucien Hoffmann;citation_author=Jelena Lević;citation_author=Patricia Marin;citation_author=Thomas Miedaner;citation_author=Quirico Migheli;citation_author=Antonio Moretti;citation_author=Marina E. H. Müller;citation_author=Françoise Munaut;citation_author=Päivi Parikka;citation_author=Marine Pallez-Barthel;citation_author=Jonathan Piec;citation_author=Jonathan Scauflaire;citation_author=Barbara Scherm;citation_author=Slavica Stanković;citation_author=Ulf Thrane;citation_author=Silvio Uhlig;citation_author=Adriaan Vanheule;citation_author=Tapani Yli-Mattila;citation_author=Susanne Vogelgsang"/>
+  <meta name="citation_reference" content="citation_title=Genealogical concordance between the mating type locus and seven other nuclear genes supports formal recognition of nine phylogenetically distinct species within the Fusarium graminearum clade;citation_volume=41;citation_doi=10.1016/j.fgb.2004.03.003;citation_author=Kerry O’Donnell;citation_author=Todd J. Ward;citation_author=David M. Geiser;citation_author=H. Corby Kistler;citation_author=Takayuki Aoki"/>
+  <meta name="citation_reference" content="citation_title=Global molecular surveillance reveals novel Fusarium head blight species and trichothecene toxin diversity;citation_volume=44;citation_doi=10.1016/j.fgb.2007.03.001;citation_author=David E. Starkey;citation_author=Todd J. Ward;citation_author=Takayuki Aoki;citation_author=Liane R. Gale;citation_author=H. Corby Kistler;citation_author=David M. Geiser;citation_author=Haruhisa Suga;citation_author=Beáta Tóth;citation_author=János Varga;citation_author=Kerry O’Donnell"/>
+  <meta name="citation_reference" content="citation_title=Multilocus genotyping and molecular phylogenetics resolve a novel head blight pathogen within the Fusarium graminearum species complex from Ethiopia;citation_volume=45;citation_doi=10.1016/j.fgb.2008.09.002;citation_author=Kerry O’Donnell;citation_author=Todd J. Ward;citation_author=Dereje Aberra;citation_author=H. Corby Kistler;citation_author=Takayuki Aoki;citation_author=Nathane Orwig;citation_author=Makoto Kimura;citation_author=Åsmund Bjørnstad;citation_author=Sonja S. Klemsdal"/>
+  <meta name="citation_reference" content="citation_title=A novel Asian clade within the Fusarium graminearum species complex includes a newly discovered cereal head blight pathogen from the Russian Far East;citation_volume=101;citation_doi=10.3852/08-217;citation_author=Tapani Yli-Mattila;citation_author=Tatiana Gagkaeva;citation_author=Todd J. Ward;citation_author=Takayuki Aoki;citation_author=H. Corby Kistler;citation_author=Kerry O’Donnell"/>
+  <meta name="citation_reference" content="citation_title=Novel Fusarium head blight pathogens from Nepal and Louisiana revealed by multilocus genealogical concordance;citation_volume=48;citation_doi=10.1016/j.fgb.2011.09.002;citation_author=Brice A.J. Sarver;citation_author=Todd J. Ward;citation_author=Liane R. Gale;citation_author=Karen Broz;citation_author=H. Corby Kistler;citation_author=Takayuki Aoki;citation_author=Paul Nicholson;citation_author=Jon Carter;citation_author=Kerry O’Donnell"/>
+  <meta name="citation_reference" content="citation_title=Global distribution of Fusarium graminearum, F. asiaticum and F. boothii from wheat in relation to climate;citation_volume=139;citation_doi=10.1007/s10658-013-0374-5;citation_author=David Backhouse"/>
+  <meta name="citation_reference" content="citation_title=Biogeography ofFusarium graminearumspecies complex and chemotypes: a review;citation_volume=32;citation_doi=10.1080/19440049.2014.984244;citation_author=Theo Lee;citation_author=Hao Zhang;citation_author=Anne Diepeningen;citation_author=Cees Waalwijk"/>
+  <meta name="citation_reference" content="citation_title=Systematics, Phylogeny and Trichothecene Mycotoxin Potential of Fusarium Head Blight Cereal Pathogens;citation_volume=62;citation_doi=10.2520/myco.62.91;citation_author=Takayuki AOKI;citation_author=Todd J. WARD;citation_author=H. Corby KISTLER;citation_author=Kerry O’DONNELL"/>
+  <meta name="citation_reference" content="citation_title=A european database of fusarium graminearum and f. Culmorum trichothecene genotypes;citation_volume=7;citation_doi=10.3389/fmicb.2016.00406;citation_author=Matias Pasquali;citation_author=Marco Beyer;citation_author=Antonio Logrieco;citation_author=Kris Audenaert;citation_author=Virgilio Balmas;citation_author=Ryan Basler;citation_author=Anne-Laure Boutigny;citation_author=Jana Chrpová;citation_author=Elżbieta Czembor;citation_author=Tatiana Gagkaeva;citation_author=María T. González-Jaén;citation_author=Ingerd S. Hofgaard;citation_author=Nagehan D. Köycü;citation_author=Lucien Hoffmann;citation_author=Jelena Lević;citation_author=Patricia Marin;citation_author=Thomas Miedaner;citation_author=Quirico Migheli;citation_author=Antonio Moretti;citation_author=Marina E. H. Müller;citation_author=Françoise Munaut;citation_author=Päivi Parikka;citation_author=Marine Pallez-Barthel;citation_author=Jonathan Piec;citation_author=Jonathan Scauflaire;citation_author=Barbara Scherm;citation_author=Slavica Stanković;citation_author=Ulf Thrane;citation_author=Silvio Uhlig;citation_author=Adriaan Vanheule;citation_author=Tapani Yli-Mattila;citation_author=Susanne Vogelgsang"/>
+  <meta name="citation_reference" content="citation_title=Gene genealogies reveal global phylogeographic structure and reproductive isolation among lineages of Fusarium graminearum, the fungus causing wheat scab;citation_volume=97;citation_doi=10.1073/pnas.130193297;citation_author=K. O’Donnell;citation_author=H. C. Kistler;citation_author=B. K. Tacke;citation_author=H. H. Casper"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -129,7 +163,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["fgsc.png","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/anchor-4.2.2/anchor.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/bowser-1.9.3/bowser.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/distill-2.2.21/template.v2.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/header-attrs-2.7/header-attrs.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/jquery-1.11.3/jquery.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/popper-2.6.0/popper.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/tippy-6.2.7/tippy-bundle.umd.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/tippy-6.2.7/tippy-light-border.css","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/tippy-6.2.7/tippy.css","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/tippy-6.2.7/tippy.umd.min.js","fgscdb-an-open-database-for-tracking-the-global-spread-of-species-and-chemotypes_files/webcomponents-2.0.0/webcomponents.js","fgscdb1.gif","references.bib"]}
+  {"type":"character","attributes":{},"value":["fgsc.png","fgscdb1.gif","references.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2428,8 +2462,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2495,6 +2529,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>FGSCdb, an open database for tracking the global spread of species and chemotypes</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Databases" class="dt-tag">Databases</a>
@@ -2511,13 +2546,24 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-article">
 <h2 id="background">Background</h2>
-<p>Members of the <em>Fusarium graminearum</em> species complex (FGSC), an ascomycete fungus, rank among the most dangerous plant pathogens worldwide. These mycotoxigenic fungi affect mainly small grain crops such as wheat and barley, but also maize, rice and other important cereal crops. During the first decade of 2000, employing multilocus sequencing of global collections of strains that were morphologically defined as a single panmictic species previously known as “<em>Fusarium graminearum</em>,” 16 species have been described <span class="citation" data-cites="odonnell2000a odonnell2004 starkey2007 odonnell2008 yli-mattila2009 sarver2011">(<a href="#ref-odonnell2000a" role="doc-biblioref">K. O’Donnell et al. 2000</a>; <a href="#ref-odonnell2004" role="doc-biblioref">Kerry O’Donnell et al. 2004</a>, <a href="#ref-odonnell2008" role="doc-biblioref">2008</a>; <a href="#ref-starkey2007" role="doc-biblioref">Starkey et al. 2007</a>; <a href="#ref-yli-mattila2009" role="doc-biblioref">Yli-Mattila et al. 2009</a>; <a href="#ref-sarver2011" role="doc-biblioref">Sarver et al. 2011</a>)</span>. Since then, researchers from all over the world have been surveying cereal crops and identifying these newly discovered phylogenetic species and associated toxin profile using molecular tools <span class="citation" data-cites="backhouse2014 vanderlee2015 aoki2012">(<a href="#ref-backhouse2014" role="doc-biblioref">Backhouse 2014</a>; <a href="#ref-vanderlee2015" role="doc-biblioref">van der Lee et al. 2015</a>; <a href="#ref-aoki2012" role="doc-biblioref">AOKI et al. 2012</a>)</span>. An European database of chemotypes has been developed <span class="citation" data-cites="pasquali2016">(<a href="#ref-pasquali2016" role="doc-biblioref">Pasquali et al. 2016</a>)</span>.</p>
+<p>Members of the <em>Fusarium graminearum</em> species complex (FGSC), an ascomycete fungus, rank among the most dangerous plant pathogens worldwide.
+These mycotoxigenic fungi affect mainly small grain crops such as wheat and barley, but also maize, rice and other important cereal crops.
+During the first decade of 2000, employing multilocus sequencing of global collections of strains that were morphologically defined as a single panmictic species previously known as “<em>Fusarium graminearum</em>”, 16 species have been described <span class="citation" data-cites="odonnell2000a odonnell2004 starkey2007 odonnell2008 yli-mattila2009 sarver2011">(<a href="#ref-odonnell2000a" role="doc-biblioref">K. O’Donnell et al. 2000</a>; <a href="#ref-odonnell2004" role="doc-biblioref">Kerry O’Donnell et al. 2004</a>, <a href="#ref-odonnell2008" role="doc-biblioref">2008</a>; <a href="#ref-starkey2007" role="doc-biblioref">Starkey et al. 2007</a>; <a href="#ref-yli-mattila2009" role="doc-biblioref">Yli-Mattila et al. 2009</a>; <a href="#ref-sarver2011" role="doc-biblioref">Sarver et al. 2011</a>)</span>.
+Since then, researchers from all over the world have been surveying cereal crops and identifying these newly discovered phylogenetic species and associated toxin profile using molecular tools <span class="citation" data-cites="backhouse2014 vanderlee2015 aoki2012">(<a href="#ref-backhouse2014" role="doc-biblioref">Backhouse 2014</a>; <a href="#ref-vanderlee2015" role="doc-biblioref">van der Lee et al. 2015</a>; <a href="#ref-aoki2012" role="doc-biblioref">AOKI et al. 2012</a>)</span>.
+An European database of chemotypes has been developed <span class="citation" data-cites="pasquali2016">(<a href="#ref-pasquali2016" role="doc-biblioref">Pasquali et al. 2016</a>)</span>.</p>
 <h2 id="what-is-the-database-for">What is the database for?</h2>
-<p><a href="https://fgsc.netlify.app/">FGSCdb</a> is an open database of characterized FGSC strains whose data have been gathered directly from researchers or extracted from peer-reviewed articles whenever the geographic, host of origin, year, and phylogenetic species (and associated trichothecene chemotype/genotype whenever available) information are available in the main text or supplemental material of the publication. The project was developed as supplemental material for a systematic review article to be submitted soon for publication (Del Ponte et al. unpublished).</p>
+<p><a href="https://fgsc.netlify.app/">FGSCdb</a> is an open database of characterized FGSC strains whose data have been gathered directly from researchers or extracted from peer-reviewed articles whenever the geographic, host of origin, year, and phylogenetic species (and associated trichothecene chemotype/genotype whenever available) information are available in the main text or supplemental material of the publication.
+The project was developed as supplemental material for a systematic review article to be submitted soon for publication (Del Ponte et al. unpublished).</p>
 <h2 id="how-is-it-developed">How is it developed?</h2>
-<p>The database is organized in a Google Sheet, an online spreadsheet that facilitates shared work and collaboration. Scripts to gather the data and prepare grid, plot and map visualizations were developed using several R packages including <a href="https://cran.r-project.org/web/packages/crosstalk/index.html">crosstalk</a> for adding interactivity in the grid and map view. The main packages used were <a href="https://rstudio.github.io/leaflet/">leaflet</a> for maps, <a href="https://rstudio.github.io/DT/">datatable</a> for grid view and <a href="https://cran.r-project.org/web/packages/plotly/index.html">plotly</a> for dynamic plotting. The website is constructed using the <a href="https://cran.r-project.org/web/packages/distill/index.html">distill</a> R package. The raw data can be downloaded in PDF or excel format.</p>
+<p>The database is organized in a Google Sheet, an online spreadsheet that facilitates shared work and collaboration.
+Scripts to gather the data and prepare grid, plot and map visualizations were developed using several R packages including <a href="https://cran.r-project.org/web/packages/crosstalk/index.html">crosstalk</a> for adding interactivity in the grid and map view.
+The main packages used were <a href="https://rstudio.github.io/leaflet/">leaflet</a> for maps, <a href="https://rstudio.github.io/DT/">datatable</a> for grid view and <a href="https://cran.r-project.org/web/packages/plotly/index.html">plotly</a> for dynamic plotting.
+The website is constructed using the <a href="https://cran.r-project.org/web/packages/distill/index.html">distill</a> R package.
+The raw data can be downloaded in PDF or excel format.</p>
 <h2 id="whats-next">What’s next?</h2>
-<p>We would like to extend the utility of this project by allowing other researches to contribute data to populate the global map. Get in touch (<a href="mailto:delponte@ufv.br" class="email">delponte@ufv.br</a>) to receive instructions on how to submit your data. <br><br></p>
+<p>We would like to extend the utility of this project by allowing other researches to contribute data to populate the global map.
+Get in touch (<a href="mailto:delponte@ufv.br" class="email">delponte@ufv.br</a>) to receive instructions on how to submit your data.
+<br><br></p>
 <p><img src="fgscdb1.gif"/></p>
 <p><strong>Project website</strong>: <a href="http://fgsc.netlify.app">fgsc.netlify.app</a><br />
 <strong>Data source</strong>: <a href="https://github.com/emdelponte/FGSC">github.com/emdelponte/FGSC</a><br />
@@ -2526,35 +2572,35 @@ gtag('config', 'UA-112255011-1');
 <strong>Current collaborators</strong> (raw data): Camila P. Nicolli, Todd J. Ward, Cees Waalwijk, Theo van der Lee, Kerry O’Donnell, Sofia N. Chulze, Sebastian A. Steinglein, Dinorah Pan, Silvana Vero, Hao Zhang, Dauri J. Tessmann, Lisa J. Vaillancourt, Antonio Moretti, Antonio Logrieco</p>
 <hr />
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-aoki2012" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aoki2012" class="csl-entry" role="listitem">
 AOKI, Takayuki, Todd J. WARD, H. Corby KISTLER, and Kerry O’DONNELL. 2012. <span>“Systematics, Phylogeny and Trichothecene Mycotoxin Potential of Fusarium Head Blight Cereal Pathogens.”</span> <em>Mycotoxins</em> 62 (2): 91–102. <a href="https://doi.org/10.2520/myco.62.91">https://doi.org/10.2520/myco.62.91</a>.
 </div>
-<div id="ref-backhouse2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-backhouse2014" class="csl-entry" role="listitem">
 Backhouse, David. 2014. <span>“Global Distribution of Fusarium Graminearum, F. Asiaticum and F. Boothii from Wheat in Relation to Climate.”</span> <em>European Journal of Plant Pathology</em> 139 (1): 161–73. <a href="https://doi.org/10.1007/s10658-013-0374-5">https://doi.org/10.1007/s10658-013-0374-5</a>.
 </div>
-<div id="ref-odonnell2000a" class="csl-entry" role="doc-biblioentry">
-O’Donnell, K., H. C. Kistler, B. K. Tacke, and H. H. Casper. 2000. <span>“Gene Genealogies Reveal Global Phylogeographic Structure and Reproductive Isolation Among Lineages of Fusarium Graminearum, the Fungus Causing Wheat Scab.”</span> <em>Proceedings of the National Academy of Sciences</em> 97 (14): 7905–10. <a href="https://doi.org/10.1073/pnas.130193297">https://doi.org/10.1073/pnas.130193297</a>.
-</div>
-<div id="ref-odonnell2008" class="csl-entry" role="doc-biblioentry">
+<div id="ref-odonnell2008" class="csl-entry" role="listitem">
 O’Donnell, Kerry, Todd J. Ward, Dereje Aberra, H. Corby Kistler, Takayuki Aoki, Nathane Orwig, Makoto Kimura, Åsmund Bjørnstad, and Sonja S. Klemsdal. 2008. <span>“Multilocus Genotyping and Molecular Phylogenetics Resolve a Novel Head Blight Pathogen Within the Fusarium Graminearum Species Complex from Ethiopia.”</span> <em>Fungal Genetics and Biology</em> 45 (11): 1514–22. <a href="https://doi.org/10.1016/j.fgb.2008.09.002">https://doi.org/10.1016/j.fgb.2008.09.002</a>.
 </div>
-<div id="ref-odonnell2004" class="csl-entry" role="doc-biblioentry">
+<div id="ref-odonnell2004" class="csl-entry" role="listitem">
 O’Donnell, Kerry, Todd J. Ward, David M. Geiser, H. Corby Kistler, and Takayuki Aoki. 2004. <span>“Genealogical Concordance Between the Mating Type Locus and Seven Other Nuclear Genes Supports Formal Recognition of Nine Phylogenetically Distinct Species Within the Fusarium Graminearum Clade.”</span> <em>Fungal Genetics and Biology</em> 41 (6): 600–623. <a href="https://doi.org/10.1016/j.fgb.2004.03.003">https://doi.org/10.1016/j.fgb.2004.03.003</a>.
 </div>
-<div id="ref-pasquali2016" class="csl-entry" role="doc-biblioentry">
+<div id="ref-odonnell2000a" class="csl-entry" role="listitem">
+O’Donnell, K., H. C. Kistler, B. K. Tacke, and H. H. Casper. 2000. <span>“Gene Genealogies Reveal Global Phylogeographic Structure and Reproductive Isolation Among Lineages of Fusarium Graminearum, the Fungus Causing Wheat Scab.”</span> <em>Proceedings of the National Academy of Sciences</em> 97 (14): 7905–10. <a href="https://doi.org/10.1073/pnas.130193297">https://doi.org/10.1073/pnas.130193297</a>.
+</div>
+<div id="ref-pasquali2016" class="csl-entry" role="listitem">
 Pasquali, Matias, Marco Beyer, Antonio Logrieco, Kris Audenaert, Virgilio Balmas, Ryan Basler, Anne-Laure Boutigny, et al. 2016. <span>“A European Database of Fusarium Graminearum and f. Culmorum Trichothecene Genotypes.”</span> <em>Frontiers in Microbiology</em> 7 (April). <a href="https://doi.org/10.3389/fmicb.2016.00406">https://doi.org/10.3389/fmicb.2016.00406</a>.
 </div>
-<div id="ref-sarver2011" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sarver2011" class="csl-entry" role="listitem">
 Sarver, Brice A.J., Todd J. Ward, Liane R. Gale, Karen Broz, H. Corby Kistler, Takayuki Aoki, Paul Nicholson, Jon Carter, and Kerry O’Donnell. 2011. <span>“Novel Fusarium Head Blight Pathogens from Nepal and Louisiana Revealed by Multilocus Genealogical Concordance.”</span> <em>Fungal Genetics and Biology</em> 48 (12): 1096–1107. <a href="https://doi.org/10.1016/j.fgb.2011.09.002">https://doi.org/10.1016/j.fgb.2011.09.002</a>.
 </div>
-<div id="ref-starkey2007" class="csl-entry" role="doc-biblioentry">
+<div id="ref-starkey2007" class="csl-entry" role="listitem">
 Starkey, David E., Todd J. Ward, Takayuki Aoki, Liane R. Gale, H. Corby Kistler, David M. Geiser, Haruhisa Suga, Beáta Tóth, János Varga, and Kerry O’Donnell. 2007. <span>“Global Molecular Surveillance Reveals Novel Fusarium Head Blight Species and Trichothecene Toxin Diversity.”</span> <em>Fungal Genetics and Biology</em> 44 (11): 1191–1204. <a href="https://doi.org/10.1016/j.fgb.2007.03.001">https://doi.org/10.1016/j.fgb.2007.03.001</a>.
 </div>
-<div id="ref-vanderlee2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-vanderlee2015" class="csl-entry" role="listitem">
 van der Lee, Theo, Hao Zhang, Anne van Diepeningen, and Cees Waalwijk. 2015. <span>“Biogeography ofFusarium Graminearumspecies Complex and Chemotypes: A Review.”</span> <em>Food Additives &amp; Contaminants: Part A</em> 32 (4): 453–60. <a href="https://doi.org/10.1080/19440049.2014.984244">https://doi.org/10.1080/19440049.2014.984244</a>.
 </div>
-<div id="ref-yli-mattila2009" class="csl-entry" role="doc-biblioentry">
+<div id="ref-yli-mattila2009" class="csl-entry" role="listitem">
 Yli-Mattila, Tapani, Tatiana Gagkaeva, Todd J. Ward, Takayuki Aoki, H. Corby Kistler, and Kerry O’Donnell. 2009. <span>“A Novel Asian Clade Within the Fusarium Graminearum Species Complex Includes a Newly Discovered Cereal Head Blight Pathogen from the Russian Far East.”</span> <em>Mycologia</em> 101 (6): 841–52. <a href="https://doi.org/10.3852/08-217">https://doi.org/10.3852/08-217</a>.
 </div>
 </div>

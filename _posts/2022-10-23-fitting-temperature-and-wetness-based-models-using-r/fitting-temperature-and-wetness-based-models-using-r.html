@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   div.csl-bib-body { }
   div.csl-entry {
     clear: both;
+      margin-bottom: 0em;
     }
   .hanging div.csl-entry {
     margin-left:2em;
@@ -134,9 +135,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   <meta name="citation_reference" content="citation_title=Effect of temperature and leaf wetness duration on infection of sweet oranges by Asiatic citrus canker;citation_volume=55;citation_doi=10.1111/j.1365-3059.2006.01393.x;citation_author=M. Dalla Pria;citation_author=R. C. S. Christiano;citation_author=E. L. Furtado;citation_author=L. Amorim;citation_author=A. Bergamin Filho"/>
   <meta name="citation_reference" content="citation_title=A Simple Generic Infection Model for Foliar Fungal Plant Pathogens;citation_volume=95;citation_doi=10.1094/phyto-95-0092;citation_author=R. D. Magarey;citation_author=T. B. Sutton;citation_author=C. L. Thayer"/>
-  <meta name="citation_reference" content="citation_title=Predictive Systems: Modern Approaches to Disease Control;citation_volume=13;citation_doi=10.1146/annurev.py.13.090175.000335;citation_author=R A Krause;citation_author=L B Massie"/>
+  <meta name="citation_reference" content="citation_title=Predictive Systems: Modern Approaches to Disease Control;citation_volume=13;citation_doi=10.1146/annurev.py.13.090175.000335;citation_author=R. A. Krause;citation_author=L. B. Massie"/>
   <meta name="citation_reference" content="citation_title=A mechanistic model simulating primary infections of downy mildew in grapevine;citation_volume=212;citation_doi=10.1016/j.ecolmodel.2007.10.046;citation_author=Vittorio Rossi;citation_author=Tito Caffi;citation_author=Simona Giosuè;citation_author=Riccardo Bugiani"/>
-  <meta name="citation_reference" content="citation_title=A revision of mills’s criteria for predicting apple scab infection periods;citation_volume=79;citation_doi=10.1094/phyto-79-304;citation_author=William E. MacHardy"/>
+  <meta name="citation_reference" content="citation_title=A revision of Mills’s Criteria for predicting apple scab infection periods;citation_volume=79;citation_doi=10.1094/phyto-79-304;citation_author=William E. MacHardy"/>
   <meta name="citation_reference" content="citation_title=Disease Cycle Approach to Plant Disease Prediction;citation_volume=45;citation_doi=10.1146/annurev.phyto.44.070505.143329;citation_author=Erick D. De Wolf;citation_author=Scott A. Isard"/>
   <meta name="citation_reference" content="citation_title=Influence of temperature and wetness duration on infection of peach and sweet cherry fruits by&lt;i&gt;Monilinia fructicola&lt;/i&gt;;citation_volume=78;citation_doi=10.1094/phyto-78-1352;citation_author=A. R. Biggs"/>
   <meta name="citation_reference" content="citation_title=Predicting Severity of Asian Soybean Rust Epidemics with Empirical Rainfall Models;citation_volume=96;citation_doi=10.1094/phyto-96-0797;citation_author=E. M. Del Ponte;citation_author=C. V. Godoy;citation_author=X. Li;citation_author=X. B. Yang"/>
@@ -149,7 +150,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["cover2.png","fitting-temperature-and-wetness-based-models-using-r_files/anchor-4.2.2/anchor.min.js","fitting-temperature-and-wetness-based-models-using-r_files/bowser-1.9.3/bowser.min.js","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/css/crosstalk.min.css","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/js/crosstalk.js","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/js/crosstalk.js.map","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/js/crosstalk.min.js","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/js/crosstalk.min.js.map","fitting-temperature-and-wetness-based-models-using-r_files/crosstalk-1.2.0/scss/crosstalk.scss","fitting-temperature-and-wetness-based-models-using-r_files/distill-2.2.21/template.v2.js","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-10-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-11-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-5-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-8-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-9-1.png","fitting-temperature-and-wetness-based-models-using-r_files/header-attrs-2.11/header-attrs.js","fitting-temperature-and-wetness-based-models-using-r_files/header-attrs-2.17/header-attrs.js","fitting-temperature-and-wetness-based-models-using-r_files/header-attrs-2.20/header-attrs.js","fitting-temperature-and-wetness-based-models-using-r_files/htmlwidgets-1.5.4/htmlwidgets.js","fitting-temperature-and-wetness-based-models-using-r_files/jquery-3.6.0/jquery-3.6.0.js","fitting-temperature-and-wetness-based-models-using-r_files/jquery-3.6.0/jquery-3.6.0.min.js","fitting-temperature-and-wetness-based-models-using-r_files/jquery-3.6.0/jquery-3.6.0.min.map","fitting-temperature-and-wetness-based-models-using-r_files/plotly-binding-4.10.0/plotly.js","fitting-temperature-and-wetness-based-models-using-r_files/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css","fitting-temperature-and-wetness-based-models-using-r_files/plotly-main-2.5.1/plotly-latest.min.js","fitting-temperature-and-wetness-based-models-using-r_files/popper-2.6.0/popper.min.js","fitting-temperature-and-wetness-based-models-using-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","fitting-temperature-and-wetness-based-models-using-r_files/tippy-6.2.7/tippy-light-border.css","fitting-temperature-and-wetness-based-models-using-r_files/tippy-6.2.7/tippy.css","fitting-temperature-and-wetness-based-models-using-r_files/tippy-6.2.7/tippy.umd.min.js","fitting-temperature-and-wetness-based-models-using-r_files/typedarray-0.1/typedarray.min.js","fitting-temperature-and-wetness-based-models-using-r_files/webcomponents-2.0.0/webcomponents.js","phytopathology.csl","references.bib","temperature.png","wet_temp.png","wetness.png"]}
+  {"type":"character","attributes":{},"value":["cover2.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-11-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-5-1.png","fitting-temperature-and-wetness-based-models-using-r_files/figure-html5/unnamed-chunk-9-1.png","phytopathology.csl","references.bib","temperature.png","wet_temp.png","wetness.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -261,9 +262,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -358,6 +371,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1119,6 +1137,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1196,8 +1220,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1223,12 +1248,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1506,7 +1532,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="fitting-temperature-and-wetness-based-models-using-r_files/header-attrs-2.21/header-attrs.js"></script>
+  <script src="fitting-temperature-and-wetness-based-models-using-r_files/header-attrs-2.26/header-attrs.js"></script>
   <script src="fitting-temperature-and-wetness-based-models-using-r_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="fitting-temperature-and-wetness-based-models-using-r_files/popper-2.6.0/popper.min.js"></script>
   <link href="fitting-temperature-and-wetness-based-models-using-r_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1527,7 +1553,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Fitting temperature- and moisture-based models to infection data using R","description":"In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis Beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/emdelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-10-23T00:00:00.000-03:00","citationText":"Ponte, 2022"}
+{"title":"Fitting temperature- and moisture-based models to infection data using R","description":"In many processes of the disease cycle, such as infection - one of the most critical components for disease forecasting - the interaction between temperature and the duration of moisture determine the amount of succesful infection sites and resulting disease severity. This post shows how to fit, in R language, a form of the Analytis Beta model to infection data as a function of temperature and an asymptotic regression model to infection as a function of moisture duration.","authors":[{"author":"Emerson Del Ponte","authorURL":"https://twitter.com/emdelponte","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-10-23T00:00:00.000+08:00","citationText":"Ponte, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1538,6 +1564,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Fitting temperature- and moisture-based models to infection data using R</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt-tag">R4PlantPath</div>
@@ -1613,12 +1640,12 @@ We need the {minpack.lm} library to avoid parameterization issues.</p>
 Formula: y ~ a * ((t - b)^d) * ((c - t)^e)
 
 Parameters:
-   Estimate Std. Error t value Pr(&gt;|t|)    
-a  0.001303   0.006295   0.207    0.855    
-b 11.999999   4.875414   2.461    0.133    
-c 40.137236   0.346763 115.748 7.46e-05 ***
-d  1.760101   1.193017   1.475    0.278    
-e  0.830868   0.445213   1.866    0.203    
+   Estimate Std. Error t value  Pr(&gt;|t|)    
+a  0.001303   0.006295   0.207     0.855    
+b 11.999999   4.875412   2.461     0.133    
+c 40.137236   0.346763 115.748 0.0000746 ***
+d  1.760101   1.193017   1.475     0.278    
+e  0.830868   0.445213   1.866     0.203    
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
@@ -1637,7 +1664,7 @@ Algorithm &quot;port&quot;, convergence message: Relative error between `par&#39
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>fit_temp</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>          a           b           c           d           e 
- 0.00130259 11.99999931 40.13723602  1.76010097  0.83086798 </code></pre>
+ 0.00130259 11.99999936 40.13723602  1.76010097  0.83086798 </code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>a</span> <span class='op'>&lt;-</span> <span class='va'>fit_temp</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span></span>
 <span><span class='va'>b</span> <span class='op'>&lt;-</span> <span class='va'>fit_temp</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getAllPars</span><span class='op'>(</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span></span>
@@ -1683,7 +1710,8 @@ The <span class="math inline">\(x\)</span> is wetness duration in hours and <spa
 </div>
 </div>
 <p>Now we fit a three-parameter asymptotic regression model.
-These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity. This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law.
+These models describe a limited growth, where y approaches an horizontal asymptote as x tends to infinity.
+This equation is also known as Monomolecular Growth, Mitscherlich law or von Bertalanffy law.
 See this <a href="https://www.statforbiology.com/nonlinearregression/usefulequations">tutorial</a> for comprehensive information about fitting several non-linear regression models in R.</p>
 <p>The model can be written as</p>
 <p><span class="math display">\[
@@ -1710,14 +1738,14 @@ Parameters:
    Estimate Std. Error t value Pr(&gt;|t|)  
 c1 -0.04898    0.31182  -0.157   0.8828  
 d1  2.00746    0.70594   2.844   0.0467 *
-e1 11.63694    9.33183   1.247   0.2804  
+e1 11.63694    9.33184   1.247   0.2804  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 0.3296 on 4 degrees of freedom
 
 Number of iterations to convergence: 7 
-Achieved convergence tolerance: 1.49e-08</code></pre>
+Achieved convergence tolerance: 0.0000000149</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://modelr.tidyverse.org'>modelr</a></span><span class='op'>)</span></span>
 <span><span class='fu'>modelr</span><span class='fu'>::</span><span class='fu'><a href='https://modelr.tidyverse.org/reference/model-quality.html'>rsquare</a></span><span class='op'>(</span><span class='va'>fit_wet</span>, <span class='va'>wet</span><span class='op'>)</span></span></code></pre>
@@ -1783,33 +1811,33 @@ Then, we obtain the disease value for each combination of <span class="math inli
 <p>That’s it.
 Feel free to <a href="mailto:%20delponte@ufv.br">reach</a> me in case of questions!</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-biggs1988" class="csl-entry" role="doc-biblioentry">
-Biggs, A. R. 1988. Influence of temperature and wetness duration on infection of peach and sweet cherry fruits by<span><em>Monilinia fructicola</em></span>. Phytopathology. 78:1352 Available at: <a href="http://dx.doi.org/10.1094/phyto-78-1352">http://dx.doi.org/10.1094/phyto-78-1352</a>.
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-biggs1988" class="csl-entry" role="listitem">
+Biggs, A. R. 1988. <a href="https://doi.org/10.1094/phyto-78-1352">Influence of temperature and wetness duration on infection of peach and sweet cherry fruits by<span><em>Monilinia fructicola</em></span></a>. Phytopathology. 78:1352.
 </div>
-<div id="ref-dallapria2006" class="csl-entry" role="doc-biblioentry">
-Dalla Pria, M., Christiano, R. C. S., Furtado, E. L., Amorim, L., and Bergamin Filho, A. 2006. Effect of temperature and leaf wetness duration on infection of sweet oranges by Asiatic citrus canker. Plant Pathology. 55:657–663 Available at: <a href="http://dx.doi.org/10.1111/j.1365-3059.2006.01393.x">http://dx.doi.org/10.1111/j.1365-3059.2006.01393.x</a>.
+<div id="ref-dallapria2006" class="csl-entry" role="listitem">
+Dalla Pria, M., Christiano, R. C. S., Furtado, E. L., Amorim, L., and Bergamin Filho, A. 2006. <a href="https://doi.org/10.1111/j.1365-3059.2006.01393.x">Effect of temperature and leaf wetness duration on infection of sweet oranges by <span>Asiatic</span> citrus canker</a>. Plant Pathology. 55:657–663.
 </div>
-<div id="ref-dewolf2007" class="csl-entry" role="doc-biblioentry">
-De Wolf, E. D., and Isard, S. A. 2007. Disease Cycle Approach to Plant Disease Prediction. Annual Review of Phytopathology. 45:203–220 Available at: <a href="http://dx.doi.org/10.1146/annurev.phyto.44.070505.143329">http://dx.doi.org/10.1146/annurev.phyto.44.070505.143329</a>.
+<div id="ref-dewolf2007" class="csl-entry" role="listitem">
+De Wolf, E. D., and Isard, S. A. 2007. <a href="https://doi.org/10.1146/annurev.phyto.44.070505.143329">Disease Cycle Approach to Plant Disease Prediction</a>. Annual Review of Phytopathology. 45:203–220.
 </div>
-<div id="ref-delponte2006" class="csl-entry" role="doc-biblioentry">
-Del Ponte, E. M., Godoy, C. V., Li, X., and Yang, X. B. 2006. Predicting Severity of Asian Soybean Rust Epidemics with Empirical Rainfall Models. Phytopathology®. 96:797–803 Available at: <a href="http://dx.doi.org/10.1094/phyto-96-0797">http://dx.doi.org/10.1094/phyto-96-0797</a>.
+<div id="ref-delponte2006" class="csl-entry" role="listitem">
+Del Ponte, E. M., Godoy, C. V., Li, X., and Yang, X. B. 2006. <a href="https://doi.org/10.1094/phyto-96-0797">Predicting Severity of Asian Soybean Rust Epidemics with Empirical Rainfall Models</a>. Phytopathology®. 96:797–803.
 </div>
-<div id="ref-hau1990" class="csl-entry" role="doc-biblioentry">
-Hau, B., and Kranz, J. 1990. Mathematics and statistics for analyses in epidemiology. In Springer Berlin Heidelberg, p. 12–52. Available at: <a href="http://dx.doi.org/10.1007/978-3-642-75398-5_2">http://dx.doi.org/10.1007/978-3-642-75398-5_2</a>.
+<div id="ref-hau1990" class="csl-entry" role="listitem">
+Hau, B., and Kranz, J. 1990. <a href="https://doi.org/10.1007/978-3-642-75398-5_2">Mathematics and statistics for analyses in epidemiology</a>. In Springer Berlin Heidelberg, p. 12–52.
 </div>
-<div id="ref-krause1975" class="csl-entry" role="doc-biblioentry">
-Krause, R. A., and Massie, L. B. 1975. Predictive Systems: Modern Approaches to Disease Control. Annual Review of Phytopathology. 13:31–47 Available at: <a href="http://dx.doi.org/10.1146/annurev.py.13.090175.000335">http://dx.doi.org/10.1146/annurev.py.13.090175.000335</a>.
+<div id="ref-krause1975" class="csl-entry" role="listitem">
+Krause, R. A., and Massie, L. B. 1975. <a href="https://doi.org/10.1146/annurev.py.13.090175.000335">Predictive Systems: Modern Approaches to Disease Control</a>. Annual Review of Phytopathology. 13:31–47.
 </div>
-<div id="ref-machardy1989" class="csl-entry" role="doc-biblioentry">
-MacHardy, W. E. 1989. A revision of mills’s criteria for predicting apple scab infection periods. Phytopathology. 79:304 Available at: <a href="http://dx.doi.org/10.1094/phyto-79-304">http://dx.doi.org/10.1094/phyto-79-304</a>.
+<div id="ref-machardy1989" class="csl-entry" role="listitem">
+MacHardy, W. E. 1989. <a href="https://doi.org/10.1094/phyto-79-304">A revision of <span class="nocase">Mills’s Criteria</span> for predicting apple scab infection periods</a>. Phytopathology. 79:304.
 </div>
-<div id="ref-magarey2005" class="csl-entry" role="doc-biblioentry">
-Magarey, R. D., Sutton, T. B., and Thayer, C. L. 2005. A Simple Generic Infection Model for Foliar Fungal Plant Pathogens. Phytopathology®. 95:92–100 Available at: <a href="http://dx.doi.org/10.1094/PHYTO-95-0092">http://dx.doi.org/10.1094/PHYTO-95-0092</a>.
+<div id="ref-magarey2005" class="csl-entry" role="listitem">
+Magarey, R. D., Sutton, T. B., and Thayer, C. L. 2005. <a href="https://doi.org/10.1094/phyto-95-0092">A Simple Generic Infection Model for Foliar Fungal Plant Pathogens</a>. Phytopathology®. 95:92–100.
 </div>
-<div id="ref-rossi2008" class="csl-entry" role="doc-biblioentry">
-Rossi, V., Caffi, T., Giosuè, S., and Bugiani, R. 2008. A mechanistic model simulating primary infections of downy mildew in grapevine. Ecological Modelling. 212:480–491 Available at: <a href="http://dx.doi.org/10.1016/j.ecolmodel.2007.10.046">http://dx.doi.org/10.1016/j.ecolmodel.2007.10.046</a>.
+<div id="ref-rossi2008" class="csl-entry" role="listitem">
+Rossi, V., Caffi, T., Giosuè, S., and Bugiani, R. 2008. <a href="https://doi.org/10.1016/j.ecolmodel.2007.10.046">A mechanistic model simulating primary infections of downy mildew in grapevine</a>. Ecological Modelling. 212:480–491.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->

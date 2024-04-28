@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,16 +74,39 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+      margin-bottom: 0em;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -109,9 +133,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=ClubrootTracker: A Resource to Plan a Clubroot-Free Farm;citation_publication_date=2020;citation_volume=21;citation_doi=10.1094/php-01-20-0003-rs;citation_author=Kevin Muirhead;citation_author=Christopher D. Todd;citation_author=Yangdou Wei;citation_author=Peta Bonham-Smith;citation_author=Edel Pérez-López"/>
-  <meta name="citation_reference" content="citation_title=ClubrootTracker: A Resource to Plan a Clubroot-Free Farm;citation_publication_date=2020;citation_volume=21;citation_doi=10.1094/php-01-20-0003-rs;citation_author=Kevin Muirhead;citation_author=Christopher D. Todd;citation_author=Yangdou Wei;citation_author=Peta Bonham-Smith;citation_author=Edel Pérez-López"/>
-  <meta name="citation_reference" content="citation_title=A &gt;2-year crop rotation reduces resting spores of Plasmodiophora brassicae in soil and the impact of clubroot on canola;citation_publication_date=2015;citation_volume=70;citation_doi=10.1016/j.eja.2015.07.007;citation_author=Gary Peng;citation_author=Denis Pageau;citation_author=Stephen E. Strelkov;citation_author=Bruce D. Gossen;citation_author=Sheau-Fang Hwang;citation_author=Rachid Lahlali"/>
+  <meta name="citation_reference" content="citation_title=ClubrootTracker: A Resource to Plan a Clubroot-Free Farm;citation_volume=21;citation_doi=10.1094/php-01-20-0003-rs;citation_author=Kevin Muirhead;citation_author=Christopher D. Todd;citation_author=Yangdou Wei;citation_author=Peta Bonham-Smith;citation_author=Edel Pérez-López"/>
+  <meta name="citation_reference" content="citation_title=ClubrootTracker: A Resource to Plan a Clubroot-Free Farm;citation_volume=21;citation_doi=10.1094/php-01-20-0003-rs;citation_author=Kevin Muirhead;citation_author=Christopher D. Todd;citation_author=Yangdou Wei;citation_author=Peta Bonham-Smith;citation_author=Edel Pérez-López"/>
+  <meta name="citation_reference" content="citation_title=A &gt;2-year crop rotation reduces resting spores of Plasmodiophora brassicae in soil and the impact of clubroot on canola;citation_volume=70;citation_doi=10.1016/j.eja.2015.07.007;citation_author=Gary Peng;citation_author=Denis Pageau;citation_author=Stephen E. Strelkov;citation_author=Bruce D. Gossen;citation_author=Sheau-Fang Hwang;citation_author=Rachid Lahlali"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -120,7 +144,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["clubroot.png","clubroot2.png","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/anchor-4.2.2/anchor.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/bowser-1.9.3/bowser.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/distill-2.2.21/template.v2.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/header-attrs-2.7.3/header-attrs.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/header-attrs-2.7/header-attrs.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/jquery-1.11.3/jquery.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/popper-2.6.0/popper.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy-bundle.umd.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy-light-border.css","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy.css","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy.umd.min.js","clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/webcomponents-2.0.0/webcomponents.js","references.bib"]}
+  {"type":"character","attributes":{},"value":["clubroot.png","clubroot2.png","references.bib"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -191,6 +215,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -231,9 +256,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -328,6 +365,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -432,10 +474,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1093,6 +1131,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1170,8 +1214,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1197,12 +1242,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1267,7 +1313,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1278,6 +1339,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1377,6 +1463,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1399,7 +1487,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1438,8 +1526,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/header-attrs-2.7.3/header-attrs.js"></script>
-  <script src="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/header-attrs-2.26/header-attrs.js"></script>
+  <script src="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/popper-2.6.0/popper.min.js"></script>
   <link href="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="clubroottracker-an-open-database-for-tracking-the-presence-of-clubroot-and-plasmodiophora-brassicae-worldwide_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1459,7 +1547,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide","description":"Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae* putting at risk Brassicas worldwide. An open database to record the presence of clubroot and *Plasmodiophora brassicae* reported by researchers, industry and growers.","authors":[{"author":"Edel Lopez","authorURL":"https://twitter.com/Edel_PLopez","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-23T00:00:00.000+00:00","citationText":"Lopez, 2021"}
+{"title":"ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide","description":"Clubroot is a devastating disease caused by the soil-borne protist *Plasmodiophora brassicae* putting at risk Brassicas worldwide. An open database to record the presence of clubroot and *Plasmodiophora brassicae* reported by researchers, industry and growers.","authors":[{"author":"Edel Lopez","authorURL":"https://twitter.com/Edel_PLopez","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-23T00:00:00.000+08:00","citationText":"Lopez, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1470,9 +1558,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>ClubrootTracker, an open database for tracking the presence of clubroot and Plasmodiophora brassicae worldwide</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Databases</div>
+<div class="dt-tag">Databases</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>Clubroot is a devastating disease caused by the soil-borne protist <em>Plasmodiophora brassicae</em> putting at risk Brassicas worldwide. An open database to record the presence of clubroot and <em>Plasmodiophora brassicae</em> reported by researchers, industry and growers.</p></p>
@@ -1486,27 +1575,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="background">Background</h2>
-<p>Clubroot is a devastating disease caused by the soil-borne protist <em>Plasmodiophora brassicae</em>, putting at risk Brassicas worldwide. The clubroot pathogen, as final step of its life cycle, releases resting spores to the soil where they can remain viable for up to 20 years <span class="citation" data-cites="peng2015">(<a href="#ref-peng2015" role="doc-biblioref">Peng et al. 2015</a>)</span>, making the management of the disease very difficult. For growers, to know the distribution of the pathogen is key to avoid the introduction of infested soil and to perform the proper disinfestation if machinery from fellow farmers is used in their lands.</p>
+<p>Clubroot is a devastating disease caused by the soil-borne protist <em>Plasmodiophora brassicae</em>, putting at risk Brassicas worldwide.
+The clubroot pathogen, as final step of its life cycle, releases resting spores to the soil where they can remain viable for up to 20 years <span class="citation" data-cites="peng2015">(<a href="#ref-peng2015" role="doc-biblioref">Peng et al. 2015</a>)</span>, making the management of the disease very difficult.
+For growers, to know the distribution of the pathogen is key to avoid the introduction of infested soil and to perform the proper disinfestation if machinery from fellow farmers is used in their lands.</p>
 <h2 id="what-is-the-database-for">What is the database for?</h2>
-<p>ClubrootTracker is an open database to record the presence of clubroot disease. This project was published as a Resource Announcement in Plant Health Progress <span class="citation" data-cites="muirhead2020">(<a href="#ref-muirhead2020" role="doc-biblioref">Muirhead et al. 2020</a>)</span>, and a full article will be published once new locations are recorded.</p>
+<p>ClubrootTracker is an open database to record the presence of clubroot disease.
+This project was published as a Resource Announcement in Plant Health Progress <span class="citation" data-cites="muirhead2020">(<a href="#ref-muirhead2020" role="doc-biblioref">Muirhead et al. 2020</a>)</span>, and a full article will be published once new locations are recorded.</p>
 <h2 id="how-it-is-developed">How it is developed?</h2>
-<p>ClubrootTracker is an interactive map tool written in the Bootstrap version 3.3.7 web framework using leaflet.js (<a href="https://leafletjs.com" class="uri">https://leafletjs.com</a>) and a JavaScript library for the interactive map user interface. Using Python, GPS data was converted into a GeoJSON file, allowing to render the data points of the areas affected by clubroot.</p>
+<p>ClubrootTracker is an interactive map tool written in the Bootstrap version 3.3.7 web framework using leaflet.js (<a href="https://leafletjs.com" class="uri">https://leafletjs.com</a>) and a JavaScript library for the interactive map user interface.
+Using Python, GPS data was converted into a GeoJSON file, allowing to render the data points of the areas affected by clubroot.</p>
 <figure>
-<img src="clubroot2.png" alt="Screenshots of the ClubrootTracker tool showing the start page, menu and a selected location" /><figcaption aria-hidden="true">Screenshots of the ClubrootTracker tool showing the start page, menu and a selected location</figcaption>
+<img src="clubroot2.png" alt="Screenshots of the ClubrootTracker tool showing the start page, menu and a selected location" />
+<figcaption aria-hidden="true">Screenshots of the ClubrootTracker tool showing the start page, menu and a selected location</figcaption>
 </figure>
 <h2 id="whats-next">What’s next?</h2>
-<p>We would like to include worldwide clubroot distribution data. Due to confidentiality concerns expressed by some government officials and growers we are now working in a way to display the distribution of the pathogen without data points. We are also working with scientists from Europe and Latin America to start recording clubroot distribution.</p>
+<p>We would like to include worldwide clubroot distribution data.
+Due to confidentiality concerns expressed by some government officials and growers we are now working in a way to display the distribution of the pathogen without data points.
+We are also working with scientists from Europe and Latin America to start recording clubroot distribution.</p>
 <p>Project website: <a href="http://clubroottracker.ca/" class="uri">http://clubroottracker.ca/</a><br />
 Data source: <a href="https://github.com/kevmu/ClubrootTracker" class="uri">https://github.com/kevmu/ClubrootTracker</a><br />
 Authors and maintainer: Edel Pérez-López and Kevin Muirhead<br />
 Maintainer: Kevin Muirhead<br />
 Current Collaborators: Mauricio Luna, Thies Marten Heick, and Gunilla Berg.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-muirhead2020" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-muirhead2020" class="csl-entry" role="listitem">
 Muirhead, Kevin, Christopher D. Todd, Yangdou Wei, Peta Bonham-Smith, and Edel Pérez-López. 2020. <span>“ClubrootTracker: A Resource to Plan a Clubroot-Free Farm.”</span> <em>Plant Health Progress</em> 21 (3): 185–87. <a href="https://doi.org/10.1094/php-01-20-0003-rs">https://doi.org/10.1094/php-01-20-0003-rs</a>.
 </div>
-<div id="ref-peng2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-peng2015" class="csl-entry" role="listitem">
 Peng, Gary, Denis Pageau, Stephen E. Strelkov, Bruce D. Gossen, Sheau-Fang Hwang, and Rachid Lahlali. 2015. <span>“A &gt;2-Year Crop Rotation Reduces Resting Spores of Plasmodiophora Brassicae in Soil and the Impact of Clubroot on Canola.”</span> <em>European Journal of Agronomy</em> 70 (October): 78–84. <a href="https://doi.org/10.1016/j.eja.2015.07.007">https://doi.org/10.1016/j.eja.2015.07.007</a>.
 </div>
 </div>

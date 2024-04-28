@@ -18,16 +18,15 @@ categories:
   - Reproducible Research
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ![](Julia_Programming_Language_Logo.svg)
 
-Wikipedia describes [Julia](https://julialang.org) by saying, it "is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science."^[https://en.wikipedia.org/wiki/Julia_(programming_language)]
+Wikipedia describes [Julia](https://julialang.org) by saying, it "is a is a high-level, high-performance, dynamic programming language. While it is a general-purpose language and can be used to write any application, many of its features are well suited for numerical analysis and computational science"^[<https://en.wikipedia.org/wiki/Julia_(programming_language)>].
 In short, it can be scripted like R, which many of us are likely to be more familiar with.
-But provides efficiency gains, being much faster than R to execute code^[https://julialang.org/benchmarks/].
+But provides efficiency gains, being much faster than R to execute code^[<https://julialang.org/benchmarks/>].
 While this may not matter much in day-to-day work for you, if you have a large set of data to work with, *e.g.*, large geographic or temporal sets of data covering country or global areas for many years, Julia may be useful to you in performing the analysis.
 Alternatively, maybe you're just curious and want to try something new.
 Even though it's not as mature, Julia does have some features that R does not like [multiple dispatch](https://miguelraz.github.io/blog/dispatch/index.html), which may be of interest to more advanced users.
@@ -46,7 +45,7 @@ Then follow the directions from <https://julialang.org/downloads/platform/> to i
 
 In the "Disease Progress Over Time" module of the "Epidemiology and Ecology in R", Sparks et al. [-@Sparks2008] demonstrate how to write an R function to calculate AUDPC as follows.
 
-```r
+``` r
 # Build a function for AUDPC calculation
 # the left curly bracket indicates the beginning
 # of the function
@@ -123,10 +122,10 @@ r_audpc <- function(disease.severity, time.period) {
 ```
 
 Or, if you prefer, you can install libraries from CRAN that provide functions for calculating AUDPC rather than writing your own.
-The R packages [_agricolae_](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [_epifitter_](https://cran.r-project.org/package=epifitter) [@Alves2021] provide easy to use functions to calculate AUDPC, `audpc()` and `AUDPC()`, respectively.
-The following code an example from _agricolae's_ help showing how to calculate AUDPC in R using our own function, `r_audpc()`.
+The R packages [*agricolae*](https://cran.r-project.org/package=agricolae) [@deMendiburu2021] and [*epifitter*](https://cran.r-project.org/package=epifitter) [@Alves2021] provide easy to use functions to calculate AUDPC, `audpc()` and `AUDPC()`, respectively.
+The following code an example from *agricolae's* help showing how to calculate AUDPC in R using our own function, `r_audpc()`.
 
-```r
+``` r
 > dates <- c(14, 21, 28) # days
 > evaluation <- c(40, 80, 90)
 > r_audpc(evaluation, dates)
@@ -171,7 +170,7 @@ function j_audpc(evaluation, dates)
         intvec[i] = dates[i + 1] - dates[i]
         
         # here we sum the values in the loop as Julia will compile this and it
-        # will run more quickly. In R this is undesireable behaviour so we
+        # will run more quickly. In R this is undesirable behaviour so we
         # performed this outside of the loop.
         
         # also note here that before the `*` we have a `.`, this means to
@@ -188,7 +187,7 @@ function j_audpc(evaluation, dates)
 end
 ```
 
-```julia
+``` julia
 julia> dates = [14, 21, 28] # days
 julia> evaulation = [40, 80, 90]
 julia> j_audpc(evaulation, dates)
@@ -212,4 +211,4 @@ For a more detailed comparison of complete Julia and R packages that offer an ex
 
 ## Colophon
 
-This post was constructed using R Version ```r paste(R.Version()[c("major", "minor")], collapse = ".")``` [@RCore2021] and Julia Version ```r JuliaCall::julia_eval("VERSION")``` [@Bezanson2017] using _JuliaCall_ Pull Request [#174](https://github.com/Non-Contradiction/JuliaCall/pull/174).
+This post was constructed using R Version `r paste(R.Version()[c("major", "minor")], collapse = ".")` [@RCore2021] and Julia Version `r JuliaCall::julia_eval("VERSION")` [@Bezanson2017] using *JuliaCall* [@Li2019].

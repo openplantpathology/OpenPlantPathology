@@ -1,7 +1,7 @@
 ---
 title: "OPP Interviews: Sophien Kamoun"
 description: |
-  In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution. 
+  In this OPP series we will be interviewing scientists in Plant Pathology or related areas who has embraced open science and contributed knowledge and tools to advance the field. Our first interviewee is Prof. Sophien Kamoun, a senior scientist with the Sainsbury Laboratory, Norwich, UK. Dr. Kamoun is known for his prolific Tweeting but, also importantly, for his work with oomycetes, effectors, genomics and evolution. 
 
 author:
   - name: Emerson Del Ponte

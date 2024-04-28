@@ -21,8 +21,9 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Evolution is not static: understanding factors that govern pathogen-host diversity</title>
@@ -127,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/anchor-4.2.2/anchor.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/bowser-1.9.3/bowser.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/distill-2.2.21/template.v2.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/header-attrs-2.6.6/header-attrs.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/jquery-1.11.3/jquery.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/popper-2.6.0/popper.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/tippy-6.2.7/tippy-bundle.umd.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/tippy-6.2.7/tippy-light-border.css","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/tippy-6.2.7/tippy.css","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/tippy-6.2.7/tippy.umd.min.js","evolution-is-not-static-understanding-factors-that-govern-pathogen-host-diversity_files/webcomponents-2.0.0/webcomponents.js","interview-remco.png"]}
+  {"type":"character","attributes":{},"value":["interview-remco.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2426,8 +2429,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2493,6 +2496,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Evolution is not static: understanding factors that govern pathogen-host diversity</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Interviews" class="dt-tag">Interviews</a>
@@ -2508,28 +2512,89 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-article">
-<p>Dr. <a href="http://www.remcostam.com/">Remco Stam</a> (<span class="citation" data-cites="EvoMPMI">[@EvoMPMI]</span>(<a href="https://twitter.com/EvoMPMI" class="uri">https://twitter.com/EvoMPMI</a>)), a principal investigator (PI) at Technical University of Munich (Germany), delivered a talk on, <em>The diversity and molecular evolution of plant defence against pathogens in nature</em> on the 6th of March at the <a href="https://openplantpathology.org/virtual_seminars/2020-04-06-remco-stam/">#OPPVirtualSeminars</a>.</p>
+<p>Dr. <a href="http://www.remcostam.com/">Remco Stam</a> (<a href="https://twitter.com/EvoMPMI">@EvoMPMI</a>), a principal investigator (PI) at Technical University of Munich (Germany), delivered a talk on, <em>The diversity and molecular evolution of plant defence against pathogens in nature</em> on the 6th of March at the <a href="https://openplantpathology.org/virtual_seminars/2020-04-06-remco-stam/">#OPPVirtualSeminars</a>.</p>
 <h3 id="how-did-you-find-your-experience-presenting-for-the-opp-virtual-seminar-have-you-done-something-similar-in-the-past">How did you find your experience presenting for the OPP Virtual Seminar? Have you done something similar in the past?</h3>
-<p>I found presenting very exciting, but also a little strange because you are not seeing an audience like you normally would. I love public speaking and I love what I do, so I love telling people about it. I enjoy the interaction at conferences and seeing people’s expressions and their body language, it tells you a lot about your talk and the delivery thereof. Virtually, you can not gauge the ‘mood of the room’ and you can not tell if people are distracted or on phones or making coffee… But, a positive is that you can judge from the questions asked and the feedback, that people did pay attention, and even more enjoyed the talk. I have given a virtual seminar before, with a department in Copenhagen, but there was a camera in the room with the audience, so there was some type of gauge for interactions and interest. I most definitely would give another talk in this format though.</p>
+<p>I found presenting very exciting, but also a little strange because you are not seeing an audience like you normally would.
+I love public speaking and I love what I do, so I love telling people about it.
+I enjoy the interaction at conferences and seeing people’s expressions and their body language, it tells you a lot about your talk and the delivery thereof.
+Virtually, you can not gauge the ‘mood of the room’ and you can not tell if people are distracted or on phones or making coffee…
+But, a positive is that you can judge from the questions asked and the feedback, that people did pay attention, and even more enjoyed the talk.
+I have given a virtual seminar before, with a department in Copenhagen, but there was a camera in the room with the audience, so there was some type of gauge for interactions and interest.
+I most definitely would give another talk in this format though.</p>
 <h3 id="any-advice-to-future-virtual-seminar-presenters">Any advice to future virtual seminar presenters?</h3>
-<p>I would say my biggest piece of advice is - be yourself, like you always are. Keep true to yourself and present results you have confidence in, results you can validate with robust analyses. Some practical advice is to check your microphone and that you do not move away from your computer if you only have access to your computer’s internal microphone. You can also find a way to grab people’s attention, like a trigger, to bring them back to focusing on your presentation.</p>
+<p>I would say my biggest piece of advice is - be yourself, like you always are.
+Keep true to yourself and present results you have confidence in, results you can validate with robust analyses.
+Some practical advice is to check your microphone and that you do not move away from your computer if you only have access to your computer’s internal microphone.
+You can also find a way to grab people’s attention, like a trigger, to bring them back to focusing on your presentation.</p>
 <h3 id="how-do-you-decide-which-population-genetic-statistics-evolutionary-parameters-to-select-at-the-beginning-of-your-study">How do you decide which population genetic statistics (evolutionary parameters) to select at the beginning of your study?</h3>
-<p>It is key that you can include all the parameters, as this provides the best opportunity to understand the whole system, with a slightly different lens for each parameter and in different combinations thereof too. Once you have collected your samples, you are bound to your data. Therefore it is key to think about the questions you want to be answered properly before sampling. You can use composites of the parameters measured and make inferences from calculating statistics from one another. But you always require robust data. <a href="https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.16017">In our case</a>, we realised that data on rare SNPs was not very reliable and some of the derived statistics would be over- or under-estimated. Then you need to make choices and find workarounds. As researchers we are also all limited by our budgets.</p>
-<p>You have to make the best with what you have. You need to be clever in how you use the funds you are provided with to answer the most important questions. Ultimately, you need to select parameters which are going to enable you to do this. I read a lot of literature and my curiosity piqued. I was interested in attempting to “fill some of the gaps” of the literature related to population dynamics and how this relates to gene families.</p>
+<p>It is key that you can include all the parameters, as this provides the best opportunity to understand the whole system, with a slightly different lens for each parameter and in different combinations thereof too.
+Once you have collected your samples, you are bound to your data.
+Therefore it is key to think about the questions you want to be answered properly before sampling.
+You can use composites of the parameters measured and make inferences from calculating statistics from one another.
+But you always require robust data.
+<a href="https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.16017">In our case</a>, we realised that data on rare SNPs was not very reliable and some of the derived statistics would be over- or under-estimated.
+Then you need to make choices and find workarounds.
+As researchers we are also all limited by our budgets.</p>
+<p>You have to make the best with what you have.
+You need to be clever in how you use the funds you are provided with to answer the most important questions.
+Ultimately, you need to select parameters which are going to enable you to do this.
+I read a lot of literature and my curiosity piqued.
+I was interested in attempting to “fill some of the gaps” of the literature related to population dynamics and how this relates to gene families.</p>
 <h3 id="if-i-understand-the-work-correctly-a-higher-non-synonymous-diversity-is-observed-in-some-nlrs-across-all-the-groups-what-implication-does-this-hold">If I understand the work correctly, a higher non-synonymous diversity is observed in some NLRs across all the groups, what implication does this hold?</h3>
-<p>This is the whole point of figuring out the NLRs. On the one hand, we wanted to understand the evolutionary pressures and diversification of the genes. This is very important in some aspects of resistance in host plants because these are thought to adapt to new pathogens. Whereas, on the other hand, some genes are conserved, where no polymorphisms are observed, and these can also be vital to resistance. This paradox is what we need to understand the mechanisms underlying the purified or diversified selection. It is important that we know how plants in nature are “selecting” genes to assure pathogen recognition. Hopefully, the long term application is to see how these findings can be re-framed for resistance breeding or identifying candidate genes.</p>
+<p>This is the whole point of figuring out the NLRs.
+On the one hand, we wanted to understand the evolutionary pressures and diversification of the genes.
+This is very important in some aspects of resistance in host plants because these are thought to adapt to new pathogens.
+Whereas, on the other hand, some genes are conserved, where no polymorphisms are observed, and these can also be vital to resistance.
+This paradox is what we need to understand the mechanisms underlying the purified or diversified selection.
+It is important that we know how plants in nature are “selecting” genes to assure pathogen recognition.
+Hopefully, the long term application is to see how these findings can be re-framed for resistance breeding or identifying candidate genes.</p>
 <h3 id="where-many-other-researchers-avoid-outliers-it-seems-that-outliers-are-important-components-of-your-research-i-am-making-this-assumption-from-additionally-reading-your-preprint.-can-you-elaborate-on-this-perhaps-with-reference-to-the-fst-indexes">Where many other researchers avoid outliers, it seems that outliers are important components of your research, I am making this assumption from additionally reading your preprint. Can you elaborate on this, perhaps with reference to the Fst indexes?</h3>
-<p>Evolution is not static, there is a lot of noise. A mutation might not mean anything, we may only see the significance thereof in later generations or by comparing a pattern we observe. This is why the outliers are so important to us, especially when we want to infer results from our Fst values. Usually, genes which are the most conserved or diverse are found outside of the normal distribution. This is an indication that the mutation was not a random chance but one of a process of selection. Of course, we filter out errors of the data set prior to assuming the outliers are significant so that we can inspect them further. One of the terms you can look into if these concepts are new to you is ‘genetic drift’. We are interested in detecting if the loss of a gene was purely by chance or not.</p>
+<p>Evolution is not static, there is a lot of noise.
+A mutation might not mean anything, we may only see the significance thereof in later generations or by comparing a pattern we observe.
+This is why the outliers are so important to us, especially when we want to infer results from our Fst values.
+Usually, genes which are the most conserved or diverse are found outside of the normal distribution.
+This is an indication that the mutation was not a random chance but one of a process of selection.
+Of course, we filter out errors of the data set prior to assuming the outliers are significant so that we can inspect them further.
+One of the terms you can look into if these concepts are new to you is ‘genetic drift’.
+We are interested in detecting if the loss of a gene was purely by chance or not.</p>
 <h3 id="what-is-your-approach-to-data-analysis-and-analytical-workflows">What is your approach to data analysis and analytical workflows?</h3>
-<p>As the PI, I do not prescribe a specific scripting language for our analyses. Everyone is free to do what they are comfortable with, as long as it works effectively. If you prefer Python over Perl, that is fine, I prefer Python and R, but it depends on your preference. We are standing on the shoulders of giants when it comes to selecting software. Gene sequencing and genome research has really advanced and taken a foothold over the last 20-years. We are an open community, where a lot of discussion and engagement is made to learn what are the best practices. Of course, there are risks, you need to keep level headed and make sure you share protocols and results you are confident in, that are validated. It is great to share and get your work out there. It is not only for your benefit and that people know you are reliable, but it is a platform where you can save people time, instead of struggling to put protocols in place that you have tried and tested.</p>
+<p>As the PI, I do not prescribe a specific scripting language for our analyses.
+Everyone is free to do what they are comfortable with, as long as it works effectively.
+If you prefer Python over Perl, that is fine, I prefer Python and R, but it depends on your preference.
+We are standing on the shoulders of giants when it comes to selecting software.
+Gene sequencing and genome research has really advanced and taken a foothold over the last 20-years.
+We are an open community, where a lot of discussion and engagement is made to learn what are the best practices.
+Of course, there are risks, you need to keep level headed and make sure you share protocols and results you are confident in, that are validated.
+It is great to share and get your work out there.
+It is not only for your benefit and that people know you are reliable, but it is a platform where you can save people time, instead of struggling to put protocols in place that you have tried and tested.</p>
 <h3 id="you-mentioned-fieldwork-in-peru-and-chile-why-is-this-an-important-component-of-your-research-how-do-you-manage-your-field-trips-and-keep-your-collaborations-vibrant-and-fruitfully-functioning">You mentioned fieldwork in Peru and Chile, why is this an important component of your research? How do you manage your field trips, and keep your collaborations vibrant and fruitfully functioning?</h3>
-<p>I am personally very interested in this, I think it is vital to go and collect samples from nature. I am really passionate about the evolution of resistance genes and the pathogen’s response. We need people with local know-how they not only provide useful facilities but are also fantastic resources to navigate the terrain and internal protocols to move isolates between our countries. We adhere to the Nagoya Protocol, purifying the isolates in the country of origin and then only may we bring the cultures back to Europe. Our field trials are usually a period of two weeks, although they are an adventure, it can be exhausting. We wake up before sunrise, with the sun on the horizon, we drive long hours to make sure we get the distances we need to cover for the spatial aspects of the study. It is usually only three of us on a field trip, driving in a 4 x 4 across the landscapes. This is also associated with logistics and finances, if we are more people in the car we will require additional transport and these costs. The next phase, that I would love to do in the future, is looking at the severity and incidence of these pathogens, [which] would require a larger team - this should be interesting logistics to negotiate and implement.</p>
+<p>I am personally very interested in this, I think it is vital to go and collect samples from nature.
+I am really passionate about the evolution of resistance genes and the pathogen’s response.
+We need people with local know-how they not only provide useful facilities but are also fantastic resources to navigate the terrain and internal protocols to move isolates between our countries.
+We adhere to the Nagoya Protocol, purifying the isolates in the country of origin and then only may we bring the cultures back to Europe.
+Our field trials are usually a period of two weeks, although they are an adventure, it can be exhausting.
+We wake up before sunrise, with the sun on the horizon, we drive long hours to make sure we get the distances we need to cover for the spatial aspects of the study.
+It is usually only three of us on a field trip, driving in a 4 x 4 across the landscapes.
+This is also associated with logistics and finances, if we are more people in the car we will require additional transport and these costs.
+The next phase, that I would love to do in the future, is looking at the severity and incidence of these pathogens, [which] would require a larger team - this should be interesting logistics to negotiate and implement.</p>
 <h3 id="you-mentioned-the-potential-need-for-plant-physiologists-to-contribute-further-how-do-you-see-this-in-the-future">You mentioned, the potential need for plant physiologists to contribute further, how do you see this in the future?</h3>
-<p>Yes, in our studies we saw a lot of quantitative resistance. Where some plants exhibit a high level of infection but others do not display such strong responses to the pathogen. This means that there may be physiological processes involved, not just monogenic R-genes. We need to open up our research and reach out to people experienced outside our direct discipline. Sometimes in the field of Molecular Plant Pathology, as a community, we tend to overlook Plant Physiology. I think this is due to the influx of molecular work which can be done now, with such ease. All our fields have narrowed into niches, but I think our methods are converging and our data sets are becoming larger, providing an ideal situation to collaborate and interact more freely. This is what makes Plant Pathology so exciting for me, the interactions of disciplines and opportunities to learn.</p>
+<p>Yes, in our studies we saw a lot of quantitative resistance.
+Where some plants exhibit a high level of infection but others do not display such strong responses to the pathogen.
+This means that there may be physiological processes involved, not just monogenic R-genes.
+We need to open up our research and reach out to people experienced outside our direct discipline.
+Sometimes in the field of Molecular Plant Pathology, as a community, we tend to overlook Plant Physiology.
+I think this is due to the influx of molecular work which can be done now, with such ease.
+All our fields have narrowed into niches, but I think our methods are converging and our data sets are becoming larger, providing an ideal situation to collaborate and interact more freely.
+This is what makes Plant Pathology so exciting for me, the interactions of disciplines and opportunities to learn.</p>
 <h3 id="opp-if-you-have-to-summarise-your-take-away-message-in-one-sentence-how-would-you-go-about-doing-this">OPP: If you have to summarise your take away message in one sentence, how would you go about doing this?</h3>
-<p>I want to understand factors that govern coevolution between plants and pathogens, drawn from natural systems and how this extends into epidemics in our agronomic fields. This research also extends into fungicide resistance, and the artificial pressure or anthropogenic pressure placed onto pathogens to evolve. This is also a project we are working on Alternaria of potato, this pathogen has become a huge issue in Germany. Our long term goal aims to relieve the pressure of overusing or the reliance on fungicides, I think this is the goal of many Plant Pathologists to ensure an integrated pest management program.</p>
+<p>I want to understand factors that govern coevolution between plants and pathogens, drawn from natural systems and how this extends into epidemics in our agronomic fields.
+This research also extends into fungicide resistance, and the artificial pressure or anthropogenic pressure placed onto pathogens to evolve.
+This is also a project we are working on Alternaria of potato, this pathogen has become a huge issue in Germany.
+Our long term goal aims to relieve the pressure of overusing or the reliance on fungicides, I think this is the goal of many Plant Pathologists to ensure an integrated pest management program.</p>
 <h3 id="thank-you-so-much-remco-for-making-the-time-to-speak-to-me-and-to-share-your-thoughts-on-coevolution-and-the-underlying-mechanisms.-you-were-so-patient-and-explained-so-clearly-something-which-is-outside-my-usual-research-comfort-zone.-i-am-excited-to-see-where-your-research-will-take-you.">Thank you so much Remco for making the time to speak to me and to share your thoughts on coevolution and the underlying mechanisms. You were so patient and explained so clearly something which is outside my usual research ‘comfort zone’. I am excited to see where your research will take you.</h3>
-<p>You can go and watch <a href="https://www.youtube.com/watch?v=xaUz_68jwHk&amp;feature=youtu.be">Remco’s #OPPvirtualseminar</a> on our <a href="https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA?view_as=subscriber">official YouTube channel</a>. You are also welcome to interact with us in our Slack Community on our #virtual-seminar channel. By clicking on this link you can <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">request to join</a> Open Plant Pathology on Slack.</p>
+<p>You can go and watch <a href="https://www.youtube.com/watch?v=xaUz_68jwHk&amp;feature=youtu.be">Remco’s #OPPvirtualseminar</a> on our <a href="https://www.youtube.com/channel/UCo-1ijIA_nECqzwzeW2X9RA?view_as=subscriber">official YouTube channel</a>.
+You are also welcome to interact with us in our Slack Community on our #virtual-seminar channel.
+By clicking on this link you can <a href="https://communityinviter.com/apps/openplantpathology/open-plant-pathology">request to join</a> Open Plant Pathology on Slack.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

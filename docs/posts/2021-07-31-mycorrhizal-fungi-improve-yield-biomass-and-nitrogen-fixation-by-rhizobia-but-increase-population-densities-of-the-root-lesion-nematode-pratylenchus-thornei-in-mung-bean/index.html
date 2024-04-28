@@ -21,7 +21,7 @@
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>Open Plant Pathology: Mycorrhizal fungi improve yield, biomass and nitrogen fixation by rhizobia but increase population densities of the root-lesion nematode Pratylenchus thornei in mung bean</title>
@@ -124,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/anchor-4.2.2/anchor.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/bowser-1.9.3/bowser.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/distill-2.2.21/template.v2.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/header-attrs-2.9/header-attrs.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/jquery-1.11.3/jquery.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/popper-2.6.0/popper.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/tippy-6.2.7/tippy-bundle.umd.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/tippy-6.2.7/tippy-light-border.css","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/tippy-6.2.7/tippy.css","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/tippy-6.2.7/tippy.umd.min.js","mycorrhizal-fungi-improve-yield-biomass-and-nitrogen-fixation-by-rhizobia-but-increase-population-densities-of-the-root-lesion-nematode-pratylenchus-thornei-in-mung-bean_files/webcomponents-2.0.0/webcomponents.js","qld-apps-seminar-gough.jpg"]}
+  {"type":"character","attributes":{},"value":["qld-apps-seminar-gough.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2423,8 +2425,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.26/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2490,6 +2492,7 @@ gtag('config', 'UA-112255011-1');
 
 <div class="d-title">
 <h1>Mycorrhizal fungi improve yield, biomass and nitrogen fixation by rhizobia but increase population densities of the root-lesion nematode Pratylenchus thornei in mung bean</h1>
+
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Qld-APPS_Seminars" class="dt-tag">Qld-APPS Seminars</a>
@@ -2499,7 +2502,7 @@ gtag('config', 'UA-112255011-1');
 </div>
 
 <div class="d-byline">
-  Adam Sparks <a href="adamhsparks.netlify.app" class="uri">adamhsparks.netlify.app</a> 
+  Adam Sparks adamhsparks.netlify.app 
   
 <br/>07-31-2021
 </div>
@@ -2511,12 +2514,20 @@ Institution: University of Southern Queensland, Centre for Crop Health<br />
 Host: Queensland Chapter Australasian Plant Pathology Society, <a href="https://twitter.com/qldapps">@qldapps</a><br />
 Links: <a href="https://youtu.be/V28QN7l_enw">Video</a></p>
 <h2 id="biography">Biography</h2>
-<p>I am currently completing my PhD at the Centre for Crop Health, University of Southern Queensland where I am investigating interactions between arbuscular mycorrhizal fungi, rhizobia and root-lesion nematodes in mung bean. I have a keen interest in sustainable agriculture and soil micro-biology and am passionate about highlighting the amazing benefits and economic gains to be made when we understand more about the ground beneath our feet.</p>
+<p>I am currently completing my PhD at the Centre for Crop Health, University of Southern Queensland where I am investigating interactions between arbuscular mycorrhizal fungi, rhizobia and root-lesion nematodes in mung bean.
+I have a keen interest in sustainable agriculture and soil micro-biology and am passionate about highlighting the amazing benefits and economic gains to be made when we understand more about the ground beneath our feet.</p>
 <h2 id="abstract">Abstract</h2>
-<p>Mung bean (<em>Vigna radiata</em>) is a short-season high-value legume integrated into grain cropping sequences in the sub-tropical grain region of eastern Australia. It benefits crop rotations through its ability to fix nitrogen (N) from inoculation with <em>Bradyrhizobium</em>. It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates.</p>
-<p>Mung bean also hosts the plant-parasitic root-lesion nematode <em>Pratylenchus thornei</em>. Multiplication of <em>P. thornei)</em> in roots can reduce yield of mung bean and subsequent intolerant crops in the sequence. Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and <em>Pratylenchus</em> population density in crops.</p>
-<p>Our research demonstrated that co-inoculation with AMF and <em>Bradyrhizobium</em> synergistically increased (<em>P</em>&lt;0.001) seed yield, shoot biomass, nodulation, biological N fixation and plant nutrition of mung bean cv Jade-AU in glasshouse experiments in a pasteurised vertisol. However, AMF also significantly increased (<em>P</em>&lt;0.05) the population density of <em>P. thornei</em> in mung bean roots, which was not correlated with increased root biomass or improved plant nutrition. <em>Pratylenchus thornei</em> also reduced P and Zn concentration, while increasing N concentration in mycorrhizal shoots.</p>
-<p>Integrated management to prevent increases in <em>P. thornei</em> in farming systems is imperative so that we can harness the benefits of AMF to improve mung bean yield and nutrition. Rotations with crops that reduce <em>P. thornei</em> populations while increasing AMF inoculum levels in the soils is warranted.</p>
+<p>Mung bean (<em>Vigna radiata</em>) is a short-season high-value legume integrated into grain cropping sequences in the sub-tropical grain region of eastern Australia.
+It benefits crop rotations through its ability to fix nitrogen (N) from inoculation with <em>Bradyrhizobium</em>.
+It also forms associations with the beneficial soil-borne arbuscular mycorrhizal fungi (AMF) which increases plant uptake of phosphorus (P) and zinc (Zn) in exchange for photosynthates.</p>
+<p>Mung bean also hosts the plant-parasitic root-lesion nematode <em>Pratylenchus thornei</em>.
+Multiplication of <em>P. thornei)</em> in roots can reduce yield of mung bean and subsequent intolerant crops in the sequence.
+Interactions with AMF and biotic stressors in previous studies suggested that AMF may induce a biocontrol effect to reduce symptom severity and <em>Pratylenchus</em> population density in crops.</p>
+<p>Our research demonstrated that co-inoculation with AMF and <em>Bradyrhizobium</em> synergistically increased (<em>P</em>&lt;0.001) seed yield, shoot biomass, nodulation, biological N fixation and plant nutrition of mung bean cv Jade-AU in glasshouse experiments in a pasteurised vertisol.
+However, AMF also significantly increased (<em>P</em>&lt;0.05) the population density of <em>P. thornei</em> in mung bean roots, which was not correlated with increased root biomass or improved plant nutrition.
+<em>Pratylenchus thornei</em> also reduced P and Zn concentration, while increasing N concentration in mycorrhizal shoots.</p>
+<p>Integrated management to prevent increases in <em>P. thornei</em> in farming systems is imperative so that we can harness the benefits of AMF to improve mung bean yield and nutrition.
+Rotations with crops that reduce <em>P. thornei</em> populations while increasing AMF inoculum levels in the soils is warranted.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

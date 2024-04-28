@@ -21,22 +21,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### About
 
-Presenter:  Dr. Luigi Faino
-Institution: University of Rome 'La Sapienza'
-Date: May 05, 2020\
+Presenter: Dr. Luigi Faino Institution: University of Rome 'La Sapienza' Date: May 05, 2020\
 Host: Dr. Lisa Rothmann\
-Links: [Video](https://www.youtube.com/watch?v=-u2q8dkONgU) 
-
+Links: [Video](https://www.youtube.com/watch?v=-u2q8dkONgU)
 
 ### Abstract
 
-_Fusarium verticillioides_ is a maize pathogen that causes millions of dollars in loss every year due to the production of mycotoxins, namely the neurotoxic and carcinogenic fumonisins.
-In our work, we investigate the _F. verticillioides_ (Fv) strain 10027 which is an Italian isolate and it produces high amount of fumonisin B1.
+*Fusarium verticillioides* is a maize pathogen that causes millions of dollars in loss every year due to the production of mycotoxins, namely the neurotoxic and carcinogenic fumonisins.
+In our work, we investigate the *F. verticillioides* (Fv) strain 10027 which is an Italian isolate and it produces high amount of fumonisin B1.
 To understand better the genetic behind the high production of mycotoxins, we Illumina sequenced the Fv 10027 (Fv10027) strain and compared to other Fv strains from the same area and worldwide.
 Comparative analysis between the reference strain Fv7600 and Fv10027 showed that about 6% of the reads of Fv10027 did not map on Fv7600 genome.
-Pulsed field electrophoresis of Fv7600 and Fv10027 showed that Fv7600 has one mini-chromosome of \~350Kb while Fv10027 has two of length 1Mb and 750Kb. Next, we tried to identify specific features of these two mini-chromosomes and we found that these are enriched in secreted proteins and have an higher level of repetitiveness.
-Intriguingly, BLAST analysis showed that proteins codified by genes located at the mini-chromosomes have the best identity with _F. oxysporum_ proteins while, as expected, the proteins from the core-chromosomes have as best match proteins from the Fv7600.
-Additionally, more than half of the proteins codified from Fv10027 mini-chromosomes have an homolog protein codified on a dispensable chromosome in _F. oxysporum_.
-Subsequent synonyms substitution analysis suggests that mini-chromosomes of _F. verticillioides_ probably were not acquired by horizontal gene transfer from F. oxysporum but rather originated before the split of the two species.
+Pulsed field electrophoresis of Fv7600 and Fv10027 showed that Fv7600 has one mini-chromosome of \~350Kb while Fv10027 has two of length 1Mb and 750Kb.
+Next, we tried to identify specific features of these two mini-chromosomes and we found that these are enriched in secreted proteins and have an higher level of repetitiveness.
+Intriguingly, BLAST analysis showed that proteins codified by genes located at the mini-chromosomes have the best identity with *F. oxysporum* proteins while, as expected, the proteins from the core-chromosomes have as best match proteins from the Fv7600.
+Additionally, more than half of the proteins codified from Fv10027 mini-chromosomes have an homolog protein codified on a dispensable chromosome in *F. oxysporum*.
+Subsequent synonyms substitution analysis suggests that mini-chromosomes of *F. verticillioides* probably were not acquired by horizontal gene transfer from F.
+oxysporum but rather originated before the split of the two species.
 
 ![](seminar-luigi.png)
