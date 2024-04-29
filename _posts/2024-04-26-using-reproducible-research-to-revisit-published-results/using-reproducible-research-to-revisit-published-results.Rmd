@@ -1,7 +1,7 @@
 ---
 title: "Using Reproducible Research to Revisit Published Results"
 description: |
-  In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better the model to the data.
+  In which the author revisits a previously published analysis and finds ways to improve it while using reproducible research to illustrate refitting a GAM using random effects to better fit the model to the data.
 author:
   - name: Adam H. Sparks
     url: "https://rstats.me/@adamhsparks"
