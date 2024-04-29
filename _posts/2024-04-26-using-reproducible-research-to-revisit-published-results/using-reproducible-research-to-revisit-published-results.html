@@ -1659,6 +1659,7 @@ We assume that you have the R package <a href="https://devtools.r-lib.org/">{dev
 </div>
 <h2 id="fitting-the-gams">Fitting the GAMs</h2>
 <p>With the data now loaded in our R session, we can fit the original GAM as published for us to compare against and see if we can’t improve it.</p>
+<h3 id="original-gam">Original GAM</h3>
 <p>First, fit the original model as published.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1700,6 +1701,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 R-sq.(adj) =  0.674   Deviance explained = 61.2%
 -REML = 309.96  Scale est. = 0.36397   n = 334</code></pre>
 </div>
+<h3 id="new-gam-with-random-effects">New GAM With Random Effects</h3>
 <p>Now fit a model with random effects for the site (Curyo or Horsham), rep (3) and station (10 per each of 10 transects) to see if it improves the model fit to the data.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">

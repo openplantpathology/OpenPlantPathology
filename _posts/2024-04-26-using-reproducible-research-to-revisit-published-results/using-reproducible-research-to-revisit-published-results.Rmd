@@ -77,6 +77,8 @@ summary(dat)
 
 With the data now loaded in our R session, we can fit the original GAM as published for us to compare against and see if we can't improve it.
 
+### Original GAM
+
 First, fit the original model as published.
 
 ```{r org-gam, echo=TRUE}
@@ -93,6 +95,8 @@ mod_org <-
 
 summary(mod_org)
 ```
+
+### New GAM With Random Effects
 
 Now fit a model with random effects for the site (Curyo or Horsham), rep (3) and station (10 per each of 10 transects) to see if it improves the model fit to the data.
 
