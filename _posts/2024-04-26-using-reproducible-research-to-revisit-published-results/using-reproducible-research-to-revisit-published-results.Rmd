@@ -98,7 +98,7 @@ summary(mod_org)
 
 ### New GAM With Random Effects
 
-Now fit a model with random effects for the site (Curyo or Horsham), rep (3) and station (10 per each of 10 transects) to see if it improves the model fit to the data.
+Now fit a model with random effects for the site (Curyo or Horsham), rep (3) and station (10 per each of 10 transects), pot number and plant number to see if it improves the model fit to the data.
 
 ```{r new-gam, echo=TRUE}
 mod_new <-
