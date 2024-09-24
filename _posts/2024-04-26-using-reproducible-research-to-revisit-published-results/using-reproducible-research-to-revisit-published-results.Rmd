@@ -38,7 +38,7 @@ To deal with all of this I spent lots of time [reading up on fitting GAMs](https
 I used GAMs in the past for work in my [PhD dissertation](https://codeberg.org/adamhsparks/Global_Potato_LB_Metamodelling) [@Sparks2014; @Sparks2024] and in "The role of conidia in the dispersal of *Ascochyta rabiei*" [@Khaliq2020; @Khaliq2020a], which brings me to today's post.
 
 To handle all of the issues with multiple field sites and the spatio-temporal autocorrelation, I used random effects in my GAM for @Paredes2024.
-However, I realised I'd not used random effects for [this work](https://adamhsparks.github.io/ChickpeaAscoDispersal/articles/a05_GAM.html/) [@Khaliq2020; @Khaliq2020a].
+However, I realised I'd not used random effects for [this work](https://adamhsparks.github.io/ChickpeaAscoDispersal/articles/a05_GAM.html) [@Khaliq2020; @Khaliq2020a].
 So, to rectify this, I thought I'd go back to the published work and see if I could improve my model's fit to the data using random effects.
 
 As we set up the research compendium as an R package, it's easy enough to install it and get started working with the data and reproduce the work published in @Khaliq2020.

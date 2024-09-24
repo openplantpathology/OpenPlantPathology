@@ -1591,7 +1591,7 @@ So there were lots of things going on here, six fields, traps on transects in fo
 <p>To deal with all of this I spent lots of time <a href="https://fromthebottomoftheheap.net/2021/02/02/random-effects-in-gams/">reading up on fitting GAMs</a>, but this time, I was reading about using random effects in the GAM, which is something I’d not done in the past.
 I used GAMs in the past for work in my <a href="https://codeberg.org/adamhsparks/Global_Potato_LB_Metamodelling">PhD dissertation</a> <span class="citation" data-cites="Sparks2014 Sparks2024">(<a href="#ref-Sparks2014" role="doc-biblioref">Sparks et al. 2014</a>; <a href="#ref-Sparks2024" role="doc-biblioref">Sparks 2024</a>)</span> and in “The role of conidia in the dispersal of <em>Ascochyta rabiei</em>” <span class="citation" data-cites="Khaliq2020 Khaliq2020a">(<a href="#ref-Khaliq2020" role="doc-biblioref">Khaliq et al. 2020b</a>, <a href="#ref-Khaliq2020a" role="doc-biblioref">2020a</a>)</span>, which brings me to today’s post.</p>
 <p>To handle all of the issues with multiple field sites and the spatio-temporal autocorrelation, I used random effects in my GAM for <span class="citation" data-cites="Paredes2024">Paredes et al. (<a href="#ref-Paredes2024" role="doc-biblioref">2024</a>)</span>.
-However, I realised I’d not used random effects for <a href="https://adamhsparks.github.io/ChickpeaAscoDispersal/articles/a05_GAM.html/">this work</a> <span class="citation" data-cites="Khaliq2020 Khaliq2020a">(<a href="#ref-Khaliq2020" role="doc-biblioref">Khaliq et al. 2020b</a>, <a href="#ref-Khaliq2020a" role="doc-biblioref">2020a</a>)</span>.
+However, I realised I’d not used random effects for <a href="https://adamhsparks.github.io/ChickpeaAscoDispersal/articles/a05_GAM.html">this work</a> <span class="citation" data-cites="Khaliq2020 Khaliq2020a">(<a href="#ref-Khaliq2020" role="doc-biblioref">Khaliq et al. 2020b</a>, <a href="#ref-Khaliq2020a" role="doc-biblioref">2020a</a>)</span>.
 So, to rectify this, I thought I’d go back to the published work and see if I could improve my model’s fit to the data using random effects.</p>
 <p>As we set up the research compendium as an R package, it’s easy enough to install it and get started working with the data and reproduce the work published in <span class="citation" data-cites="Khaliq2020">Khaliq et al. (<a href="#ref-Khaliq2020" role="doc-biblioref">2020b</a>)</span>.
 We assume that you have the R package <a href="https://devtools.r-lib.org/">{devtools}</a> installed, if not, use <code>install.packages("devtools")</code>.</p>
@@ -1785,7 +1785,7 @@ It is of note that the BIC is larger for the new model, 645, to the original’s
 <pre><code>
 Method: REML   Optimizer: outer newton
 full convergence after 8 iterations.
-Gradient range [-0.0000004288943,0.0000002610557]
+Gradient range [-0.0000004288894,0.0000002610557]
 (score 309.9554 &amp; scale 0.3639671).
 Hessian positive definite, eigenvalue range [0.3685077,2978.832].
 Model rank =  13 / 13 
@@ -1809,7 +1809,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <pre><code>
 Method: REML   Optimizer: outer newton
 full convergence after 10 iterations.
-Gradient range [-0.00007401781,0.00003895846]
+Gradient range [-0.00007401782,0.00003895846]
 (score 301.9894 &amp; scale 0.3613127).
 Hessian positive definite, eigenvalue range [0.3078677,2958.934].
 Model rank =  22 / 22 
